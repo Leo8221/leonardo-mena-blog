@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-grafico-reciente .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-grafico-reciente'] = new List('listing-grafico-reciente', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -204,32 +204,9 @@ window.Quarto = {
 <section id="en-un-gráfico" class="level1">
 <h1>En un gráfico</h1>
 <p>Aquí siempre aparecerá el <strong>último gráfico</strong> que publique en la serie <em>La República en un gráfico</em>.</p>
-<p>Debajo verás una tarjeta con el título, fecha y resumen.<br>
+<p>Debajo ves una tarjeta con el título, fecha y resumen.<br>
 Al hacer clic, entras al análisis completo.</p>
-<hr>
-<section id="la-república-habla-de" class="level2">
-<h2 class="anchored" data-anchor-id="la-república-habla-de">La República habla de</h2>
-<p>Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.<br>
-Puedes ver todas en la serie <strong>La República habla de</strong> desde el menú de <em>Series</em>.</p>
-<hr>
-</section>
-<section id="fundamentos" class="level2">
-<h2 class="anchored" data-anchor-id="fundamentos">Fundamentos</h2>
-<p>Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.<br>
-Ejemplo: la famosa <strong>“canasta familiar”</strong>.</p>
-<hr>
-</section>
-<section id="mis-predecesores" class="level2">
-<h2 class="anchored" data-anchor-id="mis-predecesores">Mis predecesores</h2>
-<p>Economistas que me han marcado y por qué.<br>
-Cada texto tendrá una frase suya en español y mi lectura personal de su trabajo.</p>
-
-
-
-</section>
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div id="listing-grafico-reciente" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765431780469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="256">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
@@ -255,7 +232,31 @@ Dec 11, 2025
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+<hr>
+<section id="la-república-habla-de" class="level2">
+<h2 class="anchored" data-anchor-id="la-república-habla-de">La República habla de</h2>
+<p>Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.<br>
+Puedes ver todas en la serie <strong>La República habla de</strong> desde el menú de <em>Series</em>.</p>
+<hr>
+</section>
+<section id="fundamentos" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentos">Fundamentos</h2>
+<p>Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.<br>
+Ejemplo: la famosa <strong>“canasta familiar”</strong>.</p>
+<hr>
+</section>
+<section id="mis-predecesores" class="level2">
+<h2 class="anchored" data-anchor-id="mis-predecesores">Mis predecesores</h2>
+<p>Economistas que me han marcado y por qué.<br>
+Cada texto tendrá una frase suya en español y mi lectura personal de su trabajo.</p>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

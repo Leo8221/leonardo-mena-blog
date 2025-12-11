@@ -2,19 +2,23 @@
 title: "Inicio"
 page-layout: full
 listing:
-  contents:
-    - posts/republica-en-un-grafico
-  sort: "date desc"
-  type: default
-  max-items: 1
+  - id: grafico-reciente
+    contents:
+      - posts/republica-en-un-grafico
+    sort: "date desc"
+    type: default
+    max-items: 1
 ---
 
 # En un gráfico
 
 Aquí siempre aparecerá el **último gráfico** que publique en la serie *La República en un gráfico*.
 
-Debajo verás una tarjeta con el título, fecha y resumen.\
+Debajo ves una tarjeta con el título, fecha y resumen.\
 Al hacer clic, entras al análisis completo.
+
+::: {#grafico-reciente}
+:::
 
 ------------------------------------------------------------------------
 
