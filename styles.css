@@ -1,0 +1,13 @@
+body {
+  background-color: #f8f7f5; /* tono cálido suave */
+}
+
+.navbar-title {
+  font-weight: 700;
+}
+
+main.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}

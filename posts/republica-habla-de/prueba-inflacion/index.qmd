@@ -1,0 +1,18 @@
+---
+title: "Prueba: inflación que no se siente"
+date: 2025-12-11
+description: "Nota de prueba para la serie La República habla de."
+tags: [inflacion, coyuntura, prueba]
+---
+
+LA REPÚBLICA HABLA DE
+
+# Prueba: inflación que no se siente
+
+Esta es una entrada de prueba para comprobar que la serie **La República habla de** funciona bien.
+
+En el futuro, aquí podría hablar de la típica frase de que “la inflación está baja, pero la gente no lo siente”, explicando:
+
+-   qué dice el dato,
+-   qué siente la gente,
+-   y qué indicadores valdría la pena vigilar.

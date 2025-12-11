@@ -1,0 +1,14 @@
+---
+title: "Mis predecesores"
+listing:
+  contents:
+    - posts/predecesores
+  sort: "date desc"
+  type: default
+---
+
+# Mis predecesores
+
+Economistas, ideas y por qué me importan.
+
+Aquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.

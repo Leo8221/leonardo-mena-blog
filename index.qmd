@@ -1,0 +1,37 @@
+---
+title: "Inicio"
+page-layout: full
+---
+
+# En un gráfico
+
+Aquí va el **gráfico protagonista** de la portada.
+
+Por ahora, puedes imaginarlo como tu **“Gráfico #0”**: una forma sencilla de mostrar cómo lees la economía dominicana.
+
+Más adelante lo sustituiremos por un gráfico real y la nota de cuaderno:
+- Qué muestra  
+- Qué no muestra  
+- Qué implica  
+
+---
+
+## La República habla de
+
+Aquí se listarán tus notas de coyuntura económica.  
+De momento es solo un texto de relleno para ver la estructura.
+
+---
+
+## Fundamentos
+
+Aquí irán las explicaciones de conceptos que se usan mal en medios o en la conversación pública.
+
+Un ejemplo futuro: **la famosa “canasta familiar”**.
+
+---
+
+## Mis predecesores
+
+Aquí escribirás sobre economistas que te han marcado, con epígrafes en español y tu lectura personal de sus ideas.
+

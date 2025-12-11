@@ -1,0 +1,21 @@
+---
+title: "¿Qué es realmente la 'canasta familiar'?"
+date: 2025-12-11
+description: "Desmitificando uno de los términos más usados (y mal usados) en medios y conversación pública."
+tags: [fundamentos, precios, costo-de-vida]
+---
+
+FUNDAMENTOS
+
+# ¿Qué es realmente la "canasta familiar"?
+
+La expresión *canasta familiar* se usa en noticias, debates y hasta en conversaciones cotidianas, pero casi nunca se define bien.\
+A veces se confunde con el costo de vida, con el IPC, con la línea de pobreza o, peor aún, con “lo que gasta cualquier hogar promedio”.
+
+En este texto, la idea no es hacer una clase de teoría, sino aclarar tres cosas muy concretas:
+
+-   qué suele significar *canasta* en el lenguaje técnico,
+-   en qué se parece y en qué se diferencia del **índice de precios al consumidor (IPC)**,
+-   y por qué es peligroso usarla como sinónimo de “lo que gasta la familia dominicana”.
+
+Más adelante, aquí entra el desarrollo completo del post: - una explicación clara del concepto, - ejemplos sencillos, - y un apartado de **error común** donde desmontes el uso que ves en prensa.

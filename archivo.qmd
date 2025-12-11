@@ -1,0 +1,9 @@
+---
+title: "Archivo"
+---
+
+# Archivo
+
+Aquí aparecerán todas las publicaciones ordenadas por fecha.
+
+Por ahora, es solo una página vacía para validar la estructura del sitio.

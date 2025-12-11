@@ -1,0 +1,40 @@
+---
+title: "Gráfico #0: Cómo leo la economía dominicana"
+date: 2025-12-11
+description: "Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana."
+tags: [republica-dominicana, mapa-mental, grafico]
+---
+
+LA REPÚBLICA EN UN GRÁFICO
+
+# Gráfico #0: Cómo leo la economía dominicana
+
+Este primer gráfico no busca probar nada específico, sino mostrar **cómo organizo mentalmente la economía dominicana** cuando miro datos.
+
+La idea es tener, en una sola imagen, algo como:
+
+-   los sectores que más pesan en producción y empleo,
+-   el papel del sector externo (turismo, zonas francas, remesas),
+-   y cómo se conectan variables que luego salen en las noticias: inflación, tipo de cambio, salarios, deuda pública.
+
+Más adelante, aquí irá el gráfico protagonista (una imagen estática o un gráfico generado desde datos). Por ahora, puedes imaginarlo como un esquema claro que responde a una pregunta sencilla:
+
+> “Cuando escucho una noticia económica sobre RD, ¿qué casillas de mi mapa mental se prenden primero?”
+
+------------------------------------------------------------------------
+
+## Qué muestra
+
+-   Una vista simplificada de los bloques principales de la economía dominicana.
+-   La relación entre algunos indicadores que suelo mirar juntos (por ejemplo, inflación, salarios reales, tipo de cambio, empleo formal/informal).
+
+## Qué no muestra
+
+-   No es una contabilidad completa ni un modelo formal.
+-   No captura todas las instituciones, ni toda la historia, ni todas las fricciones.
+-   No debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme.
+
+## Qué implica
+
+-   Que cada vez que veas un gráfico en este sitio, estará **anclado** a este mapa mental: no son números sueltos.
+-   Que mis lecturas de coyuntura siempre intentarán conectar dato → mecanismo → implicación, en lugar de quedarse en “opinión sobre el último titular”.

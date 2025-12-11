@@ -1,0 +1,12 @@
+---
+title: "Series"
+---
+
+# Series
+
+Estas son las líneas editoriales del sitio:
+
+-   [**Mis predecesores**](predecesores.qmd)\
+-   [**La República en un gráfico**](republica-en-un-grafico.qmd)\
+-   [**La República habla de**](republica-habla-de.qmd)\
+-   [**Fundamentos**](fundamentos.qmd)

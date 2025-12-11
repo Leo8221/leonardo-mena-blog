@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Leonardo Mena"
+  description: "Economía aplicada y datos, sin humo."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: series.qmd
+        text: Series
+      - href: archivo.qmd
+        text: Archivo
+      - href: about.qmd
+        text: Sobre mí
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+
+editor: visual
+
+
+

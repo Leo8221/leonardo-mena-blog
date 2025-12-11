@@ -1,0 +1,14 @@
+---
+title: "Fundamentos"
+listing:
+  contents:
+    - posts/fundamentos
+  sort: "date desc"
+  type: default
+---
+
+# Fundamentos
+
+Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.
+
+A continuación están los artículos de esta serie:

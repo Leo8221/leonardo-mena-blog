@@ -1,0 +1,14 @@
+---
+title: "Un predecesor de prueba"
+date: 2025-12-11
+description: "Entrada de prueba para la serie Mis predecesores."
+tags: [predecesores, prueba]
+---
+
+MIS PREDECESORES
+
+# Un predecesor de prueba
+
+Esta es solo una entrada de prueba para verificar que la serie **Mis predecesores** funciona bien.
+
+Más adelante, aquí escribiré sobre un economista real que me haya marcado, con una frase suya como epígrafe en español y mi lectura personal de su trabajo.
