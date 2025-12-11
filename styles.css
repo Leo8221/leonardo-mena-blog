@@ -1,13 +1,240 @@
+/* Paleta y variables base */
+:root {
+  --lm-bg: #f7f4f0;       /* fondo cálido */
+  --lm-bg-alt: #ffffff;   /* fondo de tarjetas */
+  --lm-text: #222222;     /* texto principal */
+  --lm-muted: #666666;    /* texto secundario */
+  --lm-navy: #0b1736;     /* azul profundo */
+  --lm-coral: #ff6b4a;    /* coral cálido */
+  --lm-border: #e2ddd5;   /* bordes suaves */
+}
+
+/* Reset suave */
 body {
-  background-color: #f8f7f5; /* tono cálido suave */
+  background-color: var(--lm-bg);
+  color: var(--lm-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
 }
 
-.navbar-title {
-  font-weight: 700;
-}
-
+/* Contenido principal centrado tipo revista */
 main.content {
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 3rem;
+  padding: 2.5rem 1.25rem 3.5rem 1.25rem;
 }
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--lm-navy);
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Párrafos y listas */
+p {
+  margin-bottom: 0.9rem;
+  color: var(--lm-text);
+}
+
+ul, ol {
+  padding-left: 1.3rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.4rem;
+}
+
+/* Enlaces */
+a {
+  color: var(--lm-navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--lm-coral);
+  border-color: var(--lm-coral);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--lm-navy) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-brand, .navbar-title {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #e6e6e6 !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  border-color: var(--lm-coral);
+}
+
+/* Footer (si Quarto mete uno básico) */
+footer,
+.footer,
+.nav-footer {
+  border-top: 1px solid var(--lm-border);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--lm-muted);
+}
+
+/* Secciones en el Home: estilo cuaderno limpio */
+main.content > section,
+main.content > div > section {
+  margin-bottom: 2.5rem;
+}
+
+/* Bloques tipo tarjeta (para listings y secciones) */
+.quarto-listing .quarto-listing-item,
+.listing-item,
+.card,
+.article-card {
+  background-color: var(--lm-bg-alt);
+  border-radius: 12px;
+  border: 1px solid var(--lm-border);
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 6px 18px rgba(11, 23, 54, 0.02);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+/* Efecto hover suave en tarjetas */
+.quarto-listing .quarto-listing-item:hover,
+.listing-item:hover,
+.card:hover,
+.article-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(11, 23, 54, 0.06);
+  border-color: var(--lm-coral);
+}
+
+/* Títulos dentro de tarjetas */
+.quarto-listing .quarto-listing-item .listing-title,
+.listing-title,
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--lm-navy);
+  margin-bottom: 0.4rem;
+}
+
+/* Metadatos (fecha, tags) */
+.listing-date,
+.quarto-listing-category,
+.listing-categories,
+.meta,
+.post-meta {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--lm-muted);
+}
+
+/* Descripción / excerpt */
+.quarto-listing .quarto-listing-item p,
+.listing-description,
+.card-text {
+  font-size: 0.93rem;
+  color: var(--lm-text);
+}
+
+/* Bloques de cita (útiles para epígrafes) */
+blockquote {
+  border-left: 3px solid var(--lm-coral);
+  padding-left: 0.9rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: var(--lm-muted);
+}
+
+/* Código inline (por si algún día muestras algo técnico) */
+code {
+  font-family: "JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.88rem;
+  background-color: #f0ebe4;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+}
+
+/* Tablas simples */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+table th,
+table td {
+  border: 1px solid var(--lm-border);
+  padding: 0.4rem 0.6rem;
+}
+
+table th {
+  background-color: #f1ece4;
+  font-weight: 600;
+}
+
+/* Responsive básico */
+@media (max-width: 768px) {
+  main.content {
+    padding: 1.8rem 1rem 3rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.82rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+}
+
