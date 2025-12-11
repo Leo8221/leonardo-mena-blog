@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -221,43 +221,46 @@ window.Quarto = {
 </header>
 
 
-<section id="explora-por-categoría" class="level1">
+<section id="explora-por-categoría" class="level1 categories-header">
 <h1>Explora por categoría</h1>
-<p>Todos los artículos organizados por tema. Haz clic en una categoría para filtrar.</p>
-<section id="categorías-principales" class="level2">
+<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico.
+</p>
+</section>
+<hr>
+<section id="categorías-principales" class="level2 categories-grid">
 <h2 class="anchored" data-anchor-id="categorías-principales">Categorías principales</h2>
-<section id="macroeconomía" class="level3">
-<h3 class="anchored" data-anchor-id="macroeconomía">Macroeconomía</h3>
+<section id="macroeconomía" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="macroeconomía">📊 Macroeconomía</h3>
 <p>Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.</p>
 </section>
-<section id="inflación" class="level3">
-<h3 class="anchored" data-anchor-id="inflación">Inflación</h3>
+<section id="inflación" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="inflación">💰 Inflación</h3>
 <p>Precios, índices de inflación, poder adquisitivo, canasta básica.</p>
 </section>
-<section id="mercado-laboral" class="level3">
-<h3 class="anchored" data-anchor-id="mercado-laboral">Mercado laboral</h3>
+<section id="mercado-laboral" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="mercado-laboral">👔 Mercado laboral</h3>
 <p>Empleo, desempleo, salarios, informalidad.</p>
 </section>
-<section id="sector-externo" class="level3">
-<h3 class="anchored" data-anchor-id="sector-externo">Sector externo</h3>
+<section id="sector-externo" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="sector-externo">🌍 Sector externo</h3>
 <p>Balanza de pagos, tipo de cambio, remesas, comercio exterior.</p>
 </section>
-<section id="política-fiscal" class="level3">
-<h3 class="anchored" data-anchor-id="política-fiscal">Política fiscal</h3>
+<section id="política-fiscal" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="política-fiscal">🏛️ Política fiscal</h3>
 <p>Presupuesto, deuda pública, gasto público, impuestos.</p>
 </section>
-<section id="desarrollo" class="level3">
-<h3 class="anchored" data-anchor-id="desarrollo">Desarrollo</h3>
-<p>Desigualdad, pobreza, educación, salud.</p>
+<section id="desarrollo" class="level3 category-card">
+<h3 class="anchored" data-anchor-id="desarrollo">📈 Desarrollo</h3>
+<p>Desigualdad, pobreza, educación, salud, crecimiento inclusivo.</p>
+</section>
+</section>
 <hr>
-</section>
-</section>
 <section id="todos-los-posts-por-categoría" class="level2">
 <h2 class="anchored" data-anchor-id="todos-los-posts-por-categoría">Todos los posts por categoría</h2>
 
 
 
-</section>
 </section>
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">

@@ -7,11 +7,24 @@ listing:
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: true
+  sort-ui: [date, title]
   filter-ui: true
   fields: [title, date, description, categories]
+  field-display-names:
+    title: "Título"
+    date: "Fecha"
+    description: "Resumen"
+    categories: "Categorías"
 ---
 
+::: {.archive-header}
 # Archivo completo
 
-Todas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.
+<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos.
+</p>
+:::
+
+---
+
+## Todas las publicaciones

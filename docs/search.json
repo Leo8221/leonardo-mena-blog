@@ -46,7 +46,14 @@
     "href": "archivo.html",
     "title": "Archivo",
     "section": "",
-    "text": "Archivo completo\nTodas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n¿Qué es realmente la ‘canasta familiar’?\n\n\nDesmitificando uno de los términos más usados (y mal usados) en medios y conversación pública.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nUn predecesor de prueba\n\n\nEntrada de prueba para la serie Mis predecesores.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nmapa-mental\n\nmetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nPrueba: inflación que no se siente\n\n\nNota de prueba para la serie La República habla de.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
+  },
+  {
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
   },
   {
     "objectID": "about.html",
@@ -60,14 +67,21 @@
     "href": "categorias.html",
     "title": "Categorías",
     "section": "",
-    "text": "Todos los artículos organizados por tema. Haz clic en una categoría para filtrar.\n\n\n\n\nCrecimiento, PIB, ciclos económicos, política monetaria y fiscal.\n\n\n\nPrecios, índices de inflación, poder adquisitivo, canasta básica.\n\n\n\nEmpleo, desempleo, salarios, informalidad.\n\n\n\nBalanza de pagos, tipo de cambio, remesas, comercio exterior.\n\n\n\nPresupuesto, deuda pública, gasto público, impuestos.\n\n\n\nDesigualdad, pobreza, educación, salud."
+    "text": "Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico."
   },
   {
     "objectID": "categorias.html#categorías-principales",
     "href": "categorias.html#categorías-principales",
     "title": "Categorías",
-    "section": "",
-    "text": "Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.\n\n\n\nPrecios, índices de inflación, poder adquisitivo, canasta básica.\n\n\n\nEmpleo, desempleo, salarios, informalidad.\n\n\n\nBalanza de pagos, tipo de cambio, remesas, comercio exterior.\n\n\n\nPresupuesto, deuda pública, gasto público, impuestos.\n\n\n\nDesigualdad, pobreza, educación, salud."
+    "section": "Categorías principales",
+    "text": "Categorías principales\n\n📊 Macroeconomía\nCrecimiento, PIB, ciclos económicos, política monetaria y fiscal.\n\n\n💰 Inflación\nPrecios, índices de inflación, poder adquisitivo, canasta básica.\n\n\n👔 Mercado laboral\nEmpleo, desempleo, salarios, informalidad.\n\n\n🌍 Sector externo\nBalanza de pagos, tipo de cambio, remesas, comercio exterior.\n\n\n🏛️ Política fiscal\nPresupuesto, deuda pública, gasto público, impuestos.\n\n\n📈 Desarrollo\nDesigualdad, pobreza, educación, salud, crecimiento inclusivo."
+  },
+  {
+    "objectID": "categorias.html#todos-los-posts-por-categoría",
+    "href": "categorias.html#todos-los-posts-por-categoría",
+    "title": "Categorías",
+    "section": "Todos los posts por categoría",
+    "text": "Todos los posts por categoría"
   },
   {
     "objectID": "index.html",

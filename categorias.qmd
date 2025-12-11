@@ -2,45 +2,59 @@
 title: "Categorías"
 page-layout: full
 listing:
-    contents:
-     - posts/\*\*/\*.qmd
-    sort: "date desc"
-    type: default
-    categories: true
-    filter-ui: true
-    fields: [title, date, description, categories]
+  contents:
+    - posts/**/*.qmd
+  sort: "date desc"
+  type: default
+  categories: numbered
+  filter-ui: [categories]
+  fields: [title, date, description, categories]
 ---
 
+::: {.categories-header}
 # Explora por categoría
 
-Todos los artículos organizados por tema. Haz clic en una categoría para filtrar.
+<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico.
+</p>
+:::
 
+---
+
+::: {.categories-grid}
 ## Categorías principales
 
-### Macroeconomía
-
+::: {.category-card}
+### 📊 Macroeconomía
 Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.
+:::
 
-### Inflación
-
+::: {.category-card}
+### 💰 Inflación
 Precios, índices de inflación, poder adquisitivo, canasta básica.
+:::
 
-### Mercado laboral
-
+::: {.category-card}
+### 👔 Mercado laboral
 Empleo, desempleo, salarios, informalidad.
+:::
 
-### Sector externo
-
+::: {.category-card}
+### 🌍 Sector externo
 Balanza de pagos, tipo de cambio, remesas, comercio exterior.
+:::
 
-### Política fiscal
-
+::: {.category-card}
+### 🏛️ Política fiscal
 Presupuesto, deuda pública, gasto público, impuestos.
+:::
 
-### Desarrollo
+::: {.category-card}
+### 📈 Desarrollo
+Desigualdad, pobreza, educación, salud, crecimiento inclusivo.
+:::
+:::
 
-Desigualdad, pobreza, educación, salud.
-
-------------------------------------------------------------------------
+---
 
 ## Todos los posts por categoría

@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
@@ -221,9 +221,15 @@ window.Quarto = {
 </header>
 
 
-<section id="archivo-completo" class="level1">
+<section id="archivo-completo" class="level1 archive-header">
 <h1>Archivo completo</h1>
-<p>Todas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.</p>
+<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos.
+</p>
+</section>
+<hr>
+<section id="todas-las-publicaciones" class="level2">
+<h2 class="anchored" data-anchor-id="todas-las-publicaciones">Todas las publicaciones</h2>
 
 
 
@@ -236,14 +242,14 @@ window.Quarto = {
     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
       <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
+        Fecha - Oldest
       </option>
       <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
+        Fecha - Newest
+      </option>
+      <option value="listing-title" data-direction="asc">
+        Título
       </option>
     </select>
   </div>
