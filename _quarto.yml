@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Leonardo Mena"
-  description: "Economía aplicada y datos de la República Dominicana, sin humo."
+  description: "Economía aplicada y datos de la República Dominicana"
   
   navbar:
     left:
@@ -29,7 +29,7 @@ website:
     left: |
       <p style="margin: 0;">© 2025 Leonardo Mena · Economía Aplicada</p>
     center: |
-      <a href="sobre-mi.html">Sobre mí</a> · 
+      <a href="about.html">Sobre mí</a> · 
       <a href="mailto:tu@email.com">Contacto</a>
     right: |
       <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a> · 
