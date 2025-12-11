@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,8 +70,66 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -143,33 +203,59 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="en-un-gráfico" class="level1">
 <h1>En un gráfico</h1>
-<p>Aquí va el <strong>gráfico protagonista</strong> de la portada.</p>
-<p>Por ahora, puedes imaginarlo como tu <strong>“Gráfico #0”</strong>: una forma sencilla de mostrar cómo lees la economía dominicana.</p>
-<p>Más adelante lo sustituiremos por un gráfico real y la nota de cuaderno: - Qué muestra<br>
-- Qué no muestra<br>
-- Qué implica</p>
+<p>Aquí siempre aparecerá el <strong>último gráfico</strong> que publique en la serie <em>La República en un gráfico</em>.</p>
+<p>Debajo verás una tarjeta con el título, fecha y resumen.<br>
+Al hacer clic, entras al análisis completo.</p>
 <hr>
 <section id="la-república-habla-de" class="level2">
 <h2 class="anchored" data-anchor-id="la-república-habla-de">La República habla de</h2>
-<p>Aquí se listarán tus notas de coyuntura económica.<br>
-De momento es solo un texto de relleno para ver la estructura.</p>
+<p>Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.<br>
+Puedes ver todas en la serie <strong>La República habla de</strong> desde el menú de <em>Series</em>.</p>
 <hr>
 </section>
 <section id="fundamentos" class="level2">
 <h2 class="anchored" data-anchor-id="fundamentos">Fundamentos</h2>
-<p>Aquí irán las explicaciones de conceptos que se usan mal en medios o en la conversación pública.</p>
-<p>Un ejemplo futuro: <strong>la famosa “canasta familiar”</strong>.</p>
+<p>Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.<br>
+Ejemplo: la famosa <strong>“canasta familiar”</strong>.</p>
 <hr>
 </section>
 <section id="mis-predecesores" class="level2">
 <h2 class="anchored" data-anchor-id="mis-predecesores">Mis predecesores</h2>
-<p>Aquí escribirás sobre economistas que te han marcado, con epígrafes en español y tu lectura personal de sus ideas.</p>
+<p>Economistas que me han marcado y por qué.<br>
+Cada texto tendrá una frase suya en español y mi lectura personal de su trabajo.</p>
+
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765431780469" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="256">
+<div class="thumbnail"><a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">Gráfico #0: Cómo leo la economía dominicana</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+<p>Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+<div class="listing-date">
+Dec 11, 2025
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

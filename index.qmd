@@ -1,37 +1,38 @@
 ---
 title: "Inicio"
 page-layout: full
+listing:
+  contents:
+    - posts/republica-en-un-grafico
+  sort: "date desc"
+  type: default
+  max-items: 1
 ---
 
 # En un gráfico
 
-Aquí va el **gráfico protagonista** de la portada.
+Aquí siempre aparecerá el **último gráfico** que publique en la serie *La República en un gráfico*.
 
-Por ahora, puedes imaginarlo como tu **“Gráfico #0”**: una forma sencilla de mostrar cómo lees la economía dominicana.
+Debajo verás una tarjeta con el título, fecha y resumen.\
+Al hacer clic, entras al análisis completo.
 
-Más adelante lo sustituiremos por un gráfico real y la nota de cuaderno:
-- Qué muestra  
-- Qué no muestra  
-- Qué implica  
-
----
+------------------------------------------------------------------------
 
 ## La República habla de
 
-Aquí se listarán tus notas de coyuntura económica.  
-De momento es solo un texto de relleno para ver la estructura.
+Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\
+Puedes ver todas en la serie **La República habla de** desde el menú de *Series*.
 
----
+------------------------------------------------------------------------
 
 ## Fundamentos
 
-Aquí irán las explicaciones de conceptos que se usan mal en medios o en la conversación pública.
+Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.\
+Ejemplo: la famosa **“canasta familiar”**.
 
-Un ejemplo futuro: **la famosa “canasta familiar”**.
-
----
+------------------------------------------------------------------------
 
 ## Mis predecesores
 
-Aquí escribirás sobre economistas que te han marcado, con epígrafes en español y tu lectura personal de sus ideas.
-
+Economistas que me han marcado y por qué.\
+Cada texto tendrá una frase suya en español y mi lectura personal de su trabajo.
