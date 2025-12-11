@@ -7,8 +7,6 @@ listing:
   type: default
 ---
 
-# La República habla de
-
 Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.
 
 Aquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”

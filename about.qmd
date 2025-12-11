@@ -2,9 +2,7 @@
 title: "Sobre mí"
 ---
 
-# Sobre mí
-
-Soy Leonardo Mena, economista en formación.  
+Soy Leonardo Mena, economista en formación.\
 Este sitio reúne mis notas, gráficos y reflexiones sobre economía aplicada, con foco en República Dominicana.
 
 Más adelante afinaremos este texto.

@@ -1,240 +1,926 @@
-/* Paleta y variables base */
+/* ===========================
+   Imports - Tipografía editorial
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===========================
+   Paleta editorial cálida
+   =========================== */
+
 :root {
-  --lm-bg: #f7f4f0;       /* fondo cálido */
-  --lm-bg-alt: #ffffff;   /* fondo de tarjetas */
-  --lm-text: #222222;     /* texto principal */
-  --lm-muted: #666666;    /* texto secundario */
-  --lm-navy: #0b1736;     /* azul profundo */
-  --lm-coral: #ff6b4a;    /* coral cálido */
-  --lm-border: #e2ddd5;   /* bordes suaves */
+  /* Colores base - tonos cálidos y naturales */
+  --lm-cream: #faf8f3;           /* Crema papel */
+  --lm-cream-dark: #f5f1e8;      /* Crema más oscuro */
+  --lm-bg: #ffffff;              /* Blanco puro para cards */
+  --lm-text: #1a1512;            /* Negro cálido */
+  --lm-text-soft: #4a443e;       /* Gris cálido para secundario */
+  --lm-muted: #73695f;           /* Marrón suave para detalles */
+  
+  /* Acentos cálidos */
+  --lm-terracota: #c86448;       /* Terracota principal */
+  --lm-terracota-dark: #a04d35;  /* Terracota oscuro */
+  --lm-olive: #6b7554;           /* Verde oliva */
+  --lm-ochre: #d4a574;           /* Ocre dorado */
+  
+  /* Bordes y separadores */
+  --lm-border: #e6dfd5;
+  --lm-border-dark: #d4c9ba;
+  
+  /* Sombras sutiles y naturales */
+  --shadow-soft: 0 1px 3px rgba(26, 21, 18, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 21, 18, 0.08);
+  --shadow-lg: 0 8px 32px rgba(26, 21, 18, 0.12);
 }
 
-/* Reset suave */
+/* ===========================
+   Base y reset
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: var(--lm-bg);
+  background: var(--lm-cream);
   color: var(--lm-text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Contenido principal centrado tipo revista */
 main.content {
-  max-width: 800px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 2.5rem 1.25rem 3.5rem 1.25rem;
+  padding: 3.5rem 2rem 5rem 2rem;
 }
 
-/* Encabezados */
+/* ===========================
+   Tipografía editorial
+   =========================== */
+
 h1, h2, h3, h4 {
-  font-weight: 700;
-  color: var(--lm-navy);
-  letter-spacing: 0.01em;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 600;
+  color: var(--lm-text);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
 }
 
 h1 {
-  font-size: 2.1rem;
-  margin-bottom: 1.25rem;
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.6rem;
-  margin-top: 2rem;
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  margin-top: 2.5rem;
   margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-/* Párrafos y listas */
 p {
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.25rem;
+  color: var(--lm-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+strong {
+  font-weight: 600;
   color: var(--lm-text);
 }
 
-ul, ol {
-  padding-left: 1.3rem;
+em {
+  font-style: italic;
+  color: var(--lm-terracota);
 }
 
-ul li, ol li {
-  margin-bottom: 0.4rem;
-}
-
-/* Enlaces */
+/* Enlaces con subrayado editorial */
 a {
-  color: var(--lm-navy);
+  color: var(--lm-terracota);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  border-bottom: 1px solid var(--lm-terracota);
+  transition: all 0.2s ease;
+  padding-bottom: 1px;
 }
 
 a:hover {
-  color: var(--lm-coral);
-  border-color: var(--lm-coral);
+  color: var(--lm-terracota-dark);
+  border-bottom-color: var(--lm-terracota-dark);
+  border-bottom-width: 2px;
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--lm-navy) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+/* ===========================
+   Navbar futurista - Compatible con Quarto + Dropdown
+   =========================== */
+
+#quarto-header,
+.navbar,
+nav.navbar {
+  background: var(--lm-bg) !important;
+  border-bottom: 2px solid var(--lm-border-dark);
+  box-shadow: none;
+  padding: 1rem 0;
+  min-height: auto !important;
 }
 
-.navbar-brand, .navbar-title {
+.navbar-brand,
+.navbar-title,
+#quarto-header .navbar-brand {
+  font-family: 'Inter', sans-serif !important;
   font-weight: 700;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 0.95rem;
-  color: #ffffff !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--lm-text) !important;
 }
 
-.navbar-nav .nav-link {
-  color: #e6e6e6 !important;
-  font-size: 0.9rem;
+.navbar-nav .nav-link,
+#quarto-header .navbar-nav .nav-link,
+.navbar .navbar-nav .nav-item .nav-link {
+  color: var(--lm-text-soft) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
-  padding-bottom: 0.1rem;
+  margin: 0 1.25rem;
+  padding: 0.25rem 0 !important;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: all 0.2s ease;
+  background: none !important;
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link.active {
-  color: #ffffff !important;
-  border-color: var(--lm-coral);
+.navbar-nav .nav-link.active,
+#quarto-header .navbar-nav .nav-link:hover,
+#quarto-header .navbar-nav .nav-link.active {
+  color: var(--lm-terracota) !important;
+  border-bottom-color: var(--lm-terracota);
+  background: none !important;
 }
 
-/* Footer (si Quarto mete uno básico) */
-footer,
-.footer,
-.nav-footer {
-  border-top: 1px solid var(--lm-border);
-  margin-top: 2rem;
-  padding-top: 1rem;
+/* Dropdown menu */
+.navbar-nav .dropdown-menu {
+  background: var(--lm-bg) !important;
+  border: 2px solid var(--lm-border-dark);
+  border-radius: 0;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
-  color: var(--lm-muted);
+  font-weight: 500;
+  color: var(--lm-text-soft) !important;
+  padding: 0.65rem 1.5rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
 }
 
-/* Secciones en el Home: estilo cuaderno limpio */
-main.content > section,
-main.content > div > section {
-  margin-bottom: 2.5rem;
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background: var(--lm-cream-dark) !important;
+  color: var(--lm-terracota) !important;
+  border-left-color: var(--lm-terracota);
 }
 
-/* Bloques tipo tarjeta (para listings y secciones) */
-.quarto-listing .quarto-listing-item,
-.listing-item,
-.card,
-.article-card {
-  background-color: var(--lm-bg-alt);
-  border-radius: 12px;
-  border: 1px solid var(--lm-border);
-  padding: 1.1rem 1.2rem;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 6px 18px rgba(11, 23, 54, 0.02);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+/* Flecha del dropdown */
+.navbar-nav .dropdown-toggle::after {
+  border-top-color: var(--lm-text-soft);
+  margin-left: 0.35rem;
 }
 
-/* Efecto hover suave en tarjetas */
-.quarto-listing .quarto-listing-item:hover,
-.listing-item:hover,
-.card:hover,
-.article-card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(11, 23, 54, 0.06);
-  border-color: var(--lm-coral);
+/* Forzar container del navbar */
+#quarto-header .navbar-container,
+.navbar > .container-fluid {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-/* Títulos dentro de tarjetas */
-.quarto-listing .quarto-listing-item .listing-title,
-.listing-title,
-.card-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--lm-navy);
-  margin-bottom: 0.4rem;
+/* ===========================
+   Home Hero - Cabecera editorial
+   =========================== */
+
+.home .quarto-title-block {
+  display: none;
 }
 
-/* Metadatos (fecha, tags) */
-.listing-date,
-.quarto-listing-category,
-.listing-categories,
-.meta,
-.post-meta {
-  font-size: 0.78rem;
+.home .home-hero {
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.home .home-hero-title {
+  max-width: 820px;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+}
+
+.home .home-kicker {
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--lm-muted);
+  margin-bottom: 1.25rem;
+  display: block;
 }
 
-/* Descripción / excerpt */
-.quarto-listing .quarto-listing-item p,
-.listing-description,
-.card-text {
-  font-size: 0.93rem;
+.home .home-hero-title h1 {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
   color: var(--lm-text);
+  line-height: 1.1;
 }
 
-/* Bloques de cita (útiles para epígrafes) */
-blockquote {
-  border-left: 3px solid var(--lm-coral);
-  padding-left: 0.9rem;
-  margin-left: 0;
-  margin-right: 0;
-  font-style: italic;
-  color: var(--lm-muted);
+.home .home-intro {
+  font-size: 1.2rem;
+  color: var(--lm-text-soft);
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-/* Código inline (por si algún día muestras algo técnico) */
-code {
-  font-family: "JetBrains Mono", "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.88rem;
-  background-color: #f0ebe4;
-  padding: 0.15rem 0.25rem;
-  border-radius: 4px;
+/* ===========================
+   Grid - Layout asimétrico editorial
+   =========================== */
+
+.home .home-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 2.5rem;
+  align-items: flex-start;
 }
 
-/* Tablas simples */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1rem 0;
-  font-size: 0.9rem;
+/* ===========================
+   Columna principal - Feature destacado
+   =========================== */
+
+.home .home-main {
+  background: var(--lm-bg);
+  border: 2px solid var(--lm-border-dark);
+  padding: 2.5rem;
+  transition: all 0.25s ease;
 }
 
-table th,
-table td {
+.home .home-main:hover {
+  border-color: var(--lm-terracota);
+  box-shadow: var(--shadow-md);
+}
+
+.home .home-main h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--lm-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Línea decorativa debajo del título */
+.home .home-main h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--lm-terracota);
+  margin-top: 0.5rem;
+}
+
+.home .home-main-text {
+  font-size: 1rem;
+  color: var(--lm-text-soft);
+  margin-bottom: 1.75rem;
+  margin-top: 1rem;
+  line-height: 1.65;
+  border-left: 3px solid var(--lm-border);
+  padding-left: 1rem;
+}
+
+/* Listing del gráfico reciente */
+.home #grafico-reciente {
+  margin-top: 1.5rem;
+}
+
+.home #grafico-reciente .quarto-listing {
+  margin-top: 0;
+}
+
+.home #grafico-reciente .quarto-listing-item {
+  background: var(--lm-cream-dark);
   border: 1px solid var(--lm-border);
-  padding: 0.4rem 0.6rem;
+  padding: 1.75rem;
+  transition: all 0.2s ease;
+  margin-bottom: 0;
+}
+
+.home #grafico-reciente .quarto-listing-item:hover {
+  background: var(--lm-bg);
+  border-color: var(--lm-terracota);
+  box-shadow: var(--shadow-soft);
+}
+
+.home #grafico-reciente .listing-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--lm-text);
+  line-height: 1.3;
+}
+
+.home #grafico-reciente .listing-date,
+.home #grafico-reciente .listing-categories {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lm-muted);
+  margin-bottom: 0.65rem;
+  font-weight: 500;
+}
+
+.home #grafico-reciente .listing-description {
+  font-size: 1rem;
+  color: var(--lm-text-soft);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ===========================
+   Columna lateral - Secciones tipo Economist
+   =========================== */
+
+.home .home-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 3px solid var(--lm-terracota);
+}
+
+.home .home-side-card {
+  background: var(--lm-bg);
+  border-bottom: 1px solid var(--lm-border);
+  padding: 1.85rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.home .home-side-card:last-child {
+  border-bottom: none;
+}
+
+.home .home-side-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--lm-terracota);
+  transition: width 0.2s ease;
+}
+
+.home .home-side-card:hover::before {
+  width: 4px;
+}
+
+.home .home-side-card:hover {
+  padding-left: 1rem;
+}
+
+/* Etiqueta de categoría estilo Economist */
+.home .home-side-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  margin: 0 0 0.65rem 0;
+}
+
+.home .home-side-card p {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: var(--lm-text);
+  font-weight: 600;
+}
+
+/* Descripción más pequeña */
+.home .home-side-card p:nth-of-type(2) {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--lm-text-soft);
+  margin-bottom: 0.85rem;
+}
+
+.home .home-side-link {
+  margin-top: 0;
+}
+
+.home .home-side-link a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--lm-terracota);
+  border-bottom: none;
+  padding-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.home .home-side-link a::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.home .home-side-link a:hover {
+  color: var(--lm-terracota-dark);
+}
+
+.home .home-side-link a:hover::after {
+  transform: translateX(3px);
+}
+
+/* ===========================
+   Listings generales (páginas de series)
+   =========================== */
+
+.quarto-listing {
+  margin-top: 2.5rem;
+}
+
+.quarto-listing .quarto-listing-item {
+  background: var(--lm-bg);
+  border: 1px solid var(--lm-border);
+  border-left: 3px solid var(--lm-olive);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin-bottom: 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.quarto-listing .quarto-listing-item:hover {
+  border-left-color: var(--lm-terracota);
+  border-left-width: 5px;
+  box-shadow: var(--shadow-md);
+  transform: translateX(3px);
+}
+
+.quarto-listing .listing-title {
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--lm-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.quarto-listing .listing-date,
+.quarto-listing .listing-categories {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--lm-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.quarto-listing .listing-description {
+  font-size: 1.05rem;
+  color: var(--lm-text-soft);
+  line-height: 1.65;
+}
+
+/* ===========================
+   Elementos de contenido
+   =========================== */
+
+blockquote {
+  border-left: 4px solid var(--lm-terracota);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--lm-text-soft);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+blockquote p {
+  font-size: 1.15rem;
+}
+
+code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-size: 0.88rem;
+  background: var(--lm-cream-dark);
+  color: var(--lm-text);
+  padding: 0.15rem 0.4rem;
+  border: 1px solid var(--lm-border);
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--lm-cream-dark);
+  border: 1px solid var(--lm-border);
+  padding: 1.5rem;
+  overflow-x: auto;
+  border-radius: 3px;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: var(--lm-border);
+  margin: 3rem 0;
+}
+
+/* Tablas editoriales */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border: 1px solid var(--lm-border);
 }
 
 table th {
-  background-color: #f1ece4;
+  background: var(--lm-cream-dark);
+  color: var(--lm-text);
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 0.8rem;
+  border-bottom: 2px solid var(--lm-border-dark);
 }
 
-/* Responsive básico */
+table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--lm-border);
+  color: var(--lm-text);
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background: var(--lm-cream-dark);
+}
+
+/* Listas */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  color: var(--lm-text-soft);
+}
+
+/* ===========================
+   Footer editorial completo - Compatible con Quarto
+   =========================== */
+
+.nav-footer,
+#quarto-footer,
+footer {
+  border-top: 2px solid var(--lm-border-dark);
+  margin-top: 5rem;
+  padding: 3rem 0 2.5rem 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--lm-bg);
+}
+
+.nav-footer .nav-footer-center {
+  display: none;
+}
+
+/* Estilos básicos del footer de Quarto */
+#quarto-footer .nav-footer-left,
+#quarto-footer .nav-footer-center,
+#quarto-footer .nav-footer-right {
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+}
+
+#quarto-footer a {
+  color: var(--lm-terracota);
+  border-bottom: 1px solid var(--lm-terracota);
+}
+
+#quarto-footer a:hover {
+  color: var(--lm-terracota-dark);
+}
+
+/* Container del footer */
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Columna principal - About */
+.footer-about h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--lm-text-soft);
+  margin-bottom: 1rem;
+}
+
+.footer-about p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Columna de navegación */
+.footer-nav h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-nav ul li a {
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+  border-bottom: none;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--lm-terracota);
+}
+
+/* Columna de contacto y redes */
+.footer-connect h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--lm-border-dark);
+  border-radius: 50%;
+  color: var(--lm-text-soft);
+  transition: all 0.2s ease;
+  border-bottom: none;
+}
+
+.footer-social a:hover {
+  background: var(--lm-terracota);
+  border-color: var(--lm-terracota);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.footer-email {
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.footer-email a {
+  color: var(--lm-terracota);
+  border-bottom: 1px solid var(--lm-terracota);
+  padding-bottom: 1px;
+}
+
+.footer-email a:hover {
+  color: var(--lm-terracota-dark);
+  border-bottom-color: var(--lm-terracota-dark);
+}
+
+/* Barra inferior con copyright */
+.footer-bottom {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0 2rem;
+  border-top: 1px solid var(--lm-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--lm-muted);
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--lm-muted);
+  border-bottom: none;
+  padding: 0;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--lm-terracota);
+}
+
+/* Responsive footer */
 @media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.25rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem 1.25rem 0 1.25rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 1024px) {
+  .home .home-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .home .home-main {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
   main.content {
-    padding: 1.8rem 1rem 3rem 1rem;
+    padding: 2.5rem 1.25rem 3.5rem 1.25rem;
   }
-
+  
+  .home .home-hero-title {
+    text-align: left;
+  }
+  
+  .home .home-kicker {
+    font-size: 0.7rem;
+  }
+  
+  .home .home-hero-title h1 {
+    font-size: 2.25rem;
+  }
+  
+  .home .home-intro {
+    font-size: 1.05rem;
+  }
+  
+  .home .home-main,
+  .home .home-side-card {
+    padding: 1.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0 0.75rem;
+    font-size: 0.8rem;
+  }
+  
   h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
-
+  
   h2 {
+    font-size: 1.65rem;
+  }
+  
+  h3 {
     font-size: 1.35rem;
   }
-
-  .navbar-nav .nav-link {
-    font-size: 0.82rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-  }
 }
 
+/* ===========================
+   Detalles finales
+   =========================== */
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--lm-ochre);
+  color: var(--lm-text);
+}
+
+::-moz-selection {
+  background: var(--lm-ochre);
+  color: var(--lm-text);
+}
+
+/* Focus states accesibles */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--lm-terracota);
+  outline-offset: 2px;
+}
+
+/* Mejoras de impresión */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .navbar,
+  .nav-footer {
+    display: none;
+  }
+}

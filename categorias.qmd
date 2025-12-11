@@ -1,0 +1,46 @@
+---
+title: "Categorías"
+page-layout: full
+listing:
+    contents:
+     - posts/\*\*/\*.qmd
+    sort: "date desc"
+    type: default
+    categories: true
+    filter-ui: true
+    fields: [title, date, description, categories]
+---
+
+# Explora por categoría
+
+Todos los artículos organizados por tema. Haz clic en una categoría para filtrar.
+
+## Categorías principales
+
+### Macroeconomía
+
+Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.
+
+### Inflación
+
+Precios, índices de inflación, poder adquisitivo, canasta básica.
+
+### Mercado laboral
+
+Empleo, desempleo, salarios, informalidad.
+
+### Sector externo
+
+Balanza de pagos, tipo de cambio, remesas, comercio exterior.
+
+### Política fiscal
+
+Presupuesto, deuda pública, gasto público, impuestos.
+
+### Desarrollo
+
+Desigualdad, pobreza, educación, salud.
+
+------------------------------------------------------------------------
+
+## Todos los posts por categoría

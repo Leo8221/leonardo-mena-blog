@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -68,13 +70,71 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -95,17 +155,36 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-temas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Temas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
+        <li>
+    <a class="dropdown-item" href="./republica-habla-de.html">
+ <span class="dropdown-text">La República habla de</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./fundamentos.html">
+ <span class="dropdown-text">Fundamentos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./predecesores.html">
+ <span class="dropdown-text">Mis predecesores</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mitos-economicos.html">
+ <span class="dropdown-text">Mitos económicos</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./series.html"> 
-<span class="menu-text">Series</span></a>
+    <a class="nav-link" href="./categorias.html"> 
+<span class="menu-text">Categorías</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./archivo.html" aria-current="page"> 
 <span class="menu-text">Archivo</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Sobre mí</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -115,12 +194,13 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWFwYS1tZW50YWw=">mapa-mental <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWV0b2RvbG9nJUMzJUFEYQ==">metodología <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -129,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -141,15 +221,116 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="archivo" class="level1">
-<h1>Archivo</h1>
-<p>Aquí aparecerán todas las publicaciones ordenadas por fecha.</p>
-<p>Por ahora, es solo una página vacía para validar la estructura del sitio.</p>
+<section id="archivo-completo" class="level1">
+<h1>Archivo completo</h1>
+<p>Todas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.</p>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765430477390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">¿Qué es realmente la ‘canasta familiar’?</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">
+<p>Desmitificando uno de los términos más usados (y mal usados) en medios y conversación pública.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">
+<div class="listing-date">
+Dec 11, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765431379962" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/predecesores/primer-predecesor/index.html" class="no-external">Un predecesor de prueba</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/predecesores/primer-predecesor/index.html" class="no-external">
+<p>Entrada de prueba para la serie Mis predecesores.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/predecesores/primer-predecesor/index.html" class="no-external">
+<div class="listing-date">
+Dec 11, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="bWFwYS1tZW50YWwlMkNtZXRvZG9sb2clQzMlQURh" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765461634792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="271">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">Gráfico #0: Cómo leo la economía dominicana</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFwYS1tZW50YWw='); return false;">mapa-mental</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWV0b2RvbG9nJUMzJUFEYQ=='); return false;">metodología</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+<p>Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+<div class="listing-date">
+Dec 11, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765431414601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">Prueba: inflación que no se siente</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
+<p>Nota de prueba para la serie La República habla de.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
+<div class="listing-date">
+Dec 11, 2025
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -556,6 +737,21 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p style="margin: 0;">
+© 2025 Leonardo Mena · Economía Aplicada
+</p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="sobre-mi.html">Sobre mí</a> · <a href="mailto:tu@email.com">Contacto</a></p>
+</div>
+    <div class="nav-footer-right">
+<p><a href="https://twitter.com/tuusuario" target="_blank">Twitter</a> · <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a> · <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a></p>
+</div>
+  </div>
+</footer>
 
 
 

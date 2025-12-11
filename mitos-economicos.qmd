@@ -1,0 +1,12 @@
+---
+title: "Mitos económicos"
+page-layout: full
+listing:
+  contents:
+    - posts/mitos-economicos
+  sort: "date desc"
+  type: default
+  fields: [title, date, description]
+---
+
+Desmentir creencias populares pero incorrectas sobre economía: desde "imprimir dinero crea riqueza" hasta "el déficit siempre es malo". Separando hechos de ficción con datos y teoría.

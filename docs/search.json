@@ -4,14 +4,14 @@
     "href": "series.html",
     "title": "Series",
     "section": "",
-    "text": "Series\nEstas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
+    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
   },
   {
     "objectID": "republica-en-un-grafico.html",
     "href": "republica-en-un-grafico.html",
     "title": "La República en un gráfico",
     "section": "",
-    "text": "La República en un gráfico\nUn gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "La República en un gráfico\nUn gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/republica-habla-de/prueba-inflacion/index.html",
@@ -28,53 +28,60 @@
     "text": "MIS PREDECESORES\n\nUn predecesor de prueba\nEsta es solo una entrada de prueba para verificar que la serie Mis predecesores funciona bien.\nMás adelante, aquí escribiré sobre un economista real que me haya marcado, con una frase suya como epígrafe en español y mi lectura personal de su trabajo."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Inicio",
+    "objectID": "mitos-economicos.html",
+    "href": "mitos-economicos.html",
+    "title": "Mitos económicos",
     "section": "",
-    "text": "Aquí siempre aparecerá el último gráfico que publique en la serie La República en un gráfico.\nDebajo ves una tarjeta con el título, fecha y resumen.\nAl hacer clic, entras al análisis completo.\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items\n\n\n\n\nNotas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nPuedes ver todas en la serie La República habla de desde el menú de Series.\n\n\n\n\nConceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.\nEjemplo: la famosa “canasta familiar”.\n\n\n\n\nEconomistas que me han marcado y por qué.\nCada texto tendrá una frase suya en español y mi lectura personal de su trabajo."
-  },
-  {
-    "objectID": "index.html#la-república-habla-de",
-    "href": "index.html#la-república-habla-de",
-    "title": "Inicio",
-    "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nPuedes ver todas en la serie La República habla de desde el menú de Series."
-  },
-  {
-    "objectID": "index.html#fundamentos",
-    "href": "index.html#fundamentos",
-    "title": "Inicio",
-    "section": "",
-    "text": "Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.\nEjemplo: la famosa “canasta familiar”."
-  },
-  {
-    "objectID": "index.html#mis-predecesores",
-    "href": "index.html#mis-predecesores",
-    "title": "Inicio",
-    "section": "",
-    "text": "Economistas que me han marcado y por qué.\nCada texto tendrá una frase suya en español y mi lectura personal de su trabajo."
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Archivo\nAquí aparecerán todas las publicaciones ordenadas por fecha.\nPor ahora, es solo una página vacía para validar la estructura del sitio."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "Sobre mí\nSoy Leonardo Mena, economista en formación.\nEste sitio reúne mis notas, gráficos y reflexiones sobre economía aplicada, con foco en República Dominicana.\nMás adelante afinaremos este texto."
+    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "fundamentos.html",
     "href": "fundamentos.html",
     "title": "Fundamentos",
     "section": "",
-    "text": "Fundamentos\nConceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n¿Qué es realmente la ‘canasta familiar’?\n\n\nDesmitificando uno de los términos más usados (y mal usados) en medios y conversación pública.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n¿Qué es realmente la ‘canasta familiar’?\n\n\nDesmitificando uno de los términos más usados (y mal usados) en medios y conversación pública.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
+    "section": "",
+    "text": "Archivo completo\nTodas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n¿Qué es realmente la ‘canasta familiar’?\n\n\nDesmitificando uno de los términos más usados (y mal usados) en medios y conversación pública.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nUn predecesor de prueba\n\n\nEntrada de prueba para la serie Mis predecesores.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nmapa-mental\n\nmetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\n\n\nPrueba: inflación que no se siente\n\n\nNota de prueba para la serie La República habla de.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "Soy Leonardo Mena, economista en formación.\nEste sitio reúne mis notas, gráficos y reflexiones sobre economía aplicada, con foco en República Dominicana.\nMás adelante afinaremos este texto."
+  },
+  {
+    "objectID": "categorias.html",
+    "href": "categorias.html",
+    "title": "Categorías",
+    "section": "",
+    "text": "Todos los artículos organizados por tema. Haz clic en una categoría para filtrar.\n\n\n\n\nCrecimiento, PIB, ciclos económicos, política monetaria y fiscal.\n\n\n\nPrecios, índices de inflación, poder adquisitivo, canasta básica.\n\n\n\nEmpleo, desempleo, salarios, informalidad.\n\n\n\nBalanza de pagos, tipo de cambio, remesas, comercio exterior.\n\n\n\nPresupuesto, deuda pública, gasto público, impuestos.\n\n\n\nDesigualdad, pobreza, educación, salud."
+  },
+  {
+    "objectID": "categorias.html#categorías-principales",
+    "href": "categorias.html#categorías-principales",
+    "title": "Categorías",
+    "section": "",
+    "text": "Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.\n\n\n\nPrecios, índices de inflación, poder adquisitivo, canasta básica.\n\n\n\nEmpleo, desempleo, salarios, informalidad.\n\n\n\nBalanza de pagos, tipo de cambio, remesas, comercio exterior.\n\n\n\nPresupuesto, deuda pública, gasto público, impuestos.\n\n\n\nDesigualdad, pobreza, educación, salud."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "La República, en un vistazo",
+    "section": "",
+    "text": "Leonardo Mena · Economía Aplicada\n\n\n\n\nUn gráfico, un mecanismo y una implicación. Aquí se reúnen lecturas de la economía dominicana sin humo: evidencia mínima, teoría explícita y límites claros.\n\n\n\n\n\n\n\nEste bloque siempre muestra el gráfico más reciente de la serie La República en un gráfico. Es la entrada principal al sitio: una visualización clara, una lectura y una implicación para la República Dominicana.\n\n\n\n\n\n\n\n\nmapa-mental\n\nmetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items\n\n\n\n\n\nNotas de coyuntura donde me mojo un poco, pero con datos y mecanismos\nqué pasó, qué significa, qué no significa y qué valdría la pena vigilar.\n\nVer todas las notas\n\n\n\n\nConceptos que se usan mal en medios o en la conversación diaria\nInflación vs costo de vida, “canasta familiar”, déficit vs deuda y más conceptos económicos explicados sin jerga.\n\nExplorar conceptos\n\n\n\n\nEconomistas que me han marcado y por qué\nUna frase suya, el contexto en que pensaron y qué me llevo hoy de sus ideas para entender la República.\n\nLeer perfiles\n\n\n\n\nDesmentir creencias populares pero incorrectas sobre economía\nDesde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción.\n\nVer mitos desmentidos"
+  },
+  {
+    "objectID": "index.html#en-un-gráfico",
+    "href": "index.html#en-un-gráfico",
+    "title": "La República, en un vistazo",
+    "section": "",
+    "text": "Este bloque siempre muestra el gráfico más reciente de la serie La República en un gráfico. Es la entrada principal al sitio: una visualización clara, una lectura y una implicación para la República Dominicana.\n\n\n\n\n\n\n\n\nmapa-mental\n\nmetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/fundamentos/canasta-familiar/index.html",
@@ -88,7 +95,7 @@
     "href": "posts/republica-en-un-grafico/grafico-0/index.html",
     "title": "Gráfico #0: Cómo leo la economía dominicana",
     "section": "",
-    "text": "LA REPÚBLICA EN UN GRÁFICO"
+    "text": "La República en un Gráfico\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n📅 December 11, 2025 ⏱️ 3 min de lectura\nEste primer gráfico no busca probar nada específico, sino mostrar cómo organizo mentalmente la economía dominicana cuando miro datos.\nLa idea es tener, en una sola imagen, algo como:\nMás adelante, aquí irá el gráfico protagonista (una imagen estática o un gráfico generado desde datos). Por ahora, puedes imaginarlo como un esquema claro que responde a una pregunta sencilla:"
   },
   {
     "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-muestra",
@@ -116,13 +123,13 @@
     "href": "predecesores.html",
     "title": "Mis predecesores",
     "section": "",
-    "text": "Mis predecesores\nEconomistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUn predecesor de prueba\n\n\nEntrada de prueba para la serie Mis predecesores.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUn predecesor de prueba\n\n\nEntrada de prueba para la serie Mis predecesores.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "republica-habla-de.html",
     "href": "republica-habla-de.html",
     "title": "La República habla de",
     "section": "",
-    "text": "La República habla de\nNotas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrueba: inflación que no se siente\n\n\nNota de prueba para la serie La República habla de.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrueba: inflación que no se siente\n\n\nNota de prueba para la serie La República habla de.\n\n\n\n\n\nDec 11, 2025\n\n\n\n\n\nNo matching items"
   }
 ]

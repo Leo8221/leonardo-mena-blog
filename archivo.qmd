@@ -1,9 +1,17 @@
 ---
 title: "Archivo"
+page-layout: full
+listing:
+  contents:
+    - posts/**/*.qmd
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, date, description, categories]
 ---
 
-# Archivo
+# Archivo completo
 
-Aquí aparecerán todas las publicaciones ordenadas por fecha.
-
-Por ahora, es solo una página vacía para validar la estructura del sitio.
+Todas las publicaciones en orden cronológico. Usa los filtros para buscar por categoría o tema específico.

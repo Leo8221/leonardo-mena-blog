@@ -4,17 +4,37 @@ project:
 
 website:
   title: "Leonardo Mena"
-  description: "Economía aplicada y datos, sin humo."
+  description: "Economía aplicada y datos de la República Dominicana, sin humo."
+  
   navbar:
     left:
       - href: index.qmd
         text: Inicio
-      - href: series.qmd
-        text: Series
+      - text: Temas
+        menu:
+          - text: "La República habla de"
+            href: republica-habla-de.qmd
+          - text: "Fundamentos"
+            href: fundamentos.qmd
+          - text: "Mis predecesores"
+            href: predecesores.qmd
+          - text: "Mitos económicos"
+            href: mitos-economicos.qmd
+      - href: categorias.qmd
+        text: Categorías
       - href: archivo.qmd
         text: Archivo
-      - href: about.qmd
-        text: Sobre mí
+  
+  page-footer:
+    left: |
+      <p style="margin: 0;">© 2025 Leonardo Mena · Economía Aplicada</p>
+    center: |
+      <a href="sobre-mi.html">Sobre mí</a> · 
+      <a href="mailto:tu@email.com">Contacto</a>
+    right: |
+      <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a> · 
+      <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a> · 
+      <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
 
 format:
   html:
@@ -25,6 +45,3 @@ format:
     link-external-newwindow: true
 
 editor: visual
-
-
-

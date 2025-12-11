@@ -1,6 +1,7 @@
 ---
-title: "Inicio"
+title: ""
 page-layout: full
+class: home
 listing:
   - id: grafico-reciente
     contents:
@@ -8,35 +9,88 @@ listing:
     sort: "date desc"
     type: default
     max-items: 1
+    fields: [title, date, description, categories]
 ---
 
-# En un gráfico
+::: {.home-hero}
 
-Aquí siempre aparecerá el **último gráfico** que publique en la serie *La República en un gráfico*.
+::: {.home-hero-title}
+<p class="home-kicker">Leonardo Mena · Economía Aplicada</p>
 
-Debajo ves una tarjeta con el título, fecha y resumen.\
-Al hacer clic, entras al análisis completo.
+# La República, en un vistazo
+
+<p class="home-intro">
+Un gráfico, un mecanismo y una implicación.<br>
+Aquí se reúnen lecturas de la economía dominicana sin humo: evidencia mínima, teoría explícita y límites claros.
+</p>
+:::
+
+::: {.home-grid}
+
+::: {.home-main}
+## En un gráfico
+
+<p class="home-main-text">
+Este bloque siempre muestra el gráfico más reciente de la serie <em>La República en un gráfico</em>. Es la entrada principal al sitio: una visualización clara, una lectura y una implicación para la República Dominicana.
+</p>
 
 ::: {#grafico-reciente}
 :::
 
-------------------------------------------------------------------------
+:::
 
-## La República habla de
+::: {.home-side}
 
-Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\
-Puedes ver todas en la serie **La República habla de** desde el menú de *Series*.
+::: {.home-side-card}
+### Coyuntura
 
-------------------------------------------------------------------------
+Notas de coyuntura donde me mojo un poco, pero con datos y mecanismos
 
-## Fundamentos
+qué pasó, qué significa, qué no significa y qué valdría la pena vigilar.
 
-Conceptos que se usan mal en medios o en la conversación pública, explicados con calma y sin jerga innecesaria.\
-Ejemplo: la famosa **“canasta familiar”**.
+::: {.home-side-link}
+[Ver todas las notas](republica-habla-de.qmd)
+:::
+:::
 
-------------------------------------------------------------------------
+::: {.home-side-card}
+### Fundamentos
 
-## Mis predecesores
+Conceptos que se usan mal en medios o en la conversación diaria
 
-Economistas que me han marcado y por qué.\
-Cada texto tendrá una frase suya en español y mi lectura personal de su trabajo.
+Inflación vs costo de vida, "canasta familiar", déficit vs deuda y más conceptos económicos explicados sin jerga.
+
+::: {.home-side-link}
+[Explorar conceptos](fundamentos.qmd)
+:::
+:::
+
+::: {.home-side-card}
+### Predecesores
+
+Economistas que me han marcado y por qué
+
+Una frase suya, el contexto en que pensaron y qué me llevo hoy de sus ideas para entender la República.
+
+::: {.home-side-link}
+[Leer perfiles](predecesores.qmd)
+:::
+:::
+
+::: {.home-side-card}
+### Mitos
+
+Desmentir creencias populares pero incorrectas sobre economía
+
+Desde "imprimir dinero crea riqueza" hasta "el déficit siempre es malo". Separando hechos de ficción.
+
+::: {.home-side-link}
+[Ver mitos desmentidos](mitos-economicos.qmd)
+:::
+:::
+
+:::
+
+:::
+
+:::
