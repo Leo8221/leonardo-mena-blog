@@ -628,7 +628,7 @@ footer {
 }
 
 .nav-footer .nav-footer-center {
-  display: none;
+  display: block !important;
 }
 
 /* Estilos básicos del footer de Quarto */
