@@ -5,19 +5,19 @@ section-divs: false
 toc: false
 ---
 
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh; text-align: center; font-family: sans-serif;"}
+::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh; text-align: center; font-family: sans-serif; color: inherit;"}
 
 # 📬 {style="font-size: 3rem; margin-bottom: 0;"}
 
-# Economía al grano. {style="margin-top: 10px; margin-bottom: 10px;"}
+# Economía. {style="margin-top: 10px; margin-bottom: 10px;"}
 
-::: {style="color: #666; font-size: 1.1rem; margin-bottom: 30px;"}
+::: {style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 30px;"}
 Contenido del blog explicado en tu correo.
 :::
 
-<iframe src="https://leonardomena824.substack.com/embed" width="480" height="150" style="border:none; background:white;" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://leonardomena824.substack.com/embed" width="480" height="150" style="border:none; background:white; border-radius: 8px;" frameborder="0" scrolling="no"></iframe>
 
-::: {style="margin-top: 30px;"}
+::: {style="margin-top: 30px; opacity: 0.6;"}
 [← Volver al inicio](index.qmd)
 :::
 

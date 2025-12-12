@@ -5,32 +5,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ===========================
-   Paleta editorial cálida
+   SISTEMA DE COLORES (Variable Switching)
    =========================== */
 
+/* ☀️ MODO CLARO (Tu diseño original Crema/Terracota) */
 :root {
-  /* Colores base - tonos cálidos y naturales */
-  --lm-cream: #faf8f3;           /* Crema papel */
-  --lm-cream-dark: #f5f1e8;      /* Crema más oscuro */
+  --lm-cream: #faf8f3;           /* Fondo principal */
+  --lm-cream-dark: #f5f1e8;      /* Fondo secundario */
   --lm-bg: #ffffff;              /* Blanco puro para cards */
   --lm-text: #1a1512;            /* Negro cálido */
-  --lm-text-soft: #4a443e;       /* Gris cálido para secundario */
-  --lm-muted: #73695f;           /* Marrón suave para detalles */
+  --lm-text-soft: #4a443e;       /* Gris cálido */
+  --lm-muted: #73695f;           /* Marrón suave */
   
-  /* Acentos cálidos */
-  --lm-terracota: #c86448;       /* Terracota principal */
-  --lm-terracota-dark: #a04d35;  /* Terracota oscuro */
-  --lm-olive: #6b7554;           /* Verde oliva */
-  --lm-ochre: #d4a574;           /* Ocre dorado */
+  --lm-terracota: #c86448;       /* Acento principal */
+  --lm-terracota-dark: #a04d35;  /* Hover del acento */
+  --lm-olive: #6b7554;           /* Verde */
+  --lm-ochre: #d4a574;           /* Dorado */
   
-  /* Bordes y separadores */
   --lm-border: #e6dfd5;
   --lm-border-dark: #d4c9ba;
   
-  /* Sombras sutiles y naturales */
   --shadow-soft: 0 1px 3px rgba(26, 21, 18, 0.06);
   --shadow-md: 0 4px 16px rgba(26, 21, 18, 0.08);
-  --shadow-lg: 0 8px 32px rgba(26, 21, 18, 0.12);
+}
+
+/* 🌙 MODO OSCURO (Adaptación al tema Slate) */
+body.quarto-dark {
+  /* Fondo principal (Gris azulado oscuro de Slate) */
+  --lm-cream: #272b30;           
+  /* Fondo secundario (Un poco más claro para contraste) */
+  --lm-cream-dark: #32383e;      
+  /* Fondo de cards (Casi negro o gris medio) */
+  --lm-bg: #1e2124;              
+  
+  /* Textos (Invertidos a claros) */
+  --lm-text: #e8e6e3;            /* Blanco hueso */
+  --lm-text-soft: #b0b3b8;       /* Gris claro */
+  --lm-muted: #7a7f85;           /* Gris medio */
+  
+  /* Acentos (Ajustados para brillar en oscuro) */
+  --lm-terracota: #e07a5f;       /* Terracota más brillante */
+  --lm-terracota-dark: #ff9f85;  /* Hover más claro */
+  --lm-olive: #9ca683;           /* Verde más pastel */
+  --lm-ochre: #e6c29a;           /* Dorado más claro */
+  
+  /* Bordes (Oscuros) */
+  --lm-border: #3e444a;
+  --lm-border-dark: #4f575e;
+  
+  /* Sombras (Invertidas para dar profundidad) */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* ===========================
@@ -50,7 +75,6 @@ body {
   font-size: 19px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 main.content {
@@ -109,7 +133,7 @@ em {
   color: var(--lm-terracota);
 }
 
-/* Enlaces con subrayado editorial */
+/* Enlaces */
 a {
   color: var(--lm-terracota);
   text-decoration: none;
@@ -125,7 +149,7 @@ a:hover {
 }
 
 /* ===========================
-   Navbar futurista - Compatible con Quarto + Dropdown
+   Navbar (Adaptado a Modo Oscuro)
    =========================== */
 
 #quarto-header,
@@ -150,8 +174,7 @@ nav.navbar {
 }
 
 .navbar-nav .nav-link,
-#quarto-header .navbar-nav .nav-link,
-.navbar .navbar-nav .nav-item .nav-link {
+#quarto-header .navbar-nav .nav-link {
   color: var(--lm-text-soft) !important;
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
@@ -166,12 +189,9 @@ nav.navbar {
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active,
-#quarto-header .navbar-nav .nav-link:hover,
-#quarto-header .navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active {
   color: var(--lm-terracota) !important;
   border-bottom-color: var(--lm-terracota);
-  background: none !important;
 }
 
 /* Dropdown menu */
@@ -200,37 +220,13 @@ nav.navbar {
   border-left-color: var(--lm-terracota);
 }
 
-/* Flecha del dropdown */
-.navbar-nav .dropdown-toggle::after {
-  border-top-color: var(--lm-text-soft);
-  margin-left: 0.35rem;
-}
-
-/* Forzar container del navbar */
-#quarto-header .navbar-container,
-.navbar > .container-fluid {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
 /* ===========================
-   Home Hero - Cabecera editorial
+   Home Hero
    =========================== */
 
-.home .quarto-title-block {
-  display: none;
-}
-
-.home .home-hero {
-  margin-top: 2.5rem;
-  margin-bottom: 3.5rem;
-}
-
-.home .home-hero-title {
-  max-width: 820px;
-  margin: 0 auto 3.5rem auto;
-  text-align: center;
-}
+.home .quarto-title-block { display: none; }
+.home .home-hero { margin-top: 2.5rem; margin-bottom: 3.5rem; }
+.home .home-hero-title { max-width: 820px; margin: 0 auto 3.5rem auto; text-align: center; }
 
 .home .home-kicker {
   font-family: 'Inter', sans-serif;
@@ -260,7 +256,7 @@ nav.navbar {
 }
 
 /* ===========================
-   Grid - Layout asimétrico editorial
+   Grid & Componentes Home
    =========================== */
 
 .home .home-grid {
@@ -269,10 +265,6 @@ nav.navbar {
   gap: 2.5rem;
   align-items: flex-start;
 }
-
-/* ===========================
-   Columna principal - Feature destacado
-   =========================== */
 
 .home .home-main {
   background: var(--lm-bg);
@@ -297,7 +289,6 @@ nav.navbar {
   font-family: 'Inter', sans-serif;
 }
 
-/* Línea decorativa debajo del título */
 .home .home-main h2::after {
   content: '';
   display: block;
@@ -317,23 +308,19 @@ nav.navbar {
   padding-left: 1rem;
 }
 
-/* Listing del gráfico reciente */
-.home #grafico-reciente {
-  margin-top: 1.5rem;
-}
+/* ===========================
+   Listings (Series)
+   =========================== */
 
-.home #grafico-reciente .quarto-listing {
-  margin-top: 0;
-}
+.quarto-listing { margin-top: 2.5rem; }
 
+/* Items del listing de gráfico reciente */
 .home #grafico-reciente .quarto-listing-item {
   background: var(--lm-cream-dark);
   border: 1px solid var(--lm-border);
   padding: 1.75rem;
-  transition: all 0.2s ease;
   margin-bottom: 0;
 }
-
 .home #grafico-reciente .quarto-listing-item:hover {
   background: var(--lm-bg);
   border-color: var(--lm-terracota);
@@ -342,32 +329,37 @@ nav.navbar {
 
 .home #grafico-reciente .listing-title {
   font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
   color: var(--lm-text);
-  line-height: 1.3;
 }
 
 .home #grafico-reciente .listing-date,
 .home #grafico-reciente .listing-categories {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--lm-muted);
-  margin-bottom: 0.65rem;
-  font-weight: 500;
 }
 
 .home #grafico-reciente .listing-description {
-  font-size: 1rem;
   color: var(--lm-text-soft);
-  line-height: 1.6;
-  margin-bottom: 0;
 }
 
+/* Items Generales */
+.quarto-listing .quarto-listing-item {
+  background: var(--lm-bg);
+  border: 1px solid var(--lm-border);
+  border-left: 3px solid var(--lm-olive);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin-bottom: 1.75rem;
+}
+.quarto-listing .quarto-listing-item:hover {
+  border-left-color: var(--lm-terracota);
+}
+
+.quarto-listing .listing-title { color: var(--lm-text); }
+.quarto-listing .listing-description { color: var(--lm-text-soft); }
+
 /* ===========================
-   Columna lateral - Secciones tipo Economist
+   Columna Lateral
    =========================== */
 
 .home .home-side {
@@ -381,143 +373,23 @@ nav.navbar {
   background: var(--lm-bg);
   border-bottom: 1px solid var(--lm-border);
   padding: 1.85rem 0;
-  transition: all 0.2s ease;
   position: relative;
 }
-
-.home .home-side-card:last-child {
-  border-bottom: none;
-}
-
 .home .home-side-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0;
-  background: var(--lm-terracota);
-  transition: width 0.2s ease;
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+  background: var(--lm-terracota); transition: width 0.2s ease;
 }
+.home .home-side-card:hover::before { width: 4px; }
+.home .home-side-card:hover { padding-left: 1rem; }
 
-.home .home-side-card:hover::before {
-  width: 4px;
-}
+.home .home-side-card h3 { color: var(--lm-terracota); font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 700; }
+.home .home-side-card p { color: var(--lm-text); }
+.home .home-side-card p:nth-of-type(2) { color: var(--lm-text-soft); }
 
-.home .home-side-card:hover {
-  padding-left: 1rem;
-}
-
-/* Etiqueta de categoría estilo Economist */
-.home .home-side-card h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--lm-terracota);
-  margin: 0 0 0.65rem 0;
-}
-
-.home .home-side-card p {
-  font-size: 1.15rem;
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
-  color: var(--lm-text);
-  font-weight: 600;
-}
-
-/* Descripción más pequeña */
-.home .home-side-card p:nth-of-type(2) {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  font-weight: 400;
-  color: var(--lm-text-soft);
-  margin-bottom: 0.85rem;
-}
-
-.home .home-side-link {
-  margin-top: 0;
-}
-
-.home .home-side-link a {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
-  color: var(--lm-terracota);
-  border-bottom: none;
-  padding-bottom: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.home .home-side-link a::after {
-  content: '→';
-  transition: transform 0.2s ease;
-}
-
-.home .home-side-link a:hover {
-  color: var(--lm-terracota-dark);
-}
-
-.home .home-side-link a:hover::after {
-  transform: translateX(3px);
-}
+.home .home-side-link a { color: var(--lm-terracota); font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; border-bottom: none; }
 
 /* ===========================
-   Listings generales (páginas de series)
-   =========================== */
-
-.quarto-listing {
-  margin-top: 2.5rem;
-}
-
-.quarto-listing .quarto-listing-item {
-  background: var(--lm-bg);
-  border: 1px solid var(--lm-border);
-  border-left: 3px solid var(--lm-olive);
-  padding: 2rem 2rem 2rem 2.25rem;
-  margin-bottom: 1.75rem;
-  transition: all 0.2s ease;
-}
-
-.quarto-listing .quarto-listing-item:hover {
-  border-left-color: var(--lm-terracota);
-  border-left-width: 5px;
-  box-shadow: var(--shadow-md);
-  transform: translateX(3px);
-}
-
-.quarto-listing .listing-title {
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: var(--lm-text);
-  margin-bottom: 0.5rem;
-  line-height: 1.25;
-}
-
-.quarto-listing .listing-date,
-.quarto-listing .listing-categories {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--lm-muted);
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-}
-
-.quarto-listing .listing-description {
-  font-size: 1.05rem;
-  color: var(--lm-text-soft);
-  line-height: 1.65;
-}
-
-/* ===========================
-   Elementos de contenido
+   Elementos (Blockquotes, Code, Tables)
    =========================== */
 
 blockquote {
@@ -526,459 +398,67 @@ blockquote {
   margin: 2rem 0;
   font-style: italic;
   color: var(--lm-text-soft);
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
-blockquote p {
-  font-size: 1.15rem;
 }
 
 code {
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
-  font-size: 0.88rem;
   background: var(--lm-cream-dark);
   color: var(--lm-text);
-  padding: 0.15rem 0.4rem;
   border: 1px solid var(--lm-border);
-  border-radius: 3px;
 }
 
 pre {
   background: var(--lm-cream-dark);
   border: 1px solid var(--lm-border);
-  padding: 1.5rem;
-  overflow-x: auto;
-  border-radius: 3px;
-  margin: 1.5rem 0;
-}
-
-pre code {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-hr {
-  border: none;
-  height: 2px;
-  background: var(--lm-border);
-  margin: 3rem 0;
-}
-
-/* Tablas editoriales */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  font-size: 0.95rem;
-  border: 1px solid var(--lm-border);
+  color: var(--lm-text);
 }
 
 table th {
   background: var(--lm-cream-dark);
   color: var(--lm-text);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.85rem 1rem;
-  text-align: left;
-  font-size: 0.8rem;
   border-bottom: 2px solid var(--lm-border-dark);
 }
 
 table td {
-  padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--lm-border);
   color: var(--lm-text);
 }
 
-table tr:last-child td {
-  border-bottom: none;
-}
-
-table tr:hover td {
-  background: var(--lm-cream-dark);
-}
-
-/* Listas */
-ul, ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-ul li, ol li {
-  margin-bottom: 0.5rem;
-  color: var(--lm-text-soft);
-}
-
 /* ===========================
-   Footer editorial completo - Compatible con Quarto
+   Footer
    =========================== */
 
-.nav-footer,
-#quarto-footer,
-footer {
+.nav-footer, #quarto-footer, footer {
   border-top: 2px solid var(--lm-border-dark);
-  margin-top: 5rem;
-  padding: 3rem 0 2.5rem 0;
-  font-family: 'Inter', sans-serif;
   background: var(--lm-bg);
 }
 
-.nav-footer .nav-footer-center {
-  display: block !important;
-}
-
-/* Estilos básicos del footer de Quarto */
 #quarto-footer .nav-footer-left,
 #quarto-footer .nav-footer-center,
 #quarto-footer .nav-footer-right {
-  font-size: 0.9rem;
   color: var(--lm-text-soft);
-}
-
-#quarto-footer a {
-  color: var(--lm-terracota);
-  border-bottom: 1px solid var(--lm-terracota);
-}
-
-#quarto-footer a:hover {
-  color: var(--lm-terracota-dark);
-}
-
-/* Container del footer */
-.footer-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 2.5rem;
-}
-
-/* Columna principal - About */
-.footer-about h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--lm-terracota);
-  margin-bottom: 1rem;
-}
-
-.footer-about p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--lm-text-soft);
-  margin-bottom: 1rem;
-}
-
-.footer-about p:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Columna de navegación */
-.footer-nav h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--lm-terracota);
-  margin-bottom: 1rem;
-}
-
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-nav ul li {
-  margin-bottom: 0.65rem;
-}
-
-.footer-nav ul li a {
-  font-size: 0.9rem;
-  color: var(--lm-text-soft);
-  border-bottom: none;
-  transition: color 0.2s ease;
-  padding: 0;
-}
-
-.footer-nav ul li a:hover {
-  color: var(--lm-terracota);
-}
-
-/* Columna de contacto y redes */
-.footer-connect h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--lm-terracota);
-  margin-bottom: 1rem;
-}
-
-.footer-social {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .footer-social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
   border: 1px solid var(--lm-border-dark);
-  border-radius: 50%;
   color: var(--lm-text-soft);
-  transition: all 0.2s ease;
-  border-bottom: none;
 }
 
 .footer-social a:hover {
   background: var(--lm-terracota);
   border-color: var(--lm-terracota);
   color: white;
-  transform: translateY(-2px);
 }
 
-.footer-email {
-  font-size: 0.9rem;
-  color: var(--lm-text-soft);
-  margin-bottom: 0.5rem;
-}
-
-.footer-email a {
-  color: var(--lm-terracota);
-  border-bottom: 1px solid var(--lm-terracota);
-  padding-bottom: 1px;
-}
-
-.footer-email a:hover {
-  color: var(--lm-terracota-dark);
-  border-bottom-color: var(--lm-terracota-dark);
-}
-
-/* Barra inferior con copyright */
 .footer-bottom {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem 0 2rem;
   border-top: 1px solid var(--lm-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
   color: var(--lm-muted);
 }
-
-.footer-copyright {
-  font-size: 0.8rem;
-}
-
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-links a {
-  color: var(--lm-muted);
-  border-bottom: none;
-  padding: 0;
-  font-size: 0.8rem;
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-  color: var(--lm-terracota);
-}
-
-/* Responsive footer */
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1.25rem;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-    padding: 1.5rem 1.25rem 0 1.25rem;
-  }
-  
-  .footer-links {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-}
+.footer-links a { color: var(--lm-muted); }
 
 /* ===========================
-   Responsive
+   Cards Categorías
    =========================== */
-
-@media (max-width: 1024px) {
-  .home .home-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .home .home-main {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-  
-  main.content {
-    padding: 2.5rem 1.25rem 3.5rem 1.25rem;
-  }
-  
-  .home .home-hero-title {
-    text-align: left;
-  }
-  
-  .home .home-kicker {
-    font-size: 0.7rem;
-  }
-  
-  .home .home-hero-title h1 {
-    font-size: 2.25rem;
-  }
-  
-  .home .home-intro {
-    font-size: 1.05rem;
-  }
-  
-  .home .home-main,
-  .home .home-side-card {
-    padding: 1.5rem;
-  }
-  
-  .navbar-nav .nav-link {
-    margin: 0 0.75rem;
-    font-size: 0.8rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.65rem;
-  }
-  
-  h3 {
-    font-size: 1.35rem;
-  }
-}
-
-/* ===========================
-   Detalles finales
-   =========================== */
-
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Selección de texto */
-::selection {
-  background: var(--lm-ochre);
-  color: var(--lm-text);
-}
-
-::-moz-selection {
-  background: var(--lm-ochre);
-  color: var(--lm-text);
-}
-
-/* Focus states accesibles */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--lm-terracota);
-  outline-offset: 2px;
-}
-
-/* Mejoras de impresión */
-@media print {
-  body {
-    background: white;
-    color: black;
-  }
-  
-  .navbar,
-  .nav-footer {
-    display: none;
-  }
-}
-
-/* Estilo de los Callouts (Cajas de notas/advertencias) 
-   para que combinen con el tema editorial */
-
-.callout {
-  border-left-width: 5px;
-  border-radius: 0;
-  background-color: var(--lm-cream-dark) !important;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-}
-
-.callout-note {
-  border-left-color: var(--lm-olive) !important;
-}
-
-.callout-tip {
-  border-left-color: var(--lm-terracota) !important;
-}
-
-.callout-header {
-  background-color: transparent !important;
-  font-family: 'Inter', sans-serif;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  color: var(--lm-text) !important;
-}
-
-/* Ajuste de imágenes y figuras */
-figure {
-  margin: 2.5rem 0;
-}
-
-figcaption {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  color: var(--lm-muted);
-  text-align: left; /* Al estilo Economist */
-  margin-top: 0.5rem;
-  border-top: 1px solid var(--lm-border);
-  padding-top: 0.5rem;
-}
-
-/* Iconos sociales en el footer (requiere bootstrap icons activado por defecto en Quarto) */
-.bi {
-    font-size: 1.1em;
-}
-
-/* ===========================
-   Página de Categorías (Cards)
-   =========================== */
-
-/* Contenedor de la rejilla */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -986,47 +466,88 @@ figcaption {
   margin: 2rem 0;
 }
 
-/* La tarjeta individual (ahora es un enlace <a>) */
 a.category-card {
-  display: block; /* Para que ocupe todo el espacio */
+  display: block;
   background: var(--lm-bg);
   border: 1px solid var(--lm-border);
   border-radius: 6px;
   padding: 1.75rem;
-  text-decoration: none !important; /* Quita el subrayado del enlace */
-  border-bottom: 2px solid var(--lm-border); /* Borde inferior más grueso */
-  transition: all 0.25s ease;
-  height: 100%;
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--lm-border);
+  color: var(--lm-text);
+}
+
+a.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--lm-terracota);
+  border-bottom-width: 4px;
+}
+
+a.category-card h3 { color: var(--lm-text); font-family: 'Inter', sans-serif; font-size: 1.1rem; }
+a.category-card:hover h3 { color: var(--lm-terracota); }
+a.category-card p { color: var(--lm-text-soft); }
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 1024px) { .home .home-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { 
+  body { font-size: 18px; }
+  .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; }
+}
+
+/* ===========================
+   BOTÓN MODO OSCURO (Versión Corregida)
+   =========================== */
+
+.navbar .quarto-color-scheme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  
+  /* El cuerpo del botón */
+  background-color: var(--lm-cream-dark) !important;
+  border: 2px solid var(--lm-border-dark) !important;
+  border-radius: 50% !important;
+  
+  width: 42px !important;
+  height: 42px !important;
+  margin-left: 15px !important;
+  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  
+  /* --- FUERZA EL COLOR NARANJA EN EL CONTENEDOR --- */
+  color: var(--lm-terracota) !important;
+}
+
+/* Forzamos el tamaño y color del icono interno */
+.navbar .quarto-color-scheme-toggle i,
+.navbar .quarto-color-scheme-toggle .bi {
+  font-size: 1.3rem !important;
+  color: var(--lm-terracota) !important; /* <--- ESTO ES CRÍTICO */
+  margin: 0 !important;
 }
 
 /* Efecto Hover */
-a.category-card:hover {
-  transform: translateY(-3px); /* Se levanta un poco */
-  box-shadow: var(--shadow-md);
-  border-color: var(--lm-terracota);
-  border-bottom-width: 4px; /* Efecto de botón presionado */
+.navbar .quarto-color-scheme-toggle:hover {
+  transform: scale(1.1);
+  background-color: #fff !important;
+  border-color: var(--lm-terracota) !important;
+  color: var(--lm-terracota-dark) !important;
+  box-shadow: 0 4px 12px rgba(200, 100, 72, 0.2);
 }
 
-/* Título de la tarjeta */
-a.category-card h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--lm-text);
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+/* Ajustes para la Noche */
+body.quarto-dark .navbar .quarto-color-scheme-toggle {
+  background-color: #3e444a !important;
+  border-color: #555 !important;
+  color: var(--lm-ochre) !important; /* Dorado */
 }
 
-a.category-card:hover h3 {
-  color: var(--lm-terracota);
-}
-
-/* Texto descriptivo */
-a.category-card p {
-  font-size: 0.95rem;
-  color: var(--lm-text-soft);
-  margin-bottom: 0;
-  line-height: 1.5;
+body.quarto-dark .navbar .quarto-color-scheme-toggle i,
+body.quarto-dark .navbar .quarto-color-scheme-toggle .bi {
+  color: var(--lm-ochre) !important; /* Dorado */
 }
