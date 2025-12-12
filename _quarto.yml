@@ -1,12 +1,20 @@
 project:
   type: website
   output-dir: docs
+lang: es 
 
+# Configuración global del sitio
 website:
   title: "Leonardo Mena"
   description: "Economía aplicada y datos de la República Dominicana"
+  site-url: "https://leo8221.github.io/leonardo-mena-blog/"  
   
+  # Favicon (el icono en la pestaña del navegador)
+  #favicon: images/favicon.ico # (Asegúrate de crear esta imagen)
+
+  # Barra de navegación
   navbar:
+    background: "#ffffff" # Coherente con tu CSS
     left:
       - href: index.qmd
         text: Inicio
@@ -25,6 +33,11 @@ website:
       - href: archivo.qmd
         text: Archivo
   
+  # Configuración para compartir en redes (WhatsApp/LinkedIn/Twitter)
+  open-graph: true
+  twitter-card: true
+
+  # Pie de página
   page-footer:
     left: |
       <p style="margin: 0;">© 2025 Leonardo Mena · Economía Aplicada</p>
@@ -32,17 +45,23 @@ website:
       <a href="about.html">Sobre mí</a> · 
       <a href="mailto:leonardomena824@gmail.com">Contacto</a>
     right: |
-      <a href="https://x.com/leonardomena824" target="_blank">X</a> · 
-      <a href="https://www.instagram.com/leonardomena824/" target="_blank">Instagram</a> · 
-      <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank">LinkedIn</a> .
-      <a href="https://github.com/Leo8221" target="_blank">Github</a>
+      <a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · 
+      <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · 
+      <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> ·
+      <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a>
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: false
+    toc: true            
+    toc-title: "En este artículo"
     smooth-scroll: true
     link-external-newwindow: true
+    code-copy: true      
+    highlight-style: github # O "solarized" para que combine con tus colores crema
+
+execute:
+  freeze: auto  
 
 editor: visual

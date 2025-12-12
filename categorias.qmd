@@ -11,50 +11,58 @@ listing:
   fields: [title, date, description, categories]
 ---
 
-::: {.categories-header}
+::: categories-header
 # Explora por categoría
 
 <p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+
 Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico.
+
 </p>
 :::
 
----
+------------------------------------------------------------------------
 
-::: {.categories-grid}
+::::::::: categories-grid
 ## Categorías principales
 
-::: {.category-card}
+::: category-card
 ### 📊 Macroeconomía
+
 Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.
 :::
 
-::: {.category-card}
+::: category-card
 ### 💰 Inflación
+
 Precios, índices de inflación, poder adquisitivo, canasta básica.
 :::
 
-::: {.category-card}
+::: category-card
 ### 👔 Mercado laboral
+
 Empleo, desempleo, salarios, informalidad.
 :::
 
-::: {.category-card}
+::: category-card
 ### 🌍 Sector externo
+
 Balanza de pagos, tipo de cambio, remesas, comercio exterior.
 :::
 
-::: {.category-card}
+::: category-card
 ### 🏛️ Política fiscal
+
 Presupuesto, deuda pública, gasto público, impuestos.
 :::
 
-::: {.category-card}
+::: category-card
 ### 📈 Desarrollo
+
 Desigualdad, pobreza, educación, salud, crecimiento inclusivo.
 :::
-:::
+:::::::::
 
----
+------------------------------------------------------------------------
 
 ## Todos los posts por categoría

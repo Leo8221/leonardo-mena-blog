@@ -1,12 +1,19 @@
 ---
 title: "La República habla de"
 listing:
-  contents:
-    - posts/republica-habla-de
+  contents: posts/republica-habla-de
   sort: "date desc"
   type: default
+  categories: true      
+  sort-ui: false        
+  filter-ui: false      
+page-layout: full
+title-block-banner: true
 ---
 
 Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.
 
-Aquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”
+Aquí se irán agrupando textos que responden a preguntas como:
+- “¿Qué significa realmente esta medida?”
+- “¿Por qué la gente siente X si el dato dice Y?”
+- “¿Qué podría cambiar este escenario?”

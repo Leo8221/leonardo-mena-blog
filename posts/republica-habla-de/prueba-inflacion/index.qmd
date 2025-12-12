@@ -1,13 +1,11 @@
 ---
 title: "Prueba: inflación que no se siente"
-date: 2025-12-11
 description: "Nota de prueba para la serie La República habla de."
-tags: [inflacion, coyuntura, prueba]
+author: "Leonardo Mena"       # <--- Agregado
+date: "2025-12-11"            # <--- Puse comillas por seguridad
+categories: [inflacion, coyuntura, prueba]  # <--- CAMBIO: usa 'categories', no 'tags'
+image: ""                     # <--- Déjalo vacío si no tienes foto aún, o pon el nombre del archivo
 ---
-
-LA REPÚBLICA HABLA DE
-
-# Prueba: inflación que no se siente
 
 Esta es una entrada de prueba para comprobar que la serie **La República habla de** funciona bien.
 

@@ -924,3 +924,52 @@ button:focus-visible {
     display: none;
   }
 }
+
+/* Estilo de los Callouts (Cajas de notas/advertencias) 
+   para que combinen con el tema editorial */
+
+.callout {
+  border-left-width: 5px;
+  border-radius: 0;
+  background-color: var(--lm-cream-dark) !important;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.callout-note {
+  border-left-color: var(--lm-olive) !important;
+}
+
+.callout-tip {
+  border-left-color: var(--lm-terracota) !important;
+}
+
+.callout-header {
+  background-color: transparent !important;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--lm-text) !important;
+}
+
+/* Ajuste de imágenes y figuras */
+figure {
+  margin: 2.5rem 0;
+}
+
+figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lm-muted);
+  text-align: left; /* Al estilo Economist */
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--lm-border);
+  padding-top: 0.5rem;
+}
+
+/* Iconos sociales en el footer (requiere bootstrap icons activado por defecto en Quarto) */
+.bi {
+    font-size: 1.1em;
+}

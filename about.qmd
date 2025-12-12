@@ -1,8 +1,50 @@
 ---
 title: "Sobre mí"
+about:
+  template: solana
+  links:
+    - icon: twitter
+      text: X (Twitter)
+      href: https://x.com/leonardomena824
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/leonardo-mena-3b140724a/
+    - icon: github
+      text: Github
+      href: https://github.com/Leo8221
+    - icon: envelope
+      text: Email
+      href: mailto:leonardomena824@gmail.com
 ---
 
-Soy Leonardo Mena, economista en formación.\
-Este sitio reúne mis notas, gráficos y reflexiones sobre economía aplicada, con foco en República Dominicana.
+La economía no debería ser un idioma secreto que solo se habla en las oficinas del Banco Central. Nos afecta a todos: en el supermercado, en el transporte y en nuestros ahorros.
 
-Más adelante afinaremos este texto.
+Este blog nace con una misión sencilla: **traducir la economía**.
+
+### ¿Por qué este espacio?
+
+A menudo, las noticias económicas están llenas de jerga técnica o, peor aún, de términos que se usan mal. Mi objetivo aquí es **reivindicar el significado real** de esos conceptos, pero explicados para quien no es economista.
+
+Quiero responder a las preguntas que surgen en la calle, no en los libros de texto:
+* ¿Por qué suben los precios realmente?
+* ¿Qué significa que la economía "crezca" si yo no lo siento?
+* ¿Cómo leer un dato oficial sin perderse en el ruido?
+
+---
+
+### Quién soy
+
+Soy **Leonardo Mena**, estudiante de la **Licenciatura en Economía** en la **Universidad Autónoma de Santo Domingo (UASD)**.
+
+Mi formación en la universidad primada de América me ha enseñado a mirar la economía con sentido social y rigor técnico. Aún estoy en proceso de formación, y este blog es parte de ese viaje: es el espacio donde pongo a prueba lo que aprendo, contrastando la teoría de las aulas con los datos de la realidad dominicana.
+
+No escribo como un experto que lo sabe todo, sino como un estudiante apasionado por los datos que quiere entender (y ayudar a entender) cómo funciona nuestro país.
+
+---
+
+### Mi compromiso
+
+En cada artículo encontrarás:
+1.  **Cero humo:** Si algo es una opinión mía, lo diré. Si es un dato, pondré la fuente.
+2.  **Lenguaje claro:** Evitaré las fórmulas complejas siempre que sea posible.
+3.  **Contexto local:** Todo aplicado a la República Dominicana.

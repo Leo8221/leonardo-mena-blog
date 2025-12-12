@@ -1,97 +1,92 @@
 ---
-title: ""
+pagetitle: "Leonardo Mena · Economía Aplicada"
 page-layout: full
-class: home
+toc: false
 listing:
-  - id: grafico-reciente
-    contents:
-      - posts/republica-en-un-grafico
+  - id: grafico-destacado
+    contents: posts/republica-en-un-grafico
     sort: "date desc"
-    type: default
     max-items: 1
-    fields: [title, date, description, categories]
-    feed: false
+    type: default
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, description]
+  
+  - id: ultimos-posts
+    contents: posts/republica-habla-de
+    sort: "date desc"
+    max-items: 3
+    type: grid
+    grid-columns: 3
+    categories: true
+    fields: [image, date, title, description]
 ---
 
-:::::::::::::::: home-hero
-::: home-hero-title
-<p class="home-kicker">
+::: {.home}
 
-Leonardo Mena · Economía Aplicada
+::: {.home-hero}
+::: {.home-hero-title}
+<span class="home-kicker">Economía Dominicana Aplicada</span>
 
-</p>
-
-# La República, en un vistazo
-
-<p class="home-intro">
-
-Un gráfico, un mecanismo y una implicación.<br> Aquí se reúnen lecturas de la economía dominicana sin humo: evidencia mínima, teoría explícita y límites claros.
-
-</p>
+# Entendiendo la economía<br>más allá del titular.
 :::
 
-:::::::::::::: home-grid
-:::: home-main
-## En un gráfico
-
-<p class="home-main-text">
-
-Este bloque siempre muestra el gráfico más reciente de la serie <em>La República en un gráfico</em>. Es la entrada principal al sitio: una visualización clara, una lectura y una implicación para la República Dominicana.
-
-</p>
-
-::: {#grafico-reciente}
+::: {.home-intro}
+Bienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje de la calle, rescatar conceptos perdidos y analizar la República Dominicana con evidencia y sin humo.
 :::
-::::
-
-::::::::::: home-side
-:::: home-side-card
-### Coyuntura
-
-Notas de coyuntura donde me mojo un poco, pero con datos y mecanismos
-
-qué pasó, qué significa, qué no significa y qué valdría la pena vigilar.
-
-::: home-side-link
-[Ver todas las notas](republica-habla-de.qmd)
 :::
-::::
 
-:::: home-side-card
+::: {.home-grid}
+
+::: {.home-main}
+## Lo más reciente en datos
+
+Aquí analizo la economía visualmente. Un gráfico, una lectura y una implicación clara.
+
+::: {#grafico-destacado}
+:::
+:::
+
+::: {.home-side}
+
+::: {.home-side-card}
 ### Fundamentos
-
-Conceptos que se usan mal en medios o en la conversación diaria
-
-Inflación vs costo de vida, "canasta familiar", déficit vs deuda y más conceptos económicos explicados sin jerga.
-
-::: home-side-link
-[Explorar conceptos](fundamentos.qmd)
+<p>Conceptos Claros</p>
+<p>La inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.</p>
+::: {.home-side-link}
+[Aprender conceptos](fundamentos.qmd)
 :::
-::::
-
-:::: home-side-card
-### Predecesores
-
-Economistas que me han marcado y por qué
-
-Una frase suya, el contexto en que pensaron y qué me llevo hoy de sus ideas para entender la República.
-
-::: home-side-link
-[Leer perfiles](predecesores.qmd)
 :::
-::::
 
-:::: home-side-card
-### Mitos
-
-Desmentir creencias populares pero incorrectas sobre economía
-
-Desde "imprimir dinero crea riqueza" hasta "el déficit siempre es malo". Separando hechos de ficción.
-
-::: home-side-link
-[Ver mitos desmentidos](mitos-economicos.qmd)
+::: {.home-side-card}
+### Mitos Económicos
+<p>Realidad vs. Ficción</p>
+<p>¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.</p>
+::: {.home-side-link}
+[Ver mitos](mitos-economicos.qmd)
 :::
-::::
-:::::::::::
-::::::::::::::
-::::::::::::::::
+:::
+
+::: {.home-side-card}
+### Coyuntura
+<p>La República habla de...</p>
+<p>Análisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?</p>
+::: {.home-side-link}
+[Leer análisis](republica-habla-de.qmd)
+:::
+:::
+
+:::
+
+:::
+
+<br><br>
+<div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;"></div>
+
+## Últimos análisis de coyuntura
+
+::: {#ultimos-posts}
+:::
+
+:::
