@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,10 +134,12 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Categorías – Leonardo Mena">
 <meta property="og:description" content="Economía aplicada y datos de la República Dominicana">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion">
 <meta property="og:site_name" content="Leonardo Mena">
 <meta name="twitter:title" content="Categorías – Leonardo Mena">
 <meta name="twitter:description" content="Economía aplicada y datos de la República Dominicana">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -208,17 +210,8 @@ window.Quarto = {
     <h2 id="toc-title">En este artículo</h2>
    
   <ul>
-  <li><a href="#explora-por-categoría" id="toc-explora-por-categoría" class="nav-link active" data-scroll-target="#explora-por-categoría">Explora por categoría</a></li>
-  <li><a href="#categorías-principales" id="toc-categorías-principales" class="nav-link" data-scroll-target="#categorías-principales">Categorías principales</a>
-  <ul class="collapse">
-  <li><a href="#macroeconomía" id="toc-macroeconomía" class="nav-link" data-scroll-target="#macroeconomía">📊 Macroeconomía</a></li>
-  <li><a href="#inflación" id="toc-inflación" class="nav-link" data-scroll-target="#inflación">💰 Inflación</a></li>
-  <li><a href="#mercado-laboral" id="toc-mercado-laboral" class="nav-link" data-scroll-target="#mercado-laboral">👔 Mercado laboral</a></li>
-  <li><a href="#sector-externo" id="toc-sector-externo" class="nav-link" data-scroll-target="#sector-externo">🌍 Sector externo</a></li>
-  <li><a href="#política-fiscal" id="toc-política-fiscal" class="nav-link" data-scroll-target="#política-fiscal">🏛️ Política fiscal</a></li>
-  <li><a href="#desarrollo" id="toc-desarrollo" class="nav-link" data-scroll-target="#desarrollo">📈 Desarrollo</a></li>
-  </ul></li>
-  <li><a href="#todos-los-posts-por-categoría" id="toc-todos-los-posts-por-categoría" class="nav-link" data-scroll-target="#todos-los-posts-por-categoría">Todos los posts por categoría</a></li>
+  <li><a href="#explora-por-tema" id="toc-explora-por-tema" class="nav-link active" data-scroll-target="#explora-por-tema">Explora por tema</a></li>
+  <li><a href="#índice-completo" id="toc-índice-completo" class="nav-link" data-scroll-target="#índice-completo">Índice completo</a></li>
   </ul>
 </nav>
     <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Y295dW50dXJh">coyuntura <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mbGFjaW9u">inflacion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFwYS1tZW50YWw=">mapa-mental <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWV0b2RvbG9nJUMzJUFEYQ==">metodología <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJ1ZWJh">prueba <span class="quarto-category-count">(1)</span></div></div></div>
@@ -244,50 +237,81 @@ window.Quarto = {
 </header>
 
 
-<section id="explora-por-categoría" class="level1 categories-header">
-<h1>Explora por categoría</h1>
+<section id="explora-por-tema" class="level1 categories-header">
+<h1>Explora por tema</h1>
 <p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
-</p><p>Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico.</p>
-<p></p>
+Selecciona un tema clave para filtrar los artículos automáticamente.
+</p>
 </section>
+<p><br></p>
+<div class="categories-grid">
+<a href="#category=Macroeconomía" class="category-card">
+<h3 class="anchored">
+📊 Macroeconomía
+</h3>
+<p>
+Crecimiento, PIB y ciclos económicos.
+</p>
+</a> <a href="#category=Inflación" class="category-card">
+<h3 class="anchored">
+💰 Inflación
+</h3>
+<p>
+Precios y poder adquisitivo.
+</p>
+</a> <a href="#category=Mercado%20laboral" class="category-card">
+<h3 class="anchored">
+👔 Mercado laboral
+</h3>
+<p>
+Empleo y salarios.
+</p>
+</a> <a href="#category=Sector%20externo" class="category-card">
+<h3 class="anchored">
+🌍 Sector externo
+</h3>
+<p>
+Turismo, remesas y tipo de cambio.
+</p>
+</a> <a href="#category=Política%20fiscal" class="category-card">
+<h3 class="anchored">
+🏛️ Política fiscal
+</h3>
+<p>
+Impuestos y gasto público.
+</p>
+</a> <a href="#category=Desarrollo" class="category-card">
+<h3 class="anchored">
+📈 Desarrollo
+</h3>
+<p>
+Pobreza y calidad de vida.
+</p>
+</a><p><a href="#category=Desarrollo" class="category-card"></a></p>
+</div>
+<br>
 <hr>
-<section id="categorías-principales" class="level2 categories-grid">
-<h2 class="anchored" data-anchor-id="categorías-principales">Categorías principales</h2>
-<section id="macroeconomía" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="macroeconomía">📊 Macroeconomía</h3>
-<p>Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.</p>
-</section>
-<section id="inflación" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="inflación">💰 Inflación</h3>
-<p>Precios, índices de inflación, poder adquisitivo, canasta básica.</p>
-</section>
-<section id="mercado-laboral" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="mercado-laboral">👔 Mercado laboral</h3>
-<p>Empleo, desempleo, salarios, informalidad.</p>
-</section>
-<section id="sector-externo" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="sector-externo">🌍 Sector externo</h3>
-<p>Balanza de pagos, tipo de cambio, remesas, comercio exterior.</p>
-</section>
-<section id="política-fiscal" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="política-fiscal">🏛️ Política fiscal</h3>
-<p>Presupuesto, deuda pública, gasto público, impuestos.</p>
-</section>
-<section id="desarrollo" class="level3 category-card">
-<h3 class="anchored" data-anchor-id="desarrollo">📈 Desarrollo</h3>
-<p>Desigualdad, pobreza, educación, salud, crecimiento inclusivo.</p>
-</section>
-</section>
-<hr>
-<section id="todos-los-posts-por-categoría" class="level2">
-<h2 class="anchored" data-anchor-id="todos-los-posts-por-categoría">Todos los posts por categoría</h2>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<p><br></p>
+<section id="índice-completo" class="level2">
+<h2 class="anchored" data-anchor-id="índice-completo">Índice completo</h2>
+<div id="listing-listing" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+      <option value="index" data-direction="asc">Por defecto</option>
+      <option value="listing-title" data-direction="asc">
+        Título
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Fecha - Más antiguo
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Fecha - Más reciente
+      </option>
+    </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filtro">
@@ -295,6 +319,11 @@ window.Quarto = {
 </div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765430477390" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
+<div class="thumbnail"><a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">¿Qué es realmente la ‘canasta familiar’?</a>
@@ -312,6 +341,11 @@ window.Quarto = {
 </div>
 </div>
 <div class="quarto-post image-right" data-index="1" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765431379962" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
+<div class="thumbnail"><a href="./posts/predecesores/primer-predecesor/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/predecesores/primer-predecesor/index.html" class="no-external">Un predecesor de prueba</a>
@@ -329,6 +363,11 @@ window.Quarto = {
 </div>
 </div>
 <div class="quarto-post image-right" data-index="2" data-categories="bWFwYS1tZW50YWwlMkNtZXRvZG9sb2clQzMlQURh" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765461634792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="271">
+<div class="thumbnail"><a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/republica-en-un-grafico/grafico-0/index.html" class="no-external">Gráfico #0: Cómo leo la economía dominicana</a>
@@ -353,6 +392,11 @@ window.Quarto = {
 </div>
 </div>
 <div class="quarto-post image-right" data-index="3" data-categories="aW5mbGFjaW9uJTJDY295dW50dXJhJTJDcHJ1ZWJh" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765500825444" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<div class="thumbnail"><a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/republica-habla-de/prueba-inflacion" class="thumbnail-image">
+
+</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">Prueba: inflación que no se siente</a>
@@ -380,7 +424,13 @@ window.Quarto = {
 </div>
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

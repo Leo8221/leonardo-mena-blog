@@ -973,3 +973,60 @@ figcaption {
 .bi {
     font-size: 1.1em;
 }
+
+/* ===========================
+   Página de Categorías (Cards)
+   =========================== */
+
+/* Contenedor de la rejilla */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* La tarjeta individual (ahora es un enlace <a>) */
+a.category-card {
+  display: block; /* Para que ocupe todo el espacio */
+  background: var(--lm-bg);
+  border: 1px solid var(--lm-border);
+  border-radius: 6px;
+  padding: 1.75rem;
+  text-decoration: none !important; /* Quita el subrayado del enlace */
+  border-bottom: 2px solid var(--lm-border); /* Borde inferior más grueso */
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+/* Efecto Hover */
+a.category-card:hover {
+  transform: translateY(-3px); /* Se levanta un poco */
+  box-shadow: var(--shadow-md);
+  border-color: var(--lm-terracota);
+  border-bottom-width: 4px; /* Efecto de botón presionado */
+}
+
+/* Título de la tarjeta */
+a.category-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--lm-text);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+a.category-card:hover h3 {
+  color: var(--lm-terracota);
+}
+
+/* Texto descriptivo */
+a.category-card p {
+  font-size: 0.95rem;
+  color: var(--lm-text-soft);
+  margin-bottom: 0;
+  line-height: 1.5;
+}

@@ -2,67 +2,56 @@
 title: "Categorías"
 page-layout: full
 listing:
-  contents:
-    - posts/**/*.qmd
+  contents: 
+    - "posts/**/index.qmd" # Solo busca artículos reales
   sort: "date desc"
   type: default
-  categories: numbered
-  filter-ui: [categories]
-  fields: [title, date, description, categories]
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, description, categories, image]
+  page-size: 10
 ---
 
 ::: categories-header
-# Explora por categoría
+# Explora por tema
 
 <p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
-
-Todos los artículos organizados por tema. Haz clic en una categoría para filtrar, o usa la búsqueda para encontrar contenido específico.
-
+Selecciona un tema clave para filtrar los artículos automáticamente.
 </p>
 :::
 
-------------------------------------------------------------------------
+<br>
 
-::::::::: categories-grid
-## Categorías principales
-
-::: category-card
-### 📊 Macroeconomía
-
-Crecimiento, PIB, ciclos económicos, política monetaria y fiscal.
+::: {.categories-grid}
+<a href="#category=Macroeconomía" class="category-card">
+  <h3>📊 Macroeconomía</h3>
+  <p>Crecimiento, PIB y ciclos económicos.</p>
+</a>
+<a href="#category=Inflación" class="category-card">
+  <h3>💰 Inflación</h3>
+  <p>Precios y poder adquisitivo.</p>
+</a>
+<a href="#category=Mercado%20laboral" class="category-card">
+  <h3>👔 Mercado laboral</h3>
+  <p>Empleo y salarios.</p>
+</a>
+<a href="#category=Sector%20externo" class="category-card">
+  <h3>🌍 Sector externo</h3>
+  <p>Turismo, remesas y tipo de cambio.</p>
+</a>
+<a href="#category=Política%20fiscal" class="category-card">
+  <h3>🏛️ Política fiscal</h3>
+  <p>Impuestos y gasto público.</p>
+</a>
+<a href="#category=Desarrollo" class="category-card">
+  <h3>📈 Desarrollo</h3>
+  <p>Pobreza y calidad de vida.</p>
+</a>
 :::
+<br><hr><br>
 
-::: category-card
-### 💰 Inflación
+## Índice completo
 
-Precios, índices de inflación, poder adquisitivo, canasta básica.
+::: {#listing}
 :::
-
-::: category-card
-### 👔 Mercado laboral
-
-Empleo, desempleo, salarios, informalidad.
-:::
-
-::: category-card
-### 🌍 Sector externo
-
-Balanza de pagos, tipo de cambio, remesas, comercio exterior.
-:::
-
-::: category-card
-### 🏛️ Política fiscal
-
-Presupuesto, deuda pública, gasto público, impuestos.
-:::
-
-::: category-card
-### 📈 Desarrollo
-
-Desigualdad, pobreza, educación, salud, crecimiento inclusivo.
-:::
-:::::::::
-
-------------------------------------------------------------------------
-
-## Todos los posts por categoría
