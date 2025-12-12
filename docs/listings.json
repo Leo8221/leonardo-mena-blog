@@ -1,13 +1,15 @@
 [
   {
-    "listing": "/republica-en-un-grafico.html",
+    "listing": "/republica-habla-de.html",
     "items": [
-      "/posts/republica-en-un-grafico/grafico-0/index.html"
+      "/posts/republica-habla-de/prueba-inflacion/index.html"
     ]
   },
   {
-    "listing": "/mitos-economicos.html",
-    "items": []
+    "listing": "/predecesores.html",
+    "items": [
+      "/posts/predecesores/primer-predecesor/index.html"
+    ]
   },
   {
     "listing": "/fundamentos.html",
@@ -41,15 +43,13 @@
     ]
   },
   {
-    "listing": "/predecesores.html",
-    "items": [
-      "/posts/predecesores/primer-predecesor/index.html"
-    ]
+    "listing": "/mitos-economicos.html",
+    "items": []
   },
   {
-    "listing": "/republica-habla-de.html",
+    "listing": "/republica-en-un-grafico.html",
     "items": [
-      "/posts/republica-habla-de/prueba-inflacion/index.html"
+      "/posts/republica-en-un-grafico/grafico-0/index.html"
     ]
   }
 ]

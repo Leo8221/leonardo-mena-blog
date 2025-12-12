@@ -36,7 +36,6 @@ listing:
 Bienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje de la calle, rescatar conceptos perdidos y analizar la República Dominicana con evidencia y sin humo.
 :::
 :::
-
 ::: {.home-grid}
 
 ::: {.home-main}

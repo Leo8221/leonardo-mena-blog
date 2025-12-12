@@ -1,20 +1,20 @@
 project:
   type: website
   output-dir: docs
+
 lang: es 
 
 # Configuración global del sitio
 website:
   title: "Leonardo Mena"
   description: "Economía aplicada y datos de la República Dominicana"
-  site-url: "https://leo8221.github.io/leonardo-mena-blog/"  
-  
-  # Favicon (el icono en la pestaña del navegador)
-  #favicon: images/favicon.ico # (Asegúrate de crear esta imagen)
+  site-url: "https://leo8221.github.io/leonardo-mena-blog/"
+  google-analytics: "G-W3JC0G3RJ1"
+  # favicon: images/favicon.ico # Descomenta cuando tengas la imagen
 
   # Barra de navegación
   navbar:
-    background: "#ffffff" # Coherente con tu CSS
+    background: "#ffffff"
     left:
       - href: index.qmd
         text: Inicio
@@ -30,10 +30,16 @@ website:
             href: mitos-economicos.qmd
       - href: categorias.qmd
         text: Categorías
+#      - href: investigacion.qmd # Agregué tu sección de Papers que hablamos antes
+#        text: Investigación
       - href: archivo.qmd
         text: Archivo
-  
-  # Configuración para compartir en redes (WhatsApp/LinkedIn/Twitter)
+    right:
+      - text: "<span style='background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;'>Suscríbete</span>"
+        href: suscribete.qmd
+        aria-label: "Suscribirse al boletín"
+
+  # Configuración para compartir en redes
   open-graph: true
   twitter-card: true
 
@@ -59,9 +65,20 @@ format:
     smooth-scroll: true
     link-external-newwindow: true
     code-copy: true      
-    highlight-style: github # O "solarized" para que combine con tus colores crema
+    highlight-style: github
+    
+    comments: 
+      giscus:
+        repo: Leo8221/leonardo-mena-blog
+        category: General 
+        mapping: title
+        reactions-enabled: true
+        
+       
+        theme: noborder_light   
+        input-position: top     
+        language: es                
+        loading: lazy
 
 execute:
-  freeze: auto  
-
-editor: visual
+  freeze: auto

@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/series.html</loc>
-    <lastmod>2025-12-11T13:53:28.491Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/suscribete.html</loc>
+    <lastmod>2025-12-12T23:05:16.000Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/republica-en-un-grafico.html</loc>
-    <lastmod>2025-12-11T05:29:44.409Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/republica-habla-de.html</loc>
+    <lastmod>2025-12-12T00:53:34.593Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion/index.html</loc>
-    <lastmod>2025-12-12T00:53:45.444Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/predecesores.html</loc>
+    <lastmod>2025-12-11T14:00:39.492Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/predecesores/primer-predecesor/index.html</loc>
-    <lastmod>2025-12-11T05:36:19.962Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/grafico-0/index.html</loc>
+    <lastmod>2025-12-11T14:00:34.792Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/mitos-economicos.html</loc>
-    <lastmod>2025-12-12T00:07:06.504Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/canasta-familiar/index.html</loc>
+    <lastmod>2025-12-11T05:21:17.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/investigacion.html</loc>
+    <lastmod>2025-12-12T22:34:16.218Z</lastmod>
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/fundamentos.html</loc>
@@ -38,22 +42,26 @@
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>
-    <lastmod>2025-12-12T01:06:32.783Z</lastmod>
+    <lastmod>2025-12-12T23:12:53.913Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/canasta-familiar/index.html</loc>
-    <lastmod>2025-12-11T05:21:17.390Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/mitos-economicos.html</loc>
+    <lastmod>2025-12-12T00:07:06.504Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/grafico-0/index.html</loc>
-    <lastmod>2025-12-11T14:00:34.792Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/predecesores/primer-predecesor/index.html</loc>
+    <lastmod>2025-12-11T05:36:19.962Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/predecesores.html</loc>
-    <lastmod>2025-12-11T14:00:39.492Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion/index.html</loc>
+    <lastmod>2025-12-12T00:53:45.444Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/republica-habla-de.html</loc>
-    <lastmod>2025-12-12T00:53:34.593Z</lastmod>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/republica-en-un-grafico.html</loc>
+    <lastmod>2025-12-11T05:29:44.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/series.html</loc>
+    <lastmod>2025-12-11T13:53:28.491Z</lastmod>
   </url>
 </urlset>
