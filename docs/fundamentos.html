@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
@@ -357,6 +357,10 @@ window.Quarto = {
     <a class="dropdown-item" href="./mitos-economicos.html">
  <span class="dropdown-text">Mitos económicos</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un grafico</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -420,11 +424,6 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765584627281" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<div class="thumbnail"><a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/fundamentos/canasta-familiar/index.html" class="no-external">¿Qué es realmente la ‘canasta familiar’?</a>
@@ -862,38 +861,6 @@ window.Quarto = {
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="noborder_light">
-<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "Leo8221/leonardo-mena-blog";
-    script.dataset.repoId = "R_kgDOQmnpWw";
-    script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOQmnpW84CzuJe";
-    script.dataset.mapping = "title";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "es";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

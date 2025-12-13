@@ -1,0 +1,13 @@
+comments: 
+  giscus:
+    repo: Leo8221/leonardo-mena-blog
+    category: General 
+    category-id: DIC_kwDO...  # (Tu código largo)
+    mapping: title
+    reactions-enabled: true
+    theme: 
+      light: noborder_light
+      dark: transparent_dark
+    input-position: top
+    loading: lazy
+    language: es

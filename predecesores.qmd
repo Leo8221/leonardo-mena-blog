@@ -5,6 +5,7 @@ listing:
     - posts/predecesores
   sort: "date desc"
   type: default
+  fields: [title, date, description]
 ---
 
 Economistas, ideas y por qué me importan.

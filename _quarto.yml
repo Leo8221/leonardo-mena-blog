@@ -28,9 +28,11 @@ website:
             href: predecesores.qmd
           - text: "Mitos económicos"
             href: mitos-economicos.qmd
+          - text: "La República en un grafico"
+            href: republica-en-un-grafico.qmd  
       - href: categorias.qmd
         text: Categorías
-#      - href: investigacion.qmd # Agregué tu sección de Papers que hablamos antes
+#      - href: investigacion.qmd # sección de Papers 
 #        text: Investigación
       - href: archivo.qmd
         text: Archivo
@@ -69,22 +71,5 @@ format:
     code-copy: true      
     highlight-style: github
     
-    comments: 
-      giscus:
-        repo: Leo8221/leonardo-mena-blog
-        repo-id: R_kgDOQmnpWw
-        category: General 
-        category-id: DIC_kwDOQmnpW84CzuJe
-        mapping: title
-        reactions-enabled: true
-        
-       
-        theme: 
-          light: noborder_light   
-          dark: transparent_dark 
-        input-position: top     
-        language: es                
-        loading: lazy
-
 execute:
   freeze: auto

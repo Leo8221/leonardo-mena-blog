@@ -5,6 +5,7 @@ listing:
     - posts/fundamentos
   sort: "date desc"
   type: default
+  fields: [title, date, description]
 ---
 
 Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.

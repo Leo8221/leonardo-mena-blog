@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -147,12 +147,10 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="La República habla de – Leonardo Mena">
 <meta property="og:description" content="Economía aplicada y datos de la República Dominicana">
-<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion">
 <meta property="og:site_name" content="Leonardo Mena">
 <meta name="twitter:title" content="La República habla de – Leonardo Mena">
 <meta name="twitter:description" content="Economía aplicada y datos de la República Dominicana">
-<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/prueba-inflacion">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -320,7 +318,7 @@ window.Quarto = {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -359,6 +357,10 @@ window.Quarto = {
     <a class="dropdown-item" href="./mitos-economicos.html">
  <span class="dropdown-text">Mitos económicos</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un grafico</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -384,34 +386,33 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">La República habla de</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y295dW50dXJh">coyuntura <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW5mbGFjaW9u">inflacion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJ1ZWJh">prueba <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">La República habla de</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <p>Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.</p>
@@ -423,24 +424,10 @@ window.Quarto = {
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="aW5mbGFjaW9uJTJDY295dW50dXJhJTJDcHJ1ZWJh" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1765584627281" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
-<div class="thumbnail"><a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/republica-habla-de/prueba-inflacion" class="thumbnail-image">
-
-</a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">Prueba: inflación que no se siente</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aW5mbGFjaW9u'); return false;">inflacion</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y295dW50dXJh'); return false;">coyuntura</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJ1ZWJh'); return false;">prueba</div>
-
-</div>
 <div class="delink listing-description"><a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
 <p>Nota de prueba para la serie La República habla de.</p>
 </a></div>
@@ -449,9 +436,6 @@ window.Quarto = {
 <a href="./posts/republica-habla-de/prueba-inflacion/index.html" class="no-external">
 <div class="listing-date">
 11 dic 2025
-</div>
-<div class="listing-author">
-Leonardo Mena
 </div>
 </a>
 </div>
@@ -877,38 +861,6 @@ Leonardo Mena
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="noborder_light">
-<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "Leo8221/leonardo-mena-blog";
-    script.dataset.repoId = "R_kgDOQmnpWw";
-    script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDOQmnpW84CzuJe";
-    script.dataset.mapping = "title";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "es";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

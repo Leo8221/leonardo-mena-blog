@@ -7,8 +7,6 @@ listing:
   type: default
 ---
 
-# La República en un gráfico
-
 Un gráfico, una lectura y una implicación para República Dominicana.
 
 Aquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.

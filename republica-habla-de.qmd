@@ -4,11 +4,7 @@ listing:
   contents: posts/republica-habla-de
   sort: "date desc"
   type: default
-  categories: true      
-  sort-ui: false        
-  filter-ui: false      
-page-layout: full
-title-block-banner: true
+  fields: [title, date, description]
 ---
 
 Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.

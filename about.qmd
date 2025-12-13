@@ -17,34 +17,26 @@ about:
       href: mailto:leonardomena824@gmail.com
 ---
 
-La economía no debería ser un idioma secreto que solo se habla en las oficinas del Banco Central. Nos afecta a todos: en el supermercado, en el transporte y en nuestros ahorros.
+## Sobre este blog
 
-Este blog nace con una misión sencilla: **traducir la economía**.
+La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.
 
-### ¿Por qué este espacio?
+Este blog nace para interpretar la economía dominicana: leer los datos, **separar la señal del ruido** y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.
 
-A menudo, las noticias económicas están llenas de jerga técnica o, peor aún, de términos que se usan mal. Mi objetivo aquí es **reivindicar el significado real** de esos conceptos, pero explicados para quien no es economista.
-
-Quiero responder a las preguntas que surgen en la calle, no en los libros de texto:
-* ¿Por qué suben los precios realmente?
-* ¿Qué significa que la economía "crezca" si yo no lo siento?
-* ¿Cómo leer un dato oficial sin perderse en el ruido?
+Aquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición.
 
 ---
 
-### Quién soy
+## Quién escribe
 
-Soy **Leonardo Mena**, estudiante de la **Licenciatura en Economía** en la **Universidad Autónoma de Santo Domingo (UASD)**.
+Soy **Leonardo Mena**, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.
 
-Mi formación en la universidad primada de América me ha enseñado a mirar la economía con sentido social y rigor técnico. Aún estoy en proceso de formación, y este blog es parte de ese viaje: es el espacio donde pongo a prueba lo que aprendo, contrastando la teoría de las aulas con los datos de la realidad dominicana.
+> No escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.
 
-No escribo como un experto que lo sabe todo, sino como un estudiante apasionado por los datos que quiere entender (y ayudar a entender) cómo funciona nuestro país.
-
----
-
-### Mi compromiso
+### Compromiso
 
 En cada artículo encontrarás:
-1.  **Cero humo:** Si algo es una opinión mía, lo diré. Si es un dato, pondré la fuente.
-2.  **Lenguaje claro:** Evitaré las fórmulas complejas siempre que sea posible.
-3.  **Contexto local:** Todo aplicado a la República Dominicana.
+
+* **Transparencia:** Datos con fuente y opiniones claramente identificadas.
+* **Claridad:** Lenguaje accesible, sin sacrificar precisión técnica.
+* **Contexto:** Análisis siempre anclado a la realidad de la República Dominicana.
