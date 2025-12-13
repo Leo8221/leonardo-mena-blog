@@ -1,0 +1,553 @@
+/* ===========================
+   Imports - Tipografía editorial
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===========================
+   SISTEMA DE COLORES (Variable Switching)
+   =========================== */
+
+/* ☀️ MODO CLARO (Tu diseño original Crema/Terracota) */
+:root {
+  --lm-cream: #faf8f3;           /* Fondo principal */
+  --lm-cream-dark: #f5f1e8;      /* Fondo secundario */
+  --lm-bg: #ffffff;              /* Blanco puro para cards */
+  --lm-text: #1a1512;            /* Negro cálido */
+  --lm-text-soft: #4a443e;       /* Gris cálido */
+  --lm-muted: #73695f;           /* Marrón suave */
+  
+  --lm-terracota: #c86448;       /* Acento principal */
+  --lm-terracota-dark: #a04d35;  /* Hover del acento */
+  --lm-olive: #6b7554;           /* Verde */
+  --lm-ochre: #d4a574;           /* Dorado */
+  
+  --lm-border: #e6dfd5;
+  --lm-border-dark: #d4c9ba;
+  
+  --shadow-soft: 0 1px 3px rgba(26, 21, 18, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 21, 18, 0.08);
+}
+
+/* 🌙 MODO OSCURO (Adaptación al tema Slate) */
+body.quarto-dark {
+  /* Fondo principal (Gris azulado oscuro de Slate) */
+  --lm-cream: #272b30;           
+  /* Fondo secundario (Un poco más claro para contraste) */
+  --lm-cream-dark: #32383e;      
+  /* Fondo de cards (Casi negro o gris medio) */
+  --lm-bg: #1e2124;              
+  
+  /* Textos (Invertidos a claros) */
+  --lm-text: #e8e6e3;            /* Blanco hueso */
+  --lm-text-soft: #b0b3b8;       /* Gris claro */
+  --lm-muted: #7a7f85;           /* Gris medio */
+  
+  /* Acentos (Ajustados para brillar en oscuro) */
+  --lm-terracota: #e07a5f;       /* Terracota más brillante */
+  --lm-terracota-dark: #ff9f85;  /* Hover más claro */
+  --lm-olive: #9ca683;           /* Verde más pastel */
+  --lm-ochre: #e6c29a;           /* Dorado más claro */
+  
+  /* Bordes (Oscuros) */
+  --lm-border: #3e444a;
+  --lm-border-dark: #4f575e;
+  
+  /* Sombras (Invertidas para dar profundidad) */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================
+   Base y reset
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--lm-cream);
+  color: var(--lm-text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+main.content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem 2rem;
+}
+
+/* ===========================
+   Tipografía editorial
+   =========================== */
+
+h1, h2, h3, h4 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 600;
+  color: var(--lm-text);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--lm-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--lm-text);
+}
+
+em {
+  font-style: italic;
+  color: var(--lm-terracota);
+}
+
+/* Enlaces */
+a {
+  color: var(--lm-terracota);
+  text-decoration: none;
+  border-bottom: 1px solid var(--lm-terracota);
+  transition: all 0.2s ease;
+  padding-bottom: 1px;
+}
+
+a:hover {
+  color: var(--lm-terracota-dark);
+  border-bottom-color: var(--lm-terracota-dark);
+  border-bottom-width: 2px;
+}
+
+/* ===========================
+   Navbar (Adaptado a Modo Oscuro)
+   =========================== */
+
+#quarto-header,
+.navbar,
+nav.navbar {
+  background: var(--lm-bg) !important;
+  border-bottom: 2px solid var(--lm-border-dark);
+  box-shadow: none;
+  padding: 1rem 0;
+  min-height: auto !important;
+}
+
+.navbar-brand,
+.navbar-title,
+#quarto-header .navbar-brand {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--lm-text) !important;
+}
+
+.navbar-nav .nav-link,
+#quarto-header .navbar-nav .nav-link {
+  color: var(--lm-text-soft) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 1.25rem;
+  padding: 0.25rem 0 !important;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  background: none !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--lm-terracota) !important;
+  border-bottom-color: var(--lm-terracota);
+}
+
+/* Dropdown menu */
+.navbar-nav .dropdown-menu {
+  background: var(--lm-bg) !important;
+  border: 2px solid var(--lm-border-dark);
+  border-radius: 0;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lm-text-soft) !important;
+  padding: 0.65rem 1.5rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background: var(--lm-cream-dark) !important;
+  color: var(--lm-terracota) !important;
+  border-left-color: var(--lm-terracota);
+}
+
+/* ===========================
+   Home Hero
+   =========================== */
+
+.home .quarto-title-block { display: none; }
+.home .home-hero { margin-top: 2.5rem; margin-bottom: 3.5rem; }
+.home .home-hero-title { max-width: 820px; margin: 0 auto 3.5rem auto; text-align: center; }
+
+.home .home-kicker {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--lm-muted);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.home .home-hero-title h1 {
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: var(--lm-text);
+  line-height: 1.1;
+}
+
+.home .home-intro {
+  font-size: 1.2rem;
+  color: var(--lm-text-soft);
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Grid & Componentes Home
+   =========================== */
+
+.home .home-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.home .home-main {
+  background: var(--lm-bg);
+  border: 2px solid var(--lm-border-dark);
+  padding: 2.5rem;
+  transition: all 0.25s ease;
+}
+
+.home .home-main:hover {
+  border-color: var(--lm-terracota);
+  box-shadow: var(--shadow-md);
+}
+
+.home .home-main h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--lm-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+.home .home-main h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--lm-terracota);
+  margin-top: 0.5rem;
+}
+
+.home .home-main-text {
+  font-size: 1rem;
+  color: var(--lm-text-soft);
+  margin-bottom: 1.75rem;
+  margin-top: 1rem;
+  line-height: 1.65;
+  border-left: 3px solid var(--lm-border);
+  padding-left: 1rem;
+}
+
+/* ===========================
+   Listings (Series)
+   =========================== */
+
+.quarto-listing { margin-top: 2.5rem; }
+
+/* Items del listing de gráfico reciente */
+.home #grafico-reciente .quarto-listing-item {
+  background: var(--lm-cream-dark);
+  border: 1px solid var(--lm-border);
+  padding: 1.75rem;
+  margin-bottom: 0;
+}
+.home #grafico-reciente .quarto-listing-item:hover {
+  background: var(--lm-bg);
+  border-color: var(--lm-terracota);
+  box-shadow: var(--shadow-soft);
+}
+
+.home #grafico-reciente .listing-title {
+  font-size: 1.35rem;
+  color: var(--lm-text);
+}
+
+.home #grafico-reciente .listing-date,
+.home #grafico-reciente .listing-categories {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--lm-muted);
+}
+
+.home #grafico-reciente .listing-description {
+  color: var(--lm-text-soft);
+}
+
+/* Items Generales */
+.quarto-listing .quarto-listing-item {
+  background: var(--lm-bg);
+  border: 1px solid var(--lm-border);
+  border-left: 3px solid var(--lm-olive);
+  padding: 2rem 2rem 2rem 2.25rem;
+  margin-bottom: 1.75rem;
+}
+.quarto-listing .quarto-listing-item:hover {
+  border-left-color: var(--lm-terracota);
+}
+
+.quarto-listing .listing-title { color: var(--lm-text); }
+.quarto-listing .listing-description { color: var(--lm-text-soft); }
+
+/* ===========================
+   Columna Lateral
+   =========================== */
+
+.home .home-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 3px solid var(--lm-terracota);
+}
+
+.home .home-side-card {
+  background: var(--lm-bg);
+  border-bottom: 1px solid var(--lm-border);
+  padding: 1.85rem 0;
+  position: relative;
+}
+.home .home-side-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0;
+  background: var(--lm-terracota); transition: width 0.2s ease;
+}
+.home .home-side-card:hover::before { width: 4px; }
+.home .home-side-card:hover { padding-left: 1rem; }
+
+.home .home-side-card h3 { color: var(--lm-terracota); font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; font-weight: 700; }
+.home .home-side-card p { color: var(--lm-text); }
+.home .home-side-card p:nth-of-type(2) { color: var(--lm-text-soft); }
+
+.home .home-side-link a { color: var(--lm-terracota); font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; border-bottom: none; }
+
+/* ===========================
+   Elementos (Blockquotes, Code, Tables)
+   =========================== */
+
+blockquote {
+  border-left: 4px solid var(--lm-terracota);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--lm-text-soft);
+}
+
+code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  background: var(--lm-cream-dark);
+  color: var(--lm-text);
+  border: 1px solid var(--lm-border);
+}
+
+pre {
+  background: var(--lm-cream-dark);
+  border: 1px solid var(--lm-border);
+  color: var(--lm-text);
+}
+
+table th {
+  background: var(--lm-cream-dark);
+  color: var(--lm-text);
+  border-bottom: 2px solid var(--lm-border-dark);
+}
+
+table td {
+  border-bottom: 1px solid var(--lm-border);
+  color: var(--lm-text);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.nav-footer, #quarto-footer, footer {
+  border-top: 2px solid var(--lm-border-dark);
+  background: var(--lm-bg);
+}
+
+#quarto-footer .nav-footer-left,
+#quarto-footer .nav-footer-center,
+#quarto-footer .nav-footer-right {
+  color: var(--lm-text-soft);
+}
+
+.footer-social a {
+  border: 1px solid var(--lm-border-dark);
+  color: var(--lm-text-soft);
+}
+
+.footer-social a:hover {
+  background: var(--lm-terracota);
+  border-color: var(--lm-terracota);
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--lm-border);
+  color: var(--lm-muted);
+}
+.footer-links a { color: var(--lm-muted); }
+
+/* ===========================
+   Cards Categorías
+   =========================== */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+a.category-card {
+  display: block;
+  background: var(--lm-bg);
+  border: 1px solid var(--lm-border);
+  border-radius: 6px;
+  padding: 1.75rem;
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--lm-border);
+  color: var(--lm-text);
+}
+
+a.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--lm-terracota);
+  border-bottom-width: 4px;
+}
+
+a.category-card h3 { color: var(--lm-text); font-family: 'Inter', sans-serif; font-size: 1.1rem; }
+a.category-card:hover h3 { color: var(--lm-terracota); }
+a.category-card p { color: var(--lm-text-soft); }
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 1024px) { .home .home-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { 
+  body { font-size: 18px; }
+  .footer-container { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; }
+}
+
+/* ===========================
+   BOTÓN MODO OSCURO (Versión Corregida)
+   =========================== */
+
+.navbar .quarto-color-scheme-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  
+  /* El cuerpo del botón */
+  background-color: var(--lm-cream-dark) !important;
+  border: 2px solid var(--lm-border-dark) !important;
+  border-radius: 50% !important;
+  
+  width: 42px !important;
+  height: 42px !important;
+  margin-left: 15px !important;
+  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  
+  /* --- FUERZA EL COLOR NARANJA EN EL CONTENEDOR --- */
+  color: var(--lm-terracota) !important;
+}
+
+/* Forzamos el tamaño y color del icono interno */
+.navbar .quarto-color-scheme-toggle i,
+.navbar .quarto-color-scheme-toggle .bi {
+  font-size: 1.3rem !important;
+  color: var(--lm-terracota) !important; /* <--- ESTO ES CRÍTICO */
+  margin: 0 !important;
+}
+
+/* Efecto Hover */
+.navbar .quarto-color-scheme-toggle:hover {
+  transform: scale(1.1);
+  background-color: #fff !important;
+  border-color: var(--lm-terracota) !important;
+  color: var(--lm-terracota-dark) !important;
+  box-shadow: 0 4px 12px rgba(200, 100, 72, 0.2);
+}
+
+/* Ajustes para la Noche */
+body.quarto-dark .navbar .quarto-color-scheme-toggle {
+  background-color: #3e444a !important;
+  border-color: #555 !important;
+  color: var(--lm-ochre) !important; /* Dorado */
+}
+
+body.quarto-dark .navbar .quarto-color-scheme-toggle i,
+body.quarto-dark .navbar .quarto-color-scheme-toggle .bi {
+  color: var(--lm-ochre) !important; /* Dorado */
+}
