@@ -72,7 +72,9 @@ format:
     comments: 
       giscus:
         repo: Leo8221/leonardo-mena-blog
+        repo-id: R_kgDOQmnpWw
         category: General 
+        category-id: DIC_kwDOQmnpW84CzuJe
         mapping: title
         reactions-enabled: true
         
