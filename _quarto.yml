@@ -40,6 +40,9 @@ website:
       - text: "<span style='background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;'>Suscríbete</span>"
         href: suscribete.qmd
         aria-label: "Suscribirse al boletín"
+      - href: observatorio.qmd
+        text: "Observatorio 📊" 
+        icon: graph-up          
 
   # Configuración para compartir en redes
   open-graph: true

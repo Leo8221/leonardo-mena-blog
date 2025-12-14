@@ -1,45 +1,32 @@
 [
   {
     "listing": "/republica-habla-de.html",
-    "items": [
-      "/posts/republica-habla-de/prueba-inflacion/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/predecesores.html",
-    "items": [
-      "/posts/predecesores/primer-predecesor/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/fundamentos.html",
-    "items": [
-      "/posts/fundamentos/canasta-familiar/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/archivo.html",
     "items": [
-      "/posts/fundamentos/canasta-familiar/index.html",
-      "/posts/predecesores/primer-predecesor/index.html",
-      "/posts/republica-en-un-grafico/grafico-0/index.html",
-      "/posts/republica-habla-de/prueba-inflacion/index.html"
+      "/posts/republica-en-un-grafico/grafico-0/index.html"
     ]
   },
   {
     "listing": "/categorias.html",
     "items": [
-      "/posts/fundamentos/canasta-familiar/index.html",
-      "/posts/predecesores/primer-predecesor/index.html",
-      "/posts/republica-en-un-grafico/grafico-0/index.html",
-      "/posts/republica-habla-de/prueba-inflacion/index.html"
+      "/posts/republica-en-un-grafico/grafico-0/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/republica-en-un-grafico/grafico-0/index.html",
-      "/posts/republica-habla-de/prueba-inflacion/index.html"
+      "/posts/republica-en-un-grafico/grafico-0/index.html"
     ]
   },
   {
