@@ -2,22 +2,22 @@
 title: "Observatorio Económico RD"
 format: 
   dashboard:
-    css: styles.css  # <--- Asegúrate de vincular tu CSS aquí
+    css: styles.css 
     nav-buttons: [github]
     theme: 
       light: cosmo       # Mantenemos esto para que el dashboard sepa
       dark: darkly   
-    scrolling: true 
+    scrolling: true
+    orientation: rows 
 ---
 
 
 ```{r setup}
 #| include: false
 
-# ============================================================================
-# OBSERVATORIO ECONÓMICO RD - CÓDIGO UNIFICADO
-# ============================================================================
-
+# -----------------------------------------------------------------------------
+# 1. SETUP Y LIBRERÍAS
+# -----------------------------------------------------------------------------
 suppressPackageStartupMessages({
   library(tidyverse)
   library(highcharter)
@@ -27,111 +27,109 @@ suppressPackageStartupMessages({
   library(janitor)
   library(htmltools)
   library(DT)
+  library(bslib) # Librería clave para Value Boxes modernos
+  library(bsicons)
 })
 
+# Configuración Regional Highcharts
 options(highcharter.lang = list(
   months = c('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'),
   shortMonths = c('Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'),
-  weekdays = c('Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'),
+  weekdays = c('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'),
   decimalPoint = ',',
   thousandsSep = '.'
 ))
+
+# -----------------------------------------------------------------------------
+# 2. FUNCIONES UTILITARIAS Y TEMA
+# -----------------------------------------------------------------------------
+
+# Función robusta para parsear meses en español
+parsear_mes <- function(mes_texto) {
+  meses_abr <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
+  texto_limpio <- tolower(str_sub(mes_texto, 1, 3))
+  match(texto_limpio, meses_abr)
+}
+
+# Tema unificado
 theme_observatorio <- function() {
   hc_theme(
     chart = list(
       backgroundColor = "transparent",
       style = list(
-        fontFamily = "Inter, sans-serif",
-        color = "var(--lm-text)"
+        fontFamily = "Inter, sans-serif", 
+        color = "#333333"
       )
     ),
     title = list(
       style = list(
         fontFamily = "Crimson Pro, serif",
         fontWeight = "bold",
-        color = "var(--lm-text)"
+        color = "#1e1e24" # Gris casi negro
       )
     ),
-    subtitle = list(
-      style = list(
-        fontFamily = "Inter, sans-serif",
-        color = "var(--lm-text-soft)"
-      )
-    ),
-    # Eje X con "Crosshair" (Línea guía vertical al pasar el mouse)
+    # Eje X con línea guía en Terracota
     xAxis = list(
       gridLineWidth = 0,
-      lineColor = "var(--lm-border)",
-      tickColor = "var(--lm-border)",
-      labels = list(style = list(color = "var(--lm-muted)")),
+      lineColor = "#e0e0e0",
+      tickColor = "#e0e0e0",
+      labels = list(style = list(color = "#666666")),
       crosshair = list(
         width = 1,
-        color = "var(--lm-terracota)", # Línea guía color marca
+        color = "#c86448", # <--- Terracota para la guía
         dashStyle = "Dash"
       )
     ),
     yAxis = list(
       gridLineWidth = 1,
-      gridLineColor = "var(--lm-border)",
+      gridLineColor = "#f0f0f0", # Grillas muy sutiles
       gridLineDashStyle = "Dash",
-      labels = list(style = list(color = "var(--lm-muted)"))
+      labels = list(style = list(color = "#666666"))
     ),
-    # --- LA MEJORA CLAVE: TOOLTIP REACTIVO ---
     tooltip = list(
-      backgroundColor = "var(--lm-bg)",      # Fondo dinámico (Crema/Oscuro)
-      borderColor = "var(--lm-terracota)",   # Borde de marca
-      borderWidth = 2,
-      borderRadius = 4,
-      style = list(
-        color = "var(--lm-text)",            # Texto dinámico
-        fontFamily = "Inter, sans-serif",
-        fontSize = "14px"
-      ),
+      backgroundColor = "#ffffff",
+      borderColor = "#c86448", # Borde Terracota
+      borderWidth = 1,
+      style = list(color = "#333", fontFamily = "Inter, sans-serif"),
       shadow = TRUE,
-      split = FALSE  # Un solo cuadro unificado
-    ),
-    # Limpieza: Adiós "Highcharts.com"
-    credits = list(
-      enabled = FALSE
+      padding = 10
     ),
     legend = list(
-      itemStyle = list(
-        fontFamily = "Inter, sans-serif",
-        color = "var(--lm-text)"
-      ),
-      itemHoverStyle = list(
-        color = "var(--lm-terracota)"
-      )
+      itemStyle = list(color = "#333", fontWeight = "normal"),
+      itemHoverStyle = list(color = "#c86448")
     ),
+    credits = list(enabled = FALSE),
+    # PALETA DE COLORES EDITORIAL POR DEFECTO
     colors = c(
-      "var(--dash-blue)",
-      "var(--lm-terracota)", 
-      "var(--lm-olive)", 
-      "var(--lm-ochre)"
+      "#343a40", # Gris Plomo (Principal)
+      "#c86448", # Terracota (Secundario/Marca)
+      "#556b2f", # Verde Oliva (Terciario)
+      "#d4ac0d"  # Ocre (Auxiliar)
     )
   )
 }
-generar_enlace_descarga <- function(df, nombre_archivo) {
-  # 1. Creamos la tabla DT con el botón de descarga CSV
+
+# Función para descarga de datos (Optimizada)
+generar_boton_descarga <- function(df, nombre_archivo) {
   datatable(
     df, 
     extensions = 'Buttons', 
     options = list(
-      dom = 'Bfrtip', # Muestra la barra de botones
-      buttons = list(
-        list(
-          extend = 'csv',
-          filename = nombre_archivo,
-          text = 'Descargar CSV', # Texto del botón
-          exportOptions = list(
-            modifier = list(page = "all") # Asegura que se descarguen todos los datos, no solo los visibles
-          )
-        )
-      )
-    )
+      dom = 'Bfrtip', 
+      buttons = list(list(extend = 'csv', filename = nombre_archivo, text = '📥 Descargar Data', className = 'btn-sm')),
+      pageLength = 5,
+      scrollY = "300px", # Scroll interno para que no ocupe mucho espacio
+      scrollCollapse = TRUE
+    ),
+    class = "display compact"
   )
 }
-fecha_actualizacion <- format(Sys.Date(), "%d %b %Y")
+```
+
+``` {r data-fetching}
+#| include: false
+#| cache: false
+
 # --- 1. CONFIGURACIÓN DE URLS ---
 urls <- list(
   dolar = "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-cambiario/documents/TASA_DOLAR_REFERENCIA_MC.xlsx",
@@ -139,245 +137,173 @@ urls <- list(
   ipc   = "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_base_2019-2020.xls"
 )
 
-# Función auxiliar para meses
-parsear_mes <- function(mes_texto) {
-  meses_abr <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
-  texto_limpio <- tolower(substr(mes_texto, 1, 3))
-  match(texto_limpio, meses_abr)
-}
+# --- 2. FUNCIONES DE EXTRACCIÓN (Restauradas al estilo original) ---
 
-# --- 2. OBTENER DÓLAR ---
+# DÓLAR
 obtener_dolar <- function() {
   tryCatch({
     tf <- tempfile(fileext = ".xlsx")
+    # Configuración original simple: solo ignorar SSL
     GET(urls$dolar, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
     
-    # Leemos saltando encabezados
-    datos_dolar <- read_excel(tf, sheet = "Diaria", col_names = FALSE, skip = 4)
+    raw <- read_excel(tf, sheet = "Diaria", col_names = FALSE, skip = 4)
     
-    data <- datos_dolar %>%
+    clean <- raw %>%
       select(1, 2, 3, 5) %>%
       set_names(c("anio", "mes", "dia", "tasa_venta")) %>%
-      mutate(
-        anio = suppressWarnings(as.numeric(anio)),
-        mes_num = parsear_mes(mes),
-        dia = suppressWarnings(as.numeric(dia)),
-        tasa_venta = suppressWarnings(as.numeric(tasa_venta))
-      ) %>%
+      mutate(across(c(anio, dia, tasa_venta), ~suppressWarnings(as.numeric(.)))) %>%
+      mutate(mes_num = parsear_mes(mes)) %>%
       filter(!is.na(anio), !is.na(mes_num), !is.na(dia), !is.na(tasa_venta)) %>%
       mutate(fecha = make_date(anio, mes_num, dia)) %>%
       arrange(fecha) %>%
       select(fecha, tasa_venta)
-    
-    unlink(tf)
-    return(data)
+      
+    return(clean)
   }, error = function(e) {
-    return(data.frame(fecha = Sys.Date(), tasa_venta = 60.50))
+    message("❌ Error descargando Dólar: ", e$message) # <--- AQUÍ VEREMOS EL ERROR REAL
+    return(data.frame(fecha = Sys.Date(), tasa_venta = 0))
   })
 }
 
-# --- 3. OBTENER TPM (Mensual) ---
+# TPM
 obtener_tpm <- function() {
   tryCatch({
-    tf <- tempfile(fileext = ".xls")
+    tf <- tempfile(fileext = ".xlsx")
     
-    # Descargar el archivo
-    response <- GET(urls$tpm, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = FALSE))
+    # 1. Descarga simple (como en el diagnóstico)
+    GET(urls$tpm, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
     
-    # Verificar que la descarga fue exitosa
-    if (http_error(response)) {
-      stop("Error al descargar el archivo. Código HTTP: ", status_code(response))
-    }
+    # 2. Lectura directa
+    # Usamos tryCatch interno por si es xls antiguo, pero priorizamos xlsx
+    raw <- tryCatch(
+      read_excel(tf, col_names = FALSE, skip = 6),
+      error = function(e) {
+         # Si falla, intentamos copiar a extensión .xls por si acaso
+         tf2 <- tempfile(fileext = ".xls")
+         file.copy(tf, tf2)
+         read_excel(tf2, col_names = FALSE, skip = 6)
+      }
+    )
     
-    # Verificar que el archivo existe y tiene contenido
-    if (!file.exists(tf) || file.size(tf) == 0) {
-      stop("El archivo descargado está vacío o no existe")
-    }
-    
-    # Intentar leer el archivo (puede ser .xlsx en lugar de .xls)
-    datos_tpm <- tryCatch({
-      read_excel(tf, col_names = FALSE, skip = 6)
-    }, error = function(e) {
-      # Si falla con .xls, intentar como .xlsx
-      tf_xlsx <- tempfile(fileext = ".xlsx")
-      file.copy(tf, tf_xlsx)
-      read_excel(tf_xlsx, col_names = FALSE, skip = 6)
-    })
-    
-    # Procesar los datos
-    data <- datos_tpm %>%
+    # 3. Limpieza (Idéntica a tu script de prueba)
+    clean <- raw %>%
       select(anio_raw = ...1, mes = ...2, tpm = ...3) %>%
+      fill(anio_raw, .direction = "down") %>%
       mutate(
+        # Forzamos numéricos para evitar errores de tipo
         anio = suppressWarnings(as.numeric(anio_raw)),
-        mes = str_trim(as.character(mes)),
-        tpm = suppressWarnings(as.numeric(tpm))
+        tpm  = suppressWarnings(as.numeric(tpm)),
+        mes_num = parsear_mes(as.character(mes))
       ) %>%
-      fill(anio, .direction = "down") %>%
-      mutate(
-        mes_num = case_when(
-          mes == "Ene" ~ 1,
-          mes == "Feb" ~ 2,
-          mes == "Mar" ~ 3,
-          mes == "Abr" ~ 4,
-          mes == "May" ~ 5,
-          mes == "Jun" ~ 6,
-          mes == "Jul" ~ 7,
-          mes == "Ago" ~ 8,
-          mes == "Sep" ~ 9,
-          mes == "Oct" ~ 10,
-          mes == "Nov" ~ 11,
-          mes == "Dic" ~ 12,
-          TRUE ~ NA_real_
-        )
-      ) %>%
+      # Filtramos filas inválidas
       filter(!is.na(anio), !is.na(mes_num), !is.na(tpm)) %>%
+      # Creamos fecha
       mutate(fecha = make_date(anio, mes_num, 1)) %>%
-      select(fecha, tpm, anio, mes) %>%
-      arrange(desc(fecha))
-    
-    ultimo <- head(data, 1)
+      # Ordenamos para el gráfico (Viejo -> Nuevo)
+      arrange(fecha) %>%
+      select(fecha, tpm)
+      
     unlink(tf)
-    
-    if (nrow(ultimo) == 0) {
-      stop("No se encontraron datos válidos después del procesamiento")
-    }
-    
-    fecha_dato <- format(ultimo$fecha, "%b %Y")
-    
-    return(list(
-      dataframe = data,
-      valor = paste0(round(ultimo$tpm, 2), "%"),
-      fecha_dato = fecha_dato
-    ))
+    return(clean)
     
   }, error = function(e) {
-    message("Error en obtener_tpm: ", e$message)
-    return(list(
-      dataframe = data.frame(fecha = as.Date(character(0)), tpm = numeric(0)),
-      valor = "Error",
-      fecha_dato = "-"
-    ))
+    message("❌ Error en TPM: ", e$message)
+    return(data.frame(fecha = Sys.Date(), tpm = 0))
   })
 }
 
-# --- 4. OBTENER IPC ---
+# IPC
 obtener_ipc <- function() {
   tryCatch({
     tf <- tempfile(fileext = ".xls")
     GET(urls$ipc, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
     
-    datos_ipc <- read_excel(tf, col_names = FALSE, skip = 6)
+    raw <- read_excel(tf, col_names = FALSE, skip = 6)
     
-    data <- datos_ipc %>%
-      mutate(
-        anio = suppressWarnings(as.numeric(...1)),
-        mes = as.character(...2),
-        doce_meses = suppressWarnings(as.numeric(...6)) 
-      ) %>%
+    clean <- raw %>%
+      select(anio = ...1, mes = ...2, doce_meses = ...6) %>%
       fill(anio, .direction = "down") %>%
-      mutate(mes_num = parsear_mes(mes)) %>%
+      mutate(anio = as.numeric(anio), doce_meses = as.numeric(doce_meses)) %>%
+      mutate(mes_num = parsear_mes(as.character(mes))) %>%
       filter(!is.na(anio), !is.na(mes_num), !is.na(doce_meses)) %>%
       mutate(fecha = make_date(anio, mes_num, 1)) %>%
-      arrange(desc(fecha))
-    
-    ultimo <- head(data, 1)
-    unlink(tf)
-    
-    fecha_dato <- format(ultimo$fecha, "%b %Y")
-    
-    return(list(
-      dataframe = data,  # Datos para el gráfico
-      valor = paste0(format(round(ultimo$doce_meses, 2), nsmall=2), "%"),
-      fecha_dato = fecha_dato
-    ))
+      arrange(desc(fecha)) %>%
+      select(fecha, doce_meses)
+      
+    return(clean)
   }, error = function(e) {
-    # Devolver estructura funcional para evitar que el dashboard se rompa
-    return(list(
-      dataframe = data.frame(fecha = Sys.Date(), doce_meses = 0),
-      valor = "Error", 
-      fecha_dato = "-"
-    ))
+    message("❌ Error descargando IPC: ", e$message)
+    return(data.frame(fecha = Sys.Date(), doce_meses = 0))
   })
 }
-# --- 5. EJECUCIÓN ---
-df_dolar <- obtener_dolar() # DataFrame principal
-info_tpm <- obtener_tpm()   # Lista con valor y fecha
-info_ipc <- obtener_ipc()   # Lista con valor y fecha
 
-df_ipc <- info_ipc$dataframe
-df_tpm <- info_tpm$dataframe
-# --- 6. CÁLCULOS DÓLAR ---
+# --- 3. EJECUCIÓN Y CÁLCULOS KPI ---
+df_dolar <- obtener_dolar()
+df_tpm   <- obtener_tpm()
+df_ipc   <- obtener_ipc()
+
+# Cálculos Dólar
 hoy_dolar  <- tail(df_dolar, 1)
 ayer_dolar <- tail(df_dolar, 2) %>% head(1)
 
-var_abs <- hoy_dolar$tasa_venta - ayer_dolar$tasa_venta
-var_pct <- (var_abs / ayer_dolar$tasa_venta) * 100
+# Prevención si viene vacío
+if(nrow(df_dolar) > 1 && hoy_dolar$tasa_venta > 0) {
+  diff_dolar <- hoy_dolar$tasa_venta - ayer_dolar$tasa_venta
+  pct_dolar  <- (diff_dolar / ayer_dolar$tasa_venta) * 100
+} else {
+  diff_dolar <- 0; pct_dolar <- 0
+}
 
-# Texto grande para Value Box
-txt_valor <- paste0("RD$", format(round(hoy_dolar$tasa_venta, 2), nsmall=2))
+icon_dolar  <- if(diff_dolar >= 0) "arrow-up-short" else "arrow-down-short"
+color_dolar <- if(diff_dolar >= 0) "danger" else "success" 
 
-# Subtítulo (Variación)
-txt_sub   <- paste0(
-  ifelse(var_abs >= 0, "▲", "▼"), " ",
-  format(round(abs(var_abs), 2), nsmall=2), " (",
-  ifelse(var_pct >= 0, "+", ""), format(round(var_pct, 2), nsmall=2), "%)"
-)
-
-# Datos para gráfico
-data_grafico <- tail(df_dolar, 365)
-promedio <- mean(data_grafico$tasa_venta)
-
-# --- 7. PIES DE PÁGINA (Caption Strings) ---
-# Fecha de hoy para todos
-txt_hoy <- format(Sys.Date(), "%d/%m/%Y")
-
-# A. Caption Dólar
-fecha_dolar_dato <- format(max(df_dolar$fecha), "%d %b %Y")
-caption_dolar <- paste0("Datos: ", fecha_dolar_dato, " • Act: ", txt_hoy)
-
-# B. Caption Inflación
-caption_ipc <- paste0("Datos: ", info_ipc$fecha_dato, " • Act: ", txt_hoy)
-
-# C. Caption TPM
-caption_tpm <- paste0("Datos: ", info_tpm$fecha_dato, " • Act: ", txt_hoy)
+val_ipc <- head(df_ipc, 1)
+val_tpm <- tail(df_tpm, 1)
 ```
 
 # Indicadores {orientation="columns"}
-
-## Column {width="30%"}
+## Row {expandable="false"}
+## Column {width="30%" expandable="false"}
 
 ```{r}
-#| content: valuebox
-#| title: "Dólar Venta (Spot)"
-list(
-  icon = "currency-dollar",
-  color = "vbox-dolar",  # <--- Nombre inventado por nosotros
-  value = txt_valor,
-  subtitle = txt_sub
+#| expandable: false
+value_box(
+  title = "Dólar Spot (Venta)",
+  value = paste0("RD$ ", format(round(hoy_dolar$tasa_venta, 2), nsmall=2)),
+  showcase = bs_icon("currency-dollar"),
+  theme = "light",
+  full_screen = FALSE,
+  p(
+    bs_icon(icon_dolar), 
+    paste0(round(abs(diff_dolar), 2), " (", round(pct_dolar, 2), "%)"),
+    class = paste0("text-", color_dolar)
+  ),
+  p(paste0("Act: ", format(hoy_dolar$fecha, "%d %b")), class = "text-muted fs-6")
 )
 ```
 
 ```{r}
-#| content: valuebox
-#| title: "Inflación Interanual"
-list(
-  icon = "graph-up-arrow",
-  color = "vbox-inflacion",
-  value = info_ipc$valor,
-  subtitle = paste("A:", info_ipc$fecha)
+value_box(
+  title = "Inflación Interanual",
+  value = paste0(format(round(val_ipc$doce_meses, 2), nsmall=2), "%"),
+  showcase = bs_icon("graph-up"),
+  theme = "light",
+  expandable = FALSE,
+  p("Meta: 4.0% ± 1%", class = "text-secondary"),
+  p(paste0("Datos: ", format(val_ipc$fecha, "%b %Y")), class = "text-muted fs-6")
 )
 ```
 
 ```{r}
-#| content: "valuebox"
-#| title: "Tasa Política Monetaria"
- 
-list(
-  icon = "bank",
-  color = "vbox-tpm",
-  value = info_tpm$valor
-
-    )
+value_box(
+  title = "Tasa Política Monetaria",
+  value = paste0(format(round(val_tpm$tpm * 100, 2), nsmall=2), "%"),
+  showcase = bs_icon("bank2"),
+  theme = "light",
+  expandable = FALSE,
+  p("Referencia BCRD", class = "text-secondary"),
+  p(paste0("Datos: ", format(val_tpm$fecha, "%b %Y")), class = "text-muted fs-6")
+)
 ```
 
 ## Column {width=65%}
@@ -386,36 +312,23 @@ list(
 
 ### Dólar
 ```{r}
-# Filtramos los últimos 365 días para que sea "tendencia anual"
+#| title: "Evolución Dólar"
 data_grafico <- tail(df_dolar, 365)
 promedio <- mean(data_grafico$tasa_venta)
 
-hchart(data_grafico, 
-       "line", # Usamos 'line' para claridad del precio spot, aunque 'area' también es válido
-       hcaes(x = fecha, y = tasa_venta), 
-       color = "var(--lm-terracota)", # <--- USANDO LA VARIABLE DEL TEMA
-       name = "Tasa de Venta"
-) %>%
-  hc_chart(backgroundColor = "transparent") |>
-  hc_title(text = "Evolución Dólar Spot (Venta)") %>%
+hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), color = "#546e7a", name = "Venta") %>%
+  hc_title(text = "Dólar Spot (Últimos 12 meses)") %>%
   hc_yAxis(
-    title = list(text = "Pesos por Dólar"),
-    labels = list(format = "RD${value:,.2f}"), # Formato de pesos
-    plotLines = list(list(
-      value = promedio, 
-      color = "var(--lm-ochre)", # Línea de promedio en color ocre
-      dashStyle = "ShortDash", 
-      width = 1,
-      label = list(text = paste0("Promedio Anual: RD$", round(promedio, 2)), align = "right")
-    ))
+    title = list(text = ""),
+    plotLines = list(list(value = promedio, color = "#90a4ae", dashStyle = "ShortDash", label = list(text = "Promedio")))
   ) %>%
   hc_tooltip(pointFormat = "RD$ {point.y:,.2f}") %>%
-  hc_credits(enabled = TRUE, text = "Fuente: Banco Central RD") %>%
   hc_add_theme(theme_observatorio())
 ```
 ### ⬇️ Descargar Datos Históricos
 ```{r}
-generar_enlace_descarga(df_dolar, "Tasa_Cambio_Historica_RD")
+# Botón de descarga pequeño y discreto
+generar_boton_descarga(df_dolar, "Dolar_Historico")
 ```
 :::
 
@@ -424,101 +337,72 @@ generar_enlace_descarga(df_dolar, "Tasa_Cambio_Historica_RD")
 ::: {.panel-tabset}
 ### Inflacion
 ```{r}
-# Filtramos para mostrar los últimos 48 meses (4 años) de datos
-# Usamos df_ipc directamente, asumiendo que ya se extrajo correctamente
 df_ipc_reciente <- head(df_ipc, 48)
 
-hchart(
-  df_ipc_reciente, 
-  "line", 
-  hcaes(x = fecha, y = doce_meses), 
-  color = "var(--lm-terracota)", 
-  name = "Inflación Interanual"
-) %>%
-  hc_chart(backgroundColor = "transparent") |>
-  hc_title(text = "Inflación Interanual (12 Meses)") %>%
-  hc_subtitle(text = "Variación porcentual del Índice de Precios al Consumidor (IPC)") %>%
+hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c86448", name = "Inflación") %>%
+  hc_title(text = "Inflación (Últimos 4 años)") %>%
   hc_yAxis(
-    title = list(text = "Variación %"),
-    labels = list(format = "{value}%"),
-    # Implementación de la banda y la línea de meta:
     plotLines = list(
-      # 1. Banda de Tolerancia (3% a 5%) - Sombra rectangular
+      # Banda de Meta (Gris muy suave para el fondo)
       list(
-        color = "#e6e6e6", # Color suave
-        from = 3.0, to = 5.0, # Rango de la meta
-        label = list(text = "", style = list(fontSize = 0)), # Sin etiqueta
-        zIndex = 1 # Fondo
+        color = "#f4f4f4", 
+        from = 3.0, to = 5.0, 
+        label = list(text = ""), 
+        zIndex = 1
       ),
-      # 2. Línea de la meta del Banco Central (4.0%)
+      # Línea Meta (Gris oscuro punteado, serio)
       list(
         value = 4.0, 
-        color = "#003366", 
+        color = "#333333", 
         dashStyle = "ShortDash", 
         width = 1,
-        label = list(text = "Meta BC", align = "right", style = list(color = "#003366")),
-        zIndex = 2 # Encima de la banda
+        label = list(text = "Meta 4.0%", align = "right", style = list(color = "#666")),
+        zIndex = 2
       )
     )
   ) %>%
-  hc_tooltip(pointFormat = "Inflación: {point.y:,.2f}%") %>%
-  hc_credits(enabled = TRUE, text = paste0("Último dato: ", info_ipc$fecha_dato, " | Fuente: BCRD")) %>%
+  hc_tooltip(pointFormat = "{point.y:.2f}%") %>%
   hc_add_theme(theme_observatorio())
 ```
 ### ⬇️ Descargar Datos Históricos
 ```{r}
-generar_enlace_descarga(df_ipc, "IPC_Historico_RD")
+generar_boton_descarga(df_ipc, "IPC_Historico")
 ```
 :::
 # TPM
 ## Column {width=95%}
 ::: {.panel-tabset}
 ### TPM
-```{r fig.height=5, fig.width=10, out.width='100%', out.height='500px'}
-# Preparar datos: convertir TPM a porcentaje
-df_tpm_reciente <- df_tpm %>%
-  head(84) %>%
-  mutate(tpm_pct = tpm * 100)  # Convertir de 0.0525 a 5.25
+```{r}
+# Preparamos datos: Filtramos últimos 7 años y convertimos a porcentaje
+df_tpm_grafico <- df_tpm %>% 
+  arrange(desc(fecha)) %>% # Ordenar para head()
+  head(84) %>%             # Tomar últimos 84 meses
+  arrange(fecha) %>%       # Reordenar cronológico para el gráfico
+  mutate(tpm_pct = tpm * 100) # Convertir 0.07 a 7.0
 
-# Crear el gráfico
 hchart(
-  df_tpm_reciente, 
-  "line",
-  hcaes(x = fecha, y = tpm_pct),  # Usar tpm_pct en lugar de tpm
-  color = "#6B8E23",  # Color oliva
-  name = "TPM"
-) %>%
-  hc_chart(backgroundColor = "transparent") %>%
-  hc_title(text = "Evolución de la Tasa de Política Monetaria") %>%
-  hc_xAxis(
-    type = "datetime",
-    title = list(text = "")
-  ) %>%
-  hc_yAxis(
-    title = list(text = "Tasa (%)"),
-    labels = list(format = "{value}%"),
-    min = 0
-  ) %>%
-  hc_plotOptions(
-    series = list(
-      marker = list(enabled = TRUE, radius = 3),
-      states = list(hover = list(lineWidth = 3))
+  df_tpm_grafico, 
+  "area", 
+  hcaes(x = fecha, y = tpm_pct), 
+  color = "#556b2f", # <--- CAMBIO: Verde Oliva
+  fillColor = list(
+    linearGradient = list(x1 = 0, y1 = 0, x2 = 0, y2 = 1),
+    stops = list(
+      list(0, "rgba(85, 107, 47, 0.5)"), # Oliva semi-transparente arriba
+      list(1, "rgba(255, 255, 255, 0)")  # Transparente abajo
     )
-  ) %>%
-  hc_tooltip(
-    pointFormat = "TPM: <b>{point.y:.2f}%</b>",
-    xDateFormat = "%B %Y",
-    shared = TRUE
-  ) %>%
-  hc_credits(
-    enabled = TRUE, 
-    text = paste0("Último dato: ", info_tpm$fecha_dato, " | Fuente: BCRD"),
-    style = list(fontSize = "10px")
-  ) %>%
+  ),
+  name = "TPM",
+  step = "left"
+) %>%
+  hc_title(text = "Tasa de Política Monetaria") %>%
+  hc_yAxis(labels = list(format = "{value}%")) %>%
+  hc_tooltip(pointFormat = "TPM: <b>{point.y:.2f}%</b>", xDateFormat = "%B %Y") %>%
   hc_add_theme(theme_observatorio())
 ```
 ### ⬇️ Descargar Datos Históricos
 ```{r}
-generar_enlace_descarga(df_tpm, "TPM_Historico_RD")
+generar_boton_descarga(df_tpm, "TPM_Historico")
 ```
 :::

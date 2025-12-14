@@ -31,7 +31,7 @@ jobs:
 
       - name: Instalar paquetes R
         run: |
-          install.packages(c("tidyverse", "highcharter", "readxl", "lubridate", "httr", "janitor", "rmarkdown", "knitr", "DT", "htmltools", "writexl"), repos = "https://cloud.r-project.org")
+          install.packages(c("tidyverse", "highcharter", "readxl", "lubridate", "httr", "janitor", "rmarkdown", "knitr", "DT", "htmltools", "writexl", "bslib", "bsicons"), repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
       - name: Renderizar Proyecto

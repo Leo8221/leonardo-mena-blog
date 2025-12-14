@@ -912,86 +912,82 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 }
 
 /* =========================================================
-   ESTRATEGIA "NOMBRES PROPIOS" (Control Total)
+   ESTILOS EDITORIALES - LEONARDO MENA
    ========================================================= */
 
-/* --- 1. MODO OSCURO (Noche: Elegancia Terracota) --- */
-/* Atrapamos nuestras clases inventadas y las volvemos oscuras */
-body.quarto-dark .bg-vbox-dolar,
-body.quarto-dark .bg-vbox-inflacion,
-body.quarto-dark .bg-vbox-tpm {
-    background-color: #1e1e24 !important;    /* Gris Oscuro */
+/* --- 1. OCULTAR BOTÓN DE EXPANSIÓN (Definitivo) --- */
+.bslib-full-screen-enter {
+    display: none !important;
+}
+
+/* --- 2. PALETA DE COLORES (Aquí está la magia) --- */
+:root {
+    --lm-terracota: #c86448;  /* Tu color de marca */
+    
+    /* CAMBIO CLAVE: Adiós Azul. Hola Gris Plomo (Editorial) */
+    /* Si prefieres Verde Oliva, usa: #4b5320 */
+    --lm-primario: #343a40;   
+    
+    --lm-bg-dark: #1e1e24;
+    --lm-bg-light: #ffffff; /* O puedes probar #fdfbf7 para ese tono crema */
+}
+
+/* --- 3. DISEÑO DE TARJETAS (CARDS) --- */
+.card {
+    border-radius: 4px !important; /* Bordes menos redondos = más serio */
+    border: none !important;
+}
+
+/* --- 4. MODO CLARO (Tu estilo principal) --- */
+body:not(.quarto-dark) .card {
+    background-color: var(--lm-bg-light) !important;
+    /* Sombra muy suave, casi invisible, estilo papel */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important; 
+    
+    /* Borde izquierdo: Usamos el terracota para TODO o el Gris */
+    /* Aquí lo he unificado a Terracota para máxima coherencia de marca */
+    border-left: 4px solid var(--lm-terracota) !important;   
+}
+
+/* El valor numérico (El precio del dólar) */
+body:not(.quarto-dark) .value-box-value {
+    color: var(--lm-primario) !important; /* Gris Plomo elegante */
+    font-family: "Crimson Pro", serif;    /* Forzamos tu tipografía elegante */
+    font-weight: 700;
+}
+
+/* El signo de moneda ($) e iconos */
+body:not(.quarto-dark) .value-box-showcase i {
+    color: var(--lm-terracota) !important; /* El icono en tu color de marca */
+    opacity: 0.8; 
+}
+
+/* --- 5. MODO OSCURO (Noche) --- */
+body.quarto-dark .card {
+    background-color: var(--lm-bg-dark) !important;
     border: 1px solid #333 !important;
-    border-left: 5px solid #c86448 !important; /* Acento Terracota */
-    color: #b0b0b0 !important;               /* Texto gris suave */
+    border-left: 4px solid var(--lm-terracota) !important;
 }
 
-/* Números e íconos en Terracota (Solo en modo oscuro) */
-body.quarto-dark .value-output,
-body.quarto-dark .value-box i {
-    color: #c86448 !important;
+body.quarto-dark .value-box-value,
+body.quarto-dark h1 {
+    color: #e0e0e0 !important; /* Blanco suave, no puro */
 }
 
-
-/* --- 2. MODO CLARO (Día: Estilo Financiero Limpio) --- */
-
-/* ESTRATEGIA: Fondo blanco + Acento de color + Texto oscuro */
-
-/* A. CAJA DÓLAR (Azul Marino Corporativo) */
-body:not(.quarto-dark) .bg-vbox-dolar {
-    background-color: #ffffff !important;      /* Fondo Blanco */
-    border: 1px solid #e0e0e0 !important;      /* Borde gris muy suave */
-    border-left: 5px solid #003366 !important; /* Acento Azul Marino */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);    /* Sombra ligera */
-    color: #333 !important;                    /* Texto base gris oscuro */
-}
-/* Colorear el número y el icono del Dólar */
-body:not(.quarto-dark) .bg-vbox-dolar .value-output,
-body:not(.quarto-dark) .bg-vbox-dolar i {
-    color: #003366 !important;
+body.quarto-dark .value-box-showcase i {
+    color: var(--lm-terracota) !important;
 }
 
-
-/* B. CAJA INFLACIÓN (Terracota - Tu Marca) */
-/* Usamos tu color de marca para este indicador clave */
-body:not(.quarto-dark) .bg-vbox-inflacion {
-    background-color: #ffffff !important;
-    border: 1px solid #e0e0e0 !important;
-    border-left: 5px solid #c86448 !important; /* Acento Terracota */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    color: #333 !important;
-}
-/* Colorear número e icono */
-body:not(.quarto-dark) .bg-vbox-inflacion .value-output,
-body:not(.quarto-dark) .bg-vbox-inflacion i {
-    color: #c86448 !important;
-}
-
-
-/* C. CAJA TPM (Verde Bosque / Finanzas) */
-body:not(.quarto-dark) .bg-vbox-tpm {
-    background-color: #ffffff !important;
-    border: 1px solid #e0e0e0 !important;
-    border-left: 5px solid #145a32 !important; /* Verde Serio (Billete) */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    color: #333 !important;
-}
-/* Colorear número e icono */
-body:not(.quarto-dark) .bg-vbox-tpm .value-output,
-body:not(.quarto-dark) .bg-vbox-tpm i {
-    color: #145a32 !important;
-}
-
-/* D. AJUSTE DE TÍTULOS PEQUEÑOS */
-/* Para que los títulos "Dólar Venta", "Inflación..." se vean elegantes */
-body:not(.quarto-dark) .caption,
-body:not(.quarto-dark) .card-title {
-    color: #666 !important; /* Gris medio, no negro puro */
-    font-weight: 600;
+/* --- 6. DETALLES FINOS --- */
+/* Títulos pequeños (Dólar Spot, Inflación...) */
+.card-title, .value-box-title {
+    font-family: "Inter", sans-serif; /* Sans para legibilidad en pequeño */
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em;
+    color: #888 !important;
 }
 
-
-
+/* Los porcentajes de cambio (verde/rojo) */
+.text-success { color: #2e7d32 !important; } /* Verde más natural, menos "matrix" */
+.text-danger  { color: #c62828 !important; } /* Rojo sangre, menos brillante */
