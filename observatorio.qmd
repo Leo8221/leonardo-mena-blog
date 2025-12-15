@@ -1,19 +1,17 @@
 ---
 title: "Observatorio Económico RD"
+description: "Monitor en tiempo real de Dólar, Inflación, TPM e IMAE en República Dominicana."
+image: "preview.png"
+
 format: 
   dashboard:
     css: styles.css 
     nav-buttons: [github]
     theme: 
-      light: cosmo       # Mantenemos esto para que el dashboard sepa
+      light: cosmo       
       dark: darkly   
-    scrolling: FALSE
-    orientation: rows 
-website:
-  title: "Observatorio Económico RD | Leonardo Mena"
-  description: "Monitor en tiempo real de Dólar, Inflación, TPM e IMAE en República Dominicana."
-  site-url: "https://leonardomena.com/observatorio"
-  image: "preview.png"
+    scrolling: false     
+    orientation: rows
 ---
 
 
