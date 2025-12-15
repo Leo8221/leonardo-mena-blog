@@ -367,3 +367,333 @@ footer, .nav-footer {
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+/* ==========================================================================
+   7. ESTILOS DE POST INDIVIDUAL (EDITORIAL PREMIUM)
+   ========================================================================== */
+
+/* --- CONTENEDOR PRINCIPAL DEL POST --- */
+body.editorial-post #quarto-document-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* --- HEADER DEL POST (Hero) --- */
+body.editorial-post .post-header {
+  margin-bottom: 3.5rem;
+  border-bottom: 3px solid var(--lm-terracota);
+  padding-bottom: 2rem;
+}
+
+/* Categorías/Tags encima del título */
+body.editorial-post .post-categories {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  margin-bottom: 1rem;
+}
+
+body.editorial-post .post-categories a {
+  border: none;
+  margin-right: 1rem;
+}
+
+/* Título del post */
+body.editorial-post #title-block-header h1.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Bajada/Descripción */
+body.editorial-post #title-block-header .description {
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--lm-text-soft);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Metadata (autor, fecha) */
+body.editorial-post #title-block-header .quarto-title-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--lm-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* --- DROP CAP (Letra Capital al inicio) --- */
+body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 4.5em;
+  line-height: 0.85;
+  margin: 0.1em 0.15em 0 0;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  font-family: 'Crimson Pro', Georgia, serif;
+}
+
+/* --- PÁRRAFOS Y LECTURABILIDAD --- */
+body.editorial-post #quarto-document-content p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Primer párrafo más grande (lede) */
+body.editorial-post #quarto-document-content > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--lm-text-soft);
+}
+
+/* --- SUBHEADINGS EN EL POST --- */
+body.editorial-post #quarto-document-content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lm-border-dark);
+  font-size: 1.85rem;
+}
+
+body.editorial-post #quarto-document-content h3 {
+  font-size: 1.35rem;
+  color: var(--lm-terracota);
+  margin-top: 2.5rem;
+}
+
+/* --- NÚMEROS DESTACADOS (BIG NUMBERS) --- */
+body.editorial-post .big-number {
+  display: block;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--lm-primario);
+  margin: 2rem 0 0.5rem 0;
+}
+
+body.editorial-post .big-number-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Ejemplo de uso en Markdown:
+<span class="big-number">+28%</span>
+<span class="big-number-label">Aumento del dólar desde 2020</span>
+*/
+
+/* --- PULL QUOTES (Citas destacadas) --- */
+body.editorial-post .pullquote {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--lm-text-main);
+  margin: 3rem 0;
+  padding: 2rem 0 2rem 2rem;
+  border-left: 4px solid var(--lm-terracota);
+  font-style: italic;
+}
+
+/* --- DATA BOXES (Cajas de datos/estadísticas) --- */
+body.editorial-post .data-box {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .data-box-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+body.editorial-post .data-box-content {
+  font-size: 1rem;
+  color: var(--lm-text-main);
+}
+
+/* --- FIGURAS Y GRÁFICOS --- */
+body.editorial-post figure {
+  margin: 3rem 0;
+  padding: 0;
+}
+
+body.editorial-post figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--lm-text-muted);
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--lm-border-dark);
+}
+
+/* --- LISTAS CON ESTILO --- */
+body.editorial-post #quarto-document-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body.editorial-post #quarto-document-content ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+body.editorial-post #quarto-document-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--lm-terracota);
+  font-weight: 700;
+}
+
+/* --- BLOQUES DE CÓDIGO EN POSTS --- */
+body.editorial-post #quarto-document-content pre {
+  background: var(--lm-bg-sec);
+  border: 1px solid var(--lm-border);
+  border-left: 4px solid var(--lm-olive);
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+/* --- CALLOUTS PERSONALIZADOS (Quarto) --- */
+body.editorial-post .callout {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+body.editorial-post .callout-note { border-left-color: var(--lm-olive); }
+body.editorial-post .callout-warning { border-left-color: #d97706; }
+body.editorial-post .callout-important { border-left-color: var(--lm-terracota); }
+
+/* --- SEPARADORES DE SECCIÓN --- */
+body.editorial-post .section-divider {
+  text-align: center;
+  margin: 4rem 0;
+  color: var(--lm-terracota);
+  font-size: 1.5rem;
+  letter-spacing: 0.5em;
+}
+
+/* Ejemplo de uso:
+<div class="section-divider">• • •</div>
+*/
+
+/* --- FOOTNOTES (Notas al pie) --- */
+body.editorial-post .footnotes {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--lm-border-dark);
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+}
+
+/* --- TABLA DE CONTENIDOS (TOC) --- */
+body.editorial-post #TOC {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post #TOC ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+body.editorial-post #TOC a {
+  color: var(--lm-text-soft);
+  border: none;
+  font-size: 0.9rem;
+}
+
+body.editorial-post #TOC a:hover {
+  color: var(--lm-terracota);
+}
+
+/* --- IMÁGENES EN POSTS --- */
+body.editorial-post #quarto-document-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2.5rem auto;
+  border: 1px solid var(--lm-border);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Imágenes full-bleed (ancho completo) */
+body.editorial-post .full-width-image {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* --- NAVEGACIÓN ENTRE POSTS --- */
+body.editorial-post .post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--lm-border-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .post-nav-link {
+  flex: 1;
+  max-width: 45%;
+}
+
+body.editorial-post .post-nav-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* --- RESPONSIVE PARA MOBILE --- */
+@media (max-width: 768px) {
+  body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
+    font-size: 3.5em;
+  }
+  
+  body.editorial-post .big-number {
+    font-size: 3rem;
+  }
+  
+  body.editorial-post .pullquote {
+    font-size: 1.35rem;
+    padding-left: 1.5rem;
+  }
+  
+  body.editorial-post #quarto-document-content p {
+    text-align: left; /* Quitar justificación en mobile */
+  }
+}

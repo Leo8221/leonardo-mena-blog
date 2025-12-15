@@ -1,22 +1,23 @@
 ---
 title: "Gráfico #0: Cómo leo la economía dominicana"
-date: 2025-12-11
-description: "Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana."
+date: "2025-12-11"
 author: "Leonardo Mena"
-categories: [mapa-mental, metodología]
+description: "Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana."
+categories: 
+  - "La República en un gráfico"
+  - "Metodología"
+#image: "mapa-mental.png"
+draft: false
+body-class: editorial-post
 ---
 
-::: {.post-header}
-<span class="post-category">La República en un Gráfico</span>
-
-# {{< meta title >}}
-
-<p class="post-subtitle">{{< meta description >}}</p>
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
 
 ::: {.post-meta}
-<span class="post-meta-item">📅 {{< meta date >}}</span>
 <span class="post-meta-item">⏱️ 3 min de lectura</span>
-:::
 :::
 
 Este primer gráfico no busca probar nada específico, sino mostrar **cómo organizo mentalmente la economía dominicana** cuando miro datos.
