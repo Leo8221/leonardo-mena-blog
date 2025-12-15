@@ -1000,3 +1000,27 @@ body.quarto-dark .value-box-showcase i {
 /* Los porcentajes de cambio (verde/rojo) */
 .text-success { color: #2e7d32 !important; } /* Verde más natural, menos "matrix" */
 .text-danger  { color: #c62828 !important; } /* Rojo sangre, menos brillante */
+
+/* =========================================================
+   FIX MÓVIL: BOTONES DE EXPANSION SIEMPRE VISIBLES
+   ========================================================= */
+
+@media (max-width: 768px) {
+    /* Forzar que el botón sea visible siempre (sin hover) */
+    .bslib-full-screen-enter {
+        opacity: 1 !important;        /* Totalmente visible */
+        display: block !important;    /* Asegurar que se renderice */
+        
+        /* Opcional: Un pequeño fondo para que destaque sobre el gráfico */
+        background-color: rgba(255, 255, 255, 0.6); 
+        border-radius: 4px;
+        padding: 2px;
+    }
+
+    /* RECORDATORIO: Mantener oculto en las tarjetas de arriba (Value Boxes) 
+       incluso en el móvil, para no ensuciar el diseño */
+    .value-box .bslib-full-screen-enter,
+    .bslib-value-box .bslib-full-screen-enter {
+        display: none !important;
+    }
+}

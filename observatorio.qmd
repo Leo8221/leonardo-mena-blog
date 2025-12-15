@@ -9,6 +9,11 @@ format:
       dark: darkly   
     scrolling: FALSE
     orientation: rows 
+website:
+  title: "Observatorio Económico RD | Leonardo Mena"
+  description: "Monitor en tiempo real de Dólar, Inflación, TPM e IMAE en República Dominicana."
+  site-url: "https://leonardomena.com/observatorio"
+  image: "preview.png"
 ---
 
 
@@ -388,7 +393,12 @@ hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), color = "#546e7a"
     plotLines = list(list(value = promedio, color = "#90a4ae", dashStyle = "ShortDash", label = list(text = "Promedio")))
   ) %>%
   hc_tooltip(pointFormat = "RD$ {point.y:,.2f}") %>%
-  hc_add_theme(theme_observatorio())
+  hc_add_theme(theme_observatorio()) |> 
+  hc_credits(
+    enabled = TRUE, 
+    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
+    style = list(fontSize = "10px", color = "#999")
+  )
 ```
 
 
@@ -399,7 +409,7 @@ df_ipc_reciente <- head(df_ipc, 48)
 
 hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c86448", name = "Inflación") %>%
   hc_title(text = "Inflación (Últimos 4 años)") %>%
-  hc_yAxis(
+  hc_yAxis(title = list(text = ""),
     plotLines = list(
       # Banda de Meta (Gris muy suave para el fondo)
       list(
@@ -420,7 +430,12 @@ hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c864
     )
   ) %>%
   hc_tooltip(pointFormat = "{point.y:.2f}%") %>%
-  hc_add_theme(theme_observatorio())
+  hc_add_theme(theme_observatorio()) |> 
+  hc_credits(
+    enabled = TRUE, 
+    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
+    style = list(fontSize = "10px", color = "#999")
+  )
 ```
 
 
@@ -450,9 +465,15 @@ hchart(
   step = "left"
 ) %>%
   hc_title(text = "Tasa de Política Monetaria") %>%
-  hc_yAxis(labels = list(format = "{value}%")) %>%
+  hc_yAxis(title = list(text = ""),
+    labels = list(format = "{value}%")) %>%
   hc_tooltip(pointFormat = "TPM: <b>{point.y:.2f}%</b>", xDateFormat = "%B %Y") %>%
-  hc_add_theme(theme_observatorio())
+  hc_add_theme(theme_observatorio()) |> 
+  hc_credits(
+    enabled = TRUE, 
+    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
+    style = list(fontSize = "10px", color = "#999")
+  )
 ```
 
 
@@ -482,7 +503,12 @@ hchart(
   hc_tooltip(
     pointFormat = "Variación Mensual: <b>{point.y:.1f}%</b><br/>"
   ) %>%
-  hc_add_theme(theme_observatorio())
+  hc_add_theme(theme_observatorio()) |> 
+  hc_credits(
+    enabled = TRUE, 
+    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
+    style = list(fontSize = "10px", color = "#999")
+  )
 ```
 :::
 
