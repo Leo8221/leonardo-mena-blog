@@ -7,7 +7,7 @@ format:
     theme: 
       light: cosmo       # Mantenemos esto para que el dashboard sepa
       dark: darkly   
-    scrolling: true
+    scrolling: FALSE
     orientation: rows 
 ---
 
@@ -134,7 +134,8 @@ generar_boton_descarga <- function(df, nombre_archivo) {
 urls <- list(
   dolar = "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-cambiario/documents/TASA_DOLAR_REFERENCIA_MC.xlsx",
   tpm   = "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/Serie_TPM.xlsx",
-  ipc   = "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_base_2019-2020.xls"
+  ipc   = "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_base_2019-2020.xls",
+  imae  = "https://cdn.bancentral.gov.do/documents/estadisticas/sector-real/documents/imae_2018.xlsx"
 )
 
 # --- 2. FUNCIONES DE EXTRACCIÓN (Restauradas al estilo original) ---
@@ -237,15 +238,62 @@ obtener_ipc <- function() {
   })
 }
 
+# --- OBTENER IMAE (Sector Real) ---
+obtener_imae <- function() {
+  tryCatch({
+    tf <- tempfile(fileext = ".xlsx")
+    GET(urls$imae, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
+    
+    # Leemos saltando el encabezado (generalmente 5-6 filas en este archivo)
+    # Col A=Año, B=Mes, C=Indice, D=Var.Mensual, E=Var.Acumulada
+    raw <- read_excel(tf, col_names = FALSE, skip = 6)
+    
+    clean <- raw %>%
+      select(anio_raw = ...1, mes = ...2, var_mensual = ...4, var_acum = ...5) %>%
+      # 1. Rellenar Años (El año solo aparece en enero, los demás son NA)
+      fill(anio_raw, .direction = "down") %>%
+      # 2. Convertir a numéricos para evitar filas de texto basura
+      mutate(
+        anio = suppressWarnings(as.numeric(anio_raw)),
+        var_mensual = suppressWarnings(as.numeric(var_mensual)),
+        var_acum = suppressWarnings(as.numeric(var_acum))
+      ) %>%
+      # 3. FILTRO CRÍTICO: Eliminar filas "Promedio", "Trimestre" o vacías
+      filter(
+        !is.na(anio), 
+        !is.na(mes),
+        !str_detect(mes, "Promedio|promedio|Trimestre|Semestre|Total") # <--- Tu petición
+      ) %>%
+      # 4. Parsear mes (Tu función ya maneja "Enero" -> "ene" -> 1)
+      mutate(mes_num = parsear_mes(mes)) %>%
+      filter(!is.na(mes_num)) %>% # Seguridad extra
+      # 5. Crear fecha
+      mutate(fecha = make_date(anio, mes_num, 1)) %>%
+      arrange(fecha) %>%
+      select(fecha, var_mensual, var_acum)
+    
+    unlink(tf)
+    
+    if(nrow(clean) == 0) stop("IMAE vacío tras limpieza")
+    return(clean)
+    
+  }, error = function(e) {
+    message("❌ Error en IMAE: ", e$message)
+    return(data.frame(fecha = Sys.Date(), var_mensual = 0, var_acum = 0))
+  })
+}
+
 # --- 3. EJECUCIÓN Y CÁLCULOS KPI ---
 df_dolar <- obtener_dolar()
 df_tpm   <- obtener_tpm()
 df_ipc   <- obtener_ipc()
-
+df_imae  <- obtener_imae()
 # Cálculos Dólar
 hoy_dolar  <- tail(df_dolar, 1)
 ayer_dolar <- tail(df_dolar, 2) %>% head(1)
 
+# CÁLCULOS IMAE
+val_imae <- tail(df_imae, 1) # Último dato disponible
 # Prevención si viene vacío
 if(nrow(df_dolar) > 1 && hoy_dolar$tasa_venta > 0) {
   diff_dolar <- hoy_dolar$tasa_venta - ayer_dolar$tasa_venta
@@ -261,12 +309,13 @@ val_ipc <- head(df_ipc, 1)
 val_tpm <- tail(df_tpm, 1)
 ```
 
-# Indicadores {orientation="columns"}
-## Row {expandable="false"}
-## Column {width="30%" expandable="false"}
+# Indicadores {orientation="rows"}
+
+## Row {height="280px" expandable="false"}
 
 ```{r}
 #| expandable: false
+#| classes: no-expand
 value_box(
   title = "Dólar Spot (Venta)",
   value = paste0("RD$ ", format(round(hoy_dolar$tasa_venta, 2), nsmall=2)),
@@ -283,6 +332,7 @@ value_box(
 ```
 
 ```{r}
+#| classes: no-expand
 value_box(
   title = "Inflación Interanual",
   value = paste0(format(round(val_ipc$doce_meses, 2), nsmall=2), "%"),
@@ -295,6 +345,7 @@ value_box(
 ```
 
 ```{r}
+#| classes: no-expand
 value_box(
   title = "Tasa Política Monetaria",
   value = paste0(format(round(val_tpm$tpm * 100, 2), nsmall=2), "%"),
@@ -306,13 +357,27 @@ value_box(
 )
 ```
 
-## Column {width=65%}
-
+```{r}
+#| classes: no-expand
+value_box(
+  title = "Actividad Económica (IMAE)",
+  value = paste0(format(round(val_imae$var_mensual, 1), nsmall=1), "%"),
+  showcase = bs_icon("buildings"), # Icono de edificio/industria
+  theme = "light",
+  p(
+    "Acumulada: ", 
+    strong(paste0(round(val_imae$var_acum, 1), "%")),
+    class = "text-secondary"
+  ),
+  p(paste0("Datos: ", format(val_imae$fecha, "%b %Y")), class = "text-muted fs-6")
+)
+```
+## Row {height="fill"}
 ::: {.panel-tabset}
-
 ### Dólar
 ```{r}
 #| title: "Evolución Dólar"
+#| expandable: false
 data_grafico <- tail(df_dolar, 365)
 promedio <- mean(data_grafico$tasa_venta)
 
@@ -325,18 +390,11 @@ hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), color = "#546e7a"
   hc_tooltip(pointFormat = "RD$ {point.y:,.2f}") %>%
   hc_add_theme(theme_observatorio())
 ```
-### ⬇️ Descargar Datos Históricos
-```{r}
-# Botón de descarga pequeño y discreto
-generar_boton_descarga(df_dolar, "Dolar_Historico")
-```
-:::
 
-# Inflacion {orientation="columns"}
-## Column {width=95%}
-::: {.panel-tabset}
+
 ### Inflacion
 ```{r}
+#| expandable: false
 df_ipc_reciente <- head(df_ipc, 48)
 
 hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c86448", name = "Inflación") %>%
@@ -364,16 +422,11 @@ hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c864
   hc_tooltip(pointFormat = "{point.y:.2f}%") %>%
   hc_add_theme(theme_observatorio())
 ```
-### ⬇️ Descargar Datos Históricos
-```{r}
-generar_boton_descarga(df_ipc, "IPC_Historico")
-```
-:::
-# TPM
-## Column {width=95%}
-::: {.panel-tabset}
+
+
 ### TPM
 ```{r}
+#| expandable: false
 # Preparamos datos: Filtramos últimos 7 años y convertimos a porcentaje
 df_tpm_grafico <- df_tpm %>% 
   arrange(desc(fecha)) %>% # Ordenar para head()
@@ -401,8 +454,57 @@ hchart(
   hc_tooltip(pointFormat = "TPM: <b>{point.y:.2f}%</b>", xDateFormat = "%B %Y") %>%
   hc_add_theme(theme_observatorio())
 ```
-### ⬇️ Descargar Datos Históricos
+
+
+### IMAE
+```{r}
+#| expandable: false
+# Últimos 48 meses (4 años)
+df_imae_grafico <- tail(df_imae, 48)
+
+hchart(
+  df_imae_grafico, 
+  "column", # <--- Columnas para diferenciarlo de precios
+  hcaes(x = fecha, y = var_mensual), 
+  color = "#343a40", # Gris Plomo (Tu estilo Editorial)
+  name = "IMAE Mensual"
+) %>%
+  hc_title(text = "Actividad Económica (IMAE)") %>%
+  hc_subtitle(text = "Variación interanual del índice (%)") %>%
+  hc_yAxis(
+    title = list(text = "Crecimiento %"),
+    plotLines = list(list(
+      value = 0, 
+      color = "#333", 
+      width = 2 # Línea base del 0% marcada fuerte
+    ))
+  ) %>%
+  hc_tooltip(
+    pointFormat = "Variación Mensual: <b>{point.y:.1f}%</b><br/>"
+  ) %>%
+  hc_add_theme(theme_observatorio())
+```
+:::
+
+# Descargar data
+::: {.panel-tabset}
+### ⬇️ Descargar Datos Históricos TPM
 ```{r}
 generar_boton_descarga(df_tpm, "TPM_Historico")
+```
+### ⬇️ Descargar Datos Históricos Inflacion
+```{r}
+generar_boton_descarga(df_ipc, "IPC_Historico")
+```
+
+### ⬇️ Descargar Datos Históricos Dolar
+```{r}
+# Botón de descarga pequeño y discreto
+generar_boton_descarga(df_dolar, "Dolar_Historico")
+```
+
+### ⬇️ Descargar Datos Históricos IMAE
+```{r}
+generar_boton_descarga(df_imae, "IMAE_Historico_RD")
 ```
 :::

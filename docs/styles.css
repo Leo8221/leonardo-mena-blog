@@ -912,12 +912,21 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 }
 
 /* =========================================================
-   ESTILOS EDITORIALES - LEONARDO MENA
+   ESTILOS EDITORIALES - LEONARDO MENA BOTONES DEL OBSERVATORIO
    ========================================================= */
 
-/* --- 1. OCULTAR BOTÓN DE EXPANSIÓN (Definitivo) --- */
-.bslib-full-screen-enter {
+/* 1. Ocultar botón SOLO en las tarjetas (Value Boxes) */
+.value-box .bslib-full-screen-enter,
+.bslib-value-box .bslib-full-screen-enter {
     display: none !important;
+}
+
+/* 2. Asegurar que los GRÁFICOS (que son .card normales) sí lo tengan */
+/* (No es necesario añadir nada, el navegador lo hará por defecto) */
+
+/* 3. Ajuste de espaciado para que se vea limpio */
+.quarto-dashboard-row {
+    gap: 15px;
 }
 
 /* --- 2. PALETA DE COLORES (Aquí está la magia) --- */
