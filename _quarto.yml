@@ -12,10 +12,12 @@ website:
   description: "Economía aplicada y datos de la República Dominicana"
   site-url: "https://leo8221.github.io/leonardo-mena-blog/"
   google-analytics: "G-W3JC0G3RJ1"
-  # favicon: images/favicon.ico # Descomenta cuando tengas la imagen
+  favicon: image/logo_leonardo_mena.png
 
   # Barra de navegación
   navbar:
+    title: false
+    logo: image/logo_leonardo_mena.svg
     background: "#ffffff"
     left:
       - href: index.qmd

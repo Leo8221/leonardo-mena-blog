@@ -434,9 +434,9 @@ body.editorial-post #title-block-header .quarto-title-meta {
 /* --- DROP CAP (Letra Capital al inicio) --- */
 body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
   float: left;
-  font-size: 4.5em;
-  line-height: 0.85;
-  margin: 0.1em 0.15em 0 0;
+  font-size: 2.7em;
+  line-height: 0.75;
+  margin: 0.05em 0.12em 0 0;
   font-weight: 700;
   color: var(--lm-terracota);
   font-family: 'Crimson Pro', Georgia, serif;
@@ -696,4 +696,15 @@ body.editorial-post .post-nav-label {
   body.editorial-post #quarto-document-content p {
     text-align: left; /* Quitar justificación en mobile */
   }
+}
+
+/* Eliminar el subrayado (borde) específicamente del logo en la barra */
+.navbar .navbar-brand {
+    border-bottom: none !important;
+}
+
+/* Opcional: Si quieres que el logo crezca un poquito al pasar el mouse */
+.navbar .navbar-brand:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
