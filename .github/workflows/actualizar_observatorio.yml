@@ -25,27 +25,29 @@ jobs:
           r-version: '4.3.1'
           use-public-rspm: true
 
-      - name: Cachear paquetes de R  # ⬅️ Esto ahorra 12+ minutos
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-r-
-
-      - name: Instalar dependencias de Linux
+      - name: Instalar dependencias del sistema
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libharfbuzz-dev libfribidi-dev
 
-      - name: Instalar paquetes R  
-        run: |
-          install.packages(c("tidyverse", "highcharter", "readxl", "lubridate", 
-                            "httr", "janitor", "DT", "htmltools", "bslib", "bsicons"), 
-                          repos = "https://cloud.r-project.org")
-        shell: Rscript {0}
+      - name: Instalar y cachear paquetes R  # ⬅️ Solución oficial
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::tidyverse
+            any::highcharter
+            any::readxl
+            any::lubridate
+            any::httr
+            any::janitor
+            any::DT
+            any::htmltools
+            any::bslib
+            any::bsicons
+            any::rmarkdown
+            any::knitr
 
-      - name: Limpiar caches de Quarto  
+      - name: Limpiar caches de Quarto
         run: |
           rm -rf _freeze/
           rm -rf observatorio_cache/
