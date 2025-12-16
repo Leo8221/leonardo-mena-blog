@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "mitos-economicos.html",
-    "href": "mitos-economicos.html",
-    "title": "Mitos económicos",
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
     "section": "",
-    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "predecesores.html",
+    "href": "predecesores.html",
+    "title": "Mis predecesores",
+    "section": "",
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "fundamentos.html",
+    "href": "fundamentos.html",
+    "title": "Fundamentos",
+    "section": "",
+    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
+    "section": "",
+    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
+  },
+  {
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
   },
   {
     "objectID": "about.html",
@@ -26,69 +54,6 @@
     "title": "Sobre mí",
     "section": "Quién escribe",
     "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.\n\nNo escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.\n\n\nCompromiso\nEn cada artículo encontrarás:\n\nTransparencia: Datos con fuente y opiniones claramente identificadas.\nClaridad: Lenguaje accesible, sin sacrificar precisión técnica.\nContexto: Análisis siempre anclado a la realidad de la República Dominicana."
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
-  },
-  {
-    "objectID": "archivo.html#todas-las-publicaciones",
-    "href": "archivo.html#todas-las-publicaciones",
-    "title": "Archivo",
-    "section": "Todas las publicaciones",
-    "text": "Todas las publicaciones"
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html",
-    "href": "posts/republica-en-un-grafico/grafico-0/index.html",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "",
-    "text": "⏱️ 3 min de lectura\nEste primer gráfico no busca probar nada específico, sino mostrar cómo organizo mentalmente la economía dominicana cuando miro datos.\nLa idea es tener, en una sola imagen, algo como:\nMás adelante, aquí irá el gráfico protagonista (una imagen estática o un gráfico generado desde datos). Por ahora, puedes imaginarlo como un esquema claro que responde a una pregunta sencilla:"
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-muestra",
-    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-muestra",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Qué muestra",
-    "text": "Qué muestra\n\nUna vista simplificada de los bloques principales de la economía dominicana.\nLa relación entre algunos indicadores que suelo mirar juntos (por ejemplo, inflación, salarios reales, tipo de cambio, empleo formal/informal)."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-no-muestra",
-    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-no-muestra",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Qué no muestra",
-    "text": "Qué no muestra\n\nNo es una contabilidad completa ni un modelo formal.\nNo captura todas las instituciones, ni toda la historia, ni todas las fricciones.\nNo debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-implica",
-    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-implica",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Qué implica",
-    "text": "Qué implica\n\nQue cada vez que veas un gráfico en este sitio, estará anclado a este mapa mental: no son números sueltos.\nQue mis lecturas de coyuntura siempre intentarán conectar dato → mecanismo → implicación, en lugar de quedarse en “opinión sobre el último titular”."
-  },
-  {
-    "objectID": "predecesores.html",
-    "href": "predecesores.html",
-    "title": "Mis predecesores",
-    "section": "",
-    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "series.html",
-    "href": "series.html",
-    "title": "Series",
-    "section": "",
-    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
-  },
-  {
-    "objectID": "fundamentos.html",
-    "href": "fundamentos.html",
-    "title": "Fundamentos",
-    "section": "",
-    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "categorias.html",
@@ -126,11 +91,39 @@
     "text": "No hay resultados"
   },
   {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
+    "objectID": "mitos-economicos.html",
+    "href": "mitos-economicos.html",
+    "title": "Mitos económicos",
     "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html",
+    "href": "posts/republica-en-un-grafico/grafico-0/index.html",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "",
+    "text": "⏱️ 3 min de lectura\nEste primer gráfico no busca probar nada específico, sino mostrar cómo organizo mentalmente la economía dominicana cuando miro datos.\nLa idea es tener, en una sola imagen, algo como:\nMás adelante, aquí irá el gráfico protagonista (una imagen estática o un gráfico generado desde datos). Por ahora, puedes imaginarlo como un esquema claro que responde a una pregunta sencilla:"
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-muestra",
+    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-muestra",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Qué muestra",
+    "text": "Qué muestra\n\nUna vista simplificada de los bloques principales de la economía dominicana.\nLa relación entre algunos indicadores que suelo mirar juntos (por ejemplo, inflación, salarios reales, tipo de cambio, empleo formal/informal)."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-no-muestra",
+    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-no-muestra",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Qué no muestra",
+    "text": "Qué no muestra\n\nNo es una contabilidad completa ni un modelo formal.\nNo captura todas las instituciones, ni toda la historia, ni todas las fricciones.\nNo debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/grafico-0/index.html#qué-implica",
+    "href": "posts/republica-en-un-grafico/grafico-0/index.html#qué-implica",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Qué implica",
+    "text": "Qué implica\n\nQue cada vez que veas un gráfico en este sitio, estará anclado a este mapa mental: no son números sueltos.\nQue mis lecturas de coyuntura siempre intentarán conectar dato → mecanismo → implicación, en lugar de quedarse en “opinión sobre el último titular”."
   },
   {
     "objectID": "republica-en-un-grafico.html",
@@ -138,5 +131,12 @@
     "title": "La República en un gráfico",
     "section": "",
     "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "series.html",
+    "href": "series.html",
+    "title": "Series",
+    "section": "",
+    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
   }
 ]
