@@ -25,32 +25,34 @@ jobs:
           r-version: '4.3.1'
           use-public-rspm: true
 
+      - name: Cachear paquetes de R  # ⬅️ Esto ahorra 12+ minutos
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
+
       - name: Instalar dependencias de Linux
         run: |
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libharfbuzz-dev libfribidi-dev
 
-      - name: Instalar paquetes R
+      - name: Instalar paquetes R  
         run: |
-          install.packages(c("tidyverse", "highcharter", "readxl", "lubridate", "httr", "janitor", "rmarkdown", "knitr", "DT", "htmltools", "writexl", "bslib", "bsicons"), repos = "https://cloud.r-project.org")
+          install.packages(c("tidyverse", "highcharter", "readxl", "lubridate", 
+                            "httr", "janitor", "DT", "htmltools", "bslib", "bsicons"), 
+                          repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
-      - name: Limpiar TODOS los caches  
+      - name: Limpiar caches de Quarto  
         run: |
           rm -rf _freeze/
           rm -rf observatorio_cache/
           rm -rf *_cache/
-          echo "✅ Todos los caches eliminados"
 
       - name: Renderizar Proyecto
-        run: quarto render --execute-debug
-
-      - name: Verificar actualizacion
-        run: |
-          echo "=== Archivos en docs/ ==="
-          ls -lh docs/
-          echo "=== Fecha en observatorio ==="
-          grep -i "Act:" docs/index.html | head -3 || echo "Patrón no encontrado"
+        run: quarto render
 
       - name: Guardar cambios
         run: |
@@ -58,9 +60,9 @@ jobs:
           git config --global user.email "actions@github.com"
           git add docs/
           if git diff --staged --quiet; then
-            echo "⚠️ Sin cambios para commitear"
+            echo "⚠️ Sin cambios"
           else
             git commit -m "🔄 Auto-update: $(date +'%Y-%m-%d %H:%M UTC')"
             git push
-            echo "✅ Publicado correctamente"
+            echo "✅ Publicado"
           fi
