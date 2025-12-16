@@ -1,7 +1,13 @@
 [
   {
-    "listing": "/republica-habla-de.html",
+    "listing": "/mitos-economicos.html",
     "items": []
+  },
+  {
+    "listing": "/archivo.html",
+    "items": [
+      "/posts/republica-en-un-grafico/grafico-0/index.html"
+    ]
   },
   {
     "listing": "/predecesores.html",
@@ -10,12 +16,6 @@
   {
     "listing": "/fundamentos.html",
     "items": []
-  },
-  {
-    "listing": "/archivo.html",
-    "items": [
-      "/posts/republica-en-un-grafico/grafico-0/index.html"
-    ]
   },
   {
     "listing": "/categorias.html",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "listing": "/mitos-economicos.html",
+    "listing": "/republica-habla-de.html",
     "items": []
   },
   {
