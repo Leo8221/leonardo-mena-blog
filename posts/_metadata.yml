@@ -6,7 +6,7 @@ comments:
     mapping: title
     reactions-enabled: true
     theme: 
-      light: noborder_light
+      light: light             
       dark: transparent_dark
     input-position: top
     loading: lazy

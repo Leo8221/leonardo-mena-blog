@@ -199,7 +199,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
    4. ESTILOS ESPECÍFICOS: BLOG (HOME & LISTINGS)
    ========================================================================== */
 
-/* Hero Section */
+/* Hero Section (Encabezado "Entendiendo la economía...") */
 .home .home-hero { margin: 2.5rem 0 3.5rem 0; text-align: center; }
 .home .home-kicker {
     font-family: 'Inter', sans-serif;
@@ -211,12 +211,13 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 }
 .home .home-intro { color: var(--lm-text-soft); max-width: 680px; margin: 0 auto; }
 
-/* Grid de Cards en Home */
+/* Grid Principal (Columna Izq + Sidebar Der) */
 .home .home-grid { display: grid; grid-template-columns: 1.65fr 1fr; gap: 2.5rem; }
+
 .home .home-main {
     background: var(--lm-bg-card);
     border: 2px solid var(--lm-border-dark);
-    padding: 2.5rem;
+    padding: 2rem; /* Padding optimizado para la imagen grande */
     transition: 0.25s ease;
 }
 .home .home-main:hover {
@@ -224,54 +225,52 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     box-shadow: var(--shadow-md);
 }
 
-/* --- ESTILOS LATERALES (SIDEBAR) --- */
+/* --- SIDEBAR (Barra Lateral) --- */
 .home .home-side {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border-top: 3px solid var(--lm-terracota);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 3px solid var(--lm-terracota);
 }
 
 .home .home-side-card {
-  background: var(--lm-bg-card); /* Corregido */
-  border-bottom: 1px solid var(--lm-border);
-  padding: 1.85rem 0;
-  position: relative;
+    background: var(--lm-bg-card);
+    border-bottom: 1px solid var(--lm-border);
+    padding: 1.85rem 0;
+    position: relative;
 }
 
-/* Efecto de barra lateral al hover */
+/* Efecto Hover Sidebar */
 .home .home-side-card::before {
-  content: ''; 
-  position: absolute; 
-  left: 0; top: 0; bottom: 0; width: 0;
-  background: var(--lm-terracota); 
-  transition: width 0.2s ease;
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 0;
+    background: var(--lm-terracota);
+    transition: width 0.2s ease;
 }
-
 .home .home-side-card:hover::before { width: 4px; }
 .home .home-side-card:hover { padding-left: 1rem; }
 
-/* Tipografía de la Sidebar */
-.home .home-side-card h3 { 
-  color: var(--lm-terracota); 
-  font-family: 'Inter', sans-serif; 
-  font-size: 0.7rem; 
-  letter-spacing: 0.1em; 
-  font-weight: 700; 
+/* Tipografía Sidebar */
+.home .home-side-card h3 {
+    color: var(--lm-terracota);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 700;
 }
-
-.home .home-side-card p { color: var(--lm-text-main); } /* Corregido */
+.home .home-side-card p { color: var(--lm-text-main); }
 .home .home-side-card p:nth-of-type(2) { color: var(--lm-text-soft); }
 
-.home .home-side-link a { 
-  color: var(--lm-terracota); 
-  font-family: 'Inter', sans-serif; 
-  font-size: 0.75rem; 
-  font-weight: 600; 
-  border-bottom: none; 
+.home .home-side-link a {
+    color: var(--lm-terracota);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-bottom: none;
 }
 
-/* Listings (Artículos) */
+/* --- LISTINGS GENERALES (Listas de artículos estándar) --- */
 .quarto-listing .quarto-listing-item {
     background: transparent !important;
     border: none !important;
@@ -284,8 +283,54 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     background: transparent !important;
     border-left: none !important;
     box-shadow: none !important;
+    border-left-color: var(--lm-terracota); /* Solo línea de color */
 }
-.quarto-listing .quarto-listing-item:hover { border-left-color: var(--lm-terracota); }
+
+/* --- GRÁFICO DESTACADO (HERO IMAGE - PERSONALIZACIÓN) --- */
+/* Elimina bordes y sombras para integrarlo como cabecera */
+
+#grafico-destacado .quarto-grid-item {
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#grafico-destacado .card-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 1.2rem !important; /* Espacio limpio entre imagen y título */
+}
+
+#grafico-destacado img {
+    border-radius: 6px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Tipografía Específica del Destacado (Estilo Editorial) */
+#grafico-destacado .card-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;         /* Título más grande y elegante */
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    color: var(--lm-text-main);
+}
+
+#grafico-destacado .card-text {
+    font-size: 1.1rem;         /* Descripción más legible */
+    color: var(--lm-text-soft);
+    line-height: 1.5;
+}
+
+#grafico-destacado .card-attribution {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--lm-text-muted);
+    margin-top: 1rem;
+}
 
 /* ==========================================================================
    5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO
@@ -698,6 +743,7 @@ body.editorial-post .post-nav-label {
   }
 }
 
+
 /* Eliminar el subrayado (borde) específicamente del logo en la barra */
 .navbar .navbar-brand {
     border-bottom: none !important;
@@ -707,4 +753,35 @@ body.editorial-post .post-nav-label {
 .navbar .navbar-brand:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
+}
+
+/* =========================================
+   8 INTEGRACIÓN DE COMENTARIOS (GISCUS)
+   ========================================= */
+
+div.giscus {
+  /* 1. Centrado y Ancho Controlado */
+  max-width: 720px; /* Mismo ancho que tu texto para que no se desborde */
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* 2. Separación del Artículo */
+  margin-top: 4rem;      /* Mucho aire arriba */
+  padding-top: 2rem;     /* Espacio entre la línea y la caja */
+  
+  /* 3. Línea Divisoria Editorial */
+  border-top: 1px solid var(--lm-border-dark);
+}
+
+/* Opcional: Agregar un pequeño texto antes si la línea no es suficiente */
+div.giscus::before {
+  content: "Discusion";
+  display: block;
+  font-family: "Inter", sans-serif; /* O tu fuente sans */
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-terracota);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }

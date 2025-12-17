@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources: 
     - robots.txt
+    - tema_graficos.R
 
 lang: es 
 
@@ -80,3 +81,11 @@ format:
     
 execute:
   freeze: auto
+  warning: false
+  message: false
+
+# Calidad de gráficos
+knitr:
+  opts_chunk:
+    dev: "ragg_png"
+    collapse: true

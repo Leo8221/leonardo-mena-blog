@@ -7,11 +7,13 @@ listing:
     contents: posts/republica-en-un-grafico
     sort: "date desc"
     max-items: 1
-    type: default
+    type: grid            
+    grid-columns: 1 
     categories: false
     sort-ui: false
     filter-ui: false
     fields: [image, date, title, description]
+    image-height: "350px"
   
   - id: ultimos-posts
     contents: posts/republica-habla-de

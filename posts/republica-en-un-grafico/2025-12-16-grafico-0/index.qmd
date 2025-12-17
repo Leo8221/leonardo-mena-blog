@@ -1,0 +1,198 @@
+---
+title: "Gráfico #0: Cómo leo la economía dominicana"
+date: "2025-12-11"
+author: "Leonardo Mena"
+description: "Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana."
+categories: 
+  - "La República en un gráfico"
+  - "Metodología"
+draft: false
+body-class: editorial-post
+toc: true
+toc-location: left
+---
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+::: {.post-meta}
+<span class="post-meta-item">⏱️ 3 min de lectura</span>
+:::
+
+Para entender la economía sin perderse, hace falta un mapa. Este primer gráfico no busca probar una teoría compleja, sino transparentar **cómo organizo mentalmente la economía dominicana** cada vez que me enfrento a una nueva base de datos.
+
+La idea es tener, en una sola imagen, los pilares fundamentales: los sectores que mueven la aguja, el papel decisivo del sector externo (turismo y remesas) y las conexiones invisibles que terminan en los titulares de prensa: inflación, dólar y deuda.
+
+``` {r}
+#| label: grafico-mental
+#| echo: false
+#| warning: false
+#| column: screen-inset
+#| fig-width: 12
+#| fig-height: 8
+#| out-width: "100%"
+#| fig-cap: "Figura 1. El ciclo de análisis de coyuntura: cuatro preguntas clave para interrogar los datos."
+#| fig-alt: "Diagrama de flujo con cuatro cajas conectadas: Ritmo de la economía, Estabilidad nominal, Impacto social y Restricción fiscal."
+
+source(here::here("tema_graficos.R"))
+library(tidyverse)
+
+flujo <- tribble(
+  ~x, ~y, ~titulo, ~descripcion,
+  1, 2, "Ritmo de la economía", "¿Se acelera o frena?\nPIB, inversión, turismo",
+  2, 2, "Estabilidad nominal", "¿Hay presiones inflacionarias\no cambiarias?",
+  1, 1, "Impacto social", "¿Qué pasa con empleo\ny salarios?",
+  2, 1, "Restricción fiscal", "¿Hay margen del Estado\no está agotado?"
+)
+
+ggplot(flujo) +
+  # Cajas grandes
+  geom_tile(
+    aes(x = x, y = y),
+    width = 0.85,
+    height = 0.85,
+    fill = pal$plomo,
+    color = "white",
+    linewidth = 3
+  ) +
+  
+  # Títulos más grandes
+  geom_text(
+    aes(x = x, y = y + 0.22, label = titulo),
+    family = "sans",
+    fontface = "bold",
+    size = 8,
+    color = "white"
+  ) +
+  
+  # Descripciones
+  geom_text(
+    aes(x = x, y = y - 0.12, label = descripcion),
+    family = "sans",
+    size = 5.5,
+    color = "white",
+    lineheight = 1.1
+  ) +
+  
+  # Flechas horizontales
+  geom_segment(
+    data = tibble(x = 1.45, xend = 1.55, y = 2, yend = 2),
+    aes(x = x, y = y, xend = xend, yend = yend),
+    arrow = arrow(length = unit(0.5, "inches"), type = "closed"),
+    color = pal$terracota,
+    linewidth = 4
+  ) +
+  
+  # Flecha vertical izquierda
+  geom_segment(
+    data = tibble(x = 1, xend = 1, y = 1.55, yend = 1.45),
+    aes(x = x, y = y, xend = xend, yend = yend),
+    arrow = arrow(length = unit(0.5, "inches"), type = "closed"),
+    color = pal$terracota,
+    linewidth = 4
+  ) +
+  
+  # Flecha horizontal abajo
+  geom_segment(
+    data = tibble(x = 1.45, xend = 1.55, y = 1, yend = 1),
+    aes(x = x, y = y, xend = xend, yend = yend),
+    arrow = arrow(length = unit(0.5, "inches"), type = "closed"),
+    color = pal$terracota,
+    linewidth = 4
+  ) +
+  
+  scale_x_continuous(limits = c(0.4, 2.6), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(0.4, 2.6), expand = c(0, 0)) +
+  
+  labs(
+    title = "Entender la economía más allá del titular",
+    subtitle = "Un flujo mental para analizar noticias económicas en República Dominicana"
+  ) +
+  
+  theme_void() +
+  
+  theme(
+    plot.title = element_text(
+      size = 26, 
+      face = "bold", 
+      color = pal$texto, 
+      hjust = 0.5,
+      margin = margin(b = 8)
+    ),
+    plot.subtitle = element_text(
+      size = 18, 
+      color = pal$texto_soft, 
+      hjust = 0.5,
+      margin = margin(b = 35)
+    ),
+    plot.background = element_rect(fill = pal$crema, color = NA),
+    plot.margin = margin(40, 40, 40, 40)
+  )
+```
+
+::: {.pullquote} 
+“Cuando escucho una noticia económica sobre RD, ¿qué casillas de mi mapa mental se prenden primero?”
+:::
+
+<div class="section-divider">• • •</div>
+
+## Qué muestra
+
+Este diagrama organiza mi lectura de la economía dominicana en cuatro preguntas que siempre intento responder cuando analizo datos:
+
+* **1. ¿Se acelera o se frena?**
+    Aquí miro el ritmo: PIB, IMAE, inversión, turismo. Si la economía acelera, otras variables empiezan a moverse.
+
+* **2. ¿Hay presiones inflacionarias o cambiarias?**
+    La estabilidad nominal importa: si el dólar sube 8% en tres meses, eso afecta precios, salarios reales y decisiones de inversión.
+
+* **3. ¿Qué pasa con empleo y salarios?**
+    El impacto social: el crecimiento agregado no garantiza progreso si no llega a los bolsillos o si genera empleo precario.
+
+* **4. ¿Hay margen del Estado o está agotado?**
+    La restricción fiscal: déficit, deuda, recaudación. Si el espacio se agota, las respuestas contracíclicas desaparecen.
+
+Estas cuatro cajas no están aisladas: se conectan. Un shock externo (digamos, petróleo caro) puede afectar las cuatro simultáneamente.
+
+## Cómo lo uso en la práctica
+
+::: {.data-box}
+<div class="data-box-title">Caso Práctico: Inflación</div>
+::: {.data-box-content}
+
+**El Escenario:** Sale una noticia urgente diciendo: *"La inflación subió a 4.8% en noviembre".*
+
+**Mi flujo mental:**
+
+* **1. ¿Ritmo?** → Chequeo el IMAE del mismo mes. ¿Hay un aumento en la demanda o es por el lado de la oferta?
+
+* **2. ¿Estabilidad?** → Miro el dólar. ¿Se depreció recientemente? ¿Hay *traspaso* a precios?
+
+* **3. ¿Impacto?** → Busco el índice de salarios. Si crecieron solo 2% y la inflación fue 4.8%, hay pérdida de poder adquisitivo.
+
+* **4. ¿Fiscal?** → Reviso decisiones administrativas. ¿Hubo ajuste de combustibles o tarifas públicas que expliquen el salto matemático?
+
+:::
+:::
+
+Ese recorrido me da un diagnóstico más completo que solo repetir el titular.
+
+## Qué no muestra
+
+-   No es una contabilidad completa ni un modelo formal.
+-   No captura todas las instituciones, ni toda la historia, ni todas las fricciones.
+-   No debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme.
+
+
+## La Implicación para el Blog
+
+A partir de ahora, cada vez que publique un análisis de coyuntura, estará anclado a este esquema.
+Mis lecturas siempre intentarán conectar Dato → Mecanismo → Implicación, evitando quedarme en la simple opinión sobre el titular del día. Este mapa es el filtro por el que pasarán los números.
+
+<div class="section-divider">• • •</div>
+
+**¿Usas un mapa mental parecido?** Cuéntame en los comentarios.
+
+*Nota: Los próximos gráficos explorarán cada caja de este diagrama en detalle.*
