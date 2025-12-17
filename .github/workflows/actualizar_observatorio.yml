@@ -46,6 +46,7 @@ jobs:
             any::bsicons
             any::rmarkdown
             any::knitr
+            any::here
 
       - name: Limpiar caches de Quarto
         run: |
