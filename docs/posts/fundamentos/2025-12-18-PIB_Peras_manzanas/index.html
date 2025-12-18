@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Leonardo Mena">
+<meta name="description" content="Explicacion tecnica del PIB.">
 
-<title>Fundamentos – Leonardo Mena</title>
+<title>El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas? – Leonardo Mena</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,31 +25,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./image/logo_leonardo_mena.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../image/logo_leonardo_mena.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
 
 <script type="text/javascript">
@@ -115,46 +86,23 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Fundamentos – Leonardo Mena">
-<meta property="og:description" content="Economía aplicada y datos de la República Dominicana">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas? – Leonardo Mena">
+<meta property="og:description" content="Explicacion tecnica del PIB.">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/portada-pib.png">
 <meta property="og:site_name" content="Leonardo Mena">
-<meta name="twitter:title" content="Fundamentos – Leonardo Mena">
-<meta name="twitter:description" content="Economía aplicada y datos de la República Dominicana">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="3600">
+<meta name="twitter:title" content="El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas? – Leonardo Mena">
+<meta name="twitter:description" content="Explicacion tecnica del PIB.">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/portada-pib.png">
+<meta name="twitter:image-height" content="1800">
+<meta name="twitter:image-width" content="3600">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -323,9 +271,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./image/logo_leonardo_mena.svg" alt="" class="navbar-logo light-content">
-    <img src="./image/logo_leonardo_mena.svg" alt="" class="navbar-logo dark-content">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
@@ -335,7 +283,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -344,43 +292,43 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
         <li>
-    <a class="dropdown-item" href="./republica-habla-de.html">
+    <a class="dropdown-item" href="../../../republica-habla-de.html">
  <span class="dropdown-text">La República habla de</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./fundamentos.html">
+    <a class="dropdown-item" href="../../../fundamentos.html">
  <span class="dropdown-text">Fundamentos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./predecesores.html">
+    <a class="dropdown-item" href="../../../predecesores.html">
  <span class="dropdown-text">Mis predecesores</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./mitos-economicos.html">
+    <a class="dropdown-item" href="../../../mitos-economicos.html">
  <span class="dropdown-text">Mitos económicos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./republica-en-un-grafico.html">
+    <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
  <span class="dropdown-text">La República en un grafico</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./categorias.html"> 
+    <a class="nav-link" href="../../../categorias.html"> 
 <span class="menu-text">Categorías</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./archivo.html"> 
+    <a class="nav-link" href="../../../archivo.html"> 
 <span class="menu-text">Archivo</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./suscribete.html"> 
+    <a class="nav-link" href="../../../suscribete.html"> 
 <span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./observatorio.html"> <i class="bi bi-graph-up" role="img">
+    <a class="nav-link" href="../../../observatorio.html"> <i class="bi bi-graph-up" role="img">
 </i> 
 <span class="menu-text">Observatorio 📊</span></a>
   </li>  
@@ -395,9 +343,20 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este artículo</h2>
+   
+  <ul>
+  <li><a href="#el-denominador-común" id="toc-el-denominador-común" class="nav-link active" data-scroll-target="#el-denominador-común">El denominador común</a></li>
+  <li><a href="#la-trampa-del-bienestar" id="toc-la-trampa-del-bienestar" class="nav-link" data-scroll-target="#la-trampa-del-bienestar">La trampa del bienestar</a></li>
+  <li><a href="#es-un-mal-indicador" id="toc-es-un-mal-indicador" class="nav-link" data-scroll-target="#es-un-mal-indicador">¿Es un mal indicador?</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -405,14 +364,34 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fundamentos</h1>
-</div>
+<h1 class="title">El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Fundamentos</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Explicacion tecnica del PIB.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Mena </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">18 de diciembre de 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -422,34 +401,118 @@ window.Quarto = {
 </header>
 
 
-<p>Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.</p>
-<p>A continuación están los artículos de esta serie:</p>
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+Imaginemos un lugar donde se realizan actividades tan diversas como la siembra de alimentos, cortes de pelo, arreglos mecánicos o confección de ropa. Si quisiéramos medir la actividad total, ¿podríamos decir que un corte de pelo más tres alimentos es igual a cuatro? No.&nbsp;Y aquí surge el “dilema de las peras y las manzanas”: ambas son frutas, pero incluso siendo así, son de naturaleza diferente. Por lo tanto, no podemos simplemente sumarlas para decir que “X es la actividad total”. Entonces,
+<div class="pullquote">
+<p><strong>¿cómo superamos esta limitación los economistas?</strong></p>
+</div>
+<div class="section-divider">
+• • •
+</div>
+<section id="el-denominador-común" class="level2">
+<h2 class="anchored" data-anchor-id="el-denominador-común">El denominador común</h2>
+<p>Volviendo al problema planteado, nos damos cuenta de que, al final del día, es un asunto de magnitudes: cuántos objetos hay y cómo les asignamos valor. Para resolverlo, los economistas simplemente agregamos otra variable. Cuando usted va al supermercado o a su peluquero, ¿qué usa para pagar? ¡Correcto! Dinero.</p>
+<p>Un peso es un peso para las manzanas, para las peras o para el peluquero; lo mismo aplica si voy al mecánico o si pago la universidad. Si tomamos los productos y los multiplicamos por su “precio” (por ejemplo: tres alimentos con valor de 20 pesos más un corte de pelo con valor de 50), podemos decir que el total vale 110. A esto es a lo que los economistas nos referimos como <strong>Producto Interno Bruto (PIB)</strong>. Problema de magnitudes resuelto, pero esta misma solución deriva en otros problemas en el futuro.</p>
+<div class="section-divider">
+• • •
+</div>
+</section>
+<section id="la-trampa-del-bienestar" class="level2">
+<h2 class="anchored" data-anchor-id="la-trampa-del-bienestar">La trampa del bienestar</h2>
+<p>Si volvemos a la lógica que acabamos de usar, nos daremos cuenta de que el PIB se basa en dos principios: cuánto hay de algo y cuánto es su valor en monedas. Pero aquí es donde la realidad se vuelve complicada.</p>
+<p>Imaginemos que nos encontramos en la ciudad de Santo Domingo. Pedro está en su vehículo hacia el trabajo pero, como es común, un “tapón” hace imposible el avance normal. Pedro dura varias horas atrapado en el tránsito. Esta situación lo obliga a que, en lugar de comprar dos galones de gasolina, tenga que comprar seis, además, en vez de llevar el carro al mecánico cada dos meses, debe hacerlo mes a mes por el desgaste.</p>
+<p><span class="big-number">6 galones</span> <span class="big-number-label">De gasolina vs.&nbsp;2 en condiciones normales</span></p>
+<p>¿Aumenta esto el PIB? Sí. Tenemos una cantidad (producto o servicio) y un valor en monedas (precio de gasolina y servicio mecánico). Ahora, otra pregunta: ¿Usted cree que Pedro vive mejor? Probablemente, y con razón, su respuesta sea un rotundo “no”. He aquí una de las grandes trampas del PIB: es una medida de producción económica, no de bienestar.</p>
+<p>Podemos ver otros casos similares:</p>
+<ul>
+<li><p>Economía del cuidado: Si María decide no trabajar formalmente y dedicarse a la educación de sus hijos en casa, ¿contribuye al PIB? No.&nbsp;¿Está la familia de María peor por eso? Probablemente no.</p></li>
+<li><p>Efecto de precios: Si sube el precio del arroz pero usted tiene que comprarlo igual, ¿aumenta el PIB? Sí (nominalmente). ¿Está usted mejor? No, es más pobre porque su dinero rinde menos.</p>
+<div class="data-box">
+<div class="data-box-title">
+Efecto Precio: El caso del arroz
+</div>
+<div class="data-box-content">
+<p>Precio enero 2024: RD$50/libra → Precio diciembre 2024: RD$65/libra <br>Su poder adquisitivo: -23%</p>
+</div>
+</div></li>
+</ul>
+<p>Así podríamos continuar con muchos otros casos. Por esto, el PIB como indicador de producción es excelente; para medir qué tan bien vive la gente… no tanto.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ejemplo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ejemplo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-ejemplo-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ejemplo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Ilustración: Producción vs.&nbsp;Bienestar (Simulación)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="section-divider">
+• • •
+</div>
+</section>
+<section id="es-un-mal-indicador" class="level2">
+<h2 class="anchored" data-anchor-id="es-un-mal-indicador">¿Es un mal indicador?</h2>
+<p>Ahora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?</p>
+<p>Sobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.</p>
+<p>Si voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Para recordar
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber <strong>qué</strong> mide y <strong>qué no</strong>.</p>
+</div>
+</div>
+<p>Y tú, ¿qué opinas del PIB luego de leer este post?</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+// Crear barra de progreso solo si estamos en un post editorial
+
+if (document.body.classList.contains('editorial-post')) {
+
+  const progressBar = document.createElement('div');
+
+  progressBar.id = 'reading-progress';
+
+  document.body.prepend(progressBar);
 
 
 
+  // Actualizar al hacer scroll
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RnVuZGFtZW50b3M=" data-listing-date-sort="1766030400000" data-listing-file-modified-sort="1766095602496" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="850">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html" class="no-external">El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html" class="no-external">
-<p>Explicacion tecnica del PIB.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html" class="no-external">
-<div class="listing-date">
-18 dic 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No hay resultados</div>
-</div></main> <!-- /main -->
+  window.addEventListener('scroll', () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    progressBar.style.width = scrollPercent + '%';
+
+  });
+
+}
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -868,6 +931,38 @@ window.Quarto = {
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Leo8221/leonardo-mena-blog";
+    script.dataset.repoId = "R_kgDOQmnpWw";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDO...";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "es";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -888,5 +983,5 @@ window.Quarto = {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

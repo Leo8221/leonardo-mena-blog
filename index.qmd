@@ -4,7 +4,7 @@ page-layout: full
 toc: false
 listing:
   - id: grafico-destacado
-    contents: posts/republica-en-un-grafico
+    contents: posts  # <-- CAMBIÉ: de posts/republica-en-un-grafico a posts
     sort: "date desc"
     max-items: 1
     type: grid            
@@ -16,7 +16,7 @@ listing:
     image-height: "350px"
   
   - id: ultimos-posts
-    contents: posts/republica-habla-de
+    contents: posts
     sort: "date desc"
     max-items: 3
     type: grid
@@ -38,12 +38,13 @@ listing:
 Bienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.
 :::
 :::
+
 ::: {.home-grid}
 
 ::: {.home-main}
-## Lo más reciente en datos
+## Último análisis publicado
 
-Aquí analizo la economía visualmente. Un gráfico, una lectura y una implicación clara.
+El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.
 
 ::: {#grafico-destacado}
 :::
@@ -85,7 +86,7 @@ Aquí analizo la economía visualmente. Un gráfico, una lectura y una implicaci
 <br><br>
 <div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;"></div>
 
-## Últimos análisis de coyuntura
+## Últimas publicaciones
 
 ::: {#ultimos-posts}
 :::

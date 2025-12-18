@@ -1,0 +1,16 @@
+<script>
+// Crear barra de progreso solo si estamos en un post editorial
+if (document.body.classList.contains('editorial-post')) {
+  const progressBar = document.createElement('div');
+  progressBar.id = 'reading-progress';
+  document.body.prepend(progressBar);
+
+  // Actualizar al hacer scroll
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+  });
+}
+</script>

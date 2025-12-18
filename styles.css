@@ -749,7 +749,7 @@ body.editorial-post .post-nav-label {
     border-bottom: none !important;
 }
 
-/* Opcional: Si quieres que el logo crezca un poquito al pasar el mouse */
+/*  el logo crezca un poquito al pasar el mouse */
 .navbar .navbar-brand:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
@@ -773,15 +773,41 @@ div.giscus {
   border-top: 1px solid var(--lm-border-dark);
 }
 
-/* Opcional: Agregar un pequeño texto antes si la línea no es suficiente */
+ Agregar un pequeño texto antes si la línea no es suficiente */
 div.giscus::before {
   content: "Discusion";
   display: block;
-  font-family: "Inter", sans-serif; /* O tu fuente sans */
+  font-family: "Inter", sans-serif; /* O fuente sans */
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--lm-terracota);
   margin-bottom: 1.5rem;
   font-weight: 700;
+}
+
+/* ==========================================================================
+   9. BARRA DE PROGRESO DE LECTURA
+   ========================================================================== */
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lm-terracota), var(--lm-olive));
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Solo visible en posts editoriales */
+body.editorial-post #reading-progress {
+  display: block;
+}
+
+/* Ocultar en otras páginas */
+body:not(.editorial-post) #reading-progress {
+  display: none;
 }
