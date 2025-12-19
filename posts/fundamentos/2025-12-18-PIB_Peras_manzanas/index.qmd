@@ -68,6 +68,7 @@ Así podríamos continuar con muchos otros casos. Por esto, el PIB como indicado
 ``` {r}
 #| label: fig-ejemplo
 #| fig-cap: "Ilustración: Producción vs. Bienestar (Simulación)"
+#| fig-alt: "Gráfico de barras que compara gastos defensivos como gasolina y mecánicos versus bienestar real."
 #| warning: false
 #| echo: false
 

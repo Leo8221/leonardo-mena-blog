@@ -73,6 +73,7 @@ format:
       dark: slate
     css: styles.css
     html-math-method: katex
+    lazy-load: true
     toc: true            
     toc-title: "En este artículo"
     smooth-scroll: true

@@ -35,7 +35,8 @@ La idea es tener, en una sola imagen, los pilares fundamentales: los sectores qu
 #| out-width: "100%"
 #| fig-cap: "Figura 1. El ciclo de análisis de coyuntura: cuatro preguntas clave para interrogar los datos."
 #| fig-alt: "Diagrama de flujo con cuatro cajas conectadas: Ritmo de la economía, Estabilidad nominal, Impacto social y Restricción fiscal."
-
+#| fig-dpi: 96
+#| 
 source(here::here("tema_graficos.R"))
 library(tidyverse)
 
