@@ -72,6 +72,7 @@ format:
       light: cosmo
       dark: slate
     css: styles.css
+    html-math-method: katex
     toc: true            
     toc-title: "En este artículo"
     smooth-scroll: true
