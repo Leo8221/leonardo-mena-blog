@@ -80,7 +80,7 @@ ggplot(df_ejemplo, aes(x = reorder(tipo, -valor), y = valor, fill = tipo)) +
   geom_col(show.legend = FALSE, width = 0.6) +
   scale_fill_manual(values = c(pal$terracota, pal$plomo, pal$oliva)) +
   labs(
-    title = "Actividades que suman al PIB pero no al bienestar",
+    title = "Actividades que suman al PIB pero\nno al bienestar",
     subtitle = "El costo de un 'tapón' en Santo Domingo",
     x = NULL, y = "Pesos (simulados)"
   ) +
