@@ -811,3 +811,53 @@ body.editorial-post #reading-progress {
 body:not(.editorial-post) #reading-progress {
   display: none;
 }
+
+
+
+/* ==========================================================================
+   10. REPRODUCTOR DE AUDIO PERSONALIZADO
+   ========================================================================== */
+
+   /* Estilos para el reproductor de audio Editorial */
+.audio-player-container {
+    background-color: var(--lm-bg-sec); /* Usa tu fondo secundario (crema suave) */
+    border: 1px solid var(--lm-border);
+    border-left: 4px solid var(--lm-terracota); /* Tu acento de marca */
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 2em;
+    font-family: 'Inter', sans-serif; /* Usa tu fuente UI, no la Serif del texto */
+    box-shadow: var(--shadow-soft);
+}
+
+.audio-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: var(--lm-terracota); /* Texto en color terracota */
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.audio-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Ajuste para que el reproductor nativo no se vea tan tosco */
+audio {
+    width: 100%;
+    height: 36px;
+    filter: sepia(10%) contrast(95%); /* Un truco sutil para "calentar" el gris del reproductor nativo */
+    mix-blend-mode: multiply; /* Ayuda a que se fusione mejor con el fondo crema */
+}
+
+/* Corrección para modo oscuro (si el mix-blend-mode da problemas en dark mode) */
+[data-theme="dark"] audio {
+    mix-blend-mode: normal;
+    filter: invert(90%) hue-rotate(180deg); /* Opcional: invierte colores si se ve muy blanco */
+}

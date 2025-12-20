@@ -24,6 +24,19 @@ source(here::here("tema_graficos.R"))
 library(ggplot2)
 ```
 
+```{=html}
+<div class="audio-player-container">
+    <div class="audio-header">
+        <svg class="audio-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+        <span>Escuchar artículo (4 min)</span>
+    </div>
+    <audio controls>
+        <source src="audio_15.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+```
+
 Imaginemos un lugar donde se realizan actividades tan diversas como la siembra de alimentos, cortes de pelo, arreglos mecánicos o confección de ropa. Si quisiéramos medir la actividad total, ¿podríamos decir que un corte de pelo más tres alimentos es igual a cuatro? No. Y aquí surge el "dilema de las peras y las manzanas": ambas son frutas, pero incluso siendo así, son de naturaleza diferente. Por lo tanto, no podemos simplemente sumarlas para decir que "X es la actividad total". Entonces, 
 <div class="pullquote">
 **¿cómo superamos esta limitación los economistas?**
