@@ -1,17 +1,45 @@
 [
   {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
+    "objectID": "mitos-economicos.html",
+    "href": "mitos-economicos.html",
+    "title": "Mitos económicos",
     "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
+    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "predecesores.html",
-    "href": "predecesores.html",
-    "title": "Mis predecesores",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
     "section": "",
-    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
+  },
+  {
+    "objectID": "about.html#sobre-este-blog",
+    "href": "about.html#sobre-este-blog",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
+  },
+  {
+    "objectID": "about.html#quién-escribe",
+    "href": "about.html#quién-escribe",
+    "title": "Sobre mí",
+    "section": "Quién escribe",
+    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.\n\nNo escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.\n\n\nCompromiso\nEn cada artículo encontrarás:\n\nTransparencia: Datos con fuente y opiniones claramente identificadas.\nClaridad: Lenguaje accesible, sin sacrificar precisión técnica.\nContexto: Análisis siempre anclado a la realidad de la República Dominicana."
+  },
+  {
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
+    "section": "",
+    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
+  },
+  {
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
   },
   {
     "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
@@ -49,46 +77,60 @@
     "text": "La Implicación para el Blog\nA partir de ahora, cada vez que publique un análisis de coyuntura, estará anclado a este esquema. Mis lecturas siempre intentarán conectar Dato → Mecanismo → Implicación, evitando quedarme en la simple opinión sobre el titular del día. Este mapa es el filtro por el que pasarán los números.\n\n• • •\n\n¿Usas un mapa mental parecido? Cuéntame en los comentarios.\nNota: Los próximos gráficos explorarán cada caja de este diagrama en detalle."
   },
   {
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "",
+    "text": "Escuchar artículo (6:40 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
+  },
+  {
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "La magnitud de la deuda dominicana",
+    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce “saludable”.\n\n\n\n\n\n\n\nDeuda Sobre PIB en latinoamerica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
+  },
+  {
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-servicio-de-la-deuda-sobre-recaudaciones",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-servicio-de-la-deuda-sobre-recaudaciones",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones",
+    "text": "Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado (capital), sino también otro monto por la disponibilidad del dinero (intereses). La deuda pública funciona exactamente igual. El único detalle es que estos intereses, más otros costos, se agrupan bajo el nombre de “servicio de la deuda”, y es uno de los puntos clave de las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar el servicio.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
+  },
+  {
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Es malo endeudarse?",
+    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
+  },
+  {
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Pagarán nuestros nietos la deuda?",
+    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo."
+  },
+  {
+    "objectID": "predecesores.html",
+    "href": "predecesores.html",
+    "title": "Mis predecesores",
+    "section": "",
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "series.html",
+    "href": "series.html",
+    "title": "Series",
+    "section": "",
+    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
+  },
+  {
     "objectID": "fundamentos.html",
     "href": "fundamentos.html",
     "title": "Fundamentos",
     "section": "",
     "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
-  },
-  {
-    "objectID": "archivo.html#todas-las-publicaciones",
-    "href": "archivo.html#todas-las-publicaciones",
-    "title": "Archivo",
-    "section": "Todas las publicaciones",
-    "text": "Todas las publicaciones"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
-  },
-  {
-    "objectID": "about.html#sobre-este-blog",
-    "href": "about.html#sobre-este-blog",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
-  },
-  {
-    "objectID": "about.html#quién-escribe",
-    "href": "about.html#quién-escribe",
-    "title": "Sobre mí",
-    "section": "Quién escribe",
-    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.\n\nNo escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.\n\n\nCompromiso\nEn cada artículo encontrarás:\n\nTransparencia: Datos con fuente y opiniones claramente identificadas.\nClaridad: Lenguaje accesible, sin sacrificar precisión técnica.\nContexto: Análisis siempre anclado a la realidad de la República Dominicana."
   },
   {
     "objectID": "categorias.html",
@@ -126,13 +168,6 @@
     "text": "Explicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n11 dic 2025\n\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "mitos-economicos.html",
-    "href": "mitos-economicos.html",
-    "title": "Mitos económicos",
-    "section": "",
-    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
     "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
     "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
     "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
@@ -161,39 +196,11 @@
     "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
     "section": "",
-    "text": "Escuchar artículo (6:40 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "La magnitud de la deuda dominicana",
-    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce “saludable”.\n\n\n\n\n\n\n\nDeuda Sobre PIB en latinoamerica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-servicio-de-la-deuda-sobre-recaudaciones",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-servicio-de-la-deuda-sobre-recaudaciones",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones",
-    "text": "Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado (capital), sino también otro monto por la disponibilidad del dinero (intereses). La deuda pública funciona exactamente igual. El único detalle es que estos intereses, más otros costos, se agrupan bajo el nombre de “servicio de la deuda”, y es uno de los puntos clave de las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar el servicio.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Es malo endeudarse?",
-    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Pagarán nuestros nietos la deuda?",
-    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo."
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "republica-en-un-grafico.html",
@@ -201,12 +208,5 @@
     "title": "La República en un gráfico",
     "section": "",
     "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "series.html",
-    "href": "series.html",
-    "title": "Series",
-    "section": "",
-    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
   }
 ]

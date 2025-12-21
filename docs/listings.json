@@ -1,8 +1,14 @@
 [
   {
-    "listing": "/republica-habla-de.html",
+    "listing": "/mitos-economicos.html",
+    "items": []
+  },
+  {
+    "listing": "/archivo.html",
     "items": [
-      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
+      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+      "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
     ]
   },
   {
@@ -13,14 +19,6 @@
     "listing": "/fundamentos.html",
     "items": [
       "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
-    ]
-  },
-  {
-    "listing": "/archivo.html",
-    "items": [
-      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-      "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
     ]
   },
   {
@@ -40,8 +38,10 @@
     ]
   },
   {
-    "listing": "/mitos-economicos.html",
-    "items": []
+    "listing": "/republica-habla-de.html",
+    "items": [
+      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
+    ]
   },
   {
     "listing": "/republica-en-un-grafico.html",
