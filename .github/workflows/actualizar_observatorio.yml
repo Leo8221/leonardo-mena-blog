@@ -48,6 +48,8 @@ jobs:
             any::knitr
             any::here
             any::showtext
+            any::scales
+            any::patchwork
 
       - name: Limpiar caches de Quarto
         run: |
