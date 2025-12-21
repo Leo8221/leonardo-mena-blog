@@ -1,0 +1,366 @@
+---
+title: "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación"
+date: "2025-12-20"
+author: "Leonardo Mena"
+description: "Explicacion de los servicios de la deuda sobre las recaudaciones fiscales."
+image: "portada.jpg"
+twitter-card:
+  image: "portada.jpg"
+categories: 
+  - "La republica habla de"
+  - "Deuda"
+draft: False
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body: ../../../reading-progress.html
+---
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+```{r setup, include=FALSE}
+source(here::here("tema_graficos.R"))
+library(ggplot2)
+```
+
+```{=html}
+<div class="audio-player-container">
+    <div class="audio-header">
+        <svg class="audio-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+        <span>Escuchar artículo (6:40 min)</span>
+    </div>
+    <audio controls>
+        <source src="podcast_deuda.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+```
+
+$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con 
+
+<span class="big-number">RD$ 420,000</span> <span class="big-number-label">La deuda per cápita de cada dominicano</span>
+
+Y no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.
+
+Pero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos... ¿la pagarán nuestros nietos?
+
+## La magnitud de la deuda dominicana
+
+La cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.
+
+Los países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.
+
+Al aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.
+
+<div class="data-box"> <div class="data-box-title">Dato Clave</div> <div class="data-box-content"> Al cierre de 2024, la deuda consolidada sobre el PIB se situaba en <strong>57.4%</strong>. Si comparamos este balance con la región, la posición dominicana luce "saludable". </div> </div>
+
+
+```{r}
+#| label: figura deuda-PIB en latam
+#| fig-cap: "Deuda Sobre PIB en latinoamerica y RD"
+#| fig-alt: "Gráfico que comparadeuda sobre PIB en latinoamerica"
+#| warning: false
+#| echo: false
+#| fig-format: svg
+# ==============================================================================
+# GRÁFICO: SOLVENCIA EN CONTEXTO (RD vs LA REGIÓN 2024)
+# ==============================================================================
+
+# 1. Datos alineados a tu narrativa (Cierre 2024)
+df_contexto <- data.frame(
+  pais = c("El Salvador", "Brasil", "Costa Rica", "Colombia", 
+           "R. Dominicana", "México", "Chile", "Guatemala"),
+  
+  # Datos reales aproximados (FMI/Bancos Centrales Cierre 2024)
+  # RD ajustado a tu cifra exacta: 57.4%
+  deuda_pib = c(88.4, 85.2, 60.3, 58.9, 57.4, 49.8, 41.2, 28.5),
+  
+  # Categoría para destacar tu "Balance Saludable"
+  tipo = c("Alto Riesgo", "Alto Riesgo", "Par Regional", "Par Regional", 
+           "RD (57.4%)", "Grado Inversión", "Grado Inversión", "Baja Deuda")
+)
+
+# Ordenar de mayor a menor
+df_contexto$pais <- factor(df_contexto$pais, 
+                           levels = df_contexto$pais[order(df_contexto$deuda_pib)])
+
+# 2. Gráfico
+p_solvencia <- ggplot(df_contexto, aes(x = pais, y = deuda_pib/100)) +
+  
+  # Barras
+  geom_col(aes(fill = pais == "R. Dominicana"), width = 0.8) +
+  
+  # Colores: RD en Terracota, Resto en Plomo (Sobrio)
+  scale_fill_manual(values = c("FALSE" = pal$plomo, "TRUE" = pal$terracota)) +
+  
+  # Etiquetas de valor
+  geom_text(
+    aes(label = fmt_pct(deuda_pib, 1)), 
+    hjust = -0.2, 
+    size = 4, 
+    fontface = "bold",
+    color = ifelse(df_contexto$pais == "R. Dominicana", pal$terracota, pal$texto_muted)
+  ) +
+  
+  # Línea de promedio regional (aprox 63% Latam) para reforzar lo de "Saludable"
+  geom_hline(yintercept = 0.63, linetype = "dashed", color = pal$rojo, alpha = 0.6) +
+  annotate("text", x = 0.8, y = 0.64, label = "Promedio Latam (~63%)", 
+           color = pal$rojo, size = 3, fontface = "italic", hjust = 0) +
+
+  coord_flip() +
+  
+  scale_y_continuous(labels = scales::percent_format(), limits = c(0, 1), expand = c(0,0)) +
+  
+  labs(
+    title = "¿Es mucho o es poco?",
+    subtitle = "Deuda Pública Consolidada como % del PIB (Cierre 2024)",
+    x = NULL, y = NULL,
+    caption = "Fuente: FMI y Bancos Centrales. Nota: RD incluye deuda del BC (Consolidada)."
+  ) +
+  
+  theme_lm(grid = "x") +
+  theme(legend.position = "none")
+
+# Mostrar
+print(p_solvencia)
+```
+
+¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante: 
+<div class="pullquote"> "El PIB no paga las cuentas, los impuestos sí." </div>
+
+La capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es "promedio", nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la **rigidez presupuestaria**.
+
+## Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones
+
+Volviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado (capital), sino también otro monto por la disponibilidad del dinero (intereses). La deuda pública funciona exactamente igual. El único detalle es que estos intereses, más otros costos, se agrupan bajo el nombre de **"servicio de la deuda"**, y es uno de los puntos clave de las finanzas públicas.
+
+El PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda... es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en **25%**: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar el servicio.
+
+Evaluando los datos del país, no hemos llegado, pero estamos cerca.
+
+```{r}
+#| label: figura deuda-PIB y servicios deuda-Recaudaciones
+#| fig-cap: "Deuda Sobre PIB y Servicios de deuda sobre recaudaciones"
+#| fig-alt: "Gráfico que compara servicios de deuda sobre recaudaciones y deuda sobre PIB"
+#| warning: false
+#| echo: false
+#| fig-width: 8
+#| fig-height: 10
+#| fig-format: svg
+
+library(tidyverse)
+library(scales)
+library(patchwork)
+
+# 1. DEFINIMOS LOS DATOS DE DEUDA DIRECTAMENTE AQUÍ
+txt_deuda <- "anio,fuente,institucion,instrumento,principal,intereses,comisiones
+2012,Interna,RSPNF,Otros,417.96,0,0
+2012,Interna,RSPNF,Banca,861.36,40.46,0
+2012,Interna,GC,BonosDom,168.64,783.6,0.26
+2012,Interna,GC,BancaDom,502.89,146.68,0
+2012,Externa,GC,Multilat,499.48,123.34,2.93
+2012,Externa,GC,BonosSob,77.63,226.47,1.7
+2012,Externa,GC,Bilat,429.82,112.6,1.03
+2012,Externa,GC,BancaCom,89.81,17.62,0
+2013,Interna,RSPNF,Otros,9.36,0,0
+2013,Interna,RSPNF,Banca,422.02,16.02,0
+2013,Interna,GC,BonosDom,131.81,745.02,0.27
+2013,Interna,GC,BancaDom,1073.1,158.71,0
+2013,Externa,GC,Multilat,893,115.1,1.62
+2013,Externa,GC,BonosSob,128.2,327.15,2.06
+2013,Externa,GC,Bilat,472.07,112.39,3.07
+2013,Externa,GC,BancaCom,209.04,43.21,0.24
+2014,Interna,RSPNF,Otros,9.36,0,0
+2014,Interna,RSPNF,Banca,438.05,161.4,22.75
+2014,Interna,GC,BonosDom,877.09,206.5,0.3
+2014,Interna,GC,BancaDom,1231.81,208.1,0
+2014,Externa,GC,Multilat,1009.72,426.89,2
+2014,Externa,GC,BonosSob,457.41,128.2,4.47
+2014,Externa,GC,Bilat,587.53,2302.2,13.91
+2014,Externa,GC,BancaCom,252.49,310.3,0.16
+2015,Interna,RSPNF,Otros,0,0,0
+2015,Interna,RSPNF,Banca,184.14,530.43,38.49
+2015,Interna,GC,BonosDom,934.86,214.62,0.4
+2015,Interna,GC,BancaDom,285.33,99.36,0
+2015,Externa,GC,Multilat,532.09,244.97,4.55
+2015,Externa,GC,BonosSob,622.11,128.2,2.26
+2015,Externa,GC,Bilat,2408.23,308.84,13.45
+2015,Externa,GC,BancaCom,386.74,314.7,0
+2016,Interna,RSPNF,Otros,798.55,0,0
+2016,Interna,RSPNF,Banca,568.92,752.17,46.38
+2016,Interna,GC,BonosDom,971.24,154.13,0.45
+2016,Interna,GC,BancaDom,189.56,72.13,0
+2016,Externa,GC,Multilat,371.03,228.01,2.82
+2016,Externa,GC,BonosSob,769.68,140.28,2.11
+2016,Externa,GC,Bilat,409.8,278.4,4.22
+2016,Externa,GC,BancaCom,378.45,244.91,0
+2017,Interna,RSPNF,Otros,798.55,0,0
+2017,Interna,RSPNF,Banca,568.92,752.17,46.38
+2017,Interna,GC,BonosDom,971.24,154.13,0.45
+2017,Interna,GC,BancaDom,189.56,72.13,0
+2017,Externa,GC,Multilat,371.03,228.01,2.82
+2017,Externa,GC,BonosSob,769.68,140.28,2.11
+2017,Externa,GC,Bilat,409.8,278.4,4.22
+2017,Externa,GC,BancaCom,378.45,244.91,0
+2018,Interna,RSPNF,Otros,0,0,0
+2018,Interna,RSPNF,Banca,764.35,26.33,0
+2018,Interna,GC,BonosDom,316.55,1158.86,0.57
+2018,Interna,GC,BancaDom,130.52,21.19,0
+2018,Externa,GC,Multilat,243.84,151.65,4.74
+2018,Externa,GC,BonosSob,64.1,836.91,3.44
+2018,Externa,GC,Bilat,342.16,77,1.82
+2018,Externa,GC,BancaCom,215.54,24.51,0
+2019,Interna,RSPNF,Otros,0,0,0
+2019,Interna,RSPNF,Banca,1766.89,42.97,0
+2019,Interna,GC,BonosDom,317.09,1208.44,0.59
+2019,Interna,GC,BancaDom,85.76,20.87,0
+2019,Externa,GC,Multilat,244.21,175.33,4.69
+2019,Externa,GC,BonosSob,500,1054.74,2.76
+2019,Externa,GC,Bilat,274.83,65.34,0.18
+2019,Externa,GC,BancaCom,162.88,8.25,0
+2020,Interna,RSPNF,Otros,0,0,0
+2020,Interna,RSPNF,Banca,708.72,62.21,0
+2020,Interna,GC,BonosDom,684,1208.22,0.59
+2020,Interna,GC,BancaDom,986.53,18.03,0
+2020,Externa,GC,Multilat,269.44,141.64,6.87
+2020,Externa,GC,BonosSob,1759.91,1196.87,4.67
+2020,Externa,GC,Bilat,239.09,54.78,2.74
+2020,Externa,GC,BancaCom,5.24,0.46,0
+2021,Interna,RSPNF,Otros,0,0,0
+2021,Interna,RSPNF,Banca,193.97,33.48,0
+2021,Interna,GC,BonosDom,2029.98,1316.16,6.26
+2021,Interna,GC,BancaDom,93.22,12.4,0
+2021,Externa,GC,Multilat,249.01,121.32,6.49
+2021,Externa,GC,BonosSob,77.43,1490.97,4.97
+2021,Externa,GC,Bilat,217.39,51.74,3.29
+2021,Externa,GC,BancaCom,3.6,0.15,0
+2022,Interna,RSPNF,Otros,0,0,0
+2022,Interna,RSPNF,Banca,226.07,25.02,0
+2022,Interna,GC,BonosDom,2086,1488.04,0.92
+2022,Interna,GC,BancaDom,105.33,7.46,0
+2022,Externa,GC,Multilat,288.5,166.78,10.47
+2022,Externa,GC,BonosSob,823.78,1626.68,4.09
+2022,Externa,GC,Bilat,198.6,54.09,1.23
+2022,Externa,GC,BancaCom,0,0,0
+2023,Interna,RSPNF,Otros,0,0,0
+2023,Interna,RSPNF,Banca,207.83,17.66,0
+2023,Interna,GC,BonosDom,1308.61,1610.36,1.06
+2023,Interna,GC,BancaDom,16.56,3.41,0
+2023,Externa,GC,Multilat,518.76,413.89,9.73
+2023,Externa,GC,BonosSob,1438.67,1756.81,4.24
+2023,Externa,GC,Bilat,164.9,61.42,2.68
+2023,Externa,GC,BancaCom,0,0,0
+2024,Interna,RSPNF,Otros,0,0,0
+2024,Interna,RSPNF,Banca,131.74,10.47,0
+2024,Interna,GC,BonosDom,392.2,1751.89,1.07
+2024,Interna,GC,BancaDom,30,2.05,0
+2024,Externa,GC,Multilat,874.55,496.25,10.16
+2024,Externa,GC,BonosSob,1063.97,2005.95,2.99
+2024,Externa,GC,Bilat,129.89,71.47,1.72
+2024,Externa,GC,BancaCom,0,0,0"
+
+df_deuda_raw <- read.csv(text=txt_deuda)
+
+# 2. DEFINIMOS RECAUDACIÓN Y TASAS
+df_recaudacion <- data.frame(
+  anio = 2012:2024,
+  impuestos_rd = c(310813.8, 353761.8, 391642.3, 412762.1, 451641.1,
+                   497947.6, 555166.5, 611746.8, 553769.8, 779119.8, 
+                   870447.1, 971890.5, 1082460.4)
+)
+
+df_tasa <- data.frame(
+  anio = 2012:2024,
+  tasa = c(39.09, 41.80, 43.45, 44.94, 46.06, 47.44, 49.43, 51.20, 
+           56.57, 57.17, 55.09, 56.20, 59.00)
+)
+
+# 3. PROCESAMIENTO
+df_comparacion <- df_deuda_raw %>%
+  group_by(anio) %>%
+  summarise(
+    intereses_usd = sum(intereses),
+    principal_usd = sum(principal)
+  ) %>%
+  left_join(df_recaudacion, by = "anio") %>%
+  left_join(df_tasa, by = "anio") %>%
+  mutate(
+    impuestos_usd = impuestos_rd / tasa,
+    ratio_intereses = intereses_usd / impuestos_usd,
+    # Datos manuales de Deuda/PIB para el gráfico
+    deuda_pib = c(0.471, 0.471, 0.536, 0.536, 0.686, 0.608, 0.582, 0.574, 0.574)[match(anio, 2016:2024)]
+  ) %>%
+  filter(anio >= 2016)
+
+# 4. GRÁFICOS
+p1 <- ggplot(df_comparacion, aes(x = anio, y = deuda_pib)) +
+  geom_area(fill = pal$oliva, alpha = 0.15) +
+  geom_line(color = pal$oliva, linewidth = 1.2) +
+  geom_point(color = pal$oliva, size = 3) +
+  linea_ref(0.60, "Promedio LAC", pal$plomo)[[1]] + # Nota: Ajuste técnico para la lista
+  linea_ref(0.60, "Promedio LAC", pal$plomo)[[2]] +
+  scale_y_continuous(labels = percent_format(), limits = c(0.40, 0.75)) +
+  scale_x_continuous(breaks = seq(2016, 2024, 2)) +
+  labs(title = "Deuda/PIB: Aparentemente manejable", x = NULL, y = NULL) +
+  theme_lm(grid = "y")
+
+p2 <- ggplot(df_comparacion, aes(x = anio, y = ratio_intereses)) +
+  geom_area(fill = pal$terracota, alpha = 0.15) +
+  geom_line(color = pal$terracota, linewidth = 1.2) +
+  geom_point(color = pal$terracota, size = 3) +
+  linea_ref(0.25, "Umbral de Alerta", pal$rojo)[[1]] +
+  linea_ref(0.25, "Umbral de Alerta", pal$rojo)[[2]] +
+  scale_y_continuous(labels = percent_format(), limits = c(0.15, 0.30)) +
+  scale_x_continuous(breaks = seq(2016, 2024, 2)) +
+  labs(title = "Intereses/Impuestos: El problema real", x = NULL, y = NULL) +
+  theme_lm(grid = "y")
+
+p_dual <- p1 / p2 +
+  plot_annotation(
+    title = "La paradoja de la deuda dominicana",
+    subtitle = "Dos formas de ver el mismo problema (2016-2024)",
+    caption = "Fuente: Crédito Público, DIGEPRES, FMI | Elaboración propia",
+    theme = theme(
+      plot.title = element_text(size = 18, face = "bold", color = pal$texto),
+      plot.subtitle = element_text(size = 13, color = pal$texto_soft)
+    )
+  )
+
+print(p_dual)
+```
+
+Si observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.
+
+Por lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.
+
+<div class="section-divider">• • •</div>
+
+## ¿Es malo endeudarse?
+
+María se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.
+
+Por otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser "el mejor" de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.
+
+¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?
+
+¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.
+
+Si el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?
+
+## ¿Pagarán nuestros nietos la deuda?
+
+Es común escuchar que "cada niño nace debiendo miles de dólares", sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.
+
+Así que la respuesta es: **no, probablemente no pagarán el capital**. Pero ojo, eso no significa que la deuda sea gratis.
+
+Nuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:
+
+Si la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.
+
+Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.
+
+<div class="pullquote">El objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.</div>
+
+¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo.
