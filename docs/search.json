@@ -1,10 +1,87 @@
 [
   {
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
+    "section": "",
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "predecesores.html",
+    "href": "predecesores.html",
+    "title": "Mis predecesores",
+    "section": "",
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "",
+    "text": "Escuchar artículo (4 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio."
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "El denominador común",
+    "text": "El denominador común\nVolviendo al problema planteado, nos damos cuenta de que, al final del día, es un asunto de magnitudes: cuántos objetos hay y cómo les asignamos valor. Para resolverlo, los economistas simplemente agregamos otra variable. Cuando usted va al supermercado o a su peluquero, ¿qué usa para pagar? ¡Correcto! Dinero.\nUn peso es un peso para las manzanas, para las peras o para el peluquero; lo mismo aplica si voy al mecánico o si pago la universidad. Si tomamos los productos y los multiplicamos por su “precio” (por ejemplo: tres alimentos con valor de 20 pesos más un corte de pelo con valor de 50), podemos decir que el total vale 110. A esto es a lo que los economistas nos referimos como Producto Interno Bruto (PIB). Problema de magnitudes resuelto, pero esta misma solución deriva en otros problemas en el futuro.\n\n• • •"
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "La trampa del bienestar",
+    "text": "La trampa del bienestar\nSi volvemos a la lógica que acabamos de usar, nos daremos cuenta de que el PIB se basa en dos principios: cuánto hay de algo y cuánto es su valor en monedas. Pero aquí es donde la realidad se vuelve complicada.\nImaginemos que nos encontramos en la ciudad de Santo Domingo. Pedro está en su vehículo hacia el trabajo pero, como es común, un “tapón” hace imposible el avance normal. Pedro dura varias horas atrapado en el tránsito. Esta situación lo obliga a que, en lugar de comprar dos galones de gasolina, tenga que comprar seis, además, en vez de llevar el carro al mecánico cada dos meses, debe hacerlo mes a mes por el desgaste.\n6 galones De gasolina vs. 2 en condiciones normales\n¿Aumenta esto el PIB? Sí. Tenemos una cantidad (producto o servicio) y un valor en monedas (precio de gasolina y servicio mecánico). Ahora, otra pregunta: ¿Usted cree que Pedro vive mejor? Probablemente, y con razón, su respuesta sea un rotundo “no”. He aquí una de las grandes trampas del PIB: es una medida de producción económica, no de bienestar.\nPodemos ver otros casos similares:\n\nEconomía del cuidado: Si María decide no trabajar formalmente y dedicarse a la educación de sus hijos en casa, ¿contribuye al PIB? No. ¿Está la familia de María peor por eso? Probablemente no.\nEfecto de precios: Si sube el precio del arroz pero usted tiene que comprarlo igual, ¿aumenta el PIB? Sí (nominalmente). ¿Está usted mejor? No, es más pobre porque su dinero rinde menos.\n\n\nEfecto Precio: El caso del arroz\n\n\nPrecio enero 2024: RD$50/libra → Precio diciembre 2024: RD$65/libra Su poder adquisitivo: -23%\n\n\n\nAsí podríamos continuar con muchos otros casos. Por esto, el PIB como indicador de producción es excelente; para medir qué tan bien vive la gente… no tanto.\n\n\n\n\n\n\n\n\nFigura 1: Ilustración: Producción vs. Bienestar (Simulación)\n\n\n\n\n\n\n• • •"
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "¿Es un mal indicador?",
+    "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
+  },
+  {
     "objectID": "mitos-economicos.html",
     "href": "mitos-economicos.html",
     "title": "Mitos económicos",
     "section": "",
     "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Entendiendo la economíamás allá del titular.",
+    "section": "",
+    "text": "Economía Dominicana Aplicada\n\n\n\n\n\nBienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.\n\n\n\n\n\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados\n\n\n\n\n\n\nConceptos Claros\n\n\nLa inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.\n\n\nAprender conceptos\n\n\n\n\n\nRealidad vs. Ficción\n\n\n¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.\n\n\nVer mitos\n\n\n\n\n\nLa República habla de…\n\n\nAnálisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?\n\n\nLeer análisis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n11 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "index.html#último-análisis-publicado",
+    "href": "index.html#último-análisis-publicado",
+    "title": "Entendiendo la economíamás allá del titular.",
+    "section": "",
+    "text": "El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "index.html#últimas-publicaciones",
+    "href": "index.html#últimas-publicaciones",
+    "title": "Entendiendo la economíamás allá del titular.",
+    "section": "",
+    "text": "Explicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n11 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "categorias.html",
+    "href": "categorias.html",
+    "title": "Categorías",
+    "section": "",
+    "text": "Selecciona un tema clave para filtrar los artículos automáticamente."
+  },
+  {
+    "objectID": "categorias.html#índice-completo",
+    "href": "categorias.html#índice-completo",
+    "title": "Categorías",
+    "section": "Índice completo",
+    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa republica habla de\n\nDeuda\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "about.html",
@@ -40,6 +117,13 @@
     "title": "Archivo",
     "section": "Todas las publicaciones",
     "text": "Todas las publicaciones"
+  },
+  {
+    "objectID": "fundamentos.html",
+    "href": "fundamentos.html",
+    "title": "Fundamentos",
+    "section": "",
+    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
@@ -112,11 +196,11 @@
     "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo."
   },
   {
-    "objectID": "predecesores.html",
-    "href": "predecesores.html",
-    "title": "Mis predecesores",
+    "objectID": "republica-en-un-grafico.html",
+    "href": "republica-en-un-grafico.html",
+    "title": "La República en un gráfico",
     "section": "",
-    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "series.html",
@@ -124,89 +208,5 @@
     "title": "Series",
     "section": "",
     "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
-  },
-  {
-    "objectID": "fundamentos.html",
-    "href": "fundamentos.html",
-    "title": "Fundamentos",
-    "section": "",
-    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "categorias.html",
-    "href": "categorias.html",
-    "title": "Categorías",
-    "section": "",
-    "text": "Selecciona un tema clave para filtrar los artículos automáticamente."
-  },
-  {
-    "objectID": "categorias.html#índice-completo",
-    "href": "categorias.html#índice-completo",
-    "title": "Categorías",
-    "section": "Índice completo",
-    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa republica habla de\n\nDeuda\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Entendiendo la economíamás allá del titular.",
-    "section": "",
-    "text": "Economía Dominicana Aplicada\n\n\n\n\n\nBienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.\n\n\n\n\n\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados\n\n\n\n\n\n\nConceptos Claros\n\n\nLa inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.\n\n\nAprender conceptos\n\n\n\n\n\nRealidad vs. Ficción\n\n\n¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.\n\n\nVer mitos\n\n\n\n\n\nLa República habla de…\n\n\nAnálisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?\n\n\nLeer análisis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n11 dic 2025\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "index.html#último-análisis-publicado",
-    "href": "index.html#último-análisis-publicado",
-    "title": "Entendiendo la economíamás allá del titular.",
-    "section": "",
-    "text": "El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "index.html#últimas-publicaciones",
-    "href": "index.html#últimas-publicaciones",
-    "title": "Entendiendo la economíamás allá del titular.",
-    "section": "",
-    "text": "Explicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n11 dic 2025\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "",
-    "text": "Escuchar artículo (4 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio."
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "El denominador común",
-    "text": "El denominador común\nVolviendo al problema planteado, nos damos cuenta de que, al final del día, es un asunto de magnitudes: cuántos objetos hay y cómo les asignamos valor. Para resolverlo, los economistas simplemente agregamos otra variable. Cuando usted va al supermercado o a su peluquero, ¿qué usa para pagar? ¡Correcto! Dinero.\nUn peso es un peso para las manzanas, para las peras o para el peluquero; lo mismo aplica si voy al mecánico o si pago la universidad. Si tomamos los productos y los multiplicamos por su “precio” (por ejemplo: tres alimentos con valor de 20 pesos más un corte de pelo con valor de 50), podemos decir que el total vale 110. A esto es a lo que los economistas nos referimos como Producto Interno Bruto (PIB). Problema de magnitudes resuelto, pero esta misma solución deriva en otros problemas en el futuro.\n\n• • •"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "La trampa del bienestar",
-    "text": "La trampa del bienestar\nSi volvemos a la lógica que acabamos de usar, nos daremos cuenta de que el PIB se basa en dos principios: cuánto hay de algo y cuánto es su valor en monedas. Pero aquí es donde la realidad se vuelve complicada.\nImaginemos que nos encontramos en la ciudad de Santo Domingo. Pedro está en su vehículo hacia el trabajo pero, como es común, un “tapón” hace imposible el avance normal. Pedro dura varias horas atrapado en el tránsito. Esta situación lo obliga a que, en lugar de comprar dos galones de gasolina, tenga que comprar seis, además, en vez de llevar el carro al mecánico cada dos meses, debe hacerlo mes a mes por el desgaste.\n6 galones De gasolina vs. 2 en condiciones normales\n¿Aumenta esto el PIB? Sí. Tenemos una cantidad (producto o servicio) y un valor en monedas (precio de gasolina y servicio mecánico). Ahora, otra pregunta: ¿Usted cree que Pedro vive mejor? Probablemente, y con razón, su respuesta sea un rotundo “no”. He aquí una de las grandes trampas del PIB: es una medida de producción económica, no de bienestar.\nPodemos ver otros casos similares:\n\nEconomía del cuidado: Si María decide no trabajar formalmente y dedicarse a la educación de sus hijos en casa, ¿contribuye al PIB? No. ¿Está la familia de María peor por eso? Probablemente no.\nEfecto de precios: Si sube el precio del arroz pero usted tiene que comprarlo igual, ¿aumenta el PIB? Sí (nominalmente). ¿Está usted mejor? No, es más pobre porque su dinero rinde menos.\n\n\nEfecto Precio: El caso del arroz\n\n\nPrecio enero 2024: RD$50/libra → Precio diciembre 2024: RD$65/libra Su poder adquisitivo: -23%\n\n\n\nAsí podríamos continuar con muchos otros casos. Por esto, el PIB como indicador de producción es excelente; para medir qué tan bien vive la gente… no tanto.\n\n\n\n\n\n\n\n\nFigura 1: Ilustración: Producción vs. Bienestar (Simulación)\n\n\n\n\n\n\n• • •"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "¿Es un mal indicador?",
-    "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
-  },
-  {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
-    "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nExplicacion de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "republica-en-un-grafico.html",
-    "href": "republica-en-un-grafico.html",
-    "title": "La República en un gráfico",
-    "section": "",
-    "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
   }
 ]

@@ -50,6 +50,7 @@ jobs:
             any::showtext
             any::scales
             any::patchwork
+            any::ggrepel
 
       - name: Limpiar caches de Quarto
         run: |

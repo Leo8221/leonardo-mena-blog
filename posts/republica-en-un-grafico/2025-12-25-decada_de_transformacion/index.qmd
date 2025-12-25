@@ -1,0 +1,124 @@
+---
+title: "La Republica en un grafico: 10 años de transformación"
+date: "2025-12-25"
+author: "Leonardo Mena"
+description: "Explicacion de los cambios en el habito de consumo de los dominicanos"
+#image: "portada.jpg"
+#twitter-card:
+  #image: "portada.jpg"
+categories: 
+  - "La republica en un grafico"
+  - "Desarrollo"
+draft: True
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body: ../../../reading-progress.html
+---
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+```{r setup, include=FALSE}
+source(here::here("tema_graficos.R"))
+library(ggplot2)
+```
+
+Santo Domingo, año 2010. En los semáforos se compran periódicos, el vendedor de CDs piratas pone la banda sonora del barrio y 'bipear' es nuestra principal forma de comunicación cuando falta el saldo.
+
+Corte a 2025. Las noticias nos llegan por notificación, el vendedor pirata ahora comparte cuentas de Netflix y hacer una llamada de voz ya parece un acto de la prehistoria.
+
+¿Anécdota? No. Economia. La canasta familiar nos da una respuesta mas numerica.
+
+```{r}
+#| label: fig-cambio-canasta-familiar
+#| fig-cap: "Variación en puntos porcentuales de la canasta familiar dominicana entre 2010 y 2020. Comunicaciones y Bienes Diversos registran los mayores aumentos, mientras que Transporte y Recreación muestran las caídas más pronunciadas."
+#| fig-alt: "Gráfico de barras horizontales que muestra el cambio en puntos porcentuales de 12 categorías de la canasta familiar dominicana. Comunicaciones lidera con +2.1 puntos, seguido por Bienes Diversos con +2.8. En contraste, Transporte cae -1.3 puntos. Las barras están coloreadas en terracota para aumentos y gris para descensos, ordenadas de mayor a menor cambio."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 7
+#| out-width: "100%"
+library(tidyverse)
+
+canasta <- data.frame(
+  grupo = c("Alimentos", "Transporte", "Vivienda", "Bienes Diversos", 
+            "Restaurantes", "Muebles", "Comunicaciones", "Salud", 
+            "Prendas Vestir", "Educación", "Recreación", "Alcohol/Tabaco"),
+  p2010 = c(25.10, 17.95, 11.60, 7.47, 8.50, 6.46, 2.96, 5.21, 
+            4.56, 3.74, 4.12, 2.32),
+  p2020 = c(23.84, 16.65, 12.98, 10.31, 8.62, 5.17, 5.06, 4.74, 
+            4.19, 3.06, 3.03, 2.36)
+) |>
+  mutate(
+    cambio = p2020 - p2010,
+    tipo = case_when(
+      cambio > 1.5 ~ "Aumento fuerte",
+      cambio > 0 ~ "Aumento",
+      cambio < -1.5 ~ "Caída fuerte", 
+      TRUE ~ "Caída"
+    )
+  ) |>
+  mutate(grupo = fct_reorder(grupo, cambio))
+
+ggplot(canasta, aes(x = cambio, y = grupo, fill = tipo)) +
+  
+  geom_col(width = 0.7) +
+  
+  geom_vline(xintercept = 0, color = pal$texto, linewidth = 0.5) +
+  
+  geom_text(
+    aes(label = paste0(ifelse(cambio > 0, "+", ""), round(cambio, 1)),
+        x = ifelse(cambio > 0, cambio + 0.2, cambio - 0.2),
+        hjust = ifelse(cambio > 0, 0, 1)),
+    size = 3.8,
+    color = pal$texto,
+    fontface = "bold"
+  ) +
+  
+  scale_fill_manual(
+    values = c(
+      "Aumento fuerte" = pal$terracota,
+      "Aumento" = scales::alpha(pal$terracota, 0.7),
+      "Caída fuerte" = pal$plomo,
+      "Caída" = scales::alpha(pal$plomo, 0.7)
+    )
+  ) +
+  
+  labs(
+    title = "Cómo Cambió el Gasto Dominicano en 10 Años",
+    subtitle = "Variación en puntos porcentuales de la canasta familiar (2010-2020)",
+    caption = "Fuente: Banco Central RD | Elaboración: Leonardo Mena\nNota: Comunicaciones (+2.1) refleja la explosión digital; Bienes Diversos (+2.8) incluye seguros y cuidado personal",
+    x = "Cambio (puntos porcentuales)",
+    y = NULL
+  ) +
+  
+  theme_lm(grid = "x") +
+  theme(
+    legend.position = "none",
+    axis.text.y = element_text(size = 11, hjust = 1),
+    plot.caption = element_text(hjust = 0, size = 9, lineheight = 1.3)
+  )
+```
+
+## La revolución digital
+
+Cuando observamos el gráfico, uno de los primeros elementos que salta a la vista es ese +2.1 en Comunicaciones. Más que un simple dato, este número sintetiza la transformación digital vivida por el país entre 2010 y 2020. 
+
+Pasamos de los BlackBerry y Nokia a los smartphones con pantallas táctiles, de los SMS prepagados al WhatsApp ilimitado, del "te bipeo" a las videollamadas. Esta revolución trajo consigo nuevas necesidades: planes de datos, internet móvil, servicios de streaming. El resultado es evidente: nuestra dependencia de ella se ha disparado, pero sus beneficios tambien.
+
+El cambio no es solo tecnológico, es cultural. En 2010, tener internet en casa era un lujo, en 2020, es una necesidad básica. Y la canasta familiar lo refleja.
+
+## La anecdota economica
+
+En el siglo XIX, el estadístico Ernst Engel notó un fenómeno curioso: a medida que una familia se vuelve más rica, el porcentaje de su dinero que destina a comer se hace más pequeño.
+
+Pongamos un ejemplo: Imagina a Juan. Hoy gana 10 mil pesos y gasta 5 mil en comida (el 50% de su sueldo). Al mes siguiente, recibe un aumento del 20% y pasa a ganar 12 mil pesos. La lógica lineal nos diría que ahora gastará un 20% más en comida (6 mil pesos), pero la realidad económica es otra.
+
+Es probable que Juan empiece a comprar mejor carne o algún vino, gastando quizás 5,500 pesos. Aunque en dinero está gastando más, en proporción ahora la comida solo representa el 45% de su ingreso. ¿La razón? El estómago tiene un límite. No empiezas a comer el doble de arroz solo porque te duplicaron el sueldo, empiezas a gastar en otras cosas. A esto le llamamos la Ley de Engel.
+
+### ¿Cumplen las familias dominicanas esta ley?
+¡Los datos gritan que sí! Si miramos nuestro gráfico, la caída de 1.3 puntos porcentuales en el peso de los Alimentos confirma nuestra evolución. Esto no significa que comamos menos, sino que, al igual que Juan, los dominicanos hemos liberado espacio en nuestro presupuesto para invertir en lo que Engel llamaría "bienes superiores": educación, tecnología y cuidado personal.
+
