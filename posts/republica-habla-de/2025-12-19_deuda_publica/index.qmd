@@ -29,10 +29,10 @@ library(ggplot2)
 <div class="audio-player-container">
     <div class="audio-header">
         <svg class="audio-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
-        <span>Escuchar artículo (6:40 min)</span>
+        <span>Escuchar artículo (6 min)</span>
     </div>
     <audio controls>
-        <source src="podcast_deuda.mp3" type="audio/mpeg">
+        <source src="articulo_blog.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 </div>
@@ -132,11 +132,11 @@ print(p_solvencia)
 
 La capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es "promedio", nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la **rigidez presupuestaria**.
 
-## Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones
+## Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones
 
-Volviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado (capital), sino también otro monto por la disponibilidad del dinero (intereses). La deuda pública funciona exactamente igual. El único detalle es que estos intereses, más otros costos, se agrupan bajo el nombre de **"servicio de la deuda"**, y es uno de los puntos clave de las finanzas públicas.
+Volviendo al ejemplo del banco: al momento de pagar la cuota del préstamo, usted paga una parte para devolver el dinero solicitado (capital) y otra por la disponibilidad del dinero (intereses). La deuda pública funciona igual. El detalle es que la suma de ambos conceptos (capital más intereses) se agrupa bajo el nombre de “servicio de la deuda”, y es la carga real que presiona las finanzas públicas.
 
-El PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda... es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en **25%**: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar el servicio.
+El PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda... es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en **25%**: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar intereses.
 
 Evaluando los datos del país, no hemos llegado, pero estamos cerca.
 

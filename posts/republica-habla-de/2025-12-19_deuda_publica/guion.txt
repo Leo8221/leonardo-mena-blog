@@ -22,7 +22,7 @@ La capacidad real de pago del Estado no depende de qué tan grande sea la econom
 
 Sostenibilidad de la deuda: servicio de la deuda sobre recaudaciones.
 
-Volviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado, sino también otro monto por la disponibilidad del dinero, es decir, los intereses. La deuda pública funciona exactamente igual. El único detalle es que estos intereses, más otros costos, se agrupan bajo el nombre de "servicio de la deuda", y es uno de los puntos clave de las finanzas públicas.
+Volviendo al ejemplo del banco: al momento de solicitar el préstamo, usted no solo debe pagar el monto solicitado, sino también otro monto por la disponibilidad del dinero, es decir, los intereses. La deuda pública funciona exactamente igual. El único detalle es que estos intereses es uno de los puntos clave de las finanzas públicas.
 
 El P I B puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda... es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar el servicio.
 
