@@ -223,3 +223,59 @@ fmt_num <- function(x, d = 0) format(round(x, d), big.mark = ",")
 #    - fmt_num() para números grandes
 # 5. Colores directos: pal$terracota, pal$plomo, etc.
 # ==============================================================================
+
+# ==============================================================================
+# EXTENSIÓN PARA MAPAS (GEOESPACIAL)
+# ==============================================================================
+
+# 1. Escala Continua Personalizada (Gradiente Flexible)
+# ------------------------------------------------------------------------------
+
+scale_fill_lm_cont <- function(reverse = FALSE, values = NULL, ...) {
+  
+  # A. Definimos el orden de los colores
+  mis_colores <- c(pal$oliva, pal$gris_claro, pal$ocre, pal$terracota)
+  
+  if (reverse) {
+    mis_colores <- rev(mis_colores)
+  }
+  
+  # B. Definimos valores por defecto SOLO si el usuario no dio ninguno
+  if (is.null(values)) {
+    values <- scales::rescale(c(0, 0.5, 1))
+  }
+  
+  # C. Creamos la escala
+  scale_fill_gradientn(
+    colors = mis_colores,
+    values = values, # Aquí entra la variable flexible
+    guide = guide_colorbar(
+      barwidth = 12,        
+      barheight = 0.4,
+      title.position = "top",
+      frame.colour = pal$border_dark,
+      ticks.colour = pal$border_dark
+    ),
+    ...
+  )
+}
+
+# 2. Tema Específico para Mapas
+# ------------------------------------------------------------------------------
+# Hereda theme_lm() pero limpia ejes, coordenadas y bordes innecesarios.
+# Uso: + theme_lm_map()
+
+theme_lm_map <- function() {
+  theme_lm(grid = "n") + # Llamamos tema base sin grilla
+    theme(
+      axis.text = element_blank(),      # Sin latitud/longitud
+      axis.title = element_blank(),     # Sin títulos X/Y
+      axis.ticks = element_blank(),     # Sin marquitas
+      axis.line = element_blank(),      # Sin líneas de eje
+      panel.grid = element_blank(),     # Aseguramos cero grilla
+      panel.border = element_blank(),   # Sin recuadro negro
+      legend.position = "top",
+      legend.justification = "left",
+      legend.margin = margin(b = 10)    # Espacio entre leyenda y mapa
+    )
+}

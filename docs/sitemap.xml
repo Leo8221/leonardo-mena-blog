@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/mitos-economicos.html</loc>
-    <lastmod>2026-01-05T22:19:25.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/observatorio.html</loc>
-    <lastmod>2026-01-05T22:19:25.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/about.html</loc>
-    <lastmod>2026-01-05T22:19:25.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/archivo.html</loc>
-    <lastmod>2026-01-05T22:19:25.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html</loc>
-    <lastmod>2026-01-05T22:19:25.490Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>
-    <lastmod>2026-01-05T22:19:25.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/categorias.html</loc>
-    <lastmod>2026-01-05T22:19:25.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/fundamentos.html</loc>
-    <lastmod>2026-01-05T22:19:25.482Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/series.html</loc>
-    <lastmod>2026-01-05T22:19:25.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/predecesores.html</loc>
-    <lastmod>2026-01-05T22:19:25.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/2025-12-19_deuda_publica/index.html</loc>
-    <lastmod>2026-01-05T22:19:25.500Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html</loc>
-    <lastmod>2026-01-05T22:19:25.490Z</lastmod>
-  </url>
-  <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/suscribete.html</loc>
-    <lastmod>2026-01-05T22:19:25.501Z</lastmod>
+    <lastmod>2025-12-13T00:10:27.281Z</lastmod>
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/republica-habla-de.html</loc>
-    <lastmod>2026-01-05T22:19:25.501Z</lastmod>
+    <lastmod>2025-12-13T07:56:16.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/predecesores.html</loc>
+    <lastmod>2025-12-13T08:09:09.517Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html</loc>
+    <lastmod>2026-01-06T01:17:02.183Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html</loc>
+    <lastmod>2025-12-20T08:36:39.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/mitos-economicos.html</loc>
+    <lastmod>2025-12-13T00:10:27.281Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>
+    <lastmod>2025-12-21T00:11:21.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/categorias.html</loc>
+    <lastmod>2025-12-13T07:48:32.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/about.html</loc>
+    <lastmod>2025-12-13T01:04:21.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/archivo.html</loc>
+    <lastmod>2025-12-13T00:10:27.233Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/fundamentos.html</loc>
+    <lastmod>2025-12-13T07:56:24.763Z</lastmod>
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/investigacion.html</loc>
-    <lastmod>2026-01-05T22:19:25.483Z</lastmod>
+    <lastmod>2025-12-13T00:10:27.281Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/observatorio.html</loc>
+    <lastmod>2025-12-15T02:22:35.247Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html</loc>
+    <lastmod>2025-12-19T05:51:22.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/posts/republica-habla-de/2025-12-19_deuda_publica/index.html</loc>
+    <lastmod>2026-01-03T06:52:24.459Z</lastmod>
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/republica-en-un-grafico.html</loc>
-    <lastmod>2026-01-05T22:19:25.501Z</lastmod>
+    <lastmod>2025-12-13T07:51:27.327Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/series.html</loc>
+    <lastmod>2025-12-13T07:56:35.927Z</lastmod>
   </url>
 </urlset>
