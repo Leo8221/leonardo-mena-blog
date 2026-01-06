@@ -1,13 +1,13 @@
 ---
-title: "La Republica en un grafico: 10 años de transformación"
+title: "La Republica en un gráfico: 10 años de transformación"
 date: "2026-01-05"
 author: "Leonardo Mena"
-description: "Explicacion de los cambios en el habito de consumo de los dominicanos"
+description: "explicación de los cambios en el habito de consumo de los dominicanos"
 image: "portada_canasta_familiar.png"
 twitter-card:
   image: "portada_canasta_familiar.png"
 categories: 
-  - "La republica en un grafico"
+  - "La republica en un gráfico"
   - "Desarrollo"
 draft: false
 body-class: editorial-post
@@ -123,11 +123,11 @@ Cuando observamos el gráfico, uno de los primeros elementos que salta a la vist
 <span class="big-number">+2.1%</span>
 <span class="big-number-label">Aumento en el gasto de Comunicaciones</span>
 
-Pasamos de los BlackBerry y Nokia a los smartphones con pantallas táctiles, de los SMS prepagados al WhatsApp ilimitado, del "te bipeo" a las videollamadas. Esta revolución trajo consigo nuevas necesidades: planes de datos, internet móvil, servicios de streaming. El resultado es evidente: nuestra dependencia de ella se ha disparado, pero sus beneficios tambien.
+Pasamos de los BlackBerry y Nokia a los smartphones con pantallas táctiles, de los SMS prepagados al WhatsApp ilimitado, del "te bipeo" a las videollamadas. Esta revolución trajo consigo nuevas necesidades: planes de datos, internet móvil, servicios de streaming. El resultado es evidente: nuestra dependencia de ella se ha disparado, pero sus beneficios también.
 
 El cambio no es solo tecnológico, es cultural. En 2010, tener internet en casa era un lujo, en 2020, es una necesidad básica. Y la canasta familiar lo refleja.
 
-## La anecdota economica
+## La anécdota económica
 
 En el siglo XIX, el estadístico Ernst Engel notó un fenómeno curioso: a medida que una familia se vuelve más rica, el porcentaje de su dinero que destina a comer se hace más pequeño.
 
@@ -163,6 +163,8 @@ Esta es otra muestra de cambio social. Este apartado incluye:
 * Servicios veterinarios
 
 El repunte indica que el dominicano promedio de hoy puede destinar una mayor proporción de sus ingresos a proteger su patrimonio y a su bienestar personal, bienes que anteriormente podríamos haber considerado de lujo o secundarios, hoy son parte estructural del consumo de la clase media en ascenso.
+
+Vale la pena preguntarse: ¿este aumento en seguros privados refleja solo mayor capacidad de gasto, o también una creciente necesidad de protegernos ante servicios públicos insuficientes? Probablemente sea un poco de ambos, y esa tensión es parte de nuestra evolución como sociedad.
 
 ## La paradoja del transporte: ¿menos gasto con gasolina más cara?
 

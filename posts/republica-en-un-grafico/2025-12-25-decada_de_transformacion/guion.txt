@@ -6,7 +6,7 @@ Corte a 2020. Las noticias nos llegan por notificación, el vendedor pirata ahor
 
 La revolución digital
 
-Cuando observamos el gráfico, uno de los primeros elementos que salta a la vista es ese +2.1 en Comunicaciones. Más que un simple dato, este número sintetiza la transformación digital vivida por el país entre 2010 y 2020.
+Cuando observamos el gráfico, uno de los primeros elementos que salta a la vista es ese más 2.1 en Comunicaciones. Más que un simple dato, este número sintetiza la transformación digital vivida por el país entre 2010 y 2020.
 
 Pasamos de los BlackBerry y Nokia a los smartphones con pantallas táctiles, de los SMS prepagados al WhatsApp ilimitado, del "te bipeo" a las videollamadas. Esta revolución trajo consigo nuevas necesidades: planes de datos, internet móvil, servicios de streaming. El resultado es evidente: nuestra dependencia de ella se ha disparado, pero sus beneficios también.
 
@@ -16,7 +16,7 @@ La anécdota económica
 
 En el siglo XIX, el estadístico Ernst Engel notó un fenómeno curioso: a medida que una familia se vuelve más rica, el porcentaje de su dinero que destina a comer se hace más pequeño.
 
-Pongamos un ejemplo: Imagina a Juan. Hoy gana 10 mil pesos y gasta 5 mil en comida (el 50% de su sueldo). Al mes siguiente, recibe un aumento del 20% y pasa a ganar 12 mil pesos. La lógica lineal nos diría que ahora gastará un 20% más en comida (6 mil pesos), pero la realidad económica es otra.
+Pongamos un ejemplo: Imagina a Juan. Hoy gana 10 mil pesos y gasta 5 mil en comida, es decir, el 50% de su sueldo. Al mes siguiente, recibe un aumento del 20% y pasa a ganar 12 mil pesos. La lógica lineal nos diría que ahora gastará un 20% más en comida, pero la realidad económica es otra.
 
 Es probable que Juan empiece a comprar mejor carne o algún vino, gastando quizás 5,500 pesos. Aunque en dinero está gastando más, en proporción ahora la comida solo representa el 46% de su ingreso. ¿La razón? El estómago tiene un límite. No empiezas a comer el doble de arroz solo porque te duplicaron el sueldo, empiezas a gastar en otras cosas. A esto le llamamos la Ley de Engel.
 
@@ -28,17 +28,21 @@ Del arroz al gimnasio
 
 En la punta del gráfico destaca un nombre que puede ser desconcertante para algunos: "Bienes y servicios diversos". Este grupo ha tenido un gran desarrollo durante estos años, pero ¿a qué se refiere exactamente?
 
-Esta es otra muestra de cambio social. Este apartado incluye desde seguros de vida hasta membresías de gimnasio, desde productos de belleza hasta servicios veterinarios. El repunte indica que el dominicano promedio de hoy puede destinar una mayor proporción de sus ingresos a proteger su patrimonio y a su bienestar personal; bienes que anteriormente podríamos haber considerado de lujo o secundarios, hoy son parte estructural del consumo de la clase media en ascenso.
+Esta es otra muestra de cambio social. Este apartado incluye: seguros de vida y salud, membresías de gimnasio, productos de belleza y cuidado personal, y servicios veterinarios.
+
+El repunte indica que el dominicano promedio de hoy puede destinar una mayor proporción de sus ingresos a proteger su patrimonio y a su bienestar personal, bienes que anteriormente podríamos haber considerado de lujo o secundarios, hoy son parte estructural del consumo de la clase media en ascenso.
+
+Vale la pena preguntarse: ¿este aumento en seguros privados refleja solo mayor capacidad de gasto, o también una creciente necesidad de protegernos ante servicios públicos insuficientes? Probablemente sea un poco de ambos, y esa tensión es parte de nuestra evolución como sociedad.
 
 La paradoja del transporte: ¿menos gasto con gasolina más cara?
 
 A primera vista, la caída de 1.3 puntos porcentuales en el gasto de transporte parece un error de cálculo. ¿Cómo gastamos menos si la gasolina es más cara y los pasajes han subido? La respuesta no está en los precios, sino en un cambio estructural profundo.
 
-Primero, es un tema de proporciones (efecto ingreso): al aumentar el ingreso real promedio, el peso relativo del transporte básico disminuye. Pero el segundo factor es el verdaderamente fascinante: la densificación urbana.
+Primero, es un tema de proporciones por el efecto ingreso: al aumentar el ingreso real promedio, el peso relativo del transporte básico disminuye. Pero el segundo factor es el verdaderamente fascinante: la densificación urbana.
 
 Ya no necesitas viajar dos horas para ir al hospital especializado o conseguir ese repuesto específico. Todo está más cerca. Esto es lo que los economistas llamamos 'economías de aglomeración': cuando la ciudad crece, paradójicamente, nos movemos menos.
 
-Este dato es una "pista silenciosa" de que la urbanización no solo ha cambiado dónde vivimos, sino cómo nos movemos: viajes más cortos, más eficientes y, gracias a la expansión del transporte masivo (Metro y Teleférico), menos costosos en relación con nuestro ingreso.
+Este dato es una "pista silenciosa" de que la urbanización no solo ha cambiado dónde vivimos, sino cómo nos movemos: viajes más cortos, más eficientes y, gracias a la expansión del transporte masivo como el Metro y Teleférico, menos costosos en relación con nuestro ingreso.
 
 Conclusión: El espejo de lo que somos
 

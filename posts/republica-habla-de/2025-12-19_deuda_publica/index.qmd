@@ -2,7 +2,7 @@
 title: "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación"
 date: "2025-12-20"
 author: "Leonardo Mena"
-description: "Explicacion de los servicios de la deuda sobre las recaudaciones fiscales."
+description: "explicación de los servicios de la deuda sobre las recaudaciones fiscales."
 image: "portada.jpg"
 twitter-card:
   image: "portada.jpg"
@@ -58,9 +58,9 @@ Al aplicar este análisis a la economía dominicana, obtenemos un dato que, al m
 
 
 ```{r}
-#| label: figura deuda-PIB en latam
-#| fig-cap: "Deuda Sobre PIB en latinoamerica y RD"
-#| fig-alt: "Gráfico que comparadeuda sobre PIB en latinoamerica"
+#| label: figura deuda-PIB en LATAM
+#| fig-cap: "Deuda Sobre PIB en Latinoamérica y RD"
+#| fig-alt: "Gráfico que compara deuda sobre PIB en Latinoamérica"
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -70,7 +70,7 @@ Al aplicar este análisis a la economía dominicana, obtenemos un dato que, al m
 
 # 1. Datos alineados a tu narrativa (Cierre 2024)
 df_contexto <- data.frame(
-  pais = c("El Salvador", "Brasil", "Costa Rica", "Colombia", 
+  país = c("El Salvador", "Brasil", "Costa Rica", "Colombia", 
            "R. Dominicana", "México", "Chile", "Guatemala"),
   
   # Datos reales aproximados (FMI/Bancos Centrales Cierre 2024)
@@ -83,14 +83,14 @@ df_contexto <- data.frame(
 )
 
 # Ordenar de mayor a menor
-df_contexto$pais <- factor(df_contexto$pais, 
-                           levels = df_contexto$pais[order(df_contexto$deuda_pib)])
+df_contexto$país <- factor(df_contexto$país, 
+                           levels = df_contexto$país[order(df_contexto$deuda_pib)])
 
 # 2. Gráfico
-p_solvencia <- ggplot(df_contexto, aes(x = pais, y = deuda_pib/100)) +
+p_solvencia <- ggplot(df_contexto, aes(x = país, y = deuda_pib/100)) +
   
   # Barras
-  geom_col(aes(fill = pais == "R. Dominicana"), width = 0.8) +
+  geom_col(aes(fill = país == "R. Dominicana"), width = 0.8) +
   
   # Colores: RD en Terracota, Resto en Plomo (Sobrio)
   scale_fill_manual(values = c("FALSE" = pal$plomo, "TRUE" = pal$terracota)) +
@@ -101,10 +101,10 @@ p_solvencia <- ggplot(df_contexto, aes(x = pais, y = deuda_pib/100)) +
     hjust = -0.2, 
     size = 4, 
     fontface = "bold",
-    color = ifelse(df_contexto$pais == "R. Dominicana", pal$terracota, pal$texto_muted)
+    color = ifelse(df_contexto$país == "R. Dominicana", pal$terracota, pal$texto_muted)
   ) +
   
-  # Línea de promedio regional (aprox 63% Latam) para reforzar lo de "Saludable"
+  # Línea de promedio regional (aprox 63% LATAM) para reforzar lo de "Saludable"
   geom_hline(yintercept = 0.63, linetype = "dashed", color = pal$rojo, alpha = 0.6) +
   annotate("text", x = 0.8, y = 0.64, label = "Promedio Latam (~63%)", 
            color = pal$rojo, size = 3, fontface = "italic", hjust = 0) +
