@@ -1,0 +1,322 @@
+---
+title: "Perspectiva del desarrollo: Densidad empresarial"
+date: "2026-01-06"
+author: "Leonardo Mena"
+description: "distribución espacial de las empresas en RD"
+image: "mapa_densidad_2024.png"
+twitter-card:
+ image: "mapa_densidad_2024.png"
+categories: 
+  - "La republica en un gráfico"
+  - "Desarrollo"
+draft: false
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body: ../../../reading-progress.html
+---
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+
+Los tapones interminables, el transporte público saturado y el caos urbano son las quejas diarias del habitante del Gran Santo Domingo. Ante esta realidad, el diagnóstico popular es casi inmediato: "somos demasiados". Y la solución propuesta suele ser igual de directa: "hay que desarrollar el interior para descongestionar la capital"
+
+Sin embargo, en economía, la intuición no siempre basta. Sabemos que las personas migran buscando oportunidades, pero ¿qué tan desigual es realmente la distribución de estas oportunidades en el territorio nacional?
+
+Más allá de la percepción, los datos de los registros mercantiles nos ofrecen una métrica objetiva: la densidad empresarial. Este indicador no solo nos dice dónde está la gente, sino dónde está la actividad económica formal capaz de sostenerla. El siguiente mapa no es solo una ilustración geográfica, es una radiografía de por qué todos los caminos parecen conducir al Distrito Nacional.
+
+<div class="pullquote">
+“No es que seamos demasiados: es que las oportunidades están concentradas en muy pocos lugares.”
+</div>
+
+## ¿Por qué emigramos?
+
+Imaginemos a dos jóvenes con capacidades idénticas. Por un lado tenemos a Juan, nacido en Elías Piña, una provincia fronteriza cuya dinámica económica gira casi exclusivamente en torno al comercio informal con Haití. Por otro lado está Pedro, nacido en el Distrito Nacional, con un entorno familiar y educativo similar.
+
+La única variable que cambia es su ubicación geográfica. La pregunta es inevitable: por el simple hecho de su lugar de nacimiento, ¿qué tan abismal es la brecha de oportunidades de empleo formal entre Juan y Pedro?
+
+```{r}
+#| label: fig-mapa-densidad-empresarial
+#| fig-cap: "Densidad empresarial por provincia (2024). El mapa ilustra el número de empresas formales por cada 1,000 habitantes. Se evidencia una fuerte concentración en el Distrito Nacional (36.5), contrastando drásticamente con provincias fronterizas como Elías Piña (1.4) y Pedernales (2.4)."
+#| fig-alt: "Mapa coroplético de la República Dominicana mostrando la densidad de empresas. El Distrito Nacional destaca en color terracota intenso con el valor más alto (36.5). Santiago (17.1) y La Altagracia (13.9) aparecen en tono ocre. El resto del país, especialmente la zona fronteriza, se muestra en verde oliva pálido, indicando baja densidad empresarial. Las etiquetas resaltan la brecha entre la capital y el interior."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 9
+#| out-width: "100%"
+
+library(sf)
+library(tidyverse)
+library(scales)
+library(ggrepel)
+library(readxl)
+library(janitor)
+library(stringi)
+
+# ------------------------------------------------------------------------------
+# 1. ESTILO Y CONFIGURACIÓN
+# ------------------------------------------------------------------------------
+pal <- list(
+  terracota = "#c86448",
+  oliva     = "#6b7554",
+  ocre      = "#d4ac0d",
+  crema     = "#faf8f3", 
+  texto     = "#1a1512",
+  texto_soft = "#4a443e",
+  border_dark = "#d4c9ba",
+  gris_claro = "#f5f1e8"
+)
+
+theme_lm_map <- function() {
+  theme_void() + 
+    theme(
+      text = element_text(family = "sans", color = pal$texto),
+      plot.background = element_rect(fill = pal$crema, color = NA),
+      plot.title = element_text(size = 18, face = "bold", margin = margin(b=5)),
+      plot.subtitle = element_text(size = 13, color = pal$texto_soft, margin = margin(b=15)),
+      plot.caption = element_text(size = 9, color = "#73695f", margin = margin(t=10)),
+      legend.position = "top", 
+      legend.justification = "left",
+      legend.margin = margin(b=10)
+    )
+}
+
+# ------------------------------------------------------------------------------
+# 2. MAPA
+# ------------------------------------------------------------------------------
+mapa_rd <- st_read(
+  "C:\\Users\\leona\\OneDrive\\Escritorio\\mapa_rd\\provincia\\PROVCenso2010.shp",
+  quiet = TRUE
+)
+
+mapa_listo <- mapa_rd |>
+  st_transform(4326) |>
+  mutate(
+    TOPONIMIA = str_to_upper(TOPONIMIA),
+    TOPONIMIA = stri_trans_general(TOPONIMIA, "Latin-ASCII")
+  )
+
+# ------------------------------------------------------------------------------
+# 3. POBLACIÓN
+# ------------------------------------------------------------------------------
+poblacion <- read_excel(
+  "cuadro-estimaciones-proyecciones-población-total-por-año-según-región-provincia-2000-2030.xlsx",
+  skip = 5
+) |> 
+  clean_names() |> 
+  drop_na(total_77) |> 
+  select(region_provincia, total_77) |> 
+  filter(!str_detect(region_provincia, "Región")) |> 
+  mutate(
+    region_provincia = str_to_upper(str_trim(region_provincia)),
+    region_provincia = stri_trans_general(region_provincia, "Latin-ASCII")
+  )
+
+# ------------------------------------------------------------------------------
+# 4. EMPRESAS
+# ------------------------------------------------------------------------------
+empresas <- read_csv(
+  "Distribución de empresas registradas según provincia. 2015-2024.csv",
+  show_col_types = FALSE
+) |> 
+  clean_names() |> 
+  filter(anio == 2024) |> 
+  mutate(
+    provincia_desc = str_to_upper(provincia_desc),
+    provincia_desc = stri_trans_general(provincia_desc, "Latin-ASCII"),
+    provincia_desc = str_replace(provincia_desc, "SEYBO", "SEIBO")
+  )
+
+# ------------------------------------------------------------------------------
+# 5. UNIÓN Y CÁLCULOS
+# ------------------------------------------------------------------------------
+mapa_final_empresas <- mapa_listo |> 
+  left_join(empresas, by = c("TOPONIMIA" = "provincia_desc")) |> 
+  left_join(poblacion, by = c("TOPONIMIA" = "region_provincia")) |> 
+  mutate(
+    poblacion_2024 = total_77,
+    densidad_empresarial = (cuenta / poblacion_2024) * 1000
+  )
+
+# ------------------------------------------------------------------------------
+# 6. ETIQUETAS (ELIAS PIÑA)
+# ------------------------------------------------------------------------------
+etiquetas_clave <- mapa_final_empresas |> 
+  filter(TOPONIMIA %in% c(
+    "DISTRITO NACIONAL",
+    "LA ALTAGRACIA",
+    "SANTIAGO",
+    "PEDERNALES",
+    "ELIAS PINA"
+  )) |> 
+  mutate(
+    centro = st_point_on_surface(geometry),
+    lon = st_coordinates(centro)[,1],
+    lat = st_coordinates(centro)[,2],
+    Label = paste0(TOPONIMIA, "\n", number(densidad_empresarial, accuracy = 0.1))
+  )
+
+# ------------------------------------------------------------------------------
+# 7. GRAFICAR
+# ------------------------------------------------------------------------------
+mis_colores_densidad <- c(
+  pal$oliva,
+  pal$gris_claro,
+  pal$ocre,
+  pal$terracota
+)
+
+grafico_densidad <- ggplot(mapa_final_empresas) +
+  geom_sf(aes(fill = densidad_empresarial), color = pal$crema, linewidth = 0.3) +
+  
+  geom_text_repel(
+    data = etiquetas_clave,
+    aes(x = lon, y = lat, label = Label),
+    family = "sans",
+    fontface = "bold",
+    size = 3,
+    color = pal$texto_soft,
+    bg.color = pal$crema,
+    bg.r = 0.15,
+    seed = 123,
+    min.segment.length = 0
+  ) +
+  
+  scale_fill_gradientn(
+    colors = mis_colores_densidad,
+    name = "Empresas por\n1,000 hab.",
+    values = scales::rescale(c(0, 5, 15, 40)), 
+    na.value = "#d4e6f1",
+    guide = guide_colorbar(
+      barwidth = 12,
+      barheight = 0.4,
+      title.position = "top",
+      frame.colour = pal$border_dark,
+      ticks.colour = pal$border_dark
+    )
+  ) +
+  
+  labs(
+    title = "Mapa de Densidad Empresarial (2024)",
+    subtitle = "Número de empresas formales por cada 1,000 habitantes",
+    caption = "Fuente: Registros Mercantiles (2024) & ONE (proyecciones poblacionales) | Elaboración: Leonardo Mena"
+  ) +
+  
+  theme_lm_map()
+
+grafico_densidad 
+```
+
+Mientras Pedro vive en el Distrito Nacional, que cuenta con 36 empresas por cada 1,000 habitantes, Juan tan solo tiene 1.5. Es decir, las probabilidades de Pedro son 24 veces mayores a las de Juan, por el simple hecho de nacer en un lugar distinto. 
+
+<span class="big-number">24×</span>
+<span class="big-number-label">
+Más oportunidades formales en el Distrito Nacional que en Elías Piña
+</span>
+
+Si a usted le dijeran que sus posibilidades de empleo aumentarían tan significativamente por el hecho de mudarse, ¿lo dudaría?
+
+En este contexto, la elección migratoria responde a un comportamiento racional, consistente con los incentivos disponibles.
+
+## Más allá del Distrito: Los otros oasis
+
+Aunque el Distrito Nacional es el primero que salta a la vista, también se observa cierta concentración en las zonas del Cibao y el Este. Por un lado, destaca Santiago con su potente tejido industrial, por el otro, La Altagracia, impulsada por la locomotora del turismo. Estos casos demuestran que es posible generar gravedad económica fuera de la capital.
+
+- **Santiago**: base industrial y zonas francas consolidadas  
+- **La Altagracia**: turismo como motor de encadenamientos productivos  
+- **Distrito Nacional**: servicios avanzados, mercado profundo y capital humano
+
+Pero estos casos son la excepción, no la norma. Son el resultado de décadas de consolidación de industrias específicas —zonas francas y hotelería— que lograron alcanzar una masa crítica capaz de retener talento y capital. Para el resto del mapa, la realidad es un verde pálido.
+
+## Las consecuencias: La trampa de la informalidad
+
+Juan no encuentra empleo formal, pero tampoco puede o quiere migrar. ¿Se queda de brazos cruzados? Difícilmente. Ante la ausencia de oportunidades formales, la alternativa racional es la informalidad: actividades de subsistencia, ingresos inestables y una vida económica sin red de protección.
+
+<div class="pullquote">
+La informalidad no es ausencia de trabajo, es ausencia de opciones formales.
+</div>
+
+Mientras tanto, Pedro trabaja en una empresa formal, con acceso a seguridad social, pensión y seguro médico. Juan, en cambio, vive del día a día, con ingresos inciertos y una planificación de vida marcada por la vulnerabilidad. LLa geografía, por tanto, influye no solo en el salario presente, sino también en el horizonte de vida futura.
+
+## La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?
+
+Si el diagnóstico es claro, ¿por qué no llevamos simplemente las empresas donde está la gente? Aquí entra en juego una de las fuerzas más tercas de la economía: las economías de aglomeración.
+
+Es un círculo que se retroalimenta: las empresas se instalan en Santo Domingo porque ahí están los trabajadores calificados, los proveedores y los consumidores (mercado). Y los trabajadores, como Pedro, se mudan a Santo Domingo porque ahí están las empresas.
+
+Romper esta inercia no es tan simple como ofrecer incentivos fiscales. Requiere crear ecosistemas donde sea rentable operar. Mientras "ser más en un sitio" siga reduciendo costos y aumentando la productividad para las empresas, la gravedad de la capital seguirá atrayendo a los Juanes del país, perpetuando los tapones en el centro y el vacío en la periferia.
+
+```{=html}
+<div class="data-box">
+  <div class="data-box-title">Economías de aglomeración</div>
+  <div class="data-box-content">
+    Las empresas tienden a concentrarse donde pueden compartir trabajadores calificados, proveedores y mercados. Esta concentración reduce costos y aumenta productividad, reforzando la atracción del mismo territorio.
+  </div>
+</div>
+```
+
+<div class="section-divider">• • •</div>
+
+## Conclusión
+
+Generalmente, cuando se dice que el empleo informal en el país ronda el 56%, se ve como un dato abstracto. Pero la realidad física de ese número está ahí: en el marcado contraste entre la zona terracota del Distrito Nacional, los focos anaranjados del Este y el Cibao, y el inmenso verde pálido que cubre a las demás zonas.
+
+La concentración económica es una dinámica natural del desarrollo, no un error de diseño. El peligro radica en ignorarla. En un debate público obsesionado con los promedios nacionales, nuestra responsabilidad es recordar siempre la profunda heterogeneidad territorial que define a la República Dominicana.
+
+
+---
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la Deuda pública dominicana</p>
+    </div>
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <p>Por qué el PIB no mide bienestar</p>
+    </div>
+    
+  </div>
+</div>
+```
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Referencias & Fuentes de Datos</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Oficina Nacional de Estadística (ONE)</h4>
+      <p>Proyecciones de Población por Región y Provincia (2000-2030).</p>
+      <a href="https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-demograficas/estimaciones-y-proyecciones-demograficas/" class="bib-link">Ver dataset ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Oficina Nacional de Estadística (ONE)</h4>
+      <p>Distribución de empresas registradas (2015-2024).</p>
+      <a href="https://reportviewer-olap.one.gob.do/ReportViewer/Report.aspx?id=/Portal/Reportes%20DEE/Distribuci%C3%B3n%20de%20empresas%20registradas%20seg%C3%BAn%20provincia.%202015-2024" class="bib-link">Ver reporte ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Krugman, P. (1991)</h4>
+      <p>"Increasing Returns and Economic Geography". Journal of Political Economy.</p>
+      <a href="https://www.jstor.org/stable/2937739" target="_blank" class="bib-link">Leer paper ↗</a>
+    </div>
+
+  </div>
+</div>
+```

@@ -1,0 +1,332 @@
+﻿Anio,Textbox10,Provincia_Desc,Cuenta
+2015,"70,287",Distrito Nacional,"26,471"
+2016,"74,889",Distrito Nacional,"27,767"
+2017,"79,627",Distrito Nacional,"29,057"
+2018,"85,907",Distrito Nacional,"30,831"
+2019,"96,602",Distrito Nacional,"34,594"
+2020,"99,990",Distrito Nacional,"35,348"
+2021,"109,293",Distrito Nacional,"38,020"
+2022,"105,774",Distrito Nacional,"35,965"
+2023,"113,085",Distrito Nacional,"37,478"
+2024,"120,280",Distrito Nacional,"39,253"
+2015,"70,287",Azua,364
+2016,"74,889",Azua,371
+2017,"79,627",Azua,403
+2018,"85,907",Azua,447
+2019,"96,602",Azua,508
+2020,"99,990",Azua,530
+2021,"109,293",Azua,677
+2022,"105,774",Azua,657
+2023,"113,085",Azua,681
+2024,"120,280",Azua,708
+2015,"70,287",Baoruco,78
+2016,"74,889",Baoruco,83
+2017,"79,627",Baoruco,99
+2018,"85,907",Baoruco,107
+2019,"96,602",Baoruco,129
+2020,"99,990",Baoruco,150
+2021,"109,293",Baoruco,198
+2022,"105,774",Baoruco,198
+2023,"113,085",Baoruco,206
+2024,"120,280",Baoruco,202
+2015,"70,287",Barahona,393
+2016,"74,889",Barahona,403
+2017,"79,627",Barahona,439
+2018,"85,907",Barahona,474
+2019,"96,602",Barahona,559
+2020,"99,990",Barahona,563
+2021,"109,293",Barahona,616
+2022,"105,774",Barahona,583
+2023,"113,085",Barahona,618
+2024,"120,280",Barahona,665
+2015,"70,287",Dajabón,171
+2016,"74,889",Dajabón,179
+2017,"79,627",Dajabón,188
+2018,"85,907",Dajabón,205
+2019,"96,602",Dajabón,240
+2020,"99,990",Dajabón,255
+2021,"109,293",Dajabón,290
+2022,"105,774",Dajabón,308
+2023,"113,085",Dajabón,327
+2024,"120,280",Dajabón,357
+2015,"70,287",Duarte,"1,979"
+2016,"74,889",Duarte,"2,038"
+2017,"79,627",Duarte,"2,081"
+2018,"85,907",Duarte,"2,364"
+2019,"96,602",Duarte,"2,524"
+2020,"99,990",Duarte,"2,562"
+2021,"109,293",Duarte,"2,800"
+2022,"105,774",Duarte,"2,781"
+2023,"113,085",Duarte,"3,047"
+2024,"120,280",Duarte,"3,221"
+2015,"70,287",Elías Piña,36
+2016,"74,889",Elías Piña,40
+2017,"79,627",Elías Piña,42
+2018,"85,907",Elías Piña,291
+2019,"96,602",Elías Piña,70
+2020,"99,990",Elías Piña,75
+2021,"109,293",Elías Piña,83
+2022,"105,774",Elías Piña,76
+2023,"113,085",Elías Piña,77
+2024,"120,280",Elías Piña,91
+2015,"70,287",El Seibo,184
+2016,"74,889",El Seibo,188
+2017,"79,627",El Seibo,188
+2018,"85,907",El Seibo,198
+2019,"96,602",El Seibo,245
+2020,"99,990",El Seibo,255
+2021,"109,293",El Seibo,308
+2022,"105,774",El Seibo,292
+2023,"113,085",El Seibo,295
+2024,"120,280",El Seibo,298
+2015,"70,287",Espaillat,"1,303"
+2016,"74,889",Espaillat,"1,445"
+2017,"79,627",Espaillat,"1,527"
+2018,"85,907",Espaillat,"1,490"
+2019,"96,602",Espaillat,"1,671"
+2020,"99,990",Espaillat,"1,722"
+2021,"109,293",Espaillat,"1,910"
+2022,"105,774",Espaillat,"1,948"
+2023,"113,085",Espaillat,"2,172"
+2024,"120,280",Espaillat,"2,337"
+2015,"70,287",Independencia,45
+2016,"74,889",Independencia,54
+2017,"79,627",Independencia,63
+2018,"85,907",Independencia,65
+2019,"96,602",Independencia,70
+2020,"99,990",Independencia,71
+2021,"109,293",Independencia,85
+2022,"105,774",Independencia,84
+2023,"113,085",Independencia,87
+2024,"120,280",Independencia,94
+2015,"70,287",La Altagracia,"2,352"
+2016,"74,889",La Altagracia,"2,627"
+2017,"79,627",La Altagracia,"2,914"
+2018,"85,907",La Altagracia,"3,315"
+2019,"96,602",La Altagracia,"3,885"
+2020,"99,990",La Altagracia,"3,981"
+2021,"109,293",La Altagracia,"4,317"
+2022,"105,774",La Altagracia,"4,319"
+2023,"113,085",La Altagracia,"4,836"
+2024,"120,280",La Altagracia,"5,440"
+2015,"70,287",La Romana,"1,415"
+2016,"74,889",La Romana,"1,490"
+2017,"79,627",La Romana,"1,574"
+2018,"85,907",La Romana,"1,714"
+2019,"96,602",La Romana,"1,876"
+2020,"99,990",La Romana,"1,913"
+2021,"109,293",La Romana,"2,075"
+2022,"105,774",La Romana,"2,063"
+2023,"113,085",La Romana,"2,223"
+2024,"120,280",La Romana,"2,441"
+2015,"70,287",La Vega,"2,272"
+2016,"74,889",La Vega,"2,501"
+2017,"79,627",La Vega,"2,706"
+2018,"85,907",La Vega,"2,967"
+2019,"96,602",La Vega,"3,340"
+2020,"99,990",La Vega,"3,472"
+2021,"109,293",La Vega,"3,912"
+2022,"105,774",La Vega,"3,994"
+2023,"113,085",La Vega,"4,358"
+2024,"120,280",La Vega,"4,692"
+2015,"70,287",María Trinidad Sánchez,647
+2016,"74,889",María Trinidad Sánchez,682
+2017,"79,627",María Trinidad Sánchez,741
+2018,"85,907",María Trinidad Sánchez,805
+2019,"96,602",María Trinidad Sánchez,900
+2020,"99,990",María Trinidad Sánchez,910
+2021,"109,293",María Trinidad Sánchez,968
+2022,"105,774",María Trinidad Sánchez,942
+2023,"113,085",María Trinidad Sánchez,"1,139"
+2024,"120,280",María Trinidad Sánchez,"1,289"
+2015,"70,287",Monte Cristi,380
+2016,"74,889",Monte Cristi,401
+2017,"79,627",Monte Cristi,439
+2018,"85,907",Monte Cristi,492
+2019,"96,602",Monte Cristi,528
+2020,"99,990",Monte Cristi,551
+2021,"109,293",Monte Cristi,628
+2022,"105,774",Monte Cristi,693
+2023,"113,085",Monte Cristi,751
+2024,"120,280",Monte Cristi,782
+2015,"70,287",Pedernales,38
+2016,"74,889",Pedernales,33
+2017,"79,627",Pedernales,37
+2018,"85,907",Pedernales,44
+2019,"96,602",Pedernales,52
+2020,"99,990",Pedernales,56
+2021,"109,293",Pedernales,62
+2022,"105,774",Pedernales,62
+2023,"113,085",Pedernales,75
+2024,"120,280",Pedernales,87
+2015,"70,287",Peravia,683
+2016,"74,889",Peravia,739
+2017,"79,627",Peravia,775
+2018,"85,907",Peravia,599
+2019,"96,602",Peravia,953
+2020,"99,990",Peravia,"1,005"
+2021,"109,293",Peravia,"1,092"
+2022,"105,774",Peravia,"1,056"
+2023,"113,085",Peravia,"1,119"
+2024,"120,280",Peravia,"1,152"
+2015,"70,287",Puerto Plata,"2,298"
+2016,"74,889",Puerto Plata,"2,496"
+2017,"79,627",Puerto Plata,"2,673"
+2018,"85,907",Puerto Plata,"2,915"
+2019,"96,602",Puerto Plata,"3,307"
+2020,"99,990",Puerto Plata,"3,350"
+2021,"109,293",Puerto Plata,"3,677"
+2022,"105,774",Puerto Plata,"3,731"
+2023,"113,085",Puerto Plata,"4,050"
+2024,"120,280",Puerto Plata,"4,377"
+2015,"70,287",Hermanas Mirabal,516
+2016,"74,889",Hermanas Mirabal,532
+2017,"79,627",Hermanas Mirabal,543
+2018,"85,907",Hermanas Mirabal,560
+2019,"96,602",Hermanas Mirabal,568
+2020,"99,990",Hermanas Mirabal,583
+2021,"109,293",Hermanas Mirabal,653
+2022,"105,774",Hermanas Mirabal,641
+2023,"113,085",Hermanas Mirabal,770
+2024,"120,280",Hermanas Mirabal,860
+2015,"70,287",Samaná,522
+2016,"74,889",Samaná,558
+2017,"79,627",Samaná,601
+2018,"85,907",Samaná,667
+2019,"96,602",Samaná,723
+2020,"99,990",Samaná,737
+2021,"109,293",Samaná,833
+2022,"105,774",Samaná,793
+2023,"113,085",Samaná,883
+2024,"120,280",Samaná,949
+2015,"70,287",San Cristóbal,"1,801"
+2016,"74,889",San Cristóbal,"1,926"
+2017,"79,627",San Cristóbal,"2,079"
+2018,"85,907",San Cristóbal,"2,243"
+2019,"96,602",San Cristóbal,"2,474"
+2020,"99,990",San Cristóbal,"2,583"
+2021,"109,293",San Cristóbal,"2,919"
+2022,"105,774",San Cristóbal,"2,721"
+2023,"113,085",San Cristóbal,"2,963"
+2024,"120,280",San Cristóbal,"3,121"
+2015,"70,287",San Juan,461
+2016,"74,889",San Juan,503
+2017,"79,627",San Juan,533
+2018,"85,907",San Juan,578
+2019,"96,602",San Juan,656
+2020,"99,990",San Juan,691
+2021,"109,293",San Juan,773
+2022,"105,774",San Juan,732
+2023,"113,085",San Juan,765
+2024,"120,280",San Juan,831
+2015,"70,287",San Pedro de Macorís,"1,333"
+2016,"74,889",San Pedro de Macorís,"1,449"
+2017,"79,627",San Pedro de Macorís,"1,525"
+2018,"85,907",San Pedro de Macorís,"1,632"
+2019,"96,602",San Pedro de Macorís,"1,822"
+2020,"99,990",San Pedro de Macorís,"1,898"
+2021,"109,293",San Pedro de Macorís,"2,093"
+2022,"105,774",San Pedro de Macorís,"1,955"
+2023,"113,085",San Pedro de Macorís,"2,061"
+2024,"120,280",San Pedro de Macorís,"2,205"
+2015,"70,287",Sanchez Ramírez,613
+2016,"74,889",Sanchez Ramírez,633
+2017,"79,627",Sanchez Ramírez,674
+2018,"85,907",Sanchez Ramírez,731
+2019,"96,602",Sanchez Ramírez,847
+2020,"99,990",Sanchez Ramírez,871
+2021,"109,293",Sanchez Ramírez,963
+2022,"105,774",Sanchez Ramírez,922
+2023,"113,085",Sanchez Ramírez,"1,049"
+2024,"120,280",Sanchez Ramírez,"1,173"
+2015,"70,287",Santiago,"10,166"
+2016,"74,889",Santiago,"11,098"
+2017,"79,627",Santiago,"11,951"
+2018,"85,907",Santiago,"12,909"
+2019,"96,602",Santiago,"14,393"
+2020,"99,990",Santiago,"14,786"
+2021,"109,293",Santiago,"16,181"
+2022,"105,774",Santiago,"16,139"
+2023,"113,085",Santiago,"17,393"
+2024,"120,280",Santiago,"18,430"
+2015,"70,287",Santiago Rodríguez,235
+2016,"74,889",Santiago Rodríguez,258
+2017,"79,627",Santiago Rodríguez,279
+2018,"85,907",Santiago Rodríguez,309
+2019,"96,602",Santiago Rodríguez,359
+2020,"99,990",Santiago Rodríguez,365
+2021,"109,293",Santiago Rodríguez,389
+2022,"105,774",Santiago Rodríguez,390
+2023,"113,085",Santiago Rodríguez,428
+2024,"120,280",Santiago Rodríguez,445
+2015,"70,287",Valverde,954
+2016,"74,889",Valverde,"1,091"
+2017,"79,627",Valverde,"1,157"
+2018,"85,907",Valverde,"1,250"
+2019,"96,602",Valverde,"1,374"
+2020,"99,990",Valverde,"1,407"
+2021,"109,293",Valverde,"1,514"
+2022,"105,774",Valverde,"1,446"
+2023,"113,085",Valverde,"1,557"
+2024,"120,280",Valverde,"1,588"
+2015,"70,287",Monseñor Nouel,901
+2016,"74,889",Monseñor Nouel,956
+2017,"79,627",Monseñor Nouel,"1,016"
+2018,"85,907",Monseñor Nouel,"1,112"
+2019,"96,602",Monseñor Nouel,"1,243"
+2020,"99,990",Monseñor Nouel,"1,301"
+2021,"109,293",Monseñor Nouel,"1,418"
+2022,"105,774",Monseñor Nouel,"1,424"
+2023,"113,085",Monseñor Nouel,"1,577"
+2024,"120,280",Monseñor Nouel,"1,685"
+2015,"70,287",Monte Plata,262
+2016,"74,889",Monte Plata,259
+2017,"79,627",Monte Plata,268
+2018,"85,907",Monte Plata,293
+2019,"96,602",Monte Plata,308
+2020,"99,990",Monte Plata,315
+2021,"109,293",Monte Plata,377
+2022,"105,774",Monte Plata,369
+2023,"113,085",Monte Plata,421
+2024,"120,280",Monte Plata,434
+2015,"70,287",Hato Mayor,321
+2016,"74,889",Hato Mayor,305
+2017,"79,627",Hato Mayor,332
+2018,"85,907",Hato Mayor,342
+2019,"96,602",Hato Mayor,370
+2020,"99,990",Hato Mayor,376
+2021,"109,293",Hato Mayor,420
+2022,"105,774",Hato Mayor,403
+2023,"113,085",Hato Mayor,421
+2024,"120,280",Hato Mayor,439
+2015,"70,287",San José de Ocoa,143
+2016,"74,889",San José de Ocoa,163
+2017,"79,627",San José de Ocoa,168
+2018,"85,907",San José de Ocoa,178
+2019,"96,602",San José de Ocoa,189
+2020,"99,990",San José de Ocoa,200
+2021,"109,293",San José de Ocoa,220
+2022,"105,774",San José de Ocoa,209
+2023,"113,085",San José de Ocoa,228
+2024,"120,280",San José de Ocoa,239
+2015,"70,287",Santo Domingo,"10,950"
+2016,"74,889",Santo Domingo,"11,621"
+2017,"79,627",Santo Domingo,"12,555"
+2018,"85,907",Santo Domingo,"13,779"
+2019,"96,602",Santo Domingo,"15,825"
+2020,"99,990",Santo Domingo,"17,108"
+2021,"109,293",Santo Domingo,"18,822"
+2022,"105,774",Santo Domingo,"17,878"
+2023,"113,085",Santo Domingo,"19,030"
+2024,"120,280",Santo Domingo,"20,395"
+2015,"70,287",No declarada,0
+2016,"74,889",No declarada,0
+2017,"79,627",No declarada,0
+2018,"85,907",No declarada,1
+2019,"96,602",No declarada,0
+2020,"99,990",No declarada,0
+2021,"109,293",No declarada,0
+2022,"105,774",No declarada,0
+2023,"113,085",No declarada,0
+2024,"120,280",No declarada,0
+

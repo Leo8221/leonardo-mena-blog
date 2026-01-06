@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Leonardo Mena">
+<meta name="description" content="distribución espacial de las empresas en RD">
+
+<title>Perspectiva del desarrollo: Densidad empresarial – Leonardo Mena</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../image/logo_leonardo_mena.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Perspectiva del desarrollo: Densidad empresarial – Leonardo Mena">
+<meta property="og:description" content="distribución espacial de las empresas en RD">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/mapa_densidad_2024.png">
+<meta property="og:site_name" content="Leonardo Mena">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="2400">
+<meta name="twitter:title" content="Perspectiva del desarrollo: Densidad empresarial – Leonardo Mena">
+<meta name="twitter:description" content="distribución espacial de las empresas en RD">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/mapa_densidad_2024.png">
+<meta name="twitter:image-height" content="1800">
+<meta name="twitter:image-width" content="2400">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-temas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Temas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
+        <li>
+    <a class="dropdown-item" href="../../../republica-habla-de.html">
+ <span class="dropdown-text">La República habla de</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../fundamentos.html">
+ <span class="dropdown-text">Fundamentos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../predecesores.html">
+ <span class="dropdown-text">Mis predecesores</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../mitos-economicos.html">
+ <span class="dropdown-text">Mitos económicos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un grafico</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../categorias.html"> 
+<span class="menu-text">Categorías</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../archivo.html"> 
+<span class="menu-text">Archivo</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../suscribete.html"> 
+<span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../observatorio.html"> <i class="bi bi-graph-up" role="img">
+</i> 
+<span class="menu-text">Observatorio 📊</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este artículo</h2>
+   
+  <ul>
+  <li><a href="#por-qué-emigramos" id="toc-por-qué-emigramos" class="nav-link active" data-scroll-target="#por-qué-emigramos">¿Por qué emigramos?</a></li>
+  <li><a href="#más-allá-del-distrito-los-otros-oasis" id="toc-más-allá-del-distrito-los-otros-oasis" class="nav-link" data-scroll-target="#más-allá-del-distrito-los-otros-oasis">Más allá del Distrito: Los otros oasis</a></li>
+  <li><a href="#las-consecuencias-la-trampa-de-la-informalidad" id="toc-las-consecuencias-la-trampa-de-la-informalidad" class="nav-link" data-scroll-target="#las-consecuencias-la-trampa-de-la-informalidad">Las consecuencias: La trampa de la informalidad</a></li>
+  <li><a href="#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa" id="toc-la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa" class="nav-link" data-scroll-target="#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa">La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?</a></li>
+  <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Perspectiva del desarrollo: Densidad empresarial</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">La republica en un gráfico</div>
+    <div class="quarto-category">Desarrollo</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    distribución espacial de las empresas en RD
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Mena </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">6 de enero de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+<p>Los tapones interminables, el transporte público saturado y el caos urbano son las quejas diarias del habitante del Gran Santo Domingo. Ante esta realidad, el diagnóstico popular es casi inmediato: “somos demasiados”. Y la solución propuesta suele ser igual de directa: “hay que desarrollar el interior para descongestionar la capital”</p>
+<p>Sin embargo, en economía, la intuición no siempre basta. Sabemos que las personas migran buscando oportunidades, pero ¿qué tan desigual es realmente la distribución de estas oportunidades en el territorio nacional?</p>
+<p>Más allá de la percepción, los datos de los registros mercantiles nos ofrecen una métrica objetiva: la densidad empresarial. Este indicador no solo nos dice dónde está la gente, sino dónde está la actividad económica formal capaz de sostenerla. El siguiente mapa no es solo una ilustración geográfica, es una radiografía de por qué todos los caminos parecen conducir al Distrito Nacional.</p>
+<div class="pullquote">
+<p>“No es que seamos demasiados: es que las oportunidades están concentradas en muy pocos lugares.”</p>
+</div>
+<section id="por-qué-emigramos" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-emigramos">¿Por qué emigramos?</h2>
+<p>Imaginemos a dos jóvenes con capacidades idénticas. Por un lado tenemos a Juan, nacido en Elías Piña, una provincia fronteriza cuya dinámica económica gira casi exclusivamente en torno al comercio informal con Haití. Por otro lado está Pedro, nacido en el Distrito Nacional, con un entorno familiar y educativo similar.</p>
+<p>La única variable que cambia es su ubicación geográfica. La pregunta es inevitable: por el simple hecho de su lugar de nacimiento, ¿qué tan abismal es la brecha de oportunidades de empleo formal entre Juan y Pedro?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-mapa-densidad-empresarial" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Mapa coroplético de la República Dominicana mostrando la densidad de empresas. El Distrito Nacional destaca en color terracota intenso con el valor más alto (36.5). Santiago (17.1) y La Altagracia (13.9) aparecen en tono ocre. El resto del país, especialmente la zona fronteriza, se muestra en verde oliva pálido, indicando baja densidad empresarial. Las etiquetas resaltan la brecha entre la capital y el interior.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mapa-densidad-empresarial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-mapa-densidad-empresarial-1.svg" class="img-fluid figure-img" style="width:100.0%" alt="Mapa coroplético de la República Dominicana mostrando la densidad de empresas. El Distrito Nacional destaca en color terracota intenso con el valor más alto (36.5). Santiago (17.1) y La Altagracia (13.9) aparecen en tono ocre. El resto del país, especialmente la zona fronteriza, se muestra en verde oliva pálido, indicando baja densidad empresarial. Las etiquetas resaltan la brecha entre la capital y el interior.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mapa-densidad-empresarial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Densidad empresarial por provincia (2024). El mapa ilustra el número de empresas formales por cada 1,000 habitantes. Se evidencia una fuerte concentración en el Distrito Nacional (36.5), contrastando drásticamente con provincias fronterizas como Elías Piña (1.4) y Pedernales (2.4).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Mientras Pedro vive en el Distrito Nacional, que cuenta con 36 empresas por cada 1,000 habitantes, Juan tan solo tiene 1.5. Es decir, las probabilidades de Pedro son 24 veces mayores a las de Juan, por el simple hecho de nacer en un lugar distinto.</p>
+<p><span class="big-number">24×</span> <span class="big-number-label"> Más oportunidades formales en el Distrito Nacional que en Elías Piña </span></p>
+<p>Si a usted le dijeran que sus posibilidades de empleo aumentarían tan significativamente por el hecho de mudarse, ¿lo dudaría?</p>
+<p>En este contexto, la elección migratoria responde a un comportamiento racional, consistente con los incentivos disponibles.</p>
+</section>
+<section id="más-allá-del-distrito-los-otros-oasis" class="level2">
+<h2 class="anchored" data-anchor-id="más-allá-del-distrito-los-otros-oasis">Más allá del Distrito: Los otros oasis</h2>
+<p>Aunque el Distrito Nacional es el primero que salta a la vista, también se observa cierta concentración en las zonas del Cibao y el Este. Por un lado, destaca Santiago con su potente tejido industrial, por el otro, La Altagracia, impulsada por la locomotora del turismo. Estos casos demuestran que es posible generar gravedad económica fuera de la capital.</p>
+<ul>
+<li><strong>Santiago</strong>: base industrial y zonas francas consolidadas<br>
+</li>
+<li><strong>La Altagracia</strong>: turismo como motor de encadenamientos productivos<br>
+</li>
+<li><strong>Distrito Nacional</strong>: servicios avanzados, mercado profundo y capital humano</li>
+</ul>
+<p>Pero estos casos son la excepción, no la norma. Son el resultado de décadas de consolidación de industrias específicas —zonas francas y hotelería— que lograron alcanzar una masa crítica capaz de retener talento y capital. Para el resto del mapa, la realidad es un verde pálido.</p>
+</section>
+<section id="las-consecuencias-la-trampa-de-la-informalidad" class="level2">
+<h2 class="anchored" data-anchor-id="las-consecuencias-la-trampa-de-la-informalidad">Las consecuencias: La trampa de la informalidad</h2>
+<p>Juan no encuentra empleo formal, pero tampoco puede o quiere migrar. ¿Se queda de brazos cruzados? Difícilmente. Ante la ausencia de oportunidades formales, la alternativa racional es la informalidad: actividades de subsistencia, ingresos inestables y una vida económica sin red de protección.</p>
+<div class="pullquote">
+<p>La informalidad no es ausencia de trabajo, es ausencia de opciones formales.</p>
+</div>
+<p>Mientras tanto, Pedro trabaja en una empresa formal, con acceso a seguridad social, pensión y seguro médico. Juan, en cambio, vive del día a día, con ingresos inciertos y una planificación de vida marcada por la vulnerabilidad. LLa geografía, por tanto, influye no solo en el salario presente, sino también en el horizonte de vida futura.</p>
+</section>
+<section id="la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa" class="level2">
+<h2 class="anchored" data-anchor-id="la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa">La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?</h2>
+<p>Si el diagnóstico es claro, ¿por qué no llevamos simplemente las empresas donde está la gente? Aquí entra en juego una de las fuerzas más tercas de la economía: las economías de aglomeración.</p>
+<p>Es un círculo que se retroalimenta: las empresas se instalan en Santo Domingo porque ahí están los trabajadores calificados, los proveedores y los consumidores (mercado). Y los trabajadores, como Pedro, se mudan a Santo Domingo porque ahí están las empresas.</p>
+<p>Romper esta inercia no es tan simple como ofrecer incentivos fiscales. Requiere crear ecosistemas donde sea rentable operar. Mientras “ser más en un sitio” siga reduciendo costos y aumentando la productividad para las empresas, la gravedad de la capital seguirá atrayendo a los Juanes del país, perpetuando los tapones en el centro y el vacío en la periferia.</p>
+<div class="data-box">
+  <div class="data-box-title">Economías de aglomeración</div>
+  <div class="data-box-content">
+    Las empresas tienden a concentrarse donde pueden compartir trabajadores calificados, proveedores y mercados. Esta concentración reduce costos y aumenta productividad, reforzando la atracción del mismo territorio.
+  </div>
+</div>
+<div class="section-divider">
+• • •
+</div>
+</section>
+<section id="conclusión" class="level2">
+<h2 class="anchored" data-anchor-id="conclusión">Conclusión</h2>
+<p>Generalmente, cuando se dice que el empleo informal en el país ronda el 56%, se ve como un dato abstracto. Pero la realidad física de ese número está ahí: en el marcado contraste entre la zona terracota del Distrito Nacional, los focos anaranjados del Este y el Cibao, y el inmenso verde pálido que cubre a las demás zonas.</p>
+<p>La concentración económica es una dinámica natural del desarrollo, no un error de diseño. El peligro radica en ignorarla. En un debate público obsesionado con los promedios nacionales, nuestra responsabilidad es recordar siempre la profunda heterogeneidad territorial que define a la República Dominicana.</p>
+<hr>
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+    
+    <div class="related-post-card">
+      <h4 class="anchored"><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+
+    <div class="related-post-card">
+      <h4 class="anchored"><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la Deuda pública dominicana</p>
+    </div>
+    
+    <div class="related-post-card">
+      <h4 class="anchored"><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <p>Por qué el PIB no mide bienestar</p>
+    </div>
+    
+  </div>
+</div>
+<div class="bibliography-section">
+  <div class="bib-title">Referencias &amp; Fuentes de Datos</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4 class="anchored">Oficina Nacional de Estadística (ONE)</h4>
+      <p>Proyecciones de Población por Región y Provincia (2000-2030).</p>
+      <a href="https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-demograficas/estimaciones-y-proyecciones-demograficas/" class="bib-link">Ver dataset ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Oficina Nacional de Estadística (ONE)</h4>
+      <p>Distribución de empresas registradas (2015-2024).</p>
+      <a href="https://reportviewer-olap.one.gob.do/ReportViewer/Report.aspx?id=/Portal/Reportes%20DEE/Distribuci%C3%B3n%20de%20empresas%20registradas%20seg%C3%BAn%20provincia.%202015-2024" class="bib-link">Ver reporte ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Krugman, P. (1991)</h4>
+      <p>"Increasing Returns and Economic Geography". Journal of Political Economy.</p>
+      <a href="https://www.jstor.org/stable/2937739" target="_blank" class="bib-link">Leer paper ↗</a>
+    </div>
+
+  </div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+// Crear barra de progreso solo si estamos en un post editorial
+
+if (document.body.classList.contains('editorial-post')) {
+
+  const progressBar = document.createElement('div');
+
+  progressBar.id = 'reading-progress';
+
+  document.body.prepend(progressBar);
+
+
+
+  // Actualizar al hacer scroll
+
+  window.addEventListener('scroll', () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    progressBar.style.width = scrollPercent + '%';
+
+  });
+
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/leo8221\.github\.io\/leonardo-mena-blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Leo8221/leonardo-mena-blog";
+    script.dataset.repoId = "R_kgDOQmnpWw";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDO...";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "es";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p style="margin: 0;">
+© 2025 Leonardo Mena · Economía Aplicada
+</p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="../../../about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
+</div>
+    <div class="nav-footer-right">
+<p><a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> · <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

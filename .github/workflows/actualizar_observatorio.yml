@@ -51,6 +51,8 @@ jobs:
             any::scales
             any::patchwork
             any::ggrepel
+            any::sf
+            any::stringi
 
       - name: Limpiar caches de Quarto
         run: |

@@ -1001,6 +1001,7 @@ body.editorial-post .related-post-card p {
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Máximo 2 líneas */
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -1011,5 +1012,146 @@ body.editorial-post .related-post-card p {
     box-shadow: none;
     border-left-width: 0;
     transform: none;
+  }
+}
+
+/* ==========================================================================
+   12. BIBLIOGRAFÍA / FUENTES (Adapted from Related Posts)
+   ========================================================================== */
+
+/* Contenedor principal */
+body.editorial-post .bibliography-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lm-border-dark);
+  margin-bottom: 3rem;
+}
+
+/* Título de la sección */
+body.editorial-post .bib-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Icono opcional antes del título (puedes usar un SVG o emoji) */
+body.editorial-post .bib-title::before {
+  content: "📚"; 
+  font-size: 1rem;
+}
+
+/* Grid de Fuentes - DESKTOP */
+body.editorial-post .bib-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas para fuentes se lee mejor */
+  gap: 1rem;
+}
+
+/* Card individual - DESKTOP */
+body.editorial-post .bib-card {
+  background: var(--lm-bg-sec);
+  border-left: 2px solid var(--lm-text-muted); /* Borde gris por defecto */
+  padding: 1rem 1.25rem;
+  transition: all 0.2s ease;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hover Effect */
+body.editorial-post .bib-card:hover {
+  background: var(--lm-bg-card);
+  box-shadow: var(--shadow-soft);
+  border-left-color: var(--lm-terracota); /* Se vuelve terracota al pasar el mouse */
+  border-left-width: 4px;
+  transform: translateX(2px); /* Desplazamiento lateral sutil */
+}
+
+/* Título de la fuente (Ej. Nombre del Paper) */
+body.editorial-post .bib-card h4 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+  color: var(--lm-text-main);
+}
+
+body.editorial-post .bib-card h4 a {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+/* Detalles (Autor, Año, Institución) */
+body.editorial-post .bib-card p {
+  font-size: 0.8rem;
+  color: var(--lm-text-soft);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Enlace externo "Ver fuente" */
+body.editorial-post .bib-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lm-terracota);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+body.editorial-post .bib-link:hover {
+  border-bottom-color: var(--lm-terracota);
+}
+
+/* ===========================================
+   RESPONSIVE: MOBILE (Lista compacta)
+   =========================================== */
+
+@media (max-width: 768px) {
+  body.editorial-post .bibliography-section {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+
+  /* En bibliografía NO ocultamos items, todos son importantes */
+  body.editorial-post .bib-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  body.editorial-post .bib-card {
+    background: transparent;
+    border-left: none;
+    border-bottom: 1px solid var(--lm-border);
+    padding: 1rem 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  
+  body.editorial-post .bib-card:last-child {
+    border-bottom: none;
+  }
+
+  body.editorial-post .bib-card:hover {
+    transform: none;
+    border-left: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Ajuste tipográfico mobile */
+  body.editorial-post .bib-card h4 {
+    font-size: 0.9rem;
   }
 }
