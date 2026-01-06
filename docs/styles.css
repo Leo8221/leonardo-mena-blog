@@ -861,3 +861,155 @@ audio {
     mix-blend-mode: normal;
     filter: invert(90%) hue-rotate(180deg); /* Opcional: invierte colores si se ve muy blanco */
 }
+
+/* ==========================================================================
+   11. ARTÍCULOS RELACIONADOS (Related Posts)
+   ========================================================================== */
+
+/* Contenedor principal */
+body.editorial-post .related-posts {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lm-border-dark);
+  margin-bottom: 3rem; /* Espacio antes de comentarios */
+}
+
+/* Título de la sección */
+body.editorial-post .related-posts-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid de artículos - DESKTOP */
+body.editorial-post .related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card individual - DESKTOP */
+body.editorial-post .related-post-card {
+  background: var(--lm-bg-sec);
+  border-left: 3px solid var(--lm-terracota);
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+body.editorial-post .related-post-card:hover {
+  background: var(--lm-bg-card);
+  box-shadow: var(--shadow-soft);
+  border-left-width: 4px;
+  transform: translateY(-1px);
+}
+
+/* Título del artículo relacionado */
+body.editorial-post .related-post-card h4 {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+body.editorial-post .related-post-card h4 a {
+  color: var(--lm-text-main);
+  border: none;
+  text-decoration: none;
+}
+
+body.editorial-post .related-post-card h4 a:hover {
+  color: var(--lm-terracota);
+}
+
+/* Descripción */
+body.editorial-post .related-post-card p {
+  font-size: 0.85rem;
+  color: var(--lm-text-soft);
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Tablet intermedio */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body.editorial-post .related-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* ===========================================
+   RESPONSIVE: MOBILE (Lista compacta + SOLO 2 artículos)
+   =========================================== */
+
+@media (max-width: 768px) {
+  /* Menos espacio arriba */
+  body.editorial-post .related-posts {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Ocultar el tercer artículo y siguientes */
+  body.editorial-post .related-post-card:nth-child(n+3) {
+    display: none;
+  }
+  
+  /* Lista vertical simple (NO grid) */
+  body.editorial-post .related-posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Cards como lista compacta */
+  body.editorial-post .related-post-card {
+    background: transparent;
+    border-left: none;
+    border-bottom: 1px solid var(--lm-border);
+    padding: 1.25rem 0;
+    margin: 0;
+  }
+  
+  /* Último item sin borde */
+  body.editorial-post .related-post-card:last-child {
+    border-bottom: none;
+  }
+  
+  /* Título más compacto en mobile */
+  body.editorial-post .related-post-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* Indicador visual sutil (flecha) */
+  body.editorial-post .related-post-card h4::before {
+    content: "→ ";
+    color: var(--lm-terracota);
+    font-weight: 700;
+    margin-right: 0.35rem;
+  }
+  
+  /* Descripción compacta */
+  body.editorial-post .related-post-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Máximo 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Quitar efectos hover en mobile */
+  body.editorial-post .related-post-card:hover {
+    background: transparent;
+    box-shadow: none;
+    border-left-width: 0;
+    transform: none;
+  }
+}

@@ -58,7 +58,7 @@ website:
     left: |
       <p style="margin: 0;">© 2025 Leonardo Mena · Economía Aplicada</p>
     center: |
-      <a href="about.html">Sobre mí</a> · 
+      <a href="/about.html">Sobre mí</a> · 
       <a href="mailto:leonardomena824@gmail.com">Contacto</a>
     right: |
       <a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · 
