@@ -101,7 +101,7 @@ theme_lm_map <- function() {
 # 2. MAPA
 # ------------------------------------------------------------------------------
 mapa_rd <- st_read(
-  "C:\\Users\\leona\\OneDrive\\Escritorio\\mapa_rd\\provincia\\PROVCenso2010.shp",
+  "../../../mapa_rd/provincia/PROVCenso2010.shp",
   quiet = TRUE
 )
 
