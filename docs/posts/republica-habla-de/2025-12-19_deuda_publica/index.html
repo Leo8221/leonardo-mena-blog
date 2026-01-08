@@ -45,22 +45,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0c6d739406eb69104e9b854779ce4f2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
-  "collapse-after": 3,
+  "collapse-after": 1,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 5,
   "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
+    "/"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -492,20 +489,35 @@ El objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impi
 
 </main> <!-- /main -->
 <script>
+
 // Crear barra de progreso solo si estamos en un post editorial
+
 if (document.body.classList.contains('editorial-post')) {
+
   const progressBar = document.createElement('div');
+
   progressBar.id = 'reading-progress';
+
   document.body.prepend(progressBar);
 
+
+
   // Actualizar al hacer scroll
+
   window.addEventListener('scroll', () => {
+
     const scrollTop = window.scrollY;
+
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
     const scrollPercent = (scrollTop / docHeight) * 100;
+
     progressBar.style.width = scrollPercent + '%';
+
   });
+
 }
+
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

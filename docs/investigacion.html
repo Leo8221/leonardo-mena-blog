@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Working papers, policy briefs y análisis econométricos sobre el mercado dominicano.">
 
-<title>investigacion – Leonardo Mena</title>
+<title>Investigación – Leonardo Mena</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./image/logo_leonardo_mena.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,22 +46,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0c6d739406eb69104e9b854779ce4f2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
-  "collapse-after": 3,
+  "collapse-after": 1,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
+  "limit": 5,
   "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
+    "/"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -73,6 +73,63 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-papers-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-type','listing-color','listing-description','listing-pdf_url','listing-btn_text','listing-code_url',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-type","listing-color","listing-description","listing-pdf_url","listing-btn_text","listing-code_url"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-papers-list'] = new List('listing-papers-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-briefs-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-pdf_url','listing-status',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-pdf_url","listing-status"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-briefs-list'] = new List('listing-briefs-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
 
 <script type="text/javascript">
@@ -84,11 +141,56 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Leonardo Mena">
+<meta property="og:title" content="Investigación – Leonardo Mena">
+<meta property="og:description" content="Working papers, policy briefs y análisis econométricos sobre el mercado dominicano.">
 <meta property="og:site_name" content="Leonardo Mena">
-<meta name="twitter:title" content="Leonardo Mena">
+<meta name="twitter:title" content="Investigación – Leonardo Mena">
+<meta name="twitter:description" content="Working papers, policy briefs y análisis econométricos sobre el mercado dominicano.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -334,18 +436,168 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link active" data-scroll-target="#working-papers">Working Papers</a></li>
+  <li><a href="#policy-briefs" id="toc-policy-briefs" class="nav-link" data-scroll-target="#policy-briefs">Policy Briefs</a></li>
+  <li><a href="#stack-tecnológico" id="toc-stack-tecnológico" class="nav-link" data-scroll-target="#stack-tecnológico">Stack Tecnológico</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Investigación</h1>
+</div>
+
+<div>
+  <div class="description">
+    Working papers, policy briefs y análisis econométricos sobre el mercado dominicano.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+  <p style="font-family: 'Crimson Pro', serif; font-size: 1.4rem; color: var(--lm-text-soft); font-style: italic;">
+    "Modelando la realidad para informar la toma de decisiones."
+  </p>
+  <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--lm-text-muted);">
+    Organización Industrial · Econometría Aplicada · Mercados Energéticos
+  </p>
+</div>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<p>Investigaciones en curso, presentadas con enfoque editorial.</p>
+<div id="listing-papers-list" class="quarto-listing quarto-listing-container-custom">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-papers-list-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-papers-list'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+      <option value="index" data-direction="asc">Por defecto</option>
+      <option value="listing-title" data-direction="asc">
+        Título
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Fecha - Más antiguo
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Fecha - Más reciente
+      </option>
+      <option value="listing-type" data-direction="asc">
+        type
+      </option>
+      <option value="listing-color" data-direction="asc">
+        color
+      </option>
+      <option value="listing-description" data-direction="asc">
+        Descripción
+      </option>
+      <option value="listing-pdf_url" data-direction="asc">
+        pdf_url
+      </option>
+      <option value="listing-btn_text" data-direction="asc">
+        btn_text
+      </option>
+      <option value="listing-code_url" data-direction="asc">
+        code_url
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
+</div>
+<div class="research-grid">
+<div class="research-card" style="">
+<div style="margin-bottom: 10px;">
+<p><span style="background: var(--lm-terracota); color: white; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700;"> Working Paper </span> <span style="font-size: 0.7rem; color: var(--lm-text-muted); margin-left: 10px;"> 1 ene 2026 </span></p>
+</div>
+<h4 style="margin-bottom: 10px;" class="anchored">
+Análisis Estructural del Mercado Eléctrico Dominicano
+</h4>
+<p style="margin-bottom: 15px;">
+Evidencia de poder de mercado mediante el modelo de Cournot (2020-2025). Identificación de ineficiencias asignativas en horas pico.
+</p>
+<div style="display: flex; gap: 10px; margin-top: 15px;">
+<p><a href="papers/tesis_cournot_branding.pdf" target="_blank" class="btn-research-primary"> <i class="bi bi-file-earmark-pdf-fill"></i> Leer Documento Completo </a></p>
+</div>
+</div>
+<div class="research-card" style="">
+<div style="margin-bottom: 10px;">
+<p><span style="background: var(--lm-olive); color: white; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700;"> Data Project </span> <span style="font-size: 0.7rem; color: var(--lm-text-muted); margin-left: 10px;"> 1 ene 2025 </span></p>
+</div>
+<h4 style="margin-bottom: 10px;" class="anchored">
+Elasticidad Precio de la Demanda
+</h4>
+<p style="margin-bottom: 15px;">
+Estimación con microdatos de la ENGRH usando variables instrumentales para corregir endogeneidad.
+</p>
+<div style="display: flex; gap: 10px; margin-top: 15px;">
+<p><a href="https://github.com/Leo8221" target="_blank" class="btn-research-secondary"> <i class="bi bi-github"></i> Ver Código en R </a></p>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No hay resultados</div>
+</div>
+</section>
+<section id="policy-briefs" class="level2">
+<h2 class="anchored" data-anchor-id="policy-briefs">Policy Briefs</h2>
+<p>Documentos de síntesis para política pública.</p>
+<div id="listing-briefs-list" class="quarto-listing quarto-listing-container-custom">
+<div class="research-grid">
+<div class="research-card" style="">
+<h4 style="margin-bottom: 10px;" class="anchored">
+PB-001: Dinámicas de Precios Spot
+</h4>
+<p style="margin-bottom: 15px;">
+Resumen ejecutivo sobre los hallazgos del modelo de Cournot y recomendaciones regulatorias.
+</p>
+<div style="display: flex; gap: 10px; margin-top: 15px;">
+<p><a href="briefs/brief_001_precios.pdf" target="_blank" class="bib-link"> ⬇ Descargar Brief (PDF) </a></p>
+</div>
+</div>
+<div class="research-card" style="">
+<h4 style="margin-bottom: 10px;" class="anchored">
+PB-002: Impacto Inflacionario
+</h4>
+<p style="margin-bottom: 15px;">
+Análisis de transmisión de costos energéticos al IPC general.
+</p>
+<div style="display: flex; gap: 10px; margin-top: 15px;">
+<p><span style="font-size: 0.75rem; color: var(--lm-text-muted); font-style: italic;"> (En desarrollo) </span></p>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No hay resultados</div>
+</div>
+</section>
+<section id="stack-tecnológico" class="level2">
+<h2 class="anchored" data-anchor-id="stack-tecnológico">Stack Tecnológico</h2>
+<p>power BI</p>
 
 
 
-
-
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,51 @@
+---
+title: "Investigación"
+description: "Working papers, policy briefs y análisis econométricos sobre el mercado dominicano."
+format:
+  html:
+    toc: true
+    toc-title: "Contenido"
+
+# CONFIGURACIÓN DE LISTINGS
+listing:
+  - id: papers-list
+    contents: datos/papers.yml #
+    template: research.ejs     
+    sort: "date desc"
+    page-size: 6             
+    filter-ui: true     
+    sort-ui: true
+    
+  - id: briefs-list
+    contents: datos/briefs.yml
+    template: research.ejs
+    sort: "title asc"
+    page-size: 10
+---
+
+```{=html}
+<div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+  <p style="font-family: 'Crimson Pro', serif; font-size: 1.4rem; color: var(--lm-text-soft); font-style: italic;">
+    "Modelando la realidad para informar la toma de decisiones."
+  </p>
+  <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--lm-text-muted);">
+    Organización Industrial · Econometría Aplicada · Mercados Energéticos
+  </p>
+</div>
+```
+## Working Papers
+
+Investigaciones en curso, presentadas con enfoque editorial.
+
+::: {#papers-list}
+:::
+
+## Policy Briefs
+
+Documentos de síntesis para política pública.
+
+::: {#briefs-list}
+:::
+
+## Stack Tecnológico
+power BI

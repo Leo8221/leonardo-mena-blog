@@ -14,6 +14,13 @@ website:
   site-url: "https://leo8221.github.io/leonardo-mena-blog/"
   google-analytics: "G-W3JC0G3RJ1"
   favicon: image/logo_leonardo_mena.png
+  search:
+    location: navbar
+    type: overlay
+    limit: 5
+    collapse-after: 1
+    keyboard-shortcut: ["/"]
+
 
   # Barra de navegación
   navbar:

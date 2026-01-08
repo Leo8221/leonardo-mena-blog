@@ -1,0 +1,8 @@
+- title: "PB-001: Dinámicas de Precios Spot"
+  description: "Resumen ejecutivo sobre los hallazgos del modelo de Cournot y recomendaciones regulatorias."
+  pdf_url: "briefs/brief_001_precios.pdf"
+  status: "published"
+
+- title: "PB-002: Impacto Inflacionario"
+  description: "Análisis de transmisión de costos energéticos al IPC general."
+  status: "dev" # Esto nos servirá para mostrar "En desarrollo"
