@@ -7,10 +7,6 @@ format:
   html:
     toc: true
     code-fold: true
-  pdf:  # <--- ESTO GENERA EL PDF DESCARGABLE
-    toc: true
-    geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
-    mainfont: "Times New Roman"
 ---
 
 ::: {.callout-tip}
