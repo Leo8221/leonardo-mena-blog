@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "research/reporte-inclusion.html",
+    "href": "research/reporte-inclusion.html",
+    "title": "Reporte de Inclusión Financiera",
+    "section": "",
+    "text": "TipDescargar Versión PDF\n\n\n\nEste reporte está disponible para descarga con maquetación oficial. 📥 Descargar PDF Generado"
+  },
+  {
+    "objectID": "research/reporte-inclusion.html#introducción",
+    "href": "research/reporte-inclusion.html#introducción",
+    "title": "Reporte de Inclusión Financiera",
+    "section": "1. Introducción",
+    "text": "1. Introducción\nA diferencia del informe oficial, este análisis se centra en…"
+  },
+  {
     "objectID": "republica-habla-de.html",
     "href": "republica-habla-de.html",
     "title": "La República habla de",
@@ -102,21 +116,28 @@
     "href": "investigacion.html#working-papers",
     "title": "Investigación",
     "section": "Working Papers",
-    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        type\n      \n      \n        color\n      \n      \n        Descripción\n      \n      \n        pdf_url\n      \n      \n        btn_text\n      \n      \n        code_url\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nAnálisis Estructural del Mercado Eléctrico Dominicano\n\n\nEvidencia de poder de mercado mediante el modelo de Cournot (2020-2025). Identificación de ineficiencias asignativas en horas pico.\n\n\n  Leer Documento Completo \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio de la Demanda\n\n\nEstimación con microdatos de la ENGRH usando variables instrumentales para corregir endogeneidad.\n\n\n  Ver Código en R \n\n\n\nNo hay resultados"
+    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nMonetary Policy Transmission in DR\n\n\nVAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector.\n\n\n  Read Abstract \n  Read Abstract \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio del Sector Eléctrico\n\n\nEstimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse.\n\n\n  Ver Código \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "investigacion.html#policy-briefs",
     "href": "investigacion.html#policy-briefs",
     "title": "Investigación",
     "section": "Policy Briefs",
-    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre los hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n ⬇ Descargar Brief (PDF) \n\n\n\n\nPB-002: Impacto Inflacionario\n\n\nAnálisis de transmisión de costos energéticos al IPC general.\n\n\n (En desarrollo) \n\n\n\nNo hay resultados"
+    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        status\n      \n    \n  \n\n\n\n\n Policy Brief   1 ene 2026 \n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n  Ver Documento \n\n\n\n\n Policy Brief   Invalid Date \n\n\nPB-002: Impacto Fiscal del Subsidio\n\n\nAnálisis preliminar de la carga fiscal proyectada para el Q3 2026.\n\n\n(En desarrollo)\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "investigacion.html#reportes-técnicos",
+    "href": "investigacion.html#reportes-técnicos",
+    "title": "Investigación",
+    "section": "Reportes Técnicos",
+    "text": "Reportes Técnicos\nProductos de análisis elaborados a partir de microdatos y fuentes oficiales. Procesamiento, limpieza y visualización propios.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n\n\n\n\n Reporte Técnico   1 ene 2026 \n\n\nReporte de Inclusión Financiera 2025\n\n\nProcesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica.\n\n\n  Ver Reporte Interactivo \n  Ver Reporte Interactivo \n\n\n\nNo hay resultados"
   },
   {
     "objectID": "investigacion.html#stack-tecnológico",
     "href": "investigacion.html#stack-tecnológico",
     "title": "Investigación",
     "section": "Stack Tecnológico",
-    "text": "Stack Tecnológico\npower BI"
+    "text": "Stack Tecnológico\nHerramientas utilizadas en el procesamiento de estos datos.\n\n  Power BI    R / Tidyverse    SQL"
   },
   {
     "objectID": "fundamentos.html",
@@ -313,6 +334,27 @@
     "title": "La República en un gráfico",
     "section": "",
     "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "research/paper-modelo.html",
+    "href": "research/paper-modelo.html",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "",
+    "text": "📄 Full Paper: This paper is currently under review. Download Draft PDF"
+  },
+  {
+    "objectID": "research/paper-modelo.html#abstract",
+    "href": "research/paper-modelo.html#abstract",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Abstract",
+    "text": "Abstract\nHere you write the abstract in English. This text will be indexed by Google. Because lang: en is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog."
+  },
+  {
+    "objectID": "research/paper-modelo.html#methodology",
+    "href": "research/paper-modelo.html#methodology",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Methodology",
+    "text": "Methodology\nWe utilize a Vector Autoregression (VAR) model to identify the shocks…\n\n\n\n\n\nImpulse Response Function (Placeholder)"
   },
   {
     "objectID": "series.html",

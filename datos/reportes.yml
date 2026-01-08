@@ -1,0 +1,13 @@
+- title: "Reporte de Inclusión Financiera 2025"
+  date: "Ene 2026"
+  type: "Reporte Técnico"   # Esta es la etiqueta que se verá
+  color: "#2a9d8f"          # Verde esmeralda 
+  description: "Procesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica."
+  
+  # TU PRODUCTO (La página web del reporte)
+  pdf_url: "research/reporte-inclusion.qmd" 
+  btn_text: "Ver Reporte Interactivo"
+  
+  # LA MATERIA PRIMA (Opcional: enlace al CSV o repositorio de datos)
+  code_url: "https://github.com/Leo8221/tu-repo"
+  btn_text_2: "Ver Código y Datos"

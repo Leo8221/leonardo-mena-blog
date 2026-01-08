@@ -1,0 +1,26 @@
+---
+title: "Reporte de Inclusión Financiera"
+subtitle: "Análisis de microdatos ENIF 2025"
+author: "Leonardo Mena"
+date: 2026-01-08
+format: 
+  html:
+    toc: true
+    code-fold: true
+  pdf:  # <--- ESTO GENERA EL PDF DESCARGABLE
+    toc: true
+    geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
+    mainfont: "Times New Roman"
+---
+
+::: {.callout-tip}
+## Descargar Versión PDF
+Este reporte está disponible para descarga con maquetación oficial.
+[📥 Descargar PDF Generado](reporte-inclusion.pdf)
+:::
+
+## 1. Introducción
+A diferencia del informe oficial, este análisis se centra en...
+
+```{r}
+# Aquí va tu código de R/Python que genera los gráficos

@@ -1,0 +1,31 @@
+---
+title: "Monetary Policy Transmission in the Dominican Republic"
+description: "An empirical analysis using VAR models (2010-2025)"
+date: 2026-01-08
+lang: en           # <--- Le dice a Google que esta página es inglés
+author: "Leonardo Mena"
+categories: [Macroeconomics, R, Econometrics]
+format:
+  html:
+    toc: true
+---
+
+::: {.callout-note appearance="simple" icon=false}
+📄 **Full Paper:** This paper is currently under review. [Download Draft PDF](#)
+:::
+
+## Abstract
+
+Here you write the abstract in English. This text will be indexed by Google. Because `lang: en` is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog.
+
+## Methodology
+
+We utilize a Vector Autoregression (VAR) model to identify the shocks...
+
+```{r}
+#| echo: false
+#| fig-cap: "Impulse Response Function (Placeholder)"
+
+# Un gráfico dummy para ver cómo queda
+plot(pressure, col="#c86448", pch=19, main="Interest Rate Response")
+```

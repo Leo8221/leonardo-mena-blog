@@ -1216,6 +1216,41 @@ body.editorial-post .bib-link:hover {
     }
 }
 
+/* Botones de Investigación */
+.btn-research-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: var(--lm-terracota);
+  border: 1px solid var(--lm-terracota);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.btn-research-primary:hover {
+  background-color: var(--lm-terracota);
+  color: white !important;
+}
+
+.btn-research-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--lm-text-muted);
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.btn-research-secondary:hover {
+  color: #000;
+}
+
 
 /* ==========================================================================
    14. BARRA DE BÚSQUEDA

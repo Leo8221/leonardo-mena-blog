@@ -44,8 +44,8 @@ website:
             href: republica-en-un-grafico.qmd  
       - href: categorias.qmd
         text: Categorías
-#      - href: investigacion.qmd # sección de Papers 
-#        text: Investigación
+ #     - href: investigacion.qmd # sección de Papers 
+  #      text: Investigación
       - href: archivo.qmd
         text: Archivo
     right:
@@ -55,6 +55,7 @@ website:
       - href: observatorio.qmd
         text: "Observatorio 📊" 
         icon: graph-up          
+
 
   # Configuración para compartir en redes
   open-graph: true

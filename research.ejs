@@ -1,38 +1,39 @@
-<div class="research-grid"> <% items.forEach(function(item) { %>
-<div class="research-card" style="<%= item.type === 'Policy Brief' ? 'border-left-color: var(--lm-olive);' : '' %>">
+<div class="research-grid list">
+<% items.forEach(function(item) { %>
+  
+  <div class="research-card" <%= metadataAttrs(item) %> style="<%= item.type === 'Policy Brief' ? 'border-left-color: var(--lm-olive);' : '' %>">
 <% if (item.type) { %>
-<div style="margin-bottom: 10px;">
-<span style="background: <%= item.color %>; color: white; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700;">
+<div style="margin-bottom: 10px; display: flex; align-items: baseline;">
+<span class="type" style="background: <%= item.color %>; color: white; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700;">
 <%= item.type %>
 </span>
-<span style="font-size: 0.7rem; color: var(--lm-text-muted); margin-left: 10px;">
+<span class="date" style="font-size: 0.7rem; color: var(--lm-text-muted); margin-left: 10px;">
 <%= item.date %>
 </span>
 </div>
 <% } %>
-<h4 style="margin-bottom: 10px;"><%= item.title %></h4>
-<p style="margin-bottom: 15px;"><%= item.description %></p>
-<div style="display: flex; gap: 10px; margin-top: 15px;">
+
+<h4 class="title" style="margin-bottom: 10px;"><%= item.title %></h4>
+
+<p class="description" style="margin-bottom: 15px;"><%= item.description %></p>
+
+<div style="display: flex; gap: 10px; margin-top: 15px; align-items: center; flex-wrap: wrap;">
 <% if (item.pdf_url) { %>
 <% if (item.type) { %>
 <a href="<%= item.pdf_url %>" target="_blank" class="btn-research-primary">
-<i class="bi bi-file-earmark-pdf-fill"></i> <%= item.btn_text %>
+<i class="bi bi-file-earmark-pdf-fill"></i> <%= item.btn_text || 'Ver Documento' %>
 </a>
 <% } else { %>
-<a href="<%= item.pdf_url %>" target="_blank" class="bib-link">
-⬇ Descargar Brief (PDF)
-</a>
+<a href="<%= item.pdf_url %>" target="_blank" class="bib-link">⬇ Descargar PDF</a>
 <% } %>
 <% } %>
 <% if (item.code_url) { %>
 <a href="<%= item.code_url %>" target="_blank" class="btn-research-secondary">
-<i class="bi bi-github"></i> <%= item.btn_text %>
+<i class="bi bi-github"></i> <%= item.btn_text || 'Ver Código' %>
 </a>
 <% } %>
 <% if (item.status === 'dev') { %>
-<span style="font-size: 0.75rem; color: var(--lm-text-muted); font-style: italic;">
-(En desarrollo)
-</span>
+<span class="status" style="font-size: 0.75rem; color: var(--lm-text-muted); font-style: italic; margin-left: auto;">(En desarrollo)</span>
 <% } %>
 </div>
 </div>

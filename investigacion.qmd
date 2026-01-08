@@ -9,9 +9,10 @@ format:
 # CONFIGURACIÓN DE LISTINGS
 listing:
   - id: papers-list
-    contents: datos/papers.yml #
+    contents: datos/papers.yml 
     template: research.ejs     
     sort: "date desc"
+    fields: [date, status]
     page-size: 6             
     filter-ui: true     
     sort-ui: true
@@ -20,7 +21,19 @@ listing:
     contents: datos/briefs.yml
     template: research.ejs
     sort: "title asc"
+    fields: [date, status]
+    filter-ui: false
+    sort-ui: true
     page-size: 10
+
+  - id: reportes-list
+    contents: datos/reportes.yml
+    template: research.ejs
+    sort: "date desc"
+    fields: [date,status]
+    filter-ui: false
+    sort-ui: true
+    page-size: 6
 ---
 
 ```{=html}
@@ -47,5 +60,26 @@ Documentos de síntesis para política pública.
 ::: {#briefs-list}
 :::
 
+## Reportes Técnicos
+Productos de análisis elaborados a partir de microdatos y fuentes oficiales.
+*Procesamiento, limpieza y visualización propios.*
+
+::: {#reportes-list}
+:::
+
 ## Stack Tecnológico
-power BI
+
+Herramientas utilizadas en el procesamiento de estos datos.
+
+::: {style="display: flex; gap: 10px; flex-wrap: wrap;"}
+<span style="background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+  <i class="bi bi-bar-chart-fill" style="color:#f2c811;"></i> Power BI
+</span>
+<span style="background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+  <i class="bi bi-r-circle" style="color:#276dc3;"></i> R / Tidyverse
+</span>
+<span style="background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+  <i class="bi bi-database" style="color:#666;"></i> SQL
+</span>
+
+:::

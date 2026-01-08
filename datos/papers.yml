@@ -1,15 +1,28 @@
-- title: "Análisis Estructural del Mercado Eléctrico Dominicano"
-  date: "Enero 2026"
+# EJEMPLO 1: Paper Académico en Inglés (Estrategia SEO)
+# -----------------------------------------------------
+- title: "Monetary Policy Transmission in DR"  # Título en Inglés
+  date: "Jan 2026"
   type: "Working Paper"
-  color: "var(--lm-terracota)"
-  description: "Evidencia de poder de mercado mediante el modelo de Cournot (2020-2025). Identificación de ineficiencias asignativas en horas pico."
-  pdf_url: "papers/tesis_cournot_branding.pdf"
-  btn_text: "Leer Documento Completo"
-
-- title: "Elasticidad Precio de la Demanda"
-  date: "Diciembre 2025"
-  type: "Data Project"
-  color: "var(--lm-olive)"
-  description: "Estimación con microdatos de la ENGRH usando variables instrumentales para corregir endogeneidad."
+  color: "#c86448"                             # color 'Terracota' (hex)
+  description: "VAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector." # Descripción en Inglés
+  
+ # Aquí enlazamos a la página web (.qmd)
+  pdf_url: "research/paper-modelo.qmd"    
+  btn_text: "Read Abstract"                    # Botón en Inglés
+  
+  # Opcional: Si hay código público
   code_url: "https://github.com/Leo8221"
-  btn_text: "Ver Código en R"
+
+
+# EJEMPLO 2: Proyecto de Datos en Español
+# -----------------------------------------------------
+- title: "Elasticidad Precio del Sector Eléctrico"
+  date: "Dic 2025"
+  type: "Data Project"
+  color: "#556b2f"                             # color 'Olive' (hex)
+  description: "Estimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse."
+  
+  # En este caso, el botón lleva directo al repo, no hay PDF/Web
+  pdf_url: ""                                  
+  code_url: "https://github.com/Leo8221"
+  btn_text: "Ver Código"
