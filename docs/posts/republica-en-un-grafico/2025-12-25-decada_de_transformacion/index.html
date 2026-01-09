@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-0c6d739406eb69104e9b854779ce4f2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -368,7 +368,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 <div class="quarto-title">
 <h1 class="title">La Republica en un gráfico: 10 años de transformación</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">La republica en un gráfico</div>
+    <div class="quarto-category">La república en un gráfico</div>
     <div class="quarto-category">Desarrollo</div>
   </div>
   </div>
@@ -511,26 +511,72 @@ Figura&nbsp;1: Variación en puntos porcentuales de la canasta familiar dominica
     
   </div>
 </div>
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos &amp; Referencias Teóricas</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4 class="anchored">Banco Central R.D. (Precios)</h4>
+      <p>Anexos documento metodológico IPC base anual octubre 2019 – septiembre 2020.</p>
+      <a href="https://www.bancentral.gov.do/a/d/2534-precios" target="_blank" class="bib-link">Descargar Excel oficial ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Indotel / Datos Abiertos</h4>
+      <p>Series Históricas de Cuentas de Internet y Teledensidad (2010-2024).</p>
+      <a href="https://indotel.gob.do/transparencia/documentos/reporte-de-indicadores-estadisticos-trimestrales/" target="_blank" class="bib-link">Ver series históricas ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Anker, R. (2011) / UMass Amherst</h4>
+      <p>"Engel’s Law Around the World 150 Years Later". Análisis global que confirma la caída del gasto en alimentos al subir el ingreso.</p>
+      <a href="https://peri.umass.edu/wp-content/uploads/joomla/images/publication/WP247.pdf" target="_blank" class="bib-link">Leer Paper (PDF) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Rodrik, D. (2017)</h4>
+      <p>"Structural Change, Fundamentals, and Growth". Teoría sobre cómo las economías se mueven de agricultura a servicios modernos.</p>
+      <a href="https://openknowledge.worldbank.org/entities/publication/ad74ec10-9c95-5da9-8b82-a7940a9c8ce4" target="_blank" class="bib-link">Leer Paper (PDF) ↗</a>
+    </div>
+
+  </div>
+</div>
 
 
 </section>
 
 </main> <!-- /main -->
 <script>
+
 // Crear barra de progreso solo si estamos en un post editorial
+
 if (document.body.classList.contains('editorial-post')) {
+
   const progressBar = document.createElement('div');
+
   progressBar.id = 'reading-progress';
+
   document.body.prepend(progressBar);
 
+
+
   // Actualizar al hacer scroll
+
   window.addEventListener('scroll', () => {
+
     const scrollTop = window.scrollY;
+
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
     const scrollPercent = (scrollTop / docHeight) * 100;
+
     progressBar.style.width = scrollPercent + '%';
+
   });
+
 }
+
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

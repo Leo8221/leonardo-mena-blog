@@ -7,7 +7,7 @@ image: "portada_canasta_familiar.png"
 twitter-card:
   image: "portada_canasta_familiar.png"
 categories: 
-  - "La republica en un gráfico"
+  - "La república en un gráfico"
   - "Desarrollo"
 draft: false
 body-class: editorial-post
@@ -210,6 +210,40 @@ La próxima vez que escuches que la inflación subió o bajó, recuerda que detr
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     
+  </div>
+</div>
+```
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos & Referencias Teóricas</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Banco Central R.D. (Precios)</h4>
+      <p>Anexos documento metodológico IPC base anual octubre 2019 – septiembre 2020.</p>
+      <a href="https://www.bancentral.gov.do/a/d/2534-precios" target="_blank" class="bib-link">Descargar Excel oficial ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Indotel / Datos Abiertos</h4>
+      <p>Series Históricas de Cuentas de Internet y Teledensidad (2010-2024).</p>
+      <a href="https://indotel.gob.do/transparencia/documentos/reporte-de-indicadores-estadisticos-trimestrales/" target="_blank" class="bib-link">Ver series históricas ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Anker, R. (2011) / UMass Amherst</h4>
+      <p>"Engel’s Law Around the World 150 Years Later". Análisis global que confirma la caída del gasto en alimentos al subir el ingreso.</p>
+      <a href="https://peri.umass.edu/wp-content/uploads/joomla/images/publication/WP247.pdf" target="_blank" class="bib-link">Leer Paper (PDF) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Rodrik, D. (2017)</h4>
+      <p>"Structural Change, Fundamentals, and Growth". Teoría sobre cómo las economías se mueven de agricultura a servicios modernos.</p>
+      <a href="https://openknowledge.worldbank.org/entities/publication/ad74ec10-9c95-5da9-8b82-a7940a9c8ce4" target="_blank" class="bib-link">Leer Paper (PDF) ↗</a>
+    </div>
+
   </div>
 </div>
 ```

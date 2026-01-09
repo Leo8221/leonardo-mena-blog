@@ -1,66 +1,31 @@
 [
   {
-    "objectID": "mitos-economicos.html",
-    "href": "mitos-economicos.html",
-    "title": "Mitos económicos",
+    "objectID": "research/reporte-inclusion.html",
+    "href": "research/reporte-inclusion.html",
+    "title": "Reporte de Inclusión Financiera",
     "section": "",
-    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "TipDescargar Versión PDF\n\n\n\nEste reporte está disponible para descarga con maquetación oficial. 📥 Descargar PDF Generado"
   },
   {
-    "objectID": "research/paper-modelo.html",
-    "href": "research/paper-modelo.html",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "objectID": "research/reporte-inclusion.html#introducción",
+    "href": "research/reporte-inclusion.html#introducción",
+    "title": "Reporte de Inclusión Financiera",
+    "section": "1. Introducción",
+    "text": "1. Introducción\nA diferencia del informe oficial, este análisis se centra en…"
+  },
+  {
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
     "section": "",
-    "text": "📄 Full Paper: This paper is currently under review. Download Draft PDF"
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "research/paper-modelo.html#abstract",
-    "href": "research/paper-modelo.html#abstract",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
-    "section": "Abstract",
-    "text": "Abstract\nHere you write the abstract in English. This text will be indexed by Google. Because lang: en is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog."
-  },
-  {
-    "objectID": "research/paper-modelo.html#methodology",
-    "href": "research/paper-modelo.html#methodology",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
-    "section": "Methodology",
-    "text": "Methodology\nWe utilize a Vector Autoregression (VAR) model to identify the shocks…\n\n\n\n\n\nImpulse Response Function (Placeholder)"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
+    "objectID": "predecesores.html",
+    "href": "predecesores.html",
+    "title": "Mis predecesores",
     "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
-  },
-  {
-    "objectID": "about.html#sobre-este-blog",
-    "href": "about.html#sobre-este-blog",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
-  },
-  {
-    "objectID": "about.html#quién-escribe",
-    "href": "about.html#quién-escribe",
-    "title": "Sobre mí",
-    "section": "Quién escribe",
-    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.\n\nNo escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.\n\n\nCompromiso\nEn cada artículo encontrarás:\n\nTransparencia: Datos con fuente y opiniones claramente identificadas.\nClaridad: Lenguaje accesible, sin sacrificar precisión técnica.\nContexto: Análisis siempre anclado a la realidad de la República Dominicana."
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
-  },
-  {
-    "objectID": "archivo.html#todas-las-publicaciones",
-    "href": "archivo.html#todas-las-publicaciones",
-    "title": "Archivo",
-    "section": "Todas las publicaciones",
-    "text": "Todas las publicaciones"
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
@@ -140,53 +105,39 @@
     "text": "La Implicación para el Blog\nA partir de ahora, cada vez que publique un análisis de coyuntura, estará anclado a este esquema. Mis lecturas siempre intentarán conectar Dato → Mecanismo → Implicación, evitando quedarme en la simple opinión sobre el titular del día. Este mapa es el filtro por el que pasarán los números.\n\n• • •\n\n¿Usas un mapa mental parecido? Cuéntame en los comentarios.\nNota: Los próximos gráficos explorarán cada caja de este diagrama en detalle."
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "objectID": "investigacion.html",
+    "href": "investigacion.html",
+    "title": "Investigación",
     "section": "",
-    "text": "Escuchar artículo (6 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
+    "text": "\"Modelando la realidad para informar la toma de decisiones.\"\n  \n  \n    Organización Industrial · Econometría Aplicada · Mercados Energéticos"
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "La magnitud de la deuda dominicana",
-    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce “saludable”.\n\n\n\n\n\n\n\nDeuda Sobre PIB en Latinoamérica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
+    "objectID": "investigacion.html#working-papers",
+    "href": "investigacion.html#working-papers",
+    "title": "Investigación",
+    "section": "Working Papers",
+    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nMonetary Policy Transmission in DR\n\n\nVAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector.\n\n\n  Read Abstract \n  Read Abstract \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio del Sector Eléctrico\n\n\nEstimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse.\n\n\n  Ver Código \n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones",
-    "text": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de pagar la cuota del préstamo, usted paga una parte para devolver el dinero solicitado (capital) y otra por la disponibilidad del dinero (intereses). La deuda pública funciona igual. El detalle es que la suma de ambos conceptos (capital más intereses) se agrupa bajo el nombre de “servicio de la deuda”, y es la carga real que presiona las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar intereses.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
+    "objectID": "investigacion.html#policy-briefs",
+    "href": "investigacion.html#policy-briefs",
+    "title": "Investigación",
+    "section": "Policy Briefs",
+    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        status\n      \n    \n  \n\n\n\n\n Policy Brief   1 ene 2026 \n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n  Ver Documento \n\n\n\n\n Policy Brief   Invalid Date \n\n\nPB-002: Impacto Fiscal del Subsidio\n\n\nAnálisis preliminar de la carga fiscal proyectada para el Q3 2026.\n\n\n(En desarrollo)\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Es malo endeudarse?",
-    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
+    "objectID": "investigacion.html#reportes-técnicos",
+    "href": "investigacion.html#reportes-técnicos",
+    "title": "Investigación",
+    "section": "Reportes Técnicos",
+    "text": "Reportes Técnicos\nProductos de análisis elaborados a partir de microdatos y fuentes oficiales. Procesamiento, limpieza y visualización propios.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n\n\n\n\n Reporte Técnico   1 ene 2026 \n\n\nReporte de Inclusión Financiera 2025\n\n\nProcesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica.\n\n\n  Ver Reporte Interactivo \n  Ver Reporte Interactivo \n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Pagarán nuestros nietos la deuda?",
-    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo."
-  },
-  {
-    "objectID": "predecesores.html",
-    "href": "predecesores.html",
-    "title": "Mis predecesores",
-    "section": "",
-    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "series.html",
-    "href": "series.html",
-    "title": "Series",
-    "section": "",
-    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
+    "objectID": "investigacion.html#stack-tecnológico",
+    "href": "investigacion.html#stack-tecnológico",
+    "title": "Investigación",
+    "section": "Stack Tecnológico",
+    "text": "Stack Tecnológico\nHerramientas utilizadas en el procesamiento de estos datos.\n\n  Power BI    R / Tidyverse    SQL"
   },
   {
     "objectID": "fundamentos.html",
@@ -194,6 +145,41 @@
     "title": "Fundamentos",
     "section": "",
     "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
+    "section": "",
+    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
+  },
+  {
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
+  },
+  {
+    "objectID": "about.html#sobre-este-blog",
+    "href": "about.html#sobre-este-blog",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.\nEste blog nace para interpretar la economía dominicana: leer los datos, separar la señal del ruido y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.\nAquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición."
+  },
+  {
+    "objectID": "about.html#quién-escribe",
+    "href": "about.html#quién-escribe",
+    "title": "Sobre mí",
+    "section": "Quién escribe",
+    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.\n\nNo escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.\n\n\nCompromiso\nEn cada artículo encontrarás:\n\nTransparencia: Datos con fuente y opiniones claramente identificadas.\nClaridad: Lenguaje accesible, sin sacrificar precisión técnica.\nContexto: Análisis siempre anclado a la realidad de la República Dominicana."
   },
   {
     "objectID": "categorias.html",
@@ -207,14 +193,14 @@
     "href": "categorias.html#índice-completo",
     "title": "Categorías",
     "section": "Índice completo",
-    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa republica en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\n\nLa republica en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa republica habla de\n\nDeuda\n\n\n\nexplicación de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
+    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa republica en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\n\nLa república en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Entendiendo la economíamás allá del titular.",
     "section": "",
-    "text": "Economía Dominicana Aplicada\n\n\n\n\n\nBienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.\n\n\n\n\n\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\nNo hay resultados\n\n\n\n\n\n\nConceptos Claros\n\n\nLa inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.\n\n\nAprender conceptos\n\n\n\n\n\nRealidad vs. Ficción\n\n\n¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.\n\n\nVer mitos\n\n\n\n\n\nLa República habla de…\n\n\nAnálisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?\n\n\nLeer análisis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Economía Dominicana Aplicada\n\n\n\n\n\nBienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.\n\n\n\n\n\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\nNo hay resultados\n\n\n\n\n\n\nConceptos Claros\n\n\nLa inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.\n\n\nAprender conceptos\n\n\n\n\n\nRealidad vs. Ficción\n\n\n¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.\n\n\nVer mitos\n\n\n\n\n\nLa República habla de…\n\n\nAnálisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?\n\n\nLeer análisis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "index.html#último-análisis-publicado",
@@ -228,7 +214,14 @@
     "href": "index.html#últimas-publicaciones",
     "title": "Entendiendo la economíamás allá del titular.",
     "section": "",
-    "text": "distribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+    "text": "distribución espacial de las empresas en RD\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n20 dic 2025\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "mitos-economicos.html",
+    "href": "mitos-economicos.html",
+    "title": "Mitos económicos",
+    "section": "",
+    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
@@ -298,63 +291,42 @@
     "href": "posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html#conclusión-el-espejo-de-lo-que-somos",
     "title": "La Republica en un gráfico: 10 años de transformación",
     "section": "Conclusión: El espejo de lo que somos",
-    "text": "Conclusión: El espejo de lo que somos\nA menudo se cuestiona, con razón, el uso excesivo de cifras en el discurso económico, acusándolas de estar alejadas de la “realidad” que vive la gente. Pero datos como estos nos enseñan que, en esencia, las estadísticas no son más que la suma de decisiones humanas, con la interpretación correcta, nos revelan exactamente cómo vive la gente.\nSi volvemos mentalmente a ese semáforo de 2010, nos damos cuenta de que la canasta familiar no es solo una hoja de Excel para calcular la inflación: es un espejo de nuestra evolución.\nLos datos nos cuentan la historia de un país que, a pesar de los retos, ha logrado sofisticar su consumo. Hemos pasado de luchar por la comida (Engel) a preocuparnos por la conectividad (Comunicaciones) y el bienestar (Bienes Diversos).\nLa próxima vez que escuches que la inflación subió o bajó, recuerda que detrás de ese número hay millones de micro-decisiones de familias dominicanas que, poco a poco, están dejando atrás el “biper” para abrazar un futuro más complejo, conectado y exigente.\n¿Y tú? ¿qué gastos nuevos han aparecido en tu presupuesto en los últimos 5 años?\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar"
+    "text": "Conclusión: El espejo de lo que somos\nA menudo se cuestiona, con razón, el uso excesivo de cifras en el discurso económico, acusándolas de estar alejadas de la “realidad” que vive la gente. Pero datos como estos nos enseñan que, en esencia, las estadísticas no son más que la suma de decisiones humanas, con la interpretación correcta, nos revelan exactamente cómo vive la gente.\nSi volvemos mentalmente a ese semáforo de 2010, nos damos cuenta de que la canasta familiar no es solo una hoja de Excel para calcular la inflación: es un espejo de nuestra evolución.\nLos datos nos cuentan la historia de un país que, a pesar de los retos, ha logrado sofisticar su consumo. Hemos pasado de luchar por la comida (Engel) a preocuparnos por la conectividad (Comunicaciones) y el bienestar (Bienes Diversos).\nLa próxima vez que escuches que la inflación subió o bajó, recuerda que detrás de ese número hay millones de micro-decisiones de familias dominicanas que, poco a poco, están dejando atrás el “biper” para abrazar un futuro más complejo, conectado y exigente.\n¿Y tú? ¿qué gastos nuevos han aparecido en tu presupuesto en los últimos 5 años?\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Fuentes de Datos & Referencias Teóricas\n  \n  \n    \n    \n      Banco Central R.D. (Precios)\n      Anexos documento metodológico IPC base anual octubre 2019 – septiembre 2020.\n      Descargar Excel oficial ↗\n    \n\n    \n      Indotel / Datos Abiertos\n      Series Históricas de Cuentas de Internet y Teledensidad (2010-2024).\n      Ver series históricas ↗\n    \n\n    \n      Anker, R. (2011) / UMass Amherst\n      \"Engel’s Law Around the World 150 Years Later\". Análisis global que confirma la caída del gasto en alimentos al subir el ingreso.\n      Leer Paper (PDF) ↗\n    \n\n    \n      Rodrik, D. (2017)\n      \"Structural Change, Fundamentals, and Growth\". Teoría sobre cómo las economías se mueven de agricultura a servicios modernos.\n      Leer Paper (PDF) ↗"
   },
   {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
     "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los servicios de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
+    "text": "Escuchar artículo (6 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
   },
   {
-    "objectID": "investigacion.html",
-    "href": "investigacion.html",
-    "title": "Investigación",
-    "section": "",
-    "text": "\"Modelando la realidad para informar la toma de decisiones.\"\n  \n  \n    Organización Industrial · Econometría Aplicada · Mercados Energéticos"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "La magnitud de la deuda dominicana",
+    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce en el promedio.\n\n\n\n\n\n\n\nDeuda Sobre PIB en Latinoamérica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
   },
   {
-    "objectID": "investigacion.html#working-papers",
-    "href": "investigacion.html#working-papers",
-    "title": "Investigación",
-    "section": "Working Papers",
-    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nMonetary Policy Transmission in DR\n\n\nVAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector.\n\n\n  Read Abstract \n  Read Abstract \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio del Sector Eléctrico\n\n\nEstimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse.\n\n\n  Ver Código \n\n\n\nNo hay resultados"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones",
+    "text": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de pagar la cuota del préstamo, usted paga una parte para devolver el dinero solicitado (capital) y otra por la disponibilidad del dinero (intereses). La deuda pública funciona igual. El detalle es que la suma de ambos conceptos (capital más intereses) se agrupa bajo el nombre de “servicio de la deuda”, y es la carga real que presiona las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar intereses.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
   },
   {
-    "objectID": "investigacion.html#policy-briefs",
-    "href": "investigacion.html#policy-briefs",
-    "title": "Investigación",
-    "section": "Policy Briefs",
-    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        status\n      \n    \n  \n\n\n\n\n Policy Brief   1 ene 2026 \n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n  Ver Documento \n\n\n\n\n Policy Brief   Invalid Date \n\n\nPB-002: Impacto Fiscal del Subsidio\n\n\nAnálisis preliminar de la carga fiscal proyectada para el Q3 2026.\n\n\n(En desarrollo)\n\n\n\nNo hay resultados"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Es malo endeudarse?",
+    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
   },
   {
-    "objectID": "investigacion.html#reportes-técnicos",
-    "href": "investigacion.html#reportes-técnicos",
-    "title": "Investigación",
-    "section": "Reportes Técnicos",
-    "text": "Reportes Técnicos\nProductos de análisis elaborados a partir de microdatos y fuentes oficiales. Procesamiento, limpieza y visualización propios.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n\n\n\n\n Reporte Técnico   1 ene 2026 \n\n\nReporte de Inclusión Financiera 2025\n\n\nProcesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica.\n\n\n  Ver Reporte Interactivo \n  Ver Reporte Interactivo \n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "investigacion.html#stack-tecnológico",
-    "href": "investigacion.html#stack-tecnológico",
-    "title": "Investigación",
-    "section": "Stack Tecnológico",
-    "text": "Stack Tecnológico\nHerramientas utilizadas en el procesamiento de estos datos.\n\n  Power BI    R / Tidyverse    SQL"
-  },
-  {
-    "objectID": "research/reporte-inclusion.html",
-    "href": "research/reporte-inclusion.html",
-    "title": "Reporte de Inclusión Financiera",
-    "section": "",
-    "text": "TipDescargar Versión PDF\n\n\n\nEste reporte está disponible para descarga con maquetación oficial. 📥 Descargar PDF Generado"
-  },
-  {
-    "objectID": "research/reporte-inclusion.html#introducción",
-    "href": "research/reporte-inclusion.html#introducción",
-    "title": "Reporte de Inclusión Financiera",
-    "section": "1. Introducción",
-    "text": "1. Introducción\nA diferencia del informe oficial, este análisis se centra en…"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Pagarán nuestros nietos la deuda?",
+    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo.\n\n  📚 Sigue leyendo\n  \n  \n\n        \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.\n    \n    \n    \n      Decada de transformación\n      Análisis de los cambios en la canasta familiar dominicana.\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Fuentes Oficiales & Referencia Académica\n  \n  \n    \n    \n      Crédito Público (Hacienda)\n      Informes de Deuda Pública del Sector Público .\n      Ver informes oficiales ↗\n    \n\n    \n      DIGEPRES (Presupuesto)\n      Estadísticas Fiscales: Ejecución presupuestaria, ingresos y gastos (Series históricas).\n      Ver ejecución fiscal ↗\n    \n\n    \n      Sargent & Wallace (1981)\n      \"Some Unpleasant Monetarist Arithmetic\". El paper seminal que explica por qué la política fiscal domina a la monetaria.\n      Leer clásico (Fed) ↗\n    \n\n    \n      Moody's Investors Service (2024)\n      \"Government of Dominican Republic – Ba3 Positive\". Reporte oficial donde Moody's advierte que la relación Intereses/Ingresos de RD (cercana al 23%) es \"débil\" y duplica la mediana de sus pares.\"\n      Ver reporte oficial (PDF)↗"
   },
   {
     "objectID": "republica-en-un-grafico.html",
@@ -362,5 +334,33 @@
     "title": "La República en un gráfico",
     "section": "",
     "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "research/paper-modelo.html",
+    "href": "research/paper-modelo.html",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "",
+    "text": "📄 Full Paper: This paper is currently under review. Download Draft PDF"
+  },
+  {
+    "objectID": "research/paper-modelo.html#abstract",
+    "href": "research/paper-modelo.html#abstract",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Abstract",
+    "text": "Abstract\nHere you write the abstract in English. This text will be indexed by Google. Because lang: en is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog."
+  },
+  {
+    "objectID": "research/paper-modelo.html#methodology",
+    "href": "research/paper-modelo.html#methodology",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Methodology",
+    "text": "Methodology\nWe utilize a Vector Autoregression (VAR) model to identify the shocks…\n\n\n\n\n\nImpulse Response Function (Placeholder)"
+  },
+  {
+    "objectID": "series.html",
+    "href": "series.html",
+    "title": "Series",
+    "section": "",
+    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
   }
 ]

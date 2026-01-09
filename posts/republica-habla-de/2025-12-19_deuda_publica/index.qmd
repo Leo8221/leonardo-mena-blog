@@ -2,14 +2,14 @@
 title: "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación"
 date: "2025-12-20"
 author: "Leonardo Mena"
-description: "explicación de los servicios de la deuda sobre las recaudaciones fiscales."
+description: "explicación de los intereses de la deuda sobre las recaudaciones fiscales."
 image: "portada.jpg"
 twitter-card:
   image: "portada.jpg"
 categories: 
-  - "La republica habla de"
+  - "La República habla de"
   - "Deuda"
-draft: False
+draft: false
 body-class: editorial-post
 toc: true
 toc-location: left
@@ -54,7 +54,7 @@ Los países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvenc
 
 Al aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.
 
-<div class="data-box"> <div class="data-box-title">Dato Clave</div> <div class="data-box-content"> Al cierre de 2024, la deuda consolidada sobre el PIB se situaba en <strong>57.4%</strong>. Si comparamos este balance con la región, la posición dominicana luce "saludable". </div> </div>
+<div class="data-box"> <div class="data-box-title">Dato Clave</div> <div class="data-box-content"> Al cierre de 2024, la deuda consolidada sobre el PIB se situaba en <strong>57.4%</strong>. Si comparamos este balance con la región, la posición dominicana luce en el promedio. </div> </div>
 
 
 ```{r}
@@ -364,3 +364,63 @@ Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una 
 <div class="pullquote">El objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.</div>
 
 ¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo.
+
+
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+
+        <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
+    </div>
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">Decada de transformación</a></h4>
+      <p>Análisis de los cambios en la canasta familiar dominicana.</p>
+    </div>
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <p>Por qué el PIB no mide bienestar</p>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes Oficiales & Referencia Académica</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Crédito Público (Hacienda)</h4>
+      <p>Informes de Deuda Pública del Sector Público .</p>
+      <a href="https://www.creditopublico.gob.do/inicio/estadisticas" target="_blank" class="bib-link">Ver informes oficiales ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>DIGEPRES (Presupuesto)</h4>
+      <p>Estadísticas Fiscales: Ejecución presupuestaria, ingresos y gastos (Series históricas).</p>
+      <a href="https://www.digepres.gob.do/estadisticas/" target="_blank" class="bib-link">Ver ejecución fiscal ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Sargent & Wallace (1981)</h4>
+      <p>"Some Unpleasant Monetarist Arithmetic". El paper seminal que explica por qué la política fiscal domina a la monetaria.</p>
+      <a href="https://www.minneapolisfed.org/research/quarterly-review/some-unpleasant-monetarist-arithmetic" target="_blank" class="bib-link">Leer clásico (Fed) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Moody's Investors Service (2024)</h4>
+      <p>"Government of Dominican Republic – Ba3 Positive". Reporte oficial donde Moody's advierte que la relación Intereses/Ingresos de RD (cercana al 23%) es "débil" y duplica la mediana de sus pares."</p>
+      <a href="https://www.creditopublico.gob.do/Content/inversionistas/informes/2024/02Informe%20Moodys%20sobre%20calificaci%C3%B3n%20crediticia%20-%20Marzo%20(en%20ingl%C3%A9s).pdf" target="_blank" class="bib-link">Ver reporte oficial (PDF)↗</a>
+    </div>
+
+  </div>
+</div>
+```

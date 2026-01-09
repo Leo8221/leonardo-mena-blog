@@ -147,7 +147,6 @@ blockquote {
   color: var(--lm-terracota) !important;
 }
 
-/* --- TOGGLE BUTTON UNIFICADO (LA SOLUCIÓN FINAL) --- */
 /* Aplica tanto al navbar del blog como al header del dashboard */
 .navbar .quarto-color-scheme-toggle,
 .quarto-dashboard-header .quarto-color-scheme-toggle {
