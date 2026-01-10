@@ -1,0 +1,227 @@
+---
+title: "Frédéric Bastiat: El primer economista influencer"
+date: "2026-01-09"
+author: "Leonardo Mena"
+description: "La historia del economista que popularizó 'lo que no se ve' y por qué sus ideas siguen siendo revolucionarias 170 años después"
+image: "Bastiat.jpg"
+twitter-card:
+  image: "Bastiat.jpg"
+categories: 
+  - "Mis predecesores"
+  - "Fundamentos"
+draft: true
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body: ../../../reading-progress.html
+---
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+> "En la esfera económica, un acto, una costumbre, una institución, una ley no engendran un solo efecto, sino una serie de ellos. De estos efectos, el primero es sólo el más inmediato; se manifiesta simultáneamente con la causa, se ve. Los otros aparecen sucesivamente, no se ven..."
+> 
+> — Frédéric Bastiat
+
+Cuando piensas en un economista, probablemente imaginas esto: un personaje de traje gris, cara seria, una hoja de Excel debajo del brazo y un lenguaje tan técnico que parece diseñado para curar el insomnio.
+
+Estoy seguro de que esa descripción hizo clic en muchos de ustedes.
+
+Pero, ¿qué pasaría si les dijera que hace 170 años existió un economista que rompió ese molde? Alguien con un lenguaje directo, sarcástico y tan visual que, si viviera hoy, sus ensayos serían hilos virales en Twitter o posts de Instagram.
+
+¿Acaso existió tal personaje? Sí.
+
+Les presento a Frédéric Bastiat: el primer economista influencer de la historia.
+
+<div class="section-divider">• • •</div>
+
+## El Sol vs. Las Velas
+
+En 1845, el parlamento francés se encontraba discutiendo formas de "bloquear" la entrada de productos extranjeros. ¿Su argumento? Que eran muy baratos y eso representaba una competencia desleal para la industria nacional.
+
+¿Cuál creen que fue la respuesta de Bastiat ante esta situación? No usó fórmulas complejas, usó el ridículo. Mejor léanlo ustedes mismos:
+
+::: {.pullquote}
+"Señores diputados, sufrimos la competencia intolerable de un rival extranjero que nos inunda con luz a un precio imposible de igualar (precio cero). Ese rival es... EL SOL."
+:::
+
+Y aquí, señoras y señores, nace uno de los relatos más influyentes del pensamiento económico: la **Petición de los Fabricantes de Velas**, una sátira brillante al absurdo de algunos argumentos proteccionistas.
+
+::: {.data-box}
+::: {.data-box-title}
+El método viral de Bastiat
+:::
+::: {.data-box-content}
+Sus ensayos eran cortos (3-10 páginas), publicados en periódicos (el "feed" de la época), llenos de sátira y ejemplos cotidianos. La "Petición de las velas" fue reproducida en decenas de periódicos europeos. Era el primer "thread" viral de economía.
+:::
+:::
+
+![Recreación visual: Si Bastiat tuviera una cuenta hoy.](bastiat-thread-editorial.png){width=80% fig-align="center"}
+
+## El Costo de Oportunidad (Lo que no se ve)
+
+La visión de Bastiat va más allá de la sátira. Su aporte más duradero fue popularizar un concepto fundamental: el **costo de oportunidad**. En economía, esto es el pan de cada día: si elegimos algo, automáticamente renunciamos a otra cosa.
+
+Hace 170 años, Bastiat lo explicaba de manera simple con su historia de la ventana rota. Adaptémosla a nuestro país.
+
+### El caso de Juan
+
+Imaginemos a Juan, un pequeño agricultor de plátanos en Baní. Dedica meses de sudor a sus cultivos, pero en septiembre, un huracán arrasa con todo. Juan lo pierde todo: 3 tareas de plátanos a punto de cosecha, meses de trabajo, su ingreso del año.
+
+Ante la catástrofe, el Estado decide extenderle <span class="big-number">RD$50,000</span>
+<span class="big-number-label">Para comprar semillas y volver a sembrar</span>
+
+¿Alguien en su sano juicio se atrevería a celebrar diciendo: "¡Qué bien! Ahora el vendedor de semillas recibirá dinero y eso moverá la economía"?
+
+Ciertamente no. La intuición nos grita que destruir riqueza (los plátanos listos para comer) nunca puede ser causa de prosperidad, aunque genere una transacción nueva (las semillas).
+
+Esta analogía es la llamada **"Falacia de la Ventana Rota"**, y sigue siendo, hasta hoy, la explicación más didáctica sobre por qué la destrucción nunca es rentable.
+
+
+### La trampa del zoom macroeconómico
+
+Sin embargo, cuando ampliamos el zoom a nivel macroeconómico, a veces escuchamos exactamente esa lógica perversa:
+
+"El huracán destruyó X, pero ahora habrá reconstrucción. Eso moverá la economía. El cemento, las láminas de zinc, los materiales... todo eso genera actividad económica."
+
+Técnicamente cierto. Pero ¿a qué costo? Juan perdió meses de producción que nunca se recuperarán. La economía no creció, apenas intentó volver al punto de partida.
+
+
+::: {.data-box}
+::: {.data-box-title}
+La Falacia de la Ventana Rota aplicada a Juan
+:::
+::: {.data-box-content}
+**Lo que SE VE:**
+- Estado da RD$50,000 a Juan
+- Vendedor de semillas tiene ingreso
+- "Actividad económica generada"
+
+**Lo que NO SE VE:**
+- 3 tareas de plátanos perdidas
+- Ingreso anual de Juan evaporado
+- Desarrollo retrasado meses
+- Dinero del Estado que no fue a educación/salud
+
+**Resultado:** No hay ganancia neta, solo reposición de lo destruido.
+:::
+:::
+
+<div class="section-divider">• • •</div>
+
+![Frédéric Bastiat (1801-1850), economista francés](Bastiat.jpg){.editorial-image}
+
+## Mi Predecesor
+
+La cita con la que inicié este artículo termina con una sentencia demoledora:
+
+::: {.pullquote}
+"Toda la diferencia entre un mal y un buen economista es ésta: uno se limita al efecto visible; el otro tiene en cuenta el efecto que se ve y los que hay que prever."
+:::
+
+Este blog y mi pensamiento no son más que una búsqueda constante de honrar esa cita: ver lo que otros ignoran.
+
+Bastiat murió joven, a la edad de 49 años, pero ese tiempo le bastó para crear una línea de pensamiento que lo consagra como mi gran predecesor intelectual.
+
+```{r}
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 5
+
+library(ggplot2)
+library(dplyr)
+
+# 1. Preparar los datos
+timeline_data <- data.frame(
+  year = c(1801, 1825, 1844, 1845, 1848, 1850, 1946),
+  event = c("Nace en Bayona, Francia", 
+            "Hereda negocio familiar", 
+            "Primer artículo económico", 
+            "Petición de las Velas ⭐", 
+            "Diputado del Parlamento", 
+            "Lo que se ve y lo que no se ve ⭐", 
+            "Economía en una lección"),
+  side = c(1, -1, 1, -1, 1, -1, 1) 
+)
+
+# Creamos un índice para que los puntos se distribuyan equitativamente
+timeline_data <- timeline_data %>%
+  mutate(idx = row_number())
+
+# 2. Crear el gráfico
+timeline_plot <- ggplot(timeline_data, aes(x = idx, y = 0)) +
+  # Línea central
+  geom_hline(yintercept = 0, color = "#c86448", linewidth = 1.2, alpha = 0.6) +
+  # Segmentos verticales
+  geom_segment(aes(x = idx, xend = idx, y = 0, yend = side * 0.4), 
+               color = "#e6dfd5", linetype = "solid") +
+  # Puntos
+  geom_point(aes(color = factor(side)), size = 5) +
+  # Años (Inter)
+  geom_text(aes(y = side * 0.15, label = year), 
+            family = "Inter", fontface = "bold", size = 4.5, color = "#1a1512") +
+  # Eventos (Crimson Pro) 
+  geom_text(aes(y = side * 0.6, label = event), 
+            family = "Crimson Pro", size = 5, lineheight = 0.9, color = "#4a443e") +
+  # Colores y Escalas
+  scale_color_manual(values = c("#73695f", "#c86448")) +
+  expand_limits(y = c(-1, 1), x = c(0.5, 7.5)) +
+  theme_void() + 
+  theme(
+    legend.position = "none",
+    plot.margin = margin(40, 40, 40, 40),
+    panel.background = element_rect(fill = "#fdfbf7", color = NA)
+  )
+
+print(timeline_plot)
+```
+
+::: {.data-box}
+¿Por qué 1946?
+Aunque Bastiat murió en 1850, sus ideas evitaron el olvido gracias a Henry Hazlitt. En su bestseller Economía en una lección (1946), Hazlitt dedica su primer capítulo a la "Ventana Rota", citando a Bastiat como la inspiración fundamental para entender que la destrucción nunca es estímulo. Sin Hazlitt, probablemente Bastiat sería hoy un autor oscuro de nicho en lugar de un pilar de la divulgación económica. 
+:::
+## La pregunta de Bastiat, hoy
+
+La próxima vez que un evento natural golpee al país y escuches "esto reactivará la construcción", piensa en Juan. Piensa en sus 3 tareas de plátanos que nunca verá crecer. Piensa en el ingreso que no tendrá.
+
+Y pregúntate: ¿Estoy viendo solo lo visible (cemento, zinc, actividad)? ¿O también lo invisible (producción perdida, desarrollo retrasado, riqueza destruida)?
+
+Esa es la diferencia entre un mal y un buen análisis económico. Bastiat lo sabía hace 170 años. Nosotros aún estamos aprendiendo.
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes & Referencias Intelectuales</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Bastiat, F. (1850)</h4>
+      <p><em>"Ce qu’on voit et ce qu’on ne voit pas"</em>. Ensayo donde introduce la distinción entre efectos visibles e invisibles y formula la Falacia de la Ventana Rota.</p>
+      <a href="https://www.econlib.org/library/Bastiat/basEss1.html" target="_blank" class="bib-link">Leer ensayo original ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Bastiat, F. (1845)</h4>
+      <p><em>"Petition of the Candle Makers"</em>. Sátira económica contra el proteccionismo, usando el absurdo como herramienta analítica.</p>
+      <a href="http://bastiat.org/en/petition.html" target="_blank" class="bib-link">Leer sátira completa ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Hazlitt, H. (1946)</h4>
+      <p><em>Economics in One Lesson</em>. Obra clave de divulgación moderna que rescata y populariza el argumento de la Ventana Rota de Bastiat.</p>
+      <a href="https://www.liberalstudies.ca/wp-content/uploads/2014/11/Economics-in-One-Lesson_2.pdf" target="_blank" class="bib-link">Consultar libro (Archivo) ↗</a>
+    </div>
+
+  </div>
+</div>
+```
+
+
+
+
+
+
+
