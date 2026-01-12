@@ -332,7 +332,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 }
 
 /* ==========================================================================
-   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO
+   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO 
    ========================================================================== */
 
 /* Tarjetas Generales (Value Boxes y Gráficos) */
@@ -342,42 +342,71 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     border: none !important;
     border-radius: 4px !important;
     box-shadow: var(--shadow-soft);
-    /* Borde de identidad de marca */
+    /* Borde de identidad de marca a la izquierda */
     border-left: 4px solid var(--lm-terracota) !important; 
     color: var(--lm-text-main);
 }
 
-/* Estilos específicos para Value Boxes */
-.value-box-value {
-    color: var(--lm-primario) !important;
-    font-family: "Crimson Pro", serif;
-    font-weight: 700;
-}
-
+/* Títulos de las cajas (DÓLAR SPOT, etc.) */
 .value-box-title, .card-title {
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
     font-size: 0.75rem !important;
     letter-spacing: 0.1em;
     color: var(--lm-text-muted) !important;
+    margin-bottom: 0.5rem;
 }
 
-.value-box-showcase i {
-    color: var(--lm-terracota) !important;
-    opacity: 0.8;
+/* El número grande (RD$) */
+.value-box-value {
+    color: var(--lm-primario) !important;
+    font-family: "Crimson Pro", serif;
+    font-weight: 700;
+    /* Clamp para que no se rompa en pantallas pequeñas */
+    font-size: clamp(2rem, 4vw, 3.5rem) !important; 
+    line-height: 1.1;
 }
 
-/* Colores de cambio porcentual (Rojo/Verde más editorial) */
-.text-success { color: #2e7d32 !important; } 
-.text-danger  { color: #c62828 !important; }
+/* --- ICONOS DE FONDO (MARCA DE AGUA) --- */
+/* Esto crea el efecto detrás del número */
+.value-box-showcase .bi, 
+.value-box-showcase i,
+.value-box-showcase svg {
+    color: var(--lm-text-main) !important;
+    opacity: 0.08 !important; /* Muy transparente (sutil) */
+    font-size: 4rem !important; /* Grande */
+    transform: translateY(5%); /* Ajuste de posición */
+    top: auto;
+    bottom: 10px;
+}
 
-/* Footer */
+/* --- COLORES SEMÁNTICOS (LÓGICA ECONÓMICA) --- */
+
+/* Verde (Bueno/Dentro de meta) */
+.text-success { color: #388e3c !important; } 
+
+/* Rojo (Malo/Alerta) */
+.text-danger  { color: #d32f2f !important; } 
+
+/* Amarillo/Naranja (Precaución) */
+.text-warning { color: #f57f17 !important; } 
+
+/* Azul/Terracota (Neutro o informativo) */
+.text-primary { color: var(--lm-terracota) !important; }
+
+/* Texto secundario pequeño */
+.value-box .small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Footer del dashboard */
 footer, .nav-footer {
     border-top: 1px solid var(--lm-border-dark);
     background: var(--lm-bg-card);
     color: var(--lm-text-muted);
 }
-
 /* ==========================================================================
    6. RESPONSIVE & MOBILE FIXES
    ========================================================================== */

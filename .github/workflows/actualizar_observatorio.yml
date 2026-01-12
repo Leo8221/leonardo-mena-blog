@@ -53,6 +53,7 @@ jobs:
             any::ggrepel
             any::sf
             any::stringi
+            any::tidyquant
 
       - name: Limpiar caches de Quarto
         run: |

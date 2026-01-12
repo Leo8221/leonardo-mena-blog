@@ -18,9 +18,9 @@ format:
 ```{r setup}
 #| include: false
 
-# -----------------------------------------------------------------------------
+# =============================================================================
 # 1. SETUP Y LIBRERÍAS
-# -----------------------------------------------------------------------------
+# =============================================================================
 suppressPackageStartupMessages({
   library(tidyverse)
   library(highcharter)
@@ -30,102 +30,169 @@ suppressPackageStartupMessages({
   library(janitor)
   library(htmltools)
   library(DT)
-  library(bslib) # Librería clave para Value Boxes modernos
+  library(bslib)
   library(bsicons)
+  library(tidyquant)
 })
 
 # Configuración Regional Highcharts
 options(highcharter.lang = list(
-  months = c('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'),
-  shortMonths = c('Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'),
-  weekdays = c('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'),
+  months = c('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+             'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'),
+  shortMonths = c('Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 
+                  'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'),
+  weekdays = c('Domingo', 'Lunes', 'Martes', 'Miércoles', 
+               'Jueves', 'Viernes', 'Sábado'),
   decimalPoint = ',',
   thousandsSep = '.'
 ))
 
-# -----------------------------------------------------------------------------
-# 2. FUNCIONES UTILITARIAS Y TEMA
-# -----------------------------------------------------------------------------
+# =============================================================================
+# 2. FUNCIONES UTILITARIAS
+# =============================================================================
 
-# Función robusta para parsear meses en español
+# Parsear meses en español
 parsear_mes <- function(mes_texto) {
-  meses_abr <- c("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic")
+  meses_abr <- c("ene", "feb", "mar", "abr", "may", "jun", 
+                 "jul", "ago", "sep", "oct", "nov", "dic")
   texto_limpio <- tolower(str_sub(mes_texto, 1, 3))
   match(texto_limpio, meses_abr)
 }
 
-# Tema unificado
+fecha_es <- function(fecha) {
+  meses <- c("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+             "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+  paste(meses[month(fecha)], year(fecha))
+}
+
+# TEMA 
 theme_observatorio <- function() {
   hc_theme(
     chart = list(
       backgroundColor = "transparent",
       style = list(
         fontFamily = "Inter, sans-serif", 
-        color = "#333333"
+        color = "var(--lm-text-main)" 
       )
     ),
     title = list(
       style = list(
         fontFamily = "Crimson Pro, serif",
-        fontWeight = "bold",
-        color = "#1e1e24" # Gris casi negro
+        fontWeight = "600",
+        color = "var(--lm-text-main)", 
+        fontSize = "18px"
       )
     ),
-    # Eje X con línea guía en Terracota
+    subtitle = list(
+      style = list(
+        color = "var(--lm-text-soft)", 
+        fontSize = "13px"
+      )
+    ),
     xAxis = list(
       gridLineWidth = 0,
-      lineColor = "#e0e0e0",
-      tickColor = "#e0e0e0",
-      labels = list(style = list(color = "#666666")),
+      lineColor = "var(--lm-border-dark)", 
+      tickColor = "var(--lm-border)",
+      labels = list(
+        style = list(
+          color = "var(--lm-text-muted)", 
+          fontSize = "11px"
+        )
+      ),
       crosshair = list(
         width = 1,
-        color = "#c86448", # <--- Terracota para la guía
+        color = "#c86448",
         dashStyle = "Dash"
       )
     ),
     yAxis = list(
       gridLineWidth = 1,
-      gridLineColor = "#f0f0f0", # Grillas muy sutiles
-      gridLineDashStyle = "Dash",
-      labels = list(style = list(color = "#666666"))
-    ),
-    tooltip = list(
-      backgroundColor = "#ffffff",
-      borderColor = "#c86448", # Borde Terracota
-      borderWidth = 1,
-      style = list(color = "#333", fontFamily = "Inter, sans-serif"),
-      shadow = TRUE,
-      padding = 10
+      gridLineColor = "var(--lm-border)", 
+      gridLineDashStyle = "Dot",
+      lineWidth = 0,
+      labels = list(
+        style = list(
+          color = "var(--lm-text-muted)", 
+          fontSize = "11px"
+        )
+      ),
+      title = list(
+        style = list(color = "var(--lm-text-soft)")
+      )
     ),
     legend = list(
-      itemStyle = list(color = "#333", fontWeight = "normal"),
+      itemStyle = list(
+        color = "var(--lm-text-main)", 
+        fontWeight = "500"
+      ),
       itemHoverStyle = list(color = "#c86448")
     ),
+    tooltip = list(
+      backgroundColor = "var(--lm-bg-card)", 
+      borderColor = "#c86448",
+      style = list(
+        color = "var(--lm-text-main)",       
+        fontSize = "12px"
+      ),
+      shadow = list(
+        color = "rgba(0, 0, 0, 0.1)",
+        offsetX = 0, offsetY = 2, opacity = 0.5, width = 3
+      )
+    ),
     credits = list(enabled = FALSE),
-    # PALETA DE COLORES EDITORIAL POR DEFECTO
-    colors = c(
-      "#343a40", # Gris Plomo (Principal)
-      "#c86448", # Terracota (Secundario/Marca)
-      "#556b2f", # Verde Oliva (Terciario)
-      "#d4ac0d"  # Ocre (Auxiliar)
-    )
+    colors = c("#343a40", "#c86448", "#6b7554", "#d4ac0d")
   )
 }
 
-# Función para descarga de datos (Optimizada)
+# CRÉDITOS UNIFICADOS
+creditos_bcrd <- function(hc) {
+  hc %>% 
+    hc_credits(
+      enabled = TRUE,
+      text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
+      href = "https://bancentral.gov.do/",
+      style = list(fontSize = "10px", color = "#73695f", cursor = "pointer")
+    )
+}
+
+# Botón de descarga 
 generar_boton_descarga <- function(df, nombre_archivo) {
-  datatable(
+  # 1. Identificar solo las columnas numéricas para formatear
+  cols_numericas <- names(select(df, where(is.numeric)))
+  
+  # 2. Crear la tabla
+  dt <- datatable(
     df, 
-    extensions = 'Buttons', 
+    extensions = 'Buttons',
+    rownames = FALSE,
     options = list(
-      dom = 'Bfrtip', 
-      buttons = list(list(extend = 'csv', filename = nombre_archivo, text = '📥 Descargar Data', className = 'btn-sm')),
-      pageLength = 5,
-      scrollY = "300px", # Scroll interno para que no ocupe mucho espacio
-      scrollCollapse = TRUE
+      dom = 'Bfrtip',
+      buttons = list(
+        list(
+          extend = 'csv',
+          filename = nombre_archivo,
+          text = '<i class="bi bi-download"></i> Descargar CSV',
+          className = 'btn btn-sm btn-outline-secondary'
+        )
+      ),
+      pageLength = 10,
+      scrollX = TRUE, # Importante para móviles
+      language = list(
+        search = "Buscar:",
+        lengthMenu = "Mostrar _MENU_",
+        info = "_START_ - _END_ de _TOTAL_",
+        paginate = list(previous = "Ant", "next" = "Sig")
+      )
     ),
-    class = "display compact"
+    class = "display compact stripe hover"
   )
+  
+  # 3. Aplicar formato si hay columnas numéricas
+  if(length(cols_numericas) > 0) {
+    dt <- dt %>% formatRound(columns = cols_numericas, digits = 2)
+  }
+  
+  return(dt)
 }
 ```
 
@@ -133,7 +200,10 @@ generar_boton_descarga <- function(df, nombre_archivo) {
 #| include: false
 #| cache: false
 
-# --- 1. CONFIGURACIÓN DE URLS ---
+# =============================================================================
+# 3. CONFIGURACIÓN Y EXTRACCIÓN DE DATOS
+# =============================================================================
+
 urls <- list(
   dolar = "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-cambiario/documents/TASA_DOLAR_REFERENCIA_MC.xlsx",
   tpm   = "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/Serie_TPM.xlsx",
@@ -141,13 +211,10 @@ urls <- list(
   imae  = "https://cdn.bancentral.gov.do/documents/estadisticas/sector-real/documents/imae_2018.xlsx"
 )
 
-# --- 2. FUNCIONES DE EXTRACCIÓN (Restauradas al estilo original) ---
-
 # DÓLAR
 obtener_dolar <- function() {
   tryCatch({
     tf <- tempfile(fileext = ".xlsx")
-    # Configuración original simple: solo ignorar SSL
     GET(urls$dolar, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
     
     raw <- read_excel(tf, sheet = "Diaria", col_names = FALSE, skip = 4)
@@ -161,10 +228,11 @@ obtener_dolar <- function() {
       mutate(fecha = make_date(anio, mes_num, dia)) %>%
       arrange(fecha) %>%
       select(fecha, tasa_venta)
-      
+    
+    unlink(tf)
     return(clean)
   }, error = function(e) {
-    message("❌ Error descargando Dólar: ", e$message) # <--- AQUÍ VEREMOS EL ERROR REAL
+    message("❌ Error descargando Dólar: ", e$message)
     return(data.frame(fecha = Sys.Date(), tasa_venta = 0))
   })
 }
@@ -173,43 +241,25 @@ obtener_dolar <- function() {
 obtener_tpm <- function() {
   tryCatch({
     tf <- tempfile(fileext = ".xlsx")
-    
-    # 1. Descarga simple (como en el diagnóstico)
     GET(urls$tpm, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
     
-    # 2. Lectura directa
-    # Usamos tryCatch interno por si es xls antiguo, pero priorizamos xlsx
-    raw <- tryCatch(
-      read_excel(tf, col_names = FALSE, skip = 6),
-      error = function(e) {
-         # Si falla, intentamos copiar a extensión .xls por si acaso
-         tf2 <- tempfile(fileext = ".xls")
-         file.copy(tf, tf2)
-         read_excel(tf2, col_names = FALSE, skip = 6)
-      }
-    )
+    raw <- read_excel(tf, col_names = FALSE, skip = 6)
     
-    # 3. Limpieza (Idéntica a tu script de prueba)
     clean <- raw %>%
       select(anio_raw = ...1, mes = ...2, tpm = ...3) %>%
       fill(anio_raw, .direction = "down") %>%
       mutate(
-        # Forzamos numéricos para evitar errores de tipo
         anio = suppressWarnings(as.numeric(anio_raw)),
         tpm  = suppressWarnings(as.numeric(tpm)),
         mes_num = parsear_mes(as.character(mes))
       ) %>%
-      # Filtramos filas inválidas
       filter(!is.na(anio), !is.na(mes_num), !is.na(tpm)) %>%
-      # Creamos fecha
       mutate(fecha = make_date(anio, mes_num, 1)) %>%
-      # Ordenamos para el gráfico (Viejo -> Nuevo)
       arrange(fecha) %>%
       select(fecha, tpm)
-      
+    
     unlink(tf)
     return(clean)
-    
   }, error = function(e) {
     message("❌ Error en TPM: ", e$message)
     return(data.frame(fecha = Sys.Date(), tpm = 0))
@@ -227,13 +277,16 @@ obtener_ipc <- function() {
     clean <- raw %>%
       select(anio = ...1, mes = ...2, doce_meses = ...6) %>%
       fill(anio, .direction = "down") %>%
-      mutate(anio = as.numeric(anio), doce_meses = as.numeric(doce_meses)) %>%
+      mutate(
+        anio = as.numeric(anio),
+        doce_meses = as.numeric(doce_meses)
+      ) %>%
       mutate(mes_num = parsear_mes(as.character(mes))) %>%
       filter(!is.na(anio), !is.na(mes_num), !is.na(doce_meses)) %>%
       mutate(fecha = make_date(anio, mes_num, 1)) %>%
       arrange(desc(fecha)) %>%
       select(fecha, doce_meses)
-      
+    
     return(clean)
   }, error = function(e) {
     message("❌ Error descargando IPC: ", e$message)
@@ -241,76 +294,256 @@ obtener_ipc <- function() {
   })
 }
 
-# --- OBTENER IMAE (Sector Real) ---
+# IMAE
 obtener_imae <- function() {
   tryCatch({
+    library(httr)
+    library(readxl)
+    library(dplyr)
+    library(stringr)
+    library(lubridate)
+    
+    # 1. Descarga
     tf <- tempfile(fileext = ".xlsx")
-    GET(urls$imae, write_disk(tf, overwrite = TRUE), config(ssl_verifypeer = 0))
+    GET(
+      url = "https://cdn.bancentral.gov.do/documents/estadisticas/sector-real/documents/imae_2018.xlsx",
+      write_disk(tf, overwrite = TRUE),
+      config(ssl_verifypeer = 0),
+      user_agent("Mozilla/5.0")
+    )
     
-    # Leemos saltando el encabezado (generalmente 5-6 filas en este archivo)
-    # Col A=Año, B=Mes, C=Indice, D=Var.Mensual, E=Var.Acumulada
-    raw <- read_excel(tf, col_names = FALSE, skip = 6)
+    # 2. Leer desde fila 9
+    raw <- read_excel(tf, col_names = FALSE, col_types = "text", skip = 8)
     
+    # 3. Procesar
     clean <- raw %>%
-      select(anio_raw = ...1, mes = ...2, var_mensual = ...4, var_acum = ...5) %>%
-      # 1. Rellenar Años (El año solo aparece en enero, los demás son NA)
-      fill(anio_raw, .direction = "down") %>%
-      # 2. Convertir a numéricos para evitar filas de texto basura
       mutate(
-        anio = suppressWarnings(as.numeric(anio_raw)),
-        var_mensual = suppressWarnings(as.numeric(var_mensual)),
-        var_acum = suppressWarnings(as.numeric(var_acum))
+        # Extraer año de AMBOS lugares:
+        # A) "Promedio 2007" en columna 1
+        anio_promedio_raw = str_extract(...1, "Promedio\\s*\\d{4}"),
+        anio_promedio = as.numeric(str_extract(anio_promedio_raw, "\\d{4}")),
+        
+        # B) "2023" directamente en columna 1 (años recientes)
+        anio_directo = suppressWarnings(as.numeric(...1)),
+        
+        # Mes en columna 2
+        mes_txt = str_extract(tolower(...2), "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre")
       ) %>%
-      # 3. FILTRO CRÍTICO: Eliminar filas "Promedio", "Trimestre" o vacías
-      filter(
-        !is.na(anio), 
-        !is.na(mes),
-        !str_detect(mes, "Promedio|promedio|Trimestre|Semestre|Total") # <--- Tu petición
+      # Rellenar año de "Promedio" hacia arriba
+      fill(anio_promedio, .direction = "up") %>%
+      # Rellenar año directo hacia abajo  
+      fill(anio_directo, .direction = "down") %>%
+      # Combinar: primero intenta año directo, sino usa promedio
+      mutate(anio_final = coalesce(anio_directo, anio_promedio)) %>%
+      # Filtrar solo meses
+      filter(!is.na(mes_txt), !is.na(anio_final)) %>%
+      mutate(
+        var_interanual = suppressWarnings(as.numeric(...4)),
+        var_acumulada = suppressWarnings(as.numeric(...5)),
+        mes_num = match(mes_txt, c("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre")),
+        fecha = make_date(anio_final, mes_num, 1)
       ) %>%
-      # 4. Parsear mes (Tu función ya maneja "Enero" -> "ene" -> 1)
-      mutate(mes_num = parsear_mes(mes)) %>%
-      filter(!is.na(mes_num)) %>% # Seguridad extra
-      # 5. Crear fecha
-      mutate(fecha = make_date(anio, mes_num, 1)) %>%
+      filter(!is.na(fecha)) %>%
       arrange(fecha) %>%
-      select(fecha, var_mensual, var_acum)
+      select(fecha, var_mensual = var_interanual, var_acum = var_acumulada)
     
     unlink(tf)
     
-    if(nrow(clean) == 0) stop("IMAE vacío tras limpieza")
+    if(nrow(clean) == 0) {
+      warning("⚠️ IMAE vacío")
+      return(tibble(fecha = Sys.Date(), var_mensual = 0, var_acum = 0))
+    }
+    
     return(clean)
     
   }, error = function(e) {
-    message("❌ Error en IMAE: ", e$message)
-    return(data.frame(fecha = Sys.Date(), var_mensual = 0, var_acum = 0))
+    message("❌ Error IMAE: ", e$message)
+    return(tibble(fecha = Sys.Date(), var_mensual = 0, var_acum = 0))
   })
 }
 
-# --- 3. EJECUCIÓN Y CÁLCULOS KPI ---
+# =============================================================================
+# DATA INTERNACIONAL E ÍNDICE 
+# =============================================================================
+
+# =============================================================================
+# DATA INTERNACIONAL E ÍNDICE EXTERNO PURO
+# =============================================================================
+
+obtener_externos <- function() {
+  tryCatch({
+    # 1. YAHOO: Variables Financieras y Costos
+    tickers_yahoo <- c(
+      "CL=F",     # Petróleo WTI
+      "NG=F",     # Gas Natural
+      "ZC=F",     # Maíz
+      "^TNX",     # Bonos 10Y USA
+      "DX-Y.NYB", # DXY
+      "^VIX"      # VIX
+    ) 
+    
+    df_yahoo <- tq_get(tickers_yahoo, get = "stock.prices", from = "2015-01-01") %>%
+      select(symbol, date, close) %>%
+      pivot_wider(names_from = symbol, values_from = close) %>%
+      rename(
+        petroleo = `CL=F`, 
+        gas      = `NG=F`,
+        maiz     = `ZC=F`,
+        us10y    = `^TNX`, 
+        dxy      = `DX-Y.NYB`,
+        vix      = `^VIX`
+      )
+    
+    # 2. FRED: Ciclo real y política monetaria
+    df_fred <- tq_get(c("FEDFUNDS", "INDPRO"), get = "economic.data", from = "2015-01-01") %>%
+      pivot_wider(names_from = symbol, values_from = price) %>%
+      rename(
+        tasa_fed = FEDFUNDS,
+        indpro   = INDPRO
+      )
+    
+    # 3. UNIFICACIÓN MENSUAL
+    df_completo <- df_yahoo %>%
+      mutate(mes_anio = floor_date(date, "month")) %>%
+      group_by(mes_anio) %>%
+      summarise(across(where(is.numeric), mean, na.rm = TRUE)) %>%
+      ungroup() %>%
+      left_join(df_fred %>% mutate(mes_anio = floor_date(date, "month")), by = "mes_anio") %>%
+      select(-date) %>%
+      rename(date = mes_anio) %>%
+      fill(tasa_fed, indpro, .direction = "downup") %>%
+      na.omit()
+    
+    return(df_completo)
+  }, error = function(e) {
+    message("Error en obtener_externos(): ", e$message)
+    return(NULL)
+  })
+}
+
+# =============================================================================
+# CÁLCULO DEL ÍNDICE EXTERNO
+# =============================================================================
+
+calcular_ice_puro <- function(df_externos) {
+  if (is.null(df_externos) || nrow(df_externos) < 60) return(NULL)
+  
+  # Transformación ciclo real
+  df_transf <- df_externos %>%
+    arrange(date) %>%
+    mutate(
+      d_indpro = (indpro / lag(indpro, 12) - 1) * 100
+    ) %>%
+    na.omit()
+  
+  winsor <- function(x) pmin(pmax(scale(x), -3), 3)
+  
+  df_z <- df_transf %>%
+    mutate(
+      z_tasa  = winsor(tasa_fed),
+      z_us10y = winsor(us10y),
+      z_dxy   = winsor(dxy),
+      z_vix   = winsor(vix),
+      z_oil   = winsor(petroleo),
+      z_gas   = winsor(gas),
+      z_maiz  = winsor(maiz),
+      z_ciclo = winsor(d_indpro)
+    )
+  
+  # Pesos estructurales
+  w_fin  <- 0.10
+  w_cost <- 0.10
+  w_real <- 0.30
+  
+  df_final <- df_z %>%
+    mutate(
+      ice_sigma =
+        (z_tasa + z_us10y + z_dxy + z_vix) * w_fin +
+        (z_oil + z_gas + z_maiz) * w_cost -
+        (z_ciclo * w_real),
+      
+      ice_scaled = ((ice_sigma + 3) / 6) * 100,
+      ice = pmin(pmax(ice_scaled, 0), 100),
+      indice_externo = zoo::rollmean(ice, k = 3, fill = NA, align = "right")
+    ) %>%
+    fill(indice_externo, .direction = "downup")
+  
+  return(df_final)
+}
+
+# =============================================================================
+# EJECUCIÓN
+# =============================================================================
+
+raw_externos    <- obtener_externos()
+df_externos_ice <- calcular_ice_puro(raw_externos)
+
+# =============================================================================
+# KPIs EXTERNOS
+# =============================================================================
+
+if (!is.null(df_externos_ice) && nrow(df_externos_ice) >= 2) {
+  
+  hoy_ext  <- tail(df_externos_ice, 1)
+  ayer_ext <- tail(df_externos_ice, 2) %>% head(1)
+  
+  calc_var <- function(a, b) {
+    if (is.na(a) || is.na(b)) return(list(diff = 0, pct = 0))
+    list(diff = a - b, pct = (a - b) / b * 100)
+  }
+  
+  wti <- calc_var(hoy_ext$petroleo, ayer_ext$petroleo)
+  dxy <- calc_var(hoy_ext$dxy, ayer_ext$dxy)
+  
+  var_wti <- wti$diff
+  pct_wti <- wti$pct
+  color_wti <- if (var_wti > 0) "text-danger" else "text-success"
+  
+  var_dxy <- dxy$diff
+  pct_dxy <- dxy$pct
+  color_dxy <- if (var_dxy > 0) "text-danger" else "text-success"
+  
+  df_ext <- df_externos_ice
+}
+# =============================================================================
+# CÁLCULO DE KPIS Y COLORES 
+# =============================================================================
 df_dolar <- obtener_dolar()
 df_tpm   <- obtener_tpm()
 df_ipc   <- obtener_ipc()
-df_imae  <- obtener_imae()
-# Cálculos Dólar
+df_imae <- obtener_imae()
+
+# --- DÓLAR ---
 hoy_dolar  <- tail(df_dolar, 1)
 ayer_dolar <- tail(df_dolar, 2) %>% head(1)
+diff_dolar <- hoy_dolar$tasa_venta - ayer_dolar$tasa_venta
+pct_dolar  <- (diff_dolar / ayer_dolar$tasa_venta) * 100
+prom_30d   <- df_dolar %>% tail(30) %>% pull(tasa_venta) %>% mean()
+vs_prom    <- hoy_dolar$tasa_venta - prom_30d
 
-# CÁLCULOS IMAE
-val_imae <- tail(df_imae, 1) # Último dato disponible
-# Prevención si viene vacío
-if(nrow(df_dolar) > 1 && hoy_dolar$tasa_venta > 0) {
-  diff_dolar <- hoy_dolar$tasa_venta - ayer_dolar$tasa_venta
-  pct_dolar  <- (diff_dolar / ayer_dolar$tasa_venta) * 100
-} else {
-  diff_dolar <- 0; pct_dolar <- 0
-}
+# Lógica Visual Dólar: Si sube es "malo" (Rojo), si baja es "bueno" (Verde)
+color_txt_dolar <- if(diff_dolar > 0) "text-danger" else "text-success"
+icono_dolar     <- if(diff_dolar > 0) "arrow-up" else "arrow-down"
+signo_dolar     <- if(diff_dolar > 0) "+" else ""
 
-icon_dolar  <- if(diff_dolar >= 0) "arrow-up-short" else "arrow-down-short"
-color_dolar <- if(diff_dolar >= 0) "danger" else "success" 
-
+# --- INFLACIÓN ---
 val_ipc <- head(df_ipc, 1)
+en_meta <- val_ipc$doce_meses >= 3 & val_ipc$doce_meses <= 5
+
+# Lógica Visual Inflación
+color_txt_ipc <- if(en_meta) "text-success" else "text-warning"
+icono_ipc     <- if(en_meta) "check-circle-fill" else "exclamation-triangle-fill"
+txt_meta      <- if(en_meta) "Dentro de meta (3-5%)" else "Fuera de meta"
+
+# --- IMAE ---
+val_imae <- tail(df_imae, 1)
+# Lógica: Crecimiento robusto (>3%) verde, bajo (<1%) rojo
+color_txt_imae <- if(val_imae$var_mensual >= 3) "text-success" else if(val_imae$var_mensual < 1) "text-danger" else "text-primary"
+
+# --- TPM ---
 val_tpm <- tail(df_tpm, 1)
 ```
+
 
 # Indicadores {orientation="rows"}
 
@@ -323,14 +556,22 @@ value_box(
   title = "Dólar Spot (Venta)",
   value = paste0("RD$ ", format(round(hoy_dolar$tasa_venta, 2), nsmall=2)),
   showcase = bs_icon("currency-dollar"),
-  theme = "light",
-  full_screen = FALSE,
-  p(
-    bs_icon(icon_dolar), 
-    paste0(round(abs(diff_dolar), 2), " (", round(pct_dolar, 2), "%)"),
-    class = paste0("text-", color_dolar)
+  theme = "white", 
+  
+  # Línea de variación con color dinámico
+  p(class = color_txt_dolar, style = "font-weight: 600;",
+    bs_icon(icono_dolar), 
+    paste0(signo_dolar, format(round(diff_dolar, 2), nsmall=2), 
+           " (", format(round(pct_dolar, 2), nsmall=2), "%) vs. ayer")
   ),
-  p(paste0("Act: ", format(hoy_dolar$fecha, "%d %b")), class = "text-muted fs-6")
+  
+  # Contexto secundario
+  p(class = "text-muted small",
+    paste0(ifelse(vs_prom >=0, "+", ""), format(round(vs_prom, 2), nsmall=2), " vs. prom. 30d")
+  ),
+  
+  # Fecha en Español
+  p(class = "text-muted small mb-0", paste0("Datos: ", fecha_es(hoy_dolar$fecha)))
 )
 ```
 
@@ -340,63 +581,80 @@ value_box(
   title = "Inflación Interanual",
   value = paste0(format(round(val_ipc$doce_meses, 2), nsmall=2), "%"),
   showcase = bs_icon("graph-up"),
-  theme = "light",
-  expandable = FALSE,
-  p("Meta: 4.0% ± 1%", class = "text-secondary"),
-  p(paste0("Datos: ", format(val_ipc$fecha, "%b %Y")), class = "text-muted fs-6")
+  theme = "white",
+  
+  p(class = color_txt_ipc, style = "font-weight: 600;",
+    bs_icon(icono_ipc), " ", txt_meta
+  ),
+  p(class = "text-muted small mb-0", paste0("Datos: ", fecha_es(val_ipc$fecha)))
 )
 ```
 
 ```{r}
 #| classes: no-expand
 value_box(
-  title = "Tasa Política Monetaria",
+  title = "Tasa de Política Monetaria",
   value = paste0(format(round(val_tpm$tpm * 100, 2), nsmall=2), "%"),
   showcase = bs_icon("bank2"),
-  theme = "light",
-  expandable = FALSE,
-  p("Referencia BCRD", class = "text-secondary"),
-  p(paste0("Datos: ", format(val_tpm$fecha, "%b %Y")), class = "text-muted fs-6")
+  theme = "white",
+  
+  p(class = "text-secondary", style = "font-weight: 500;",
+    "Tasa de referencia BCRD"
+  ),
+  p(class = "text-muted small mb-0", paste0("Decisión: ", fecha_es(val_tpm$fecha)))
 )
 ```
 
 ```{r}
-#| classes: no-expand
 value_box(
   title = "Actividad Económica (IMAE)",
   value = paste0(format(round(val_imae$var_mensual, 1), nsmall=1), "%"),
-  showcase = bs_icon("buildings"), # Icono de edificio/industria
-  theme = "light",
-  p(
-    "Acumulada: ", 
-    strong(paste0(round(val_imae$var_acum, 1), "%")),
-    class = "text-secondary"
+  showcase = bs_icon("buildings"),
+  theme = "white",
+  
+  p(class = color_txt_imae, style = "font-weight: 600;",
+    bs_icon("bar-chart-fill"), " Var. Mensual"
   ),
-  p(paste0("Datos: ", format(val_imae$fecha, "%b %Y")), class = "text-muted fs-6")
+  p(class = "text-muted small",
+    paste0("Acumulada: ", format(round(val_imae$var_acum, 1), nsmall=1), "%")
+  ),
+  p(class = "text-muted small mb-0", paste0("Datos: ", fecha_es(val_imae$fecha)))
 )
 ```
 ## Row {height="fill"}
 ::: {.panel-tabset}
 ### Dólar
 ```{r}
-#| title: "Evolución Dólar"
 #| expandable: false
 data_grafico <- tail(df_dolar, 365)
 promedio <- mean(data_grafico$tasa_venta)
 
-hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), color = "#546e7a", name = "Venta") %>%
-  hc_title(text = "Dólar Spot (Últimos 12 meses)") %>%
+hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), 
+       color = "var(--lm-primario)", name = "Tasa de Venta") %>%
+  hc_title(text = "Tipo de Cambio Dólar/Peso") %>%
+  hc_subtitle(text = "Últimos 12 meses") %>%
   hc_yAxis(
-    title = list(text = ""),
-    plotLines = list(list(value = promedio, color = "#90a4ae", dashStyle = "ShortDash", label = list(text = "Promedio")))
+    title = list(text = "RD$ por US$"),
+    plotLines = list(
+      list(
+        value = promedio,
+        color = "#c86448",
+        dashStyle = "Dash",
+        width = 1,
+        label = list(
+          text = paste0("Promedio: RD$ ", round(promedio, 2)),
+          align = "right",
+          style = list(color = "#c86448", fontWeight = "600")
+        )
+      )
+    )
   ) %>%
-  hc_tooltip(pointFormat = "RD$ {point.y:,.2f}") %>%
-  hc_add_theme(theme_observatorio()) |> 
-  hc_credits(
-    enabled = TRUE, 
-    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
-    style = list(fontSize = "10px", color = "#999")
-  )
+  hc_tooltip(
+    pointFormat = "Tasa: <b>RD$ {point.y:,.2f}</b>",
+    xDateFormat = "%d de %B de %Y"
+  ) %>%
+  hc_add_theme(theme_observatorio()) %>%
+  creditos_bcrd()
 ```
 
 
@@ -405,130 +663,337 @@ hchart(data_grafico, "line", hcaes(x = fecha, y = tasa_venta), color = "#546e7a"
 #| expandable: false
 df_ipc_reciente <- head(df_ipc, 48)
 
-hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), color = "#c86448", name = "Inflación") %>%
-  hc_title(text = "Inflación (Últimos 4 años)") %>%
-  hc_yAxis(title = list(text = ""),
+hchart(df_ipc_reciente, "line", hcaes(x = fecha, y = doce_meses), 
+       color = "#c86448", name = "Inflación Interanual") %>%
+  hc_title(text = "Inflación Interanual (Últimos 4 años)") %>%
+  hc_subtitle(text = "Variación % respecto al mismo mes del año anterior") %>%
+  hc_yAxis(
+    title = list(text = "Inflación (%)"),
+    plotBands = list(
+      list(
+        from = 3.0,
+        to = 5.0,
+        color = "rgba(107, 117, 84, 0.1)",
+        label = list(
+          text = "Meta 4.0% ± 1%",
+          align = "right",
+          style = list(color = "#6b7554", fontWeight = "500")
+        )
+      )
+    ),
     plotLines = list(
-      # Banda de Meta (Gris muy suave para el fondo)
       list(
-        color = "#f4f4f4", 
-        from = 3.0, to = 5.0, 
-        label = list(text = ""), 
-        zIndex = 1
-      ),
-      # Línea Meta (Gris oscuro punteado, serio)
-      list(
-        value = 4.0, 
-        color = "#333333", 
-        dashStyle = "ShortDash", 
-        width = 1,
-        label = list(text = "Meta 4.0%", align = "right", style = list(color = "#666")),
-        zIndex = 2
+        value = 4.0,
+        color = "#6b7554",
+        dashStyle = "Dash",
+        width = 2
       )
     )
   ) %>%
-  hc_tooltip(pointFormat = "{point.y:.2f}%") %>%
-  hc_add_theme(theme_observatorio()) |> 
-  hc_credits(
-    enabled = TRUE, 
-    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
-    style = list(fontSize = "10px", color = "#999")
-  )
+  hc_tooltip(
+    pointFormat = "Inflación: <b>{point.y:.2f}%</b>",
+    xDateFormat = "%B %Y"
+  ) %>%
+  hc_add_theme(theme_observatorio()) %>%
+  creditos_bcrd()
 ```
 
 
 ### TPM
 ```{r}
 #| expandable: false
-# Preparamos datos: Filtramos últimos 7 años y convertimos a porcentaje
-df_tpm_grafico <- df_tpm %>% 
-  arrange(desc(fecha)) %>% # Ordenar para head()
-  head(84) %>%             # Tomar últimos 84 meses
-  arrange(fecha) %>%       # Reordenar cronológico para el gráfico
-  mutate(tpm_pct = tpm * 100) # Convertir 0.07 a 7.0
+df_tpm_grafico <- df_tpm %>%
+  arrange(desc(fecha)) %>%
+  head(84) %>%
+  arrange(fecha) %>%
+  mutate(tpm_pct = tpm * 100)
 
 hchart(
-  df_tpm_grafico, 
-  "area", 
-  hcaes(x = fecha, y = tpm_pct), 
-  color = "#556b2f", # <--- CAMBIO: Verde Oliva
+  df_tpm_grafico,
+  "areaspline",
+  hcaes(x = fecha, y = tpm_pct),
+  color = "#6b7554",
   fillColor = list(
     linearGradient = list(x1 = 0, y1 = 0, x2 = 0, y2 = 1),
     stops = list(
-      list(0, "rgba(85, 107, 47, 0.5)"), # Oliva semi-transparente arriba
-      list(1, "rgba(255, 255, 255, 0)")  # Transparente abajo
+      list(0, "rgba(107, 117, 84, 0.4)"),
+      list(1, "rgba(255, 255, 255, 0)")
     )
   ),
-  name = "TPM",
-  step = "left"
+  name = "TPM"
 ) %>%
   hc_title(text = "Tasa de Política Monetaria") %>%
-  hc_yAxis(title = list(text = ""),
-    labels = list(format = "{value}%")) %>%
-  hc_tooltip(pointFormat = "TPM: <b>{point.y:.2f}%</b>", xDateFormat = "%B %Y") %>%
-  hc_add_theme(theme_observatorio()) |> 
-  hc_credits(
-    enabled = TRUE, 
-    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
-    style = list(fontSize = "10px", color = "#999")
-  )
+  hc_subtitle(text = "Últimos 7 años") %>%
+  hc_yAxis(
+    title = list(text = "Tasa (%)"),
+    labels = list(format = "{value}%")
+  ) %>%
+  hc_tooltip(
+    pointFormat = "TPM: <b>{point.y:.2f}%</b>",
+    xDateFormat = "%B %Y"
+  ) %>%
+  hc_add_theme(theme_observatorio()) %>%
+  creditos_bcrd()
 ```
 
 
 ### IMAE
 ```{r}
 #| expandable: false
-# Últimos 48 meses (4 años)
 df_imae_grafico <- tail(df_imae, 48)
 
 hchart(
-  df_imae_grafico, 
-  "column", # <--- Columnas para diferenciarlo de precios
-  hcaes(x = fecha, y = var_mensual), 
-  color = "#343a40", # Gris Plomo (Tu estilo Editorial)
-  name = "IMAE Mensual"
+  df_imae_grafico,
+  "column",
+  hcaes(x = fecha, y = var_mensual),
+  color = "var(--lm-primario)",
+  name = "Variación Mensual"
 ) %>%
-  hc_title(text = "Actividad Económica (IMAE)") %>%
-  hc_subtitle(text = "Variación interanual del índice (%)") %>%
+  hc_title(text = "Índice Mensual de Actividad Económica") %>%
+  hc_subtitle(text = "Variación interanual (%), últimos 4 años") %>%
+  hc_xAxis(
+    type = "datetime",
+    dateTimeLabelFormats = list(month = "%b '%y"), # Formato: Ene '24
+    crosshair = TRUE
+  ) %>%
   hc_yAxis(
-    title = list(text = "Crecimiento %"),
-    plotLines = list(list(
-      value = 0, 
-      color = "#333", 
-      width = 2 # Línea base del 0% marcada fuerte
-    ))
+    title = list(text = "Crecimiento (%)"),
+    plotLines = list(
+      list(
+        value = 0,
+        color = "#1a1512",
+        width = 1
+      )
+    )
+  ) %>%
+  hc_plotOptions(
+    column = list(
+      pointPadding = 0,   
+      groupPadding = 0.1,  
+      borderWidth = 0,     
+      shadow = FALSE       
+    )
   ) %>%
   hc_tooltip(
-    pointFormat = "Variación Mensual: <b>{point.y:.1f}%</b><br/>"
+    pointFormat = "Crecimiento: <b>{point.y:.1f}%</b>",
+    xDateFormat = "%B %Y"
   ) %>%
-  hc_add_theme(theme_observatorio()) |> 
-  hc_credits(
-    enabled = TRUE, 
-    text = "Fuente: Banco Central de la R.D. | Elaboración: Leonardo Mena",
-    style = list(fontSize = "10px", color = "#999")
-  )
+  hc_add_theme(theme_observatorio()) %>%
+  creditos_bcrd(.)
 ```
 :::
+
+# Contexto Int. {orientation="rows"}
+
+## Row {height="220px"}
+
+```{r}
+#| classes: no-expand
+value_box(
+  title = "Petróleo WTI",
+  value = paste0("US$ ", format(round(hoy_ext$petroleo, 2), nsmall=2)),
+  showcase = bs_icon("fuel-pump"),
+  theme = "white",
+  p(class = color_wti, style = "font-weight: 600;",
+    bs_icon(if(var_wti>0) "arrow-up" else "arrow-down"), 
+    paste0(format(round(var_wti, 2), nsmall=2), " (", format(round(pct_wti, 2), nsmall=2), "%)")
+  ),
+  p(class = "text-muted small", "Importación (Gasto)")
+)
+```
+
+```{r}
+#| classes: no-expand
+value_box(
+  title = "Dólar Index (DXY)",
+  value = format(round(hoy_ext$dxy, 2), nsmall=2),
+  showcase = bs_icon("globe-americas"),
+  theme = "white",
+  p(class = color_dxy, style = "font-weight: 600;",
+    bs_icon(if(var_dxy>0) "arrow-up" else "arrow-down"), 
+    paste0(format(round(var_dxy, 2), nsmall=2), " (", format(round(pct_dxy, 2), nsmall=2), "%)")
+  ),
+  p(class = "text-muted small", "Fortaleza global USD")
+)
+```
+
+```{r}
+#| classes: no-expand
+value_box(
+  title = "Tasa FED & Bonos",
+  value = paste0(format(round(hoy_ext$tasa_fed, 2), nsmall=2), "%"),
+  showcase = bs_icon("bank"),
+  theme = "white",
+  p(class = "text-secondary", "Tasa de Fondos Federales"),
+  p(class = "text-muted small", paste0("Bono US 10Y: ", round(hoy_ext$us10y, 2), "%"))
+)
+```
+
+## Row {height="fill"}
+## Índice de Presión Externa (PCA)
+
+```{r}
+#| title: "Índice Sintético de Condiciones Externas"
+#| padding: 0
+
+hchart(df_ext %>% tail(365), "area", hcaes(x = date, y = indice_externo),
+       name = "Presión Externa", color = "#c86448", 
+       fillColor = list(
+         linearGradient = list(x1 = 0, y1 = 0, x2 = 0, y2 = 1),
+         stops = list(list(0, "rgba(200, 100, 72, 0.5)"), list(1, "rgba(255, 255, 255, 0)"))
+       )) %>%
+  hc_title(text = "Índice de Condiciones Externas") %>%
+  hc_subtitle(text = "(0 = Condiciones externas favorables, 100 = Condiciones externas adversas)") %>%
+  hc_yAxis(title = list(text = "Nivel de Presión (0-100)"), min = 0, max = 100,
+           plotLines = list(list(value = 50, color = "#6b7554", dashStyle = "Dash", label = list(text = "Neutro")))) %>%
+  hc_tooltip(pointFormat = "ICE: <b>{point.y:.1f}</b>") %>%
+  hc_add_theme(theme_observatorio())
+```
+
 
 # Descargar data
 ::: {.panel-tabset}
 ### ⬇️ Descargar Datos Históricos TPM
 ```{r}
-generar_boton_descarga(df_tpm, "TPM_Historico")
+df_tpm %>%
+  mutate(
+    Fecha = format(fecha, "%Y-%m"),
+    `TPM (%)` = round(tpm * 100, 2)
+  ) %>%
+  select(-fecha) %>%
+  generar_boton_descarga("tpm_historica")
 ```
 ### ⬇️ Descargar Datos Históricos Inflacion
 ```{r}
-generar_boton_descarga(df_ipc, "IPC_Historico")
+df_ipc %>%
+  mutate(
+    Fecha = format(fecha, "%Y-%m"),
+    `Inflación (%)` = round(doce_meses, 2)
+  ) %>%
+  select(-fecha) %>%
+  generar_boton_descarga("inflacion_historica")
 ```
 
 ### ⬇️ Descargar Datos Históricos Dolar
 ```{r}
-# Botón de descarga pequeño y discreto
-generar_boton_descarga(df_dolar, "Dolar_Historico")
+df_dolar %>%
+  mutate(
+    Fecha = format(fecha, "%Y-%m-%d"),
+    `Tasa de Venta` = round(tasa_venta, 2)
+  ) %>%
+  select(-fecha) %>%
+  generar_boton_descarga("dolar_historico")
 ```
 
 ### ⬇️ Descargar Datos Históricos IMAE
 ```{r}
-generar_boton_descarga(df_imae, "IMAE_Historico_RD")
+df_imae %>%
+  mutate(
+    Fecha = format(fecha, "%Y-%m"),
+    `Var. Mensual (%)` = var_mensual,
+    `Var. Acumulada (%)` = var_acum
+  ) %>%
+  select(Fecha, `Var. Mensual (%)`, `Var. Acumulada (%)`) %>%
+  generar_boton_descarga("imae_historico")
 ```
+:::
+
+# Metodología {scrolling="true"}
+
+## Row {height="100%"}
+
+::: {.card}
+
+```{=html}
+<div style="max-width: 900px; margin: 0 auto; padding: 40px; font-family: 'Crimson Pro', serif; font-size: 1.15rem; line-height: 1.8; color: var(--lm-text-main);">
+
+  <h1 style="font-size: 3rem; margin-bottom: 0.5rem; color: var(--lm-terracota); font-weight: 700;">Notas Metodológicas</h1>
+  <p style="color: var(--lm-text-soft); font-style: italic; margin-bottom: 3rem; font-size: 1.2rem; border-bottom: 1px solid var(--lm-border); padding-bottom: 2rem;">
+    Detalle técnico sobre la construcción de los indicadores, fuentes de datos y frecuencia de actualización del Observatorio.
+  </p>
+
+  <h3 style="color: var(--lm-text-main); font-weight: 600; margin-top: 2rem;">1. Fuentes de Datos</h3>
+  <p>
+    Los indicadores domésticos provienen de los repositorios oficiales del <strong>Banco Central de la República Dominicana (BCRD)</strong>. Los indicadores internacionales y sintéticos se nutren de fuentes globales (FRED, Yahoo Finance). El proceso de extracción es 100% automatizado utilizando <code>R</code>, garantizando que los datos reflejen siempre la última publicación oficial sin intervención manual.
+  </p>
+
+  <h3 style="color: var(--lm-text-main); font-weight: 600; margin-top: 2.5rem;">2. Definiciones Técnicas</h3>
+
+  <div style="margin-left: 1rem;">
+    <p style="margin-bottom: 1.5rem;">
+      <strong style="color: var(--lm-terracota);">Tipo de Cambio (Dólar Spot):</strong><br>
+      Se utiliza la Tasa de Venta del Mercado Spot reportada por el BCRD. La variación diaria se calcula respecto al cierre del día hábil anterior. El "Promedio 30d" es la media móvil de los últimos 30 días naturales.
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      <strong style="color: var(--lm-terracota);">Inflación (IPC):</strong><br>
+      Variación interanual del Índice de Precios al Consumidor (Base Diciembre 2020).
+      <br><span style="font-size: 0.9em; color: var(--lm-text-soft);">
+      • <span style="color: #388e3c;">✔ Verde:</span> Dentro de la meta (4.0% ± 1%).<br>
+      • <span style="color: #d32f2f;">✖ Rojo:</span> Fuera del rango meta.
+      </span>
+    </p>
+
+    <p style="margin-bottom: 1.5rem;">
+      <strong style="color: var(--lm-terracota);">Actividad Económica (IMAE):</strong><br>
+      Utilizamos la <strong>Serie Original</strong> del IMAE (Base 2018). Este indicador funciona como una variable proxy del PIB mensual.
+    </p>
+  </div>
+
+  <h3 style="color: var(--lm-text-main); font-weight: 600; margin-top: 2.5rem;">3. Índice de Condiciones Externas (ICE)</h3>
+  
+  <p>
+    El ICE es un indicador sintético "puro" diseñado para medir la presión del entorno internacional sobre la economía dominicana. Se construye exclusivamente con variables exógenas, sin utilizar datos locales, para garantizar una medición objetiva del "viento a favor o en contra".
+  </p>
+
+  <p style="margin-top: 1rem;">
+    <strong style="color: var(--lm-terracota);">Composición Estructural (Pesos Fijos):</strong><br>
+    El índice agrega 8 variables en 3 bloques conceptuales:
+  </p>
+
+  <ul style="list-style-type: square; margin-left: 1.5rem; color: var(--lm-text-soft);">
+    <li>
+      <strong>Bloque Financiero (40%):</strong> Captura el costo de capital y aversión al riesgo. 
+      <br><em>Variables:</em> Tasa Fed, Rendimiento Bonos US 10Y, Índice Dólar (DXY) e Índice de Volatilidad (VIX).
+    </li>
+    <li>
+      <strong>Bloque de Costos (30%):</strong> Captura shocks de oferta en precios de importación clave.
+      <br><em>Variables:</em> Petróleo WTI, Gas Natural y Maíz.
+    </li>
+    <li>
+      <strong>Bloque de Ciclo Real (30%):</strong> Proxy de la demanda externa para turismo y remesas.
+      <br><em>Variable:</em> Índice de Producción Industrial de EE.UU. (INDPRO).
+    </li>
+  </ul>
+
+  <p style="margin-top: 1rem;">
+    <strong style="color: var(--lm-terracota);">Interpretación:</strong><br>
+    Cada variable es estandarizada (Z-Score robusto) y agregada linealmente. El resultado se escala de 0 a 100 basado en desviaciones estándar históricas (±3σ).
+  </p>
+  
+  <ul style="list-style-type: none; margin-left: 0; padding-left: 1rem; border-left: 3px solid var(--lm-terracota); color: var(--lm-text-main);">
+    <li><strong>0 - 20:</strong> Entorno de Bonanza (Viento a favor).</li>
+    <li><strong>50:</strong> Promedio Histórico (Neutro).</li>
+    <li><strong>80 - 100:</strong> Entorno de Estrés Severo (Viento en contra).</li>
+  </ul>
+
+  <hr style="border: 0; border-top: 1px solid var(--lm-border); margin: 3rem 0;">
+
+  <h3 style="color: var(--lm-text-main); font-weight: 600;">4. Stack Tecnológico</h3>
+  <p>
+    Este dashboard es un proyecto de código abierto diseñado para la transparencia y reproducibilidad.
+  </p>
+  <ul style="list-style-type: square; color: var(--lm-text-soft);">
+    <li><strong>Lenguaje:</strong> R (4.3.0)</li>
+    <li><strong>Framework:</strong> Quarto Dashboards</li>
+    <li><strong>Librerías:</strong> <code>highcharter</code>, <code>tidyverse</code>, <code>bslib</code>, <code>tidyquant</code>.</li>
+  </ul>
+
+  <div style="margin-top: 3rem; padding: 1.5rem; background-color: var(--lm-bg-sec); border-left: 4px solid var(--lm-terracota); border-radius: 4px; font-size: 0.95rem; font-family: 'Inter', sans-serif;">
+    <strong>Nota de Responsabilidad:</strong> Este monitor tiene fines estrictamente académicos e informativos. Para la toma de decisiones financieras críticas, por favor remítase siempre a la publicación oficial en <a href="https://bancentral.gov.do" target="_blank" style="color: var(--lm-terracota); font-weight: bold; text-decoration: underline;">bancentral.gov.do</a>.
+  </div>
+
+</div>
+```
+
 :::

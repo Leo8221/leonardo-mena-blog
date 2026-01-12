@@ -1,0 +1,62 @@
+<script>
+(function() {
+  function setupShareButtons() {
+
+    const currentUrl = window.location.href
+      .replace(/index\.html.*$/, '')
+      .replace(/#.*$/, '')
+      .replace(/\/$/, ''); 
+    
+    const pageTitle = document.querySelector('h1.title')?.textContent || 
+                     document.querySelector('title')?.textContent || 
+                     document.title;
+    
+    const buttons = document.querySelectorAll('[data-share]');
+    
+    if (buttons.length === 0) {
+      console.warn('⚠️ No share buttons found, retrying in 100ms...');
+      setTimeout(setupShareButtons, 100);
+      return;
+    }
+    
+    console.log('🔧 Setting up', buttons.length, 'share buttons');
+    console.log('📍 URL:', currentUrl);
+    console.log('📝 Title:', pageTitle);
+    
+    buttons.forEach(element => {
+      const platform = element.getAttribute('data-share');
+      let shareUrl = '';
+      
+      switch(platform) {
+        case 'twitter':
+          shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(pageTitle)}&url=${encodeURIComponent(currentUrl)}`;
+          break;
+        case 'linkedin':
+          shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+          break;
+        case 'whatsapp':
+          const whatsappText = `${pageTitle} 💭\n\n${currentUrl}`;
+          shareUrl = `https://wa.me/?text=${encodeURIComponent(whatsappText)}`;
+          break;
+      }
+      
+      if (shareUrl) {
+        element.href = shareUrl;
+        element.removeAttribute('data-original-href'); 
+      }
+    });
+    
+    console.log('✅ Share buttons auto-configured');
+  }
+  
+  // Múltiples puntos de entrada para garantizar ejecución
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupShareButtons);
+  } else {
+    setupShareButtons();
+  }
+  
+  // ejecutar después de 500ms por si acaso
+  setTimeout(setupShareButtons, 500);
+})();
+</script>
