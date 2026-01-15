@@ -9,7 +9,7 @@ twitter-card:
 categories: 
   - "Mis predecesores"
   - "Fundamentos"
-draft: true
+draft: false
 body-class: editorial-post
 toc: true
 toc-location: left
@@ -129,15 +129,13 @@ La Falacia de la Ventana Rota aplicada a Juan
 
 ## Mi Predecesor
 
-La cita con la que inicié este artículo termina con una sentencia demoledora:
+La cita con la que abrí este artículo culmina con una sentencia demoledora:
 
 ::: {.pullquote}
 "Toda la diferencia entre un mal y un buen economista es ésta: uno se limita al efecto visible; el otro tiene en cuenta el efecto que se ve y los que hay que prever."
 :::
 
-Este blog y mi pensamiento no son más que una búsqueda constante de honrar esa cita: ver lo que otros ignoran.
-
-Bastiat murió joven, a la edad de 49 años, pero ese tiempo le bastó para crear una línea de pensamiento que lo consagra como mi gran predecesor intelectual.
+Bastiat murió joven, a la edad de 49 años, pero ese tiempo le bastó para crear una línea de pensamiento que lo consagra como uno de mis predecesores intelectuales.
 
 ```{r}
 #| warning: false

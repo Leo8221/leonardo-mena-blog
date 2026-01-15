@@ -1,21 +1,24 @@
 [
   {
+    "listing": "/republica-habla-de.html",
+    "items": [
+      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
+    ]
+  },
+  {
+    "listing": "/predecesores.html",
+    "items": [
+      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html"
+    ]
+  },
+  {
     "listing": "/mitos-economicos.html",
     "items": []
   },
   {
-    "listing": "/archivo.html",
-    "items": [
-      "/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
-      "/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html",
-      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-      "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
       "/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
       "/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html",
       "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
@@ -26,6 +29,18 @@
   {
     "listing": "/categorias.html",
     "items": [
+      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
+      "/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
+      "/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html",
+      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+      "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
+    ]
+  },
+  {
+    "listing": "/archivo.html",
+    "items": [
+      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
       "/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
       "/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html",
       "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
@@ -37,16 +52,6 @@
     "listing": "/fundamentos.html",
     "items": [
       "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
-    ]
-  },
-  {
-    "listing": "/predecesores.html",
-    "items": []
-  },
-  {
-    "listing": "/republica-habla-de.html",
-    "items": [
-      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
     ]
   },
   {
