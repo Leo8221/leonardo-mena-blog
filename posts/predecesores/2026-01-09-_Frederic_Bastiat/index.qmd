@@ -1,6 +1,6 @@
 ---
 title: "Frédéric Bastiat: El primer economista influencer"
-date: "2026-01-09"
+date: "2026-01-15"
 author: "Leonardo Mena"
 description: "La historia del economista que popularizó 'lo que no se ve' y por qué sus ideas siguen siendo revolucionarias 170 años después"
 image: "Bastiat-preview.jpg"
