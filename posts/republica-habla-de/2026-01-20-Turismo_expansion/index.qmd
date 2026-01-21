@@ -7,9 +7,9 @@ image: "turismo-cover.jpg"
 twitter-card:
   image: "turismo-cover.jpg"
 categories: 
-  - "Economía Dominicana"
   - "Turismo"
-  - "Análisis de Datos"
+  - "Desarrollo"
+  - "La República habla de"
 draft: true
 body-class: editorial-post
 toc: true
@@ -29,7 +29,29 @@ source(here::here("tema_graficos.R"))
 library(ggplot2)
 ```
 
-El modelo turístico es de muy bajos salarios y además presenta signos de agotamiento". Estoy seguro de que más de uno ha escuchado un comentario similar a este, y a simple vista podría tener sentido: sector intensivo en mano de obra poco cualificada, mucha informalidad y teóricamente difícil de integrar con otros sectores.
+<div class="share-buttons-sticky">
+  <a href="#" class="share-btn twitter" data-share="twitter" title="Compartir en Twitter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="#" class="share-btn linkedin" data-share="linkedin" title="Compartir en LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="#" class="share-btn whatsapp" data-share="whatsapp" title="Compartir por WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+::: {.key-takeaways}
+<span class="key-takeaways-title">Lo esencial en 3 puntos</span>
+
+1. **Concentración extrema**: El 77% de los turistas viene exclusivamente por playa, clima y resorts, revelando una demanda monolítica más que un modelo agotado.
+
+2. **Margen inexplorado**: Historia, naturaleza y ecoturismo suman menos del 3% pese a existir recursos en todas las provincias. El problema no es de oferta sino de narrativa comercial.
+
+3. Dualidad estructural: Los datos desmienten la baja productividad generalizada, mostrando que los hoteles generan un alto valor agregado (RD$ 2.06M por trabajador). El verdadero cuello de botella está en los servicios y restaurantes (RD$ 0.85M), que al absorber el grueso de la mano de obra sin agregar diferenciación, anclan los salarios promedio a la baja.
+:::
+
+"El modelo turístico es de muy bajos salarios y además presenta signos de agotamiento". Estoy seguro de que más de uno ha escuchado un comentario similar a este, y a simple vista podría tener sentido: sector intensivo en mano de obra poco cualificada, mucha informalidad y teóricamente difícil de integrar con otros sectores.
 
 Pero, ¿qué tan cierto es esto? ¿Acaso el único camino dominicano es abandonar el modelo de desarrollo con más de 30 años de antigüedad y dar un giro de 180 grados?
 
@@ -37,7 +59,7 @@ Antes de saltar a conclusiones fatalistas, exploremos qué dicen los datos.
 
 ## El turismo de playa: ¿Agotamiento o especialización extrema?
 
-Por más robustos que parezcan, todos los modelos económicos eventualmente enfrentan la ley de rendimientos decrecientes. No es un secreto que el turismo dominicano recibe críticas recurrentes sobre su sostenibilidad a largo plazo, pero antes de diagnosticar un "agotamiento" irreversible del modelo, "conviene examinar qué tan profundamente se ha desarrollado el mismo.
+Por más robustos que parezcan, todos los modelos económicos eventualmente enfrentan la ley de rendimientos decrecientes. No es un secreto que el turismo dominicano recibe críticas recurrentes sobre su sostenibilidad a largo plazo, pero antes de diagnosticar un "agotamiento" irreversible del modelo, conviene examinar qué tan profundamente se ha desarrollado.
 
 No basta con analizar la oferta desde un mapa, los datos de la Encuesta de Opinión, Actitud y Motivación a Extranjeros No Residentes revelan que el problema podría no ser de oferta, sino de una concentración extrema de la demanda.
 
@@ -173,7 +195,7 @@ p_mapa <- ggplot(mapa_final) +
   ) +
   
   labs(
-    title = "Mapa Granular: La 'Tiranía' de la Playa",
+    title = "La 'Tiranía' de la Playa: Concentración de preferencias turísticas por país de origen",
     subtitle = "Porcentaje de turistas que visitan RD principalmente por playa, desglose nacional (2024)",
     caption = "Nota: Gris = Sin datos en la muestra seleccionada. Fuente: BCRD."
   ) +
@@ -188,11 +210,26 @@ print(p_mapa)
 
 ```
 
+::: {.pullquote}
+"El problema podría no ser de oferta, sino de una concentración extrema de la demanda"
+:::
+
 Cuando observamos los datos no nos encontramos con nada inesperado: el tema de las playas domina el 50% de las razones para visitar el país. Si a eso sumamos clima —muy relacionado— y una parte de hospitalidad, principalmente en las zonas de resort, estamos hablando de un 77% en el mismo renglón. Cabe la duda: ¿la República Dominicana solo cuenta con playas? La respuesta es no, y ahí tenemos mucho margen.
+
+::: {.data-box}
+::: {.data-box-title}
+LA ECUACIÓN DE LA CONCENTRACIÓN
+:::
+::: {.data-box-content}
+**50.5%** Playa + **15.3%** Clima + **11.9%** Hospitalidad (resorts) = **77.7%** del total de motivaciones. Tres renglones vinculados que dejan apenas un 23% para todo lo demás.
+:::
+:::
 
 ## Los infrautilizados
 
 Al observar la encuesta encontramos algunos apartados donde sin lugar a dudas nuestro país tiene mucho que ofrecer: historia, naturaleza y ecoturismo, los cuales suman menos de un 3% en las razones de turismo. Este dato es de suma importancia para el país. No todas las provincias cuentan con playas, pero sí todas cuentan o con un lugar histórico, un área de hermosos paisajes o un lugar con fauna única. 
+
+<span class="big-number">3%</span> <span class="big-number-label">Suman Historia, Naturaleza y Ecoturismo juntos</span>
 
 ```{r}
 #| label: treemap-oportunidad
@@ -287,78 +324,183 @@ Teniendo eso en cuenta, es difícil hablar de un modelo agotado cuando, al menos
 
 Jarabacoa tiene ecoturismo, Santo Domingo tiene historia colonial, pero en la mente del turista promedio no existen, o no se le ha vendido de esa forma.
 
-## La Trampa de la Baja Productividad
+## La dualidad estructural: ¿Dónde se queda el valor?
 
-El tema salarial es multifactorial y requeriría su propio artículo, pero un acercamiento posible es a través de la productividad laboral. Para esto resulta muy útil el Cuadro de Oferta y Utilización del Banco Central, específicamente el de 2019. Si bien ya tiene algunos años, en términos estructurales es poco probable que la situación haya cambiado drásticamente desde entonces.
+El tema salarial es multifactorial, pero al analizar la productividad laboral mediante el Cuadro de Oferta y Utilización (2019), nos encontramos con un hallazgo que contradice la intuición popular y refuerza la necesidad de diversificación.
 
-El verdadero reto no es solo atraer más turistas, sino generar más valor por cada uno. Los datos de la estructura productiva (2019) muestran que un trabajador en el sector de Alojamiento genera aproximadamente **RD$ 1.1 millones** de valor agregado al año. Si bien esto supera ampliamente a la agricultura tradicional, es una cifra que palidece frente a otros sectores de servicios modernos como las Finanzas (RD$ 4.6M) o incluso el Comercio.
+Contrario a lo que se piensa, el subsector Alojamiento (Hoteles) es altamente productivo, generando RD$ 2.06 millones de valor agregado por trabajador al año. Esta cifra supera incluso a industrias sofisticadas como la Farmacéutica. Sin embargo, al ser un negocio intensivo en capital (infraestructura), esa riqueza no se traduce automáticamente en salarios masivos.
+
+El verdadero reto está en la otra cara de la moneda: el subsector de Restaurantes y Bares. Este componente, que absorbe una mayor cantidad de mano de obra, muestra una productividad de apenas RD$ 0.85 millones, atrapado en una oferta de servicios estandarizados de bajo costo.
 
 ```{r}
-#| label: fig-productividad-laboral
-#| fig-cap: "Comparativa de productividad laboral: El techo del turismo frente a servicios de alto valor (2019)"
-#| fig-alt: "Gráfico de barras horizontal que compara el Valor Agregado Bruto por trabajador. El sector 'Finanzas y Seguros' lidera con RD$ 4.7 millones anuales. El sector 'Alojamiento (Turismo)', resaltado en terracota, muestra una productividad de RD$ 1.1 millones, situándose por debajo del Comercio y la Farmacéutica, pero por encima del Agro."
+#| label: fig-productividad-laboral-corregida
+#| fig-cap: "Valor Agregado por Trabajador (COU 2019): La dualidad del Turismo"
+#| fig-alt: "Gráfico de barras corregido. Finanzas lidera (4.6M). Alojamiento es alto (2.06M), superando a Farmacéutica. Restaurantes (0.85M) y Comercio (0.54M) están en la parte baja."
 #| warning: false
 #| echo: false
 #| message: false
 #| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
-#| 
-library(tidyverse)
-library(scales) # Necesario para label_number
 
-# 1. DATOS SELECCIONADOS DEL COU 2019
+library(tidyverse)
+library(scales)
+
+# 1. DATOS (COU 2019)
 df_prod <- tribble(
   ~Sector,                          ~VAB_Trabajador, ~Categoria,
   "Finanzas y Seguros",             4667019,         "Servicios Alto Valor",
+  "Alojamiento (Hoteles)",          2062428,         "Turismo (Capital Intensivo)",
   "Farmacéutica",                   1911186,         "Manufactura",
-  "Comercio",                       1317836,         "Servicios",
-  "Alojamiento (Turismo)",          1114920,         "Turismo",
-  "Construcción",                   1076076,         "Industria",
+  "Construcción",                   1317836,         "Industria",
+  "Transporte",                     1114920,         "Logística",
+  "Restaurantes y Bares",           852320,          "Turismo (Servicio)",
+  "Comercio",                       540980,          "Servicios Masivos",
   "Cultivo Arroz",                  270610,          "Agro"
 ) |> 
   mutate(
-    # Formateamos para etiqueta (en Millones)
     Label = paste0("RD$ ", round(VAB_Trabajador / 1000000, 1), " M"),
     Sector = fct_reorder(Sector, VAB_Trabajador),
-    Highlight = ifelse(Sector == "Alojamiento (Turismo)", "Turismo", "Otros")
+    Highlight = case_when(
+      str_detect(Sector, "Alojamiento") ~ "Turismo (Hotel)",
+      str_detect(Sector, "Restaurantes") ~ "Turismo (Restaurante)",
+      TRUE ~ "Otros"
+    )
   )
 
-# 2. GRÁFICO DE BARRAS (Productividad)
+# 2. GRÁFICO
 ggplot(df_prod, aes(x = VAB_Trabajador, y = Sector, fill = Highlight)) +
-  
   geom_col(width = 0.75) +
-  
-  # Etiquetas dentro o al lado de la barra
   geom_text(
     aes(label = Label),
-    hjust = -0.2, 
-    size = 4, 
-    fontface = "bold", 
-    color = pal$texto
+    hjust = -0.2, size = 4, fontface = "bold", color = pal$texto
   ) +
-  
-  # Escalas y Colores
   scale_x_continuous(
     labels = label_number(scale = 1e-6, suffix = " M"),
     expand = expansion(mult = c(0, 0.2))
   ) +
-  
-  scale_fill_manual(values = c("Otros" = "#cfd8dc", "Turismo" = pal$terracota)) +
-  
-  # Títulos
+  scale_fill_manual(values = c(
+    "Otros" = "#cfd8dc", 
+    "Turismo (Hotel)" = pal$terracota,
+    "Turismo (Restaurante)" = pal$ocre
+  )) +
   labs(
-    title = "El techo de productividad del modelo actual",
-    subtitle = "Valor Agregado Bruto generado por trabajador al año (2019).",
-    caption = "Fuente: Elaboración propia con datos del COU 2019 (BCRD). Excluye Minería.",
+    title = "La dualidad productiva del turismo",
+    subtitle = "Valor Agregado Bruto por trabajador (2019). Los hoteles generan alto valor, los restaurantes no.",
+    caption = "Fuente: Elaboración propia con datos del COU 2019 (BCRD).",
     x = "Millones de RD$ por trabajador",
     y = NULL
   ) +
-  
   theme_lm() +
   theme(legend.position = "none")
 ``` 
 
-Esto sugiere que el modelo de 'volumen' tiene un techo de productividad bajo. Sin una diversificación hacia nichos que requieran mayor especialización (y por ende, generen mayor valor por hora trabajada), la capacidad del sector para impulsar el crecimiento del PIB per cápita se verá limitada, independientemente de cuántas habitaciones nuevas construyamos.
+Aquí es donde la diversificación sectorial deja de ser un eslogan y se convierte en una necesidad económica.
+
+El modelo de "volumen" actual llena habitaciones (alta productividad del capital) pero genera empleos de servicio básicos. Integrar historia, naturaleza y cultura permite crear productos turísticos donde el valor lo aporta el conocimiento humano (el guía especializado, el artesano, el gestor cultural), elevando la productividad de ese gran segmento laboral que hoy se queda rezagado.
+
+No se trata solo de tener más hoteles, sino de que lo que sucede fuera del hotel valga más dinero.
+
+## Los obstaculos
+
+Si la oportunidad es tan evidente, ¿por qué no se ha activado ya? La respuesta no está en falta de voluntad política ni en desconocimiento, sino en la **estructura de incentivos del modelo actual** y en barreras sistémicas que no se resuelven con campañas de marketing.
+
+### . La trampa del all-inclusive
+
+Los resorts todo incluido operan bajo una lógica de **retención**: mientras más tiempo el turista permanezca dentro del complejo, más consumen y menos gastan afuera. Un turista que sale a Santo Domingo por el día es un turista que no almuerza en el buffet ni toma tragos en el bar.
+
+Para los hoteles, promover turismo "fuera del perímetro" es una opción de riesgo.
+
+### Infraestructura vial y conectividad deficiente
+
+Ir de Punta Cana a Santo Domingo son ~2.5 horas en autopista decente. Pero ir de Puerto Plata a Jarabacoa son ~3 horas por carreteras secundarias. De La Romana al Parque Nacional del Este, otros 90 minutos en condiciones variables.
+
+**El problema:** El turista promedio tiene 5-7 días. Perder medio día en transporte para ver una cascada o un museo no compite bien contra "otra piña colada en la piscina". Sin rutas cortas y bien señalizadas, la fricción es demasiado alta.
+
+### Fragmentación de la oferta provincial
+
+Santo Domingo tiene historia colonial. Jarabacoa tiene ecoturismo. Constanza tiene agricultura de altura. Pero no existe una **narrativa integrada** que los conecte en la mente del turista.
+
+Costa Rica resolvió esto con el concepto de "Pura Vida" como paraguas. México tiene "Mundo Maya".
+
+Cada actor optimiza individualmente (hoteles, transporte, provincias), pero el resultado agregado es un equilibrio de bajo valor.
 
 
+<div class="section-divider">• • •</div>
+
+## Conclusión: El margen inexplorado
+
+El diagnóstico no es de agotamiento sino de subutilización. El modelo funciona, pero opera muy por debajo de su potencial de diferenciación territorial y productividad laboral.
+
+La buena noticia: los activos están ahí. Historia, naturaleza, ecoturismo no requieren inventarse, requieren integrarse a la narrativa comercial del país.
+
+::: {.pullquote}
+La pregunta no es si debemos abandonar el "sol y playa", sino cuánto tiempo más seguiremos dejando dinero sobre la mesa al no activar el 23% restante del portafolio turístico dominicano.
+:::
+
+
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la Deuda pública dominicana</p>
+    </div>
+    
+   <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos & Referencias Académicas</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Banco Central R.D. (2024)</h4>
+      <p><em>"Encuesta de Opinión, Actitud y Motivación"</em>. Microdatos utilizados para generar el Mapa de Calor y el Treemap de preferencias (Playa vs. Resto).</p>
+      <a href="https://cdn.bancentral.gov.do/documents/publicaciones-economicas/encuesta-de-opinion-actitud-motivacion-a-extranjeros-no-residentes/documents/encturi2024-12.pdf" target="_blank" class="bib-link">Ver informe oficial (PDF) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Banco Central R.D. (2019)</h4>
+      <p><em>"Cuadro de Oferta y Utilización (COU)"</em>. Matriz insumo-producto base para el cálculo del Valor Agregado Bruto por trabajador y el análisis de la dualidad hotelera.</p>
+      <a href="https://www.bancentral.gov.do/a/d/2533-sector-real" target="_blank" class="bib-link">Consultar Cuentas Nacionales ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Orgaz Agüera, F. (2014)</h4>
+      <p><em>"El ecoturismo en la República Dominicana"</em>. Estudio académico que analiza las potencialidades de los recursos naturales del país para diversificar la oferta masiva.</p>
+      <a href="https://revistas.intec.edu.do/index.php/ciso/article/view/1007" target="_blank" class="bib-link">Leer Paper (Redalyc) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Fondo Monetario Internacional (2025)</h4>
+      <p><em>"República Dominicana: Consulta del Artículo IV"</em>. Informe técnico exhaustivo que valida la resiliencia del modelo turístico dominicano y analiza su efecto multiplicador (<em>spillovers</em>) en el resto de la economía.</p>
+      <a href="https://www.imf.org/en/-/media/files/publications/cr/2025/english/1domea2025001-source-pdf.pdf" target="_blank" class="bib-link">Leer Informe del Personal Técnico ↗</a>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<div class="share-minimal">
+  <p>Si este análisis te resultó útil, considera compartirlo en 
+  <a href="#" data-share="linkedin">LinkedIn</a><a href="#" data-share="twitter">Twitter</a><a href="#" data-share="whatsapp">WhatsApp</a></p>
+</div>
+```

@@ -677,6 +677,83 @@ body.editorial-post .section-divider {
 <div class="section-divider">• • •</div>
 */
 
+/* Key Takeaways */
+body.editorial-post .key-takeaways {
+  background: linear-gradient(135deg, #fff5e6 0%, #fef3e8 100%);
+  border-left: 5px solid var(--lm-terracota);
+  padding: 2rem 2.5rem;
+  margin: 2.5rem 0 3rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 0 8px 8px 0;
+}
+
+body.editorial-post .key-takeaways-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  margin-bottom: 1.25rem;
+}
+
+body.editorial-post .key-takeaways ol,
+body.editorial-post .key-takeaways ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+  counter-reset: takeaway-counter;
+}
+
+body.editorial-post .key-takeaways li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--lm-text-main);
+  counter-increment: takeaway-counter;
+}
+
+body.editorial-post .key-takeaways li::before {
+  content: counter(takeaway-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--lm-terracota);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .key-takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong dentro de takeaways */
+body.editorial-post .key-takeaways strong {
+  color: var(--lm-terracota);
+  font-weight: 700;
+}
+
+/* Variante compacta */
+body.editorial-post .key-takeaways.compact {
+  padding: 1.5rem 2rem;
+}
+
+body.editorial-post .key-takeaways.compact li {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
 /* --- FOOTNOTES (Notas al pie) --- */
 body.editorial-post .footnotes {
   margin-top: 4rem;
