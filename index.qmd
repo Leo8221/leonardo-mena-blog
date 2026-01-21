@@ -35,7 +35,7 @@ listing:
 :::
 
 ::: {.home-intro}
-Bienvenido. Soy Leonardo Mena. Este es un espacio para traducir los datos económicos al lenguaje común, rescatar conceptos perdidos y analizar la República Dominicana con evidencia.
+Soy Leonardo Mena. Este es un espacio para entender la economía dominicana con datos reales, conceptos claros y sin jerga innecesaria.
 :::
 :::
 
@@ -55,7 +55,7 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 ::: {.home-side-card}
 ### Fundamentos
 <p>Conceptos Claros</p>
-<p>La inflación, el PIB o el déficit explicados como si estuviéramos en la sala de tu casa, sin jerga innecesaria.</p>
+<p>Inflación, PIB, déficit... explicados sin tecnicismos. Entiende lo básico para leer mejor las noticias.</p>
 ::: {.home-side-link}
 [Aprender conceptos](fundamentos.qmd)
 :::
@@ -83,12 +83,14 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 
 :::
 
+:::
+
 <br><br>
 <div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;"></div>
 
-## Últimas publicaciones
+## O explora más contenido
+
+Estos son los últimos tres posts publicados en el blog. Para ver todo el archivo, [haz clic aquí](archivo.qmd).
 
 ::: {#ultimos-posts}
-:::
-
 :::

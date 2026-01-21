@@ -1,0 +1,364 @@
+---
+title: "El modelo turístico dominicano: ¿Agotamiento o especialización extrema?"
+date: "2026-01-21"
+author: "Leonardo Mena"
+description: "Los datos revelan una concentración extrema en el modelo 'Sol y Playa'. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen."
+image: "turismo-cover.jpg" 
+twitter-card:
+  image: "turismo-cover.jpg"
+categories: 
+  - "Economía Dominicana"
+  - "Turismo"
+  - "Análisis de Datos"
+draft: true
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<style>
+body {}
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+```{r setup, include=FALSE}
+source(here::here("tema_graficos.R"))
+library(ggplot2)
+```
+
+El modelo turístico es de muy bajos salarios y además presenta signos de agotamiento". Estoy seguro de que más de uno ha escuchado un comentario similar a este, y a simple vista podría tener sentido: sector intensivo en mano de obra poco cualificada, mucha informalidad y teóricamente difícil de integrar con otros sectores.
+
+Pero, ¿qué tan cierto es esto? ¿Acaso el único camino dominicano es abandonar el modelo de desarrollo con más de 30 años de antigüedad y dar un giro de 180 grados?
+
+Antes de saltar a conclusiones fatalistas, exploremos qué dicen los datos.
+
+## El turismo de playa: ¿Agotamiento o especialización extrema?
+
+Por más robustos que parezcan, todos los modelos económicos eventualmente enfrentan la ley de rendimientos decrecientes. No es un secreto que el turismo dominicano recibe críticas recurrentes sobre su sostenibilidad a largo plazo, pero antes de diagnosticar un "agotamiento" irreversible del modelo, "conviene examinar qué tan profundamente se ha desarrollado el mismo.
+
+No basta con analizar la oferta desde un mapa, los datos de la Encuesta de Opinión, Actitud y Motivación a Extranjeros No Residentes revelan que el problema podría no ser de oferta, sino de una concentración extrema de la demanda.
+
+```{r}
+#| label: mapa-preferencia-playa
+#| fig-cap: "Intensidad de la preferencia por 'Sol y Playa' según país de origen (2024)"
+#| fig-alt: "Mapa mundial coroplético. Los países de América y Europa se muestran en tonos terracota oscuro, indicando una alta preferencia (>50%) por las playas dominicanas. Asia y zonas dispersas aparecen en colores claros, indicando preferencias más bajas."
+#| warning: false
+#| echo: false
+#| message: false
+#| fig-format: svg
+#| fig-width: 11
+#| fig-height: 7
+#| out-width: "100%"
+
+library(tidyverse)
+library(rnaturalearth)
+library(sf)
+library(here)
+
+# 1. DATOS
+
+
+df_pais <- read.csv(here("posts", "republica-habla-de", "2026-01-20-Turismo_expansion", "razones_turismo.csv"))|>
+rename(
+    Pais_Encuesta = 1,        
+    Playa_Pct = 2             
+  )
+# 2. ESTANDARIZACIÓN DE NOMBRES 
+
+
+df_mapa_ready <- df_pais |> 
+  mutate(
+    name_en = case_when(
+      # AMÉRICA DEL NORTE
+      Pais_Encuesta == "Canadá" ~ "Canada",
+      Pais_Encuesta == "Estados Unidos" ~ "United States of America",
+      Pais_Encuesta == "México" ~ "Mexico",
+      
+      # CENTROAMÉRICA Y CARIBE
+      Pais_Encuesta == "Costa Rica" ~ "Costa Rica",
+      Pais_Encuesta == "Haití" ~ "Haiti",
+      Pais_Encuesta == "Panamá" ~ "Panama",
+      Pais_Encuesta == "Puerto Rico" ~ "Puerto Rico",
+      Pais_Encuesta == "República Dominicana" ~ "Dominican Republic",
+      Pais_Encuesta == "Cuba" ~ "Cuba",
+      Pais_Encuesta == "Aruba" ~ "Aruba",
+      Pais_Encuesta == "Curazao" ~ "Curaçao", 
+      Pais_Encuesta == "El Salvador" ~ "El Salvador",
+      Pais_Encuesta == "Guatemala" ~ "Guatemala",
+      Pais_Encuesta == "Honduras" ~ "Honduras",
+      Pais_Encuesta == "Jamaica" ~ "Jamaica",
+      Pais_Encuesta == "Martinica" ~ "Martinique",
+      Pais_Encuesta == "Guadalupe" ~ "Guadeloupe",
+      # Casos especiales de Islas
+      str_detect(Pais_Encuesta, "Caicos y Turcas") ~ "Turks and Caicos Islands",
+      str_detect(Pais_Encuesta, "Vírgenes Americanas") ~ "United States Virgin Islands",
+      Pais_Encuesta == "San Martin" ~ "Saint Martin", 
+      
+      # AMÉRICA DEL SUR
+      Pais_Encuesta == "Argentina" ~ "Argentina",
+      Pais_Encuesta == "Bolivia" ~ "Bolivia",
+      Pais_Encuesta == "Brasil" ~ "Brazil",
+      Pais_Encuesta == "Chile" ~ "Chile",
+      Pais_Encuesta == "Colombia" ~ "Colombia",
+      Pais_Encuesta == "Ecuador" ~ "Ecuador",
+      Pais_Encuesta == "Perú" ~ "Peru",
+      Pais_Encuesta == "Uruguay" ~ "Uruguay",
+      Pais_Encuesta == "Venezuela" ~ "Venezuela",
+      
+      # EUROPA
+      Pais_Encuesta == "Alemania" ~ "Germany",
+      Pais_Encuesta == "Austria" ~ "Austria",
+      Pais_Encuesta == "Bélgica" ~ "Belgium",
+      Pais_Encuesta == "Dinamarca" ~ "Denmark",
+      Pais_Encuesta == "España" ~ "Spain",
+      Pais_Encuesta == "Finlandia" ~ "Finland",
+      Pais_Encuesta == "Francia" ~ "France",
+      Pais_Encuesta == "Grecia" ~ "Greece",
+      Pais_Encuesta == "Holanda" ~ "Netherlands", 
+      Pais_Encuesta == "Italia" ~ "Italy",
+      Pais_Encuesta == "Polonia" ~ "Poland",
+      Pais_Encuesta == "Portugal" ~ "Portugal",
+      Pais_Encuesta == "Republica Checa" ~ "Czechia", 
+      Pais_Encuesta == "Rumania" ~ "Romania",
+      Pais_Encuesta == "Rusia" ~ "Russia",
+      Pais_Encuesta == "Suecia" ~ "Sweden",
+      Pais_Encuesta == "Suiza" ~ "Switzerland",
+      Pais_Encuesta %in% c("Reino Unido", "Escocia") ~ "United Kingdom",
+      
+      # ASIA
+      Pais_Encuesta == "Corea del Sur" ~ "South Korea",
+      Pais_Encuesta == "Japon" ~ "Japan", 
+      Pais_Encuesta == "Japón" ~ "Japan",
+      
+      TRUE ~ Pais_Encuesta 
+    )
+  )
+
+# 3. OBTENCIÓN DEL MAPA BASE
+world <- ne_countries(scale = "medium", returnclass = "sf") |> 
+  filter(admin != "Antarctica") |> 
+  select(name_en = admin, geometry) 
+
+# 4. JOIN Y VISUALIZACIÓN MEJORADA
+
+mapa_final <- world |> 
+  left_join(df_mapa_ready, by = "name_en")
+
+dark_terracota <- "#7a2e21"
+
+p_mapa <- ggplot(mapa_final) +
+  # Capa de fondo para países sin datos (Gris neutro claro)
+  geom_sf(fill = "grey90", color = "white", linewidth = 0.2) +
+  
+  # Capa de datos
+  geom_sf(aes(fill = Playa_Pct), color = "white", linewidth = 0.2) +
+  
+  coord_sf(crs = "+proj=robin") +
+  
+  # NUEVA ESCALA BINNED ARMÓNICA
+  scale_fill_stepsn(
+    colors = c("#f5f1e8", pal$ocre, pal$terracota, dark_terracota),
+    breaks = c(20, 40, 60, 80),
+    na.value = "grey90",
+    name = "% Motivo Playa",
+    guide = guide_colorsteps(
+      barwidth = 15, 
+      barheight = 0.5,
+      title.position = "top",
+      show.limits = TRUE 
+    )
+  ) +
+  
+  labs(
+    title = "Mapa Granular: La 'Tiranía' de la Playa",
+    subtitle = "Porcentaje de turistas que visitan RD principalmente por playa, desglose nacional (2024)",
+    caption = "Nota: Gris = Sin datos en la muestra seleccionada. Fuente: BCRD."
+  ) +
+  
+  theme_lm_map() +
+  theme(
+    legend.position = "bottom",
+    plot.background = element_rect(fill = "#faf8f3", color = NA) # Fondo crema uniforme
+  )
+
+print(p_mapa)
+
+```
+
+Cuando observamos los datos no nos encontramos con nada inesperado: el tema de las playas domina el 50% de las razones para visitar el país. Si a eso sumamos clima —muy relacionado— y una parte de hospitalidad, principalmente en las zonas de resort, estamos hablando de un 77% en el mismo renglón. Cabe la duda: ¿la República Dominicana solo cuenta con playas? La respuesta es no, y ahí tenemos mucho margen.
+
+## Los infrautilizados
+
+Al observar la encuesta encontramos algunos apartados donde sin lugar a dudas nuestro país tiene mucho que ofrecer: historia, naturaleza y ecoturismo, los cuales suman menos de un 3% en las razones de turismo. Este dato es de suma importancia para el país. No todas las provincias cuentan con playas, pero sí todas cuentan o con un lugar histórico, un área de hermosos paisajes o un lugar con fauna única. 
+
+```{r}
+#| label: treemap-oportunidad
+#| fig-cap: "Estructura de la demanda turística: Hegemonía del volumen vs. nichos de valor"
+#| fig-alt: "Gráfico de rectángulos (Treemap). Un gran bloque gris claro etiquetado 'PLAYAS' domina el 50.5% del área. Bloques más pequeños en gris oscuro representan motivos sociales. En la esquina superior derecha, pequeños cuadros color terracota representan los nichos de 'Historia' y 'Naturaleza', mostrando visualmente su baja participación de mercado."
+#| warning: false
+#| echo: false
+#| message: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+library(tidyverse)
+library(treemapify)
+
+# 1. DATOS 
+df_oportunidad <- tribble(
+  ~Motivo,                 ~Porcentaje,
+  "PLAYAS",                50.5, 
+  "Clima",                 15.3,
+  "Hospitalidad",          11.9,
+  "Amigos/Fam.",           9.9,
+  "Precios",               5.3,
+  "Vida Nocturna",         0.6,
+  "Trabajo",               1.5,
+  "Tranquilidad",          1.2,
+  "Historia",              1.0,
+  "Naturaleza",            0.9,
+  "Ecoturismo",            0.6,
+  "Golf",                  0.1,
+  "Otros",                 1.2
+) |> 
+  mutate(
+    Categoria = case_when(
+      Motivo %in% c("PLAYAS", "Clima", "Precios", "Vida Nocturna", "Tranquilidad") ~ "Masivo (Commodity)",
+      Motivo %in% c("Hospitalidad", "Amigos/Fam.", "Trabajo", "Otros") ~ "Social / Vinculado",
+      TRUE ~ "Nichos de Alto Valor"
+    ),
+    # Etiqueta: Nombre + Enter + %
+    Label = paste0(Motivo, "\n", Porcentaje, "%"),
+    
+    # Color del texto: Oscuro para fondo claro, Blanco para fondos oscuros
+    ColorTexto = ifelse(Categoria == "Masivo (Commodity)", "#263238", "white")
+  )
+
+# 2. VISUALIZACIÓN
+ggplot(df_oportunidad, aes(area = Porcentaje, fill = Categoria, subgroup = Categoria)) +
+  
+  # A. CUADROS BASE
+  geom_treemap(color = "white", size = 0.5) + 
+  
+  # B. BORDES DE GRUPO
+  geom_treemap_subgroup_border(colour = "white", size = 2) +
+  
+  # C. TEXTO CON TAMAÑO DINÁMICO (LA CLAVE)
+  geom_treemap_text(
+    aes(
+      label = Label, 
+      colour = ColorTexto, 
+      size = Porcentaje 
+    ), 
+    place = "center",
+    fontface = "bold",
+    reflow = TRUE
+  ) +
+  
+  # D. CONTROL MANUAL DE TAMAÑOS DE FUENTE
+  scale_size_continuous(range = c(8, 30), guide = "none") +
+  
+  # E. COLORES
+  scale_fill_manual(values = c(
+    "Masivo (Commodity)" = "#eceff1", 
+    "Social / Vinculado" = pal$plomo,
+    "Nichos de Alto Valor" = pal$terracota 
+  )) +
+  
+  scale_colour_identity() +
+  
+  # F. TEXTOS Y TEMA LIMPIO
+  labs(
+    title = "La estructura de la oportunidad perdida",
+    subtitle = "El modelo de volumen (gris) domina visualmente. Los nichos de alto valor (terracota)\nson apenas visibles en la periferia.",
+    caption = "Fuente: Elaboración propia con datos BCRD 2024."
+  ) +
+  
+  theme_lm() +
+  theme(
+    legend.position = "none" 
+  )
+```
+
+Teniendo eso en cuenta, es difícil hablar de un modelo agotado cuando, al menos en la mente de nuestra demanda, somos "el país de las playas". Obviamente ese siempre será el principal objetivo —los países de donde viene el mayor flujo de turistas son países que escapan al nuestro durante sus momentos de invierno— pero eso no quita que aún tenemos mucho margen de integración.
+
+Jarabacoa tiene ecoturismo, Santo Domingo tiene historia colonial, pero en la mente del turista promedio no existen, o no se le ha vendido de esa forma.
+
+## La Trampa de la Baja Productividad
+
+El tema salarial es multifactorial y requeriría su propio artículo, pero un acercamiento posible es a través de la productividad laboral. Para esto resulta muy útil el Cuadro de Oferta y Utilización del Banco Central, específicamente el de 2019. Si bien ya tiene algunos años, en términos estructurales es poco probable que la situación haya cambiado drásticamente desde entonces.
+
+El verdadero reto no es solo atraer más turistas, sino generar más valor por cada uno. Los datos de la estructura productiva (2019) muestran que un trabajador en el sector de Alojamiento genera aproximadamente **RD$ 1.1 millones** de valor agregado al año. Si bien esto supera ampliamente a la agricultura tradicional, es una cifra que palidece frente a otros sectores de servicios modernos como las Finanzas (RD$ 4.6M) o incluso el Comercio.
+
+```{r}
+#| label: fig-productividad-laboral
+#| fig-cap: "Comparativa de productividad laboral: El techo del turismo frente a servicios de alto valor (2019)"
+#| fig-alt: "Gráfico de barras horizontal que compara el Valor Agregado Bruto por trabajador. El sector 'Finanzas y Seguros' lidera con RD$ 4.7 millones anuales. El sector 'Alojamiento (Turismo)', resaltado en terracota, muestra una productividad de RD$ 1.1 millones, situándose por debajo del Comercio y la Farmacéutica, pero por encima del Agro."
+#| warning: false
+#| echo: false
+#| message: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| 
+library(tidyverse)
+library(scales) # Necesario para label_number
+
+# 1. DATOS SELECCIONADOS DEL COU 2019
+df_prod <- tribble(
+  ~Sector,                          ~VAB_Trabajador, ~Categoria,
+  "Finanzas y Seguros",             4667019,         "Servicios Alto Valor",
+  "Farmacéutica",                   1911186,         "Manufactura",
+  "Comercio",                       1317836,         "Servicios",
+  "Alojamiento (Turismo)",          1114920,         "Turismo",
+  "Construcción",                   1076076,         "Industria",
+  "Cultivo Arroz",                  270610,          "Agro"
+) |> 
+  mutate(
+    # Formateamos para etiqueta (en Millones)
+    Label = paste0("RD$ ", round(VAB_Trabajador / 1000000, 1), " M"),
+    Sector = fct_reorder(Sector, VAB_Trabajador),
+    Highlight = ifelse(Sector == "Alojamiento (Turismo)", "Turismo", "Otros")
+  )
+
+# 2. GRÁFICO DE BARRAS (Productividad)
+ggplot(df_prod, aes(x = VAB_Trabajador, y = Sector, fill = Highlight)) +
+  
+  geom_col(width = 0.75) +
+  
+  # Etiquetas dentro o al lado de la barra
+  geom_text(
+    aes(label = Label),
+    hjust = -0.2, 
+    size = 4, 
+    fontface = "bold", 
+    color = pal$texto
+  ) +
+  
+  # Escalas y Colores
+  scale_x_continuous(
+    labels = label_number(scale = 1e-6, suffix = " M"),
+    expand = expansion(mult = c(0, 0.2))
+  ) +
+  
+  scale_fill_manual(values = c("Otros" = "#cfd8dc", "Turismo" = pal$terracota)) +
+  
+  # Títulos
+  labs(
+    title = "El techo de productividad del modelo actual",
+    subtitle = "Valor Agregado Bruto generado por trabajador al año (2019).",
+    caption = "Fuente: Elaboración propia con datos del COU 2019 (BCRD). Excluye Minería.",
+    x = "Millones de RD$ por trabajador",
+    y = NULL
+  ) +
+  
+  theme_lm() +
+  theme(legend.position = "none")
+``` 
+
+Esto sugiere que el modelo de 'volumen' tiene un techo de productividad bajo. Sin una diversificación hacia nichos que requieran mayor especialización (y por ende, generen mayor valor por hora trabajada), la capacidad del sector para impulsar el crecimiento del PIB per cápita se verá limitada, independientemente de cuántas habitaciones nuevas construyamos.
+
+

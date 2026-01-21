@@ -54,6 +54,9 @@ jobs:
             any::sf
             any::stringi
             any::tidyquant
+            any::rnaturalearth
+            any::rnaturalearthdata
+            any::treemapify
 
       - name: Limpiar caches de Quarto
         run: |

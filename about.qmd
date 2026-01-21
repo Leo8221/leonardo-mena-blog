@@ -19,24 +19,24 @@ about:
 
 ## Sobre este blog
 
-La economía no debería ser un idioma reservado para oficinas técnicas. Está en el supermercado, en el transporte y en nuestros ahorros.
+La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.
 
-Este blog nace para interpretar la economía dominicana: leer los datos, **separar la señal del ruido** y explicar los conceptos con claridad, sin simplificaciones engañosas ni jerga innecesaria.
+Este blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de **separar la señal del ruido**: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.
 
-Aquí busco responder preguntas reales —las que surgen fuera de los libros de texto— y ofrecer contexto cuando un dato o una noticia se prestan a confusión. A veces eso implica explicar; otras, tomar posición.
+A veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar.
 
 ---
 
 ## Quién escribe
 
-Soy **Leonardo Mena**, estudiante de Economía en la Universidad Autónoma de Santo Domingo (UASD). Este proyecto forma parte de mi proceso de formación: el espacio donde confronto la teoría con los datos de la realidad dominicana.
+Soy **Leonardo Mena**, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.
 
-> No escribo desde la certeza absoluta, sino desde el rigor, el criterio y la honestidad intelectual.
+No escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.
 
-### Compromiso
+### Lo que ofrezco
 
-En cada artículo encontrarás:
+* **Transparencia:** Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.
+* **Claridad:** Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.
+* **Contexto:** Todos los análisis están pensados desde y para la República Dominicana.
 
-* **Transparencia:** Datos con fuente y opiniones claramente identificadas.
-* **Claridad:** Lenguaje accesible, sin sacrificar precisión técnica.
-* **Contexto:** Análisis siempre anclado a la realidad de la República Dominicana.
+Esto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano.
