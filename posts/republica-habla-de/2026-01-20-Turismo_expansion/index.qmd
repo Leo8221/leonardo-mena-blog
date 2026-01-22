@@ -1,6 +1,6 @@
 ---
 title: "El modelo turístico dominicano: ¿Agotamiento o especialización extrema?"
-date: "2026-01-21"
+date: "2026-01-22"
 author: "Leonardo Mena"
 description: "Los datos revelan una concentración extrema en el modelo 'Sol y Playa'. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen."
 image: "turismo-cover.jpg" 
@@ -10,7 +10,7 @@ categories:
   - "Turismo"
   - "Desarrollo"
   - "La República habla de"
-draft: true
+draft: false
 body-class: editorial-post
 toc: true
 toc-location: left
@@ -40,6 +40,19 @@ library(ggplot2)
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 </div>
+
+```{=html}
+<div class="audio-player-container">
+    <div class="audio-header">
+        <svg class="audio-icon" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+        <span>Escuchar artículo</span>
+    </div>
+    <audio controls>
+        <source src="audio_turismo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
+```
 
 ::: {.key-takeaways}
 <span class="key-takeaways-title">Lo esencial en 3 puntos</span>
@@ -326,7 +339,7 @@ Jarabacoa tiene ecoturismo, Santo Domingo tiene historia colonial, pero en la me
 
 ## La dualidad estructural: ¿Dónde se queda el valor?
 
-El tema salarial es multifactorial, pero al analizar la productividad laboral mediante el Cuadro de Oferta y Utilización (2019), nos encontramos con un hallazgo que contradice la intuición popular y refuerza la necesidad de diversificación.
+El tema salarial es multifactorial, pero al analizar la productividad laboral mediante el Cuadro de Oferta y Utilización (2019) —esa radiografía contable que detalla cómo se mueve el dinero en la economía—, nos encontramos con un hallazgo que contradice la intuición popular y refuerza la necesidad de diversificación.
 
 Contrario a lo que se piensa, el subsector Alojamiento (Hoteles) es altamente productivo, generando RD$ 2.06 millones de valor agregado por trabajador al año. Esta cifra supera incluso a industrias sofisticadas como la Farmacéutica. Sin embargo, al ser un negocio intensivo en capital (infraestructura), esa riqueza no se traduce automáticamente en salarios masivos.
 
@@ -405,7 +418,7 @@ No se trata solo de tener más hoteles, sino de que lo que sucede fuera del hote
 
 Si la oportunidad es tan evidente, ¿por qué no se ha activado ya? La respuesta no está en falta de voluntad política ni en desconocimiento, sino en la **estructura de incentivos del modelo actual** y en barreras sistémicas que no se resuelven con campañas de marketing.
 
-### . La trampa del all-inclusive
+### La trampa del all-inclusive
 
 Los resorts todo incluido operan bajo una lógica de **retención**: mientras más tiempo el turista permanezca dentro del complejo, más consumen y menos gastan afuera. Un turista que sale a Santo Domingo por el día es un turista que no almuerza en el buffet ni toma tragos en el bar.
 
