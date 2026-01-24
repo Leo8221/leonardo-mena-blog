@@ -1603,3 +1603,211 @@ body.quarto-dark .share-minimal {
 body.quarto-dark .share-minimal a {
   color: var(--lm-terracota);
 }
+
+/* ==========================================================================
+   MOBILE-FIRST HOME REDESIGN 
+   ========================================================================== */
+
+/* ===== DESKTOP: Configuración por defecto ===== */
+.home {
+  display: block;
+}
+
+.home .home-hero {
+  display: block;
+  margin: 2.5rem 0 3.5rem 0;
+  text-align: center;
+}
+
+.home .home-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 2.5rem;
+}
+
+/* Ocultar versión mobile en desktop */
+.mobile-home-hero,
+.mobile-hero-wrapper,
+.mobile-label,
+.mobile-archive-btn {
+  display: none;
+}
+
+/* Ocultar listing mobile en desktop */
+#grafico-destacado-mobile {
+  display: none;
+}
+
+/* ===== MOBILE: Ocultar desktop y mostrar mobile ===== */
+@media (max-width: 768px) {
+  .home,
+  .home .home-hero,
+  .home .home-grid,
+  #grafico-destacado-desktop {
+    display: none !important;
+  }
+  
+  /* Mostrar versión mobile */
+  .mobile-home-hero {
+    display: block;
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-bottom: 1px solid var(--lm-border);
+    background: var(--lm-bg-card);
+  }
+  
+  .mobile-home-hero h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.1;
+    color: var(--lm-text-main);
+  }
+  
+  .mobile-home-hero p {
+    font-size: 0.9rem;
+    color: var(--lm-text-muted);
+    margin-top: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4;
+  }
+  
+  .mobile-hero-wrapper {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  
+  .mobile-label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--lm-terracota);
+    padding: 0 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Mostrar listing mobile */
+  #grafico-destacado-mobile {
+    display: block;
+    padding: 0 1rem;
+  }
+  
+  #grafico-destacado-mobile .card {
+    border: none !important;
+    background: transparent !important;
+  }
+  
+  #grafico-destacado-mobile img {
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  #grafico-destacado-mobile .card-title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  #grafico-destacado-mobile .card-text {
+    font-size: 0.95rem;
+    color: var(--lm-text-soft);
+    line-height: 1.4;
+  }
+  
+  #grafico-destacado-mobile .card-attribution {
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  
+  /* Últimos posts mobile */
+  #ultimos-posts {
+    padding: 0 1rem;
+  }
+  
+  #ultimos-posts .quarto-listing {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+  
+  #ultimos-posts .quarto-grid-item {
+    border: none !important;
+    border-bottom: 1px solid var(--lm-border) !important;
+    padding: 1.25rem 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+  
+  #ultimos-posts .quarto-grid-item:last-child {
+    border-bottom: none !important;
+  }
+  
+  #ultimos-posts img {
+    display: none !important;
+  }
+  
+  #ultimos-posts .card-body {
+    padding: 0 !important;
+  }
+  
+  #ultimos-posts .card-title {
+    font-size: 1.05rem !important;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  
+  #ultimos-posts .card-title::before {
+    content: "→ ";
+    color: var(--lm-terracota);
+    font-weight: 700;
+    margin-right: 0.35rem;
+  }
+  
+  #ultimos-posts .card-text {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
+    color: var(--lm-text-soft);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .archive-section {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+  
+  .section-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mobile-archive-btn {
+    display: block;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+  }
+  
+  .mobile-archive-btn a {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--lm-terracota);
+    padding: 12px 24px;
+    border-radius: 4px;
+    color: var(--lm-terracota);
+    text-decoration: none;
+  }
+  
+  .mobile-archive-btn a:hover {
+    background: var(--lm-terracota);
+    color: white;
+  }
+}

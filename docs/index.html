@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,14 +40,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-0c6d739406eb69104e9b854779ce4f2e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-58964a51d1931f1d53e44ae075d3443c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-grafico-destacado .list');
+    const listingTargetEl = window.document.querySelector('#listing-grafico-destacado-desktop .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +88,35 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-grafico-destacado'] = new List('listing-grafico-destacado', options);
+    window['quarto-listings']['listing-grafico-destacado-desktop'] = new List('listing-grafico-destacado-desktop', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-grafico-destacado-mobile .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-grafico-destacado-mobile'] = new List('listing-grafico-destacado-mobile', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -445,6 +473,41 @@ window.Quarto = {
 
 
 
+<!-- VERSIÓN MOBILE -->
+<section id="economía-dominicana-aplicada" class="level1 mobile-home-hero">
+<h1>Economía<br>Dominicana Aplicada</h1>
+<p>Datos reales. Conceptos claros.</p>
+</section>
+<div class="mobile-hero-wrapper">
+<p><span class="mobile-label">ANÁLISIS DESTACADO</span></p>
+<div id="listing-grafico-destacado-mobile" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-1">
+<div class="g-col-1" data-index="0" data-categories="VHVyaXNtbyUyQ0Rlc2Fycm9sbG8lMkNMYSUyMFJlcCVDMyVCQWJsaWNhJTIwaGFibGElMjBkZQ==" data-listing-date-sort="1769054400000" data-listing-file-modified-sort="1769062166137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4120">
+<a href="./posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/republica-habla-de/2026-01-20-Turismo_expansion/turismo-cover.jpg" class="thumbnail-image card-img" style="height: 300px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+El modelo turístico dominicano: ¿Agotamiento o especialización extrema?
+</h5>
+<div class="card-text listing-description delink">
+<p>Los datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+22 ene 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No hay resultados</div>
+</div>
+</div>
+<!-- VERSIÓN DESKTOP -->
 <div class="home">
 <div class="home-hero">
 <div class="home-hero-title">
@@ -461,9 +524,9 @@ window.Quarto = {
 <section id="último-análisis-publicado" class="level2 home-main">
 <h2 class="anchored" data-anchor-id="último-análisis-publicado">Último análisis publicado</h2>
 <p>El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.</p>
-<div id="listing-grafico-destacado" class="quarto-listing quarto-listing-container-grid">
+<div id="listing-grafico-destacado-desktop" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="VHVyaXNtbyUyQ0Rlc2Fycm9sbG8lMkNMYSUyMFJlcCVDMyVCQWJsaWNhJTIwaGFibGElMjBkZQ==" data-listing-date-sort="1769040000000" data-listing-file-modified-sort="1769206623294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4120">
+<div class="g-col-1" data-index="0" data-categories="VHVyaXNtbyUyQ0Rlc2Fycm9sbG8lMkNMYSUyMFJlcCVDMyVCQWJsaWNhJTIwaGFibGElMjBkZQ==" data-listing-date-sort="1769054400000" data-listing-file-modified-sort="1769062166137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4120">
 <a href="./posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -495,7 +558,7 @@ El modelo turístico dominicano: ¿Agotamiento o especialización extrema?
 Conceptos Claros
 </p>
 <p>
-Inflación, PIB, déficit… explicados sin tecnicismos. Entiende lo básico para leer mejor las noticias.
+Inflación, PIB, déficit… explicados sin tecnicismos.
 </p>
 <div class="home-side-link">
 <p><a href="./fundamentos.html">Aprender conceptos</a></p>
@@ -507,7 +570,7 @@ Inflación, PIB, déficit… explicados sin tecnicismos. Entiende lo básico par
 Realidad vs.&nbsp;Ficción
 </p>
 <p>
-¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.
+¿Es verdad que imprimir dinero nos hace ricos?
 </p>
 <div class="home-side-link">
 <p><a href="./mitos-economicos.html">Ver mitos</a></p>
@@ -519,7 +582,7 @@ Realidad vs.&nbsp;Ficción
 La República habla de…
 </p>
 <p>
-Análisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?
+Análisis rápido de lo que está pasando esta semana.
 </p>
 <div class="home-side-link">
 <p><a href="./republica-habla-de.html">Leer análisis</a></p>
@@ -528,16 +591,18 @@ Análisis rápido de lo que está pasando esta semana. ¿Qué significa la últi
 </div>
 </div>
 </div>
-<br><br>
+<!-- SECCIÓN ARCHIVO -->
+<div class="archive-section">
 <div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;">
 
 </div>
-<section id="o-explora-más-contenido" class="level2">
-<h2 class="anchored" data-anchor-id="o-explora-más-contenido">O explora más contenido</h2>
-<p>Estos son los últimos tres posts publicados en el blog. Para ver todo el archivo, <a href="./archivo.html">haz clic aquí</a>.</p>
+<section id="explora-más-contenido" class="level3 section-header">
+<h3 class="anchored" data-anchor-id="explora-más-contenido">Explora más contenido</h3>
+<p>Estos son los últimos posts publicados. <a href="./archivo.html">Ver archivo completo</a>.</p>
+</section>
 <div id="listing-ultimos-posts" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="VHVyaXNtbyUyQ0Rlc2Fycm9sbG8lMkNMYSUyMFJlcCVDMyVCQWJsaWNhJTIwaGFibGElMjBkZQ==" data-listing-date-sort="1769040000000" data-listing-file-modified-sort="1769206623294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4120">
+<div class="g-col-1" data-index="0" data-categories="VHVyaXNtbyUyQ0Rlc2Fycm9sbG8lMkNMYSUyMFJlcCVDMyVCQWJsaWNhJTIwaGFibGElMjBkZQ==" data-listing-date-sort="1769054400000" data-listing-file-modified-sort="1769062166137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4120">
 <a href="./posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -558,7 +623,7 @@ El modelo turístico dominicano: ¿Agotamiento o especialización extrema?
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="TWlzJTIwcHJlZGVjZXNvcmVzJTJDRnVuZGFtZW50b3M=" data-listing-date-sort="1768435200000" data-listing-file-modified-sort="1769206623253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1661">
+<div class="g-col-1" data-index="1" data-categories="TWlzJTIwcHJlZGVjZXNvcmVzJTJDRnVuZGFtZW50b3M=" data-listing-date-sort="1768449600000" data-listing-file-modified-sort="1768497786950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1661">
 <a href="./posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -579,7 +644,7 @@ Frédéric Bastiat: El primer economista influencer
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="TGElMjByZXB1YmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNvJTJDRGVzYXJyb2xsbw==" data-listing-date-sort="1767657600000" data-listing-file-modified-sort="1769206623270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2043">
+<div class="g-col-1" data-index="2" data-categories="TGElMjByZXB1YmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNvJTJDRGVzYXJyb2xsbw==" data-listing-date-sort="1767672000000" data-listing-file-modified-sort="1768497188583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2043">
 <a href="./posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -603,10 +668,13 @@ Perspectiva del desarrollo: Densidad empresarial
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
 </div>
+<div class="mobile-archive-btn">
+<p><a href="./archivo.html">Ver Archivo Completo</a></p>
+</div>
+</div>
 
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

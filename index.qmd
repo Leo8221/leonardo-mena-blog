@@ -3,7 +3,7 @@ pagetitle: "Leonardo Mena · Economía Aplicada"
 page-layout: full
 toc: false
 listing:
-  - id: grafico-destacado
+  - id: grafico-destacado-desktop
     contents: posts  
     sort: "date desc"
     max-items: 1
@@ -15,6 +15,18 @@ listing:
     fields: [image, date, title, description]
     image-height: "350px"
   
+  - id: grafico-destacado-mobile
+    contents: posts  
+    sort: "date desc"
+    max-items: 1
+    type: grid            
+    grid-columns: 1 
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, description]
+    image-height: "300px"
+  
   - id: ultimos-posts
     contents: posts
     sort: "date desc"
@@ -25,6 +37,21 @@ listing:
     fields: [image, date, title, description]
 ---
 
+<!-- VERSIÓN MOBILE -->
+::: {.mobile-home-hero}
+# Economía<br>Dominicana Aplicada
+
+Datos reales. Conceptos claros.
+:::
+
+::: {.mobile-hero-wrapper}
+<span class="mobile-label">ANÁLISIS DESTACADO</span>
+
+::: {#grafico-destacado-mobile}
+:::
+:::
+
+<!-- VERSIÓN DESKTOP -->
 ::: {.home}
 
 ::: {.home-hero}
@@ -46,7 +73,7 @@ Soy Leonardo Mena. Este es un espacio para entender la economía dominicana con 
 
 El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.
 
-::: {#grafico-destacado}
+::: {#grafico-destacado-desktop}
 :::
 :::
 
@@ -55,7 +82,7 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 ::: {.home-side-card}
 ### Fundamentos
 <p>Conceptos Claros</p>
-<p>Inflación, PIB, déficit... explicados sin tecnicismos. Entiende lo básico para leer mejor las noticias.</p>
+<p>Inflación, PIB, déficit... explicados sin tecnicismos.</p>
 ::: {.home-side-link}
 [Aprender conceptos](fundamentos.qmd)
 :::
@@ -64,7 +91,7 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 ::: {.home-side-card}
 ### Mitos Económicos
 <p>Realidad vs. Ficción</p>
-<p>¿Es verdad que imprimir dinero nos hace ricos? Desmontando creencias populares con datos en mano.</p>
+<p>¿Es verdad que imprimir dinero nos hace ricos?</p>
 ::: {.home-side-link}
 [Ver mitos](mitos-economicos.qmd)
 :::
@@ -73,7 +100,7 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 ::: {.home-side-card}
 ### Coyuntura
 <p>La República habla de...</p>
-<p>Análisis rápido de lo que está pasando esta semana. ¿Qué significa la última noticia del Banco Central?</p>
+<p>Análisis rápido de lo que está pasando esta semana.</p>
 ::: {.home-side-link}
 [Leer análisis](republica-habla-de.qmd)
 :::
@@ -85,12 +112,21 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 
 :::
 
-<br><br>
+<!-- SECCIÓN ARCHIVO -->
+::: {.archive-section}
 <div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;"></div>
 
-## O explora más contenido
+::: {.section-header}
+### Explora más contenido
 
-Estos son los últimos tres posts publicados en el blog. Para ver todo el archivo, [haz clic aquí](archivo.qmd).
+Estos son los últimos posts publicados. [Ver archivo completo](archivo.qmd).
+:::
 
 ::: {#ultimos-posts}
+:::
+
+::: {.mobile-archive-btn}
+[Ver Archivo Completo](archivo.qmd)
+:::
+
 :::
