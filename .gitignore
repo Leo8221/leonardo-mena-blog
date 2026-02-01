@@ -4,3 +4,4 @@ _site/
 _freeze/
 *_cache/
 observatorio_cache/
+.aider*

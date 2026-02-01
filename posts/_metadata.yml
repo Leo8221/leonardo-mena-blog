@@ -2,7 +2,7 @@ comments:
   giscus:
     repo: Leo8221/leonardo-mena-blog
     category: General 
-    category-id: DIC_kwDO...  # (Tu código largo)
+    category-id: DIC_kwDO...  
     mapping: title
     reactions-enabled: true
     theme: 

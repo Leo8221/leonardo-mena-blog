@@ -1,7 +1,26 @@
 [
   {
-    "listing": "/mitos-economicos.html",
+    "listing": "/republica-habla-de.html",
+    "items": [
+      "/posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html",
+      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
+    ]
+  },
+  {
+    "listing": "/predecesores.html",
+    "items": [
+      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html"
+    ]
+  },
+  {
+    "listing": "/investigacion.html",
     "items": []
+  },
+  {
+    "listing": "/fundamentos.html",
+    "items": [
+      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
+    ]
   },
   {
     "listing": "/archivo.html",
@@ -13,18 +32,6 @@
       "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
       "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
       "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
-    ]
-  },
-  {
-    "listing": "/predecesores.html",
-    "items": [
-      "/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html"
-    ]
-  },
-  {
-    "listing": "/fundamentos.html",
-    "items": [
-      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
     ]
   },
   {
@@ -52,14 +59,7 @@
     ]
   },
   {
-    "listing": "/republica-habla-de.html",
-    "items": [
-      "/posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html",
-      "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
-    ]
-  },
-  {
-    "listing": "/investigacion.html",
+    "listing": "/mitos-economicos.html",
     "items": []
   },
   {
