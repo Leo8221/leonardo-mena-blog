@@ -1811,3 +1811,38 @@ body.quarto-dark .share-minimal a {
     color: white;
   }
 }
+
+
+
+/* ==========================================================================
+   🌙 MODO OSCURO: SOLO KEY TAKEAWAYS
+   ========================================================================== */
+
+body.quarto-dark.editorial-post .key-takeaways {
+  background: rgba(255, 255, 255, 0.05); 
+  
+  box-shadow: none;
+  
+  border-left: 5px solid var(--lm-terracota);
+}
+
+/* Título de la caja ("HALLAZGOS PRINCIPALES") */
+body.quarto-dark.editorial-post .key-takeaways-title {
+  color: var(--lm-terracota); /* O un gris claro #ccc si prefieres */
+}
+
+/* El texto de la lista */
+body.quarto-dark.editorial-post .key-takeaways li {
+  color: #e0e0e0; 
+}
+
+/* Las bolitas de los números (1, 2, 3...) */
+body.quarto-dark.editorial-post .key-takeaways li::before {
+  background: var(--lm-terracota); 
+  color: #121212; 
+}
+
+/* Las negritas dentro del texto */
+body.quarto-dark.editorial-post .key-takeaways strong {
+  color: #fff; 
+}

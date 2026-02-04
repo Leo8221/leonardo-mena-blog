@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Leonardo Mena">
+<meta name="description" content="Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?">
+
+<title>El Rey Efectivo: La resistencia del billete en la era digital – Leonardo Mena</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../image/logo_leonardo_mena.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 1,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 5,
+  "keyboard-shortcut": [
+    "/"
+  ],
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="El Rey Efectivo: La resistencia del billete en la era digital – Leonardo Mena">
+<meta property="og:description" content="Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/img/Hegemonia_Survey.png">
+<meta property="og:site_name" content="Leonardo Mena">
+<meta property="og:image:height" content="1890">
+<meta property="og:image:width" content="3600">
+<meta name="twitter:title" content="El Rey Efectivo: La resistencia del billete en la era digital – Leonardo Mena">
+<meta name="twitter:description" content="Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/img/Hegemonia_Survey.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1890">
+<meta name="twitter:image-width" content="3600">
+</head>
+
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo light-content">
+    <img src="../../../image/logo_leonardo_mena.svg" alt="" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-temas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Temas</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
+        <li>
+    <a class="dropdown-item" href="../../../republica-habla-de.html">
+ <span class="dropdown-text">La República habla de</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../fundamentos.html">
+ <span class="dropdown-text">Fundamentos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../predecesores.html">
+ <span class="dropdown-text">Mis predecesores</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../mitos-economicos.html">
+ <span class="dropdown-text">Mitos económicos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un grafico</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../categorias.html"> 
+<span class="menu-text">Categorías</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../archivo.html"> 
+<span class="menu-text">Archivo</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../suscribete.html"> 
+<span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../observatorio.html"> <i class="bi bi-graph-up" role="img">
+</i> 
+<span class="menu-text">Observatorio 📊</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este artículo</h2>
+   
+  <ul>
+  <li><a href="#efectivo-el-rey-de-las-transacciones" id="toc-efectivo-el-rey-de-las-transacciones" class="nav-link active" data-scroll-target="#efectivo-el-rey-de-las-transacciones">Efectivo: el rey de las transacciones</a></li>
+  <li><a href="#desmitificando-mitos-edad-e-ingresos" id="toc-desmitificando-mitos-edad-e-ingresos" class="nav-link" data-scroll-target="#desmitificando-mitos-edad-e-ingresos">Desmitificando mitos: edad e ingresos</a></li>
+  <li><a href="#más-allá-de-la-demografía-por-qué-el-efectivo-sigue-reinando" id="toc-más-allá-de-la-demografía-por-qué-el-efectivo-sigue-reinando" class="nav-link" data-scroll-target="#más-allá-de-la-demografía-por-qué-el-efectivo-sigue-reinando">Más allá de la demografía: ¿Por qué el efectivo sigue reinando?</a>
+  <ul class="collapse">
+  <li><a href="#la-barrera-física-aquí-no-aceptamos-eso" id="toc-la-barrera-física-aquí-no-aceptamos-eso" class="nav-link" data-scroll-target="#la-barrera-física-aquí-no-aceptamos-eso">1. La Barrera Física: “Aquí no aceptamos eso”</a></li>
+  <li><a href="#la-barrera-psicológica-seguridad-y-descuentos" id="toc-la-barrera-psicológica-seguridad-y-descuentos" class="nav-link" data-scroll-target="#la-barrera-psicológica-seguridad-y-descuentos">2. La Barrera Psicológica: seguridad y descuentos</a></li>
+  </ul></li>
+  <li><a href="#los-motores-del-cambio-qué-pesa-más" id="toc-los-motores-del-cambio-qué-pesa-más" class="nav-link" data-scroll-target="#los-motores-del-cambio-qué-pesa-más">Los Motores del Cambio: ¿Qué pesa más?</a></li>
+  <li><a href="#conclusión-el-efectivo-no-es-solo-un-medio-de-pago-es-un-fenómeno-cultural" id="toc-conclusión-el-efectivo-no-es-solo-un-medio-de-pago-es-un-fenómeno-cultural" class="nav-link" data-scroll-target="#conclusión-el-efectivo-no-es-solo-un-medio-de-pago-es-un-fenómeno-cultural">Conclusión: El Efectivo no es solo un medio de pago, es un fenómeno cultural</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">El Rey Efectivo: La resistencia del billete en la era digital</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Econometría</div>
+    <div class="quarto-category">Economía Dominicana</div>
+    <div class="quarto-category">La república en un gráfico</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leonardo Mena </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">4 de febrero de 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+<div class="share-buttons-sticky">
+<p><a href="#" class="share-btn twitter" data-share="twitter" title="Compartir en Twitter"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="#" class="share-btn linkedin" data-share="linkedin" title="Compartir en LinkedIn"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="#" class="share-btn whatsapp" data-share="whatsapp" title="Compartir por WhatsApp"> <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg> </a></p>
+</div>
+<div class="key-takeaways">
+<span class="key-takeaways-title">En Resumen</span>
+<ol>
+<li>
+<strong>El efectivo es omnipresente:</strong> Domina el 91% de las compras en bajo valor y el 79% en bienes de alto valor.
+</li>
+<li>
+<strong>Rompe barreras demográficas:</strong> Ni la edad ni el ingreso alto eliminan su uso.
+</li>
+<li>
+<strong>La Infraestructura es clave:</strong> Tener cuenta bancaria es el predictor #1 de digitalización (+17 pp).
+</li>
+<li>
+<strong>Paradoja Educativa:</strong> Los usuarios más educados usan efectivo deliberadamente para disciplinar sus gastos.
+</li>
+</ol>
+</div>
+<p>Vivimos en el siglo XXI. Internet en casa, teléfonos inteligentes en el bolsillo, laptops y computadoras en casi cualquier espacio de trabajo. La banca en línea se ha convertido en uno de los avances más visibles de la última década.</p>
+<p>Con este panorama, es fácil pensar que el efectivo ya cumplió su ciclo, que los billetes y las monedas están siendo desplazados por transferencias electrónicas y tarjetas. ¿Para qué cargar dinero en efectivo cuando todo parece estar a un clic de distancia?</p>
+<p>Sin embargo, los datos cuentan otra historia. La <strong>Encuesta Nacional de Inclusión y Educación Financiera (ENIEF 2023)</strong> muestra que, lejos de desaparecer, el efectivo sigue teniendo un peso importante en la vida económica del país.</p>
+<div class="section-divider">
+• • •
+</div>
+<section id="efectivo-el-rey-de-las-transacciones" class="level1">
+<h1>Efectivo: el rey de las transacciones</h1>
+<p>Juan se desplaza hacia su trabajo cada mañana en un concho, María compra los ingredientes para la comida del día en el colmado, Pedro juega la lotería en la esquina y Ana paga el combustible en la gasolinera. ¿Qué tienen en común estas actividades? Todas ellas se realizan mayormente en efectivo.</p>
+<p>Somos conscientes de que así funciona el país, pero ¿cómo se ve esa imagen una vez que la cuantificamos? Es aún más reveladora: todos pensamos en compras y transacciones de montos bajos, pero la realidad es que el efectivo domina en casi todos los rangos de monto.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-hegemonia-efectivo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontales mostrando el porcentaje de uso de efectivo en 6 categorías. Colmados y bajo costo lidera con 91.2%, seguido de Alquiler (90.4%), Supermercados (86.7%), Servicios Públicos (86.1%), Combustible (78.3%) y Bienes de Alto Valor (79.3%). Las barras son color terracota.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hegemonia-efectivo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-hegemonia-efectivo-1.svg" class="img-fluid figure-img" style="width:100.0%" alt="Gráfico de barras horizontales mostrando el porcentaje de uso de efectivo en 6 categorías. Colmados y bajo costo lidera con 91.2%, seguido de Alquiler (90.4%), Supermercados (86.7%), Servicios Públicos (86.1%), Combustible (78.3%) y Bienes de Alto Valor (79.3%). Las barras son color terracota.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hegemonia-efectivo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Dominio del efectivo en transacciones cotidianas en República Dominicana. El gráfico muestra cómo el dinero físico sigue siendo el método de pago predominante, superando el 80% en casi todas las categorías de consumo masivo.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="big-number">
+91.2%
+</div>
+<div class="big-number-label">
+De las transacciones de bajo costo se pagan en efectivo
+</div>
+<p>Lo sorprendente no es encontrar que el efectivo domina en compras diarias de bajo monto, sino que su hegemonía se extiende incluso a transacciones de mayor valor. Desde pagar el alquiler hasta adquirir bienes de alto valor, el efectivo sigue siendo la opción principal en la mayoria de casos. A nivel porcentual el comprar el refresco en el colmado (91.2%) supera tan solo por un punto porcentual el pagar el alquiler. Incluso en compras de bienes de alto valor, donde uno esperaría una mayor adopción de métodos digitales, el efectivo mantiene una presencia significativa (79.3%).</p>
+<p>Ante datos tan contundentes, surge la pregunta: ¿qué factores influyen en esta preferencia por el efectivo? ¿Es una cuestión de edad, ingresos o quizás educación financiera?</p>
+</section>
+<section id="desmitificando-mitos-edad-e-ingresos" class="level1">
+<h1>Desmitificando mitos: edad e ingresos</h1>
+<p>Una hipótesis común es que los jóvenes, más familiarizados con la tecnología, se inclinan fuertemente hacia métodos digitales de pago, mientras que los adultos mayores son los que inflan esos datos del efectivo. Esto tiene trampa. Si bien es cierto que los jóvenes tienden a usar más métodos digitales, el uso del efectivo sigue siendo alto en todos los grupos etarios.</p>
+<p>Nunca disminuye del 65%, incluso en los grupos más jóvenes de la encuesta, lo cual quiere decir que la mayoría de los jóvenes dominicanos también usan efectivo regularmente por razones que van más allá de la edad.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-hamaca-edad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hamaca-edad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-hamaca-edad-1.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hamaca-edad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Análisis por edad: Se observa una ligera caída en la adultez media, pero el uso repunta en la vejez y es alto en la juventud.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Otro mito común es que los ingresos más altos se traducen en una mayor adopción de métodos digitales. Sin embargo, los datos muestran que incluso entre los grupos de mayores ingresos, el efectivo sigue siendo predominante. Aunque hay una ligera disminución en el uso del efectivo a medida que aumentan los ingresos, la mayoría de las personas en todos los niveles de ingresos continúan utilizando efectivo regularmente.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-clase-social" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-clase-social-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-clase-social-1.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-clase-social-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Análisis por ingreso: Se confirma que el uso de efectivo desciende a mayor ingreso, pero se mantiene sorprendentemente alto (&gt;50%) incluso en los estratos superiores.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="pullquote">
+“El segmento más alto de ingresos sigue utilizando efectivo en casi un 60% de las transacciones cotidianas, desafiando la idea de que es solo para los menos favorecidos.”
+</div>
+<p>En resumen, ni la edad ni el nivel de ingresos parecen ser factores determinantes para abandonar el uso del efectivo en República Dominicana. La preferencia por el efectivo es un fenómeno complejo que va más allá de estas variables demográficas. Por suerte la encuesta incluye muchas otras variables que pueden ayudar a entender este fenómeno, las cuales exploraremos a continuacion.</p>
+</section>
+<section id="más-allá-de-la-demografía-por-qué-el-efectivo-sigue-reinando" class="level1">
+<h1>Más allá de la demografía: ¿Por qué el efectivo sigue reinando?</h1>
+<p>Si la edad y el ingreso no son suficientes para explicar esta hegemonía, debemos dejar de mirar al usuario y empezar a mirar el entorno. Al analizar las razones declaradas por los encuestados, encontramos dos fuerzas poderosas que actúan en direcciones opuestas: una barrera física y una barrera psicológica.</p>
+<section id="la-barrera-física-aquí-no-aceptamos-eso" class="level2">
+<h2 class="anchored" data-anchor-id="la-barrera-física-aquí-no-aceptamos-eso">1. La Barrera Física: “Aquí no aceptamos eso”</h2>
+<p>A menudo, el debate sobre la digitalización asume que el usuario tiene la libertad de elegir. Los datos de la ENIEF muestran que esa libertad es ilusoria en gran parte de la economía cotidiana. Muchos comercios, especialmente los pequeños, no aceptan pagos digitales. Esto crea una barrera física que obliga a los consumidores a recurrir al efectivo, independientemente de sus preferencias personales. Segun datos de la encuesta, un 22% de los encuestados mencionan que no usan métodos digitales porque “el comercio no los acepta”.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-razones-ranking" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-razones-ranking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-razones-ranking-1.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-razones-ranking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Razones declaradas para el uso de efectivo. Aunque la conveniencia en montos bajos lidera, la restricción de oferta (‘No aceptan tarjeta’) representa una barrera estructural significativa.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="la-barrera-psicológica-seguridad-y-descuentos" class="level2">
+<h2 class="anchored" data-anchor-id="la-barrera-psicológica-seguridad-y-descuentos">2. La Barrera Psicológica: seguridad y descuentos</h2>
+<p>Más allá de las limitaciones físicas, existen barreras psicológicas que refuerzan el uso del efectivo. Muchos consumidores perciben el efectivo como una forma más segura de manejar su dinero, evitando riesgos asociados con fraudes digitales o problemas técnicos. Además, la percepción de que ciertos comercios ofrecen descuentos o mejores precios por pagos en efectivo refuerza esta preferencia, lo cual es impulsado por el gran grado de informalidad en la economía dominicana. Ambos con un 38 y 34% respectivamente según la encuesta. por lo que no es solo una cuestión de disponibilidad, sino también de confianza y percepción de valor.</p>
+<div class="section-divider">
+• • •
+</div>
+</section>
+</section>
+<section id="los-motores-del-cambio-qué-pesa-más" class="level1">
+<h1>Los Motores del Cambio: ¿Qué pesa más?</h1>
+<p>Despues de observar estos datos, queda claro como el efectivo logra tal dominio en la economia dominicana. La pregunta logica luego de esto es una: ¿Que se puede hacer para cambiar esta realidad? y si bien es cierto el cambio cultural es un proceso lento, la infraestructura puede acelerarlo o frenarlo. Y es que mediante un pequeno modelo a partir de los datos de la encuesta, se puede observar como el simple hecho de tener una cuenta bancaria, aumenta en gran medida el hecho de utilizar metodos digitales de pago. Para ser aun más especificos, tener una cuenta bancaria aumenta en un 17 puntos porcentuales la probabilidad de usar metodos digitales de pago en transacciones cotidianas.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-resultados-modelo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-resultados-modelo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-resultados-modelo-1.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resultados-modelo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Impacto de los factores en el uso de efectivo. Las barras de color indican efectos significativos. La ‘Cuenta Bancaria’ y la ‘Educación Superior’ son las únicas variables que realmente mueven la aguja.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="big-number">
+17 pp
+</div>
+<div class="big-number-label">
+Aumento en la probabilidad de ser digital al tener cuenta bancaria
+</div>
+<p>Estos hallazgos sugieren que las políticas destinadas a aumentar la inclusión financiera, como facilitar el acceso a cuentas bancarias y promover la educación financiera, podrían ser estrategias efectivas para reducir la dependencia del efectivo. Al mejorar la infraestructura financiera y educar a la población sobre los beneficios y seguridad de los métodos digitales, se podría fomentar un cambio gradual en los hábitos de pago. No por nada, tener educación superior también tiene un impacto positivo en la adopción de métodos digitales, aunque en menor medida siguen siendo 10 puntos porcentuales.</p>
+<div class="data-box">
+<span class="data-box-title">Dato Curioso</span>
+<div class="data-box-content">
+<strong>La Paradoja de la Educación:</strong> Un porcentaje considerable de personas con educación superior utilizan efectivo deliberadamente para un <strong>“mejor control de sus finanzas”</strong>. Esto sugiere que usan la “fricción” del efectivo como una herramienta de disciplina presupuestaria.
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-control-educacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-control-educacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-control-educacion-1.svg" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-control-educacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Uso de efectivo como mecanismo de disciplina financiera según nivel educativo.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusión-el-efectivo-no-es-solo-un-medio-de-pago-es-un-fenómeno-cultural" class="level1">
+<h1>Conclusión: El Efectivo no es solo un medio de pago, es un fenómeno cultural</h1>
+<p>El análisis de la ENIEF 2023 nos deja una lección de humildad frente a los datos. El efectivo sigue siendo el rey indiscutible en República Dominicana (dominando el 91% de las transacciones cotidianas), pero las razones detrás de este reinado desafían nuestra intuición.</p>
+<p>El modelo econométrico derribó los mitos habituales: ni la edad ni el nivel de ingresos explicaron el comportamiento. Un joven adinerado tiene la misma probabilidad de usar efectivo que un adulto mayor de clase media si ambos enfrentan las mismas barreras.</p>
+<p>La hegemonía del efectivo no es, por tanto, un síntoma de “atraso cultural”, sino el resultado de dos fuerzas muy lógicas:</p>
+<ul>
+<li><p>Una barrera estructural: La falta de aceptación en comercios (la infraestructura) pesa el doble que la educación.</p></li>
+<li><p>Una utilidad psicológica: Incluso los más educados eligen el billete como herramienta de autocontrol financiero.</p></li>
+</ul>
+<p>Para digitalizar la economía, no basta con esperar un relevo generacional o campañas de educación. La solución requiere reducir la fricción: que pagar con tarjeta sea tan fácil, universal y “doloroso” (para el control de gastos) como entregar un billete de cien pesos. Mientras el efectivo sea la opción de menor resistencia, seguirá ocupando el trono.</p>
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+    
+    <div class="related-post-card">
+      <h4 class="anchored" data-anchor-id="conclusión-el-efectivo-no-es-solo-un-medio-de-pago-es-un-fenómeno-cultural"><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+
+    <div class="related-post-card">
+      <h4 class="anchored"><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la Deuda pública dominicana</p>
+    </div>
+    
+   <div class="related-post-card">
+      <h4 class="anchored"><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
+    </div>
+    
+  </div>
+</div>
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos &amp; Referencias</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4 class="anchored">Banco Central R.D. (2023)</h4>
+      <p><em>"Encuesta Nacional de Inclusión y Educación Financiera (ENIEF)"</em>. Fuente primaria de los microdatos utilizados para calcular la hegemonía del efectivo y el modelo de regresión logística.</p>
+      <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Descargar Microdatos (Excel) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Banco Central R.D. (2019)</h4>
+      <p><em>"ENIEF 2019: Primera Encuesta de Inclusión"</em>. Base de datos utilizada para la validación cruzada y comparación histórica de la evolución de la tenencia de productos financieros.</p>
+      <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Ver histórico ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4 class="anchored">Prelec, D. &amp; Loewenstein, G. (1998)</h4>
+      <p><em>"The Red and the Black: Mental Accounting of Savings and Debt"</em>. Estudio seminal que introduce el concepto de <strong>"Pain of Paying"</strong> (Dolor de Pagar), utilizado en este artículo para explicar la preferencia por efectivo en segmentos educados.</p>
+      <a href="https://pubsonline.informs.org/doi/10.1287/mksc.17.1.4" target="_blank" class="bib-link">Ver Abstract Académico ↗</a>
+    </div>
+    
+  </div>
+</div>
+<div class="share-minimal">
+  <p>Si este análisis te resultó útil, considera compartirlo en 
+  <a href="#" data-share="linkedin">LinkedIn</a><a href="#" data-share="twitter">Twitter</a><a href="#" data-share="whatsapp">WhatsApp</a></p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+// Crear barra de progreso solo si estamos en un post editorial
+
+if (document.body.classList.contains('editorial-post')) {
+
+  const progressBar = document.createElement('div');
+
+  progressBar.id = 'reading-progress';
+
+  document.body.prepend(progressBar);
+
+
+
+  // Actualizar al hacer scroll
+
+  window.addEventListener('scroll', () => {
+
+    const scrollTop = window.scrollY;
+
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    progressBar.style.width = scrollPercent + '%';
+
+  });
+
+}
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/leo8221\.github\.io\/leonardo-mena-blog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Leo8221/leonardo-mena-blog";
+    script.dataset.repoId = "R_kgDOQmnpWw";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDO...";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "es";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p style="margin: 0;">
+© 2025 Leonardo Mena · Economía Aplicada
+</p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="../../../about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
+</div>
+    <div class="nav-footer-right">
+<p><a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> · <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

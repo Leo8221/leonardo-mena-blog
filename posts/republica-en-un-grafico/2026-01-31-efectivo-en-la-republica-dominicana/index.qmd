@@ -1,0 +1,281 @@
+---
+title: "El Rey Efectivo: La resistencia del billete en la era digital"
+date: "2026-02-04"
+author: "Leonardo Mena"
+description: "Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?"
+image: "img/Hegemonia_Survey.png" 
+twitter-card:
+  image: "img/Hegemonia_Survey.png"
+  card-style: summary_large_image
+categories: 
+  - "Econometría"
+  - "Economía Dominicana"
+  - "La república en un gráfico"
+draft: false
+body-class: editorial-post
+toc: true
+toc-location: left
+include-after-body: ../../../reading-progress.html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+<style>
+body { /* Force la clase */ }
+</style>
+<script>document.body.classList.add('editorial-post');</script>
+
+```{r setup, include=FALSE}
+source(here::here("tema_graficos.R"))
+library(ggplot2)
+```
+
+
+<div class="share-buttons-sticky">
+  <a href="#" class="share-btn twitter" data-share="twitter" title="Compartir en Twitter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="#" class="share-btn linkedin" data-share="linkedin" title="Compartir en LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="#" class="share-btn whatsapp" data-share="whatsapp" title="Compartir por WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+<div class="key-takeaways">
+  <span class="key-takeaways-title">En Resumen</span>
+  <ol>
+    <li><strong>El efectivo es omnipresente:</strong> Domina el 91% de las compras en bajo valor y el 79% en bienes de alto valor.</li>
+    <li><strong>Rompe barreras demográficas:</strong> Ni la edad ni el ingreso alto eliminan su uso.</li>
+    <li><strong>La Infraestructura es clave:</strong> Tener cuenta bancaria es el predictor #1 de digitalización (+17 pp).</li>
+    <li><strong>Paradoja Educativa:</strong> Los usuarios más educados usan efectivo deliberadamente para disciplinar sus gastos.</li>
+  </ol>
+</div>
+
+Vivimos en el siglo XXI. Internet en casa, teléfonos inteligentes en el bolsillo, laptops y computadoras en casi cualquier espacio de trabajo. La banca en línea se ha convertido en uno de los avances más visibles de la última década.
+
+Con este panorama, es fácil pensar que el efectivo ya cumplió su ciclo, que los billetes y las monedas están siendo desplazados por transferencias electrónicas y tarjetas. ¿Para qué cargar dinero en efectivo cuando todo parece estar a un clic de distancia?
+
+Sin embargo, los datos cuentan otra historia. La **Encuesta Nacional de Inclusión y Educación Financiera (ENIEF 2023)** muestra que, lejos de desaparecer, el efectivo sigue teniendo un peso importante en la vida económica del país.
+
+<div class="section-divider">• • •</div>
+
+# Efectivo: el rey de las transacciones
+
+Juan se desplaza hacia su trabajo cada mañana en un concho, María compra los ingredientes para la comida del día en el colmado, Pedro juega la lotería en la esquina y Ana paga el combustible en la gasolinera. ¿Qué tienen en común estas actividades? Todas ellas se realizan mayormente en efectivo.
+
+Somos conscientes de que así funciona el país, pero ¿cómo se ve esa imagen una vez que la cuantificamos? Es aún más reveladora: todos pensamos en compras y transacciones de montos bajos, pero la realidad es que el efectivo domina en casi todos los rangos de monto.
+```{r}
+#| label: fig-hegemonia-efectivo
+#| fig-cap: "Dominio del efectivo en transacciones cotidianas en República Dominicana. El gráfico muestra cómo el dinero físico sigue siendo el método de pago predominante, superando el 80% en casi todas las categorías de consumo masivo."
+#| fig-alt: "Gráfico de barras horizontales mostrando el porcentaje de uso de efectivo en 6 categorías. Colmados y bajo costo lidera con 91.2%, seguido de Alquiler (90.4%), Supermercados (86.7%), Servicios Públicos (86.1%), Combustible (78.3%) y Bienes de Alto Valor (79.3%). Las barras son color terracota."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(ggplot2)
+
+g_hegemonia <- readRDS(here::here("posts", 
+                                  "republica-en-un-grafico", 
+                                  "2026-01-31-efectivo-en-la-republica-dominicana", 
+                                  "rds", 
+                                  "grafico_hegemonia.rds"))
+print(g_hegemonia)
+```
+
+<div class="big-number">91.2%</div> <div class="big-number-label">De las transacciones de bajo costo se pagan en efectivo</div>
+
+Lo sorprendente no es encontrar que el efectivo domina en compras diarias de bajo monto, sino que su hegemonía se extiende incluso a transacciones de mayor valor. Desde pagar el alquiler hasta adquirir bienes de alto valor, el efectivo sigue siendo la opción principal en la mayoria de casos. A nivel porcentual el comprar el refresco en el colmado (91.2%) supera tan solo por un punto porcentual el pagar el alquiler. Incluso en compras de bienes de alto valor, donde uno esperaría una mayor adopción de métodos digitales, el efectivo mantiene una presencia significativa (79.3%).
+
+Ante datos tan contundentes, surge la pregunta: ¿qué factores influyen en esta preferencia por el efectivo? ¿Es una cuestión de edad, ingresos o quizás educación financiera?
+
+# Desmitificando mitos: edad e ingresos
+
+Una hipótesis común es que los jóvenes, más familiarizados con la tecnología, se inclinan fuertemente hacia métodos digitales de pago, mientras que los adultos mayores son los que inflan esos datos del efectivo. Esto tiene trampa. Si bien es cierto que los jóvenes tienden a usar más métodos digitales, el uso del efectivo sigue siendo alto en todos los grupos etarios.
+
+Nunca disminuye del 65%, incluso en los grupos más jóvenes de la encuesta, lo cual quiere decir que la mayoría de los jóvenes dominicanos también usan efectivo regularmente por razones que van más allá de la edad.
+
+
+```{r}
+#| label: fig-hamaca-edad
+#| fig-cap: "Análisis por edad: Se observa una ligera caída en la adultez media, pero el uso repunta en la vejez y es alto en la juventud."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(ggplot2)
+g_hamaca <- readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_edades.rds"))
+print(g_hamaca)
+```
+
+Otro mito común es que los ingresos más altos se traducen en una mayor adopción de métodos digitales. Sin embargo, los datos muestran que incluso entre los grupos de mayores ingresos, el efectivo sigue siendo predominante. Aunque hay una ligera disminución en el uso del efectivo a medida que aumentan los ingresos, la mayoría de las personas en todos los niveles de ingresos continúan utilizando efectivo regularmente.
+
+```{r}
+#| label: fig-clase-social
+#| fig-cap: "Análisis por ingreso: Se confirma que el uso de efectivo desciende a mayor ingreso, pero se mantiene sorprendentemente alto (>50%) incluso en los estratos superiores."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(ggplot2)
+g_clase <- readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_clase.rds"))
+print(g_clase)
+```
+
+<div class="pullquote"> "El segmento más alto de ingresos sigue utilizando efectivo en casi un 60% de las transacciones cotidianas, desafiando la idea de que es solo para los menos favorecidos." </div>
+
+En resumen, ni la edad ni el nivel de ingresos parecen ser factores determinantes para abandonar el uso del efectivo en República Dominicana. La preferencia por el efectivo es un fenómeno complejo que va más allá de estas variables demográficas. Por suerte la encuesta incluye muchas otras variables que pueden ayudar a entender este fenómeno, las cuales exploraremos a continuacion. 
+
+
+# Más allá de la demografía: ¿Por qué el efectivo sigue reinando?
+
+Si la edad y el ingreso no son suficientes para explicar esta hegemonía, debemos dejar de mirar al usuario y empezar a mirar el entorno. Al analizar las razones declaradas por los encuestados, encontramos dos fuerzas poderosas que actúan en direcciones opuestas: una barrera física y una barrera psicológica.
+
+## 1. La Barrera Física: "Aquí no aceptamos eso"
+
+A menudo, el debate sobre la digitalización asume que el usuario tiene la libertad de elegir. Los datos de la ENIEF muestran que esa libertad es ilusoria en gran parte de la economía cotidiana. Muchos comercios, especialmente los pequeños, no aceptan pagos digitales. Esto crea una barrera física que obliga a los consumidores a recurrir al efectivo, independientemente de sus preferencias personales. Segun datos de la encuesta, un 22% de los encuestados mencionan que no usan métodos digitales porque "el comercio no los acepta".
+
+```{r}
+#| label: fig-razones-ranking
+#| fig-cap: "Razones declaradas para el uso de efectivo. Aunque la conveniencia en montos bajos lidera, la restricción de oferta ('No aceptan tarjeta') representa una barrera estructural significativa."
+#| warning: false
+#| echo: false
+#| message: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(ggplot2)
+# Asegúrate de que el archivo existe en tu carpeta rds
+print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_razones_rank.rds")))
+```
+
+## 2. La Barrera Psicológica: seguridad y descuentos
+
+Más allá de las limitaciones físicas, existen barreras psicológicas que refuerzan el uso del efectivo. Muchos consumidores perciben el efectivo como una forma más segura de manejar su dinero, evitando riesgos asociados con fraudes digitales o problemas técnicos. Además, la percepción de que ciertos comercios ofrecen descuentos o mejores precios por pagos en efectivo refuerza esta preferencia, lo cual es impulsado por el gran grado de informalidad en la economía dominicana. Ambos con un 38 y 34% respectivamente según la encuesta. por lo que no es solo una cuestión de disponibilidad, sino también de confianza y percepción de valor.
+
+<div class="section-divider">• • •</div>
+
+# Los Motores del Cambio: ¿Qué pesa más?
+
+Despues de observar estos datos, queda claro como el efectivo logra tal dominio en la economia dominicana. La pregunta logica luego de esto es una: ¿Que se puede hacer para cambiar esta realidad? y si bien es cierto el cambio cultural es un proceso lento, la infraestructura puede acelerarlo o frenarlo. Y es que mediante un pequeno modelo a partir de los datos de la encuesta, se puede observar como el simple hecho de tener una cuenta bancaria, aumenta en gran medida el hecho de utilizar metodos digitales de pago. Para ser aun más especificos, tener una cuenta bancaria aumenta en un 17 puntos porcentuales la probabilidad de usar metodos digitales de pago en transacciones cotidianas.
+
+```{r}
+#| label: fig-resultados-modelo
+#| fig-cap: "Impacto de los factores en el uso de efectivo. Las barras de color indican efectos significativos. La 'Cuenta Bancaria' y la 'Educación Superior' son las únicas variables que realmente mueven la aguja."
+#| warning: false
+#| echo: false
+#| message: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(ggplot2)
+print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_forest_blog.rds")))
+```
+
+<div class="big-number">17 pp</div> <div class="big-number-label">Aumento en la probabilidad de ser digital al tener cuenta bancaria</div>
+
+Estos hallazgos sugieren que las políticas destinadas a aumentar la inclusión financiera, como facilitar el acceso a cuentas bancarias y promover la educación financiera, podrían ser estrategias efectivas para reducir la dependencia del efectivo. Al mejorar la infraestructura financiera y educar a la población sobre los beneficios y seguridad de los métodos digitales, se podría fomentar un cambio gradual en los hábitos de pago. No por nada, tener educación superior también tiene un impacto positivo en la adopción de métodos digitales, aunque en menor medida siguen siendo 10 puntos porcentuales.
+
+<div class="data-box"> <span class="data-box-title">Dato Curioso</span> <div class="data-box-content"> <strong>La Paradoja de la Educación:</strong> Un porcentaje considerable de personas con educación superior utilizan efectivo deliberadamente para un <strong>"mejor control de sus finanzas"</strong>. Esto sugiere que usan la "fricción" del efectivo como una herramienta de disciplina presupuestaria. </div> </div>
+
+```{r}
+#| label: fig-control-educacion
+#| fig-cap: "Uso de efectivo como mecanismo de disciplina financiera según nivel educativo."
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+library(ggplot2)
+print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds","grafico_control_educ.rds")))
+```
+
+# Conclusión: El Efectivo no es solo un medio de pago, es un fenómeno cultural
+
+El análisis de la ENIEF 2023 nos deja una lección de humildad frente a los datos. El efectivo sigue siendo el rey indiscutible en República Dominicana (dominando el 91% de las transacciones cotidianas), pero las razones detrás de este reinado desafían nuestra intuición.
+
+El modelo econométrico derribó los mitos habituales: ni la edad ni el nivel de ingresos explicaron el comportamiento. Un joven adinerado tiene la misma probabilidad de usar efectivo que un adulto mayor de clase media si ambos enfrentan las mismas barreras.
+
+La hegemonía del efectivo no es, por tanto, un síntoma de "atraso cultural", sino el resultado de dos fuerzas muy lógicas:
+
+- Una barrera estructural: La falta de aceptación en comercios (la infraestructura) pesa el doble que la educación.
+
+- Una utilidad psicológica: Incluso los más educados eligen el billete como herramienta de autocontrol financiero.
+
+Para digitalizar la economía, no basta con esperar un relevo generacional o campañas de educación. La solución requiere reducir la fricción: que pagar con tarjeta sea tan fácil, universal y "doloroso" (para el control de gastos) como entregar un billete de cien pesos. Mientras el efectivo sea la opción de menor resistencia, seguirá ocupando el trono.
+
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  
+  <div class="related-posts-grid">
+    
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la Deuda pública dominicana</p>
+    </div>
+    
+   <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  
+  <div class="bib-grid">
+    
+    <div class="bib-card">
+      <h4>Banco Central R.D. (2023)</h4>
+      <p><em>"Encuesta Nacional de Inclusión y Educación Financiera (ENIEF)"</em>. Fuente primaria de los microdatos utilizados para calcular la hegemonía del efectivo y el modelo de regresión logística.</p>
+      <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Descargar Microdatos (Excel) ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Banco Central R.D. (2019)</h4>
+      <p><em>"ENIEF 2019: Primera Encuesta de Inclusión"</em>. Base de datos utilizada para la validación cruzada y comparación histórica de la evolución de la tenencia de productos financieros.</p>
+      <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Ver histórico ↗</a>
+    </div>
+
+    <div class="bib-card">
+      <h4>Prelec, D. & Loewenstein, G. (1998)</h4>
+      <p><em>"The Red and the Black: Mental Accounting of Savings and Debt"</em>. Estudio seminal que introduce el concepto de <strong>"Pain of Paying"</strong> (Dolor de Pagar), utilizado en este artículo para explicar la preferencia por efectivo en segmentos educados.</p>
+      <a href="https://pubsonline.informs.org/doi/10.1287/mksc.17.1.4" target="_blank" class="bib-link">Ver Abstract Académico ↗</a>
+    </div>
+    
+  </div>
+</div>
+```
+
+```{=html}
+<div class="share-minimal">
+  <p>Si este análisis te resultó útil, considera compartirlo en 
+  <a href="#" data-share="linkedin">LinkedIn</a><a href="#" data-share="twitter">Twitter</a><a href="#" data-share="whatsapp">WhatsApp</a></p>
+</div>
+```
