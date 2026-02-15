@@ -184,8 +184,8 @@ Sus respuestas revelan un panorama mucho más complejo.
 
 ```{r}
 #| label: fig-acceso-crédito-formal-tamano
-#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. El tamaño de la empresa es un predictor más fuerte del acceso al crédito que la formalidad. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (35.2%)."
-#| fig-alt: "Gráfico de barras agrupadas mostrando tasas de acceso al crédito. Las barras en verde oliva representan empresas formales y las terracota representan informales. Para microempresas: formal 35.2%, informal 34.6%. Para pequeñas: formal 42.6%, informal 43.5%. Para medianas: formal 51.1%. Una línea punteada horizontal marca el nivel de microempresas formales en 35.2%."
+#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. El tamaño de la empresa es un predictor más fuerte del acceso al crédito que la formalidad. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (37.5%)."
+#| fig-alt: "Gráfico de barras agrupadas mostrando tasas de acceso al crédito. Las barras en verde oliva representan empresas formales y las terracota representan informales. Para microempresas: formal 37.5%, informal 34.6%. Para pequeñas: formal 42.6%, informal 43.5%. Para medianas: formal 51.1%. Una línea punteada horizontal marca el nivel de microempresas formales en 37.5%."
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -257,7 +257,7 @@ plot_formal_vs_tamano <- acceso_formal_tamano %>%
   
   annotate("text",
     x = 2.5, y = 36,
-    label = "37.5%%: Micro formal",
+    label = "37.5%: Micro formal",
     hjust = 0,
     size = 3,
     color = pal$terracota,
@@ -283,7 +283,7 @@ plot_formal_vs_tamano <- acceso_formal_tamano %>%
     subtitle = "Tasa de acceso a crédito por tamaño de empresa y estatus legal",
     x = NULL,
     y = "Tasa de acceso a crédito (%)",
-    caption = "Fuente: Encuesta Nacional de MiPyMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (35.2%)"
+    caption = "Fuente: Encuesta Nacional de MiPyMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (37.5%)"
   ) +
   
   theme_lm(grid = "y") +
@@ -299,7 +299,7 @@ Entre las empresas formales, el 36.8% accede a crédito. Entre las informales, e
 <div class="data-box">
 <div class="data-box-title">DATO CLAVE</div>
 <div class="data-box-content">
-Entre las microempresas, la diferencia de acceso entre formales (35.2%) e informales (34.6%) es de apenas <strong>0.6 puntos porcentuales</strong>. Estadísticamente, esto es un empate técnico.
+Entre las microempresas, la diferencia de acceso entre formales (37.5%) e informales (34.6%) es de apenas <strong>2.9 puntos porcentuales</strong>. Estadísticamente, esto es un empate técnico.
 </div>
 </div>
 
@@ -520,7 +520,7 @@ La pregunta no es solo cómo dar más crédito. Es **cómo crear condiciones par
 
 <div class="section-divider">• • •</div>
 
-**¿Y tú? Cuando se habla de "demasiados trámites", ¿a qué te imaginas que se refieren? ¿Cuáles son los trámites que más te han complicado la vida a ti o a alguien que conozcas? Cuéntame en los comentarios.**
+**¿Y tú? ¿Deberían los bancos desarrollar productos de 'graduación' que acompañen a las microempresas en su crecimiento? Cuéntame en los comentarios.**
 
 
 ```{=html}
