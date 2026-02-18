@@ -228,7 +228,7 @@ ggplot(acceso_formal_tamano,
     subtitle = "Tasa de acceso a crédito por tamaño de empresa y estatus legal",
     x        = NULL,
     y        = "Tasa de acceso (%)",
-    caption  = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (37.5%)"
+    caption  = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (35.2%)"
   ) +
   theme_lm(grid = "y") +
   theme(legend.position = "top")
@@ -314,13 +314,13 @@ ggplot(barreras_micro,
 
 Estos datos nos hacen replantear la narrativa del problema. Podemos crear los programas de microcrédito y de formalización que queramos, pero si las empresas no tienen planes de expandirse, la exclusión financiera seguirá ocurriendo.
 
-No es que la formalización o los programas de microcrédito sean malos, es que necesitan ser complementamos con otro tipo de asistencia que ataque el problema de raíz.
+No es que la formalización o los programas de microcrédito sean malos, es que necesitan ser complementados con otro tipo de asistencia que ataque el problema de raíz.
 
 Hay un dato adicional que llama la atención, más del 70% de las medianas empresas sin crédito también declara no necesitarlo. ¿Autosuficiencia real, o simplemente falta de horizonte de expansión?
 
 ### Las barreras cambian según el tamaño
 
-Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es el rey.
+Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es el mucho mayor.
 
 ```{r}
 #| label: fig-barreras-por-tamano
@@ -401,7 +401,7 @@ El rechazo directo no es la barrera más importante para ningún tamaño de empr
 
 ## Cuenta bancaria: el Santo Grial del crédito
 
-Si la formalidad legal (RNC) no mueve la aguja, ¿qué lo hace? Cuando observamos el comportamiento de las empresas y ajustamos por tenencia de cuenta bancaria, los números son cuando menos llamativos.
+Si la formalidad legal (RNC) no mueve la aguja (al menos no en profundidad), ¿qué lo hace? Cuando observamos el comportamiento de las empresas y ajustamos por tenencia de cuenta bancaria, los números son cuando menos llamativos.
 
 ```{r}
 #| label: fig-cuenta-bancaria
@@ -523,7 +523,7 @@ ggplot(usos_credito,
 
 Cuando sumamos el crédito tomado para insumos (62.7%) y el tomado para refinanciamiento de deudas (17.9%), obtenemos el **80.6%**. En resumen: las empresas dominicanas se endeudan en modo supervivencia.
 
-No es adquisición de maquinaria, no es expansión de capacidad, no es capital humano. Es simplemente para ser capaces de mantener sus operaciones diarias. El crédito como oxígeno, no como combustible de crecimiento.
+No es adquisición de maquinaria, no es expansión de capacidad, no es capital humano. Es simplemente para ser capaces de mantener sus operaciones diarias. El crédito como una especie de tanque de oxígeno, no como combustible del crecimiento.
 
 ## Conclusión: el sesgo de selección
 
