@@ -320,7 +320,7 @@ Hay un dato adicional que llama la atención, más del 70% de las medianas empre
 
 ### Las barreras cambian según el tamaño
 
-Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es el mucho mayor.
+Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es mucho mayor.
 
 ```{r}
 #| label: fig-barreras-por-tamano
