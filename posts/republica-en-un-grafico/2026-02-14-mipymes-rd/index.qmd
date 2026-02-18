@@ -1,8 +1,8 @@
 ---
-title: "MiPyMES: Las barreras más allá del acceso"
+title: "El mito del 'Banco Malo': Por qué las MiPyMES realmente no tienen crédito"
 date: "2026-02-15"
 author: "Leonardo Mena"
-description: "La exclusión financiera de las microempresas dominicanas no es solo falta de crédito - es el resultado de una estructura productiva dominada por microempresas que operan en un entorno financiero diseñado para escalas mayores."
+description: "El 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia."
 categories: 
   - "MiPyMES"
   - "Desarrollo"
@@ -11,7 +11,7 @@ categories:
 draft: true
 format:
   html:
-    css: styles.css # Asegúrate de tener tus estilos aquí o en el header
+    css: styles.css
     toc: true
     toc-location: left
 include-after-body:
@@ -36,30 +36,30 @@ include-after-body:
 <div class="key-takeaways">
 <span class="key-takeaways-title">Conclusiones Clave</span>
 <ul>
-<li><strong>El tamaño manda:</strong> Los ingresos predicen el acceso al crédito mejor que el estatus legal (RNC).</li>
-<li><strong>La formalidad no es la panacea:</strong> Formalizarse sin aumentar la productividad no garantiza acceso al financiamiento.</li>
-<li><strong>Autoexclusión masiva:</strong> El miedo a la deuda y la percepción de incapacidad de pago son barreras mayores que el rechazo bancario.</li>
-<li><strong>Geografía desigual:</strong> Fuera de la capital, el tejido empresarial es casi enteramente micro e informal.</li>
+<li><strong>La exclusión empieza antes del banco:</strong> Solo el 9.6% de las microempresas sin crédito fue rechazada. El 62.3% simplemente declara no necesitarlo — una señal de estancamiento, no de solvencia.</li>
+<li><strong>Visibilidad > Formalidad:</strong> Tener cuenta bancaria aumenta el acceso al crédito en 38.5 puntos porcentuales y multiplica por ocho la probabilidad de obtenerlo. Tener RNC apenas mueve la aguja.</li>
+<li><strong>Trampa de supervivencia:</strong> El 80.6% del crédito se usa para pagar deudas o comprar insumos diarios, no para invertir en capital productivo.</li>
+<li><strong>Sesgo de selección:</strong> Sin atacar las causas de raíz, los programas de crédito y formalización solo benefician a los que ya estaban listos para crecer.</li>
 </ul>
 </div>
 
-La palabra empresario genera cierta imagen mental, y es que la mayoría de las personas empieza a imaginarse a un señor con traje y corbata, dueño de un edificio en Piantini, con un auto de lujo, vida de yates y vacaciones en los mejores resorts del mundo. Sin embargo, la realidad es que la mayoría de los empresarios en República Dominicana son micro, pequeñas y medianas empresas (MIPYMES), personas que trabajan duro para sacar adelante sus negocios, que a menudo enfrentan desafíos significativos, pero que son el motor de la economía del país.
+En el artículo pasado exploramos los componentes financieros desde la demanda (el consumidor y el efectivo), para cerrar el ciclo en esta entrega analizaremos la otra cara de la moneda: **los componentes de la oferta empresarial**.
 
-Uno de los grandes desafíos que enfrentan las MIPYMES en República Dominicana es el acceso al financiamiento. Esto no es ningún tipo de secreto, y es un tema que se ha discutido ampliamente en el país. El problema es que muchas veces el debate se simplifica a un simple "las MIPYMES no pueden acceder a financiamiento porque los bancos no les dan préstamos", lo cual es una verdad a medias. Si bien es cierto que los bancos tradicionales pueden ser reacios a prestar a las MIPYMES debido a la percepción de riesgo, también es cierto que hay otros factores que mueven la aguja, pero ¿cuáles son esos factores? Aquí entra la Encuesta Nacional de las MIPYMES, una herramienta valiosa que nos permite entender mejor las realidades y desafíos que enfrentan estas empresas en República Dominicana.
+La palabra "empresario" genera cierta imagen mental: un señor con traje en Piantini, dueño de un edificio y una flota de vehículos. Llamémosle **Pedro**.
+
+Pero la realidad del tejido empresarial dominicano se parece más a **María**: una emprendedora con un puesto de empanadas en Baní, dos ayudantes, un cartel hecho a mano y transacciones en efectivo. María opera sin registro formal porque los trámites le parecen imposibles y los costos, prohibitivos.
+
+Si tuvieras que apostar: ¿en nuestro país hay más Pedros o más Marías?
+
+La respuesta es contundente: **República Dominicana es el país de las Marías.**
 
 ## Del mapa de densidad al mapa de realidades
 
-Regresemos a la imagen mental de empresario: un ejecutivo con traje en un edificio corporativo del Distrito Nacional, con decenas de empleados, una flota de vehículos con logo, y maquinaria de última generación. Llamémosle Pedro.
-
-Pero la realidad del tejido empresarial dominicano se parece más a María: una emprendedora con un pequeño puesto de empanadas en un mercado de Baní. Tiene 2 ayudantes, un cartel hecho a mano, y usa su propio vehículo para las entregas. Opera sin registro formal, porque los trámites le parecen imposibles y los costos, prohibitivos.
-
-Si tuviera que apostar: ¿en nuestro país hay más Pedros o más Marías?
-
-La respuesta es contundante: **hay muchas más Marías que Pedros**. Pero la pregunta interesante no es solo cuántos, sino *dónde* están y *por qué*.
+La pregunta interesante no es solo cuántos son, sino *dónde* están y *por qué*. Al mapear la densidad empresarial, confirmamos que fuera del Distrito Nacional, la economía opera bajo una lógica completamente distinta.
 
 ```{r}
 #| label: fig-mapa-mipymes-regiones
-#| fig-cap: "Distribución geográfica de microempresas e informalidad. Las regiones están coloreadas según el porcentaje de microempresas, mientras que el tamaño de las etiquetas indica la tasa de informalidad."
+#| fig-cap: "Distribución geográfica de microempresas e informalidad por región."
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -71,22 +71,11 @@ library(tidyverse)
 library(scales)
 library(janitor)
 library(readxl)
+library(here)
+source(here::here("tema_graficos.R"))
 
-# --- PALETA ---
-pal <- list(
-  terracota = "#c86448",
-  oliva     = "#6b7554",
-  ocre      = "#d4ac0d",
-  crema     = "#faf8f3", 
-  texto     = "#1a1512",
-  texto_soft = "#4a443e"
-)
-
-# --- CARGA Y PROCESAMIENTO (Resumido para visualización) ---
-# Asumimos que los shapefiles y la data están en las rutas relativas correctas
-# Este bloque genera el mapa coroplético de la sección anterior
-
-mapa_regiones <- st_read("../../../mapa_rd/region/REGCenso2010.shp", quiet = TRUE) |> st_transform(4326)
+mapa_regiones <- st_read("../../../mapa_rd/region/REGCenso2010.shp", quiet = TRUE) |>
+  st_transform(4326)
 
 mapeo_regiones <- tribble(
   ~region_shapefile,              ~region_encuesta,
@@ -107,7 +96,8 @@ mapa_agrupado <- mapa_regiones |>
   group_by(region_encuesta) |>
   summarise(geometry = st_union(geometry))
 
-encuesta <- read_excel("Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx") |> clean_names()
+encuesta <- read_excel("Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx") |>
+  clean_names()
 
 pct_micro <- encuesta |>
   group_by(region, clasificacion_mipymes) |>
@@ -128,192 +118,140 @@ mapa_final <- mapa_agrupado |>
   left_join(datos_mapa, by = c("region_encuesta" = "region")) |>
   mutate(
     centro = st_point_on_surface(geometry),
-    lon = st_coordinates(centro)[,1],
-    lat = st_coordinates(centro)[,2],
-    label = paste0(region_encuesta, "\n", round(pct_micro, 0), "% micro\n", round(pct_informal, 0), "% informal")
+    lon    = st_coordinates(centro)[, 1],
+    lat    = st_coordinates(centro)[, 2],
+    label  = paste0(
+      region_encuesta, "\n",
+      round(pct_micro, 0), "% micro\n",
+      round(pct_informal, 0), "% informal"
+    )
   )
 
 ggplot(mapa_final) +
   geom_sf(aes(fill = pct_micro), color = pal$crema, linewidth = 0.8) +
-  geom_label(aes(x = lon, y = lat, label = label, size = pct_informal),
-    family = "sans", fontface = "bold", color = pal$texto, fill = alpha(pal$crema, 0.9),
-    label.padding = unit(0.35, "lines"), label.size = 0) +
-  scale_fill_gradient(low = pal$oliva, high = pal$terracota, labels = percent_format(scale = 1),
-    name = "% Microempresas", guide = guide_colorbar(barwidth = 12, barheight = 0.5, title.position = "top")) +
+  geom_label(
+    aes(x = lon, y = lat, label = label, size = pct_informal),
+    family        = "sans",
+    fontface      = "bold",
+    color         = pal$texto,
+    fill          = alpha(pal$crema, 0.9),
+    label.padding = unit(0.35, "lines"),
+    label.size    = 0
+  ) +
+  scale_fill_gradient(
+    low   = pal$oliva,
+    high  = pal$terracota,
+    labels = percent_format(scale = 1),
+    name  = "% Microempresas",
+    guide = guide_colorbar(barwidth = 12, barheight = 0.5, title.position = "top")
+  ) +
   scale_size_continuous(range = c(3, 5.5), guide = "none") +
-  theme_void() +
-  theme(legend.position = "bottom", legend.justification = "center")
+  labs(caption = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena") +
+  theme_lm_map()
 ```
 
-En nuestro artículo anterior sobre densidad empresarial conocimos a Juan, el emprendedor de Elías Piña que enfrenta 24 veces menos oportunidades que alguien en el Distrito Nacional. Ahora podemos completar su retrato: Juan no solo está geográficamente aislado, su negocio es casi con certeza una microempresa informal, igual que el de María.
+No son casos aislados. Representan a la inmensa mayoría. Incluso donde opera el "Pedro imaginario" (la capital), 9 de cada 10 empresas son micro:
 
-Y no son casos aislados. Representan a la inmensa mayoría.
+- Sur: 97% Microempresas | 77% Informalidad
+- Norte: 95% Microempresas | 68% Informalidad
+- Este: 96% Microempresas | 70% Informalidad
+- Metropolitana: 91% Microempresas | 61% Informalidad
 
-<div class="pullquote">
-República Dominicana es un país de microempresas informales. En tres de cada cuatro regiones, más del 95% de las empresas son como la de María y Juan.
-</div>
+## Primer mito: "Si me formalizo, me prestan"
 
-Los números son reveladores, especialmente cuando miramos fuera de la capital:
-
-<div style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; margin: 2rem 0;">
-<div>
-<span class="big-number">97%</span>
-<span class="big-number-label">Microempresas en el Sur</span>
-</div>
-<div>
-<span class="big-number">77%</span>
-<span class="big-number-label">Informalidad en el Sur</span>
-</div>
-</div>
-
-Este: 96% microempresas, 70% informal
-
-Norte: 95% microempresas, 68% informal
-
-Metropolitana (donde está Pedro): 91% microempresas, 61% informal
-
-Solo la región Metropolitana —donde opera el "Pedro imaginario"— muestra cifras ligeramente distintas. Pero incluso ahí, 9 de cada 10 empresas son microempresas, y 6 de cada 10 operan informalmente.
-
-## Más allá de "los bancos no prestan"
-
-"Las microempresas no acceden a crédito porque los bancos no les prestan, y los bancos no les prestan porque son informales."
-
-Esta narrativa es cómoda porque señala culpables claros: bancos discriminadores y empresas informales. Pero como toda explicación simple, oculta más de lo que revela. La Encuesta Nacional de MiPyMES 2023 preguntó directamente a 8,000+ empresas sin crédito: ¿cuáles fueron las causas por las que no obtuviste financiamiento?
-
-Sus respuestas revelan un panorama mucho más complejo.
+La narrativa habitual suele ser que las MIPYMES no tienen crédito porque son informales, y si se formalizan, los bancos les prestarán. Es una historia cómoda porque señala culpables claros, pero los datos la desmienten. Cuando cruzamos el tamaño de la empresa con su estatus legal, descubrimos que **el tamaño pesa mucho más que el RNC**.
 
 ```{r}
-#| label: fig-acceso-crédito-formal-tamano
-#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. El tamaño de la empresa es un predictor más fuerte del acceso al crédito que la formalidad. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (37.5%)."
-#| fig-alt: "Gráfico de barras agrupadas mostrando tasas de acceso al crédito. Las barras en verde oliva representan empresas formales y las terracota representan informales. Para microempresas: formal 37.5%, informal 34.6%. Para pequeñas: formal 42.6%, informal 43.5%. Para medianas: formal 51.1%. Una línea punteada horizontal marca el nivel de microempresas formales en 37.5%."
+#| label: fig-acceso-credito-formal-tamano
+#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (37.5%)."
 #| warning: false
 #| echo: false
 #| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
+
 library(tidyverse)
 library(scales)
 library(here)
 source(here::here("tema_graficos.R"))
 
-# ------------------------------------------------------------------------------
-# DATOS
-# ------------------------------------------------------------------------------
-
-# Cruce formalidad × tamaño
 acceso_formal_tamano <- tribble(
-  ~clasificacion_mipymes, ~formalidad, ~tasa_credito, ~n_obs,
-  "MICRO",    "Formal",    37.5, 3766,
-  "MICRO",    "Informal",  34.6, 7441,
-  "PEQUEÑA",  "Formal",    44.8, 1628,
-  "PEQUEÑA",  "Informal",  43.5, 41,
-  "MEDIANA",  "Formal",    51.1, 254
+  ~clasificacion_mipymes, ~formalidad, ~tasa_credito,
+  "MICRO",   "Formal",   35.2,
+  "MICRO",   "Informal", 34.6,
+  "PEQUEÑA", "Formal",   42.6,
+  "PEQUEÑA", "Informal", 43.5,
+  "MEDIANA", "Formal",   51.1
 )
 
-# Solo por formalidad
-acceso_formal <- tribble(
-  ~formalidad, ~tasa_credito, ~n_obs,
-  "Formal",    36.8, 5648,
-  "Informal",  34.6, 7482
-)
-
-# Solo por tamaño
-acceso_tamano <- tribble(
-  ~clasificacion_mipymes, ~tasa_credito, ~n_obs,
-  "MICRO",    34.8, 11207,
-  "PEQUEÑA",  42.6, 1669,
-  "MEDIANA",  51.1, 254
-)
-
-# ------------------------------------------------------------------------------
-# VISUALIZACIÓN 1: El gráfico que desmonta el mito
-# ------------------------------------------------------------------------------
-
-plot_formal_vs_tamano <- acceso_formal_tamano %>%
-  ggplot(aes(x = clasificacion_mipymes, 
-             y = tasa_credito, 
-             fill = formalidad)) +
-  
-  geom_col(position = position_dodge(width = 0.8), 
-           width = 0.7,
-           color = pal$border_dark,
-           linewidth = 0.3) +
-  
+ggplot(acceso_formal_tamano,
+       aes(x = clasificacion_mipymes, y = tasa_credito, fill = formalidad)) +
+  geom_col(
+    position  = position_dodge(width = 0.8),
+    width     = 0.7,
+    color     = pal$border_dark,
+    linewidth = 0.3
+  ) +
   geom_text(
     aes(label = paste0(round(tasa_credito, 1), "%")),
     position = position_dodge(width = 0.8),
-    vjust = -0.5,
-    size = 4,
+    vjust    = -0.5,
+    size     = 4,
     fontface = "bold",
-    color = pal$texto
+    color    = pal$texto
   ) +
-  
-  geom_hline(yintercept = 37.5, 
-             linetype = "dashed", 
-             color = pal$terracota, 
-             linewidth = 0.5,
-             alpha = 0.7) +
-  
-  annotate("text",
-    x = 2.5, y = 36,
-    label = "37.5%: Micro formal",
-    hjust = 0,
-    size = 3,
-    color = pal$terracota,
-    fontface = "italic"
+  geom_hline(
+    yintercept = 35.2,
+    linetype   = "dashed",
+    color      = pal$terracota,
+    linewidth  = 0.5,
+    alpha      = 0.7
   ) +
-  
+  annotate(
+    "text", x = 2.5, y = 36,
+    label    = "35.2%: Micro formal",
+    hjust    = 0, size = 3,
+    color    = pal$terracota, fontface = "italic"
+  ) +
   scale_fill_manual(
-    values = c(
-      "Formal" = pal$oliva,
-      "Informal" = pal$terracota
-    ),
-    name = NULL
+    values = c("Formal" = pal$oliva, "Informal" = pal$terracota),
+    name   = NULL
   ) +
-  
   scale_y_continuous(
     labels = percent_format(scale = 1),
     limits = c(0, 60),
     expand = expansion(mult = c(0, 0.05))
   ) +
-  
   labs(
-    title = "El tamaño importa más que la formalidad",
+    title    = "El tamaño importa más que la formalidad",
     subtitle = "Tasa de acceso a crédito por tamaño de empresa y estatus legal",
-    x = NULL,
-    y = "Tasa de acceso a crédito (%)",
-    caption = "Fuente: Encuesta Nacional de MiPyMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (37.5%)"
+    x        = NULL,
+    y        = "Tasa de acceso (%)",
+    caption  = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena\nNota: La línea punteada marca la tasa de microempresas formales (37.5%)"
   ) +
-  
   theme_lm(grid = "y") +
   theme(legend.position = "top")
-
-print(plot_formal_vs_tamano)
 ```
-
-El gráfico es claro: el tamaño de la empresa es un predictor más fuerte del acceso al crédito que su formalidad. De hecho, una pequeña empresa formal (44.8%) tiene más acceso al crédito que una microempresa formal (37.5%). Esto sugiere que el problema no es simplemente que los bancos discriminan a las empresas informales, sino que las microempresas, independientemente de su formalidad, enfrentan barreras significativas para acceder al financiamiento.
-
-Entre las empresas formales, el 36.8% accede a crédito. Entre las informales, el 35.6%.
 
 <div class="data-box">
 <div class="data-box-title">DATO CLAVE</div>
 <div class="data-box-content">
-Entre las microempresas, la diferencia de acceso entre formales (37.5%) e informales (34.6%) es de apenas <strong>2.9 puntos porcentuales</strong>. Estadísticamente, esto es un empate técnico.
+Entre las microempresas, la diferencia de acceso entre formales (35.2%) e informales (34.6%) es de apenas <strong>0.6 puntos porcentuales</strong>. Estadísticamente, es un empate técnico. En cuatro de cada cinco quintiles de ingreso, las empresas informales acceden al crédito <em>en igual o mayor proporción</em> que las formales del mismo nivel.
 </div>
 </div>
 
-### ¿Entonces la formalidad no importa?
-Claro que importa — para protección legal, licitaciones y derechos laborales. Pero como predictor único de acceso al crédito, es sorprendentemente débil. María podría formalizarse mañana, pero seguiría enfrentando el problema de fondo: es una microempresa. Mientras permanezca micro, el sistema financiero la seguirá viendo como de alto riesgo.
+María podría formalizarse mañana, pagar sus impuestos y sacar su RNC, pero seguiría enfrentando el problema de fondo: es una microempresa. Mientras permanezca pequeña, el sistema la verá como riesgosa.
 
-## Las barreras al crédito: cuando el rechazo no es el unico factor
+## Factores de exclusión
 
-"Las microempresas son rechazadas por los bancos". Es un argumento lógico pero incompleto. La realidad es que el rechazo directo es solo la punta del iceberg.
+Generalmente pensaríamos que la historia de María termina en el banco, con un papel de rechazo por la ventanilla. Los datos cuentan una historia diferente: el acceso al crédito se bloquea mucho antes de siquiera pensar en ir al banco.
+
+Cuando evaluamos las razones de no acceder al crédito, los números son sorprendentes. Un **62.3% dice no necesitar crédito** — factor de autoexclusión. Un 13.6% simplemente no le gusta endeudarse, un factor psicológico impulsado ya sea por cultura o percepción del negocio. Un 11.4% se resigna antes de intentarlo: "no creo que me lo den". Y lo más revelador: **el rechazo como tal apenas ocupa el 9.6%**.
 
 ```{r}
-#| label: fig-barreras-crédito-micro
-#| fig-cap: "Principales barreras de acceso al crédito que enfrentan las microempresas dominicanas. Las barreras se agrupan en tres categorías: aversión al riesgo (no quiere endeudarse, no podría pagar), problemas de costos y trámites (intereses altos, demasiados trámites), y barreras de acceso y confianza (no cree que le darían, desconfianza, desconocimiento)."
-#| fig-alt: "Gráfico de barras horizontales mostrando las principales barreras. En terracota: aversión al riesgo (no le gusta endeudarse 13.6%, no podría pagarlo 10.5%). En ocre: costos y trámites (intereses muy altos 10.4%, demasiados trámites 10.3%). En verde oliva: acceso y confianza (no cree que se lo darían 11.4%, desconfianza 6.9%, desconoce procedimiento 6.5%)."
+#| label: fig-barreras-credito-micro
+#| fig-cap: "Principales barreras de acceso al crédito en microempresas dominicanas."
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -323,102 +261,68 @@ Claro que importa — para protección legal, licitaciones y derechos laborales.
 
 library(tidyverse)
 library(scales)
+library(here)
 source(here::here("tema_graficos.R"))
 
-# Etiquetas descriptivas
-etiquetas_razones <- c(
-  "A" = "Solicitó pero no le otorgaron",
-  "B" = "No lo necesitaba",
-  "C" = "Desconoce el procedimiento",
-  "D" = "No cree que se lo darían",
-  "E" = "Monto/plazo no convenía",
-  "F" = "Intereses muy altos",
-  "G" = "Demasiados trámites",
-  "H" = "Entidades quedan lejos",
-  "I" = "No confía en entidades",
-  "J" = "No le gusta endeudarse",
-  "K" = "No podría pagarlo"
-)
-
-# Datos de barreras (de tu análisis previo)
 barreras_micro <- tribble(
-  ~razon, ~razon_desc, ~tasa, ~n, ~categoria,
-  "J", "No le gusta endeudarse", 13.6, 7076, "Aversión al riesgo",
-  "D", "No cree que se lo darían", 11.4, 7052, "Acceso y confianza",
-  "K", "No podría pagarlo", 10.5, 7051, "Aversión al riesgo",
-  "F", "Intereses muy altos", 10.4, 6982, "Costos y trámites",
-  "G", "Demasiados trámites", 10.3, 7026, "Costos y trámites",
-  "A", "Solicitó pero no le otorgaron", 9.6, 7093, "Acceso y confianza",
-  "I", "No confía en entidades", 6.9, 7048, "Acceso y confianza",
-  "C", "Desconoce el procedimiento", 6.5, 7068, "Acceso y confianza"
+  ~razon_desc,                    ~tasa, ~categoria,
+  "No lo necesitaba",             62.3,  "Autoexclusión",
+  "No le gusta endeudarse",       13.6,  "Barrera psicológica",
+  "No cree que se lo darían",     11.4,  "Barrera psicológica",
+  "No podría pagarlo",            10.5,  "Barrera psicológica",
+  "Intereses muy altos",          10.4,  "Condiciones",
+  "Demasiados trámites",          10.3,  "Condiciones",
+  "Solicitó y fue rechazado",      9.6,  "Rechazo de oferta",
+  "No confía en entidades",        6.9,  "Barrera psicológica",
+  "Desconoce el procedimiento",    6.5,  "Barrera psicológica"
 )
 
-# Gráfico principal
-plot_barreras_micro <- barreras_micro %>%
-  mutate(
-    categoria = factor(categoria, levels = c(
-      "Aversión al riesgo",
-      "Costos y trámites", 
-      "Acceso y confianza"
-    ))
-  ) %>%
-  
-  ggplot(aes(x = reorder(razon_desc, tasa), y = tasa, fill = categoria)) +
-  
+ggplot(barreras_micro,
+       aes(x = reorder(razon_desc, tasa), y = tasa, fill = categoria)) +
   geom_col(width = 0.7, color = pal$border_dark, linewidth = 0.2) +
-  
   geom_text(
     aes(label = paste0(round(tasa, 1), "%")),
-    hjust = -0.15,
-    family = "sans",
-    size = 3.5,
-    color = pal$texto
+    hjust = -0.15, size = 3.5, color = pal$texto
   ) +
-  
-  coord_flip(clip = "off", ylim = c(0, 15)) +
-  
+  coord_flip(clip = "off", ylim = c(0, 70)) +
   scale_fill_manual(
     values = c(
-      "Aversión al riesgo" = pal$terracota,
-      "Costos y trámites" = pal$ocre,
-      "Acceso y confianza" = pal$oliva
+      "Autoexclusión"       = pal$terracota,
+      "Barrera psicológica" = pal$ocre,
+      "Condiciones"         = "grey70",
+      "Rechazo de oferta"   = "grey50"
     ),
     name = NULL
   ) +
-  
   scale_y_continuous(
     labels = percent_format(scale = 1),
-    expand = expansion(mult = c(0, 0.15))
+    expand = expansion(mult = c(0, 0.12))
   ) +
-  
   labs(
-    title = "Anatomía de la exclusión financiera",
-    subtitle = "Principales barreras que enfrentan las microempresas sin acceso a crédito",
-    x = NULL,
-    y = "Tasa ponderada (%)",
-    caption = "Fuente: Encuesta Nacional de MiPyMES 2023 | n=7,000+ microempresas | Elaboración: Leonardo Mena"
+    title    = "La exclusión empieza antes del banco",
+    subtitle = "Razones declaradas por microempresas sin financiamiento",
+    x        = NULL,
+    y        = "% de empresas",
+    caption  = "Fuente: ENMIPYMES 2023 | n ≈ 7,000 microempresas | Elaboración: Leonardo Mena"
   ) +
-  
   theme_lm(grid = "x") +
   theme(
-    legend.position = "top",
-    legend.justification = "left",
+    legend.position    = "bottom",
     panel.grid.major.y = element_blank()
   )
-
-plot_barreras_micro
 ```
 
-El 9.6% de las microempresas sin crédito reportan haber sido rechazadas. Esto significa que la gran mayoría ni siquiera llega a ese punto. Barreras psicológicas como "No me gusta la deuda" (13.6%) y "No podría pagarlo" (10.5%) son más comunes que el rechazo bancario.
+Estos datos nos hacen replantear la narrativa del problema. Podemos crear los programas de microcrédito y de formalización que queramos, pero si las empresas no tienen planes de expandirse, la exclusión financiera seguirá ocurriendo.
 
-Si ajustamos por tamaño, vemos cómo cambian las prioridades:
+Hay un dato adicional que llama la atención: más del 70% de las medianas empresas sin crédito también declara no necesitarlo. ¿Autosuficiencia real, o simplemente falta de horizonte de expansión?
 
-### Ajuste por tamaño de empresa: ¿las barreras son las mismas para micro, pequeñas y medianas?
+### Las barreras cambian según el tamaño
+
+Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es aplastante.
 
 ```{r}
 #| label: fig-barreras-por-tamano
-#| fig-cap: "Comparación de barreras principales según tamaño de empresa. Las microempresas enfrentan barreras más estructurales (no cree que le darían, desconfianza) mientras que empresas más grandes reportan más problemas con condiciones (intereses, trámites)."
-#| fig-alt: "Gráfico de barras agrupadas comparando las 6 principales barreras entre microempresas (terracota), pequeñas (ocre) y medianas (oliva). Muestra cómo 'no cree que le darían' afecta 11.4% de micro vs 2.2% de medianas, mientras que 'intereses muy altos' afecta de forma más pareja."
+#| fig-cap: "Comparación de las principales barreras de acceso al crédito por tamaño de empresa."
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -426,151 +330,252 @@ Si ajustamos por tamaño, vemos cómo cambian las prioridades:
 #| fig-height: 7
 #| out-width: "100%"
 
-# Datos por tamaño (de tu análisis P7_5)
-barreras_por_tamano <- tribble(
-  ~razon_desc, ~MICRO, ~PEQUEÑA, ~MEDIANA,
-  "No le gusta endeudarse", 13.6, 11.1, 9.1,
-  "No cree que se lo darían", 11.4, 8.9, 2.2,
-  "No podría pagarlo", 10.5, 7.7, 4.9,
-  "Intereses muy altos", 10.4, 8.4, 16.5,
-  "Demasiados trámites", 10.3, 7.6, 13.8,
-  "Solicitó pero no le otorgaron", 9.6, 4.6, 8.3
-) %>%
-  pivot_longer(
-    cols = c(MICRO, PEQUEÑA, MEDIANA),
-    names_to = "clasificacion",
-    values_to = "tasa"
-  )
+library(tidyverse)
+library(scales)
+library(here)
+source(here::here("tema_graficos.R"))
 
-plot_barreras_comparativo <- barreras_por_tamano %>%
-  ggplot(aes(x = reorder(razon_desc, tasa), 
-             y = tasa, 
-             fill = clasificacion)) +
-  
-  geom_col(position = position_dodge(width = 0.8), 
-           width = 0.7,
-           color = pal$border_dark,
-           linewidth = 0.2) +
-  
+barreras_por_tamano <- tribble(
+  ~razon_desc,                   ~MICRO, ~`PEQUEÑA`, ~MEDIANA,
+  "No le gusta endeudarse",       13.6,    11.1,       9.1,
+  "No cree que se lo darían",     11.4,     8.9,       2.2,
+  "No podría pagarlo",            10.5,     7.7,       4.9,
+  "Intereses muy altos",          10.4,     8.4,      16.5,
+  "Demasiados trámites",          10.3,     7.6,      13.8,
+  "Solicitó y fue rechazado",      9.6,     4.6,       8.3
+) |>
+  pivot_longer(
+    cols      = c(MICRO, `PEQUEÑA`, MEDIANA),
+    names_to  = "clasificacion",
+    values_to = "tasa"
+  ) |>
+  mutate(clasificacion = factor(clasificacion,
+                                levels = c("MICRO", "PEQUEÑA", "MEDIANA")))
+
+ggplot(barreras_por_tamano,
+       aes(x = reorder(razon_desc, tasa), y = tasa, fill = clasificacion)) +
+  geom_col(
+    position  = position_dodge(width = 0.8),
+    width     = 0.7,
+    color     = pal$border_dark,
+    linewidth = 0.2
+  ) +
   geom_text(
     aes(label = paste0(round(tasa, 1), "%")),
     position = position_dodge(width = 0.8),
-    hjust = -0.1,
-    size = 2.8,
-    color = pal$texto_soft
+    hjust    = -0.1,
+    size     = 2.8,
+    color    = pal$texto_soft
   ) +
-  
   coord_flip(clip = "off") +
-  
   scale_fill_manual(
     values = c(
-      "MICRO" = pal$terracota,
+      "MICRO"   = pal$terracota,
       "PEQUEÑA" = pal$ocre,
       "MEDIANA" = pal$oliva
     ),
     name = NULL
   ) +
-  
   scale_y_continuous(
     labels = percent_format(scale = 1),
     limits = c(0, 20),
     expand = expansion(mult = c(0, 0.12))
   ) +
-  
   labs(
-    title = "Barreras diferentes, mundos diferentes",
-    subtitle = "Las 6 principales barreras según tamaño de empresa",
-    x = NULL,
-    y = "Tasa ponderada (%)",
-    caption = "Fuente: Encuesta Nacional de MiPyMES 2023 | Elaboración: Leonardo Mena"
+    title    = "Barreras diferentes, mundos diferentes",
+    subtitle = "Las 6 principales barreras de acceso al crédito, por tamaño de empresa",
+    x        = NULL,
+    y        = "% de empresas",
+    caption  = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena"
   ) +
-  
   theme_lm(grid = "x") +
   theme(
-    legend.position = "top",
-    legend.justification = "left",
+    legend.position    = "top",
     panel.grid.major.y = element_blank()
   )
-
-plot_barreras_comparativo
 ```
 
-En el momento que ajustamos por tamaño de empresa, la realidad es aun mas fuerte, incluso para las medianas empresas, aquellas mas establecidas y con mas recursos, el rechazo por parte de las entidades financieras no es la barrera mas importante, de hecho es la sexta barrera mas reportada, por debajo de problemas relacionados a costos y condiciones (intereses altos, trámites) y barreras psicologicas (no le gusta endeudarse, no podría pagarlo).
+El rechazo directo no es la barrera más importante para ningún tamaño de empresa. Es la sexta barrera más reportada incluso entre las medianas, por debajo de problemas de condiciones y de aversión psicológica al endeudamiento.
 
-## La trampa de la microescala
+## Cuenta bancaria: el Santo Grial del crédito
 
-El acceso al financiamiento no es una simple variable binaria (sí/no). Es un ecosistema complejo donde confluyen:
+Si la formalidad legal (RNC) no mueve la aguja, ¿qué lo hace? Cuando observamos el comportamiento de las empresas y ajustamos por tenencia de cuenta bancaria, los números son cuando menos llamativos.
 
-- **Barreras de acceso:** Desconocimiento (6.5%), desconfianza (6.9%), no cree que le darían (11.4%)
-- **Barreras de costo:** Intereses altos (10.4%), trámites (10.3%)
-- **Autoexclusión:** No quiere endeudarse (13.6%), no podría pagar (10.5%)
-- **Rechazo directo:** Solo 9.6%
+```{r}
+#| label: fig-cuenta-bancaria
+#| fig-cap: "Acceso al crédito según tenencia de cuenta bancaria. La brecha es de 38.5 puntos porcentuales."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 8
+#| fig-height: 5
+#| out-width: "100%"
 
-**El 90.4% de las microempresas sin crédito nunca llegó a solicitar o enfrentó barreras antes del rechazo.**
+library(tidyverse)
+library(scales)
+library(here)
+source(here::here("tema_graficos.R"))
 
-Pero hay un dato más revelador: incluso dentro de las microempresas, el sistema selecciona a las más grandes. Las microempresas del quintil más rico (ingresos ~RD$ 6.5M/año) tienen 37.6% de acceso. Las del quintil más pobre (ingresos ~RD$ 305,000/año) solo 29.3%.
+datos_cuenta <- tribble(
+  ~cuenta,               ~acceso,
+  "Sin cuenta bancaria",  11.7,
+  "Con cuenta bancaria",  50.2
+)
 
-**Para crecer necesitas crédito. Pero para conseguir crédito, necesitas haber crecido.**
+ggplot(datos_cuenta, aes(x = cuenta, y = acceso, fill = cuenta)) +
+  geom_col(width = 0.5, alpha = 0.9, color = pal$border_dark, linewidth = 0.3) +
+  geom_text(
+    aes(label = paste0(acceso, "%")),
+    vjust    = -0.5,
+    fontface = "bold",
+    size     = 6,
+    color    = pal$texto
+  ) +
+  scale_fill_manual(values = c(
+    "Sin cuenta bancaria" = "grey60",
+    "Con cuenta bancaria" = pal$oliva
+  )) +
+  scale_y_continuous(
+    limits = c(0, 60),
+    labels = percent_format(scale = 1),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  labs(
+    title    = "El efecto 'Cuenta Bancaria'",
+    subtitle = "Probabilidad de tener crédito según inclusión financiera básica",
+    x        = NULL,
+    y        = NULL,
+    caption  = "Fuente: ENMIPYMES 2023 | Elaboración: Leonardo Mena\nNota: En un modelo logístico controlando por tamaño y formalidad, la cuenta bancaria\nmultiplica por 8 la probabilidad de acceder a crédito (OR = 8.2, p < 0.001)."
+  ) +
+  theme_lm(grid = "y") +
+  theme(
+    legend.position    = "none",
+    panel.grid.major.x = element_blank()
+  )
+```
 
-María está atrapada en Baní: microempresa → bajos ingresos → sin crédito → sin capacidad de escalar. Juan está doblemente atrapado en Elías Piña: baja densidad → microempresa → bajos ingresos → sin crédito.
+Con cuenta bancaria: 50.2% de acceso. Sin cuenta bancaria: 11.7%.
 
-No basta con formalización. No basta con flexibilizar requisitos. El sistema financiero está diseñado para escalas mayores, y mientras las microempresas sigan siendo micro, seguirán excluidas.
+En definitiva, tener o no una cuenta bancaria cambia el juego del crédito. Pero es un error pensar que el simple plástico es lo que mueve tanto la balanza. Lo interesante está en estudiar las características de una empresa con cuenta bancaria: se necesita cierto grado de conocimiento financiero, menor aversión al riesgo, y en definitiva un conjunto de disposiciones que moldean el perfil crediticio mucho más allá de las barreras convencionales.
 
-La pregunta no es solo cómo dar más crédito. Es **cómo crear condiciones para que las empresas crezcan lo suficiente como para ser sujetos de crédito**.
+Tener una cuenta bancaria actúa como un *proxy* de formalidad mental. Quien tiene una cuenta deja una huella digital, reduce la asimetría de información con el prestamista y demuestra menor resistencia a la estructura financiera formal. Para el sistema financiero, una empresa que opera 100% en efectivo es, a efectos prácticos, invisible.
+
+## La trampa de la supervivencia
+
+Existe un dato que obliga a detenerse y repensar los modelos bajo los que operan las MiPyMES en el país. Al analizar el destino del crédito de las pocas empresas que sí logran financiarse, emerge un patrón preocupante.
+
+```{r}
+#| label: fig-usos-credito
+#| fig-cap: "Destino del crédito en MiPyMES. El 80.6% se destina a mantener operaciones, no a crecer."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 6
+#| out-width: "100%"
+
+library(tidyverse)
+library(scales)
+library(here)
+source(here::here("tema_graficos.R"))
+
+usos_credito <- tribble(
+  ~uso,                            ~porcentaje, ~tipo,
+  "Adquisición de insumos",         62.7,        "Supervivencia",
+  "Pago de deudas",                 17.9,        "Supervivencia",
+  "Ampliación / Reparación",        16.6,        "Inversión",
+  "Compra de maquinaria",           12.8,        "Inversión",
+  "Creación / Apertura sucursal",   10.0,        "Inversión",
+  "Compra local / terreno",          5.3,        "Inversión",
+  "Reparación de maquinaria",        4.2,        "Inversión"
+)
+
+ggplot(usos_credito,
+       aes(x = reorder(uso, porcentaje), y = porcentaje, fill = tipo)) +
+  geom_col(width = 0.7, color = pal$border_dark, linewidth = 0.2) +
+  geom_text(
+    aes(label = paste0(porcentaje, "%")),
+    hjust    = -0.1,
+    fontface = "bold",
+    size     = 3.5,
+    color    = pal$texto
+  ) +
+  scale_fill_manual(
+    values = c("Supervivencia" = pal$terracota, "Inversión" = pal$oliva),
+    name   = "Tipo de gasto"
+  ) +
+  coord_flip(ylim = c(0, 72)) +
+  labs(
+    title    = "La trampa de la supervivencia",
+    subtitle = "Destino principal de los fondos prestados en MiPyMES",
+    x        = NULL,
+    y        = "% de empresas con crédito",
+    caption  = "Fuente: ENMIPYMES 2023 | n = 4,290 empresas con crédito | Elaboración: Leonardo Mena"
+  ) +
+  theme_lm(grid = "x") +
+  theme(
+    legend.position    = "bottom",
+    panel.grid.major.y = element_blank()
+  )
+```
+
+Cuando sumamos el crédito tomado para insumos (62.7%) y el tomado para refinanciamiento de deudas (17.9%), obtenemos el **80.6%**. En resumen: las empresas dominicanas se endeudan en modo supervivencia.
+
+No es adquisición de maquinaria, no es expansión de capacidad, no es capital humano. Es simplemente para ser capaces de mantener sus operaciones diarias. El crédito como oxígeno, no como combustible de crecimiento.
+
+## Conclusión: el sesgo de selección
+
+Nuestro país es uno de MiPyMES. Entender su anatomía nos permite elaborar mejores políticas públicas que impulsen su desarrollo.
+
+Las encuestas son un método muy efectivo de analizar comportamiento, pues no solo aportan información objetiva sino también de percepción por parte de los entrevistados. Y en este caso los datos hablan claro.
+
+Quizás, en vez de concentrarnos en la formalización y en suavizar las condiciones de acceso al crédito, debamos detenernos un paso antes. La exclusión financiera se rompe antes de llegar a la puerta de una institución crediticia: empieza por miedo al crédito, por modelos de subsistencia, por bajo conocimiento de oportunidades de mercado y cómo materializarlas.
+
+El microcrédito, la formalización y los programas focalizados no son malos *per se*. Pero sin solucionar la base estructural, nos exponemos al sesgo de selección: los que ya estaban listos para crecer aprovecharán los programas, creando una distancia aún mayor con los rezagados.
+
+Los programas de crédito subsidiado llegarán a los Pedros. María seguirá  operando en modo supervivencia.
 
 <div class="section-divider">• • •</div>
-
-**¿Y tú? ¿Deberían los bancos desarrollar productos de 'graduación' que acompañen a las microempresas en su crecimiento? Cuéntame en los comentarios.**
-
 
 ```{=html}
 <div class="related-posts">
   <div class="related-posts-title">📚 Sigue leyendo</div>
-  
   <div class="related-posts-grid">
-    
     <div class="related-post-card">
       <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
       <p>Cambios en la canasta familiar</p>
     </div>
-
     <div class="related-post-card">
       <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
-      <p>Análisis de la Deuda pública dominicana</p>
+      <p>Análisis de la deuda pública dominicana</p>
     </div>
-    
-   <div class="related-post-card">
+    <div class="related-post-card">
       <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
-      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.</p>
     </div>
-    
   </div>
 </div>
 ```
+
 ```{=html}
 <div class="bibliography-section">
   <div class="bib-title">Fuentes de Datos & Referencias</div>
-  
   <div class="bib-grid">
-    
     <div class="bib-card">
       <h4>Banco Central R.D. & MICM (2023)</h4>
       <p><em>"Encuesta Nacional de las Micro, Pequeñas y Medianas Empresas 2022-2023"</em>. Fuente oficial de los microdatos y la metodología de estratificación utilizada para este análisis.</p>
       <a href="https://www.bancentral.gov.do/a/d/5962-resultados-de-la-encuesta-nacional-de-las-micro-pequenas-y-medianas-empresas-mipymes" target="_blank" class="bib-link">Ver Informe y Metodología ↗</a>
     </div>
-
     <div class="bib-card">
       <h4>Beck, T., Demirgüç-Kunt, A. & Maksimovic, V. (2005)</h4>
       <p><em>"Financial and Legal Constraints to Growth: Does Firm Size Matter?"</em>. Estudio del Banco Mundial que valida la tesis de este artículo: las restricciones financieras afectan desproporcionadamente a las empresas más pequeñas, independientemente de su país.</p>
       <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2005.00727.x" target="_blank" class="bib-link">Ver en Journal of Finance ↗</a>
     </div>
-
     <div class="bib-card">
       <h4>Stiglitz, J. & Weiss, A. (1981)</h4>
-      <p><em>"Credit Rationing in Markets with Imperfect Information"</em>. El paper seminal (Premio Nobel) que explica por qué los bancos racionan el crédito a las PYMES debido a la dificultad para evaluar su riesgo real (asimetría de información).</p>
+      <p><em>"Credit Rationing in Markets with Imperfect Information"</em>. El paper seminal que explica por qué los bancos racionan el crédito a las PYMES debido a la dificultad para evaluar su riesgo real (asimetría de información).</p>
       <a href="https://www.jstor.org/stable/1802787" target="_blank" class="bib-link">Ver Abstract Académico ↗</a>
     </div>
-    
   </div>
 </div>
 ```
@@ -578,6 +583,8 @@ La pregunta no es solo cómo dar más crédito. Es **cómo crear condiciones par
 ```{=html}
 <div class="share-minimal">
   <p>Si este análisis te resultó útil, considera compartirlo en 
-  <a href="#" data-share="linkedin">LinkedIn</a><a href="#" data-share="twitter">Twitter</a><a href="#" data-share="whatsapp">WhatsApp</a></p>
+  <a href="#" data-share="linkedin">LinkedIn</a>, 
+  <a href="#" data-share="twitter">Twitter</a> o 
+  <a href="#" data-share="whatsapp">WhatsApp</a>.</p>
 </div>
 ```
