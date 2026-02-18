@@ -8,7 +8,7 @@ categories:
   - "Desarrollo"
   - "Financiamiento"
   - "La República en un gráfico"
-draft: true
+draft: false
 format:
   html:
     css: styles.css
@@ -45,9 +45,9 @@ include-after-body:
 
 En el artículo pasado exploramos los componentes financieros desde la demanda (el consumidor y el efectivo), para cerrar el ciclo en esta entrega analizaremos la otra cara de la moneda: **los componentes de la oferta empresarial**.
 
-La palabra "empresario" genera cierta imagen mental: un señor con traje en Piantini, dueño de un edificio y una flota de vehículos. Llamémosle **Pedro**.
+La palabra "empresario" genera cierta imagen mental: un señor con traje, dueño de un edificio y una flota de vehículos. Llamémosle **Pedro**.
 
-Pero la realidad del tejido empresarial dominicano se parece más a **María**: una emprendedora con un puesto de empanadas en Baní, dos ayudantes, un cartel hecho a mano y transacciones en efectivo. María opera sin registro formal porque los trámites le parecen imposibles y los costos, prohibitivos.
+Pero la realidad del tejido empresarial dominicano se parece más a **María**: una emprendedora con un puesto de empanadas en Baní, dos ayudantes, un cartel hecho a mano y que solo acepta efectivo. María opera sin registro formal porque los trámites le parecen imposibles, los costos altos o la incertidumbre de como le irá en el mes al negocio.
 
 Si tuvieras que apostar: ¿en nuestro país hay más Pedros o más Marías?
 
@@ -55,7 +55,7 @@ La respuesta es contundente: **República Dominicana es el país de las Marías.
 
 ## Del mapa de densidad al mapa de realidades
 
-La pregunta interesante no es solo cuántos son, sino *dónde* están y *por qué*. Al mapear la densidad empresarial, confirmamos que fuera del Distrito Nacional, la economía opera bajo una lógica completamente distinta.
+La pregunta interesante no es solo cuántos son, sino *dónde* están y *por qué*. Al mapear la densidad empresarial, confirmamos que fuera del Distrito Nacional la economía opera bajo una lógica completamente distinta.
 
 ```{r}
 #| label: fig-mapa-mipymes-regiones
@@ -159,11 +159,11 @@ No son casos aislados. Representan a la inmensa mayoría. Incluso donde opera el
 
 ## Primer mito: "Si me formalizo, me prestan"
 
-La narrativa habitual suele ser que las MIPYMES no tienen crédito porque son informales, y si se formalizan, los bancos les prestarán. Es una historia cómoda porque señala culpables claros, pero los datos la desmienten. Cuando cruzamos el tamaño de la empresa con su estatus legal, descubrimos que **el tamaño pesa mucho más que el RNC**.
+El pensamiento habitual suele ser que las MIPYMES no tienen crédito porque son informales, y si se formalizan los bancos les prestarán. Es una historia cómoda porque señala culpables claros, pero los datos apuntan a algo más complejo. Cuando cruzamos el tamaño de la empresa con su estatus legal, descubrimos que **el tamaño pesa mucho más que el RNC**.
 
 ```{r}
 #| label: fig-acceso-credito-formal-tamano
-#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (37.5%)."
+#| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (35.2%)."
 #| warning: false
 #| echo: false
 #| fig-format: svg
@@ -247,7 +247,7 @@ María podría formalizarse mañana, pagar sus impuestos y sacar su RNC, pero se
 
 Generalmente pensaríamos que la historia de María termina en el banco, con un papel de rechazo por la ventanilla. Los datos cuentan una historia diferente: el acceso al crédito se bloquea mucho antes de siquiera pensar en ir al banco.
 
-Cuando evaluamos las razones de no acceder al crédito, los números son sorprendentes. Un **62.3% dice no necesitar crédito** — factor de autoexclusión. Un 13.6% simplemente no le gusta endeudarse, un factor psicológico impulsado ya sea por cultura o percepción del negocio. Un 11.4% se resigna antes de intentarlo: "no creo que me lo den". Y lo más revelador: **el rechazo como tal apenas ocupa el 9.6%**.
+Cuando evaluamos las razones de no acceder al crédito, los números son sorprendentes. Un **62.3% dice no necesitar crédito**, un factor de autoexclusión. Un 13.6% simplemente no le gusta endeudarse, un factor psicológico impulsado ya sea por cultura o percepción del negocio. Un 11.4% se rinde antes de intentarlo, "no creo que me lo den". Y lo más revelador: **el rechazo como tal apenas ocupa el 9.6%**.
 
 ```{r}
 #| label: fig-barreras-credito-micro
@@ -314,11 +314,13 @@ ggplot(barreras_micro,
 
 Estos datos nos hacen replantear la narrativa del problema. Podemos crear los programas de microcrédito y de formalización que queramos, pero si las empresas no tienen planes de expandirse, la exclusión financiera seguirá ocurriendo.
 
-Hay un dato adicional que llama la atención: más del 70% de las medianas empresas sin crédito también declara no necesitarlo. ¿Autosuficiencia real, o simplemente falta de horizonte de expansión?
+No es que la formalización o los programas de microcrédito sean malos, es que necesitan ser complementamos con otro tipo de asistencia que ataque el problema de raíz.
+
+Hay un dato adicional que llama la atención, más del 70% de las medianas empresas sin crédito también declara no necesitarlo. ¿Autosuficiencia real, o simplemente falta de horizonte de expansión?
 
 ### Las barreras cambian según el tamaño
 
-Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es aplastante.
+Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para las medianas, los problemas de condiciones — intereses altos y demasiados trámites — escalan notablemente. Para las microempresas, el peso de la barrera psicológica es el rey.
 
 ```{r}
 #| label: fig-barreras-por-tamano
@@ -458,7 +460,7 @@ Con cuenta bancaria: 50.2% de acceso. Sin cuenta bancaria: 11.7%.
 
 En definitiva, tener o no una cuenta bancaria cambia el juego del crédito. Pero es un error pensar que el simple plástico es lo que mueve tanto la balanza. Lo interesante está en estudiar las características de una empresa con cuenta bancaria: se necesita cierto grado de conocimiento financiero, menor aversión al riesgo, y en definitiva un conjunto de disposiciones que moldean el perfil crediticio mucho más allá de las barreras convencionales.
 
-Tener una cuenta bancaria actúa como un *proxy* de formalidad mental. Quien tiene una cuenta deja una huella digital, reduce la asimetría de información con el prestamista y demuestra menor resistencia a la estructura financiera formal. Para el sistema financiero, una empresa que opera 100% en efectivo es, a efectos prácticos, invisible.
+Tener una cuenta bancaria actúa como un *proxy* de formalidad mental. Quien tiene una cuenta deja una huella digital, reduce la asimetría de información con el prestamista y demuestra menor resistencia a la estructura financiera formal. Para el sistema financiero, una empresa que opera 100% en efectivo es a efectos prácticos, invisible.
 
 ## La trampa de la supervivencia
 
@@ -535,6 +537,8 @@ El microcrédito, la formalización y los programas focalizados no son malos *pe
 
 Los programas de crédito subsidiado llegarán a los Pedros. María seguirá  operando en modo supervivencia.
 
+
+y tú, ¿Qué crees que le falta a nuestra María?
 <div class="section-divider">• • •</div>
 
 ```{=html}
