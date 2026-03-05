@@ -1,0 +1,80 @@
+provincia,clasificacion,n_muestra,n_expandido,mediana_alquiler_rd
+Puerto Plata,Mediana empresa,1,6,51539216
+Distrito Nacional,Mediana empresa,51,1566,2539790
+Santiago Rodríguez,Mediana empresa,1,10,2046040
+La Romana,Mediana empresa,3,22,1423537
+Santo Domingo,Mediana empresa,12,449,1203858
+San Cristóbal,Mediana empresa,8,60,1080000
+La Altagracia,Mediana empresa,16,131,985715
+Santiago,Mediana empresa,17,324,582309
+Barahona,Mediana empresa,3,31,480000
+Duarte,Mediana empresa,2,108,377898
+Azua,Mediana empresa,1,10,312000
+Monseñor Nouel,Mediana empresa,1,5,263874
+Samana,Mediana empresa,2,10,258521
+Peravia,Mediana empresa,1,10,120000
+Espaillat,Mediana empresa,2,17,110000
+Monte Plata,Mediana empresa,1,6,108000
+Distrito Nacional,Microempresa,755,28479,144000
+La Altagracia,Microempresa,482,10331,113370
+Valverde,Microempresa,56,2341,105263
+Santo Domingo,Microempresa,1125,50949,90980
+Puerto Plata,Microempresa,144,6179,90352
+Duarte,Microempresa,165,6302,84000
+Santiago,Microempresa,680,25961,79500
+La Romana,Microempresa,303,6089,78000
+Santiago Rodríguez,Microempresa,13,664,75235
+Monseñor Nouel,Microempresa,101,4402,73728
+San Cristóbal,Microempresa,488,12295,72000
+La Vega,Microempresa,181,6959,72000
+Sánchez Ramírez,Microempresa,59,2298,72000
+El Seibo,Microempresa,26,560,72000
+Hermanas Mirabal,Microempresa,56,2203,72000
+Maria Trinidad Sánchez,Microempresa,73,3075,72000
+Peravia,Microempresa,165,4313,67397
+San Pedro de Macorís,Microempresa,266,5194,64810
+Espaillat,Microempresa,78,3250,60000
+San Juan,Microempresa,159,3729,60000
+Baoruco,Microempresa,25,509,60000
+Samana,Microempresa,47,2068,60000
+Azua,Microempresa,96,2274,56311
+Hato Mayor,Microempresa,48,1014,49929
+Barahona,Microempresa,88,2122,49090
+Monte Plata,Microempresa,99,2235,48000
+Monte Cristi,Microempresa,16,953,48000
+San Jose de Ocoa,Microempresa,35,711,47221
+Elías Piña,Microempresa,18,603,36000
+Dajabón,Microempresa,18,735,30000
+Pedernales,Microempresa,8,271,18244
+Independencia,Microempresa,7,254,4656
+Duarte,Pequeña empresa,18,244,528000
+Samana,Pequeña empresa,6,69,403624
+Distrito Nacional,Pequeña empresa,290,3953,400000
+La Vega,Pequeña empresa,29,315,369848
+Hermanas Mirabal,Pequeña empresa,13,215,360000
+Santiago,Pequeña empresa,163,1750,357054
+La Altagracia,Pequeña empresa,82,519,342068
+Puerto Plata,Pequeña empresa,18,218,330000
+Valverde,Pequeña empresa,5,57,317326
+San Pedro de Macorís,Pequeña empresa,36,243,300000
+Monseñor Nouel,Pequeña empresa,15,118,300000
+Sánchez Ramírez,Pequeña empresa,10,125,287918
+La Romana,Pequeña empresa,32,185,264000
+Santo Domingo,Pequeña empresa,128,2099,248386
+Espaillat,Pequeña empresa,21,293,243441
+Monte Plata,Pequeña empresa,17,118,240000
+San Cristóbal,Pequeña empresa,54,366,240000
+Azua,Pequeña empresa,7,49,240000
+Baoruco,Pequeña empresa,2,20,236210
+San Juan,Pequeña empresa,17,167,228686
+Maria Trinidad Sánchez,Pequeña empresa,11,184,180000
+El Seibo,Pequeña empresa,1,10,125248
+Barahona,Pequeña empresa,15,85,123736
+Peravia,Pequeña empresa,13,85,114486
+Elías Piña,Pequeña empresa,3,36,108000
+Dajabón,Pequeña empresa,1,2,91403
+Monte Cristi,Pequeña empresa,4,73,84000
+San Jose de Ocoa,Pequeña empresa,2,17,81038
+Hato Mayor,Pequeña empresa,2,20,70464
+Independencia,Pequeña empresa,2,10,2000
+Santiago Rodríguez,Pequeña empresa,1,2,197

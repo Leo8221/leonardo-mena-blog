@@ -1,0 +1,386 @@
+---
+title: "Transporte masivo: Qué es, qué no es y qué trae a la mesa"
+date: "2026-03-04"
+author: "Leonardo Mena"
+description: "El Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana."
+categories: 
+  - "Transporte"
+  - "Desarrollo"
+  - "MiPyMES"
+  - "La República en un gráfico"
+draft: true
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-location: left
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+
+
+```{r}
+#| warning: false
+#| echo: false
+source(here::here("tema_graficos.R"))
+```
+
+<script>document.body.classList.add('editorial-post');</script>
+
+<div class="share-buttons-sticky">
+  <a href="#" class="share-btn twitter" data-share="twitter" title="Compartir en Twitter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="#" class="share-btn linkedin" data-share="linkedin" title="Compartir en LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="#" class="share-btn whatsapp" data-share="whatsapp" title="Compartir por WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+
+Ya sea desde la mañana al salir hacia su trabajo, o al regresar a casa por la tarde, José, María o Juan dedican una parte importante de su día en el transporte. En el mejor de los escenarios el destino se encuentra cerca de su hogar, pero en la mayoría de los casos, el transporte es un proceso largo, agotador e incómodo para el dominicano promedio.
+
+Los tapones, el calor, el hacinamiento en vehículos viejos y en mal estado o el alto costo del pasaje, son tan solo algunos de los problemas que enfrentan diariamente los dominicanos... pero algo está cambiando. En los últimos años, el transporte masivo se ha convertido en una realidad cada vez más cercana, y con ello, surge la esperanza de un futuro mejor en cuanto a movilidad se refiere.
+
+Pero dado que nada viene sin un coste, es importante entender tanto las ventajas como los desafíos que el transporte masivo trae consigo. En este artículo, exploraremos los beneficios y los retos del transporte masivo en la República Dominicana, y cómo está transformando la forma en que los dominicanos se mueven por su país.
+
+## Qué no es el transporte masivo
+
+Lo primero que debemos entender y aclarar es que el transporte masivo, al menos de manera empírica, no es sustituto por sí solo del transporte privado. Juan, joven trabajador de 22 años, con muchos sueños por lograr, y uno de ellos es algún día tener su propio carro, no ve el transporte público como su alternativa a futuro, sino más bien como un paso en su vida. El caso de Juan es el de muchos jóvenes dominicanos, que aunque valoran el transporte masivo, no lo ven como su destino final, sino como una etapa en su camino hacia la movilidad privada.
+
+Y de hecho los datos reflejan que dicha situación ha sido la norma incluso con la inclusión del metro y otros sistemas de transporte masivo. Gran parte de los dominicanos sigue apostando al transporte privado.
+
+```{r}
+#| label: fig-parque-vehicular
+#| fig-cap: "Parque vehicular de la República Dominicana según tipo (2009–2025)"
+#| fig-alt: "Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 9
+#| out-width: "100%"
+
+library(tidyverse)
+
+df_parque <- tribble(
+  ~year, ~motocicletas, ~autos_jeep,
+  2009,  1252713,  873445,
+  2010,  1352720,  914628,
+  2011,  1481255,  953542,
+  2012,  1566815,  991081,
+  2013,  1678979, 1029257,
+  2014,  1803328, 1074371,
+  2015,  1946594, 1130047,
+  2016,  2096196, 1203176,
+  2017,  2238671, 1284628,
+  2018,  2398511, 1359338,
+  2019,  2573494, 1444151,
+  2020,  2695457, 1511213,
+  2021,  2874590, 1614516,
+  2022,  3063704, 1706966,
+  2023,  3280646, 1799726,
+  2024,  3531967, 1894041,
+  2025,  3846694, 1986434
+) |>
+  pivot_longer(-year, names_to = "tipo", values_to = "unidades") |>
+  mutate(
+    tipo = case_when(
+      tipo == "motocicletas" ~ "Motocicletas",
+      tipo == "autos_jeep"   ~ "Automóviles y Jeeps"
+    ),
+    tipo = factor(tipo, levels = c("Motocicletas", "Automóviles y Jeeps"))
+  )
+
+# Anotaciones del Metro
+metro_eventos <- tibble(
+  year = c(2009, 2013, 2018),
+  label = c("Metro Línea 1", "Metro Línea 2", "Línea 2B\n(SDE)")
+)
+
+ggplot(df_parque, aes(x = year, y = unidades / 1e6, fill = tipo)) +
+  geom_area(alpha = 0.85, position = "stack") +
+  geom_vline(
+    data = metro_eventos,
+    aes(xintercept = year),
+    linetype = "dashed", color = "white", linewidth = 0.6, alpha = 0.8
+  ) +
+  geom_text(
+    data = metro_eventos,
+    aes(x = year, y = 5.6, label = label),
+    inherit.aes = FALSE,
+    color = pal$texto_muted, size = 3, hjust = 0.5, lineheight = 0.9
+  ) +
+  scale_fill_manual(values = c(
+    "Motocicletas"        = pal$terracota,
+    "Automóviles y Jeeps" = pal$plomo
+  )) +
+  scale_x_continuous(breaks = seq(2009, 2025, 2)) +
+  scale_y_continuous(
+    labels = function(x) paste0(x, "M"),
+    expand = expansion(mult = c(0, 0.12))
+  ) +
+  labs(
+    title = "El parque vehicular no para de crecer",
+    subtitle = "Unidades registradas en RD (DGII), 2009–2025",
+    caption = "Fuente: Dirección General de Impuestos Internos (DGII) | Elaboración: Leonardo Mena",
+    x = NULL, y = NULL, fill = NULL
+  ) +
+  theme_lm(grid = "y") +
+  theme(legend.position = "top")
+```
+
+Desde la inauguración del metro en el 2009, el parque vehicular dominicano ha crecido en más de un 100%, y se espera que siga creciendo con un ritmo similar en los próximos años. En el mejor de los casos solo podemos inferir que el transporte masivo ha ayudado a mitigar el crecimiento del parque vehicular, pero no a frenarlo. De hecho, la tendencia de crecimiento del parque vehicular se mantiene incluso con la inclusión del metro y otros sistemas de transporte masivo.
+
+Así que dejando esto atrás, ¿significa que el transporte masivo no tiene ningún impacto en general? No necesariamente, de hecho si nos alejamos de este punto sí podemos entender dónde sí puede, y posiblemente ya está teniendo un impacto positivo en la movilidad de los dominicanos.
+
+## Qué sí es el transporte masivo
+
+El transporte masivo es un sistema de transporte que permite movilizar a grandes cantidades de personas, y en ese sentido, el metro de Santo Domingo es un claro ejemplo de ello. Con más de 100 millones de pasajeros al año, el metro se ha convertido en una parte fundamental de la movilidad urbana en la capital dominicana. Pero el transporte masivo no solo se trata de mover a muchas personas, sino también de la manera en la cual lo hace, y en ese sentido, el metro ha traído consigo una serie de beneficios que han mejorado la calidad de vida de los dominicanos.
+
+José, residente de Villa Mella, debía enfrentarse a situación de hacinamiento en el carro público, con viajes de hasta 2 horas en el tapón, y a un costo de 60 pesos el viaje. Con la llegada del metro, José ahora puede llegar a su trabajo en 30 minutos, con un costo de 35 pesos, y sin tener que lidiar con el tapón o el calor, y quitando los momentos de hora pico, una situación menor de hacinamiento.
+
+```{r}
+#| label: fig-demanda-metro
+#| fig-cap: "Demanda mensual del Sistema Metro y Teleférico de Santo Domingo (2019–2025)"
+#| fig-alt: "Gráfico de área mostrando la demanda mensual consolidada del Metro y Teleférico de Santo Domingo entre enero 2019 y diciembre 2025. Se observa la caída abrupta en abril 2020 por el cierre COVID, la recuperación progresiva hasta 2021, y el crecimiento sostenido hasta superar los 10 millones de pasajeros mensuales en 2024."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 9
+#| out-width: "100%"
+
+library(tidyverse)
+
+df_metro <- read_csv(here::here("posts", "republica-habla-de", "2026-03-04-transporte-masivo", "opret_demanda_mensual.csv")) |>
+  mutate(fecha = as.Date(paste(year, month, "01", sep = "-")))
+
+ggplot(df_metro, aes(x = fecha, y = total / 1e6)) +
+  geom_area(fill = pal$plomo, alpha = 0.15) +
+  geom_line(color = pal$plomo, linewidth = 1.1) +
+  evento(as.Date("2020-04-01"), "Cierre\nCOVID", pal$rojo)[[1]] +
+  evento(as.Date("2020-04-01"), "Cierre\nCOVID", pal$rojo)[[2]] +
+  annotate(
+    "text", x = as.Date("2019-07-01"), y = 9.5,
+    label = "Antes del cierre:\n~8.5M pasajeros/mes",
+    color = pal$texto_muted, size = 3, hjust = 0.5, lineheight = 0.9
+  ) +
+  annotate(
+    "text", x = as.Date("2024-06-01"), y = 10.4,
+    label = "Récord: 10.1M\n(oct. 2024)",
+    color = pal$terracota, size = 3, hjust = 0.5, lineheight = 0.9, fontface = "bold"
+  ) +
+  scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
+  scale_y_continuous(
+    labels = function(x) paste0(x, "M"),
+    limits = c(0, 11),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  labs(
+    title = "100 millones de viajes al año, y contando",
+    subtitle = "Demanda consolidada mensual — Metro Líneas 1 y 2 + Teleférico",
+    caption = "Fuente: OPRET | Elaboración: Leonardo Mena",
+    x = NULL, y = NULL
+  ) +
+  theme_lm(grid = "y")
+```
+
+Más de 10 millones de pasajeros al mes, y más de 100 millones al año, es el resultado del transporte masivo en Santo Domingo. Esto no solo significa que muchas personas han podido mejorar su movilidad, puede que no hayan dejado de usar el transporte privado, pero sí han podido complementar su movilidad con el transporte masivo. Y este hecho trae consigo una serie de cambios territoriales, como es la posibilidad de impulsar nuevas zonas económicas alrededor de las estaciones.
+
+## Las MiPyMES y el transporte masivo
+
+El transporte masivo no solo modifica la movilidad de las personas, sino que tambien tiene un impacto directo en la economia local, especialmente en las micro, pequeñas y medianas empresas (MiPyMES) que se encuentran alrededor de las estaciones. Una de las variables de mayor peso en los gastos de las MiPyMES es el alquiler, y aquí el transporte tiene algo que decir.
+
+```{r}
+#| label: fig-alquiler-mipymes
+#| fig-cap: "Mediana del gasto en alquiler de microempresas por provincia, entre las que alquilan (2022)"
+#| fig-alt: "Gráfico de barras horizontales mostrando la mediana del gasto anual en alquiler de microempresas por provincia. El Distrito Nacional lidera con RD$144,000, seguido de La Altagracia y Valverde. Las provincias periurbanas al GSD —Santo Domingo y San Cristóbal— pagan entre 37% y 48% menos que en el DN."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 7
+#| out-width: "100%"
+
+library(tidyverse)
+
+df_alq <- read_csv(here::here("posts", "republica-habla-de", "2026-03-04-transporte-masivo", "mipymes_alquiler_prov_expandido.csv")) |>
+  filter(clasificacion == "Microempresa",n_muestra >= 30) |>
+  arrange(desc(mediana_alquiler_rd)) |>
+  slice_head(n = 15) |>
+  mutate(
+    provincia = str_to_title(provincia),
+    provincia = fct_reorder(provincia, mediana_alquiler_rd),
+    es_dn     = provincia == "Distrito Nacional",
+    es_gsd    = provincia %in% c("Santo Domingo", "San Cristóbal")
+  )
+
+dn_valor <- df_alq |> filter(es_dn) |> pull(mediana_alquiler_rd)
+
+ggplot(df_alq, aes(x = mediana_alquiler_rd, y = provincia)) +
+  geom_col(
+    aes(fill = case_when(
+      es_dn  ~ "DN",
+      es_gsd ~ "Periurbana",
+      TRUE   ~ "Resto"
+    )),
+    width = 0.72
+  ) +
+  geom_text(
+    aes(
+      label = paste0("RD$", scales::comma(round(mediana_alquiler_rd / 1000), accuracy = 1), "K"),
+      color = case_when(es_dn ~ "DN", TRUE ~ "Resto")
+    ),
+    hjust = -0.15, size = 3.6, fontface = "bold"
+  ) +
+  geom_vline(xintercept = dn_valor, linetype = "dashed",
+             color = pal$terracota, linewidth = 0.5, alpha = 0.6) +
+  scale_fill_manual(
+    values = c("DN" = pal$terracota, "Periurbana" = pal$oliva, "Resto" = pal$plomo),
+    guide = "none"
+  ) +
+  scale_color_manual(
+    values = c("DN" = pal$terracota, "Resto" = pal$texto_muted),
+    guide = "none"
+  ) +
+  scale_x_continuous(
+    labels = function(x) paste0("RD$", scales::comma(x / 1000), "K"),
+    expand = expansion(mult = c(0, 0.22))
+  ) +
+  labs(
+    title = "El alquiler tiene código postal",
+    subtitle = "Mediana anual del gasto en alquiler · Microempresas que alquilan · 2022",
+    caption = "Fuente: Encuesta Nacional a las MiPyMES 2023 (MEPyD) | Elaboración: Leonardo Mena\nNota: Solo empresas con gasto en alquiler > 0. Expandido con factor de ponderación.",
+    x = NULL, y = NULL
+  ) +
+  theme_lm(grid = "x") +
+  theme(axis.text.y = element_text(size = 10))
+```
+
+El alquiler no deja de ser una función de la ubicación, y en ese sentido es bastante claro que el Distrito Nacional lleva la prima más grande en cuanto a costos de alquiler se refiere, con una prima mediana de 144,000 pesos anuales, pero ¿por qué ocurre esto? Simple, allí trabaja la gente. 
+
+```{r}
+#| label: fig-empleo-provincia
+#| fig-cap: "Distribución del empleo formal cotizante por provincia (diciembre 2021)"
+#| fig-alt: "Gráfico de barras horizontales mostrando la distribución del empleo formal registrado en el SDSS por provincia a diciembre 2021. El Distrito Nacional concentra el 50% del empleo formal del país, seguido de Santo Domingo provincia con 13.7% y Santiago con 11.7%. Las provincias periurbanas —San Cristóbal, Monte Plata, Peravia— tienen participaciones menores al 3%."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 7
+#| out-width: "100%"
+
+library(tidyverse)
+
+df_tss <- read_csv(here::here("posts", "republica-habla-de", "2026-03-04-transporte-masivo", "tss_trabajadores_provincia_2021.csv")) |>
+  mutate(
+    provincia = str_to_title(provincia),
+    provincia = case_when(
+      provincia == "Santiago De Los Caballeros" ~ "Santiago",
+      provincia == "Monsenor Nouel"             ~ "Monseñor Nouel",
+      provincia == "Maria Trinidad Sanchez"     ~ "Mª Trinidad Sánchez",
+      provincia == "San Juan De La Maguana"     ~ "San Juan",
+      TRUE ~ provincia
+    )
+  ) |>
+  arrange(desc(pct_empleo_nacional)) |>
+  slice_head(n = 15) |>
+  mutate(
+    provincia = fct_reorder(provincia, pct_empleo_nacional),
+    categoria = case_when(
+      provincia == "Distrito Nacional" ~ "DN",
+      provincia == "Santo Domingo"     ~ "Periurbana GSD",
+      provincia == "San Cristóbal"     ~ "Periurbana GSD",
+      TRUE                             ~ "Resto"
+    )
+  )
+
+gsd_pct <- df_tss |>
+  filter(categoria %in% c("DN", "Periurbana GSD")) |>
+  summarise(total = sum(pct_empleo_nacional)) |>
+  pull(total)
+
+ggplot(df_tss, aes(x = pct_empleo_nacional, y = provincia)) +
+  geom_col(aes(fill = categoria), width = 0.72) +
+  geom_text(
+    aes(label = paste0(round(pct_empleo_nacional, 1), "%")),
+    hjust = -0.15, size = 3.6, fontface = "bold", color = pal$texto_muted
+  ) +
+  annotate(
+    "text", x = 38, y = 13.5,
+    label = paste0("DN + Sto. Domingo + Stgo.\n= ", round(gsd_pct + 11.68, 1), "% del empleo formal"),
+    color = pal$texto_soft, size = 3.2, hjust = 0, lineheight = 0.95, fontface = "italic"
+  ) +
+  scale_fill_manual(
+    values = c("DN" = pal$terracota, "Periurbana GSD" = pal$oliva, "Resto" = pal$plomo),
+    guide = "none"
+  ) +
+  scale_x_continuous(
+    labels = function(x) paste0(x, "%"),
+    expand = expansion(mult = c(0, 0.18))
+  ) +
+  labs(
+    title = "La mitad del empleo formal vive en un solo lugar",
+    subtitle = "% del total de empleos cotizantes en el SDSS por provincia · Diciembre 2021",
+    caption = "Fuente: Tesorería de la Seguridad Social (TSS) | Elaboración: Leonardo Mena\nNota: Empleos registrados en provincia de sede del empleador. Subestima el interior.",
+    x = NULL, y = NULL
+  ) +
+  theme_lm(grid = "x") +
+  theme(axis.text.y = element_text(size = 10))
+```
+
+Aunque los datos subestiman la participación del interior, es dudoso que los números variarían lo suficiente como para quitarle la primacía al Distrito Nacional, que concentra el 50% del empleo formal del país, seguido de Santo Domingo provincia con 13%.
+
+Ante estos datos queda claro que incluso lugares cercanos a la capital comercial, como Santo Domingo y San Cristóbal, tienen costos de alquiler significativamente menores que el Distrito Nacional, y aun así no logran aumentar su participación en el empleo formal nacional. El transporte masivo hacia más de estos lugares podría ayudar a descongestionar el mercado laboral del Distrito Nacional, y a la vez, permitir que más personas puedan acceder a empleos formales sin tener que vivir en la capital.
+
+## ¿Dónde está la trampa?
+
+### El gasto fiscal
+
+Aunque el transporte masivo trae consigo una serie de beneficios tanto para usuarios como para la economía local, no es una solución mágica, ni mucho menos barata. La construcción y operación de sistemas de transporte masivo requiere de una inversión significativa, y aunque el metro de Santo Domingo ha sido un éxito en cuanto a demanda se refiere, también ha enfrentado una serie de desafíos en cuanto a su financiamiento y sostenibilidad.
+
+Aunque el sistema ha tenido una relativa estabilidad en cuanto al subsidio implícito que recibe del Estado, alrededor de 30 pesos por viaje, es claro que siendo la tarifa de 35 pesos, el sistema no es completamente autosostenible, y requiere de un subsidio constante para poder operar. Esto no es necesariamente un problema, ya que muchos sistemas de transporte masivo en el mundo operan con subsidios, pero sí es importante entender que el transporte masivo no es una solución mágica que se financia sola, sino que requiere de un compromiso constante por parte del Estado para garantizar su sostenibilidad a largo plazo.
+
+### El impacto territorial
+
+Anteriormente mencionamos que el transporte masivo puede tener un impacto positivo en la economía local, especialmente en las MiPyMES que se encuentran alrededor de las estaciones, pero también es importante entender que el transporte masivo puede tener un impacto negativo en otras áreas. Por ejemplo, la construcción de sistemas de transporte masivo puede generar un proceso de gentrificación en las áreas cercanas a las estaciones, lo que puede llevar a un aumento en los costos de alquiler y a la expulsión de los residentes originales. Esto es algo que se ha observado en varias ciudades del mundo, y es un desafío que el transporte masivo debe enfrentar para garantizar que sus beneficios no se vean opacados por sus impactos negativos.
+
+## Conclusión
+
+El transporte masivo es una herramienta poderosa para mejorar la movilidad de los dominicanos, pero no es una solucion magica que se financia sola, ni mucho menos un sustituto del transporte privado. El metro de Santo Domingo ha demostrado ser un exito en cuanto a demanda se refiere pero tambien ha enfrentado una serie de desafios en cuanto a su financiamiento y sostenibilidad. Es importante entender tanto las ventajas como los desafios que el transporte masivo trae consigo para poder aprovechar sus beneficios al maximo y minimizar sus impactos negativos.
+
+
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <div class="related-posts-grid">
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar</p>
+    </div>
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <p>Análisis de la deuda pública dominicana</p>
+    </div>
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.</p>
+    </div>
+  </div>
+</div>
+```
+
+
+```{=html}
+<div class="share-minimal">
+  <p>Si este análisis te resultó útil, considera compartirlo en 
+  <a href="#" data-share="linkedin">LinkedIn</a>, 
+  <a href="#" data-share="twitter">Twitter</a> o 
+  <a href="#" data-share="whatsapp">WhatsApp</a>.</p>
+</div>
+```
