@@ -344,7 +344,76 @@ Ante estos datos queda claro que incluso lugares cercanos a la capital comercial
 
 Aunque el transporte masivo trae consigo una serie de beneficios tanto para usuarios como para la economía local, no es una solución mágica, ni mucho menos barata. La construcción y operación de sistemas de transporte masivo requiere de una inversión significativa, y aunque el metro de Santo Domingo ha sido un éxito en cuanto a demanda se refiere, también ha enfrentado una serie de desafíos en cuanto a su financiamiento y sostenibilidad.
 
+```{r}
+#| label: fig-subsidio-metro
+#| fig-cap: "Subsidio operativo por pasajero del Metro de Santo Domingo (2021–2025)"
+#| fig-alt: "Gráfico de barras mostrando el subsidio operativo por pasajero del Metro de Santo Domingo entre 2021 y 2025. El subsidio oscila entre RD$26 y RD$56, muy por debajo de los RD$136 que circula en análisis que incluyen inversión en infraestructura."
+#| warning: false
+#| echo: false
+#| fig-format: svg
+#| fig-width: 10
+#| fig-height: 5
+#| out-width: "100%"
+
+library(tidyverse)
+
+df_sub <- tribble(
+  ~year, ~subsidio_pp, ~pasajeros_m,
+  2021,  56.3,  72.0,
+  2022,  27.4,  97.4,
+  2023,  26.0, 106.8,
+  2024,  36.7, 107.0,
+  2025,  35.2, 110.0
+) |>
+  mutate(
+    year = factor(year),
+    es_2021 = year == "2021"
+  )
+
+ggplot(df_sub, aes(x = year, y = subsidio_pp)) +
+  geom_col(
+    aes(fill = es_2021),
+    width = 0.62
+  ) +
+  geom_text(
+    aes(label = paste0("RD$", round(subsidio_pp))),
+    vjust = -0.6, size = 4, fontface = "bold", color = pal$texto_muted
+  ) +
+  geom_hline(
+    yintercept = 136.73, linetype = "dashed",
+    color = pal$rojo, linewidth = 0.6, alpha = 0.7
+  ) +
+  annotate(
+    "text", x = 4.8, y = 140,
+    label = "RD$136 — cifra que circula\n(incluye obras de infraestructura)",
+    color = pal$rojo, size = 3, hjust = 1, lineheight = 0.9
+  ) +
+  scale_fill_manual(
+    values = c("TRUE" = pal$oliva, "FALSE" = pal$plomo),
+    guide = "none"
+  ) +
+  scale_y_continuous(
+    labels = function(x) paste0("RD$", x),
+    limits = c(0, 160),
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  annotate(
+    "text", x = 1, y = 8,
+    label = "Pico COVID:\nmantenimiento\nacumulado",
+    color = pal$texto_muted, size = 2.8, hjust = 0.5, lineheight = 0.85
+  ) +
+  labs(
+    title = "El Metro cuesta RD$35 por pasajero, no RD$136",
+    subtitle = "Subsidio operativo por pasajero · Solo gastos de operación, excluye obras e inversión de capital",
+    caption = "Fuente: SIGEF (DIGEPRES) · Cálculo: gasto devengado en remuneraciones, servicios y materiales menos ingresos por taquilla\nElaboración: Leonardo Mena",
+    x = NULL, y = NULL
+  ) +
+  theme_lm(grid = "y")
+```
+
+
 Aunque el sistema ha tenido una relativa estabilidad en cuanto al subsidio implícito que recibe del Estado, alrededor de 30 pesos por viaje, es claro que siendo la tarifa de 35 pesos, el sistema no es completamente autosostenible, y requiere de un subsidio constante para poder operar. Esto no es necesariamente un problema, ya que muchos sistemas de transporte masivo en el mundo operan con subsidios, pero sí es importante entender que el transporte masivo no es una solución mágica que se financia sola, sino que requiere de un compromiso constante por parte del Estado para garantizar su sostenibilidad a largo plazo.
+
 
 ### El impacto territorial
 
