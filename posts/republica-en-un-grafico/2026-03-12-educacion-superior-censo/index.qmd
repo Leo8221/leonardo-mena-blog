@@ -1,0 +1,496 @@
+---
+title: "La revolución educativa dominicana: lo que el censo nos dice y lo que no"
+date: "2026-03-12"
+author: "Leonardo Mena"
+description: "En cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto."
+categories:
+  - "Educación"
+  - "Censo 2022"
+  - "Capital Humano"
+  - "República en un Gráfico"
+draft: false
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-location: left
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+<div class="share-buttons-sticky">
+  <a href="#" class="share-btn twitter" data-share="twitter" title="Compartir en Twitter">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="#" class="share-btn linkedin" data-share="linkedin" title="Compartir en LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="#" class="share-btn whatsapp" data-share="whatsapp" title="Compartir por WhatsApp">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+
+<div class="key-takeaways">
+<span class="key-takeaways-title">Conclusiones Clave</span>
+<ul>
+<li><strong>Una revolución silenciosa:</strong> En la generación de 65 años y más, menos de uno de cada tres llegó a la secundaria. En la de 25 a 34, más de ocho de cada diez. La transformación es real e innegable.</li>
+<li><strong>Las mujeres lideran:</strong> En la cohorte más joven, las mujeres con educación superior casi duplican a los hombres: 44.6% frente a 26.6%. La inversión ocurrió en el lapso de dos generaciones.</li>
+<li><strong>El campo avanza, pero no alcanza:</strong> La zona rural pasó de 4.4% a 25.4% de adultos con educación superior. La brecha con la ciudad persiste en casi 15 puntos.</li>
+<li><strong>El sistema capta más de lo que retiene:</strong> La tasa de graduación universitaria cayó de 79% a 54% entre generaciones. Más de la mitad de quienes ingresan hoy no completan.</li>
+<li><strong>La brecha ya no es solo si estudian, sino qué estudian:</strong> Mujeres en educación y salud, hombres en ingeniería y ciencias agrícolas. La distancia en algunos campos es pronunciada y merece análisis.</li>
+</ul>
+</div>
+
+Los cambios profundos son difíciles de ver desde adentro. Cuando se vive el proceso, lo que se percibe son los problemas que faltan resolver, no la distancia recorrida. La educación dominicana no es la excepción: las quejas sobre su calidad son legítimas, pero corren el riesgo de opacar una transformación que, medida con datos, resulta notable.
+
+Este artículo usa el Censo 2022 para documentar esa transformación. No para negar los desafíos, sino para ponerlos en perspectiva.
+
+## ¿Dónde estamos parados?
+
+Los datos del Censo 2022 muestran que la secundaria es hoy el nivel predominante entre los dominicanos: 35.9% de la población adulta llegó hasta ahí. Le sigue de cerca la primaria con 33.2%. Universitaria, maestría y doctorado juntos no llegan al 30%.
+
+```{r}
+#| label: fig-distribucion-nivel
+#| fig-cap: "Distribución del nivel educativo más alto alcanzado. Población de 25 años y más. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+library(tidyverse)
+library(scales)
+source(here::here("tema_graficos.R"))
+pal$azul_suave <- "#7a9eb5"
+
+caption_std <- "Fuente: Censo Nacional de Población y Vivienda 2022, ONE · Elaboración: Leonardo Mena\nleo8221.github.io/leonardo-mena-blog"
+
+dist_nivel <- tibble(
+  nivel = factor(c("Preprimaria", "Primaria o básica", "Secundaria o media",
+                   "Universitaria", "Maestría", "Doctorado"),
+                 levels = c("Preprimaria", "Primaria o básica", "Secundaria o media",
+                            "Universitaria", "Maestría", "Doctorado")),
+  n   = c(216998, 1896475, 2052596, 1472080, 71381, 10475),
+  pct = c(3.8, 33.2, 35.9, 25.7, 1.2, 0.2)
+)
+
+colores_nivel <- c(
+  "Preprimaria"        = pal$border_dark,
+  "Primaria o básica"  = "#d4c090",
+  "Secundaria o media" = pal$ocre,
+  "Universitaria"      = pal$oliva,
+  "Maestría"           = pal$terracota,
+  "Doctorado"          = pal$rojo_osc
+)
+
+ggplot(dist_nivel, aes(x = reorder(nivel, pct), y = pct, fill = nivel)) +
+  geom_col(width = 0.7, show.legend = FALSE) +
+  geom_text(aes(label = paste0(pct, "%")),
+            hjust = -0.15, size = 3.8, fontface = "bold", color = pal$texto) +
+  scale_fill_manual(values = colores_nivel) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  coord_flip() +
+  labs(title = "El nivel educativo de los dominicanos hoy",
+       subtitle = "Distribución del nivel educativo más alto alcanzado · Población 25 años y más · Censo 2022",
+       x = NULL, y = "% de la población", caption = caption_std) +
+  theme_lm()
+```
+
+¿Es eso malo? Depende de desde dónde se mire. Una fotografía es estática, el proceso educativo no. Cualquier análisis que se quede en el número agregado pierde lo más importante: quién estudia hoy no es quien estudiaba hace cuarenta años, y esa diferencia lo cambia todo.
+
+## Una revolución en cuatro décadas
+
+```{r}
+#| label: fig-cambio-cohorte
+#| fig-cap: "Porcentaje de la población que alcanzó cada nivel educativo, por cohorte de edad. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+cohorte_cambio <- tibble(
+  cohorte      = factor(c("65+","55-64","45-54","35-44","25-34"),
+                        levels = c("65+","55-64","45-54","35-44","25-34")),
+  pct_superior = c(13.2, 20.7, 23.2, 32.3, 35.9),
+  pct_sec_mas  = c(30.6, 50.8, 57.5, 72.3, 81.6),
+  pct_ninguno  = c(8.3,  4.9,  3.9,  2.6,  1.8)
+)
+
+cohorte_long <- cohorte_cambio |>
+  pivot_longer(cols = c(pct_superior, pct_sec_mas, pct_ninguno),
+               names_to = "indicador", values_to = "pct") |>
+  mutate(indicador = case_when(
+    indicador == "pct_superior" ~ "Con educación superior",
+    indicador == "pct_sec_mas"  ~ "Secundaria o más",
+    indicador == "pct_ninguno"  ~ "Solo preprimaria"
+  ))
+
+colores_cohorte <- c(
+  "Secundaria o más"       = pal$oliva,
+  "Con educación superior" = pal$terracota,
+  "Solo preprimaria"       = pal$border_dark
+)
+
+ggplot(cohorte_long, aes(x = cohorte, y = pct, color = indicador, group = indicador)) +
+  geom_line(linewidth = 1.8) +
+  geom_point(size = 3.5, shape = 19) +
+  geom_text(data = cohorte_long |> filter(cohorte == "25-34"),
+            aes(label = paste0(pct, "%")),
+            hjust = -0.3, size = 3.5, fontface = "bold", show.legend = FALSE) +
+  scale_color_manual(values = colores_cohorte,
+                     breaks = c("Secundaria o más", "Con educación superior", "Solo preprimaria")) +
+  scale_y_continuous(labels = percent_format(scale = 1), limits = c(0, 90)) +
+  labs(title = "Una revolución educativa en cuatro décadas",
+       subtitle = "Porcentaje de la población que alcanzó cada nivel · Por cohorte de edad · Censo 2022",
+       x = "Cohorte de edad", y = NULL, color = NULL, caption = caption_std) +
+  theme_lm() +
+  theme(legend.position = "top")
+```
+
+Hace sesenta años, Juan, abuelo de Pedro, oriundo de La Vega, dedicado a la siembra y al ganado de su padre, terminó la primaria con suerte. La secundaria no era una opción, era un lujo de otro mundo.
+
+Hoy Pedro vive en una sociedad distinta. Que no termine la secundaria sería la excepción, no la regla.
+
+Juan y Pedro son personajes, pero la sociedad dominicana está llena de ambos. Entre los dominicanos de 65 años y más, menos de uno de cada tres llegó a la secundaria. Entre los de 25 a 34, más de ocho de cada diez la completaron o fueron más allá. La universidad, que para la generación de Juan alcanzaba apenas al 13% de la población, hoy la cursa más de uno de cada tres jóvenes. Y "solo terminé la primaria" se convierte cada vez más en una frase del pasado.
+
+Eso es una revolución, silenciosa, acumulada en décadas, pero revolución al fin.
+
+## La otra revolución: la mujer en educación
+
+La revolución en magnitudes no viene sola. Sería un error no señalar el cambio cultural que la acompaña.
+
+En la generación de Juan, los pocos afortunados que llegaban a la universidad eran mayoritariamente hombres. Hoy esa realidad está invertida y la brecha no para de crecer.
+
+```{r}
+#| label: fig-inversion-genero
+#| fig-cap: "Porcentaje con educación superior o más, por cohorte de edad y sexo. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+#| fig-format: svg
+
+genero_cohorte <- tibble(
+  cohorte = factor(rep(c("65+","55-64","45-54","35-44","25-34"), 2),
+                   levels = c("65+","55-64","45-54","35-44","25-34")),
+  sexo    = c(rep("Hombre", 5), rep("Mujer", 5)),
+  pct_sup = c(14.2, 19.1, 18.4, 24.7, 26.6,
+              12.2, 22.2, 27.7, 39.3, 44.6)
+)
+
+ggplot(genero_cohorte, aes(x = cohorte, y = pct_sup, color = sexo, group = sexo)) +
+  geom_line(linewidth = 1.8) +
+  geom_point(size = 4, shape = 19) +
+  geom_text(data = genero_cohorte |> filter(cohorte == "25-34"),
+            aes(label = paste0(pct_sup, "%")),
+            hjust = -0.3, size = 3.8, fontface = "bold", show.legend = FALSE) +
+  annotate("segment", x = 4.3, xend = 4.3, y = 27.8, yend = 43.4,
+           arrow = arrow(length = unit(0.2, "cm"), ends = "both"),
+           color = pal$texto_soft, linewidth = 0.5) +
+  annotate("text", x = 4.6, y = 35.6, label = "18 pts",
+           size = 3.2, color = pal$texto_soft, fontface = "italic") +
+  scale_color_manual(values = c("Hombre" = pal$azul_suave, "Mujer" = pal$terracota),
+                     breaks = c("Hombre", "Mujer")) +
+  scale_y_continuous(labels = percent_format(scale = 1), limits = c(0, 52)) +
+  labs(title = "Las mujeres superaron a los hombres y la brecha crece",
+       subtitle = "% con educación superior o más · Por cohorte de edad y sexo · Censo 2022\nEn 65+, los hombres tenían ventaja. En 25-34, las mujeres la duplican.",
+       x = "Cohorte de edad", y = NULL, color = NULL, caption = caption_std) +
+  theme_lm() +
+  theme(legend.position = "top")
+```
+
+En la cohorte de 25 a 34 años, las mujeres con educación superior casi duplican a los hombres: 44.6% frente a 26.6%.
+
+Que la mujer dominicana haya conquistado la universidad en el lapso de dos generaciones es, sin exageración, uno de los cambios sociales más profundos que registra el censo. Pero ese logro abre una pregunta incómoda: ¿qué pasó con el hombre?
+
+¿Perdió fe en la educación? ¿Existen barreras económicas o culturales que lo empujan antes al mercado laboral? Los datos describen el patrón con claridad, explicarlo requiere un análisis más profundo que este artículo no pretende cerrar, pero sí dejar planteado.
+
+## El campo y la ciudad
+
+La heterogeneidad del territorio dominicano obliga a mirar más allá del agregado nacional. ¿Llegó la revolución educativa al campo con la misma fuerza que a la ciudad?
+
+```{r}
+#| label: fig-zona-cohorte
+#| fig-cap: "Porcentaje con educación superior o más, por cohorte de edad y zona. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+zona_cohorte <- tibble(
+  cohorte = factor(rep(c("65+","55-64","45-54","35-44","25-34"), 2),
+                   levels = c("65+","55-64","45-54","35-44","25-34")),
+  zona    = c(rep("Urbano", 5), rep("Rural", 5)),
+  pct_sup = c(16.2, 24.4, 26.9, 36.3, 39.5,
+              4.4,   9.7, 12.7, 20.9, 25.4)
+)
+
+ggplot(zona_cohorte, aes(x = cohorte, y = pct_sup, color = zona, group = zona)) +
+  geom_ribbon(
+    data = zona_cohorte |> pivot_wider(names_from = zona, values_from = pct_sup),
+    aes(ymin = Rural, ymax = Urbano, x = cohorte, group = 1),
+    inherit.aes = FALSE, fill = pal$border_dark, alpha = 0.25
+  ) +
+  geom_line(linewidth = 1.8) +
+  geom_point(size = 4, shape = 19) +
+  geom_text(data = zona_cohorte |> filter(cohorte == "25-34"),
+            aes(label = paste0(pct_sup, "%")),
+            hjust = -0.3, size = 3.8, fontface = "bold", show.legend = FALSE) +
+  scale_color_manual(values = c("Urbano" = pal$oliva, "Rural" = pal$ocre),
+                     breaks = c("Urbano", "Rural")) +
+  scale_y_continuous(labels = percent_format(scale = 1), limits = c(0, 48)) +
+  labs(title = "La universidad llegó al territorio, pero no igual",
+       subtitle = "% con educación superior o más · Por cohorte de edad y zona · Censo 2022\nLa brecha urbano-rural se achica pero persiste en cada generación.",
+       x = "Cohorte de edad", y = NULL, color = NULL, caption = caption_std) +
+  theme_lm() +
+  theme(legend.position = "top")
+```
+
+Los datos son alentadores, pero incompletos. En la zona rural, la proporción de adultos mayores de 65 años con educación superior apenas alcanzaba el 4.4%. En la generación de 25 a 34, ese número llega al 25.4%, más de cinco veces superior. El avance es real e innegable.
+
+Pero la brecha con el entorno urbano persiste. Mientras el campo joven llega al 25%, la ciudad joven está en 39.5%, casi 15 puntos de distancia. Dos generaciones de expansión educativa no han bastado para cerrarla.
+
+Y aquí surge una pregunta que los datos no pueden responder solos: ¿cuánto de este avance rural es avance real, y cuánto es selección? Es posible que parte de los jóvenes rurales más motivados hayan migrado a la ciudad, inflando las cifras urbanas y desinflando las rurales. Sin datos de movilidad que lo confirmen, queda en conjetura, pero es una conjetura que vale la pena nombrar.
+
+## Captamos más, pero no retenemos
+
+Los avances son reales, pero el sistema ha generado sus propios problemas en el camino.
+
+```{r}
+#| label: fig-embudo
+#| fig-cap: "Porcentaje que alcanzó cada etapa educativa, por cohorte. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+embudo <- tibble(
+  cohorte    = factor(c("58+","48-57","38-47","28-37"),
+                      levels = c("58+","48-57","38-47","28-37")),
+  pct_sec    = c(38.0, 55.3, 67.9, 79.7),
+  pct_univ   = c(16.2, 21.4, 30.0, 35.7),
+  pct_graduo = c(12.8, 15.8, 19.5, 19.4)
+)
+
+embudo_long <- embudo |>
+  pivot_longer(cols = c(pct_sec, pct_univ, pct_graduo),
+               names_to = "etapa", values_to = "pct") |>
+  mutate(etapa = case_when(
+    etapa == "pct_sec"    ~ "Llegó a secundaria",
+    etapa == "pct_univ"   ~ "Entró a universidad",
+    etapa == "pct_graduo" ~ "Se graduó"
+  ),
+  etapa = factor(etapa, levels = c("Llegó a secundaria", "Entró a universidad", "Se graduó")))
+
+ggplot(embudo_long, aes(x = cohorte, y = pct, color = etapa, group = etapa)) +
+  geom_line(linewidth = 1.8) +
+  geom_point(size = 4, shape = 19) +
+  geom_text(data = embudo_long |> filter(cohorte == "28-37"),
+            aes(label = paste0(pct, "%")),
+            hjust = -0.3, size = 3.5, fontface = "bold", show.legend = FALSE) +
+  annotate("text", x = 1.5, y = 10,
+           label = "Tasa de graduación:\n58+: 79%  →  28-37: 54%",
+           size = 3.2, color = pal$rojo_osc, fontface = "italic", hjust = 0) +
+  scale_color_manual(
+    values = c("Llegó a secundaria" = pal$oliva,
+               "Entró a universidad" = pal$ocre,
+               "Se graduó" = pal$terracota),
+    breaks = c("Llegó a secundaria", "Entró a universidad", "Se graduó")
+  ) +
+  scale_y_continuous(labels = percent_format(scale = 1), limits = c(0, 90)) +
+  labs(title = "El sistema capta más, pero retiene menos",
+       subtitle = "% que alcanzó cada etapa educativa · Por cohorte · Censo 2022\nMás dominicanos entran a la universidad, pero la tasa de graduación cae.",
+       x = "Cohorte de edad", y = NULL, color = NULL, caption = caption_std) +
+  theme_lm() +
+  theme(legend.position = "top")
+```
+
+En la generación más cercana a Juan, pocas personas llegaban a la universidad. Pero quienes llegaban, terminaban: la tasa de graduación superaba el 79%. El filtro estaba en la entrada, no en el proceso.
+
+Hoy la lógica se invirtió. La cohorte de 28 a 37 años entra a la universidad a una tasa del 35.7%, más del doble que las generaciones anteriores. Pero solo el 19.4% se gradúa. Más de la mitad de quienes ingresan no completan.
+
+Eso no es expansión del sistema, es expansión de la puerta de entrada sin fortalecer lo que hay adentro.
+
+Sin datos desagregados por institución es difícil señalar causas, pero siendo la UASD el centro con mayor número de estudiantes del país, es razonable asumir que una parte importante no logra completar la carrera y que una parte de esa inversión pública se pierde en el camino. No como juicio moral a quienes abandonan, las razones pueden ser económicas, familiares o académicas, sino como llamado a entender un fenómeno que el censo hace visible y que la política educativa no puede ignorar.
+
+### El género no ayuda
+
+Recordemos que los hombres ya llegaban en menor proporción a la universidad. En la no graduación, el problema se profundiza.
+
+```{r}
+#| label: fig-desercion-genero
+#| fig-cap: "Tasa de no graduación universitaria por sexo y zona. Cohorte 30-39 años. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 10
+#| fig-height: 6
+
+desercion <- tibble(
+  grupo = factor(c("Hombre urbano", "Hombre rural", "Mujer urbana", "Mujer rural"),
+                 levels = c("Mujer urbana", "Mujer rural", "Hombre urbano", "Hombre rural")),
+  tasa = c(48.2, 53.5, 41.0, 44.6),
+  sexo = c("Hombre","Hombre","Mujer","Mujer")
+)
+
+ggplot(desercion, aes(x = tasa, y = grupo, fill = sexo)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = paste0(tasa, "%")),
+            hjust = -0.15, size = 4, fontface = "bold", color = pal$texto) +
+  geom_vline(xintercept = 50, linetype = "dashed",
+             color = pal$texto_soft, linewidth = 0.4) +
+  annotate("text", x = 51, y = 0.6, label = "1 de cada 2",
+           size = 2.8, color = pal$texto_soft, fontface = "italic", hjust = 0) +
+  scale_fill_manual(values = c("Hombre" = pal$azul_suave, "Mujer" = pal$terracota)) +
+  scale_x_continuous(labels = percent_format(scale = 1), limits = c(0, 62)) +
+  labs(title = "Las mujeres también logran graduarse más",
+       subtitle = "% que entró a la universidad y no se graduó · Cohorte 30-39 · Censo 2022\nLa no graduación es mayor en hombres y en zonas rurales.",
+       x = "Tasa de no graduación universitaria", y = NULL, caption = caption_std) +
+  theme_lm() +
+  theme(panel.grid.major.y = element_blank())
+```
+
+Uno de cada dos hombres que se inscribe en la universidad no llega a graduarse. Y el dato es casi idéntico entre hombres urbanos y rurales, lo que sugiere que la zona no es el factor determinante. Algo más sistemático está en juego.
+
+Las mujeres logran graduarse más en todas las combinaciones posibles. No es una diferencia marginal, es un patrón consistente que refuerza la pregunta planteada antes sobre el hombre dominicano y su relación con la educación superior.
+
+## Trayectorias educativas divididas
+
+Las personas desarrollamos gustos distintos, y la educación no escapa a eso. Pero cuando las diferencias son tan marcadas, vale preguntarse si son producto de preferencias genuinas o si el entorno las moldea antes de que el individuo llegue a elegir.
+
+```{r}
+#| label: fig-segregacion-carreras
+#| fig-cap: "Porcentaje de graduados universitarios en cada campo, por sexo. Censo 2022."
+#| warning: false
+#| echo: false
+#| fig-width: 11
+#| fig-height: 6
+
+carreras <- tibble(
+  carrera = factor(c(
+    "Educación/Docencia", "Administración", "Derecho",
+    "Psicología/Social", "Ingeniería", "Informática/TIC",
+    "Arquitectura/Civil", "Negocios/Marketing", "Medicina",
+    "Enfermería/Salud", "Ciencias Agrícolas"
+  ), levels = c(
+    "Educación/Docencia", "Administración", "Derecho",
+    "Psicología/Social", "Ingeniería", "Informática/TIC",
+    "Arquitectura/Civil", "Negocios/Marketing", "Medicina",
+    "Enfermería/Salud", "Ciencias Agrícolas"
+  )),
+  hombre = c(12.9, 21.5, 12.3, 2.0, 11.3, 10.1, 7.8, 7.3, 4.7, 1.0, 3.6),
+  mujer  = c(26.9, 22.8,  7.7, 9.2,  1.6,  2.3, 2.2, 7.3, 6.9, 6.7, 0.5)
+)
+
+carreras_long <- carreras |>
+  pivot_longer(cols = c(hombre, mujer), names_to = "sexo", values_to = "pct") |>
+  mutate(sexo = factor(if_else(sexo == "hombre", "Hombre", "Mujer"),
+                       levels = c("Hombre", "Mujer")))
+
+ggplot() +
+  annotate("rect", xmin = 0, xmax = 28, ymin = 7.5, ymax = 11.5,
+           fill = pal$terracota, alpha = 0.15) +
+  annotate("rect", xmin = 0, xmax = 28, ymin = 4.5, ymax = 7.5,
+           fill = pal$border_dark, alpha = 0.25) +
+  annotate("rect", xmin = 0, xmax = 28, ymin = 0.5, ymax = 4.5,
+           fill = pal$azul_suave, alpha = 0.15) +
+  annotate("text", x = 27.5, y = 11.2, label = "Dominio femenino",
+           hjust = 1, size = 3, color = pal$terracota, fontface = "italic") +
+  annotate("text", x = 27.5, y = 6.0, label = "Paridad relativa",
+           hjust = 1, size = 3, color = pal$texto_soft, fontface = "italic") +
+  annotate("text", x = 27.5, y = 0.8, label = "Dominio masculino",
+           hjust = 1, size = 3, color = pal$azul_suave, fontface = "italic") +
+  geom_segment(
+    data = carreras |> mutate(carrera = fct_reorder(carrera, mujer - hombre)),
+    aes(x = hombre, xend = mujer, y = carrera, yend = carrera),
+    color = pal$border_dark, linewidth = 1.5
+  ) +
+  geom_point(
+    data = carreras_long |>
+      mutate(carrera = factor(carrera,
+             levels = levels(fct_reorder(carreras$carrera, carreras$mujer - carreras$hombre)))),
+    aes(x = pct, y = carrera, color = sexo), size = 4.5
+  ) +
+  scale_color_manual(values = c("Hombre" = pal$azul_suave, "Mujer" = pal$terracota),
+                     breaks = c("Hombre", "Mujer")) +
+  scale_x_continuous(labels = percent_format(scale = 1), limits = c(0, 28)) +
+  scale_y_discrete() +
+  labs(title = "La brecha ya no es solo si estudian, sino qué estudian",
+       subtitle = "% de graduados universitarios en cada campo · Por sexo · Censo 2022\nLas mujeres dominan educación y salud; los hombres, ingeniería e informática.",
+       x = "% del total de graduados de ese sexo", y = NULL, color = NULL,
+       caption = caption_std) +
+  theme_lm() +
+  theme(legend.position = "top")
+```
+
+En el sistema educativo dominicano, las mujeres se concentran en educación y salud; los hombres, en ingeniería y ciencias agrícolas. Buscar paridad exacta en cada carrera sería un absurdo. Pero la distancia en algunos campos es tan pronunciada que la pregunta sobre qué factores producen preferencias tan uniformes no puede descartarse como anecdótica.
+
+<div class="data-box">
+<div class="data-box-title">NOTA METODOLÓGICA</div>
+<div class="data-box-content">
+Aproximadamente 3 de cada 10 graduados no declararon su campo de estudio en el censo. El análisis excluye estas observaciones del denominador. Los campos presentados corresponden a los 11 de mayor volumen entre los titulados con carrera declarada.
+</div>
+</div>
+
+## Conclusión
+
+Luego de recorrer los datos, es difícil sostener que estamos peor que hace cuarenta años. La evidencia apunta en la dirección contraria. Pero los avances conviven con problemas persistentes y con nuevos vicios generados por el propio proceso de expansión.
+
+La educación sigue siendo, con todas sus imperfecciones, la principal puerta de salida de la pobreza para una parte importante de la población dominicana.
+
+A título personal: no creo que el objetivo deba ser que todos terminen con un título universitario. Las rutas técnicas, digitales y de formación no convencional abren puertas a talentos que el sistema tradicional descartaba. Pero ya sea que apostemos por ese camino o por seguir ampliando el acceso a la educación superior, la tarea es la misma: eliminar las barreras que deciden por las personas antes de que ellas puedan decidir por sí mismas.
+
+<div class="section-divider">• • •</div>
+
+```{=html}
+<div class="related-posts">
+  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <div class="related-posts-grid">
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-02-15-banco-malo/index.html">El mito del Banco Malo</a></h4>
+      <p>Por qué las MiPyMES realmente no tienen crédito</p>
+    </div>
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <p>Cambios en la canasta familiar dominicana</p>
+    </div>
+    <div class="related-post-card">
+      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <p>Análisis del desarrollo provincial por empresas formales</p>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <div class="bib-grid">
+    <div class="bib-card">
+      <h4>ONE (2022)</h4>
+      <p><em>"Censo Nacional de Población y Vivienda 2022"</em>. Fuente principal de todos los microdatos utilizados en este análisis. Variables p26 (sexo), p27 (edad), p43 (nivel educativo), p45 (campo ISCED-F), p46 (graduación) y zona.</p>
+      <a href=https://www.one.gob.do/datos-y-estadisticas/ target="_blank" class="bib-link">Ver Censo 2022 ↗</a>
+    </div>
+    <div class="bib-card">
+      <h4>UNESCO-UIS (2022)</h4>
+      <p><em>"ISCED Fields of Education and Training 2013 (ISCED-F 2013)"</em>. Clasificación internacional utilizada para agrupar los campos de estudio declarados en el censo (variable p45_code).</p>
+      <a href="https://uis.unesco.org/en/topic/international-standard-classification-education-isced" target="_blank" class="bib-link">Ver clasificación ISCED-F ↗</a>
+    </div>
+    <div class="bib-card">
+      <h4>CEPAL (2022)</h4>
+      <p><em>"La educación superior en América Latina y el Caribe"</em>. Contexto regional utilizado para ubicar los indicadores dominicanos en perspectiva comparada. La región pasó de 23% a 52% de cobertura superior entre 2000 y 2018.</p>
+      <a href="https://unesdoc.unesco.org/ark:/48223/pf0000378619" target="_blank" class="bib-link">Ver CEPAL ↗</a>
+    </div>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="share-minimal">
+  <p>Si este análisis te resultó útil, considera compartirlo en
+  <a href="#" data-share="linkedin">LinkedIn</a>,
+  <a href="#" data-share="twitter">Twitter</a> o
+  <a href="#" data-share="whatsapp">WhatsApp</a>.</p>
+</div>
+```
