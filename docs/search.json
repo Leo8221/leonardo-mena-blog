@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
+  },
+  {
+    "objectID": "about.html#sobre-este-blog",
+    "href": "about.html#sobre-este-blog",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
+  },
+  {
+    "objectID": "about.html#quién-escribe",
+    "href": "about.html#quién-escribe",
+    "title": "Sobre mí",
+    "section": "Quién escribe",
+    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.\nNo escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.\n\nLo que ofrezco\n\nTransparencia: Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.\nClaridad: Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.\nContexto: Todos los análisis están pensados desde y para la República Dominicana.\n\nEsto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano."
+  },
+  {
+    "objectID": "mitos-economicos.html",
+    "href": "mitos-economicos.html",
+    "title": "Mitos económicos",
+    "section": "",
+    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "series.html",
+    "href": "series.html",
+    "title": "Series",
+    "section": "",
+    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "EconomíaDominicana Aplicada",
@@ -14,60 +49,95 @@
     "text": "Último análisis publicado\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio…\n\n\n\n12 mar 2026\n\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "objectID": "republica-en-un-grafico.html",
+    "href": "republica-en-un-grafico.html",
+    "title": "La República en un gráfico",
     "section": "",
-    "text": "Los cambios profundos son difíciles de ver desde adentro. Cuando se vive el proceso, lo que se percibe son los problemas que faltan resolver, no la distancia recorrida. La educación dominicana no es la excepción: las quejas sobre su calidad son legítimas, pero corren el riesgo de opacar una transformación que, medida con datos, resulta notable.\nEste artículo usa el Censo 2022 para documentar esa transformación. No para negar los desafíos, sino para ponerlos en perspectiva."
+    "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#dónde-estamos-parados",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#dónde-estamos-parados",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "¿Dónde estamos parados?",
-    "text": "¿Dónde estamos parados?\nLos datos del Censo 2022 muestran que la secundaria es hoy el nivel predominante entre los dominicanos: 35.9% de la población adulta llegó hasta ahí. Le sigue de cerca la primaria con 33.2%. Universitaria, maestría y doctorado juntos no llegan al 30%.\n\n\n\n\n\n\n\n\nFigura 1: Distribución del nivel educativo más alto alcanzado. Población de 25 años y más. Censo 2022.\n\n\n\n\n\n¿Es eso malo? Depende de desde dónde se mire. Una fotografía es estática, el proceso educativo no. Cualquier análisis que se quede en el número agregado pierde lo más importante: quién estudia hoy no es quien estudiaba hace cuarenta años, y esa diferencia lo cambia todo."
+    "objectID": "research/paper-modelo.html",
+    "href": "research/paper-modelo.html",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "",
+    "text": "📄 Full Paper: This paper is currently under review. Download Draft PDF"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#una-revolución-en-cuatro-décadas",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#una-revolución-en-cuatro-décadas",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "Una revolución en cuatro décadas",
-    "text": "Una revolución en cuatro décadas\n\n\n\n\n\n\n\n\nFigura 2: Porcentaje de la población que alcanzó cada nivel educativo, por cohorte de edad. Censo 2022.\n\n\n\n\n\nHace sesenta años, Juan, abuelo de Pedro, oriundo de La Vega, dedicado a la siembra y al ganado de su padre, terminó la primaria con suerte. La secundaria no era una opción, era un lujo de otro mundo.\nHoy Pedro vive en una sociedad distinta. Que no termine la secundaria sería la excepción, no la regla.\nJuan y Pedro son personajes, pero la sociedad dominicana está llena de ambos. Entre los dominicanos de 65 años y más, menos de uno de cada tres llegó a la secundaria. Entre los de 25 a 34, más de ocho de cada diez la completaron o fueron más allá. La universidad, que para la generación de Juan alcanzaba apenas al 13% de la población, hoy la cursa más de uno de cada tres jóvenes. Y “solo terminé la primaria” se convierte cada vez más en una frase del pasado.\nEso es una revolución, silenciosa, acumulada en décadas, pero revolución al fin."
+    "objectID": "research/paper-modelo.html#abstract",
+    "href": "research/paper-modelo.html#abstract",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Abstract",
+    "text": "Abstract\nHere you write the abstract in English. This text will be indexed by Google. Because lang: en is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog."
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#la-otra-revolución-la-mujer-en-educación",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#la-otra-revolución-la-mujer-en-educación",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "La otra revolución: la mujer en educación",
-    "text": "La otra revolución: la mujer en educación\nLa revolución en magnitudes no viene sola. Sería un error no señalar el cambio cultural que la acompaña.\nEn la generación de Juan, los pocos afortunados que llegaban a la universidad eran mayoritariamente hombres. Hoy esa realidad está invertida y la brecha no para de crecer.\n\n\n\n\n\n\n\n\nFigura 3: Porcentaje con educación superior o más, por cohorte de edad y sexo. Censo 2022.\n\n\n\n\n\nEn la cohorte de 25 a 34 años, las mujeres con educación superior casi duplican a los hombres: 44.6% frente a 26.6%.\nQue la mujer dominicana haya conquistado la universidad en el lapso de dos generaciones es, sin exageración, uno de los cambios sociales más profundos que registra el censo. Pero ese logro abre una pregunta incómoda: ¿qué pasó con el hombre?\n¿Perdió fe en la educación? ¿Existen barreras económicas o culturales que lo empujan antes al mercado laboral? Los datos describen el patrón con claridad, explicarlo requiere un análisis más profundo que este artículo no pretende cerrar, pero sí dejar planteado."
+    "objectID": "research/paper-modelo.html#methodology",
+    "href": "research/paper-modelo.html#methodology",
+    "title": "Monetary Policy Transmission in the Dominican Republic",
+    "section": "Methodology",
+    "text": "Methodology\nWe utilize a Vector Autoregression (VAR) model to identify the shocks…\n\n\n\n\n\nImpulse Response Function (Placeholder)"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#el-campo-y-la-ciudad",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#el-campo-y-la-ciudad",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "El campo y la ciudad",
-    "text": "El campo y la ciudad\nLa heterogeneidad del territorio dominicano obliga a mirar más allá del agregado nacional. ¿Llegó la revolución educativa al campo con la misma fuerza que a la ciudad?\n\n\n\n\n\n\n\n\nFigura 4: Porcentaje con educación superior o más, por cohorte de edad y zona. Censo 2022.\n\n\n\n\n\nLos datos son alentadores, pero incompletos. En la zona rural, la proporción de adultos mayores de 65 años con educación superior apenas alcanzaba el 4.4%. En la generación de 25 a 34, ese número llega al 25.4%, más de cinco veces superior. El avance es real e innegable.\nPero la brecha con el entorno urbano persiste. Mientras el campo joven llega al 25%, la ciudad joven está en 39.5%, casi 15 puntos de distancia. Dos generaciones de expansión educativa no han bastado para cerrarla.\nY aquí surge una pregunta que los datos no pueden responder solos: ¿cuánto de este avance rural es avance real, y cuánto es selección? Es posible que parte de los jóvenes rurales más motivados hayan migrado a la ciudad, inflando las cifras urbanas y desinflando las rurales. Sin datos de movilidad que lo confirmen, queda en conjetura, pero es una conjetura que vale la pena nombrar."
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "section": "",
+    "text": "Escuchar artículo\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\nLos tapones interminables, el transporte público saturado y el caos urbano son las quejas diarias del habitante del Gran Santo Domingo. Ante esta realidad, el diagnóstico popular es casi inmediato: “somos demasiados”. Y la solución propuesta suele ser igual de directa: “hay que desarrollar el interior para descongestionar la capital”\nSin embargo, en economía, la intuición no siempre basta. Sabemos que las personas migran buscando oportunidades, pero ¿qué tan desigual es realmente la distribución de estas oportunidades en el territorio nacional?\nMás allá de la percepción, los datos de los registros mercantiles nos ofrecen una métrica objetiva: la densidad empresarial. Este indicador no solo nos dice dónde está la gente, sino dónde está la actividad económica formal capaz de sostenerla. El siguiente mapa no es solo una ilustración geográfica, es una radiografía de por qué todos los caminos parecen conducir al Distrito Nacional."
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#captamos-más-pero-no-retenemos",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#captamos-más-pero-no-retenemos",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "Captamos más, pero no retenemos",
-    "text": "Captamos más, pero no retenemos\nLos avances son reales, pero el sistema ha generado sus propios problemas en el camino.\n\n\n\n\n\n\n\n\nFigura 5: Porcentaje que alcanzó cada etapa educativa, por cohorte. Censo 2022.\n\n\n\n\n\nEn la generación más cercana a Juan, pocas personas llegaban a la universidad. Pero quienes llegaban, terminaban: la tasa de graduación superaba el 79%. El filtro estaba en la entrada, no en el proceso.\nHoy la lógica se invirtió. La cohorte de 28 a 37 años entra a la universidad a una tasa del 35.7%, más del doble que las generaciones anteriores. Pero solo el 19.4% se gradúa. Más de la mitad de quienes ingresan no completan.\nEso no es expansión del sistema, es expansión de la puerta de entrada sin fortalecer lo que hay adentro.\nSin datos desagregados por institución es difícil señalar causas, pero siendo la UASD el centro con mayor número de estudiantes del país, es razonable asumir que una parte importante no logra completar la carrera y que una parte de esa inversión pública se pierde en el camino. No como juicio moral a quienes abandonan, las razones pueden ser económicas, familiares o académicas, sino como llamado a entender un fenómeno que el censo hace visible y que la política educativa no puede ignorar.\n\nEl género no ayuda\nRecordemos que los hombres ya llegaban en menor proporción a la universidad. En la no graduación, el problema se profundiza.\n\n\n\n\n\n\n\n\nFigura 6: Tasa de no graduación universitaria por sexo y zona. Cohorte 30-39 años. Censo 2022.\n\n\n\n\n\nUno de cada dos hombres que se inscribe en la universidad no llega a graduarse. Y el dato es casi idéntico entre hombres urbanos y rurales, lo que sugiere que la zona no es el factor determinante. Algo más sistemático está en juego.\nLas mujeres logran graduarse más en todas las combinaciones posibles. No es una diferencia marginal, es un patrón consistente que refuerza la pregunta planteada antes sobre el hombre dominicano y su relación con la educación superior."
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#por-qué-emigramos",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#por-qué-emigramos",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "section": "¿Por qué emigramos?",
+    "text": "¿Por qué emigramos?\nImaginemos a dos jóvenes con capacidades idénticas. Por un lado tenemos a Juan, nacido en Elías Piña, una provincia fronteriza cuya dinámica económica gira casi exclusivamente en torno al comercio informal con Haití. Por otro lado está Pedro, nacido en el Distrito Nacional, con un entorno familiar y educativo similar.\nLa única variable que cambia es su ubicación geográfica. La pregunta es inevitable: por el simple hecho de su lugar de nacimiento, ¿qué tan abismal es la brecha de oportunidades de empleo formal entre Juan y Pedro?\n\n\n\n\n\n\n\n\nFigura 1: Densidad empresarial por provincia (2024). El mapa ilustra el número de empresas formales por cada 1,000 habitantes. Se evidencia una fuerte concentración en el Distrito Nacional (36.5), contrastando drásticamente con provincias fronterizas como Elías Piña (1.4) y Pedernales (2.4).\n\n\n\n\n\nMientras Pedro vive en el Distrito Nacional, que cuenta con 36 empresas por cada 1,000 habitantes, Juan tan solo tiene 1.5. Es decir, las probabilidades de Pedro son 24 veces mayores a las de Juan, por el simple hecho de nacer en un lugar distinto.\n24×  Más oportunidades formales en el Distrito Nacional que en Elías Piña \nSi a usted le dijeran que sus posibilidades de empleo aumentarían tan significativamente por el hecho de mudarse, ¿lo dudaría?\nEn este contexto, la elección migratoria responde a un comportamiento racional, consistente con los incentivos disponibles."
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#trayectorias-educativas-divididas",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#trayectorias-educativas-divididas",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
-    "section": "Trayectorias educativas divididas",
-    "text": "Trayectorias educativas divididas\nLas personas desarrollamos gustos distintos, y la educación no escapa a eso. Pero cuando las diferencias son tan marcadas, vale preguntarse si son producto de preferencias genuinas o si el entorno las moldea antes de que el individuo llegue a elegir.\n\n\n\n\n\n\n\n\nFigura 7: Porcentaje de graduados universitarios en cada campo, por sexo. Censo 2022.\n\n\n\n\n\nEn el sistema educativo dominicano, las mujeres se concentran en educación y salud; los hombres, en ingeniería y ciencias agrícolas. Buscar paridad exacta en cada carrera sería un absurdo. Pero la distancia en algunos campos es tan pronunciada que la pregunta sobre qué factores producen preferencias tan uniformes no puede descartarse como anecdótica.\n\n\nNOTA METODOLÓGICA\n\n\nAproximadamente 3 de cada 10 graduados no declararon su campo de estudio en el censo. El análisis excluye estas observaciones del denominador. Los campos presentados corresponden a los 11 de mayor volumen entre los titulados con carrera declarada."
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#más-allá-del-distrito-los-otros-oasis",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#más-allá-del-distrito-los-otros-oasis",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "section": "Más allá del Distrito: Los otros oasis",
+    "text": "Más allá del Distrito: Los otros oasis\nAunque el Distrito Nacional es el primero que salta a la vista, también se observa cierta concentración en las zonas del Cibao y el Este. Por un lado, destaca Santiago con su potente tejido industrial, por el otro, La Altagracia, impulsada por la locomotora del turismo. Estos casos demuestran que es posible generar gravedad económica fuera de la capital.\n\nSantiago: base industrial y zonas francas consolidadas\n\nLa Altagracia: turismo como motor de encadenamientos productivos\n\nDistrito Nacional: servicios avanzados, mercado profundo y capital humano\n\nPero estos casos son la excepción, no la norma. Son el resultado de décadas de consolidación de industrias específicas —zonas francas y hotelería— que lograron alcanzar una masa crítica capaz de retener talento y capital. Para el resto del mapa, la realidad es un verde pálido."
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#conclusión",
-    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#conclusión",
-    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#las-consecuencias-la-trampa-de-la-informalidad",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#las-consecuencias-la-trampa-de-la-informalidad",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "section": "Las consecuencias: La trampa de la informalidad",
+    "text": "Las consecuencias: La trampa de la informalidad\nJuan no encuentra empleo formal, pero tampoco puede o quiere migrar. ¿Se queda de brazos cruzados? Difícilmente. Ante la ausencia de oportunidades formales, la alternativa racional es la informalidad: actividades de subsistencia, ingresos inestables y una vida económica sin red de protección.\n\nLa informalidad no es ausencia de trabajo, es ausencia de opciones formales.\n\nMientras tanto, Pedro trabaja en una empresa formal, con acceso a seguridad social, pensión y seguro médico. Juan, en cambio, vive del día a día, con ingresos inciertos y una planificación de vida marcada por la vulnerabilidad. La geografía, por tanto, influye no solo en el salario presente, sino también en el horizonte de vida futura."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "section": "La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?",
+    "text": "La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?\nSi el diagnóstico es claro, ¿por qué no llevamos simplemente las empresas donde está la gente? Aquí entra en juego una de las fuerzas más tercas de la economía: las economías de aglomeración.\nEs un círculo que se retroalimenta: las empresas se instalan en Santo Domingo porque ahí están los trabajadores calificados, los proveedores y los consumidores (mercado). Y los trabajadores, como Pedro, se mudan a Santo Domingo porque ahí están las empresas.\nRomper esta inercia no es tan simple como ofrecer incentivos fiscales. Requiere crear ecosistemas donde sea rentable operar. Mientras “ser más en un sitio” siga reduciendo costos y aumentando la productividad para las empresas, la gravedad de la capital seguirá atrayendo a los Juanes del país, perpetuando los tapones en el centro y el vacío en la periferia.\n\n  Economías de aglomeración\n  \n    Las empresas tienden a concentrarse donde pueden compartir trabajadores calificados, proveedores y mercados. Esta concentración reduce costos y aumenta productividad, reforzando la atracción del mismo territorio.\n  \n\n\n• • •"
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#conclusión",
+    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#conclusión",
+    "title": "Perspectiva del desarrollo: Densidad empresarial",
     "section": "Conclusión",
-    "text": "Conclusión\nLuego de recorrer los datos, es difícil sostener que estamos peor que hace cuarenta años. La evidencia apunta en la dirección contraria. Pero los avances conviven con problemas persistentes y con nuevos vicios generados por el propio proceso de expansión.\nLa educación sigue siendo, con todas sus imperfecciones, la principal puerta de salida de la pobreza para una parte importante de la población dominicana.\nA título personal: no creo que el objetivo deba ser que todos terminen con un título universitario. Las rutas técnicas, digitales y de formación no convencional abren puertas a talentos que el sistema tradicional descartaba. Pero ya sea que apostemos por ese camino o por seguir ampliando el acceso a la educación superior, la tarea es la misma: eliminar las barreras que deciden por las personas antes de que ellas puedan decidir por sí mismas.\n\n• • •\n\n\n  📚 Sigue leyendo\n  \n    \n      El mito del Banco Malo\n      Por qué las MiPyMES realmente no tienen crédito\n    \n    \n      10 años de transformación\n      Cambios en la canasta familiar dominicana\n    \n    \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial por empresas formales\n    \n  \n\n\n  Fuentes de Datos & Referencias\n  \n    \n      ONE (2022)\n      \"Censo Nacional de Población y Vivienda 2022\". Fuente principal de todos los microdatos utilizados en este análisis. Variables p26 (sexo), p27 (edad), p43 (nivel educativo), p45 (campo ISCED-F), p46 (graduación) y zona.\n      Ver Censo 2022 ↗\n    \n    \n      UNESCO-UIS (2022)\n      \"ISCED Fields of Education and Training 2013 (ISCED-F 2013)\". Clasificación internacional utilizada para agrupar los campos de estudio declarados en el censo (variable p45_code).\n      Ver clasificación ISCED-F ↗\n    \n    \n      CEPAL (2022)\n      \"La educación superior en América Latina y el Caribe\". Contexto regional utilizado para ubicar los indicadores dominicanos en perspectiva comparada. La región pasó de 23% a 52% de cobertura superior entre 2000 y 2018.\n      Ver CEPAL ↗\n    \n  \n\n\n  Si este análisis te resultó útil, considera compartirlo en\n  LinkedIn,\n  Twitter o\n  WhatsApp."
+    "text": "Conclusión\nGeneralmente, cuando se dice que el empleo informal en el país ronda el 56%, se ve como un dato abstracto. Pero la realidad física de ese número está ahí: en el marcado contraste entre la zona terracota del Distrito Nacional, los focos anaranjados del Este y el Cibao, y el inmenso verde pálido que cubre a las demás zonas.\nLa concentración económica es una dinámica natural del desarrollo, no un error de diseño. El peligro radica en ignorarla. En un debate público obsesionado con los promedios nacionales, nuestra responsabilidad es recordar siempre la profunda heterogeneidad territorial que define a la República Dominicana.\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      10 años de transformación\n      Cambios en la canasta familiar\n    \n\n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Referencias & Fuentes de Datos\n  \n  \n    \n    \n      Oficina Nacional de Estadística (ONE)\n      Proyecciones de Población por Región y Provincia (2000-2030).\n      Ver dataset ↗\n    \n\n    \n      Oficina Nacional de Estadística (ONE)\n      Distribución de empresas registradas (2015-2024).\n      Ver reporte ↗\n    \n\n    \n      Krugman, P. (1991)\n      \"Increasing Returns and Economic Geography\". Journal of Political Economy.\n      Leer paper ↗"
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html",
+    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html",
+    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
+    "section": "",
+    "text": "Vivimos en el siglo XXI. Internet en casa, teléfonos inteligentes en el bolsillo, laptops y computadoras en casi cualquier espacio de trabajo. La banca en línea se ha convertido en uno de los avances más visibles de la última década.\nCon este panorama, es fácil pensar que el efectivo ya cumplió su ciclo, que los billetes y las monedas están siendo desplazados por transferencias electrónicas y tarjetas. ¿Para qué cargar dinero en efectivo cuando todo parece estar a un clic de distancia?\nSin embargo, los datos cuentan otra historia. La Encuesta Nacional de Inclusión y Educación Financiera (ENIEF 2023) muestra que, lejos de desaparecer, el efectivo sigue teniendo un peso importante en la vida económica del país."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-física-aquí-no-aceptamos-eso",
+    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-física-aquí-no-aceptamos-eso",
+    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
+    "section": "1. La Barrera Física: “Aquí no aceptamos eso”",
+    "text": "1. La Barrera Física: “Aquí no aceptamos eso”\nA menudo, el debate sobre la digitalización asume que el usuario tiene la libertad de elegir. Los datos de la ENIEF muestran que esa libertad es ilusoria en gran parte de la economía cotidiana. Muchos comercios, especialmente los pequeños, no aceptan pagos digitales. Esto crea una barrera física que obliga a los consumidores a recurrir al efectivo, independientemente de sus preferencias personales. Segun datos de la encuesta, un 22% de los encuestados mencionan que no usan métodos digitales porque “el comercio no los acepta”.\n\n\n\n\n\n\n\n\nFigura 4: Razones declaradas para el uso de efectivo. Aunque la conveniencia en montos bajos lidera, la restricción de oferta (‘No aceptan tarjeta’) representa una barrera estructural significativa."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-psicológica-seguridad-y-descuentos",
+    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-psicológica-seguridad-y-descuentos",
+    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
+    "section": "2. La Barrera Psicológica: seguridad y descuentos",
+    "text": "2. La Barrera Psicológica: seguridad y descuentos\nMás allá de las limitaciones físicas, existen barreras psicológicas que refuerzan el uso del efectivo. Muchos consumidores perciben el efectivo como una forma más segura de manejar su dinero, evitando riesgos asociados con fraudes digitales o problemas técnicos. Además, la percepción de que ciertos comercios ofrecen descuentos o mejores precios por pagos en efectivo refuerza esta preferencia, lo cual es impulsado por el gran grado de informalidad en la economía dominicana. Ambos con un 38 y 34% respectivamente según la encuesta. por lo que no es solo una cuestión de disponibilidad, sino también de confianza y percepción de valor.\n\n• • •"
   },
   {
     "objectID": "posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html",
@@ -112,90 +182,6 @@
     "text": "Conclusión: El espejo de lo que somos\nA menudo se cuestiona, con razón, el uso excesivo de cifras en el discurso económico, acusándolas de estar alejadas de la “realidad” que vive la gente. Pero datos como estos nos enseñan que, en esencia, las estadísticas no son más que la suma de decisiones humanas, con la interpretación correcta, nos revelan exactamente cómo vive la gente.\nSi volvemos mentalmente a ese semáforo de 2010, nos damos cuenta de que la canasta familiar no es solo una hoja de Excel para calcular la inflación: es un espejo de nuestra evolución.\nLos datos nos cuentan la historia de un país que, a pesar de los retos, ha logrado sofisticar su consumo. Hemos pasado de luchar por la comida (Engel) a preocuparnos por la conectividad (Comunicaciones) y el bienestar (Bienes Diversos).\nLa próxima vez que escuches que la inflación subió o bajó, recuerda que detrás de ese número hay millones de micro-decisiones de familias dominicanas que, poco a poco, están dejando atrás el “biper” para abrazar un futuro más complejo, conectado y exigente.\n¿Y tú? ¿qué gastos nuevos han aparecido en tu presupuesto en los últimos 5 años?\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Fuentes de Datos & Referencias Teóricas\n  \n  \n    \n    \n      Banco Central R.D. (Precios)\n      Anexos documento metodológico IPC base anual octubre 2019 – septiembre 2020.\n      Descargar Excel oficial ↗\n    \n\n    \n      Indotel / Datos Abiertos\n      Series Históricas de Cuentas de Internet y Teledensidad (2010-2024).\n      Ver series históricas ↗\n    \n\n    \n      Anker, R. (2011) / UMass Amherst\n      \"Engel’s Law Around the World 150 Years Later\". Análisis global que confirma la caída del gasto en alimentos al subir el ingreso.\n      Leer Paper (PDF) ↗\n    \n\n    \n      Rodrik, D. (2017)\n      \"Structural Change, Fundamentals, and Growth\". Teoría sobre cómo las economías se mueven de agricultura a servicios modernos.\n      Leer Paper (PDF) ↗"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html",
-    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html",
-    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
-    "section": "",
-    "text": "Vivimos en el siglo XXI. Internet en casa, teléfonos inteligentes en el bolsillo, laptops y computadoras en casi cualquier espacio de trabajo. La banca en línea se ha convertido en uno de los avances más visibles de la última década.\nCon este panorama, es fácil pensar que el efectivo ya cumplió su ciclo, que los billetes y las monedas están siendo desplazados por transferencias electrónicas y tarjetas. ¿Para qué cargar dinero en efectivo cuando todo parece estar a un clic de distancia?\nSin embargo, los datos cuentan otra historia. La Encuesta Nacional de Inclusión y Educación Financiera (ENIEF 2023) muestra que, lejos de desaparecer, el efectivo sigue teniendo un peso importante en la vida económica del país."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-física-aquí-no-aceptamos-eso",
-    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-física-aquí-no-aceptamos-eso",
-    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
-    "section": "1. La Barrera Física: “Aquí no aceptamos eso”",
-    "text": "1. La Barrera Física: “Aquí no aceptamos eso”\nA menudo, el debate sobre la digitalización asume que el usuario tiene la libertad de elegir. Los datos de la ENIEF muestran que esa libertad es ilusoria en gran parte de la economía cotidiana. Muchos comercios, especialmente los pequeños, no aceptan pagos digitales. Esto crea una barrera física que obliga a los consumidores a recurrir al efectivo, independientemente de sus preferencias personales. Segun datos de la encuesta, un 22% de los encuestados mencionan que no usan métodos digitales porque “el comercio no los acepta”.\n\n\n\n\n\n\n\n\nFigura 4: Razones declaradas para el uso de efectivo. Aunque la conveniencia en montos bajos lidera, la restricción de oferta (‘No aceptan tarjeta’) representa una barrera estructural significativa."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-psicológica-seguridad-y-descuentos",
-    "href": "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html#la-barrera-psicológica-seguridad-y-descuentos",
-    "title": "El Rey Efectivo: La resistencia del billete en la era digital",
-    "section": "2. La Barrera Psicológica: seguridad y descuentos",
-    "text": "2. La Barrera Psicológica: seguridad y descuentos\nMás allá de las limitaciones físicas, existen barreras psicológicas que refuerzan el uso del efectivo. Muchos consumidores perciben el efectivo como una forma más segura de manejar su dinero, evitando riesgos asociados con fraudes digitales o problemas técnicos. Además, la percepción de que ciertos comercios ofrecen descuentos o mejores precios por pagos en efectivo refuerza esta preferencia, lo cual es impulsado por el gran grado de informalidad en la economía dominicana. Ambos con un 38 y 34% respectivamente según la encuesta. por lo que no es solo una cuestión de disponibilidad, sino también de confianza y percepción de valor.\n\n• • •"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "",
-    "text": "Escuchar artículo (4 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio."
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "El denominador común",
-    "text": "El denominador común\nVolviendo al problema planteado, nos damos cuenta de que, al final del día, es un asunto de magnitudes: cuántos objetos hay y cómo les asignamos valor. Para resolverlo, los economistas simplemente agregamos otra variable. Cuando usted va al supermercado o a su peluquero, ¿qué usa para pagar? ¡Correcto! Dinero.\nUn peso es un peso para las manzanas, para las peras o para el peluquero; lo mismo aplica si voy al mecánico o si pago la universidad. Si tomamos los productos y los multiplicamos por su “precio” (por ejemplo: tres alimentos con valor de 20 pesos más un corte de pelo con valor de 50), podemos decir que el total vale 110. A esto es a lo que los economistas nos referimos como Producto Interno Bruto (PIB). Problema de magnitudes resuelto, pero esta misma solución deriva en otros problemas en el futuro.\n\n• • •"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "La trampa del bienestar",
-    "text": "La trampa del bienestar\nSi volvemos a la lógica que acabamos de usar, nos daremos cuenta de que el PIB se basa en dos principios: cuánto hay de algo y cuánto es su valor en monedas. Pero aquí es donde la realidad se vuelve complicada.\nImaginemos que nos encontramos en la ciudad de Santo Domingo. Pedro está en su vehículo hacia el trabajo pero, como es común, un “tapón” hace imposible el avance normal. Pedro dura varias horas atrapado en el tránsito. Esta situación lo obliga a que, en lugar de comprar dos galones de gasolina, tenga que comprar seis, además, en vez de llevar el carro al mecánico cada dos meses, debe hacerlo mes a mes por el desgaste.\n6 galones De gasolina vs. 2 en condiciones normales\n¿Aumenta esto el PIB? Sí. Tenemos una cantidad (producto o servicio) y un valor en monedas (precio de gasolina y servicio mecánico). Ahora, otra pregunta: ¿Usted cree que Pedro vive mejor? Probablemente, y con razón, su respuesta sea un rotundo “no”. He aquí una de las grandes trampas del PIB: es una medida de producción económica, no de bienestar.\nPodemos ver otros casos similares:\n\nEconomía del cuidado: Si María decide no trabajar formalmente y dedicarse a la educación de sus hijos en casa, ¿contribuye al PIB? No. ¿Está la familia de María peor por eso? Probablemente no.\nEfecto de precios: Si sube el precio del arroz pero usted tiene que comprarlo igual, ¿aumenta el PIB? Sí (nominalmente). ¿Está usted mejor? No, es más pobre porque su dinero rinde menos.\n\n\nEfecto Precio: El caso del arroz\n\n\nPrecio enero 2024: RD$50/libra → Precio diciembre 2024: RD$65/libra Su poder adquisitivo: -23%\n\n\n\nAsí podríamos continuar con muchos otros casos. Por esto, el PIB como indicador de producción es excelente; para medir qué tan bien vive la gente… no tanto.\n\n\n\n\n\n\n\n\nFigura 1: Ilustración: Producción vs. Bienestar (Simulación)\n\n\n\n\n\n\n• • •"
-  },
-  {
-    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
-    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
-    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
-    "section": "¿Es un mal indicador?",
-    "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "",
-    "text": "Escuchar artículo (6 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "La magnitud de la deuda dominicana",
-    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce en el promedio.\n\n\n\n\n\n\n\nDeuda Sobre PIB en Latinoamérica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones",
-    "text": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de pagar la cuota del préstamo, usted paga una parte para devolver el dinero solicitado (capital) y otra por la disponibilidad del dinero (intereses). La deuda pública funciona igual. El detalle es que la suma de ambos conceptos (capital más intereses) se agrupa bajo el nombre de “servicio de la deuda”, y es la carga real que presiona las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar intereses.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Es malo endeudarse?",
-    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
-  },
-  {
-    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
-    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
-    "section": "¿Pagarán nuestros nietos la deuda?",
-    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo.\n\n  📚 Sigue leyendo\n  \n  \n\n        \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.\n    \n    \n    \n      Decada de transformación\n      Análisis de los cambios en la canasta familiar dominicana.\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Fuentes Oficiales & Referencia Académica\n  \n  \n    \n    \n      Crédito Público (Hacienda)\n      Informes de Deuda Pública del Sector Público .\n      Ver informes oficiales ↗\n    \n\n    \n      DIGEPRES (Presupuesto)\n      Estadísticas Fiscales: Ejecución presupuestaria, ingresos y gastos (Series históricas).\n      Ver ejecución fiscal ↗\n    \n\n    \n      Sargent & Wallace (1981)\n      \"Some Unpleasant Monetarist Arithmetic\". El paper seminal que explica por qué la política fiscal domina a la monetaria.\n      Leer clásico (Fed) ↗\n    \n\n    \n      Moody's Investors Service (2024)\n      \"Government of Dominican Republic – Ba3 Positive\". Reporte oficial donde Moody's advierte que la relación Intereses/Ingresos de RD (cercana al 23%) es \"débil\" y duplica la mediana de sus pares.\"\n      Ver reporte oficial (PDF)↗"
-  },
-  {
     "objectID": "posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
     "href": "posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
     "title": "Frédéric Bastiat: El primer economista influencer",
@@ -231,130 +217,39 @@
     "text": "La pregunta de Bastiat, hoy\nLa próxima vez que un evento natural golpee al país y escuches “esto reactivará la construcción”, piensa en Juan. Piensa en sus 3 tareas de plátanos que nunca verá crecer. Piensa en el ingreso que no tendrá.\nY pregúntate: ¿Estoy viendo solo lo visible (cemento, zinc, actividad)? ¿O también lo invisible (producción perdida, desarrollo retrasado, riqueza destruida)?\nEsa es la diferencia entre un mal y un buen análisis económico. Bastiat lo sabía hace 170 años. Nosotros aún estamos aprendiendo.\n\n  Fuentes & Referencias Intelectuales\n  \n  \n    \n    \n      Bastiat, F. (1850)\n      \"Ce qu’on voit et ce qu’on ne voit pas\". Ensayo donde introduce la distinción entre efectos visibles e invisibles y formula la Falacia de la Ventana Rota.\n      Leer ensayo original ↗\n    \n\n    \n      Bastiat, F. (1845)\n      \"Petition of the Candle Makers\". Sátira económica contra el proteccionismo, usando el absurdo como herramienta analítica.\n      Leer sátira completa ↗\n    \n\n    \n      Hazlitt, H. (1946)\n      Economics in One Lesson. Obra clave de divulgación moderna que rescata y populariza el argumento de la Ventana Rota de Bastiat.\n      Consultar libro (Archivo) ↗\n    \n\n\n  Si este análisis te resultó útil, considera compartirlo en \n  LinkedInTwitterWhatsApp"
   },
   {
-    "objectID": "series.html",
-    "href": "series.html",
-    "title": "Series",
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
     "section": "",
-    "text": "Estas son las líneas editoriales del sitio:\n\nMis predecesores\n\nLa República en un gráfico\n\nLa República habla de\n\nFundamentos"
+    "text": "Escuchar artículo (6 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\n$71,525 millones de dólares. Al 2024, era la deuda pública de la República Dominicana. Para ponerlo en contexto: si dividiéramos esa cifra entre todos los dominicanos, cada uno de nosotros cargaría con\nRD$ 420,000 La deuda per cápita de cada dominicano\nY no es solo la magnitud lo que inquieta. No pasa un mes sin que escuchemos en las noticias o leamos en los periódicos sobre la aprobación de un nuevo préstamo. Es completamente entendible la preocupación expresada en redes sociales, conversaciones diarias y espacios públicos.\nPero más allá de los titulares alarmistas y las sensaciones: ¿Es realmente tan alta la deuda dominicana? ¿Es sostenible en el tiempo? ¿Tiene un buen uso? Y la pregunta que todos nos hacemos… ¿la pagarán nuestros nietos?"
   },
   {
-    "objectID": "fundamentos.html",
-    "href": "fundamentos.html",
-    "title": "Fundamentos",
-    "section": "",
-    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#la-magnitud-de-la-deuda-dominicana",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "La magnitud de la deuda dominicana",
+    "text": "La magnitud de la deuda dominicana\nLa cifra anterior puede sonar bastante alta si no la matizamos adecuadamente. ¿Es grande? Sí. ¿Es descabellada? Depende de con qué la comparemos. Aquí radica uno de los puntos claves de la deuda pública: cuando usted solicita un préstamo bancario, lo primero que evalúan es su solvencia presente y futura (su salario, patrimonio, vehículos) para asegurar el repago.\nLos países funcionan esencialmente igual. Pero, ¿cuál es la medida de solvencia de una nación? El PIB. Por eso, el primer indicador que utilizamos los economistas para medir la viabilidad de la deuda es su proporción respecto al PIB. Si pedimos un préstamo de 100 y nuestro PIB es de 1,000, la deuda solo representa el 10% de nuestra producción, haciéndola teóricamente pagable.\nAl aplicar este análisis a la economía dominicana, obtenemos un dato que, al menos a primera vista, no resulta alarmante.\n\n\nDato Clave\n\n\nAl cierre de 2024, la deuda consolidada sobre el PIB se situaba en 57.4%. Si comparamos este balance con la región, la posición dominicana luce en el promedio.\n\n\n\n\n\n\n\nDeuda Sobre PIB en Latinoamérica y RD\n\n\n\n\n¿Estamos entre los más bajos? No, pero estamos cerca del promedio regional, por lo que el manejo de la solvencia (Deuda/PIB) parece razonable. Pero, ¿es correcto quedarnos solo con este dato? Aquí entra el matiz más importante:\n\n“El PIB no paga las cuentas, los impuestos sí.”\n\nLa capacidad real de pago del Estado no depende de qué tan grande sea la economía, sino de su capacidad de recaudar. Y es aquí donde la historia cambia drásticamente. Mientras que nuestra deuda respecto al PIB es “promedio”, nuestro costo financiero respecto a los ingresos fiscales es alarmante. Esto es lo que rara vez se explica en la prensa convencional: el problema de la rigidez presupuestaria."
   },
   {
-    "objectID": "mitos-economicos.html",
-    "href": "mitos-economicos.html",
-    "title": "Mitos económicos",
-    "section": "",
-    "text": "Desmentir creencias populares pero incorrectas sobre economía: desde “imprimir dinero crea riqueza” hasta “el déficit siempre es malo”. Separando hechos de ficción con datos y teoría.\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#sostenibilidad-de-la-deuda-intereses-de-la-deuda-sobre-recaudaciones",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones",
+    "text": "Sostenibilidad de la deuda: intereses de la deuda sobre recaudaciones\nVolviendo al ejemplo del banco: al momento de pagar la cuota del préstamo, usted paga una parte para devolver el dinero solicitado (capital) y otra por la disponibilidad del dinero (intereses). La deuda pública funciona igual. El detalle es que la suma de ambos conceptos (capital más intereses) se agrupa bajo el nombre de “servicio de la deuda”, y es la carga real que presiona las finanzas públicas.\nEl PIB puede lucir muy bien, pero si las finanzas públicas deben destinar gran parte de sus ingresos al servicio de la deuda… es insostenible. Aquí es donde aparece la rigidez presupuestaria. Sin entrar en tecnicismos, el umbral de alerta se coloca en 25%: lo saludable es que de cada 100 pesos recaudados por el Estado, 25 o menos vayan a pagar intereses.\nEvaluando los datos del país, no hemos llegado, pero estamos cerca.\n\n\n\n\n\nDeuda Sobre PIB y Servicios de deuda sobre recaudaciones\n\n\n\n\nSi observamos el gráfico de Deuda/PIB, encontramos una tendencia manejable, incluso ha disminuido desde el pico de pandemia. Pero los intereses sobre impuestos cuentan una historia contraria: estamos cerca del límite técnico del 25% y con tendencia ascendente.\nPor lo tanto, la preocupación, aunque no alarmista, es totalmente válida. Esta es una métrica que debemos vigilar de cerca.\n\n• • •"
   },
   {
-    "objectID": "research/reporte-inclusion.html",
-    "href": "research/reporte-inclusion.html",
-    "title": "Reporte de Inclusión Financiera",
-    "section": "",
-    "text": "TipDescargar Versión PDF\n\n\n\nEste reporte está disponible para descarga con maquetación oficial. 📥 Descargar PDF Generado"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#es-malo-endeudarse",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Es malo endeudarse?",
+    "text": "¿Es malo endeudarse?\nMaría se encuentra ante una disyuntiva: cuenta con una beca del 50% para su maestría, lo cual la dejaría tan solo con un pago de 200 mil pesos. María no cuenta actualmente con esa cifra, pero tiene la opción de solicitar un crédito educativo al banco. Luego de evaluar cuánto aumentaría su salario con la maestría, María llega a la conclusión de que le sale rentable dicho crédito, pues ganaría lo suficiente para pagar el préstamo y, además, tener un excedente.\nPor otro lado, Juan ha visto en las noticias que el último iPhone ha salido a la venta y quiere ser “el mejor” de su barrio. Ante esto, Juan decide ir donde el prestamista y adquirir el teléfono.\n¿Qué préstamo considera usted bueno y cuál malo? ¿Es el préstamo malo por naturaleza, o es su uso el que lo vuelve malo?\n¡Bingo! La intuición nos dice que la deuda de María es una inversión y la de Juan es gasto. Los préstamos públicos funcionan igual. Endeudarse no es malo si el retorno futuro (crecimiento económico, infraestructura) es mayor que el costo presente.\nSi el Estado se endeuda para construir un metro o una presa (como María), la deuda se paga sola con el crecimiento económico que genera. Pero si nos endeudamos para pagar nómina o intereses de deudas viejas (como Juan), estamos comprometiendo el futuro sin generar valor. ¿En cuál de los dos escenarios crees que está República Dominicana hoy?"
   },
   {
-    "objectID": "research/reporte-inclusion.html#introducción",
-    "href": "research/reporte-inclusion.html#introducción",
-    "title": "Reporte de Inclusión Financiera",
-    "section": "1. Introducción",
-    "text": "1. Introducción\nA diferencia del informe oficial, este análisis se centra en…"
-  },
-  {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
-    "section": "",
-    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "research/paper-modelo.html",
-    "href": "research/paper-modelo.html",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
-    "section": "",
-    "text": "📄 Full Paper: This paper is currently under review. Download Draft PDF"
-  },
-  {
-    "objectID": "research/paper-modelo.html#abstract",
-    "href": "research/paper-modelo.html#abstract",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
-    "section": "Abstract",
-    "text": "Abstract\nHere you write the abstract in English. This text will be indexed by Google. Because lang: en is set in the YAML header above, screen readers and search engines will treat this specific page as English content, separating it from your Spanish blog."
-  },
-  {
-    "objectID": "research/paper-modelo.html#methodology",
-    "href": "research/paper-modelo.html#methodology",
-    "title": "Monetary Policy Transmission in the Dominican Republic",
-    "section": "Methodology",
-    "text": "Methodology\nWe utilize a Vector Autoregression (VAR) model to identify the shocks…\n\n\n\n\n\nImpulse Response Function (Placeholder)"
-  },
-  {
-    "objectID": "republica-en-un-grafico.html",
-    "href": "republica-en-un-grafico.html",
-    "title": "La República en un gráfico",
-    "section": "",
-    "text": "Un gráfico, una lectura y una implicación para República Dominicana.\nAquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\nLeonardo Mena\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\nLeonardo Mena\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "predecesores.html",
-    "href": "predecesores.html",
-    "title": "Mis predecesores",
-    "section": "",
-    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "categorias.html",
-    "href": "categorias.html",
-    "title": "Categorías",
-    "section": "",
-    "text": "Selecciona un tema clave para filtrar los artículos automáticamente."
-  },
-  {
-    "objectID": "categorias.html#índice-completo",
-    "href": "categorias.html#índice-completo",
-    "title": "Categorías",
-    "section": "Índice completo",
-    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nRepública en un Gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República en un gráfico\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa república en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa republica en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\n\nLa república en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "investigacion.html",
-    "href": "investigacion.html",
-    "title": "Investigación",
-    "section": "",
-    "text": "\"Modelando la realidad para informar la toma de decisiones.\"\n  \n  \n    Organización Industrial · Econometría Aplicada · Mercados Energéticos"
-  },
-  {
-    "objectID": "investigacion.html#working-papers",
-    "href": "investigacion.html#working-papers",
-    "title": "Investigación",
-    "section": "Working Papers",
-    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nMonetary Policy Transmission in DR\n\n\nVAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector.\n\n\n  Read Abstract \n  Read Abstract \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio del Sector Eléctrico\n\n\nEstimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse.\n\n\n  Ver Código \n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "investigacion.html#policy-briefs",
-    "href": "investigacion.html#policy-briefs",
-    "title": "Investigación",
-    "section": "Policy Briefs",
-    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        status\n      \n    \n  \n\n\n\n\n Policy Brief   1 ene 2026 \n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n  Ver Documento \n\n\n\n\n Policy Brief   Invalid Date \n\n\nPB-002: Impacto Fiscal del Subsidio\n\n\nAnálisis preliminar de la carga fiscal proyectada para el Q3 2026.\n\n\n(En desarrollo)\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "investigacion.html#reportes-técnicos",
-    "href": "investigacion.html#reportes-técnicos",
-    "title": "Investigación",
-    "section": "Reportes Técnicos",
-    "text": "Reportes Técnicos\nProductos de análisis elaborados a partir de microdatos y fuentes oficiales. Procesamiento, limpieza y visualización propios.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n\n\n\n\n Reporte Técnico   1 ene 2026 \n\n\nReporte de Inclusión Financiera 2025\n\n\nProcesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica.\n\n\n  Ver Reporte Interactivo \n  Ver Reporte Interactivo \n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "investigacion.html#stack-tecnológico",
-    "href": "investigacion.html#stack-tecnológico",
-    "title": "Investigación",
-    "section": "Stack Tecnológico",
-    "text": "Stack Tecnológico\nHerramientas utilizadas en el procesamiento de estos datos.\n\n  Power BI    R / Tidyverse    SQL"
+    "objectID": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "href": "posts/republica-habla-de/2025-12-19_deuda_publica/index.html#pagarán-nuestros-nietos-la-deuda",
+    "title": "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación",
+    "section": "¿Pagarán nuestros nietos la deuda?",
+    "text": "¿Pagarán nuestros nietos la deuda?\nEs común escuchar que “cada niño nace debiendo miles de dólares”, sugiriendo que algún día tendrán que pagar esa cuenta hasta dejarla en cero. Pero la realidad económica es distinta: los Estados no mueren, por lo que rara vez liquidan sus deudas; simplemente las refinancian.\nAsí que la respuesta es: no, probablemente no pagarán el capital. Pero ojo, eso no significa que la deuda sea gratis.\nNuestros nietos sí heredarán el costo de mantenimiento (los intereses). Y aquí volvemos a la calidad del gasto:\nSi la deuda de hoy financió un Metro o una presa (Caso María), ellos heredarán la deuda, pero también un país más rico que puede pagar esos intereses fácilmente.\nSi la deuda financió gasto corriente (Caso Juan), heredarán la factura de una fiesta a la que no fueron invitados.\n\nEl objetivo no es deuda cero, sino evitar que la rigidez presupuestaria les impida invertir en su propia salud y educación.\n\n¿Crees que la deuda actual se parece más a la de María o a la de Juan? Déjame tu opinión abajo.\n\n  📚 Sigue leyendo\n  \n  \n\n        \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.\n    \n    \n    \n      Decada de transformación\n      Análisis de los cambios en la canasta familiar dominicana.\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Fuentes Oficiales & Referencia Académica\n  \n  \n    \n    \n      Crédito Público (Hacienda)\n      Informes de Deuda Pública del Sector Público .\n      Ver informes oficiales ↗\n    \n\n    \n      DIGEPRES (Presupuesto)\n      Estadísticas Fiscales: Ejecución presupuestaria, ingresos y gastos (Series históricas).\n      Ver ejecución fiscal ↗\n    \n\n    \n      Sargent & Wallace (1981)\n      \"Some Unpleasant Monetarist Arithmetic\". El paper seminal que explica por qué la política fiscal domina a la monetaria.\n      Leer clásico (Fed) ↗\n    \n\n    \n      Moody's Investors Service (2024)\n      \"Government of Dominican Republic – Ba3 Positive\". Reporte oficial donde Moody's advierte que la relación Intereses/Ingresos de RD (cercana al 23%) es \"débil\" y duplica la mediana de sus pares.\"\n      Ver reporte oficial (PDF)↗"
   },
   {
     "objectID": "posts/republica-habla-de/2026-03-04-transporte-masivo/index.html",
@@ -441,6 +336,125 @@
     "text": "Conclusión: El margen inexplorado\nEl diagnóstico no es de agotamiento sino de subutilización. El modelo funciona, pero opera muy por debajo de su potencial de diferenciación territorial y productividad laboral.\nLa buena noticia: los activos están ahí. Historia, naturaleza, ecoturismo no requieren inventarse, requieren integrarse a la narrativa comercial del país.\n\nLa pregunta no es si debemos abandonar el “sol y playa”, sino cuánto tiempo más seguiremos dejando dinero sobre la mesa al no activar el 23% restante del portafolio turístico dominicano.\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      10 años de transformación\n      Cambios en la canasta familiar\n    \n\n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n   \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.\n    \n    \n  \n\n\n  Fuentes de Datos & Referencias Académicas\n  \n  \n    \n    \n      Banco Central R.D. (2024)\n      \"Encuesta de Opinión, Actitud y Motivación\". Microdatos utilizados para generar el Mapa de Calor y el Treemap de preferencias (Playa vs. Resto).\n      Ver informe oficial (PDF) ↗\n    \n\n    \n      Banco Central R.D. (2019)\n      \"Cuadro de Oferta y Utilización (COU)\". Matriz insumo-producto base para el cálculo del Valor Agregado Bruto por trabajador y el análisis de la dualidad hotelera.\n      Consultar Cuentas Nacionales ↗\n    \n\n    \n      Orgaz Agüera, F. (2014)\n      \"El ecoturismo en la República Dominicana\". Estudio académico que analiza las potencialidades de los recursos naturales del país para diversificar la oferta masiva.\n      Leer Paper (Redalyc) ↗\n    \n\n    \n      Fondo Monetario Internacional (2025)\n      \"República Dominicana: Consulta del Artículo IV\". Informe técnico exhaustivo que valida la resiliencia del modelo turístico dominicano y analiza su efecto multiplicador (spillovers) en el resto de la economía.\n      Leer Informe del Personal Técnico ↗\n    \n    \n  \n\n\n  Si este análisis te resultó útil, considera compartirlo en \n  LinkedInTwitterWhatsApp"
   },
   {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "",
+    "text": "Escuchar artículo (4 min)\n    \n    \n        \n        Tu navegador no soporta el elemento de audio."
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#el-denominador-común",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "El denominador común",
+    "text": "El denominador común\nVolviendo al problema planteado, nos damos cuenta de que, al final del día, es un asunto de magnitudes: cuántos objetos hay y cómo les asignamos valor. Para resolverlo, los economistas simplemente agregamos otra variable. Cuando usted va al supermercado o a su peluquero, ¿qué usa para pagar? ¡Correcto! Dinero.\nUn peso es un peso para las manzanas, para las peras o para el peluquero; lo mismo aplica si voy al mecánico o si pago la universidad. Si tomamos los productos y los multiplicamos por su “precio” (por ejemplo: tres alimentos con valor de 20 pesos más un corte de pelo con valor de 50), podemos decir que el total vale 110. A esto es a lo que los economistas nos referimos como Producto Interno Bruto (PIB). Problema de magnitudes resuelto, pero esta misma solución deriva en otros problemas en el futuro.\n\n• • •"
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#la-trampa-del-bienestar",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "La trampa del bienestar",
+    "text": "La trampa del bienestar\nSi volvemos a la lógica que acabamos de usar, nos daremos cuenta de que el PIB se basa en dos principios: cuánto hay de algo y cuánto es su valor en monedas. Pero aquí es donde la realidad se vuelve complicada.\nImaginemos que nos encontramos en la ciudad de Santo Domingo. Pedro está en su vehículo hacia el trabajo pero, como es común, un “tapón” hace imposible el avance normal. Pedro dura varias horas atrapado en el tránsito. Esta situación lo obliga a que, en lugar de comprar dos galones de gasolina, tenga que comprar seis, además, en vez de llevar el carro al mecánico cada dos meses, debe hacerlo mes a mes por el desgaste.\n6 galones De gasolina vs. 2 en condiciones normales\n¿Aumenta esto el PIB? Sí. Tenemos una cantidad (producto o servicio) y un valor en monedas (precio de gasolina y servicio mecánico). Ahora, otra pregunta: ¿Usted cree que Pedro vive mejor? Probablemente, y con razón, su respuesta sea un rotundo “no”. He aquí una de las grandes trampas del PIB: es una medida de producción económica, no de bienestar.\nPodemos ver otros casos similares:\n\nEconomía del cuidado: Si María decide no trabajar formalmente y dedicarse a la educación de sus hijos en casa, ¿contribuye al PIB? No. ¿Está la familia de María peor por eso? Probablemente no.\nEfecto de precios: Si sube el precio del arroz pero usted tiene que comprarlo igual, ¿aumenta el PIB? Sí (nominalmente). ¿Está usted mejor? No, es más pobre porque su dinero rinde menos.\n\n\nEfecto Precio: El caso del arroz\n\n\nPrecio enero 2024: RD$50/libra → Precio diciembre 2024: RD$65/libra Su poder adquisitivo: -23%\n\n\n\nAsí podríamos continuar con muchos otros casos. Por esto, el PIB como indicador de producción es excelente; para medir qué tan bien vive la gente… no tanto.\n\n\n\n\n\n\n\n\nFigura 1: Ilustración: Producción vs. Bienestar (Simulación)\n\n\n\n\n\n\n• • •"
+  },
+  {
+    "objectID": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
+    "href": "posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html#es-un-mal-indicador",
+    "title": "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?",
+    "section": "¿Es un mal indicador?",
+    "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
+    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "",
+    "text": "⏱️ 3 min de lectura\nPara entender la economía sin perderse, hace falta un mapa. Este primer gráfico no busca probar una teoría compleja, sino transparentar cómo organizo mentalmente la economía dominicana cada vez que me enfrento a una nueva base de datos.\nLa idea es tener, en una sola imagen, los pilares fundamentales: los sectores que mueven la aguja, el papel decisivo del sector externo (turismo y remesas) y las conexiones invisibles que terminan en los titulares de prensa: inflación, dólar y deuda.\nFigura 1. El ciclo de análisis de coyuntura: cuatro preguntas clave para interrogar los datos."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-muestra",
+    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-muestra",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Qué muestra",
+    "text": "Qué muestra\nEste diagrama organiza mi lectura de la economía dominicana en cuatro preguntas que siempre intento responder cuando analizo datos:\n\n1. ¿Se acelera o se frena? Aquí miro el ritmo: PIB, IMAE, inversión, turismo. Si la economía acelera, otras variables empiezan a moverse.\n2. ¿Hay presiones inflacionarias o cambiarias? La estabilidad nominal importa: si el dólar sube 8% en tres meses, eso afecta precios, salarios reales y decisiones de inversión.\n3. ¿Qué pasa con empleo y salarios? El impacto social: el crecimiento agregado no garantiza progreso si no llega a los bolsillos o si genera empleo precario.\n4. ¿Hay margen del Estado o está agotado? La restricción fiscal: déficit, deuda, recaudación. Si el espacio se agota, las respuestas contracíclicas desaparecen.\n\nEstas cuatro cajas no están aisladas: se conectan. Un shock externo (digamos, petróleo caro) puede afectar las cuatro simultáneamente."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#cómo-lo-uso-en-la-práctica",
+    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#cómo-lo-uso-en-la-práctica",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Cómo lo uso en la práctica",
+    "text": "Cómo lo uso en la práctica\n\n\nCaso Práctico: Inflación\n\n\nEl Escenario: Sale una noticia urgente diciendo: “La inflación subió a 4.8% en noviembre”.\nMi flujo mental:\n\n1. ¿Ritmo? → Chequeo el IMAE del mismo mes. ¿Hay un aumento en la demanda o es por el lado de la oferta?\n2. ¿Estabilidad? → Miro el dólar. ¿Se depreció recientemente? ¿Hay traspaso a precios?\n3. ¿Impacto? → Busco el índice de salarios. Si crecieron solo 2% y la inflación fue 4.8%, hay pérdida de poder adquisitivo.\n4. ¿Fiscal? → Reviso decisiones administrativas. ¿Hubo ajuste de combustibles o tarifas públicas que expliquen el salto matemático?\n\n\n\nEse recorrido me da un diagnóstico más completo que solo repetir el titular."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-no-muestra",
+    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-no-muestra",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "Qué no muestra",
+    "text": "Qué no muestra\n\nNo es una contabilidad completa ni un modelo formal.\nNo captura todas las instituciones, ni toda la historia, ni todas las fricciones.\nNo debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#la-implicación-para-el-blog",
+    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#la-implicación-para-el-blog",
+    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "section": "La Implicación para el Blog",
+    "text": "La Implicación para el Blog\nA partir de ahora, cada vez que publique un análisis de coyuntura, estará anclado a este esquema. Mis lecturas siempre intentarán conectar Dato → Mecanismo → Implicación, evitando quedarme en la simple opinión sobre el titular del día. Este mapa es el filtro por el que pasarán los números.\n\n• • •\n\n¿Usas un mapa mental parecido? Cuéntame en los comentarios.\nNota: Los próximos gráficos explorarán cada caja de este diagrama en detalle."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "",
+    "text": "Los cambios profundos son difíciles de ver desde adentro. Cuando se vive el proceso, lo que se percibe son los problemas que faltan resolver, no la distancia recorrida. La educación dominicana no es la excepción: las quejas sobre su calidad son legítimas, pero corren el riesgo de opacar una transformación que, medida con datos, resulta notable.\nEste artículo usa el Censo 2022 para documentar esa transformación. No para negar los desafíos, sino para ponerlos en perspectiva."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#dónde-estamos-parados",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#dónde-estamos-parados",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "¿Dónde estamos parados?",
+    "text": "¿Dónde estamos parados?\nLos datos del Censo 2022 muestran que la secundaria es hoy el nivel predominante entre los dominicanos: 35.9% de la población adulta llegó hasta ahí. Le sigue de cerca la primaria con 33.2%. Universitaria, maestría y doctorado juntos no llegan al 30%.\n\n\n\n\n\n\n\n\nFigura 1: Distribución del nivel educativo más alto alcanzado. Población de 25 años y más. Censo 2022.\n\n\n\n\n\n¿Es eso malo? Depende de desde dónde se mire. Una fotografía es estática, el proceso educativo no. Cualquier análisis que se quede en el número agregado pierde lo más importante: quién estudia hoy no es quien estudiaba hace cuarenta años, y esa diferencia lo cambia todo."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#una-revolución-en-cuatro-décadas",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#una-revolución-en-cuatro-décadas",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "Una revolución en cuatro décadas",
+    "text": "Una revolución en cuatro décadas\n\n\n\n\n\n\n\n\nFigura 2: Porcentaje de la población que alcanzó cada nivel educativo, por cohorte de edad. Censo 2022.\n\n\n\n\n\nHace sesenta años, Juan, abuelo de Pedro, oriundo de La Vega, dedicado a la siembra y al ganado de su padre, terminó la primaria con suerte. La secundaria no era una opción, era un lujo de otro mundo.\nHoy Pedro vive en una sociedad distinta. Que no termine la secundaria sería la excepción, no la regla.\nJuan y Pedro son personajes, pero la sociedad dominicana está llena de ambos. Entre los dominicanos de 65 años y más, menos de uno de cada tres llegó a la secundaria. Entre los de 25 a 34, más de ocho de cada diez la completaron o fueron más allá. La universidad, que para la generación de Juan alcanzaba apenas al 13% de la población, hoy la cursa más de uno de cada tres jóvenes. Y “solo terminé la primaria” se convierte cada vez más en una frase del pasado.\nEso es una revolución, silenciosa, acumulada en décadas, pero revolución al fin."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#la-otra-revolución-la-mujer-en-educación",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#la-otra-revolución-la-mujer-en-educación",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "La otra revolución: la mujer en educación",
+    "text": "La otra revolución: la mujer en educación\nLa revolución en magnitudes no viene sola. Sería un error no señalar el cambio cultural que la acompaña.\nEn la generación de Juan, los pocos afortunados que llegaban a la universidad eran mayoritariamente hombres. Hoy esa realidad está invertida y la brecha no para de crecer.\n\n\n\n\n\n\n\n\nFigura 3: Porcentaje con educación superior o más, por cohorte de edad y sexo. Censo 2022.\n\n\n\n\n\nEn la cohorte de 25 a 34 años, las mujeres con educación superior casi duplican a los hombres: 44.6% frente a 26.6%.\nQue la mujer dominicana haya conquistado la universidad en el lapso de dos generaciones es, sin exageración, uno de los cambios sociales más profundos que registra el censo. Pero ese logro abre una pregunta incómoda: ¿qué pasó con el hombre?\n¿Perdió fe en la educación? ¿Existen barreras económicas o culturales que lo empujan antes al mercado laboral? Los datos describen el patrón con claridad, explicarlo requiere un análisis más profundo que este artículo no pretende cerrar, pero sí dejar planteado."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#el-campo-y-la-ciudad",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#el-campo-y-la-ciudad",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "El campo y la ciudad",
+    "text": "El campo y la ciudad\nLa heterogeneidad del territorio dominicano obliga a mirar más allá del agregado nacional. ¿Llegó la revolución educativa al campo con la misma fuerza que a la ciudad?\n\n\n\n\n\n\n\n\nFigura 4: Porcentaje con educación superior o más, por cohorte de edad y zona. Censo 2022.\n\n\n\n\n\nLos datos son alentadores, pero incompletos. En la zona rural, la proporción de adultos mayores de 65 años con educación superior apenas alcanzaba el 4.4%. En la generación de 25 a 34, ese número llega al 25.4%, más de cinco veces superior. El avance es real e innegable.\nPero la brecha con el entorno urbano persiste. Mientras el campo joven llega al 25%, la ciudad joven está en 39.5%, casi 15 puntos de distancia. Dos generaciones de expansión educativa no han bastado para cerrarla.\nY aquí surge una pregunta que los datos no pueden responder solos: ¿cuánto de este avance rural es avance real, y cuánto es selección? Es posible que parte de los jóvenes rurales más motivados hayan migrado a la ciudad, inflando las cifras urbanas y desinflando las rurales. Sin datos de movilidad que lo confirmen, queda en conjetura, pero es una conjetura que vale la pena nombrar."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#captamos-más-pero-no-retenemos",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#captamos-más-pero-no-retenemos",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "Captamos más, pero no retenemos",
+    "text": "Captamos más, pero no retenemos\nLos avances son reales, pero el sistema ha generado sus propios problemas en el camino.\n\n\n\n\n\n\n\n\nFigura 5: Porcentaje que alcanzó cada etapa educativa, por cohorte. Censo 2022.\n\n\n\n\n\nEn la generación más cercana a Juan, pocas personas llegaban a la universidad. Pero quienes llegaban, terminaban: la tasa de graduación superaba el 79%. El filtro estaba en la entrada, no en el proceso.\nHoy la lógica se invirtió. La cohorte de 28 a 37 años entra a la universidad a una tasa del 35.7%, más del doble que las generaciones anteriores. Pero solo el 19.4% se gradúa. Más de la mitad de quienes ingresan no completan.\nEso no es expansión del sistema, es expansión de la puerta de entrada sin fortalecer lo que hay adentro.\nSin datos desagregados por institución es difícil señalar causas, pero siendo la UASD el centro con mayor número de estudiantes del país, es razonable asumir que una parte importante no logra completar la carrera y que una parte de esa inversión pública se pierde en el camino. No como juicio moral a quienes abandonan, las razones pueden ser económicas, familiares o académicas, sino como llamado a entender un fenómeno que el censo hace visible y que la política educativa no puede ignorar.\n\nEl género no ayuda\nRecordemos que los hombres ya llegaban en menor proporción a la universidad. En la no graduación, el problema se profundiza.\n\n\n\n\n\n\n\n\nFigura 6: Tasa de no graduación universitaria por sexo y zona. Cohorte 30-39 años. Censo 2022.\n\n\n\n\n\nUno de cada dos hombres que se inscribe en la universidad no llega a graduarse. Y el dato es casi idéntico entre hombres urbanos y rurales, lo que sugiere que la zona no es el factor determinante. Algo más sistemático está en juego.\nLas mujeres logran graduarse más en todas las combinaciones posibles. No es una diferencia marginal, es un patrón consistente que refuerza la pregunta planteada antes sobre el hombre dominicano y su relación con la educación superior."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#trayectorias-educativas-divididas",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#trayectorias-educativas-divididas",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "Trayectorias educativas divididas",
+    "text": "Trayectorias educativas divididas\nLas personas desarrollamos gustos distintos, y la educación no escapa a eso. Pero cuando las diferencias son tan marcadas, vale preguntarse si son producto de preferencias genuinas o si el entorno las moldea antes de que el individuo llegue a elegir.\n\n\n\n\n\n\n\n\nFigura 7: Porcentaje de graduados universitarios en cada campo, por sexo. Censo 2022.\n\n\n\n\n\nEn el sistema educativo dominicano, las mujeres se concentran en educación y salud; los hombres, en ingeniería y ciencias agrícolas. Buscar paridad exacta en cada carrera sería un absurdo. Pero la distancia en algunos campos es tan pronunciada que la pregunta sobre qué factores producen preferencias tan uniformes no puede descartarse como anecdótica.\n\n\nNOTA METODOLÓGICA\n\n\nAproximadamente 3 de cada 10 graduados no declararon su campo de estudio en el censo. El análisis excluye estas observaciones del denominador. Los campos presentados corresponden a los 11 de mayor volumen entre los titulados con carrera declarada."
+  },
+  {
+    "objectID": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#conclusión",
+    "href": "posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html#conclusión",
+    "title": "La revolución educativa dominicana: lo que el censo nos dice y lo que no",
+    "section": "Conclusión",
+    "text": "Conclusión\nLuego de recorrer los datos, es difícil sostener que estamos peor que hace cuarenta años. La evidencia apunta en la dirección contraria. Pero los avances conviven con problemas persistentes y con nuevos vicios generados por el propio proceso de expansión.\nLa educación sigue siendo, con todas sus imperfecciones, la principal puerta de salida de la pobreza para una parte importante de la población dominicana.\nA título personal: no creo que el objetivo deba ser que todos terminen con un título universitario. Las rutas técnicas, digitales y de formación no convencional abren puertas a talentos que el sistema tradicional descartaba. Pero ya sea que apostemos por ese camino o por seguir ampliando el acceso a la educación superior, la tarea es la misma: eliminar las barreras que deciden por las personas antes de que ellas puedan decidir por sí mismas.\n\n• • •\n\n\n  📚 Sigue leyendo\n  \n    \n      El mito del Banco Malo\n      Por qué las MiPyMES realmente no tienen crédito\n    \n    \n      10 años de transformación\n      Cambios en la canasta familiar dominicana\n    \n    \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial por empresas formales\n    \n  \n\n\n  Fuentes de Datos & Referencias\n  \n    \n      ONE (2022)\n      \"Censo Nacional de Población y Vivienda 2022\". Fuente principal de todos los microdatos utilizados en este análisis. Variables p26 (sexo), p27 (edad), p43 (nivel educativo), p45 (campo ISCED-F), p46 (graduación) y zona.\n      Ver Censo 2022 ↗\n    \n    \n      UNESCO-UIS (2022)\n      \"ISCED Fields of Education and Training 2013 (ISCED-F 2013)\". Clasificación internacional utilizada para agrupar los campos de estudio declarados en el censo (variable p45_code).\n      Ver clasificación ISCED-F ↗\n    \n    \n      CEPAL (2022)\n      \"La educación superior en América Latina y el Caribe\". Contexto regional utilizado para ubicar los indicadores dominicanos en perspectiva comparada. La región pasó de 23% a 52% de cobertura superior entre 2000 y 2018.\n      Ver CEPAL ↗\n    \n  \n\n\n  Si este análisis te resultó útil, considera compartirlo en\n  LinkedIn,\n  Twitter o\n  WhatsApp."
+  },
+  {
     "objectID": "posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html",
     "href": "posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html",
     "title": "El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito",
@@ -490,102 +504,81 @@
     "text": "Conclusión: el sesgo de selección\nNuestro país es uno de MiPyMES. Entender su anatomía nos permite elaborar mejores políticas públicas que impulsen su desarrollo.\nLas encuestas son un método muy efectivo de analizar comportamiento, pues no solo aportan información objetiva sino también de percepción por parte de los entrevistados. Y en este caso los datos hablan claro.\nQuizás, en vez de concentrarnos en la formalización y en suavizar las condiciones de acceso al crédito, debamos detenernos un paso antes. La exclusión financiera se rompe antes de llegar a la puerta de una institución crediticia: empieza por miedo al crédito, por modelos de subsistencia, por bajo conocimiento de oportunidades de mercado y cómo materializarlas.\nEl microcrédito, la formalización y los programas focalizados no son malos per se. Pero sin solucionar la base estructural, nos exponemos al sesgo de selección: los que ya estaban listos para crecer aprovecharán los programas, creando una distancia aún mayor con los rezagados.\nLos programas de crédito subsidiado llegarán a los Pedros. María seguirá operando en modo supervivencia.\ny tú, ¿Qué crees que le falta a nuestra María?\n\n• • •\n\n\n  📚 Sigue leyendo\n  \n    \n      10 años de transformación\n      Cambios en la canasta familiar\n    \n    \n      La aritmética desagradable de la deuda\n      Análisis de la deuda pública dominicana\n    \n    \n      Perspectiva de desarrollo\n      Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.\n    \n  \n\n\n  Fuentes de Datos & Referencias\n  \n    \n      Banco Central R.D. & MICM (2023)\n      \"Encuesta Nacional de las Micro, Pequeñas y Medianas Empresas 2022-2023\". Fuente oficial de los microdatos y la metodología de estratificación utilizada para este análisis.\n      Ver Informe y Metodología ↗\n    \n    \n      Beck, T., Demirgüç-Kunt, A. & Maksimovic, V. (2005)\n      \"Financial and Legal Constraints to Growth: Does Firm Size Matter?\". Estudio del Banco Mundial que valida la tesis de este artículo: las restricciones financieras afectan desproporcionadamente a las empresas más pequeñas, independientemente de su país.\n      Ver en Journal of Finance ↗\n    \n    \n      Stiglitz, J. & Weiss, A. (1981)\n      \"Credit Rationing in Markets with Imperfect Information\". El paper seminal que explica por qué los bancos racionan el crédito a las PYMES debido a la dificultad para evaluar su riesgo real (asimetría de información).\n      Ver Abstract Académico ↗\n    \n  \n\n\n  Si este análisis te resultó útil, considera compartirlo en \n  LinkedIn, \n  Twitter o \n  WhatsApp."
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
+    "objectID": "research/reporte-inclusion.html",
+    "href": "research/reporte-inclusion.html",
+    "title": "Reporte de Inclusión Financiera",
     "section": "",
-    "text": "Escuchar artículo\n    \n    \n        \n        Tu navegador no soporta el elemento de audio.\nLos tapones interminables, el transporte público saturado y el caos urbano son las quejas diarias del habitante del Gran Santo Domingo. Ante esta realidad, el diagnóstico popular es casi inmediato: “somos demasiados”. Y la solución propuesta suele ser igual de directa: “hay que desarrollar el interior para descongestionar la capital”\nSin embargo, en economía, la intuición no siempre basta. Sabemos que las personas migran buscando oportunidades, pero ¿qué tan desigual es realmente la distribución de estas oportunidades en el territorio nacional?\nMás allá de la percepción, los datos de los registros mercantiles nos ofrecen una métrica objetiva: la densidad empresarial. Este indicador no solo nos dice dónde está la gente, sino dónde está la actividad económica formal capaz de sostenerla. El siguiente mapa no es solo una ilustración geográfica, es una radiografía de por qué todos los caminos parecen conducir al Distrito Nacional."
+    "text": "TipDescargar Versión PDF\n\n\n\nEste reporte está disponible para descarga con maquetación oficial. 📥 Descargar PDF Generado"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#por-qué-emigramos",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#por-qué-emigramos",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
-    "section": "¿Por qué emigramos?",
-    "text": "¿Por qué emigramos?\nImaginemos a dos jóvenes con capacidades idénticas. Por un lado tenemos a Juan, nacido en Elías Piña, una provincia fronteriza cuya dinámica económica gira casi exclusivamente en torno al comercio informal con Haití. Por otro lado está Pedro, nacido en el Distrito Nacional, con un entorno familiar y educativo similar.\nLa única variable que cambia es su ubicación geográfica. La pregunta es inevitable: por el simple hecho de su lugar de nacimiento, ¿qué tan abismal es la brecha de oportunidades de empleo formal entre Juan y Pedro?\n\n\n\n\n\n\n\n\nFigura 1: Densidad empresarial por provincia (2024). El mapa ilustra el número de empresas formales por cada 1,000 habitantes. Se evidencia una fuerte concentración en el Distrito Nacional (36.5), contrastando drásticamente con provincias fronterizas como Elías Piña (1.4) y Pedernales (2.4).\n\n\n\n\n\nMientras Pedro vive en el Distrito Nacional, que cuenta con 36 empresas por cada 1,000 habitantes, Juan tan solo tiene 1.5. Es decir, las probabilidades de Pedro son 24 veces mayores a las de Juan, por el simple hecho de nacer en un lugar distinto.\n24×  Más oportunidades formales en el Distrito Nacional que en Elías Piña \nSi a usted le dijeran que sus posibilidades de empleo aumentarían tan significativamente por el hecho de mudarse, ¿lo dudaría?\nEn este contexto, la elección migratoria responde a un comportamiento racional, consistente con los incentivos disponibles."
+    "objectID": "research/reporte-inclusion.html#introducción",
+    "href": "research/reporte-inclusion.html#introducción",
+    "title": "Reporte de Inclusión Financiera",
+    "section": "1. Introducción",
+    "text": "1. Introducción\nA diferencia del informe oficial, este análisis se centra en…"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#más-allá-del-distrito-los-otros-oasis",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#más-allá-del-distrito-los-otros-oasis",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
-    "section": "Más allá del Distrito: Los otros oasis",
-    "text": "Más allá del Distrito: Los otros oasis\nAunque el Distrito Nacional es el primero que salta a la vista, también se observa cierta concentración en las zonas del Cibao y el Este. Por un lado, destaca Santiago con su potente tejido industrial, por el otro, La Altagracia, impulsada por la locomotora del turismo. Estos casos demuestran que es posible generar gravedad económica fuera de la capital.\n\nSantiago: base industrial y zonas francas consolidadas\n\nLa Altagracia: turismo como motor de encadenamientos productivos\n\nDistrito Nacional: servicios avanzados, mercado profundo y capital humano\n\nPero estos casos son la excepción, no la norma. Son el resultado de décadas de consolidación de industrias específicas —zonas francas y hotelería— que lograron alcanzar una masa crítica capaz de retener talento y capital. Para el resto del mapa, la realidad es un verde pálido."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#las-consecuencias-la-trampa-de-la-informalidad",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#las-consecuencias-la-trampa-de-la-informalidad",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
-    "section": "Las consecuencias: La trampa de la informalidad",
-    "text": "Las consecuencias: La trampa de la informalidad\nJuan no encuentra empleo formal, pero tampoco puede o quiere migrar. ¿Se queda de brazos cruzados? Difícilmente. Ante la ausencia de oportunidades formales, la alternativa racional es la informalidad: actividades de subsistencia, ingresos inestables y una vida económica sin red de protección.\n\nLa informalidad no es ausencia de trabajo, es ausencia de opciones formales.\n\nMientras tanto, Pedro trabaja en una empresa formal, con acceso a seguridad social, pensión y seguro médico. Juan, en cambio, vive del día a día, con ingresos inciertos y una planificación de vida marcada por la vulnerabilidad. La geografía, por tanto, influye no solo en el salario presente, sino también en el horizonte de vida futura."
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#la-paradoja-de-la-aglomeración-por-qué-es-tan-difícil-cambiar-el-mapa",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
-    "section": "La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?",
-    "text": "La paradoja de la aglomeración: ¿Por qué es tan difícil cambiar el mapa?\nSi el diagnóstico es claro, ¿por qué no llevamos simplemente las empresas donde está la gente? Aquí entra en juego una de las fuerzas más tercas de la economía: las economías de aglomeración.\nEs un círculo que se retroalimenta: las empresas se instalan en Santo Domingo porque ahí están los trabajadores calificados, los proveedores y los consumidores (mercado). Y los trabajadores, como Pedro, se mudan a Santo Domingo porque ahí están las empresas.\nRomper esta inercia no es tan simple como ofrecer incentivos fiscales. Requiere crear ecosistemas donde sea rentable operar. Mientras “ser más en un sitio” siga reduciendo costos y aumentando la productividad para las empresas, la gravedad de la capital seguirá atrayendo a los Juanes del país, perpetuando los tapones en el centro y el vacío en la periferia.\n\n  Economías de aglomeración\n  \n    Las empresas tienden a concentrarse donde pueden compartir trabajadores calificados, proveedores y mercados. Esta concentración reduce costos y aumenta productividad, reforzando la atracción del mismo territorio.\n  \n\n\n• • •"
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#conclusión",
-    "href": "posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html#conclusión",
-    "title": "Perspectiva del desarrollo: Densidad empresarial",
-    "section": "Conclusión",
-    "text": "Conclusión\nGeneralmente, cuando se dice que el empleo informal en el país ronda el 56%, se ve como un dato abstracto. Pero la realidad física de ese número está ahí: en el marcado contraste entre la zona terracota del Distrito Nacional, los focos anaranjados del Este y el Cibao, y el inmenso verde pálido que cubre a las demás zonas.\nLa concentración económica es una dinámica natural del desarrollo, no un error de diseño. El peligro radica en ignorarla. En un debate público obsesionado con los promedios nacionales, nuestra responsabilidad es recordar siempre la profunda heterogeneidad territorial que define a la República Dominicana.\n\n\n  📚 Sigue leyendo\n  \n  \n    \n    \n      10 años de transformación\n      Cambios en la canasta familiar\n    \n\n    \n      La aritmética desagradable de la deuda\n      Análisis de la Deuda pública dominicana\n    \n    \n    \n      El PIB y la trampa del bienestar\n      Por qué el PIB no mide bienestar\n    \n    \n  \n\n\n  Referencias & Fuentes de Datos\n  \n  \n    \n    \n      Oficina Nacional de Estadística (ONE)\n      Proyecciones de Población por Región y Provincia (2000-2030).\n      Ver dataset ↗\n    \n\n    \n      Oficina Nacional de Estadística (ONE)\n      Distribución de empresas registradas (2015-2024).\n      Ver reporte ↗\n    \n\n    \n      Krugman, P. (1991)\n      \"Increasing Returns and Economic Geography\". Journal of Political Economy.\n      Leer paper ↗"
-  },
-  {
-    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
-    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
+    "objectID": "investigacion.html",
+    "href": "investigacion.html",
+    "title": "Investigación",
     "section": "",
-    "text": "⏱️ 3 min de lectura\nPara entender la economía sin perderse, hace falta un mapa. Este primer gráfico no busca probar una teoría compleja, sino transparentar cómo organizo mentalmente la economía dominicana cada vez que me enfrento a una nueva base de datos.\nLa idea es tener, en una sola imagen, los pilares fundamentales: los sectores que mueven la aguja, el papel decisivo del sector externo (turismo y remesas) y las conexiones invisibles que terminan en los titulares de prensa: inflación, dólar y deuda.\nFigura 1. El ciclo de análisis de coyuntura: cuatro preguntas clave para interrogar los datos."
+    "text": "\"Modelando la realidad para informar la toma de decisiones.\"\n  \n  \n    Organización Industrial · Econometría Aplicada · Mercados Energéticos"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-muestra",
-    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-muestra",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Qué muestra",
-    "text": "Qué muestra\nEste diagrama organiza mi lectura de la economía dominicana en cuatro preguntas que siempre intento responder cuando analizo datos:\n\n1. ¿Se acelera o se frena? Aquí miro el ritmo: PIB, IMAE, inversión, turismo. Si la economía acelera, otras variables empiezan a moverse.\n2. ¿Hay presiones inflacionarias o cambiarias? La estabilidad nominal importa: si el dólar sube 8% en tres meses, eso afecta precios, salarios reales y decisiones de inversión.\n3. ¿Qué pasa con empleo y salarios? El impacto social: el crecimiento agregado no garantiza progreso si no llega a los bolsillos o si genera empleo precario.\n4. ¿Hay margen del Estado o está agotado? La restricción fiscal: déficit, deuda, recaudación. Si el espacio se agota, las respuestas contracíclicas desaparecen.\n\nEstas cuatro cajas no están aisladas: se conectan. Un shock externo (digamos, petróleo caro) puede afectar las cuatro simultáneamente."
+    "objectID": "investigacion.html#working-papers",
+    "href": "investigacion.html#working-papers",
+    "title": "Investigación",
+    "section": "Working Papers",
+    "text": "Working Papers\nInvestigaciones en curso, presentadas con enfoque editorial.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n Working Paper   1 ene 2026 \n\n\nMonetary Policy Transmission in DR\n\n\nVAR model analysis regarding interest rate pass-through mechanisms in the Dominican banking sector.\n\n\n  Read Abstract \n  Read Abstract \n\n\n\n\n Data Project   1 ene 2025 \n\n\nElasticidad Precio del Sector Eléctrico\n\n\nEstimación econométrica utilizando microdatos de la ENGRH y R/Tidyverse.\n\n\n  Ver Código \n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#cómo-lo-uso-en-la-práctica",
-    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#cómo-lo-uso-en-la-práctica",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Cómo lo uso en la práctica",
-    "text": "Cómo lo uso en la práctica\n\n\nCaso Práctico: Inflación\n\n\nEl Escenario: Sale una noticia urgente diciendo: “La inflación subió a 4.8% en noviembre”.\nMi flujo mental:\n\n1. ¿Ritmo? → Chequeo el IMAE del mismo mes. ¿Hay un aumento en la demanda o es por el lado de la oferta?\n2. ¿Estabilidad? → Miro el dólar. ¿Se depreció recientemente? ¿Hay traspaso a precios?\n3. ¿Impacto? → Busco el índice de salarios. Si crecieron solo 2% y la inflación fue 4.8%, hay pérdida de poder adquisitivo.\n4. ¿Fiscal? → Reviso decisiones administrativas. ¿Hubo ajuste de combustibles o tarifas públicas que expliquen el salto matemático?\n\n\n\nEse recorrido me da un diagnóstico más completo que solo repetir el titular."
+    "objectID": "investigacion.html#policy-briefs",
+    "href": "investigacion.html#policy-briefs",
+    "title": "Investigación",
+    "section": "Policy Briefs",
+    "text": "Policy Briefs\nDocumentos de síntesis para política pública.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n      \n        status\n      \n    \n  \n\n\n\n\n Policy Brief   1 ene 2026 \n\n\nPB-001: Dinámicas de Precios Spot\n\n\nResumen ejecutivo sobre hallazgos del modelo de Cournot y recomendaciones regulatorias.\n\n\n  Ver Documento \n\n\n\n\n Policy Brief   Invalid Date \n\n\nPB-002: Impacto Fiscal del Subsidio\n\n\nAnálisis preliminar de la carga fiscal proyectada para el Q3 2026.\n\n\n(En desarrollo)\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-no-muestra",
-    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#qué-no-muestra",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "Qué no muestra",
-    "text": "Qué no muestra\n\nNo es una contabilidad completa ni un modelo formal.\nNo captura todas las instituciones, ni toda la historia, ni todas las fricciones.\nNo debe leerse como “la única forma correcta” de ver la economía, sino como el mapa que yo uso para orientarme."
+    "objectID": "investigacion.html#reportes-técnicos",
+    "href": "investigacion.html#reportes-técnicos",
+    "title": "Investigación",
+    "section": "Reportes Técnicos",
+    "text": "Reportes Técnicos\nProductos de análisis elaborados a partir de microdatos y fuentes oficiales. Procesamiento, limpieza y visualización propios.\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n\n\n\n\n Reporte Técnico   1 ene 2026 \n\n\nReporte de Inclusión Financiera 2025\n\n\nProcesamiento de microdatos de la ENIF. Análisis de brechas por quintil de ingreso y zona geográfica.\n\n\n  Ver Reporte Interactivo \n  Ver Reporte Interactivo \n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#la-implicación-para-el-blog",
-    "href": "posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html#la-implicación-para-el-blog",
-    "title": "Gráfico #0: Cómo leo la economía dominicana",
-    "section": "La Implicación para el Blog",
-    "text": "La Implicación para el Blog\nA partir de ahora, cada vez que publique un análisis de coyuntura, estará anclado a este esquema. Mis lecturas siempre intentarán conectar Dato → Mecanismo → Implicación, evitando quedarme en la simple opinión sobre el titular del día. Este mapa es el filtro por el que pasarán los números.\n\n• • •\n\n¿Usas un mapa mental parecido? Cuéntame en los comentarios.\nNota: Los próximos gráficos explorarán cada caja de este diagrama en detalle."
+    "objectID": "investigacion.html#stack-tecnológico",
+    "href": "investigacion.html#stack-tecnológico",
+    "title": "Investigación",
+    "section": "Stack Tecnológico",
+    "text": "Stack Tecnológico\nHerramientas utilizadas en el procesamiento de estos datos.\n\n  Power BI    R / Tidyverse    SQL"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
+    "objectID": "fundamentos.html",
+    "href": "fundamentos.html",
+    "title": "Fundamentos",
     "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
+    "text": "Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.\nA continuación están los artículos de esta serie:\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "about.html#sobre-este-blog",
-    "href": "about.html#sobre-este-blog",
-    "title": "Sobre mí",
+    "objectID": "categorias.html",
+    "href": "categorias.html",
+    "title": "Categorías",
     "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
+    "text": "Selecciona un tema clave para filtrar los artículos automáticamente."
   },
   {
-    "objectID": "about.html#quién-escribe",
-    "href": "about.html#quién-escribe",
-    "title": "Sobre mí",
-    "section": "Quién escribe",
-    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.\nNo escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.\n\nLo que ofrezco\n\nTransparencia: Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.\nClaridad: Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.\nContexto: Todos los análisis están pensados desde y para la República Dominicana.\n\nEsto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano."
+    "objectID": "categorias.html#índice-completo",
+    "href": "categorias.html#índice-completo",
+    "title": "Categorías",
+    "section": "Índice completo",
+    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nRepública en un Gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República en un gráfico\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa república en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa republica en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa Republica en un gráfico: 10 años de transformación\n\n\n\nLa república en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
+    "section": "",
+    "text": "Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.\nAquí se irán agrupando textos que responden a preguntas como: - “¿Qué significa realmente esta medida?” - “¿Por qué la gente siente X si el dato dice Y?” - “¿Qué podría cambiar este escenario?”\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "archivo.html",
@@ -600,5 +593,12 @@
     "title": "Archivo",
     "section": "Todas las publicaciones",
     "text": "Todas las publicaciones"
+  },
+  {
+    "objectID": "predecesores.html",
+    "href": "predecesores.html",
+    "title": "Mis predecesores",
+    "section": "",
+    "text": "Economistas, ideas y por qué me importan.\nAquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\nNo hay resultados"
   }
 ]
