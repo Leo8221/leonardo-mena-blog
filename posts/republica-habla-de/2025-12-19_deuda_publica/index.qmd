@@ -378,7 +378,7 @@ Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una 
     </div>
     
     <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">Decada de transformación</a></h4>
+      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">Década de transformación</a></h4>
       <p>Análisis de los cambios en la canasta familiar dominicana.</p>
     </div>
     

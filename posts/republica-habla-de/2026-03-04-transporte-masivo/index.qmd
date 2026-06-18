@@ -7,7 +7,7 @@ categories:
   - "Transporte"
   - "Desarrollo"
   - "MiPyMES"
-  - "La República en un gráfico"
+  - "La República habla de"
 draft: false
 format:
   html:

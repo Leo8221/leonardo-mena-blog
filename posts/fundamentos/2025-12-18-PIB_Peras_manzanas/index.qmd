@@ -8,7 +8,7 @@ twitter-card:
   image: "portada-pib.png"
 categories: 
   - "Fundamentos"
-draft: False
+draft: false
 body-class: editorial-post
 toc: true
 toc-location: left

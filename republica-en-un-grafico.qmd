@@ -1,12 +1,56 @@
 ---
 title: "La República en un gráfico"
+page-layout: full
 listing:
   contents:
-    - posts/republica-en-un-grafico
+    - posts/republica-en-un-grafico/**/*.qmd
+    - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
   sort: "date desc"
   type: default
+  fields: [title, date, description, image]
 ---
 
-Un gráfico, una lectura y una implicación para República Dominicana.
+::: {.hub-header}
+# La República en un gráfico
 
-Aquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.
+Una visualización, una lectura y una implicación para entender mejor la economía dominicana.
+
+::: {.hub-meta}
+<span class="hub-chip">Gráficos</span>
+<span class="hub-chip">Series dominicanas</span>
+<span class="hub-chip">Lectura rapida</span>
+:::
+:::
+
+::: {.series-grid}
+::: {.series-card}
+<span class="product-kicker">Promesa</span>
+
+## Un argumento visual
+
+El gráfico no acompaña el texto: lo organiza.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Rigor</span>
+
+## Fuente visible
+
+Cada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Criterio</span>
+
+## Implicación económica
+
+El cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública.
+:::
+:::
+
+::: {.section-listing-wrap}
+## Gráficos publicados
+
+::: {#listing}
+:::
+:::

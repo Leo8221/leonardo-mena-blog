@@ -1,9 +1,24 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "posts/**/*.qmd"
+    - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+    - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
+    - "!research/**/*.qmd"
   resources: 
+    - .nojekyll
     - robots.txt
     - tema_graficos.R
+    - atlas/index.html
+    - atlas/app.js
+    - atlas/styles.css
+    - atlas/data/atlas-data.json
+    - atlas/data/article-visuals.json
+    - atlas/data/rd-provinces.geojson
+    - atlas/data/rd-regions-mipymes.geojson
+    - atlas/data/world-tourism.geojson
 
 lang: es 
 
@@ -30,31 +45,37 @@ website:
     left:
       - href: index.qmd
         text: Inicio
-      - text: Temas
+      - href: productos.qmd
+        text: Productos
+      - text: Análisis
         menu:
           - text: "La República habla de"
             href: republica-habla-de.qmd
-          - text: "Fundamentos"
-            href: fundamentos.qmd
+          - text: "La República en un gráfico"
+            href: republica-en-un-grafico.qmd
+          - text: "Archivo completo"
+            href: archivo.qmd
+          - text: "Categorías"
+            href: categorias.qmd
+      - href: atlas/index.html
+        text: "Atlas LM"
+        icon: graph-up
+      - href: investigacion.qmd
+        text: Investigación
+      - text: Escuela
+        menu:
           - text: "Mis predecesores"
             href: predecesores.qmd
           - text: "Mitos económicos"
             href: mitos-economicos.qmd
-          - text: "La República en un grafico"
-            href: republica-en-un-grafico.qmd  
-      - href: categorias.qmd
-        text: Categorías
- #     - href: investigacion.qmd # sección de Papers 
-  #      text: Investigación
-      - href: archivo.qmd
-        text: Archivo
+          - text: "Fundamentos"
+            href: fundamentos.qmd
     right:
       - text: "<span style='background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;'>Suscríbete</span>"
         href: suscribete.qmd
         aria-label: "Suscribirse al boletín"
-      - href: observatorio.qmd
-        text: "Observatorio 📊" 
-        icon: graph-up          
+      - href: about.qmd
+        text: "Sobre mí"
 
 
   # Configuración para compartir en redes

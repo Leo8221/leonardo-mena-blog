@@ -10,7 +10,7 @@ twitter-card:
 categories: 
   - "Econometría"
   - "Economía Dominicana"
-  - "La república en un gráfico"
+  - "La República en un gráfico"
 draft: false
 body-class: editorial-post
 toc: true

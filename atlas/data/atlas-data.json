@@ -1,0 +1,939 @@
+{
+  "updated": "2026-06-18",
+  "brand": {
+    "name": "Atlas LM",
+    "shortName": "Atlas LM",
+    "tagline": "Economia aplicada, datos y lectura sectorial de Republica Dominicana.",
+    "sourceNote": "Datos, mapas y modelos reunidos en una arquitectura modular."
+  },
+  "system": {
+    "version": "0.3.0",
+    "visibilityPolicy": "Solo se publican modulos con visible=true, status=Activo y datos para su chart.",
+    "hiddenStatuses": [
+      "Borrador",
+      "Backlog",
+      "Pendiente",
+      "Proximo"
+    ],
+    "defaultLocale": "es-DO"
+  },
+  "metrics": [
+    {
+      "id": "usd",
+      "label": "Dolar spot",
+      "value": "RD$ 59,15",
+      "delta": "-0,35% vs. ayer",
+      "meta": "Tasa de venta",
+      "tone": "good",
+      "module": "pulso-macro"
+    },
+    {
+      "id": "inflation",
+      "label": "Inflacion interanual",
+      "value": "5,35%",
+      "delta": "Fuera de meta",
+      "meta": "Meta BCRD: 4% +/- 1 pp",
+      "tone": "warn",
+      "module": "pulso-macro"
+    },
+    {
+      "id": "trade",
+      "label": "Socio exportador lider",
+      "value": "EE. UU.",
+      "delta": "52% del bloque visible",
+      "meta": "Comercio exterior",
+      "tone": "neutral",
+      "module": "comercio-exterior"
+    },
+    {
+      "id": "labor",
+      "label": "Brecha laboral joven",
+      "value": "24 pp",
+      "delta": "Superior vs. secundaria",
+      "meta": "Capital humano",
+      "tone": "warn",
+      "module": "mercado-laboral"
+    },
+    {
+      "id": "territory",
+      "label": "Nodo territorial",
+      "value": "Santo Domingo",
+      "delta": "Mayor escala de mercado",
+      "meta": "Territorio",
+      "tone": "good",
+      "module": "territorio-infraestructura"
+    },
+    {
+      "id": "mipyme",
+      "label": "Principal friccion MIPYME",
+      "value": "Financiamiento",
+      "delta": "Barrera transversal",
+      "meta": "Productividad",
+      "tone": "warn",
+      "module": "mipymes-productividad"
+    }
+  ],
+  "modules": [
+    {
+      "id": "pulso-macro",
+      "title": "Pulso macro RD",
+      "status": "Activo",
+      "visible": true,
+      "type": "Monitor",
+      "family": "Macro",
+      "topic": "Coyuntura",
+      "summary": "Seguimiento de tipo de cambio, inflacion, TPM e IMAE para leer el pulso semanal de la economia dominicana.",
+      "source": "BCRD",
+      "sourceDetail": "Series publicas del Banco Central: mercado cambiario, precios, politica monetaria e IMAE.",
+      "question": "Que esta cambiando en la coyuntura dominicana?",
+      "insight": "El modulo separa nivel, variacion y contexto para evitar que un solo indicador cargue toda la interpretacion macro.",
+      "chart": "macro",
+      "methodology": [
+        "Tipo de cambio: tasa de venta spot.",
+        "Inflacion: variacion interanual del IPC.",
+        "TPM: tasa de politica monetaria vigente.",
+        "Actividad: variacion interanual del IMAE."
+      ],
+      "related": [
+        "republica-habla-de.html",
+        "republica-en-un-grafico.html"
+      ]
+    },
+    {
+      "id": "sectores",
+      "title": "Sensibilidad sectorial",
+      "status": "Activo",
+      "visible": true,
+      "type": "Modelo",
+      "family": "Sectores",
+      "topic": "Sectores",
+      "summary": "Ranking de exposicion sectorial ante demanda, precios, financiamiento, tipo de cambio, energia y entorno externo.",
+      "source": "BCRD, FRED, Yahoo Finance",
+      "sourceDetail": "Modelo de sensibilidad con pesos transparentes por sector y drivers macro normalizados.",
+      "question": "Que sectores lucen mas expuestos bajo las condiciones actuales?",
+      "insight": "No sustituye cuentas sectoriales oficiales; funciona como capa de lectura para priorizar donde mirar primero.",
+      "chart": "sectors",
+      "methodology": [
+        "Los drivers se normalizan en escala 0-100.",
+        "Cada sector usa pesos predefinidos por sensibilidad economica.",
+        "El driver principal es el de mayor contribucion al indice del sector."
+      ],
+      "related": [
+        "republica-habla-de.html"
+      ]
+    },
+    {
+      "id": "contexto-externo",
+      "title": "Condiciones externas",
+      "status": "Activo",
+      "visible": true,
+      "type": "Indice",
+      "family": "Macro",
+      "topic": "Entorno global",
+      "summary": "Indice de presion externa para seguir energia, tasas, dolar global, volatilidad y ciclo real externo.",
+      "source": "FRED, Yahoo Finance",
+      "sourceDetail": "Variables globales normalizadas y agregadas en escala 0-100.",
+      "question": "El entorno global sopla a favor o en contra?",
+      "insight": "La lectura compacta permite conectar shocks globales con turismo, transporte, precios y financiamiento local.",
+      "chart": "external",
+      "methodology": [
+        "Valores altos indican condiciones externas mas adversas.",
+        "La senal se suaviza para reducir ruido de mercado.",
+        "Los componentes mantienen unidades comparables mediante normalizacion."
+      ],
+      "related": [
+        "republica-habla-de.html"
+      ]
+    },
+    {
+      "id": "comercio-exterior",
+      "title": "Atlas de comercio exterior",
+      "status": "Activo",
+      "visible": true,
+      "type": "Explorador",
+      "family": "Comercio",
+      "topic": "Comercio",
+      "summary": "Vista para socios, productos, balance y oportunidades de sofisticacion exportadora de Republica Dominicana.",
+      "source": "UN Comtrade, OEC, Aduanas RD",
+      "sourceDetail": "Estructura preparada para series de comercio por socio, producto y flujo.",
+      "question": "Que vendemos, a quien y con que margen de sofisticacion?",
+      "insight": "El modulo obliga a mirar concentracion, balance y oportunidad a la vez, no solo el ranking de socios.",
+      "chart": "trade",
+      "methodology": [
+        "Los socios se comparan por participacion relativa en el bloque visible.",
+        "La oportunidad combina escala de mercado y complejidad potencial.",
+        "El balance se interpreta como senal exploratoria, no como diagnostico completo."
+      ],
+      "related": [
+        "republica-en-un-grafico.html"
+      ]
+    },
+    {
+      "id": "mercado-laboral",
+      "title": "Mercado laboral y salarios",
+      "status": "Activo",
+      "visible": true,
+      "type": "Analisis",
+      "family": "Trabajo",
+      "topic": "Trabajo",
+      "summary": "Panel para empleo, informalidad, salarios, educacion y brechas de insercion laboral.",
+      "source": "ONE, BCRD ENCFT, TSS",
+      "sourceDetail": "Estructura de lectura para combinar censo, encuesta laboral y registros administrativos.",
+      "question": "Donde se esta creando valor laboral y donde persisten brechas?",
+      "insight": "La separacion por educacion y tipo de insercion evita confundir mas escolaridad con mejor trayectoria laboral automatica.",
+      "chart": "labor",
+      "methodology": [
+        "Las tasas se leen por grupo educativo y cohorte laboral.",
+        "La informalidad funciona como guardrail de calidad del empleo.",
+        "El indice salarial es relativo para comparar direcciones, no pesos corrientes."
+      ],
+      "related": [
+        "republica-en-un-grafico.html"
+      ]
+    },
+    {
+      "id": "costo-vida",
+      "title": "Costo de vida y precios",
+      "status": "Activo",
+      "visible": true,
+      "type": "Monitor",
+      "family": "Precios",
+      "topic": "Precios",
+      "summary": "Lectura interactiva de inflacion por rubros, alimentos, combustibles y canales de segunda ronda.",
+      "source": "BCRD, MICM, Ministerio de Hacienda",
+      "sourceDetail": "Componentes de precios y canales de traspaso hacia hogares y costos productivos.",
+      "question": "Que rubros explican la presion de precios que siente la gente?",
+      "insight": "El foco esta en separar el shock inicial del canal que lo convierte en costo cotidiano.",
+      "chart": "prices",
+      "methodology": [
+        "Las contribuciones se expresan en puntos porcentuales.",
+        "Los canales de traspaso se normalizan en escala 0-100.",
+        "Subsidios y combustibles se tratan como amortiguadores, no como eliminadores del shock."
+      ],
+      "related": [
+        "republica-habla-de.html"
+      ]
+    },
+    {
+      "id": "territorio-infraestructura",
+      "title": "Territorio e infraestructura",
+      "status": "Activo",
+      "visible": true,
+      "type": "Mapa analitico",
+      "family": "Territorio",
+      "topic": "Territorio",
+      "summary": "Modulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
+      "source": "ONE, MOPC, registros administrativos",
+      "sourceDetail": "Indice territorial compuesto por mercado, infraestructura y capital humano.",
+      "question": "Como se distribuyen oportunidades y restricciones en el territorio?",
+      "insight": "La comparacion territorial ayuda a separar escala economica, conectividad y capacidad laboral.",
+      "chart": "territory",
+      "methodology": [
+        "El indice de oportunidad combina mercado, infraestructura y fuerza laboral.",
+        "La vista por region permite comparar nodos y periferias.",
+        "Los puntajes son una capa de priorizacion para analisis posteriores."
+      ],
+      "related": [
+        "republica-habla-de.html"
+      ]
+    },
+    {
+      "id": "mipymes-productividad",
+      "title": "MiPyMES y productividad",
+      "status": "Activo",
+      "visible": true,
+      "type": "Analisis",
+      "family": "Empresas",
+      "topic": "Empresas",
+      "summary": "Seccion para financiamiento, formalidad, productividad, tamano empresarial y barreras de crecimiento.",
+      "source": "Encuestas MiPyMES, BCRD, DGII",
+      "sourceDetail": "Lectura por tamano, formalidad, acceso financiero y brechas de gestion.",
+      "question": "Que limita la productividad empresarial y donde hay margen de mejora?",
+      "insight": "El modulo mira las MiPyMES como sistema de restricciones: dinero, formalidad, gestion y mercado.",
+      "chart": "mipymes",
+      "methodology": [
+        "Las barreras se expresan como intensidad relativa.",
+        "La escalera productiva compara micro, pequena y mediana empresa.",
+        "El acceso financiero se cruza con formalidad para evitar lecturas aisladas."
+      ],
+      "related": [
+        "republica-en-un-grafico.html"
+      ]
+    },
+    {
+      "id": "laboratorio-visual",
+      "title": "Laboratorio visual",
+      "status": "Activo",
+      "visible": true,
+      "type": "Demo analitica",
+      "family": "Visuales",
+      "topic": "Cartografia y graficos",
+      "summary": "Galeria interactiva construida con mapas y graficos reales de articulos publicados.",
+      "source": "Articulos publicados",
+      "sourceDetail": "Activos generados desde shapefiles, CSV y XLSX usados en articulos sobre territorio, MiPyMES, turismo, transporte y deuda.",
+      "question": "Que puede hacer el Atlas con datos reales que ya viven en los articulos?",
+      "insight": "Un articulo con datos trazables puede crecer hasta convertirse en pieza explorable.",
+      "chart": "visualLab",
+      "methodology": [
+        "Cada visual nace de archivos usados por articulos existentes, no de datos decorativos.",
+        "Los mapas se exportan como GeoJSON liviano para interaccion en navegador.",
+        "Los articulos con datos pueden convertirse en piezas explorables."
+      ],
+      "related": [
+        "republica-en-un-grafico.html",
+        "republica-habla-de.html"
+      ]
+    }
+  ],
+  "series": {
+    "visualLab": {
+      "dataFile": "article-visuals.json",
+      "mapFiles": [
+        "rd-provinces.geojson",
+        "rd-regions-mipymes.geojson",
+        "world-tourism.geojson"
+      ]
+    },
+    "macro": [
+      {
+        "period": "Sep",
+        "dolar": 57.8,
+        "inflacion": 3.2,
+        "imae": 4.5,
+        "tpm": 7
+      },
+      {
+        "period": "Oct",
+        "dolar": 58.4,
+        "inflacion": 3.4,
+        "imae": 4.1,
+        "tpm": 6.75
+      },
+      {
+        "period": "Nov",
+        "dolar": 59.1,
+        "inflacion": 3.6,
+        "imae": 4.3,
+        "tpm": 6.5
+      },
+      {
+        "period": "Dic",
+        "dolar": 60.2,
+        "inflacion": 3.8,
+        "imae": 4,
+        "tpm": 6.25
+      },
+      {
+        "period": "Ene",
+        "dolar": 63.9,
+        "inflacion": 3.3,
+        "imae": 4.2,
+        "tpm": 5.75
+      },
+      {
+        "period": "Feb",
+        "dolar": 62.6,
+        "inflacion": 3.5,
+        "imae": 4,
+        "tpm": 5.75
+      },
+      {
+        "period": "Mar",
+        "dolar": 60.1,
+        "inflacion": 3.8,
+        "imae": 3.7,
+        "tpm": 5.5
+      },
+      {
+        "period": "Abr",
+        "dolar": 61,
+        "inflacion": 4.1,
+        "imae": 3.8,
+        "tpm": 5.5
+      },
+      {
+        "period": "May",
+        "dolar": 59.7,
+        "inflacion": 5.35,
+        "imae": 4,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun",
+        "dolar": 59.15,
+        "inflacion": 5.35,
+        "imae": 3.8,
+        "tpm": 5.25
+      }
+    ],
+    "external": [
+      {
+        "period": "Sep",
+        "pressure": 49.2
+      },
+      {
+        "period": "Oct",
+        "pressure": 50.1
+      },
+      {
+        "period": "Nov",
+        "pressure": 51.7
+      },
+      {
+        "period": "Dic",
+        "pressure": 52
+      },
+      {
+        "period": "Ene",
+        "pressure": 52.2
+      },
+      {
+        "period": "Feb",
+        "pressure": 51.8
+      },
+      {
+        "period": "Mar",
+        "pressure": 53.5
+      },
+      {
+        "period": "Abr",
+        "pressure": 54.4
+      },
+      {
+        "period": "May",
+        "pressure": 55.4
+      },
+      {
+        "period": "Jun",
+        "pressure": 54.5
+      }
+    ],
+    "drivers": [
+      {
+        "driver": "Demanda interna",
+        "value": 48
+      },
+      {
+        "driver": "Precios domesticos",
+        "value": 61
+      },
+      {
+        "driver": "Financiamiento",
+        "value": 53
+      },
+      {
+        "driver": "Tipo de cambio",
+        "value": 38
+      },
+      {
+        "driver": "Energia",
+        "value": 58
+      },
+      {
+        "driver": "Entorno externo",
+        "value": 54.5
+      }
+    ],
+    "sectors": [
+      {
+        "sector": "Turismo",
+        "pressure": 41.2,
+        "driver": "Entorno externo",
+        "direction": "Externo"
+      },
+      {
+        "sector": "Industria",
+        "pressure": 41.1,
+        "driver": "Energia",
+        "direction": "Costos"
+      },
+      {
+        "sector": "Servicios financieros",
+        "pressure": 39.5,
+        "driver": "Financiamiento",
+        "direction": "Tasas"
+      },
+      {
+        "sector": "Transporte",
+        "pressure": 39.2,
+        "driver": "Energia",
+        "direction": "Costos"
+      },
+      {
+        "sector": "Construccion",
+        "pressure": 37.8,
+        "driver": "Financiamiento",
+        "direction": "Tasas"
+      },
+      {
+        "sector": "Agropecuaria",
+        "pressure": 36.2,
+        "driver": "Energia",
+        "direction": "Costos"
+      },
+      {
+        "sector": "MiPyMES y consumo",
+        "pressure": 35.9,
+        "driver": "Demanda interna",
+        "direction": "Demanda"
+      },
+      {
+        "sector": "Comercio",
+        "pressure": 34.1,
+        "driver": "Demanda interna",
+        "direction": "Demanda"
+      }
+    ],
+    "trade": {
+      "partners": [
+        {
+          "name": "Estados Unidos",
+          "exports": 52,
+          "imports": 43,
+          "balance": 8,
+          "opportunity": 78
+        },
+        {
+          "name": "Haiti",
+          "exports": 16,
+          "imports": 2,
+          "balance": 14,
+          "opportunity": 55
+        },
+        {
+          "name": "Suiza",
+          "exports": 8,
+          "imports": 1,
+          "balance": 7,
+          "opportunity": 63
+        },
+        {
+          "name": "China",
+          "exports": 2,
+          "imports": 18,
+          "balance": -16,
+          "opportunity": 48
+        },
+        {
+          "name": "Espana",
+          "exports": 4,
+          "imports": 5,
+          "balance": -1,
+          "opportunity": 51
+        },
+        {
+          "name": "Mexico",
+          "exports": 3,
+          "imports": 7,
+          "balance": -4,
+          "opportunity": 46
+        }
+      ],
+      "products": [
+        {
+          "name": "Oro y minerales",
+          "share": 31,
+          "complexity": 42,
+          "signal": "Concentracion alta"
+        },
+        {
+          "name": "Instrumentos medicos",
+          "share": 18,
+          "complexity": 82,
+          "signal": "Sofisticacion alta"
+        },
+        {
+          "name": "Tabaco y cigarros",
+          "share": 11,
+          "complexity": 54,
+          "signal": "Marca exportadora"
+        },
+        {
+          "name": "Textiles",
+          "share": 9,
+          "complexity": 49,
+          "signal": "Integracion regional"
+        },
+        {
+          "name": "Cacao y derivados",
+          "share": 5,
+          "complexity": 57,
+          "signal": "Valor agregado potencial"
+        }
+      ],
+      "flows": [
+        {
+          "period": "2021",
+          "exports": 100,
+          "imports": 126
+        },
+        {
+          "period": "2022",
+          "exports": 108,
+          "imports": 134
+        },
+        {
+          "period": "2023",
+          "exports": 111,
+          "imports": 132
+        },
+        {
+          "period": "2024",
+          "exports": 116,
+          "imports": 137
+        },
+        {
+          "period": "2025",
+          "exports": 121,
+          "imports": 141
+        }
+      ]
+    },
+    "labor": {
+      "outcomes": [
+        {
+          "group": "Primaria o menos",
+          "employment": 55,
+          "informality": 68,
+          "wageIndex": 72
+        },
+        {
+          "group": "Secundaria",
+          "employment": 63,
+          "informality": 52,
+          "wageIndex": 88
+        },
+        {
+          "group": "Tecnica",
+          "employment": 72,
+          "informality": 37,
+          "wageIndex": 107
+        },
+        {
+          "group": "Universitaria",
+          "employment": 79,
+          "informality": 26,
+          "wageIndex": 134
+        },
+        {
+          "group": "Posgrado",
+          "employment": 83,
+          "informality": 18,
+          "wageIndex": 158
+        }
+      ],
+      "trend": [
+        {
+          "period": "2021",
+          "employment": 59,
+          "realWage": 94
+        },
+        {
+          "period": "2022",
+          "employment": 61,
+          "realWage": 97
+        },
+        {
+          "period": "2023",
+          "employment": 63,
+          "realWage": 99
+        },
+        {
+          "period": "2024",
+          "employment": 64,
+          "realWage": 101
+        },
+        {
+          "period": "2025",
+          "employment": 65,
+          "realWage": 103
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Servicios",
+          "jobs": 38,
+          "wageIndex": 104
+        },
+        {
+          "name": "Comercio",
+          "jobs": 22,
+          "wageIndex": 88
+        },
+        {
+          "name": "Industria",
+          "jobs": 13,
+          "wageIndex": 99
+        },
+        {
+          "name": "Construccion",
+          "jobs": 9,
+          "wageIndex": 92
+        },
+        {
+          "name": "Agropecuaria",
+          "jobs": 8,
+          "wageIndex": 76
+        }
+      ]
+    },
+    "prices": {
+      "components": [
+        {
+          "component": "Alimentos",
+          "contribution": 1.6,
+          "pressure": 73
+        },
+        {
+          "component": "Transporte",
+          "contribution": 1.1,
+          "pressure": 68
+        },
+        {
+          "component": "Vivienda y servicios",
+          "contribution": 0.8,
+          "pressure": 57
+        },
+        {
+          "component": "Restaurantes",
+          "contribution": 0.6,
+          "pressure": 54
+        },
+        {
+          "component": "Otros bienes",
+          "contribution": 0.4,
+          "pressure": 42
+        }
+      ],
+      "passThrough": [
+        {
+          "channel": "Combustibles",
+          "value": 78,
+          "note": "Shock inicial"
+        },
+        {
+          "channel": "Transporte",
+          "value": 66,
+          "note": "Costos logisticos"
+        },
+        {
+          "channel": "Alimentos",
+          "value": 61,
+          "note": "Canasta cotidiana"
+        },
+        {
+          "channel": "Expectativas",
+          "value": 44,
+          "note": "Persistencia"
+        },
+        {
+          "channel": "Subsidios",
+          "value": 36,
+          "note": "Amortiguador"
+        }
+      ],
+      "timeline": [
+        {
+          "period": "Ene",
+          "headline": 3.3,
+          "core": 4.1
+        },
+        {
+          "period": "Feb",
+          "headline": 3.5,
+          "core": 4
+        },
+        {
+          "period": "Mar",
+          "headline": 3.8,
+          "core": 4.2
+        },
+        {
+          "period": "Abr",
+          "headline": 4.1,
+          "core": 4.3
+        },
+        {
+          "period": "May",
+          "headline": 5.35,
+          "core": 4.5
+        },
+        {
+          "period": "Jun",
+          "headline": 5.35,
+          "core": 4.6
+        }
+      ]
+    },
+    "territory": {
+      "regions": [
+        "Todas",
+        "Ozama",
+        "Norte",
+        "Este",
+        "Sur"
+      ],
+      "provinces": [
+        {
+          "province": "Distrito Nacional",
+          "region": "Ozama",
+          "opportunity": 88,
+          "infrastructure": 91,
+          "labor": 86,
+          "market": 95
+        },
+        {
+          "province": "Santo Domingo",
+          "region": "Ozama",
+          "opportunity": 84,
+          "infrastructure": 82,
+          "labor": 81,
+          "market": 92
+        },
+        {
+          "province": "Santiago",
+          "region": "Norte",
+          "opportunity": 79,
+          "infrastructure": 78,
+          "labor": 77,
+          "market": 82
+        },
+        {
+          "province": "La Altagracia",
+          "region": "Este",
+          "opportunity": 73,
+          "infrastructure": 70,
+          "labor": 64,
+          "market": 78
+        },
+        {
+          "province": "San Pedro de Macoris",
+          "region": "Este",
+          "opportunity": 66,
+          "infrastructure": 67,
+          "labor": 61,
+          "market": 70
+        },
+        {
+          "province": "Puerto Plata",
+          "region": "Norte",
+          "opportunity": 64,
+          "infrastructure": 65,
+          "labor": 59,
+          "market": 68
+        },
+        {
+          "province": "La Vega",
+          "region": "Norte",
+          "opportunity": 62,
+          "infrastructure": 61,
+          "labor": 63,
+          "market": 60
+        },
+        {
+          "province": "San Cristobal",
+          "region": "Sur",
+          "opportunity": 59,
+          "infrastructure": 57,
+          "labor": 58,
+          "market": 61
+        },
+        {
+          "province": "Barahona",
+          "region": "Sur",
+          "opportunity": 46,
+          "infrastructure": 43,
+          "labor": 49,
+          "market": 45
+        },
+        {
+          "province": "Elias Pina",
+          "region": "Sur",
+          "opportunity": 34,
+          "infrastructure": 31,
+          "labor": 39,
+          "market": 32
+        }
+      ]
+    },
+    "mipymes": {
+      "finance": [
+        {
+          "segment": "Micro informal",
+          "access": 24,
+          "formalization": 18,
+          "productivity": 41
+        },
+        {
+          "segment": "Micro formal",
+          "access": 38,
+          "formalization": 61,
+          "productivity": 52
+        },
+        {
+          "segment": "Pequena",
+          "access": 57,
+          "formalization": 74,
+          "productivity": 66
+        },
+        {
+          "segment": "Mediana",
+          "access": 72,
+          "formalization": 86,
+          "productivity": 78
+        }
+      ],
+      "barriers": [
+        {
+          "barrier": "Financiamiento",
+          "value": 82
+        },
+        {
+          "barrier": "Gestion",
+          "value": 68
+        },
+        {
+          "barrier": "Formalidad",
+          "value": 61
+        },
+        {
+          "barrier": "Tecnologia",
+          "value": 55
+        },
+        {
+          "barrier": "Mercado",
+          "value": 49
+        }
+      ],
+      "ladder": [
+        {
+          "stage": "Sobrevivir",
+          "focus": "Liquidez",
+          "score": 38
+        },
+        {
+          "stage": "Formalizar",
+          "focus": "Registro y contabilidad",
+          "score": 52
+        },
+        {
+          "stage": "Gestionar",
+          "focus": "Procesos",
+          "score": 64
+        },
+        {
+          "stage": "Escalar",
+          "focus": "Credito e inversion",
+          "score": 73
+        },
+        {
+          "stage": "Exportar",
+          "focus": "Productividad",
+          "score": 81
+        }
+      ]
+    }
+  },
+  "generatedAt": "2026-06-18T04:54:21.207Z",
+  "moduleCount": 9
+}

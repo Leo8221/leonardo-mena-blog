@@ -1,13 +1,45 @@
 ---
 title: "Series"
+page-layout: full
+toc: false
 ---
 
-Estas son las líneas editoriales del sitio:
+::: {.hub-header}
+# Series editoriales
 
--   [**Mis predecesores**](predecesores.qmd)\
+Las series ahora viven dentro de la arquitectura de productos del sitio.
+:::
 
--   [**La República en un gráfico**](republica-en-un-grafico.qmd)\
+::: {.product-grid}
+::: {.product-card}
+<span class="product-kicker">Análisis</span>
 
--   [**La República habla de**](republica-habla-de.qmd)\
+## La República habla de
 
-    [**Fundamentos**](fundamentos.qmd)
+[Leer serie](republica-habla-de.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Visualización</span>
+
+## La República en un gráfico
+
+[Ver gráficos](republica-en-un-grafico.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Escuela</span>
+
+## Fundamentos
+
+[Aprender conceptos](fundamentos.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Ideas</span>
+
+## Mis predecesores
+
+[Leer perfiles](predecesores.qmd)
+:::
+:::

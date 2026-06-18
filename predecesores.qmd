@@ -1,5 +1,6 @@
 ---
 title: "Mis predecesores"
+page-layout: full
 listing:
   contents:
     - posts/predecesores
@@ -8,6 +9,47 @@ listing:
   fields: [title, date, description]
 ---
 
-Economistas, ideas y por qué me importan.
+::: {.hub-header}
+# Mis predecesores
 
-Aquí aparecerán los textos de esta serie, cada uno con una frase suya que me marcó y mi lectura personal de su trabajo.
+Economistas, ideas y autores que ayudan a pensar mejor los problemas actuales.
+
+::: {.hub-meta}
+<span class="hub-chip">Historia del pensamiento</span>
+<span class="hub-chip">Ideas económicas</span>
+<span class="hub-chip">Lectura personal</span>
+:::
+:::
+
+::: {.series-grid}
+::: {.series-card}
+<span class="product-kicker">Perfil</span>
+
+## Una idea central
+
+Cada entrega rescata una intuición útil del autor y la conecta con debates actuales.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Lectura</span>
+
+## Sin museo
+
+La historia del pensamiento sirve cuando ilumina decisiones presentes.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Puente</span>
+
+## De teoría a criterio
+
+Un complemento para Fundamentos y para los análisis de coyuntura.
+:::
+:::
+
+::: {.section-listing-wrap}
+## Entradas publicadas
+
+::: {#listing}
+:::
+:::

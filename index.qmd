@@ -4,7 +4,10 @@ page-layout: full
 toc: false
 listing:
   - id: grafico-destacado-desktop
-    contents: posts  
+    contents:
+      - posts/**/*.qmd
+      - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+      - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     sort: "date desc"
     max-items: 1
     type: grid            
@@ -16,7 +19,10 @@ listing:
     image-height: "350px"
   
   - id: grafico-destacado-mobile
-    contents: posts  
+    contents:
+      - posts/**/*.qmd
+      - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+      - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     sort: "date desc"
     max-items: 1
     type: grid            
@@ -28,7 +34,10 @@ listing:
     image-height: "300px"
   
   - id: ultimos-posts
-    contents: posts
+    contents:
+      - posts/**/*.qmd
+      - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+      - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     sort: "date desc"
     max-items: 3
     type: grid
@@ -78,6 +87,15 @@ El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyun
 :::
 
 ::: {.home-side}
+
+::: {.home-side-card}
+### Atlas LM
+<p>Datos interactivos</p>
+<p>Observatorio, sectores y exploradores con lectura propia.</p>
+::: {.home-side-link}
+[Abrir Atlas](atlas/index.html)
+:::
+:::
 
 ::: {.home-side-card}
 ### Fundamentos

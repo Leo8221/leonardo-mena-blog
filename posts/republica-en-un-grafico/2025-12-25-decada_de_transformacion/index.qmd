@@ -1,5 +1,5 @@
 ---
-title: "La Republica en un gráfico: 10 años de transformación"
+title: "La República en un gráfico: 10 años de transformación"
 date: "2026-01-05"
 author: "Leonardo Mena"
 description: "explicación de los cambios en el habito de consumo de los dominicanos"
@@ -7,7 +7,7 @@ image: "portada_canasta_familiar.png"
 twitter-card:
   image: "portada_canasta_familiar.png"
 categories: 
-  - "La república en un gráfico"
+  - "La República en un gráfico"
   - "Desarrollo"
 draft: false
 body-class: editorial-post

@@ -5,3 +5,8 @@ _freeze/
 *_cache/
 observatorio_cache/
 .aider*
+.codex-remote-attachments/
+
+# Local unfinished drafts. Remove these lines when the posts are ready to publish.
+posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/
+posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/

@@ -7,7 +7,7 @@ categories:
   - "Educación"
   - "Censo 2022"
   - "Capital Humano"
-  - "República en un Gráfico"
+  - "La República en un gráfico"
 draft: false
 format:
   html:

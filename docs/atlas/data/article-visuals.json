@@ -1,0 +1,722 @@
+{
+  "updated": "2026-06-18",
+  "sources": [
+    {
+      "title": "Densidad empresarial por provincia",
+      "article": "2026-01-06-Perpectiva_del_desarrollo",
+      "files": ["PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE"]
+    },
+    {
+      "title": "MiPyMES por region",
+      "article": "2026-02-14-mipymes-rd",
+      "files": ["REGCenso2010.shp", "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx"]
+    },
+    {
+      "title": "Turismo por pais y motivo",
+      "article": "2026-01-20-Turismo_expansion",
+      "files": ["razones_turismo.csv", "rnaturalearth"]
+    },
+    {
+      "title": "Transporte masivo y empleo formal",
+      "article": "2026-03-04-transporte-masivo",
+      "files": ["tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv"]
+    },
+    {
+      "title": "Deuda publica",
+      "article": "2025-12-19_deuda_publica",
+      "files": "deuda_rd.csv"
+    }
+  ],
+  "tourism": {
+    "treemap": [
+      {
+        "motivo": "Playas",
+        "porcentaje": 50.5,
+        "categoria": "Masivo"
+      },
+      {
+        "motivo": "Clima",
+        "porcentaje": 15.3,
+        "categoria": "Masivo"
+      },
+      {
+        "motivo": "Hospitalidad",
+        "porcentaje": 11.9,
+        "categoria": "Vinculado"
+      },
+      {
+        "motivo": "Amigos/Familia",
+        "porcentaje": 9.9,
+        "categoria": "Vinculado"
+      },
+      {
+        "motivo": "Precios",
+        "porcentaje": 5.3,
+        "categoria": "Masivo"
+      },
+      {
+        "motivo": "Trabajo",
+        "porcentaje": 1.5,
+        "categoria": "Vinculado"
+      },
+      {
+        "motivo": "Tranquilidad",
+        "porcentaje": 1.2,
+        "categoria": "Masivo"
+      },
+      {
+        "motivo": "Historia",
+        "porcentaje": 1,
+        "categoria": "Nicho"
+      },
+      {
+        "motivo": "Naturaleza",
+        "porcentaje": 0.9,
+        "categoria": "Nicho"
+      },
+      {
+        "motivo": "Vida nocturna",
+        "porcentaje": 0.6,
+        "categoria": "Masivo"
+      },
+      {
+        "motivo": "Ecoturismo",
+        "porcentaje": 0.6,
+        "categoria": "Nicho"
+      },
+      {
+        "motivo": "Golf",
+        "porcentaje": 0.1,
+        "categoria": "Nicho"
+      },
+      {
+        "motivo": "Otros",
+        "porcentaje": 1.2,
+        "categoria": "Vinculado"
+      }
+    ],
+    "countryPreference": [
+      {
+        "country": "Dinamarca",
+        "beach_pct": 100
+      },
+      {
+        "country": "Escocia",
+        "beach_pct": 100
+      },
+      {
+        "country": "Finlandia",
+        "beach_pct": 100
+      },
+      {
+        "country": "Uruguay",
+        "beach_pct": 84.9
+      },
+      {
+        "country": "Reino Unido",
+        "beach_pct": 83.4
+      },
+      {
+        "country": "Perú",
+        "beach_pct": 81.5
+      },
+      {
+        "country": "Bolivia",
+        "beach_pct": 80.6
+      },
+      {
+        "country": "Polonia",
+        "beach_pct": 80
+      },
+      {
+        "country": "Bélgica",
+        "beach_pct": 77
+      },
+      {
+        "country": "Portugal",
+        "beach_pct": 75
+      },
+      {
+        "country": "Honduras",
+        "beach_pct": 71.4
+      },
+      {
+        "country": "Brasil",
+        "beach_pct": 69.5
+      },
+      {
+        "country": "Colombia",
+        "beach_pct": 65.4
+      },
+      {
+        "country": "Argentina",
+        "beach_pct": 61
+      },
+      {
+        "country": "Chile",
+        "beach_pct": 61
+      },
+      {
+        "country": "Alemania",
+        "beach_pct": 59.6
+      },
+      {
+        "country": "Canadá",
+        "beach_pct": 56.9
+      },
+      {
+        "country": "Francia",
+        "beach_pct": 55.5
+      },
+      {
+        "country": "Italia",
+        "beach_pct": 53
+      },
+      {
+        "country": "Ecuador",
+        "beach_pct": 51.2
+      },
+      {
+        "country": "Aruba",
+        "beach_pct": 50
+      },
+      {
+        "country": "Corea del Sur",
+        "beach_pct": 50
+      },
+      {
+        "country": "Austria",
+        "beach_pct": 50
+      },
+      {
+        "country": "Rumanía",
+        "beach_pct": 50
+      },
+      {
+        "country": "Suecia",
+        "beach_pct": 50
+      },
+      {
+        "country": "Panamá",
+        "beach_pct": 47.8
+      },
+      {
+        "country": "Estados Unidos",
+        "beach_pct": 46.5
+      },
+      {
+        "country": "Guatemala",
+        "beach_pct": 45.1
+      },
+      {
+        "country": "Cuba",
+        "beach_pct": 42.8
+      },
+      {
+        "country": "Puerto Rico",
+        "beach_pct": 42.5
+      },
+      {
+        "country": "Costa Rica",
+        "beach_pct": 36.7
+      },
+      {
+        "country": "El Salvador",
+        "beach_pct": 36.4
+      },
+      {
+        "country": "España",
+        "beach_pct": 36.4
+      },
+      {
+        "country": "Holanda",
+        "beach_pct": 36.4
+      },
+      {
+        "country": "México",
+        "beach_pct": 35.6
+      },
+      {
+        "country": "Jamaica",
+        "beach_pct": 32.2
+      },
+      {
+        "country": "Rusia",
+        "beach_pct": 25
+      },
+      {
+        "country": "Curazao",
+        "beach_pct": 20.7
+      },
+      {
+        "country": "Islas Vírgenes Americanas",
+        "beach_pct": 20
+      },
+      {
+        "country": "Guadalupe",
+        "beach_pct": 18.2
+      },
+      {
+        "country": "Venezuela",
+        "beach_pct": 13.2
+      },
+      {
+        "country": "Islas Turcas y Caicos",
+        "beach_pct": 3.6
+      },
+      {
+        "country": "Haití",
+        "beach_pct": 0
+      },
+      {
+        "country": "Martinica",
+        "beach_pct": 0
+      },
+      {
+        "country": "San Martín",
+        "beach_pct": 0
+      },
+      {
+        "country": "Japón",
+        "beach_pct": 0
+      },
+      {
+        "country": "Grecia",
+        "beach_pct": 0
+      },
+      {
+        "country": "República Checa",
+        "beach_pct": 0
+      }
+    ]
+  },
+  "transport": {
+    "rentEmployment": [
+      {
+        "province": "Distrito Nacional",
+        "category": "DN",
+        "workers": 1087867,
+        "jobs": 1161805,
+        "employment_share": 50.02,
+        "median_rent_rd": 144000,
+        "median_rent_thousand": 144
+      },
+      {
+        "province": "Santo Domingo",
+        "category": "Periurbana GSD",
+        "workers": 301571,
+        "jobs": 317870,
+        "employment_share": 13.68,
+        "median_rent_rd": 90980,
+        "median_rent_thousand": 90.98
+      },
+      {
+        "province": "San Cristobal",
+        "category": "Periurbana GSD",
+        "workers": 55197,
+        "jobs": 58250,
+        "employment_share": 2.51,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "La Vega",
+        "category": "Resto",
+        "workers": 45588,
+        "jobs": 48165,
+        "employment_share": 2.07,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "La Romana",
+        "category": "Resto",
+        "workers": 46491,
+        "jobs": 48006,
+        "employment_share": 2.07,
+        "median_rent_rd": 78000,
+        "median_rent_thousand": 78
+      },
+      {
+        "province": "Puerto Plata",
+        "category": "Resto",
+        "workers": 40177,
+        "jobs": 42313,
+        "employment_share": 1.82,
+        "median_rent_rd": 90352,
+        "median_rent_thousand": 90.352
+      },
+      {
+        "province": "San Pedro de Macoris",
+        "category": "Resto",
+        "workers": 38708,
+        "jobs": 41895,
+        "employment_share": 1.8,
+        "median_rent_rd": 64810,
+        "median_rent_thousand": 64.81
+      },
+      {
+        "province": "Duarte",
+        "category": "Resto",
+        "workers": 28958,
+        "jobs": 34717,
+        "employment_share": 1.49,
+        "median_rent_rd": 84000,
+        "median_rent_thousand": 84
+      },
+      {
+        "province": "Monseñor Nouel",
+        "category": "Resto",
+        "workers": 26540,
+        "jobs": 28147,
+        "employment_share": 1.21,
+        "median_rent_rd": 73728,
+        "median_rent_thousand": 73.728
+      },
+      {
+        "province": "Espaillat",
+        "category": "Resto",
+        "workers": 24491,
+        "jobs": 25308,
+        "employment_share": 1.09,
+        "median_rent_rd": 60000,
+        "median_rent_thousand": 60
+      },
+      {
+        "province": "Valverde",
+        "category": "Resto",
+        "workers": 19487,
+        "jobs": 20662,
+        "employment_share": 0.89,
+        "median_rent_rd": 105263,
+        "median_rent_thousand": 105.263
+      },
+      {
+        "province": "Peravia",
+        "category": "Resto",
+        "workers": 14229,
+        "jobs": 17320,
+        "employment_share": 0.75,
+        "median_rent_rd": 67397,
+        "median_rent_thousand": 67.397
+      },
+      {
+        "province": "Hato Mayor",
+        "category": "Resto",
+        "workers": 10814,
+        "jobs": 15426,
+        "employment_share": 0.66,
+        "median_rent_rd": 49929,
+        "median_rent_thousand": 49.929
+      },
+      {
+        "province": "Samana",
+        "category": "Resto",
+        "workers": 10329,
+        "jobs": 14578,
+        "employment_share": 0.63,
+        "median_rent_rd": 60000,
+        "median_rent_thousand": 60
+      },
+      {
+        "province": "Hermanas Mirabal",
+        "category": "Resto",
+        "workers": 9954,
+        "jobs": 10944,
+        "employment_share": 0.47,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "Sanchez Ramirez",
+        "category": "Resto",
+        "workers": 9136,
+        "jobs": 10922,
+        "employment_share": 0.47,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "Barahona",
+        "category": "Resto",
+        "workers": 9614,
+        "jobs": 10524,
+        "employment_share": 0.45,
+        "median_rent_rd": 49090,
+        "median_rent_thousand": 49.09
+      },
+      {
+        "province": "M. Trinidad Sánchez",
+        "category": "Resto",
+        "workers": 7752,
+        "jobs": 9014,
+        "employment_share": 0.39,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "Azua",
+        "category": "Resto",
+        "workers": 7968,
+        "jobs": 8744,
+        "employment_share": 0.38,
+        "median_rent_rd": 56311,
+        "median_rent_thousand": 56.311
+      },
+      {
+        "province": "Santiago Rodriguez",
+        "category": "Resto",
+        "workers": 7064,
+        "jobs": 7328,
+        "employment_share": 0.32,
+        "median_rent_rd": 75235,
+        "median_rent_thousand": 75.235
+      },
+      {
+        "province": "Dajabon",
+        "category": "Resto",
+        "workers": 2861,
+        "jobs": 3011,
+        "employment_share": 0.13,
+        "median_rent_rd": 30000,
+        "median_rent_thousand": 30
+      },
+      {
+        "province": "Monte Plata",
+        "category": "Resto",
+        "workers": 2859,
+        "jobs": 2944,
+        "employment_share": 0.13,
+        "median_rent_rd": 48000,
+        "median_rent_thousand": 48
+      },
+      {
+        "province": "El Seybo",
+        "category": "Resto",
+        "workers": 1985,
+        "jobs": 2071,
+        "employment_share": 0.09,
+        "median_rent_rd": 72000,
+        "median_rent_thousand": 72
+      },
+      {
+        "province": "Elias Pina",
+        "category": "Resto",
+        "workers": 1789,
+        "jobs": 2048,
+        "employment_share": 0.09,
+        "median_rent_rd": 36000,
+        "median_rent_thousand": 36
+      },
+      {
+        "province": "San Jose de Ocoa",
+        "category": "Resto",
+        "workers": 1612,
+        "jobs": 1655,
+        "employment_share": 0.07,
+        "median_rent_rd": 47221,
+        "median_rent_thousand": 47.221
+      },
+      {
+        "province": "Pedernales",
+        "category": "Resto",
+        "workers": 1154,
+        "jobs": 1181,
+        "employment_share": 0.05,
+        "median_rent_rd": 18244,
+        "median_rent_thousand": 18.244
+      },
+      {
+        "province": "Independencia",
+        "category": "Resto",
+        "workers": 431,
+        "jobs": 454,
+        "employment_share": 0.02,
+        "median_rent_rd": 4656,
+        "median_rent_thousand": 4.656
+      }
+    ],
+    "employmentTop": [
+      {
+        "province": "Distrito Nacional",
+        "employment_share": 50.02,
+        "jobs": 1161805,
+        "workers": 1087867
+      },
+      {
+        "province": "Santo Domingo",
+        "employment_share": 13.68,
+        "jobs": 317870,
+        "workers": 301571
+      },
+      {
+        "province": "Santiago",
+        "employment_share": 11.68,
+        "jobs": 271344,
+        "workers": 252004
+      },
+      {
+        "province": "Altagracia",
+        "employment_share": 3.78,
+        "jobs": 87709,
+        "workers": 83858
+      },
+      {
+        "province": "San Cristobal",
+        "employment_share": 2.51,
+        "jobs": 58250,
+        "workers": 55197
+      },
+      {
+        "province": "La Vega",
+        "employment_share": 2.07,
+        "jobs": 48165,
+        "workers": 45588
+      },
+      {
+        "province": "La Romana",
+        "employment_share": 2.07,
+        "jobs": 48006,
+        "workers": 46491
+      },
+      {
+        "province": "Puerto Plata",
+        "employment_share": 1.82,
+        "jobs": 42313,
+        "workers": 40177
+      },
+      {
+        "province": "San Pedro de Macoris",
+        "employment_share": 1.8,
+        "jobs": 41895,
+        "workers": 38708
+      },
+      {
+        "province": "Duarte",
+        "employment_share": 1.49,
+        "jobs": 34717,
+        "workers": 28958
+      },
+      {
+        "province": "Monseñor Nouel",
+        "employment_share": 1.21,
+        "jobs": 28147,
+        "workers": 26540
+      },
+      {
+        "province": "Espaillat",
+        "employment_share": 1.09,
+        "jobs": 25308,
+        "workers": 24491
+      }
+    ]
+  },
+  "debt": {
+    "service": [
+      {
+        "anio": 2012,
+        "principal": 3047.59,
+        "interest": 1450.77,
+        "commissions": 5.92,
+        "service": 4504.28,
+        "interest_share": 32.2087
+      },
+      {
+        "anio": 2013,
+        "principal": 3338.6,
+        "interest": 1517.6,
+        "commissions": 7.26,
+        "service": 4863.46,
+        "interest_share": 31.2041
+      },
+      {
+        "anio": 2014,
+        "principal": 4863.46,
+        "interest": 3743.59,
+        "commissions": 43.59,
+        "service": 8650.64,
+        "interest_share": 43.2753
+      },
+      {
+        "anio": 2015,
+        "principal": 5353.5,
+        "interest": 1841.12,
+        "commissions": 59.15,
+        "service": 7253.77,
+        "interest_share": 25.3816
+      },
+      {
+        "anio": 2016,
+        "principal": 4457.23,
+        "interest": 1870.03,
+        "commissions": 55.98,
+        "service": 6383.24,
+        "interest_share": 29.2959
+      },
+      {
+        "anio": 2017,
+        "principal": 4457.23,
+        "interest": 1870.03,
+        "commissions": 55.98,
+        "service": 6383.24,
+        "interest_share": 29.2959
+      },
+      {
+        "anio": 2018,
+        "principal": 2077.06,
+        "interest": 2296.45,
+        "commissions": 10.57,
+        "service": 4384.08,
+        "interest_share": 52.3816
+      },
+      {
+        "anio": 2019,
+        "principal": 3351.66,
+        "interest": 2575.94,
+        "commissions": 8.22,
+        "service": 5935.82,
+        "interest_share": 43.3965
+      },
+      {
+        "anio": 2020,
+        "principal": 4652.93,
+        "interest": 2682.21,
+        "commissions": 14.87,
+        "service": 7350.01,
+        "interest_share": 36.4926
+      },
+      {
+        "anio": 2021,
+        "principal": 2864.6,
+        "interest": 3026.22,
+        "commissions": 21.01,
+        "service": 5911.83,
+        "interest_share": 51.1892
+      },
+      {
+        "anio": 2022,
+        "principal": 3728.28,
+        "interest": 3368.07,
+        "commissions": 16.71,
+        "service": 7113.06,
+        "interest_share": 47.3505
+      },
+      {
+        "anio": 2023,
+        "principal": 3655.33,
+        "interest": 3863.55,
+        "commissions": 17.71,
+        "service": 7536.59,
+        "interest_share": 51.2639
+      },
+      {
+        "anio": 2024,
+        "principal": 2622.35,
+        "interest": 4338.08,
+        "commissions": 15.94,
+        "service": 6976.37,
+        "interest_share": 62.1825
+      }
+    ]
+  }
+}

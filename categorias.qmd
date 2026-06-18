@@ -2,8 +2,10 @@
 title: "Categorías"
 page-layout: full
 listing:
-  contents: 
-    - "posts/**/index.qmd" # Solo busca artículos reales
+  contents:
+    - "posts/**/index.qmd"
+    - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+    - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
   sort: "date desc"
   type: default
   categories: true
@@ -13,45 +15,42 @@ listing:
   page-size: 10
 ---
 
-::: categories-header
-# Explora por tema
+::: {.hub-header}
+# Categorías
 
-<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
-Selecciona un tema clave para filtrar los artículos automáticamente.
-</p>
+Explora el archivo por tema. Las categorías de producto quedaron normalizadas para evitar duplicados como variantes de La República en un gráfico.
 :::
-
-<br>
 
 ::: {.categories-grid}
 <a href="#category=Macroeconomía" class="category-card">
-  <h3>📊 Macroeconomía</h3>
-  <p>Crecimiento, PIB y ciclos económicos.</p>
+  <h3>Macroeconomía</h3>
+  <p>Crecimiento, PIB, precios, política monetaria y ciclo económico.</p>
 </a>
 <a href="#category=Inflación" class="category-card">
-  <h3>💰 Inflación</h3>
-  <p>Precios y poder adquisitivo.</p>
+  <h3>Inflación</h3>
+  <p>Precios, poder adquisitivo y efectos de segunda ronda.</p>
 </a>
 <a href="#category=Mercado%20laboral" class="category-card">
-  <h3>👔 Mercado laboral</h3>
-  <p>Empleo y salarios.</p>
+  <h3>Mercado laboral</h3>
+  <p>Empleo, salarios, formación y brechas de capital humano.</p>
 </a>
 <a href="#category=Sector%20externo" class="category-card">
-  <h3>🌍 Sector externo</h3>
-  <p>Turismo, remesas y tipo de cambio.</p>
+  <h3>Sector externo</h3>
+  <p>Turismo, remesas, energía, tipo de cambio y condiciones globales.</p>
 </a>
 <a href="#category=Política%20fiscal" class="category-card">
-  <h3>🏛️ Política fiscal</h3>
-  <p>Impuestos y gasto público.</p>
+  <h3>Política fiscal</h3>
+  <p>Impuestos, deuda, subsidios y gasto público.</p>
 </a>
 <a href="#category=Desarrollo" class="category-card">
-  <h3>📈 Desarrollo</h3>
-  <p>Pobreza y calidad de vida.</p>
+  <h3>Desarrollo</h3>
+  <p>Pobreza, productividad, territorio y calidad de vida.</p>
 </a>
 :::
-<br><hr><br>
 
+::: {.section-listing-wrap}
 ## Índice completo
 
 ::: {#listing}
+:::
 :::

@@ -1,22 +1,18 @@
 ---
 title: "Reporte de Inclusión Financiera"
-subtitle: "Análisis de microdatos ENIF 2025"
+subtitle: "Ficha reservada para un reporte técnico reproducible"
 author: "Leonardo Mena"
 date: 2026-01-08
-format: 
+draft: true
+format:
   html:
     toc: true
-    code-fold: true
 ---
 
-::: {.callout-tip}
-## Descargar Versión PDF
-Este reporte está disponible para descarga con maquetación oficial.
-[📥 Descargar PDF Generado](reporte-inclusion.pdf)
+::: {.callout-note appearance="simple" icon=false}
+Esta página queda como borrador y no debe publicarse hasta que exista un reporte real con fuentes, código y resultados revisables.
 :::
 
-## 1. Introducción
-A diferencia del informe oficial, este análisis se centra en...
+## Estado
 
-```{r}
-# Aquí va tu código de R/Python que genera los gráficos
+Pendiente de contenido final. El reporte debe incluir fuente de datos, metodología, cuadros o gráficos principales y enlace verificable al material reproducible.

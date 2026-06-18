@@ -4,6 +4,8 @@ page-layout: full
 listing:
   contents:
     - posts/**/*.qmd
+    - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
+    - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
   sort: "date desc"
   type: default
   categories: true

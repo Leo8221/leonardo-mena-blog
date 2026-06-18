@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,9 +11,6 @@
 
 <title>El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas? – Leonardo Mena</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -38,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../image/logo_leonardo_mena.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-56071f1852f4fd13f0a0c7ab00a5e1e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -285,19 +283,47 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
     <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../productos.html"> 
+<span class="menu-text">Productos</span></a>
+  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-temas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Temas</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">    
         <li>
     <a class="dropdown-item" href="../../../republica-habla-de.html">
  <span class="dropdown-text">La República habla de</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../fundamentos.html">
- <span class="dropdown-text">Fundamentos</span></a>
+    <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un gráfico</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../../archivo.html">
+ <span class="dropdown-text">Archivo completo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../categorias.html">
+ <span class="dropdown-text">Categorías</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../atlas/index.html"> <i class="bi bi-graph-up" role="img">
+</i> 
+<span class="menu-text">Atlas LM</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../investigacion.html"> 
+<span class="menu-text">Investigación</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-escuela" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Escuela</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">    
         <li>
     <a class="dropdown-item" href="../../../predecesores.html">
  <span class="dropdown-text">Mis predecesores</span></a>
@@ -307,19 +333,11 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
  <span class="dropdown-text">Mitos económicos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
- <span class="dropdown-text">La República en un grafico</span></a>
+    <a class="dropdown-item" href="../../../fundamentos.html">
+ <span class="dropdown-text">Fundamentos</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../../../categorias.html"> 
-<span class="menu-text">Categorías</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../archivo.html"> 
-<span class="menu-text">Archivo</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -327,9 +345,8 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 <span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../observatorio.html"> <i class="bi bi-graph-up" role="img">
-</i> 
-<span class="menu-text">Observatorio 📊</span></a>
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">Sobre mí</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -492,20 +509,35 @@ Figura&nbsp;1: Ilustración: Producción vs.&nbsp;Bienestar (Simulación)
 
 </main> <!-- /main -->
 <script>
+
 // Crear barra de progreso solo si estamos en un post editorial
+
 if (document.body.classList.contains('editorial-post')) {
+
   const progressBar = document.createElement('div');
+
   progressBar.id = 'reading-progress';
+
   document.body.prepend(progressBar);
 
+
+
   // Actualizar al hacer scroll
+
   window.addEventListener('scroll', () => {
+
     const scrollTop = window.scrollY;
+
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
     const scrollPercent = (scrollTop / docHeight) * 100;
+
     progressBar.style.width = scrollPercent + '%';
+
   });
+
 }
+
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -944,7 +976,7 @@ if (document.body.classList.contains('editorial-post')) {
     script.dataset.repo = "Leo8221/leonardo-mena-blog";
     script.dataset.repoId = "R_kgDOQmnpWw";
     script.dataset.category = "General";
-    script.dataset.categoryId = "DIC_kwDO...";
+    script.dataset.categoryId = "DIC_kwDOQmnpW84CzuJe";
     script.dataset.mapping = "title";
     script.dataset.reactionsEnabled = "1";
     script.dataset.emitMetadata = "0";

@@ -1,15 +1,56 @@
 ---
 title: "La República habla de"
+page-layout: full
 listing:
-  contents: posts/republica-habla-de
+  contents:
+    - posts/republica-habla-de/**/*.qmd
+    - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
   sort: "date desc"
   type: default
   fields: [title, date, description]
 ---
 
-Notas de coyuntura económica donde me mojo un poco, pero con datos y mecanismos.
+::: {.hub-header}
+# La República habla de
 
-Aquí se irán agrupando textos que responden a preguntas como:
-- “¿Qué significa realmente esta medida?”
-- “¿Por qué la gente siente X si el dato dice Y?”
-- “¿Qué podría cambiar este escenario?”
+Análisis de coyuntura económica dominicana con una tesis clara: qué cambió, por qué importa y qué mecanismo explica el resultado.
+
+::: {.hub-meta}
+<span class="hub-chip">Coyuntura</span>
+<span class="hub-chip">Política económica</span>
+<span class="hub-chip">Datos oficiales</span>
+:::
+:::
+
+::: {.series-grid}
+::: {.series-card}
+<span class="product-kicker">Formato</span>
+
+## Lectura con postura
+
+Cada texto parte de una pregunta pública y termina con una implicación concreta.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Metodo</span>
+
+## Dato, mecanismo, limite
+
+La serie separa el dato observado, la explicación probable y lo que todavía no se puede afirmar.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Uso</span>
+
+## Para seguir agenda
+
+Ideal para temas fiscales, precios, sectores productivos y debates de politica publica.
+:::
+:::
+
+::: {.section-listing-wrap}
+## Últimos análisis
+
+::: {#listing}
+:::
+:::

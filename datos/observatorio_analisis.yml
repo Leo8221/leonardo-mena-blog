@@ -1,0 +1,79 @@
+- id: pulso-macro
+  titulo: "Pulso macro RD"
+  estado: "Activo"
+  visible: true
+  tipo: "Monitor"
+  tema: "Coyuntura"
+  descripcion: "Seguimiento de tipo de cambio, inflacion, TPM e IMAE."
+  destino: "atlas/index.html#pulso-macro"
+  fuente: "BCRD"
+
+- id: sensibilidad-sectorial
+  titulo: "Sensibilidad sectorial"
+  estado: "Activo"
+  visible: true
+  tipo: "Modelo"
+  tema: "Sectores"
+  descripcion: "Ranking y mapa de exposicion sectorial ante drivers macroeconomicos."
+  destino: "atlas/index.html#sectores"
+  fuente: "BCRD, FRED, Yahoo Finance"
+
+- id: condiciones-externas
+  titulo: "Condiciones externas"
+  estado: "Activo"
+  visible: true
+  tipo: "Indice"
+  tema: "Entorno global"
+  descripcion: "Indice sintetico de presion externa."
+  destino: "atlas/index.html#contexto-externo"
+  fuente: "FRED, Yahoo Finance"
+
+- id: comercio-exterior
+  titulo: "Atlas de comercio exterior"
+  estado: "Activo"
+  visible: true
+  tipo: "Explorador"
+  tema: "Comercio"
+  descripcion: "Socios, productos, balance y oportunidades de sofisticacion exportadora."
+  destino: "atlas/index.html#comercio-exterior"
+  fuente: "UN Comtrade, OEC, Aduanas RD"
+
+- id: mercado-laboral
+  titulo: "Mercado laboral y salarios"
+  estado: "Activo"
+  visible: true
+  tipo: "Analisis"
+  tema: "Trabajo"
+  descripcion: "Empleo, informalidad, salarios, educacion y brechas de insercion."
+  destino: "atlas/index.html#mercado-laboral"
+  fuente: "ONE, BCRD ENCFT, TSS"
+
+- id: costo-vida
+  titulo: "Costo de vida y precios"
+  estado: "Activo"
+  visible: true
+  tipo: "Monitor"
+  tema: "Precios"
+  descripcion: "Inflacion por rubros, combustibles y canales de segunda ronda."
+  destino: "atlas/index.html#costo-vida"
+  fuente: "BCRD, MICM, Ministerio de Hacienda"
+
+- id: territorio-infraestructura
+  titulo: "Territorio e infraestructura"
+  estado: "Activo"
+  visible: true
+  tipo: "Mapa analitico"
+  tema: "Territorio"
+  descripcion: "Movilidad, densidad, infraestructura, servicios y brechas provinciales."
+  destino: "atlas/index.html#territorio-infraestructura"
+  fuente: "ONE, MOPC, registros administrativos"
+
+- id: mipymes-productividad
+  titulo: "MiPyMES y productividad"
+  estado: "Activo"
+  visible: true
+  tipo: "Analisis"
+  tema: "Empresas"
+  descripcion: "Financiamiento, formalidad, productividad y barreras de crecimiento."
+  destino: "atlas/index.html#mipymes-productividad"
+  fuente: "Encuestas MiPyMES, BCRD, DGII"

@@ -2,16 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>La República en un gráfico – Leonardo Mena</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -38,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-56071f1852f4fd13f0a0c7ab00a5e1e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
@@ -357,19 +355,47 @@ window.Quarto = {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./productos.html"> 
+<span class="menu-text">Productos</span></a>
+  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-temas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Temas</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-temas">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">    
         <li>
     <a class="dropdown-item" href="./republica-habla-de.html">
  <span class="dropdown-text">La República habla de</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./fundamentos.html">
- <span class="dropdown-text">Fundamentos</span></a>
+    <a class="dropdown-item" href="./republica-en-un-grafico.html">
+ <span class="dropdown-text">La República en un gráfico</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./archivo.html">
+ <span class="dropdown-text">Archivo completo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./categorias.html">
+ <span class="dropdown-text">Categorías</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./atlas/index.html"> <i class="bi bi-graph-up" role="img">
+</i> 
+<span class="menu-text">Atlas LM</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./investigacion.html"> 
+<span class="menu-text">Investigación</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-escuela" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Escuela</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">    
         <li>
     <a class="dropdown-item" href="./predecesores.html">
  <span class="dropdown-text">Mis predecesores</span></a>
@@ -379,19 +405,11 @@ window.Quarto = {
  <span class="dropdown-text">Mitos económicos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./republica-en-un-grafico.html">
- <span class="dropdown-text">La República en un grafico</span></a>
+    <a class="dropdown-item" href="./fundamentos.html">
+ <span class="dropdown-text">Fundamentos</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./categorias.html"> 
-<span class="menu-text">Categorías</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./archivo.html"> 
-<span class="menu-text">Archivo</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -399,9 +417,8 @@ window.Quarto = {
 <span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./observatorio.html"> <i class="bi bi-graph-up" role="img">
-</i> 
-<span class="menu-text">Observatorio 📊</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Sobre mí</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -412,14 +429,21 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este artículo</h2>
+   
+  <ul>
+  <li><a href="#la-república-en-un-gráfico" id="toc-la-república-en-un-gráfico" class="nav-link active" data-scroll-target="#la-república-en-un-gráfico">La República en un gráfico</a></li>
+  <li><a href="#gráficos-publicados" id="toc-gráficos-publicados" class="nav-link" data-scroll-target="#gráficos-publicados">Gráficos publicados</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -429,7 +453,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -441,18 +465,44 @@ window.Quarto = {
 </header>
 
 
-<p>Un gráfico, una lectura y una implicación para República Dominicana.</p>
-<p>Aquí se irán agrupando los artículos donde un solo gráfico es el punto de partida: - qué muestra, - qué no muestra, - y qué implica si lo tomamos en serio.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="la-república-en-un-gráfico" class="level1 hub-header">
+<h1>La República en un gráfico</h1>
+<p>Una visualización, una lectura y una implicación para entender mejor la economía dominicana.</p>
+<div class="hub-meta">
+<p><span class="hub-chip">Gráficos</span> <span class="hub-chip">Series dominicanas</span> <span class="hub-chip">Lectura rapida</span></p>
+</div>
+</section>
+<div class="series-grid">
+<div class="series-card">
+<p><span class="product-kicker">Promesa</span></p>
+<section id="un-argumento-visual" class="level2">
+<h2 class="anchored" data-anchor-id="un-argumento-visual">Un argumento visual</h2>
+<p>El gráfico no acompaña el texto: lo organiza.</p>
+</section>
+</div>
+<div class="series-card">
+<p><span class="product-kicker">Rigor</span></p>
+<section id="fuente-visible" class="level2">
+<h2 class="anchored" data-anchor-id="fuente-visible">Fuente visible</h2>
+<p>Cada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo.</p>
+</section>
+</div>
+<div class="series-card">
+<p><span class="product-kicker">Criterio</span></p>
+<section id="implicación-económica" class="level2">
+<h2 class="anchored" data-anchor-id="implicación-económica">Implicación económica</h2>
+<p>El cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública.</p>
+</section>
+</div>
+</div>
+<section id="gráficos-publicados" class="level2 section-listing-wrap">
+<h2 class="anchored" data-anchor-id="gráficos-publicados">Gráficos publicados</h2>
+<div id="listing-listing" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwR3IlQzMlQTFmaWNv" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1781738509304" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
+<div class="quarto-post image-right" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773288000000" data-listing-file-modified-sort="1781750310921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2026-03-12-educacion-superior-censo\index_files\figure-html\fig-distribucion-nivel-1.png"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -468,16 +518,13 @@ window.Quarto = {
 <div class="listing-date">
 12 mar 2026
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771113600000" data-listing-file-modified-sort="1781738509304" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4465">
+<div class="quarto-post image-right" data-index="1" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771128000000" data-listing-file-modified-sort="1772491646790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4465">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2026-02-14-mipymes-rd\index_files\figure-html\fig-mapa-mipymes-regiones-1.svg"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -493,13 +540,10 @@ Leonardo Mena
 <div class="listing-date">
 15 feb 2026
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGElMjBEb21pbmljYW5hJTJDTGElMjByZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1770163200000" data-listing-file-modified-sort="1781738509272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2438">
+<div class="quarto-post image-right" data-index="2" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGElMjBEb21pbmljYW5hJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1770177600000" data-listing-file-modified-sort="1781750310781" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2438">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/img/Hegemonia_Survey.png" class="thumbnail-image">
@@ -518,13 +562,10 @@ Leonardo Mena
 <div class="listing-date">
 4 feb 2026
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="TGElMjByZXB1YmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNvJTJDRGVzYXJyb2xsbw==" data-listing-date-sort="1767657600000" data-listing-file-modified-sort="1781738509227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2043">
+<div class="quarto-post image-right" data-index="3" data-categories="TGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28lMkNEZXNhcnJvbGxv" data-listing-date-sort="1767672000000" data-listing-file-modified-sort="1781750310633" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2043">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/mapa_densidad_2024.png" class="thumbnail-image">
@@ -543,13 +584,10 @@ Leonardo Mena
 <div class="listing-date">
 6 ene 2026
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="TGElMjByZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28lMkNEZXNhcnJvbGxv" data-listing-date-sort="1767571200000" data-listing-file-modified-sort="1781738509219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1891">
+<div class="quarto-post image-right" data-index="4" data-categories="TGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28lMkNEZXNhcnJvbGxv" data-listing-date-sort="1767585600000" data-listing-file-modified-sort="1781750699422" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1891">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html" class="no-external">
 
 <img loading="lazy" src="./posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/portada_canasta_familiar.png" class="thumbnail-image">
@@ -557,7 +595,7 @@ Leonardo Mena
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html" class="no-external">La Republica en un gráfico: 10 años de transformación</a>
+<a href="./posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html" class="no-external">La República en un gráfico: 10 años de transformación</a>
 </h3>
 <div class="delink listing-description"><a href="./posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html" class="no-external">
 <p>explicación de los cambios en el habito de consumo de los dominicanos</p>
@@ -568,16 +606,13 @@ Leonardo Mena
 <div class="listing-date">
 5 ene 2026
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="TGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28lMkNNZXRvZG9sb2clQzMlQURh" data-listing-date-sort="1765411200000" data-listing-file-modified-sort="1781738509212" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140">
+<div class="quarto-post image-right" data-index="5" data-categories="TGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28lMkNNZXRvZG9sb2clQzMlQURh" data-listing-date-sort="1765425600000" data-listing-file-modified-sort="1766123482359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1140">
 <div class="thumbnail"><a href="./posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html" class="no-external">
 
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2025-12-16-grafico-0/index_files/figure-html/grafico-mental-1.png" alt="Diagrama de flujo con cuatro cajas conectadas: Ritmo de la economía, Estabilidad nominal, Impacto social y Restricción fiscal."  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2025-12-16-grafico-0\index_files\figure-html\grafico-mental-1.png" alt="Diagrama de flujo con cuatro cajas conectadas: Ritmo de la economía, Estabilidad nominal, Impacto social y Restricción fiscal."  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
@@ -593,15 +628,18 @@ Leonardo Mena
 <div class="listing-date">
 11 dic 2025
 </div>
-<div class="listing-author">
-Leonardo Mena
-</div>
 </a>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
-</div></main> <!-- /main -->
+</div>
+</section>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

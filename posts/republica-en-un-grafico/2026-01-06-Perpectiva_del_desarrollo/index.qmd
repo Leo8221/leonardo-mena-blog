@@ -7,7 +7,7 @@ image: "mapa_densidad_2024.png"
 twitter-card:
  image: "mapa_densidad_2024.png"
 categories: 
-  - "La republica en un gráfico"
+  - "La República en un gráfico"
   - "Desarrollo"
 draft: false
 body-class: editorial-post

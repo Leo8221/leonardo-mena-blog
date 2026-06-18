@@ -1,5 +1,6 @@
 ---
 title: "Fundamentos"
+page-layout: full
 listing:
   contents:
     - posts/fundamentos
@@ -8,6 +9,47 @@ listing:
   fields: [title, date, description]
 ---
 
-Conceptos que se usan todo el tiempo en medios y conversación pública, pero pocas veces se explican bien.
+::: {.hub-header}
+# Fundamentos
 
-A continuación están los artículos de esta serie:
+Conceptos que aparecen todo el tiempo en la conversación pública, explicados con precisión y sin perder claridad.
+
+::: {.hub-meta}
+<span class="hub-chip">Conceptos</span>
+<span class="hub-chip">Lectura económica</span>
+<span class="hub-chip">Base técnica</span>
+:::
+:::
+
+::: {.series-grid}
+::: {.series-card}
+<span class="product-kicker">Nivel</span>
+
+## Primero los cimientos
+
+PIB, inflación, déficit, productividad y otros conceptos antes de entrar al debate.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Enfoque</span>
+
+## Ejemplos dominicanos
+
+Las explicaciones se aterrizan en datos y decisiones reales de República Dominicana.
+:::
+
+::: {.series-card}
+<span class="product-kicker">Ruta</span>
+
+## Puerta de entrada
+
+Esta serie sostiene a Mitos económicos y Mis predecesores.
+:::
+:::
+
+::: {.section-listing-wrap}
+## Artículos de la serie
+
+::: {#listing}
+:::
+:::
