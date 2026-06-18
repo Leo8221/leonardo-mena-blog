@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "!investigacion.qmd"
     - "posts/**/*.qmd"
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
@@ -27,6 +28,7 @@ website:
   title: "Leonardo Mena"
   description: "Economía aplicada y datos de la República Dominicana"
   site-url: "https://leo8221.github.io/leonardo-mena-blog/"
+  image: image/social-preview.png
   google-analytics: "G-W3JC0G3RJ1"
   favicon: image/logo_leonardo_mena.png
   search:
@@ -45,8 +47,8 @@ website:
     left:
       - href: index.qmd
         text: Inicio
-      - href: productos.qmd
-        text: Productos
+      - href: secciones.qmd
+        text: Secciones
       - text: Análisis
         menu:
           - text: "La República habla de"
@@ -58,10 +60,8 @@ website:
           - text: "Categorías"
             href: categorias.qmd
       - href: atlas/index.html
-        text: "Atlas LM"
+        text: "Atlas"
         icon: graph-up
-      - href: investigacion.qmd
-        text: Investigación
       - text: Escuela
         menu:
           - text: "Mis predecesores"
@@ -85,9 +85,9 @@ website:
   # Pie de página
   page-footer:
     left: |
-      <p style="margin: 0;">© 2025 Leonardo Mena · Economía Aplicada</p>
+      <p style="margin: 0;">© 2026 Leonardo Mena · Economía Aplicada</p>
     center: |
-      <a href="/about.html">Sobre mí</a> · 
+      <a href="about.html">Sobre mí</a> ·
       <a href="mailto:leonardomena824@gmail.com">Contacto</a>
     right: |
       <a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · 

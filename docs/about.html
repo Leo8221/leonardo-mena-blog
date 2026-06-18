@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -86,10 +86,16 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Sobre mí – Leonardo Mena">
 <meta property="og:description" content="Economía aplicada y datos de la República Dominicana">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
 <meta property="og:site_name" content="Leonardo Mena">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="Sobre mí – Leonardo Mena">
 <meta name="twitter:description" content="Economía aplicada y datos de la República Dominicana">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -273,74 +279,70 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="./index.html">
 <span class="menu-text">Inicio</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./productos.html"> 
-<span class="menu-text">Productos</span></a>
-  </li>  
+    <a class="nav-link" href="./secciones.html">
+<span class="menu-text">Secciones</span></a>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Análisis</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">
         <li>
     <a class="dropdown-item" href="./republica-habla-de.html">
  <span class="dropdown-text">La República habla de</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./republica-en-un-grafico.html">
  <span class="dropdown-text">La República en un gráfico</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./archivo.html">
  <span class="dropdown-text">Archivo completo</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./categorias.html">
  <span class="dropdown-text">Categorías</span></a>
-  </li>  
+  </li>
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./atlas/index.html"> <i class="bi bi-graph-up" role="img">
-</i> 
-<span class="menu-text">Atlas LM</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./investigacion.html"> 
-<span class="menu-text">Investigación</span></a>
-  </li>  
+</i>
+<span class="menu-text">Atlas</span></a>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-escuela" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Escuela</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">
         <li>
     <a class="dropdown-item" href="./predecesores.html">
  <span class="dropdown-text">Mis predecesores</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./mitos-economicos.html">
  <span class="dropdown-text">Mitos económicos</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./fundamentos.html">
  <span class="dropdown-text">Fundamentos</span></a>
-  </li>  
+  </li>
     </ul>
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./suscribete.html"> 
+    <a class="nav-link" href="./suscribete.html">
 <span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link active" href="./about.html" aria-current="page">
 <span class="menu-text">Sobre mí</span></a>
-  </li>  
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -441,7 +443,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
     setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -461,11 +463,11 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -547,7 +549,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -622,7 +624,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -650,7 +652,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -674,7 +676,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -714,7 +716,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -840,11 +842,11 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p style="margin: 0;">
-© 2025 Leonardo Mena · Economía Aplicada
+© 2026 Leonardo Mena · Economía Aplicada
 </p>
-</div>   
+</div>
     <div class="nav-footer-center">
-<p><a href="./about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
+<p><a href="about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
 </div>
     <div class="nav-footer-right">
 <p><a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> · <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a></p>

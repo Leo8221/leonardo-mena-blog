@@ -3,47 +3,5 @@ title: "Investigación"
 description: "Working papers, policy briefs y reportes técnicos con metodología revisable."
 page-layout: full
 toc: false
+draft: true
 ---
-
-::: {.hub-header}
-# Investigación
-
-Catálogo para trabajos reproducibles: papers, briefs y reportes técnicos. Esta sección solo debe publicar productos con pregunta clara, metodología documentada y enlaces revisables.
-
-::: {.hub-meta}
-<span class="hub-chip">Working papers</span>
-<span class="hub-chip">Policy briefs</span>
-<span class="hub-chip">Reportes técnicos</span>
-<span class="hub-chip">Reproducibilidad</span>
-:::
-:::
-
-::: {.product-grid}
-::: {.product-card}
-<span class="product-kicker">Working papers</span>
-
-## Investigación académica
-
-Modelos, estimaciones y documentos con una contribución metodológica o empírica definida.
-:::
-
-::: {.product-card}
-<span class="product-kicker">Policy briefs</span>
-
-## Síntesis para decisión pública
-
-Documentos breves orientados a problema, evidencia, opciones y tradeoffs.
-:::
-
-::: {.product-card}
-<span class="product-kicker">Reportes técnicos</span>
-
-## Análisis reproducible
-
-Productos de datos con código, fuentes, supuestos y resultados verificables.
-:::
-:::
-
-::: {.empty-state}
-El catálogo queda listo, pero retiré los ejemplos simulados para no publicar investigaciones ficticias. Cuando haya un paper, brief o reporte real, debe entrar aquí con metadatos, PDF o repositorio verificable.
-:::

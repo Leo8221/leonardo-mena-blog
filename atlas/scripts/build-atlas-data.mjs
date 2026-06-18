@@ -9,7 +9,8 @@ const outputPath = path.join(atlasRoot, "data", "atlas-data.json");
 
 const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
 
-const hidden = new Set(source.system.hiddenStatuses.map((status) => normalize(status)));
+const hiddenStatusLabels = ["Borrador", "Backlog", "Pendiente", "Proximo"];
+const hidden = new Set(hiddenStatusLabels.map((status) => normalize(status)));
 const visibleModules = source.modules.filter((module) => {
   return module.visible === true && normalize(module.status) === "activo" && !hidden.has(normalize(module.status));
 });
@@ -49,11 +50,29 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
+const { system, modules, brand, ...publicSource } = source;
+
+const publicModules = visibleModules.map((module) => {
+  const {
+    sourceDetail,
+    question,
+    insight,
+    methodology,
+    related,
+    ...publicModule
+  } = module;
+  return publicModule;
+});
+
 const output = {
-  ...source,
+  ...publicSource,
+  brand: {
+    name: brand.name,
+    shortName: brand.shortName
+  },
   generatedAt: new Date().toISOString(),
-  modules: visibleModules,
-  moduleCount: visibleModules.length
+  modules: publicModules,
+  moduleCount: publicModules.length
 };
 
 fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");

@@ -11,16 +11,18 @@ const state = {
   macroMetric: "dolar",
   tradeMetric: "exports",
   laborMetric: "employment",
+  territoryMapMetric: "business_density",
   territoryRegion: "all",
-  visualMap: "business"
+  visualMap: "business",
+  mapPinned: {}
 };
 
 const els = {
   nav: document.getElementById("module-nav"),
   search: document.getElementById("atlas-search"),
   metricStrip: document.getElementById("metric-strip"),
+  mobileNav: document.getElementById("mobile-module-nav"),
   stage: document.getElementById("module-stage"),
-  rail: document.getElementById("insight-rail"),
   menuToggle: document.getElementById("menu-toggle")
 };
 
@@ -65,9 +67,10 @@ function bindEvents() {
     button.addEventListener("click", () => {
       state.family = button.dataset.filter;
       document.querySelectorAll(".filter-pill").forEach((item) => {
-        item.classList.toggle("is-active", item === button);
+        item.classList.toggle("is-active", item.dataset.filter === state.family);
       });
       renderNavigation();
+      renderMobileNavigation();
       renderOverviewIfActive();
     });
   });
@@ -80,13 +83,20 @@ function bindEvents() {
   window.addEventListener("resize", debounce(() => {
     renderStage();
   }, 140));
+
+  window.addEventListener("hashchange", () => {
+    const route = window.location.hash.replace("#", "") || "overview";
+    if (route !== state.active) {
+      setActive(route);
+    }
+  });
 }
 
 function render() {
   renderMetrics();
   renderNavigation();
+  renderMobileNavigation();
   renderStage();
-  renderRail();
 }
 
 function renderMetrics() {
@@ -108,13 +118,13 @@ function renderNavigation() {
   const modules = filteredModules();
   const buttons = [
     `<button class="module-button ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview">
-      <small>Portada</small>
-      <strong>Vista general</strong>
-      <span>${visibleModules().length} modulos activos y listos para crecer.</span>
+      <small>Atlas</small>
+      <strong>Portada</strong>
+      <span>${visibleModules().length} vistas</span>
     </button>`,
     ...modules.map((module) => `
       <button class="module-button ${state.active === module.id ? "is-active" : ""}" type="button" data-module="${module.id}">
-        <small>${escapeHtml(module.family)} · ${escapeHtml(module.type)}</small>
+        <small>${escapeHtml(module.family)}</small>
         <strong>${escapeHtml(module.title)}</strong>
         <span>${escapeHtml(module.topic)}</span>
       </button>
@@ -127,10 +137,37 @@ function renderNavigation() {
   });
 }
 
+function renderMobileNavigation() {
+  if (!els.mobileNav) return;
+  const modules = filteredModules();
+  const buttons = [
+    `<button class="mobile-module-card ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview">
+      <small>Atlas</small>
+      <strong>Portada</strong>
+    </button>`,
+    ...modules.map((module) => `
+      <button class="mobile-module-card ${state.active === module.id ? "is-active" : ""}" type="button" data-module="${module.id}">
+        <small>${escapeHtml(module.family)}</small>
+        <strong>${escapeHtml(module.title)}</strong>
+      </button>
+    `)
+  ];
+
+  els.mobileNav.innerHTML = buttons.join("");
+  els.mobileNav.querySelectorAll(".mobile-module-card").forEach((button) => {
+    button.addEventListener("click", () => setActive(button.dataset.module));
+  });
+  const activeButton = els.mobileNav.querySelector(".mobile-module-card.is-active");
+  if (activeButton && window.matchMedia("(max-width: 640px)").matches) {
+    window.requestAnimationFrame(() => {
+      activeButton.scrollIntoView({ block: "nearest", inline: "start" });
+    });
+  }
+}
+
 function renderOverviewIfActive() {
   if (state.active === "overview") {
     renderStage();
-    renderRail();
   }
 }
 
@@ -154,13 +191,13 @@ function renderStage() {
       <div>
         <p class="eyebrow">${escapeHtml(module.family)} / ${escapeHtml(module.topic)}</p>
         <h2>${escapeHtml(module.title)}</h2>
-        <p>${escapeHtml(module.summary)}</p>
       </div>
-      <span class="status-badge" data-status="${module.status}">${escapeHtml(module.status)}</span>
+      ${renderStageActions(true)}
     </div>
     ${renderModuleBody(module)}
   `;
 
+  hydrateModuleActions();
   hydrateCharts(module);
 }
 
@@ -169,35 +206,18 @@ function renderOverview() {
   els.stage.innerHTML = `
     <div class="stage-header">
       <div>
-        <p class="eyebrow">${escapeHtml(state.data.brand.shortName)} · Sistema modular</p>
-        <h2>Todos los analisis, una arquitectura.</h2>
-        <p>${escapeHtml(state.data.brand.sourceNote)}</p>
+        <p class="eyebrow">${escapeHtml(state.data.brand.shortName)}</p>
+        <h2>Atlas</h2>
       </div>
-      <span class="status-badge" data-status="Activo">${modules.length} visibles</span>
-    </div>
-    <div class="system-strip">
-      <div>
-        <small>Contrato</small>
-        <strong>${escapeHtml(state.data.system.visibilityPolicy)}</strong>
-      </div>
-      <div>
-        <small>Actualizado</small>
-        <strong>${escapeHtml(state.data.updated)}</strong>
-      </div>
-      <div>
-        <small>Version</small>
-        <strong>${escapeHtml(state.data.system.version)}</strong>
-      </div>
+      ${renderStageActions(false)}
     </div>
     <div class="module-grid">
       ${modules.map((module) => `
         <button class="module-card" type="button" data-module="${module.id}">
-          <span class="status-badge" data-status="${module.status}">${escapeHtml(module.status)}</span>
           <h3>${escapeHtml(module.title)}</h3>
-          <p>${escapeHtml(module.summary)}</p>
           <footer>
             <span>${escapeHtml(module.family)}</span>
-            <span>${escapeHtml(module.source)}</span>
+            <span>${escapeHtml(module.type)}</span>
           </footer>
         </button>
       `).join("")}
@@ -207,6 +227,16 @@ function renderOverview() {
   els.stage.querySelectorAll(".module-card").forEach((button) => {
     button.addEventListener("click", () => setActive(button.dataset.module));
   });
+  hydrateModuleActions();
+}
+
+function renderStageActions(canExport) {
+  return `
+    <div class="stage-actions">
+      <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Enlace</button>
+      ${canExport ? `<button class="stage-action" type="button" data-action="export-chart" title="Descargar grafico visible">PNG</button>` : ""}
+    </div>
+  `;
 }
 
 function renderModuleBody(module) {
@@ -226,7 +256,6 @@ function renderModuleBody(module) {
   return `
     <div class="chart-layout">
       ${body}
-      ${renderModuleNotes(module)}
     </div>
   `;
 }
@@ -237,7 +266,6 @@ function renderMacro() {
       <div class="card-head">
         <div>
           <h3>Trayectoria macro reciente</h3>
-          <p>Selector de metrica para comparar el pulso de corto plazo.</p>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("macro", "dolar", "Dolar")}
@@ -255,12 +283,10 @@ function renderExternal() {
   return `
     <section class="chart-card chart-card-wide">
       <h3>Indice de presion externa</h3>
-      <p>Escala 0-100; valores mas altos indican un entorno global mas exigente.</p>
       <canvas id="external-chart" height="320" aria-label="Grafico de presion externa"></canvas>
     </section>
     <section class="chart-card">
       <h3>Drivers comparables</h3>
-      <p>Lectura normalizada de los componentes que alimentan la senal externa.</p>
       <div class="driver-list">${renderBarRows(state.data.series.drivers, {
         labelField: "driver",
         valueField: "value",
@@ -275,7 +301,6 @@ function renderSectors() {
   return `
     <section class="chart-card">
       <h3>Presion por sector</h3>
-      <p>Ranking 0-100; mayor valor implica mayor tension relativa de los drivers actuales.</p>
       <div class="sector-list">${renderBarRows(state.data.series.sectors, {
         labelField: "sector",
         valueField: "pressure",
@@ -285,26 +310,21 @@ function renderSectors() {
     </section>
     <section class="chart-card">
       <h3>Driver principal</h3>
-      <p>Frecuencia del driver dominante dentro del ranking sectorial.</p>
       <canvas id="sector-driver-chart" height="320" aria-label="Grafico de drivers sectoriales"></canvas>
     </section>
   `;
 }
 
 function renderTrade() {
-  const metricLabels = { exports: "Exportaciones", imports: "Importaciones", opportunity: "Oportunidad" };
   return `
     <section class="chart-card chart-card-wide">
       <h3>Espacio de oportunidad comercial</h3>
-      <p>Lectura de socios por dependencia importadora, potencial exportador y tamano relativo de oportunidad.</p>
       <canvas id="trade-space-chart" height="420" aria-label="Espacio de oportunidad comercial"></canvas>
-      <p class="chart-caption">Burbujas: oportunidad relativa. Color: posicion neta del socio.</p>
     </section>
     <section class="chart-card chart-card-wide">
       <div class="card-head">
         <div>
           <h3>Socios comerciales</h3>
-          <p>Ranking por flujo u oportunidad relativa en el bloque visible.</p>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("trade", "exports", "Exporta")}
@@ -313,10 +333,9 @@ function renderTrade() {
         </div>
       </div>
       <canvas id="trade-chart" height="340" aria-label="Grafico de socios comerciales"></canvas>
-      <p class="chart-caption">${metricLabels[state.tradeMetric]} · valores relativos.</p>
     </section>
     <section class="chart-card">
-      <h3>Productos y sofisticacion</h3>
+      <h3>Canasta exportadora</h3>
       <div class="table-list">
         ${state.data.series.trade.products.map((item) => `
           <div class="table-row">
@@ -332,13 +351,11 @@ function renderTrade() {
 }
 
 function renderLabor() {
-  const labels = { employment: "Empleo", informality: "Informalidad", wageIndex: "Indice salarial" };
   return `
     <section class="chart-card chart-card-wide">
       <div class="card-head">
         <div>
           <h3>Insercion por educacion</h3>
-          <p>Comparacion de empleo, informalidad e indice salarial relativo.</p>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("labor", "employment", "Empleo")}
@@ -347,7 +364,6 @@ function renderLabor() {
         </div>
       </div>
       <canvas id="labor-chart" height="340" aria-label="Grafico laboral por educacion"></canvas>
-      <p class="chart-caption">${labels[state.laborMetric]} por grupo educativo.</p>
     </section>
     <section class="chart-card">
       <h3>Empleo por sector</h3>
@@ -365,7 +381,6 @@ function renderPrices() {
   return `
     <section class="chart-card chart-card-wide">
       <h3>Inflacion general y subyacente</h3>
-      <p>Linea de seguimiento para distinguir shock visible y presion persistente.</p>
       <canvas id="prices-chart" height="320" aria-label="Grafico de inflacion general y subyacente"></canvas>
     </section>
     <section class="chart-card">
@@ -394,23 +409,28 @@ function renderPrices() {
 
 function renderTerritory() {
   const regions = state.data.series.territory.regions;
-  const mapRows = territoryMapRows();
   return `
-    <section class="chart-card chart-card-wide">
+    <section class="chart-card chart-card-wide map-card">
       <div class="card-head">
         <div>
-          <h3>Mapa de densidad empresarial</h3>
-          <p>Coropleta provincial construida desde shapefile y datos empresariales/poblacionales.</p>
+          <h3>Mapa territorial</h3>
+        </div>
+        <div class="chart-toolbar">
+          ${chartToggle("territoryMap", "business_density", "Densidad")}
+          ${chartToggle("territoryMap", "opportunity", "Oportunidad")}
         </div>
       </div>
-      <canvas id="territory-map" height="500" aria-label="Mapa provincial de densidad empresarial"></canvas>
-      <p class="chart-caption">Color: empresas por 1,000 habitantes. Pasa el cursor para leer provincia y valor.</p>
+      <div class="map-workbench">
+        <div class="map-canvas-wrap">
+          <canvas id="territory-map" height="620" aria-label="Mapa territorial"></canvas>
+        </div>
+        <aside class="map-inspector" id="territory-map-inspector" aria-label="Detalle del mapa"></aside>
+      </div>
     </section>
     <section class="chart-card chart-card-wide">
       <div class="card-head">
         <div>
           <h3>Oportunidad territorial</h3>
-          <p>Relacion entre infraestructura y escala de mercado por provincia.</p>
         </div>
         <div class="chart-toolbar">
           ${regions.map((region) => {
@@ -421,18 +441,6 @@ function renderTerritory() {
       </div>
       <canvas id="territory-chart" height="340" aria-label="Grafico territorial"></canvas>
     </section>
-    <section class="chart-card">
-      <h3>${mapRows.length ? "Ranking por densidad empresarial" : "Ranking provincial"}</h3>
-      <div class="table-list">
-        ${(mapRows.length ? mapRows.slice(0, 8) : territoryRows()).map((item) => `
-          <div class="table-row">
-            <strong>${escapeHtml(item.province)}</strong>
-            <span>${escapeHtml(item.region || item.region_code || "RD")}</span>
-            <span>${formatNumber(item.business_density ?? item.opportunity)}${item.business_density === undefined ? "/100" : " emp./1,000 hab."}</span>
-          </div>
-        `).join("")}
-      </div>
-    </section>
   `;
 }
 
@@ -440,7 +448,6 @@ function renderMipymes() {
   return `
     <section class="chart-card chart-card-wide">
       <h3>Acceso, formalidad y productividad</h3>
-      <p>Comparacion por tamano y condicion empresarial.</p>
       <canvas id="mipyme-chart" height="340" aria-label="Grafico de MiPyMES"></canvas>
     </section>
     <section class="chart-card">
@@ -468,28 +475,15 @@ function renderMipymes() {
 }
 
 function renderVisualLab() {
-  const visuals = state.articleVisuals;
-  if (!visuals) {
-    return `
-      <section class="chart-card chart-card-wide">
-        <h3>Galeria visual pendiente</h3>
-        <p>Los activos interactivos de articulos todavia no estan publicados en esta version del Atlas.</p>
-      </section>
-    `;
+  if (!state.articleVisuals) {
+    return "";
   }
 
-  const captions = {
-    business: "Densidad empresarial provincial desde el articulo de desarrollo territorial.",
-    mipymes: "Microempresas e informalidad por region desde el articulo de MiPyMES.",
-    tourism: "Preferencia por sol y playa por pais de origen desde el articulo de turismo."
-  };
-
   return `
-    <section class="chart-card chart-card-wide">
+    <section class="chart-card chart-card-wide map-card">
       <div class="card-head">
         <div>
-          <h3>Mapas interactivos desde articulos</h3>
-          <p>${escapeHtml(captions[state.visualMap])}</p>
+          <h3>Mapas desde articulos</h3>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("visual", "business", "Empresas")}
@@ -497,54 +491,24 @@ function renderVisualLab() {
           ${chartToggle("visual", "tourism", "Turismo")}
         </div>
       </div>
-      <canvas id="visual-map" height="500" aria-label="Mapa interactivo desde articulos"></canvas>
-      <p class="chart-caption">Datos trazables a articulos publicados. Hover para leer cada territorio.</p>
+      <div class="map-workbench">
+        <div class="map-canvas-wrap">
+          <canvas id="visual-map" height="620" aria-label="Mapa interactivo desde articulos"></canvas>
+        </div>
+        <aside class="map-inspector" id="visual-map-inspector" aria-label="Detalle del mapa"></aside>
+      </div>
     </section>
     <section class="chart-card">
       <h3>Demanda turistica por motivo</h3>
-      <p>Treemap interactivo para ver cuanto ocupan playa, clima y nichos de alto valor.</p>
       <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turisticos"></canvas>
     </section>
     <section class="chart-card">
       <h3>Empleo formal y alquiler</h3>
-      <p>Relacion provincial entre prima de ubicacion y concentracion del empleo formal.</p>
       <canvas id="transport-space" height="340" aria-label="Scatter de empleo formal y alquiler"></canvas>
     </section>
     <section class="chart-card chart-card-wide">
       <h3>Servicio de deuda</h3>
-      <p>Composicion anual de principal, intereses y comisiones del servicio de deuda.</p>
       <canvas id="debt-service" height="360" aria-label="Servicio de deuda por componente"></canvas>
-    </section>
-    <section class="chart-card">
-      <h3>Activos usados</h3>
-      <div class="table-list">
-        ${visuals.sources.map((source) => {
-          const sourceFiles = Array.isArray(source.files) ? source.files : [source.files].filter(Boolean);
-          return `
-          <div class="table-row">
-            <strong>${escapeHtml(source.title)}</strong>
-            <span>${escapeHtml(source.article)}</span>
-            <em>${escapeHtml(sourceFiles.join(", "))}</em>
-          </div>
-        `;
-        }).join("")}
-      </div>
-    </section>
-  `;
-}
-
-function renderModuleNotes(module) {
-  return `
-    <section class="chart-card module-notes">
-      <h3>Fuente y metodo</h3>
-      <p>${escapeHtml(module.sourceDetail)}</p>
-      <ul>
-        ${module.methodology.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-      </ul>
-      <div class="source-footer">
-        <span>Fuente: ${escapeHtml(module.source)}</span>
-        <span>Actualizado: ${escapeHtml(state.data.updated)}</span>
-      </div>
     </section>
   `;
 }
@@ -563,6 +527,7 @@ function chartToggle(scope, id, label) {
     macro: state.macroMetric,
     trade: state.tradeMetric,
     labor: state.laborMetric,
+    territoryMap: state.territoryMapMetric,
     territory: state.territoryRegion,
     visual: state.visualMap
   }[scope];
@@ -577,6 +542,7 @@ function hydrateCharts(module) {
       if (scope === "macro") state.macroMetric = metric;
       if (scope === "trade") state.tradeMetric = metric;
       if (scope === "labor") state.laborMetric = metric;
+      if (scope === "territoryMap") state.territoryMapMetric = metric;
       if (scope === "territory") state.territoryRegion = metric;
       if (scope === "visual") state.visualMap = metric;
       renderStage();
@@ -657,11 +623,18 @@ function hydrateCharts(module) {
   }
 
   if (module.chart === "territory") {
+    const mapMeta = territoryMapMeta();
     drawChoroplethMap(document.getElementById("territory-map"), territoryMapFeatures(), {
-      title: "Republica Dominicana: densidad empresarial",
-      valueField: "business_density",
+      ...mapMeta,
+      title: `Republica Dominicana: ${mapMeta.label}`,
       labelField: "province",
-      fallbackLabel: "Sin dato"
+      fallbackLabel: "Sin dato",
+      inspectorId: "territory-map-inspector",
+      mapId: "territory",
+      tooltipRows: [
+        { field: "businesses", label: "Empresas" },
+        { field: "population", label: "Poblacion" }
+      ]
     });
     drawScatterChart(document.getElementById("territory-chart"), territoryRows(), {
       title: "Infraestructura vs mercado",
@@ -696,9 +669,12 @@ function hydrateVisualLab() {
       title: "Densidad empresarial por provincia",
       valueField: "business_density",
       labelField: "province",
+      label: "Densidad empresarial",
       unit: "empresas por 1,000 hab.",
       colorStart: "#edf4f2",
       colorEnd: "#c86448",
+      inspectorId: "visual-map-inspector",
+      mapId: "visual-business",
       tooltipRows: [
         { field: "businesses", label: "Empresas" },
         { field: "population", label: "Poblacion" }
@@ -709,9 +685,12 @@ function hydrateVisualLab() {
       title: "Microempresas por region",
       valueField: "pct_micro",
       labelField: "region",
+      label: "Microempresas",
       unit: "% microempresas",
       colorStart: "#eef1ed",
       colorEnd: "#6b7554",
+      inspectorId: "visual-map-inspector",
+      mapId: "visual-mipymes",
       tooltipRows: [
         { field: "pct_informal", label: "Informalidad", suffix: "%" }
       ]
@@ -721,9 +700,12 @@ function hydrateVisualLab() {
       title: "Preferencia por sol y playa segun pais de origen",
       valueField: "beach_pct",
       labelField: "country",
+      label: "Sol y playa",
       unit: "% motivo playa",
       colorStart: "#f5f1e8",
       colorEnd: "#7a2e21",
+      inspectorId: "visual-map-inspector",
+      mapId: "visual-tourism",
       showLabels: false
     }
   }[state.visualMap];
@@ -773,39 +755,6 @@ function hydrateVisualLab() {
   });
 }
 
-function renderRail() {
-  if (!state.data) return;
-  const module = state.active === "overview" ? null : findModule(state.active);
-  const title = module ? module.title : "Lectura rapida";
-  const question = module ? module.question : "Que modulo quieres explorar?";
-  const source = module ? module.source : "Catalogo modular";
-  const insight = module ? module.insight : "Elige un modulo; el detalle aparece cuando el dato lo pide.";
-
-  els.rail.innerHTML = `
-    <p class="eyebrow">Criterio aplicado</p>
-    <h2>${escapeHtml(title)}</h2>
-    <p>${escapeHtml(question)}</p>
-    <div class="reading-list">
-      <div class="reading-item">
-        <small>Lectura</small>
-        <strong>${escapeHtml(insight)}</strong>
-      </div>
-      <div class="reading-item">
-        <small>Fuente</small>
-        <strong>${escapeHtml(source)}</strong>
-      </div>
-      <a class="reading-item" href="../productos.html">
-        <small>Productos</small>
-        <strong>Ver mapa de productos</strong>
-      </a>
-      <a class="reading-item" href="../republica-habla-de.html">
-        <small>Analisis</small>
-        <strong>Leer articulos relacionados</strong>
-      </a>
-    </div>
-  `;
-}
-
 function visibleModules() {
   return state.data.modules.filter((module) => module.visible !== false && statusKey(module.status) === "activo");
 }
@@ -813,7 +762,7 @@ function visibleModules() {
 function filteredModules() {
   return visibleModules().filter((module) => {
     const matchesFamily = state.family === "all" || statusKey(module.family) === statusKey(state.family);
-    const text = `${module.title} ${module.topic} ${module.type} ${module.summary} ${module.source}`.toLowerCase();
+    const text = `${module.title} ${module.topic} ${module.type} ${module.summary || ""} ${module.source || ""}`.toLowerCase();
     const matchesQuery = !state.query || normalizeText(text).includes(normalizeText(state.query));
     return matchesFamily && matchesQuery;
   });
@@ -830,11 +779,32 @@ function territoryMapFeatures() {
   return state.geojson.features;
 }
 
-function territoryMapRows() {
+function territoryMapRows(valueField = state.territoryMapMetric) {
   return territoryMapFeatures()
     .map((feature) => feature.properties)
-    .filter((item) => Number.isFinite(Number(item.business_density)))
-    .sort((a, b) => Number(b.business_density) - Number(a.business_density));
+    .filter((item) => Number.isFinite(Number(item[valueField])))
+    .sort((a, b) => Number(b[valueField]) - Number(a[valueField]));
+}
+
+function territoryMapMeta() {
+  return {
+    business_density: {
+      valueField: "business_density",
+      label: "densidad empresarial",
+      unit: "empresas por 1,000 hab.",
+      colorStart: "#edf4f2",
+      colorEnd: "#c86448",
+      caption: "Empresas registradas por 1,000 habitantes."
+    },
+    opportunity: {
+      valueField: "opportunity",
+      label: "oportunidad territorial",
+      unit: "/100",
+      colorStart: "#eef1ed",
+      colorEnd: "#466a8f",
+      caption: "Indice territorial normalizado."
+    }
+  }[state.territoryMapMetric];
 }
 
 function findModule(id) {
@@ -842,17 +812,77 @@ function findModule(id) {
 }
 
 function setActive(moduleId) {
-  state.active = moduleId;
-  if (moduleId === "overview") {
+  const next = moduleId === "overview" || findModule(moduleId) ? moduleId : "overview";
+  state.active = next;
+  if (next === "overview") {
     history.replaceState(null, "", window.location.pathname);
   } else {
-    history.replaceState(null, "", `#${moduleId}`);
+    history.replaceState(null, "", `#${next}`);
   }
   document.body.classList.remove("sidebar-open");
   els.menuToggle.setAttribute("aria-expanded", "false");
   renderNavigation();
+  renderMobileNavigation();
   renderStage();
-  renderRail();
+}
+
+function hydrateModuleActions() {
+  els.stage.querySelectorAll('[data-action="copy-link"]').forEach((button) => {
+    button.addEventListener("click", async () => {
+      const copied = await copyText(currentViewUrl());
+      flashButton(button, copied ? "Copiado" : "Copiar");
+    });
+  });
+
+  els.stage.querySelectorAll('[data-action="export-chart"]').forEach((button) => {
+    button.addEventListener("click", () => {
+      const canvas = els.stage.querySelector("canvas");
+      if (!canvas) {
+        flashButton(button, "Sin grafico");
+        return;
+      }
+      const link = document.createElement("a");
+      link.download = `atlas-${state.active}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      flashButton(button, "Descargado");
+    });
+  });
+}
+
+function currentViewUrl() {
+  const url = new URL(window.location.href);
+  url.hash = state.active === "overview" ? "" : state.active;
+  return url.toString();
+}
+
+async function copyText(value) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return true;
+    } catch {
+      // Fall through to the input-based copy path.
+    }
+  }
+  const input = document.createElement("input");
+  input.value = value;
+  input.setAttribute("readonly", "");
+  input.style.position = "fixed";
+  input.style.opacity = "0";
+  document.body.appendChild(input);
+  input.select();
+  const copied = document.execCommand("copy");
+  input.remove();
+  return copied;
+}
+
+function flashButton(button, label) {
+  const original = button.textContent;
+  button.textContent = label;
+  window.setTimeout(() => {
+    button.textContent = original;
+  }, 1200);
 }
 
 function renderBarRows(rows, options) {
@@ -1196,7 +1226,10 @@ function drawChoroplethMap(canvas, features, options) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
-  const padding = { top: 44, right: 34, bottom: 54, left: 34 };
+  const isCompact = width < 420;
+  const padding = isCompact
+    ? { top: 14, right: 8, bottom: 44, left: 8 }
+    : { top: 46, right: 34, bottom: 58, left: 34 };
   const coordinates = collectGeoCoordinates(features);
   const values = features
     .map((feature) => Number(feature.properties[options.valueField]))
@@ -1204,10 +1237,11 @@ function drawChoroplethMap(canvas, features, options) {
 
   if (!coordinates.length || !values.length) {
     clearCanvas(ctx, width, height);
-    drawCanvasTitle(ctx, options.title, padding.left, 22);
+    if (!isCompact) drawCanvasTitle(ctx, options.title, padding.left, 22);
     ctx.fillStyle = "#6b7280";
     ctx.font = "13px Inter";
-    ctx.fillText("Mapa pendiente de datos geograficos publicables.", padding.left, height / 2);
+    ctx.fillText("Sin datos cartograficos para esta vista.", padding.left, height / 2);
+    updateMapInspector(options.inspectorId, null, options, [], false);
     return;
   }
 
@@ -1241,23 +1275,32 @@ function drawChoroplethMap(canvas, features, options) {
     path: buildFeaturePath(feature, project),
     centroid: project(geoCentroid(feature))
   }));
+  const mapId = options.mapId || canvas.id;
+  const currentPinnedEntry = () => entries.find((entry) => mapEntryKey(entry, options) === state.mapPinned[mapId]);
+  const topEntry = entries
+    .filter((entry) => Number.isFinite(entry.value))
+    .sort((a, b) => b.value - a.value)[0];
 
   const paint = (highlightEntry = null) => {
     clearCanvas(ctx, width, height);
-    drawCanvasTitle(ctx, options.title, padding.left, 22);
+    if (!isCompact) drawCanvasTitle(ctx, options.title, padding.left, 22);
     entries.forEach((entry) => {
       ctx.fillStyle = Number.isFinite(entry.value)
         ? interpolateColor(options.colorStart || "#edf4f2", options.colorEnd || "#c86448", normalizeRatio(entry.value, min, max))
         : "#f1f1ee";
       ctx.fill(entry.path);
       ctx.strokeStyle = "#ffffff";
-      ctx.lineWidth = 0.9;
+      ctx.lineWidth = 1;
       ctx.stroke(entry.path);
     });
 
     if (highlightEntry) {
+      ctx.save();
+      ctx.fillStyle = "rgba(255, 255, 255, 0.22)";
+      ctx.fill(highlightEntry.path);
+      ctx.restore();
       ctx.strokeStyle = "#191b1f";
-      ctx.lineWidth = 2.4;
+      ctx.lineWidth = 2.8;
       ctx.stroke(highlightEntry.path);
     }
 
@@ -1265,17 +1308,33 @@ function drawChoroplethMap(canvas, features, options) {
     drawMapLegend(ctx, min, max, width, height, padding, options);
   };
 
-  paint();
+  const syncInspector = (entry, isPinned = false) => {
+    updateMapInspector(options.inspectorId, entry, options, entries, isPinned);
+    bindMapInspectorButtons(options.inspectorId, (key) => {
+      const selected = entries.find((candidate) => mapEntryKey(candidate, options) === key);
+      if (!selected) return;
+      state.mapPinned[mapId] = key;
+      paint(selected);
+      syncInspector(selected, true);
+    });
+  };
+
+  paint(currentPinnedEntry() || topEntry);
+  syncInspector(currentPinnedEntry() || topEntry, Boolean(currentPinnedEntry()));
 
   canvas.onmousemove = (event) => {
     const point = getCanvasPoint(canvas, event);
     const found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
     if (!found) {
-      paint();
+      canvas.style.cursor = "default";
+      paint(currentPinnedEntry() || topEntry);
+      syncInspector(currentPinnedEntry() || topEntry, Boolean(currentPinnedEntry()));
       hideTooltip();
       return;
     }
+    canvas.style.cursor = "pointer";
     paint(found);
+    syncInspector(found, mapEntryKey(found, options) === state.mapPinned[mapId]);
     const valueLabel = Number.isFinite(found.value)
       ? `${formatNumber(found.value)} ${escapeHtml(options.unit || "")}`.trim()
       : "Sin dato";
@@ -1293,10 +1352,85 @@ function drawChoroplethMap(canvas, features, options) {
     `, event);
   };
 
+  canvas.onclick = (event) => {
+    const point = getCanvasPoint(canvas, event);
+    const found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
+    if (!found) return;
+    state.mapPinned[mapId] = mapEntryKey(found, options);
+    paint(found);
+    syncInspector(found, true);
+  };
+
   canvas.onmouseleave = () => {
-    paint();
+    const selected = currentPinnedEntry() || topEntry;
+    canvas.style.cursor = "default";
+    paint(selected);
+    syncInspector(selected, Boolean(state.mapPinned[mapId]));
     hideTooltip();
   };
+}
+
+function mapEntryKey(entry, options) {
+  return String(entry.feature.properties[options.labelField] || options.fallbackLabel || "");
+}
+
+function updateMapInspector(inspectorId, entry, options, entries, isPinned) {
+  if (!inspectorId) return;
+  const inspector = document.getElementById(inspectorId);
+  if (!inspector) return;
+  if (!entry) {
+    inspector.innerHTML = `<div class="map-empty">Sin datos</div>`;
+    return;
+  }
+
+  const label = entry.feature.properties[options.labelField] || options.fallbackLabel || "Sin dato";
+  const value = Number.isFinite(entry.value) ? `${formatNumber(entry.value)} ${options.unit || ""}`.trim() : "Sin dato";
+  const topEntries = entries
+    .filter((candidate) => Number.isFinite(candidate.value))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 6);
+  const extraRows = (options.tooltipRows || [])
+    .map((row) => {
+      const raw = entry.feature.properties[row.field];
+      if (raw === null || raw === undefined || raw === "") return "";
+      return `
+        <div>
+          <span>${escapeHtml(row.label)}</span>
+          <strong>${formatNumber(raw)}${escapeHtml(row.suffix || "")}</strong>
+        </div>
+      `;
+    })
+    .join("");
+
+  inspector.innerHTML = `
+    <div class="map-focus">
+      <small>${isPinned ? "Fijado" : "Foco"}</small>
+      <strong>${escapeHtml(label)}</strong>
+      <span>${escapeHtml(value)}</span>
+    </div>
+    ${extraRows ? `<div class="map-stat-grid">${extraRows}</div>` : ""}
+    <div class="map-rank-list">
+      ${topEntries.map((candidate, index) => {
+        const candidateLabel = candidate.feature.properties[options.labelField] || options.fallbackLabel || "";
+        return `
+          <button class="map-rank-row" type="button" data-map-key="${escapeHtml(mapEntryKey(candidate, options))}">
+            <span>${index + 1}</span>
+            <strong>${escapeHtml(candidateLabel)}</strong>
+            <em>${formatNumber(candidate.value)}</em>
+          </button>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function bindMapInspectorButtons(inspectorId, onSelect) {
+  if (!inspectorId) return;
+  const inspector = document.getElementById(inspectorId);
+  if (!inspector) return;
+  inspector.querySelectorAll(".map-rank-row").forEach((button) => {
+    button.addEventListener("click", () => onSelect(button.dataset.mapKey));
+  });
 }
 
 function drawScatterChart(canvas, rows, options) {
@@ -1489,7 +1623,12 @@ function geoCentroid(feature) {
 }
 
 function drawMapLegend(ctx, min, max, width, height, padding, options = {}) {
-  const legendW = Math.min(240, width - padding.left - padding.right);
+  ctx.font = "11px Inter";
+  const unitLabel = options.unit || "";
+  const unitW = unitLabel ? ctx.measureText(unitLabel).width : 0;
+  const availableW = width - padding.left - padding.right;
+  const reserveUnit = unitLabel && availableW > 320 ? unitW + 16 : 0;
+  const legendW = Math.min(240, Math.max(120, availableW - reserveUnit));
   const legendH = 10;
   const x = padding.left;
   const y = height - 28;
@@ -1501,10 +1640,15 @@ function drawMapLegend(ctx, min, max, width, height, padding, options = {}) {
   ctx.strokeStyle = "#cbd5cf";
   ctx.strokeRect(x, y, legendW, legendH);
   ctx.fillStyle = "#6b7280";
-  ctx.font = "11px Inter";
-  ctx.fillText(formatNumber(min), x, y + 26);
-  ctx.fillText(formatNumber(max), x + legendW - 34, y + 26);
-  if (options.unit) ctx.fillText(options.unit, x + legendW + 12, y + 9);
+  const minLabel = formatNumber(min);
+  const maxLabel = formatNumber(max);
+  ctx.fillText(minLabel, x, y + 26);
+  ctx.fillText(maxLabel, x + legendW - ctx.measureText(maxLabel).width, y + 26);
+  if (unitLabel && x + legendW + 12 + unitW <= width - padding.right) {
+    ctx.fillText(unitLabel, x + legendW + 12, y + 9);
+  } else if (unitLabel) {
+    ctx.fillText(unitLabel, x, y - 6);
+  }
 }
 
 function normalizeRatio(value, min, max) {

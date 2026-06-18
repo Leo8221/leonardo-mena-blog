@@ -2,16 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Economía aplicada dominicana con análisis, datos y visualizaciones.">
 
 <title>Leonardo Mena · Economía Aplicada – Leonardo Mena</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -20,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -38,18 +36,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-56071f1852f4fd13f0a0c7ab00a5e1e1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9450e86c789fd962a2e2d3e80389ebf8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-443a884e822402cf5775bdb329054e84.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c17f03754ab3df60ea3784d21da7b3e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,20 +76,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-grafico-destacado-desktop .list');
+    const listingTargetEl = window.document.querySelector('#listing-home-featured .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
-      return; 
+      return;
     }
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-grafico-destacado-desktop'] = new List('listing-grafico-destacado-desktop', options);
+    window['quarto-listings']['listing-home-featured'] = new List('listing-home-featured', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -102,51 +101,23 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
-  
+
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-grafico-destacado-mobile .list');
+    const listingTargetEl = window.document.querySelector('#listing-home-latest .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
-      return; 
+      return;
     }
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-grafico-destacado-mobile'] = new List('listing-grafico-destacado-mobile', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ultimos-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ultimos-posts'] = new List('listing-ultimos-posts', options);
+    window['quarto-listings']['listing-home-latest'] = new List('listing-home-latest', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -216,11 +187,17 @@ window.Quarto = {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Leonardo Mena · Economía Aplicada">
-<meta property="og:description" content="Economía aplicada y datos de la República Dominicana">
+<meta property="og:description" content="Economía aplicada dominicana con análisis, datos y visualizaciones.">
+<meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
 <meta property="og:site_name" content="Leonardo Mena">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="Leonardo Mena · Economía Aplicada">
-<meta name="twitter:description" content="Economía aplicada y datos de la República Dominicana">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Economía aplicada dominicana con análisis, datos y visualizaciones.">
+<meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -404,74 +381,70 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="./index.html" aria-current="page">
 <span class="menu-text">Inicio</span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./productos.html"> 
-<span class="menu-text">Productos</span></a>
-  </li>  
+    <a class="nav-link" href="./secciones.html">
+<span class="menu-text">Secciones</span></a>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Análisis</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">
         <li>
     <a class="dropdown-item" href="./republica-habla-de.html">
  <span class="dropdown-text">La República habla de</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./republica-en-un-grafico.html">
  <span class="dropdown-text">La República en un gráfico</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./archivo.html">
  <span class="dropdown-text">Archivo completo</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./categorias.html">
  <span class="dropdown-text">Categorías</span></a>
-  </li>  
+  </li>
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="./atlas/index.html"> <i class="bi bi-graph-up" role="img">
-</i> 
-<span class="menu-text">Atlas LM</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./investigacion.html"> 
-<span class="menu-text">Investigación</span></a>
-  </li>  
+</i>
+<span class="menu-text">Atlas</span></a>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-escuela" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Escuela</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">
         <li>
     <a class="dropdown-item" href="./predecesores.html">
  <span class="dropdown-text">Mis predecesores</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./mitos-economicos.html">
  <span class="dropdown-text">Mitos económicos</span></a>
-  </li>  
+  </li>
         <li>
     <a class="dropdown-item" href="./fundamentos.html">
  <span class="dropdown-text">Fundamentos</span></a>
-  </li>  
+  </li>
     </ul>
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./suscribete.html"> 
+    <a class="nav-link" href="./suscribete.html">
 <span class="menu-text"><span style="background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;">Suscríbete</span></span></a>
-  </li>  
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./about.html">
 <span class="menu-text">Sobre mí</span></a>
-  </li>  
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -484,7 +457,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+
 <!-- main -->
 <main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
@@ -492,61 +465,26 @@ window.Quarto = {
 
 
 
-<!-- VERSIÓN MOBILE -->
-<section id="economía-dominicana-aplicada" class="level1 mobile-home-hero">
-<h1>Economía<br>Dominicana Aplicada</h1>
-<p>Datos reales. Conceptos claros.</p>
-</section>
-<div class="mobile-hero-wrapper">
-<p><span class="mobile-label">ANÁLISIS DESTACADO</span></p>
-<div id="listing-grafico-destacado-mobile" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1781826217349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
-<a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png" style="height: 300px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-La revolución educativa dominicana: lo que el censo nos dice y lo que no
-</h5>
-<div class="card-text listing-description delink">
-<p>En cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio…</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-12 mar 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No hay resultados</div>
-</div>
-</div>
-<!-- VERSIÓN DESKTOP -->
-<div class="home">
-<div class="home-hero">
-<div class="home-hero-title">
-<p><span class="home-kicker">Economía Dominicana Aplicada</span></p>
-<section id="entendiendo-la-economía-más-allá-del-titular." class="level1">
-<h1>Entendiendo la economía<br>más allá del titular.</h1>
+<div class="home-shell">
+<div class="home-lede">
+<p><span class="home-kicker">Economía aplicada RD</span></p>
+<section id="leer-la-economía-sin-ruido." class="level1">
+<h1>Leer la economía sin ruido.</h1>
+<p>Datos, visuales y criterio para leer coyuntura, sectores y territorio.</p>
 </section>
 </div>
-<div class="home-intro">
-<p>Soy Leonardo Mena. Este es un espacio para entender la economía dominicana con datos reales, conceptos claros y sin jerga innecesaria.</p>
-</div>
+<div class="home-actions">
+<p><a href="atlas/index.html" class="home-action home-action-primary">Abrir Atlas</a> <a href="./republica-habla-de.html" class="home-action">Leer análisis</a></p>
 </div>
 <div class="home-grid">
-<section id="último-análisis-publicado" class="level2 home-main">
-<h2 class="anchored" data-anchor-id="último-análisis-publicado">Último análisis publicado</h2>
-<p>El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.</p>
-<div id="listing-grafico-destacado-desktop" class="quarto-listing quarto-listing-container-grid">
+<div class="home-main">
+<p><span class="section-kicker">Último análisis</span></p>
+<div id="listing-home-featured" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1781826217349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
+<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773288000000" data-listing-file-modified-sort="1781750310921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
 <a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png" style="height: 350px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2026-03-12-educacion-superior-censo\index_files\figure-html\fig-distribucion-nivel-1.png" style="height: 320px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 La revolución educativa dominicana: lo que el censo nos dice y lo que no
@@ -565,74 +503,27 @@ La revolución educativa dominicana: lo que el censo nos dice y lo que no
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
 </div>
-</section>
+</div>
 <div class="home-side">
-<section id="atlas-lm" class="level3 home-side-card">
-<h3 class="anchored" data-anchor-id="atlas-lm">Atlas LM</h3>
-<p>
-Datos interactivos
-</p>
-<p>
-Observatorio, sectores y exploradores con lectura propia.
-</p>
-<div class="home-side-link">
-<p><a href="atlas/index.html">Abrir Atlas</a></p>
+<p><a class="home-side-card home-side-card-primary" href="atlas/index.html"> <span>Atlas</span> <strong>Datos, mapas y sectores.</strong> <em>Entrar</em> </a></p>
+<p><a class="home-side-card" href="./republica-en-un-grafico.html"> <span>Visuales</span> <strong>Gráficos y mapas.</strong> <em>Ver</em> </a></p>
+<p><a class="home-side-card" href="./fundamentos.html"> <span>Fundamentos</span> <strong>Ideas base para leer economía.</strong> <em>Leer</em> </a></p>
 </div>
-</section>
-<section id="fundamentos" class="level3 home-side-card">
-<h3 class="anchored" data-anchor-id="fundamentos">Fundamentos</h3>
-<p>
-Conceptos Claros
-</p>
-<p>
-Inflación, PIB, déficit… explicados sin tecnicismos.
-</p>
-<div class="home-side-link">
-<p><a href="./fundamentos.html">Aprender conceptos</a></p>
 </div>
-</section>
-<section id="mitos-económicos" class="level3 home-side-card">
-<h3 class="anchored" data-anchor-id="mitos-económicos">Mitos Económicos</h3>
-<p>
-Realidad vs.&nbsp;Ficción
-</p>
-<p>
-¿Es verdad que imprimir dinero nos hace ricos?
-</p>
-<div class="home-side-link">
-<p><a href="./mitos-economicos.html">Ver mitos</a></p>
-</div>
-</section>
-<section id="coyuntura" class="level3 home-side-card">
-<h3 class="anchored" data-anchor-id="coyuntura">Coyuntura</h3>
-<p>
-La República habla de…
-</p>
-<p>
-Análisis rápido de lo que está pasando esta semana.
-</p>
-<div class="home-side-link">
-<p><a href="./republica-habla-de.html">Leer análisis</a></p>
-</div>
+<div class="home-latest-section">
+<div class="section-header">
+<p><span class="section-kicker">Archivo vivo</span></p>
+<section id="últimas-publicaciones" class="level2">
+<h2 class="anchored" data-anchor-id="últimas-publicaciones">Últimas publicaciones</h2>
+<p><a href="./archivo.html">Ver archivo completo</a></p>
 </section>
 </div>
-</div>
-</div>
-<!-- SECCIÓN ARCHIVO -->
-<div class="archive-section">
-<div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;">
-
-</div>
-<section id="explora-más-contenido" class="level3 section-header">
-<h3 class="anchored" data-anchor-id="explora-más-contenido">Explora más contenido</h3>
-<p>Estos son los últimos posts publicados. <a href="./archivo.html">Ver archivo completo</a>.</p>
-</section>
-<div id="listing-ultimos-posts" class="quarto-listing quarto-listing-container-grid">
+<div id="listing-home-latest" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1781826217349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
+<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773288000000" data-listing-file-modified-sort="1781750310921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
 <a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2026-03-12-educacion-superior-censo\index_files\figure-html\fig-distribucion-nivel-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 La revolución educativa dominicana: lo que el censo nos dice y lo que no
@@ -648,10 +539,10 @@ La revolución educativa dominicana: lo que el censo nos dice y lo que no
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VHJhbnNwb3J0ZSUyQ0Rlc2Fycm9sbG8lMkNNaVB5TUVTJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGhhYmxhJTIwZGU=" data-listing-date-sort="1772668800000" data-listing-file-modified-sort="1781826217373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4336">
+<div class="g-col-1" data-index="1" data-categories="VHJhbnNwb3J0ZSUyQ0Rlc2Fycm9sbG8lMkNNaVB5TUVTJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGhhYmxhJTIwZGU=" data-listing-date-sort="1772683200000" data-listing-file-modified-sort="1781750311140" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4336">
 <a href="./posts/republica-habla-de/2026-03-04-transporte-masivo/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-habla-de/2026-03-04-transporte-masivo/index_files/figure-html/fig-parque-vehicular-1.svg" alt="Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones." style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-habla-de\2026-03-04-transporte-masivo\index_files\figure-html\fig-parque-vehicular-1.svg" alt="Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones." style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Transporte masivo: Qué es, qué no es y qué trae a la mesa
@@ -667,10 +558,10 @@ Transporte masivo: Qué es, qué no es y qué trae a la mesa
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771113600000" data-listing-file-modified-sort="1781826217349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4465">
+<div class="g-col-1" data-index="2" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771128000000" data-listing-file-modified-sort="1772491646790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4465">
 <a href="./posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts\republica-en-un-grafico\2026-02-14-mipymes-rd\index_files\figure-html\fig-mapa-mipymes-regiones-1.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
@@ -689,8 +580,6 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
 </div>
-<div class="mobile-archive-btn">
-<p><a href="./archivo.html">Ver Archivo Completo</a></p>
 </div>
 </div>
 
@@ -722,7 +611,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -742,11 +631,11 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "Copiado");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -828,7 +717,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -903,7 +792,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -931,7 +820,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -955,7 +844,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -995,7 +884,7 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
@@ -1121,11 +1010,11 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p style="margin: 0;">
-© 2025 Leonardo Mena · Economía Aplicada
+© 2026 Leonardo Mena · Economía Aplicada
 </p>
-</div>   
+</div>
     <div class="nav-footer-center">
-<p><a href="./about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
+<p><a href="about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
 </div>
     <div class="nav-footer-right">
 <p><a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> · <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a></p>

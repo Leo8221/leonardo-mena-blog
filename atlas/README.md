@@ -1,26 +1,24 @@
-# Atlas LM
+# Atlas
 
-Atlas LM is the standalone interactive product surface for the blog.
+Atlas organiza vistas con datos, fuente y renderer propio.
 
-## Data Contract
+## Datos
 
-- Edit `atlas/data/atlas-source.json`.
-- Run `node atlas/scripts/build-atlas-data.mjs`.
-- The app reads only `atlas/data/atlas-data.json`.
+- Editar `atlas/data/atlas-source.json`.
+- Ejecutar `node atlas/scripts/build-atlas-data.mjs`.
+- La app publica lee `atlas/data/atlas-data.json`.
 
-Visible modules must have:
+Cada modulo activo debe tener:
 
 - `visible: true`
 - `status: "Activo"`
 - `chart`
 - `source`
 - `question`
-- at least one methodology note
-- a matching entry under `series`
+- notas metodologicas
+- una entrada correspondiente en `series`
 
-Modules marked `Borrador`, `Backlog`, `Pendiente` or `Proximo` are not emitted to the public JSON.
-
-## Current Modules
+## Modulos actuales
 
 - Pulso macro RD
 - Sensibilidad sectorial
@@ -32,28 +30,34 @@ Modules marked `Borrador`, `Backlog`, `Pendiente` or `Proximo` are not emitted t
 - MiPyMES y productividad
 - Laboratorio visual
 
-## Extension Pattern
+## Agregar una vista
 
-Add a module to `modules`, add its data under `series`, then create or reuse a renderer in `atlas/app.js`.
+1. Definir la pregunta y la fuente real.
+2. Agregar el modulo en `atlas/data/atlas-source.json`.
+3. Agregar la data bajo `series`.
+4. Crear o reutilizar un renderer en `atlas/app.js`.
+5. Correr `node atlas/scripts/build-atlas-data.mjs`.
+6. Correr `quarto render`.
+7. Validar visualmente `/atlas/` en desktop y movil.
 
-## Article Visual Pipeline
+## Pipeline desde articulos
 
-Use this when a published article already has data worth turning into an interactive Atlas piece.
+Usar esto cuando un articulo publicado tiene datos que merecen una pieza interactiva.
 
-1. Keep the article as the narrative source.
-2. Add extraction logic to `atlas/scripts/build-article-visuals.R`.
-3. Export browser-ready assets under `atlas/data/`:
-   - `article-visuals.json` for chart-ready tables.
-   - GeoJSON files for maps.
-4. Reuse renderers in `atlas/app.js`:
+1. Mantener el articulo como fuente narrativa.
+2. Agregar extraccion en `atlas/scripts/build-article-visuals.R`.
+3. Exportar activos a `atlas/data/`:
+   - `article-visuals.json` para tablas listas para graficos.
+   - GeoJSON para mapas.
+4. Reutilizar renderers de `atlas/app.js`:
    - `drawChoroplethMap`
    - `drawComplexScatterChart`
    - `drawTreemapChart`
    - `drawStackedBarChart`
 
-Current article-backed assets:
+Activos actuales desde articulos:
 
-- `rd-provinces.geojson`: business density by province.
-- `rd-regions-mipymes.geojson`: microenterprise and informality rates by region.
-- `world-tourism.geojson`: beach preference by country of origin.
-- `article-visuals.json`: tourism motivations, transport rent-employment space, debt service composition, and source registry.
+- `rd-provinces.geojson`: densidad empresarial por provincia.
+- `rd-regions-mipymes.geojson`: microempresas e informalidad por region.
+- `world-tourism.geojson`: preferencia por playa por pais de origen.
+- `article-visuals.json`: motivaciones turisticas, empleo-alquiler, servicio de deuda y registro de fuentes.

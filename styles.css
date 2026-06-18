@@ -198,75 +198,165 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
    4. ESTILOS ESPECÍFICOS: BLOG (HOME & LISTINGS)
    ========================================================================== */
 
-/* Hero Section (Encabezado "Entendiendo la economía...") */
-.home .home-hero { margin: 2.5rem 0 3.5rem 0; text-align: center; }
-.home .home-kicker {
+.home-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(2rem, 5vw, 4.5rem) 1.5rem 4rem;
+}
+
+.home-lede {
+    max-width: 780px;
+}
+
+.home-kicker,
+.section-kicker {
+    display: inline-block;
+    color: var(--lm-terracota);
     font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--lm-text-muted);
+    font-size: 0.72rem;
+    font-weight: 800;
     letter-spacing: 0.12em;
-}
-.home .home-intro { color: var(--lm-text-soft); max-width: 680px; margin: 0 auto; }
-
-/* Grid Principal (Columna Izq + Sidebar Der) */
-.home .home-grid { display: grid; grid-template-columns: 1.65fr 1fr; gap: 2.5rem; }
-
-.home .home-main {
-    background: var(--lm-bg-card);
-    border: 2px solid var(--lm-border-dark);
-    padding: 2rem; /* Padding optimizado para la imagen grande */
-    transition: 0.25s ease;
-}
-.home .home-main:hover {
-    border-color: var(--lm-terracota);
-    box-shadow: var(--shadow-md);
+    text-transform: uppercase;
 }
 
-/* --- SIDEBAR (Barra Lateral) --- */
-.home .home-side {
+.home-lede h1 {
+    max-width: 760px;
+    margin: 0.45rem 0 0.8rem;
+    font-size: clamp(3rem, 8vw, 6.2rem);
+    line-height: 0.92;
+}
+
+.home-lede p {
+    max-width: 650px;
+    color: var(--lm-text-soft);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.55;
+}
+
+.home-actions {
     display: flex;
-    flex-direction: column;
-    gap: 0;
-    border-top: 3px solid var(--lm-terracota);
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 1.35rem 0 2.8rem;
 }
 
-.home .home-side-card {
-    background: var(--lm-bg-card);
-    border-bottom: 1px solid var(--lm-border);
-    padding: 1.85rem 0;
-    position: relative;
+.home-actions > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0;
 }
 
-/* Efecto Hover Sidebar */
-.home .home-side-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0; width: 0;
+.home-action {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--lm-border-dark);
+    border-radius: 4px;
+    color: var(--lm-text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+.home-action-primary {
+    border-color: var(--lm-terracota);
     background: var(--lm-terracota);
-    transition: width 0.2s ease;
+    color: #fff;
 }
-.home .home-side-card:hover::before { width: 4px; }
-.home .home-side-card:hover { padding-left: 1rem; }
 
-/* Tipografía Sidebar */
-.home .home-side-card h3 {
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+}
+
+.home-main {
+    min-width: 0;
+    border-top: 2px solid var(--lm-border-dark);
+    padding-top: 1rem;
+}
+
+.home-side {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.home-side > p {
+    margin: 0;
+}
+
+.home-side-card {
+    display: grid;
+    gap: 0.45rem;
+    border: 1px solid var(--lm-border);
+    border-radius: 6px;
+    background: var(--lm-bg-card);
+    color: var(--lm-text-main);
+    padding: 1rem;
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.home-side-card:hover {
+    border-color: var(--lm-terracota);
+    box-shadow: var(--shadow-sm);
+    color: var(--lm-text-main);
+    transform: translateY(-1px);
+}
+
+.home-side-card span {
     color: var(--lm-terracota);
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    font-weight: 700;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
-.home .home-side-card p { color: var(--lm-text-main); }
-.home .home-side-card p:nth-of-type(2) { color: var(--lm-text-soft); }
 
-.home .home-side-link a {
-    color: var(--lm-terracota);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.75rem;
+.home-side-card strong {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.32rem;
     font-weight: 600;
-    border-bottom: none;
+    line-height: 1.05;
+}
+
+.home-side-card em {
+    color: var(--lm-text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.76rem;
+    font-style: normal;
+    font-weight: 750;
+}
+
+.home-latest-section {
+    margin-top: clamp(2.8rem, 6vw, 4.5rem);
+    border-top: 1px solid var(--lm-border);
+    padding-top: 1.2rem;
+}
+
+.home-latest-section .section-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.home-latest-section .section-header h2 {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.home-latest-section .section-header a {
+    color: var(--lm-terracota);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 800;
 }
 
 /* --- LISTINGS GENERALES (Listas de artículos estándar) --- */
@@ -288,28 +378,38 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 /* --- GRÁFICO DESTACADO (HERO IMAGE - PERSONALIZACIÓN) --- */
 /* Elimina bordes y sombras para integrarlo como cabecera */
 
-#grafico-destacado .quarto-grid-item {
+#grafico-destacado .quarto-grid-item,
+#home-featured .quarto-grid-item,
+#listing-home-featured .quarto-grid-item {
     border: none !important;
     box-shadow: none !important;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    max-width: 100%;
 }
 
-#grafico-destacado .card-body {
+#grafico-destacado .card-body,
+#home-featured .card-body,
+#listing-home-featured .card-body {
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-top: 1.2rem !important; /* Espacio limpio entre imagen y título */
 }
 
-#grafico-destacado img {
+#grafico-destacado img,
+#home-featured img,
+#listing-home-featured img {
     border-radius: 6px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
     display: block;
 }
 
 /* Tipografía Específica del Destacado (Estilo Editorial) */
-#grafico-destacado .card-title {
+#grafico-destacado .card-title,
+#home-featured .card-title,
+#listing-home-featured .card-title {
     font-family: 'Crimson Pro', serif;
     font-size: 1.5rem;         /* Título más grande y elegante */
     font-weight: 600;
@@ -318,13 +418,17 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     color: var(--lm-text-main);
 }
 
-#grafico-destacado .card-text {
+#grafico-destacado .card-text,
+#home-featured .card-text,
+#listing-home-featured .card-text {
     font-size: 1.1rem;         /* Descripción más legible */
     color: var(--lm-text-soft);
     line-height: 1.5;
 }
 
-#grafico-destacado .card-attribution {
+#grafico-destacado .card-attribution,
+#home-featured .card-attribution,
+#listing-home-featured .card-attribution {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     color: var(--lm-text-muted);
@@ -1527,102 +1631,6 @@ body.editorial-post .bib-link:hover {
 }
 
 /* ==========================================================================
-   13. SECCIÓN DE INVESTIGACIÓN (RESEARCH GRID)
-   ========================================================================== */
-
-/* La Rejilla (Grid) */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 Columnas */
-    gap: 2.5rem; /* Buen espacio entre tarjetas */
-    margin: 2rem 0 4rem 0;
-}
-
-/* La Tarjeta (Card) */
-.research-card {
-    background: transparent; /* CLAVE: Fondo transparente para integrarse */
-    border-bottom: 1px solid var(--lm-border); /* Línea sutil abajo */
-    border-left: 3px solid transparent; /* Borde izquierdo listo para hover */
-    
-    padding: 1.5rem 1rem; /* Espaciado interno cómodo */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.2s ease;
-}
-
-/* Efecto Hover */
-.research-card:hover {
-    background: rgba(255, 255, 255, 0.6); 
-    border-left-color: var(--lm-terracota); 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-}
-
-/* Tipografía dentro de la tarjeta */
-.research-card h4 {
-    font-family: 'Crimson Pro', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--lm-text-main);
-    margin: 0.5rem 0 0.8rem 0;
-    line-height: 1.2;
-}
-
-.research-card p {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: var(--lm-text-soft);
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
-    flex-grow: 1;
-}
-
-/* Responsive para celular */
-@media (max-width: 768px) {
-    .research-grid {
-        grid-template-columns: 1fr; /* 1 sola columna en móvil */
-        gap: 1.5rem;
-    }
-}
-
-/* Botones de Investigación */
-.btn-research-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: transparent;
-  color: var(--lm-terracota);
-  border: 1px solid var(--lm-terracota);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-}
-
-.btn-research-primary:hover {
-  background-color: var(--lm-terracota);
-  color: white !important;
-}
-
-.btn-research-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--lm-text-muted);
-  font-size: 0.85rem;
-  text-decoration: none !important;
-  transition: color 0.2s ease;
-}
-
-.btn-research-secondary:hover {
-  color: #000;
-}
-
-
-/* ==========================================================================
    14. BARRA DE BÚSQUEDA
    ========================================================================== */
 
@@ -2049,6 +2057,10 @@ body.quarto-dark .share-minimal a {
 }
 
 @media (max-width: 680px) {
+  body {
+    overflow-x: hidden;
+  }
+
   main.content {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2075,210 +2087,193 @@ body.quarto-dark .share-minimal a {
 }
 
 /* ==========================================================================
-   MOBILE-FIRST HOME REDESIGN 
+   RESPONSIVE HOME
    ========================================================================== */
 
-/* ===== DESKTOP: Configuración por defecto ===== */
-.home {
-  display: block;
+@media (max-width: 900px) {
+  .home-shell {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-side {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
-.home .home-hero {
-  display: block;
-  margin: 2.5rem 0 3.5rem 0;
-  text-align: center;
-}
+@media (max-width: 680px) {
+  .home-shell {
+    width: min(100%, 360px);
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip;
+    padding: 2rem 1.25rem 3rem;
+  }
 
-.home .home-grid {
-  display: grid;
-  grid-template-columns: 1.65fr 1fr;
-  gap: 2.5rem;
-}
+  .home-lede h1 {
+    max-width: 9.8ch;
+    font-size: clamp(2.6rem, 12vw, 3.2rem);
+    letter-spacing: 0;
+    line-height: 0.98;
+  }
 
-/* Ocultar versión mobile en desktop */
-.mobile-home-hero,
-.mobile-hero-wrapper,
-.mobile-label,
-.mobile-archive-btn {
-  display: none;
-}
+  .home-lede p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
 
-/* Ocultar listing mobile en desktop */
-#grafico-destacado-mobile {
-  display: none;
-}
+  .home-lede,
+  .home-actions,
+  .home-actions > p,
+  .home-grid,
+  .home-main,
+  .home-side,
+  .home-side > p,
+  .home-side-card,
+  .home-latest-section,
+  #listing-home-featured,
+  #listing-home-featured .list,
+  #listing-home-featured .g-col-1,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .quarto-grid-item,
+  #listing-home-featured .card,
+  #listing-home-latest,
+  #listing-home-latest .list,
+  #listing-home-latest .g-col-1,
+  #listing-home-latest .quarto-grid-link,
+  #listing-home-latest .quarto-grid-item,
+  #listing-home-latest .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
 
-/* ===== MOBILE: Ocultar desktop y mostrar mobile ===== */
-@media (max-width: 768px) {
-  .home,
-  .home .home-hero,
-  .home .home-grid,
-  #grafico-destacado-desktop {
+  .home-actions {
+    margin-bottom: 2rem;
+  }
+
+  .home-action {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .home-actions > p,
+  .home-action {
+    width: 100%;
+  }
+
+  .home-side,
+  .home-latest-section .section-header {
+    grid-template-columns: 1fr;
+  }
+
+  .home-latest-section .section-header {
+    display: grid;
+    align-items: start;
+  }
+
+  #home-featured .card-img-top,
+  #listing-home-featured .card-img-top {
     display: none !important;
   }
-  
-  /* Mostrar versión mobile */
-  .mobile-home-hero {
-    display: block;
-    padding: 1.5rem 1rem 1rem 1rem;
-    border-bottom: 1px solid var(--lm-border);
-    background: var(--lm-bg-card);
+
+  #home-featured .card-body,
+  #listing-home-featured .card-body {
+    padding-top: 0 !important;
   }
-  
-  .mobile-home-hero h1 {
-    font-family: 'Crimson Pro', serif;
-    font-size: 2rem;
-    margin: 0;
-    line-height: 1.1;
-    color: var(--lm-text-main);
+
+  #home-featured .card-title,
+  #listing-home-featured .card-title {
+    font-size: 1.22rem;
+    overflow-wrap: anywhere;
   }
-  
-  .mobile-home-hero p {
-    font-size: 0.9rem;
-    color: var(--lm-text-muted);
-    margin-top: 0.5rem;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.4;
+
+  #home-featured .card-text,
+  #listing-home-featured .card-text {
+    font-size: 0.98rem;
   }
-  
-  .mobile-hero-wrapper {
-    display: block;
-    margin-top: 1.5rem;
+
+  .home-side-card strong {
+    font-size: 1.16rem;
   }
-  
-  .mobile-label {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--lm-terracota);
-    padding: 0 1rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  /* Mostrar listing mobile */
-  #grafico-destacado-mobile {
-    display: block;
-    padding: 0 1rem;
-  }
-  
-  #grafico-destacado-mobile .card {
-    border: none !important;
-    background: transparent !important;
-  }
-  
-  #grafico-destacado-mobile img {
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-  
-  #grafico-destacado-mobile .card-title {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-  
-  #grafico-destacado-mobile .card-text {
-    font-size: 0.95rem;
-    color: var(--lm-text-soft);
-    line-height: 1.4;
-  }
-  
-  #grafico-destacado-mobile .card-attribution {
-    font-size: 0.75rem;
-    margin-top: 0.75rem;
-  }
-  
-  /* Últimos posts mobile */
-  #ultimos-posts {
-    padding: 0 1rem;
-  }
-  
-  #ultimos-posts .quarto-listing {
-    display: flex !important;
-    flex-direction: column !important;
+
+  #home-latest .quarto-listing,
+  #listing-home-latest,
+  #listing-home-latest .list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
     gap: 0 !important;
   }
-  
-  #ultimos-posts .quarto-grid-item {
+
+  #home-latest .quarto-grid-item,
+  #listing-home-latest .quarto-grid-item {
     border: none !important;
     border-bottom: 1px solid var(--lm-border) !important;
-    padding: 1.25rem 0 !important;
     margin: 0 !important;
-    background: transparent !important;
+    padding: 1.1rem 0 !important;
   }
-  
-  #ultimos-posts .quarto-grid-item:last-child {
-    border-bottom: none !important;
-  }
-  
-  #ultimos-posts img {
+
+  #home-latest img,
+  #listing-home-latest img {
     display: none !important;
   }
-  
-  #ultimos-posts .card-body {
-    padding: 0 !important;
+
+  .home-shell > *,
+  .home-lede p,
+  .home-actions > p,
+  .home-action,
+  #listing-home-featured,
+  #listing-home-featured .list,
+  #listing-home-featured .g-col-1,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .quarto-grid-item,
+  #listing-home-featured .card,
+  #listing-home-featured .card-body,
+  #listing-home-latest,
+  #listing-home-latest .list,
+  #listing-home-latest .g-col-1,
+  #listing-home-latest .quarto-grid-link,
+  #listing-home-latest .quarto-grid-item,
+  #listing-home-latest .card,
+  #listing-home-latest .card-body,
+  .home-side,
+  .home-side > p,
+  .home-side-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
-  
-  #ultimos-posts .card-title {
-    font-size: 1.05rem !important;
-    line-height: 1.3;
-    margin-bottom: 0.4rem;
-    font-weight: 600;
+
+  .home-actions > p {
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  
-  #ultimos-posts .card-title::before {
-    content: "→ ";
-    color: var(--lm-terracota);
-    font-weight: 700;
-    margin-right: 0.35rem;
+
+  .home-lede p,
+  #listing-home-featured .card-title,
+  #listing-home-featured .card-text,
+  #listing-home-featured .card-text p,
+  #listing-home-latest .card-title,
+  #listing-home-latest .card-text,
+  #listing-home-latest .card-text p,
+  .home-side-card strong,
+  .home-side-card em {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: break-word;
   }
-  
-  #ultimos-posts .card-text {
-    font-size: 0.85rem !important;
-    line-height: 1.4;
-    color: var(--lm-text-soft);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  .archive-section {
-    padding: 0 1rem;
-    margin-top: 2rem;
-  }
-  
-  .section-header h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .mobile-archive-btn {
-    display: block;
-    text-align: center;
-    margin: 2rem 0 3rem 0;
-  }
-  
-  .mobile-archive-btn a {
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border: 1px solid var(--lm-terracota);
-    padding: 12px 24px;
-    border-radius: 4px;
-    color: var(--lm-terracota);
-    text-decoration: none;
-  }
-  
-  .mobile-archive-btn a:hover {
-    background: var(--lm-terracota);
-    color: white;
+
+  #listing-home-featured .card-title,
+  #listing-home-latest .card-title {
+    font-family: 'Crimson Pro', serif !important;
+    letter-spacing: 0 !important;
+    line-height: 1.08 !important;
+    text-transform: none !important;
   }
 }
 

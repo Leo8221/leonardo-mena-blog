@@ -1,6 +1,6 @@
 ---
 title: "Monetary Policy Transmission in the Dominican Republic"
-description: "Ficha reservada para un working paper con datos y metodología verificables."
+description: ""
 date: 2026-01-08
 lang: en
 author: "Leonardo Mena"
@@ -10,11 +10,3 @@ format:
   html:
     toc: true
 ---
-
-::: {.callout-note appearance="simple" icon=false}
-This page is a draft placeholder and is not part of the published research catalog.
-:::
-
-## Status
-
-Reserved for a future working paper. Publish only after adding an abstract, methodology, data sources, results and a valid paper or repository link.

@@ -1,39 +1,26 @@
 ---
 pagetitle: "Leonardo Mena · Economía Aplicada"
+description: "Economía aplicada dominicana con análisis, datos y visualizaciones."
+image: image/social-preview.png
 page-layout: full
 toc: false
 listing:
-  - id: grafico-destacado-desktop
+  - id: home-featured
     contents:
       - posts/**/*.qmd
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
       - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     sort: "date desc"
     max-items: 1
-    type: grid            
-    grid-columns: 1 
+    type: grid
+    grid-columns: 1
     categories: false
     sort-ui: false
     filter-ui: false
     fields: [image, date, title, description]
-    image-height: "350px"
-  
-  - id: grafico-destacado-mobile
-    contents:
-      - posts/**/*.qmd
-      - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
-      - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
-    sort: "date desc"
-    max-items: 1
-    type: grid            
-    grid-columns: 1 
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    fields: [image, date, title, description]
-    image-height: "300px"
-  
-  - id: ultimos-posts
+    image-height: "320px"
+
+  - id: home-latest
     contents:
       - posts/**/*.qmd
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
@@ -43,108 +30,70 @@ listing:
     type: grid
     grid-columns: 3
     categories: true
+    sort-ui: false
+    filter-ui: false
     fields: [image, date, title, description]
 ---
 
-<!-- VERSIÓN MOBILE -->
-::: {.mobile-home-hero}
-# Economía<br>Dominicana Aplicada
+::: {.home-shell}
 
-Datos reales. Conceptos claros.
+::: {.home-lede}
+<span class="home-kicker">Economía aplicada RD</span>
+
+# Leer la economía sin ruido.
+
+Datos, visuales y criterio para leer coyuntura, sectores y territorio.
 :::
 
-::: {.mobile-hero-wrapper}
-<span class="mobile-label">ANÁLISIS DESTACADO</span>
-
-::: {#grafico-destacado-mobile}
-:::
-:::
-
-<!-- VERSIÓN DESKTOP -->
-::: {.home}
-
-::: {.home-hero}
-::: {.home-hero-title}
-<span class="home-kicker">Economía Dominicana Aplicada</span>
-
-# Entendiendo la economía<br>más allá del titular.
-:::
-
-::: {.home-intro}
-Soy Leonardo Mena. Este es un espacio para entender la economía dominicana con datos reales, conceptos claros y sin jerga innecesaria.
-:::
+::: {.home-actions}
+[Abrir Atlas](atlas/index.html){.home-action .home-action-primary}
+[Leer análisis](republica-habla-de.qmd){.home-action}
 :::
 
 ::: {.home-grid}
 
 ::: {.home-main}
-## Último análisis publicado
+<span class="section-kicker">Último análisis</span>
 
-El post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.
-
-::: {#grafico-destacado-desktop}
+::: {#home-featured}
 :::
 :::
 
 ::: {.home-side}
 
-::: {.home-side-card}
-### Atlas LM
-<p>Datos interactivos</p>
-<p>Observatorio, sectores y exploradores con lectura propia.</p>
-::: {.home-side-link}
-[Abrir Atlas](atlas/index.html)
-:::
-:::
+<a class="home-side-card home-side-card-primary" href="atlas/index.html">
+  <span>Atlas</span>
+  <strong>Datos, mapas y sectores.</strong>
+  <em>Entrar</em>
+</a>
 
-::: {.home-side-card}
-### Fundamentos
-<p>Conceptos Claros</p>
-<p>Inflación, PIB, déficit... explicados sin tecnicismos.</p>
-::: {.home-side-link}
-[Aprender conceptos](fundamentos.qmd)
-:::
-:::
+<a class="home-side-card" href="republica-en-un-grafico.qmd">
+  <span>Visuales</span>
+  <strong>Gráficos y mapas.</strong>
+  <em>Ver</em>
+</a>
 
-::: {.home-side-card}
-### Mitos Económicos
-<p>Realidad vs. Ficción</p>
-<p>¿Es verdad que imprimir dinero nos hace ricos?</p>
-::: {.home-side-link}
-[Ver mitos](mitos-economicos.qmd)
-:::
-:::
-
-::: {.home-side-card}
-### Coyuntura
-<p>La República habla de...</p>
-<p>Análisis rápido de lo que está pasando esta semana.</p>
-::: {.home-side-link}
-[Leer análisis](republica-habla-de.qmd)
-:::
-:::
+<a class="home-side-card" href="fundamentos.qmd">
+  <span>Fundamentos</span>
+  <strong>Ideas base para leer economía.</strong>
+  <em>Leer</em>
+</a>
 
 :::
 
 :::
 
-:::
-
-<!-- SECCIÓN ARCHIVO -->
-::: {.archive-section}
-<div style="border-top: 2px solid var(--lm-border); margin: 3rem 0;"></div>
-
+::: {.home-latest-section}
 ::: {.section-header}
-### Explora más contenido
+<span class="section-kicker">Archivo vivo</span>
 
-Estos son los últimos posts publicados. [Ver archivo completo](archivo.qmd).
+## Últimas publicaciones
+
+[Ver archivo completo](archivo.qmd)
 :::
 
-::: {#ultimos-posts}
+::: {#home-latest}
 :::
-
-::: {.mobile-archive-btn}
-[Ver Archivo Completo](archivo.qmd)
 :::
 
 :::

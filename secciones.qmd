@@ -1,0 +1,58 @@
+---
+title: "Secciones"
+description: "Atlas, series y archivo."
+page-layout: full
+toc: false
+---
+
+::: {.product-grid}
+::: {.product-card .product-card-primary}
+<span class="product-kicker">Interactivo</span>
+
+## Atlas
+
+Mapas, indicadores y sectores.
+
+[Abrir Atlas](atlas/index.html)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Analisis editorial</span>
+
+## La Republica habla de
+
+Coyuntura dominicana con datos y postura.
+
+[Leer analisis](republica-habla-de.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Visualizacion</span>
+
+## La Republica en un grafico
+
+Una visualizacion, una lectura, una implicacion.
+
+[Ver graficos](republica-en-un-grafico.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Escuela publica</span>
+
+## Fundamentos
+
+Conceptos, mitos y predecesores intelectuales.
+
+[Aprender fundamentos](fundamentos.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Archivo</span>
+
+## Biblioteca del sitio
+
+Todo el contenido publicado.
+
+[Explorar archivo](archivo.qmd)
+:::
+:::

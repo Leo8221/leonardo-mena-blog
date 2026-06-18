@@ -1,15 +1,11 @@
 {
   "updated": "2026-06-18",
   "brand": {
-    "name": "Atlas LM",
-    "shortName": "Atlas LM",
-    "tagline": "Economia aplicada, datos y lectura sectorial de Republica Dominicana.",
-    "sourceNote": "Datos, mapas y modelos reunidos en una arquitectura modular."
+    "name": "Atlas",
+    "shortName": "Atlas"
   },
   "system": {
     "version": "0.3.0",
-    "visibilityPolicy": "Solo se publican modulos con visible=true, status=Activo y datos para su chart.",
-    "hiddenStatuses": ["Borrador", "Backlog", "Pendiente", "Proximo"],
     "defaultLocale": "es-DO"
   },
   "metrics": [

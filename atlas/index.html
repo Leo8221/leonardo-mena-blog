@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atlas LM</title>
-  <meta name="description" content="Atlas interactivo de economia aplicada, sectores, comercio, precios y territorio de Republica Dominicana.">
+  <title>Atlas</title>
+  <meta name="description" content="Atlas de mapas, indicadores y secciones de economia aplicada.">
   <link rel="icon" href="../image/logo_leonardo_mena.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="atlas-app" data-view="overview">
     <aside class="atlas-sidebar" id="atlas-sidebar" aria-label="Navegacion del Atlas">
-      <a class="brand-lockup" href="./" aria-label="Atlas LM">
-        <img src="../image/logo_leonardo_mena.svg" alt="" width="32" height="32">
+      <a class="brand-lockup" href="./" aria-label="Atlas">
         <span>
-          <strong>Atlas LM</strong>
-          <small>Economia aplicada</small>
+          <strong>Atlas</strong>
         </span>
       </a>
 
@@ -38,30 +36,39 @@
 
       <nav class="module-nav" id="module-nav" aria-label="Modulos del Atlas"></nav>
 
-      <div class="sidebar-note">
-        <span>Sistema vivo</span>
-        <p>Macro, sectores, territorio y productividad en una sola superficie.</p>
-      </div>
     </aside>
 
     <main class="atlas-main">
       <header class="atlas-topbar">
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="atlas-sidebar">Menu</button>
-        <div>
-          <p class="eyebrow">Atlas LM</p>
-          <h1>Sistema interactivo de economia aplicada.</h1>
+        <div class="topbar-title">
+          <h1>Atlas</h1>
         </div>
         <div class="topbar-actions">
           <a href="../index.html">Blog</a>
-          <a href="../productos.html">Productos</a>
+          <a href="../secciones.html">Secciones</a>
         </div>
       </header>
+
+      <section class="mobile-atlas-nav" aria-label="Navegacion movil del Atlas">
+        <div class="mobile-filter-row" aria-label="Filtros por familia">
+          <button class="filter-pill is-active" type="button" data-filter="all">Todos</button>
+          <button class="filter-pill" type="button" data-filter="Macro">Macro</button>
+          <button class="filter-pill" type="button" data-filter="Sectores">Sectores</button>
+          <button class="filter-pill" type="button" data-filter="Comercio">Comercio</button>
+          <button class="filter-pill" type="button" data-filter="Trabajo">Trabajo</button>
+          <button class="filter-pill" type="button" data-filter="Precios">Precios</button>
+          <button class="filter-pill" type="button" data-filter="Territorio">Territorio</button>
+          <button class="filter-pill" type="button" data-filter="Empresas">Empresas</button>
+          <button class="filter-pill" type="button" data-filter="Visuales">Visuales</button>
+        </div>
+        <nav class="mobile-module-nav" id="mobile-module-nav" aria-label="Vistas del Atlas"></nav>
+      </section>
 
       <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales"></section>
 
       <section class="workspace-grid">
         <section class="module-stage" id="module-stage" aria-live="polite"></section>
-        <aside class="insight-rail" id="insight-rail" aria-label="Lectura rapida"></aside>
       </section>
     </main>
   </div>

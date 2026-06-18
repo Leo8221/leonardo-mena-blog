@@ -1,6 +1,6 @@
 ---
 title: "Observatorio"
-description: "El Observatorio ahora vive en Atlas LM."
+description: "Atlas."
 page-layout: full
 toc: false
 format:
@@ -13,11 +13,6 @@ format:
 ::: {.hub-header}
 # Observatorio
 
-Los indicadores y exploradores interactivos ahora viven en **Atlas LM**.
+[Abrir Atlas](atlas/index.html)
 
-[Abrir Atlas LM](atlas/index.html)
-:::
-
-::: {.empty-state}
-Redireccion permanente para enlaces anteriores.
 :::

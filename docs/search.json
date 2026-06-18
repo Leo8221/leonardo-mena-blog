@@ -1,87 +1,80 @@
 [
   {
-    "objectID": "republica-habla-de.html",
-    "href": "republica-habla-de.html",
-    "title": "La República habla de",
+    "objectID": "secciones.html",
+    "href": "secciones.html",
+    "title": "Secciones",
     "section": "",
-    "text": "Análisis de coyuntura económica dominicana con una tesis clara: qué cambió, por qué importa y qué mecanismo explica el resultado.\n\nCoyuntura Política económica Datos oficiales"
+    "text": "Interactivo\n\n\nMapas, indicadores y sectores.\nAbrir Atlas\n\n\n\nAnalisis editorial\n\n\nCoyuntura dominicana con datos y postura.\nLeer analisis\n\n\n\nVisualizacion\n\n\nUna visualizacion, una lectura, una implicacion.\nVer graficos\n\n\n\nEscuela publica\n\n\nConceptos, mitos y predecesores intelectuales.\nAprender fundamentos\n\n\n\nArchivo\n\n\nTodo el contenido publicado.\nExplorar archivo"
   },
   {
-    "objectID": "republica-habla-de.html#lectura-con-postura",
-    "href": "republica-habla-de.html#lectura-con-postura",
-    "title": "La República habla de",
-    "section": "Lectura con postura",
-    "text": "Lectura con postura\nCada texto parte de una pregunta pública y termina con una implicación concreta."
-  },
-  {
-    "objectID": "republica-habla-de.html#dato-mecanismo-limite",
-    "href": "republica-habla-de.html#dato-mecanismo-limite",
-    "title": "La República habla de",
-    "section": "Dato, mecanismo, limite",
-    "text": "Dato, mecanismo, limite\nLa serie separa el dato observado, la explicación probable y lo que todavía no se puede afirmar."
-  },
-  {
-    "objectID": "republica-habla-de.html#para-seguir-agenda",
-    "href": "republica-habla-de.html#para-seguir-agenda",
-    "title": "La República habla de",
-    "section": "Para seguir agenda",
-    "text": "Para seguir agenda\nIdeal para temas fiscales, precios, sectores productivos y debates de politica publica."
-  },
-  {
-    "objectID": "republica-habla-de.html#últimos-análisis",
-    "href": "republica-habla-de.html#últimos-análisis",
-    "title": "La República habla de",
-    "section": "Últimos análisis",
-    "text": "Últimos análisis\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "productos.html",
-    "href": "productos.html",
-    "title": "Productos",
+    "objectID": "secciones.html#atlas",
+    "href": "secciones.html#atlas",
+    "title": "Secciones",
     "section": "",
-    "text": "Analisis editorial, datos interactivos, investigacion reproducible y explicadores para formar criterio economico.\n\nDatos Coyuntura Investigacion Escuela"
+    "text": "Mapas, indicadores y sectores.\nAbrir Atlas"
   },
   {
-    "objectID": "productos.html#atlas-lm",
-    "href": "productos.html#atlas-lm",
-    "title": "Productos",
-    "section": "Atlas LM",
-    "text": "Atlas LM\nMacro, sectores, comercio exterior, mercado laboral, precios, territorio y productividad empresarial en una sola superficie.\nAbrir Atlas"
+    "objectID": "secciones.html#la-republica-habla-de",
+    "href": "secciones.html#la-republica-habla-de",
+    "title": "Secciones",
+    "section": "",
+    "text": "Coyuntura dominicana con datos y postura.\nLeer analisis"
   },
   {
-    "objectID": "productos.html#la-republica-habla-de",
-    "href": "productos.html#la-republica-habla-de",
-    "title": "Productos",
-    "section": "La Republica habla de",
-    "text": "La Republica habla de\nLecturas de coyuntura dominicana con datos, mecanismo causal y postura explicita.\nLeer analisis"
+    "objectID": "secciones.html#la-republica-en-un-grafico",
+    "href": "secciones.html#la-republica-en-un-grafico",
+    "title": "Secciones",
+    "section": "",
+    "text": "Una visualizacion, una lectura, una implicacion.\nVer graficos"
   },
   {
-    "objectID": "productos.html#la-republica-en-un-grafico",
-    "href": "productos.html#la-republica-en-un-grafico",
-    "title": "Productos",
-    "section": "La Republica en un grafico",
-    "text": "La Republica en un grafico\nUna visualizacion, una lectura y una implicacion. Evidencia convertida en argumento.\nVer graficos"
+    "objectID": "secciones.html#fundamentos",
+    "href": "secciones.html#fundamentos",
+    "title": "Secciones",
+    "section": "",
+    "text": "Conceptos, mitos y predecesores intelectuales.\nAprender fundamentos"
   },
   {
-    "objectID": "productos.html#investigacion",
-    "href": "productos.html#investigacion",
-    "title": "Productos",
-    "section": "Investigacion",
-    "text": "Investigacion\nWorking papers, reportes tecnicos y briefs solo cuando tengan metodologia clara, datos revisables y una pregunta publica concreta.\nVer investigacion"
+    "objectID": "secciones.html#biblioteca-del-sitio",
+    "href": "secciones.html#biblioteca-del-sitio",
+    "title": "Secciones",
+    "section": "",
+    "text": "Todo el contenido publicado.\nExplorar archivo"
   },
   {
-    "objectID": "productos.html#fundamentos",
-    "href": "productos.html#fundamentos",
-    "title": "Productos",
-    "section": "Fundamentos",
-    "text": "Fundamentos\nConceptos, mitos y predecesores intelectuales para leer la economia con mejores herramientas.\nAprender fundamentos"
+    "objectID": "republica-en-un-grafico.html",
+    "href": "republica-en-un-grafico.html",
+    "title": "La República en un gráfico",
+    "section": "",
+    "text": "Una visualización, una lectura y una implicación para entender mejor la economía dominicana.\n\nGráficos Series dominicanas Lectura rapida"
   },
   {
-    "objectID": "productos.html#biblioteca-del-sitio",
-    "href": "productos.html#biblioteca-del-sitio",
-    "title": "Productos",
-    "section": "Biblioteca del sitio",
-    "text": "Biblioteca del sitio\nTodo el contenido publicado, con filtros por tema y busqueda integrada.\nExplorar archivo"
+    "objectID": "republica-en-un-grafico.html#un-argumento-visual",
+    "href": "republica-en-un-grafico.html#un-argumento-visual",
+    "title": "La República en un gráfico",
+    "section": "Un argumento visual",
+    "text": "Un argumento visual\nEl gráfico no acompaña el texto: lo organiza."
+  },
+  {
+    "objectID": "republica-en-un-grafico.html#fuente-visible",
+    "href": "republica-en-un-grafico.html#fuente-visible",
+    "title": "La República en un gráfico",
+    "section": "Fuente visible",
+    "text": "Fuente visible\nCada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo."
+  },
+  {
+    "objectID": "republica-en-un-grafico.html#implicación-económica",
+    "href": "republica-en-un-grafico.html#implicación-económica",
+    "title": "La República en un gráfico",
+    "section": "Implicación económica",
+    "text": "Implicación económica\nEl cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública."
+  },
+  {
+    "objectID": "republica-en-un-grafico.html#gráficos-publicados",
+    "href": "republica-en-un-grafico.html#gráficos-publicados",
+    "title": "La República en un gráfico",
+    "section": "Gráficos publicados",
+    "text": "Gráficos publicados\n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/republica-habla-de/2026-03-04-transporte-masivo/index.html",
@@ -343,69 +336,6 @@
     "text": "Que queda en pie\nEl objetivo no es ganar una discusión, sino dejar una regla mental más limpia."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "EconomíaDominicana Aplicada",
-    "section": "",
-    "text": "Datos reales. Conceptos claros."
-  },
-  {
-    "objectID": "index.html#último-análisis-publicado",
-    "href": "index.html#último-análisis-publicado",
-    "title": "EconomíaDominicana Aplicada",
-    "section": "Último análisis publicado",
-    "text": "Último análisis publicado\nEl post más reciente del blog, ya sea gráfico, fundamento o análisis de coyuntura.\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio…\n\n\n\n12 mar 2026\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "categorias.html",
-    "href": "categorias.html",
-    "title": "Categorías",
-    "section": "",
-    "text": "Explora el archivo por tema. Las categorías de producto quedaron normalizadas para evitar duplicados como variantes de La República en un gráfico."
-  },
-  {
-    "objectID": "categorias.html#índice-completo",
-    "href": "categorias.html#índice-completo",
-    "title": "Categorías",
-    "section": "Índice completo",
-    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nLa República en un gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República habla de\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa República en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
-  },
-  {
-    "objectID": "about.html#sobre-este-blog",
-    "href": "about.html#sobre-este-blog",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
-  },
-  {
-    "objectID": "about.html#quién-escribe",
-    "href": "about.html#quién-escribe",
-    "title": "Sobre mí",
-    "section": "Quién escribe",
-    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.\nNo escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.\n\nLo que ofrezco\n\nTransparencia: Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.\nClaridad: Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.\nContexto: Todos los análisis están pensados desde y para la República Dominicana.\n\nEsto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano."
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
-  },
-  {
-    "objectID": "archivo.html#todas-las-publicaciones",
-    "href": "archivo.html#todas-las-publicaciones",
-    "title": "Archivo",
-    "section": "Todas las publicaciones",
-    "text": "Todas las publicaciones"
-  },
-  {
     "objectID": "fundamentos.html",
     "href": "fundamentos.html",
     "title": "Fundamentos",
@@ -441,39 +371,74 @@
     "text": "Artículos de la serie\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "investigacion.html",
-    "href": "investigacion.html",
-    "title": "Investigación",
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
     "section": "",
-    "text": "Catálogo para trabajos reproducibles: papers, briefs y reportes técnicos. Esta sección solo debe publicar productos con pregunta clara, metodología documentada y enlaces revisables.\n\nWorking papers Policy briefs Reportes técnicos Reproducibilidad"
+    "text": "Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos."
   },
   {
-    "objectID": "investigacion.html#investigación-académica",
-    "href": "investigacion.html#investigación-académica",
-    "title": "Investigación",
-    "section": "Investigación académica",
-    "text": "Investigación académica\nModelos, estimaciones y documentos con una contribución metodológica o empírica definida."
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
   },
   {
-    "objectID": "investigacion.html#síntesis-para-decisión-pública",
-    "href": "investigacion.html#síntesis-para-decisión-pública",
-    "title": "Investigación",
-    "section": "Síntesis para decisión pública",
-    "text": "Síntesis para decisión pública\nDocumentos breves orientados a problema, evidencia, opciones y tradeoffs."
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
   },
   {
-    "objectID": "investigacion.html#análisis-reproducible",
-    "href": "investigacion.html#análisis-reproducible",
-    "title": "Investigación",
-    "section": "Análisis reproducible",
-    "text": "Análisis reproducible\nProductos de datos con código, fuentes, supuestos y resultados verificables."
+    "objectID": "about.html#sobre-este-blog",
+    "href": "about.html#sobre-este-blog",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
+  },
+  {
+    "objectID": "about.html#quién-escribe",
+    "href": "about.html#quién-escribe",
+    "title": "Sobre mí",
+    "section": "Quién escribe",
+    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.\nNo escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.\n\nLo que ofrezco\n\nTransparencia: Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.\nClaridad: Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.\nContexto: Todos los análisis están pensados desde y para la República Dominicana.\n\nEsto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano."
+  },
+  {
+    "objectID": "categorias.html",
+    "href": "categorias.html",
+    "title": "Categorías",
+    "section": "",
+    "text": "Explora el archivo por tema. Las categorías de producto quedaron normalizadas para evitar duplicados como variantes de La República en un gráfico."
+  },
+  {
+    "objectID": "categorias.html#índice-completo",
+    "href": "categorias.html#índice-completo",
+    "title": "Categorías",
+    "section": "Índice completo",
+    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nLa República en un gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República habla de\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa República en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Leer la economía sin ruido.",
+    "section": "",
+    "text": "Economía aplicada RD\n\n\nDatos, visuales y criterio para leer coyuntura, sectores y territorio.\n\n\n\nAbrir Atlas Leer análisis\n\n\n\nÚltimo análisis\n\n\n\n\n\n\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio…\n\n\n\n12 mar 2026\n\n\n\n\n\n\nNo hay resultados\n\n\n\n Atlas Datos, mapas y sectores. Entrar \n Visuales Gráficos y mapas. Ver \n Fundamentos Ideas base para leer economía. Leer \n\n\n\n\nArchivo vivo\n\n\nVer archivo completo\n\n\n\n\n\n\n\n\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio…\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el…\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la…\n\n\n\n15 feb 2026\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "index.html#últimas-publicaciones",
+    "href": "index.html#últimas-publicaciones",
+    "title": "Leer la economía sin ruido.",
+    "section": "",
+    "text": "Ver archivo completo"
   },
   {
     "objectID": "observatorio.html",
     "href": "observatorio.html",
     "title": "Observatorio",
     "section": "",
-    "text": "Observatorio\nLos indicadores y exploradores interactivos ahora viven en Atlas LM.\nAbrir Atlas LM\n\n\nRedireccion permanente para enlaces anteriores."
+    "text": "Observatorio\nAbrir Atlas"
   },
   {
     "objectID": "posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",
@@ -707,39 +672,39 @@
     "text": "Entradas publicadas\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "republica-en-un-grafico.html",
-    "href": "republica-en-un-grafico.html",
-    "title": "La República en un gráfico",
+    "objectID": "republica-habla-de.html",
+    "href": "republica-habla-de.html",
+    "title": "La República habla de",
     "section": "",
-    "text": "Una visualización, una lectura y una implicación para entender mejor la economía dominicana.\n\nGráficos Series dominicanas Lectura rapida"
+    "text": "Análisis de coyuntura económica dominicana con una tesis clara: qué cambió, por qué importa y qué mecanismo explica el resultado.\n\nCoyuntura Política económica Datos oficiales"
   },
   {
-    "objectID": "republica-en-un-grafico.html#un-argumento-visual",
-    "href": "republica-en-un-grafico.html#un-argumento-visual",
-    "title": "La República en un gráfico",
-    "section": "Un argumento visual",
-    "text": "Un argumento visual\nEl gráfico no acompaña el texto: lo organiza."
+    "objectID": "republica-habla-de.html#lectura-con-postura",
+    "href": "republica-habla-de.html#lectura-con-postura",
+    "title": "La República habla de",
+    "section": "Lectura con postura",
+    "text": "Lectura con postura\nCada texto parte de una pregunta pública y termina con una implicación concreta."
   },
   {
-    "objectID": "republica-en-un-grafico.html#fuente-visible",
-    "href": "republica-en-un-grafico.html#fuente-visible",
-    "title": "La República en un gráfico",
-    "section": "Fuente visible",
-    "text": "Fuente visible\nCada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo."
+    "objectID": "republica-habla-de.html#dato-mecanismo-limite",
+    "href": "republica-habla-de.html#dato-mecanismo-limite",
+    "title": "La República habla de",
+    "section": "Dato, mecanismo, limite",
+    "text": "Dato, mecanismo, limite\nLa serie separa el dato observado, la explicación probable y lo que todavía no se puede afirmar."
   },
   {
-    "objectID": "republica-en-un-grafico.html#implicación-económica",
-    "href": "republica-en-un-grafico.html#implicación-económica",
-    "title": "La República en un gráfico",
-    "section": "Implicación económica",
-    "text": "Implicación económica\nEl cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública."
+    "objectID": "republica-habla-de.html#para-seguir-agenda",
+    "href": "republica-habla-de.html#para-seguir-agenda",
+    "title": "La República habla de",
+    "section": "Para seguir agenda",
+    "text": "Para seguir agenda\nIdeal para temas fiscales, precios, sectores productivos y debates de politica publica."
   },
   {
-    "objectID": "republica-en-un-grafico.html#gráficos-publicados",
-    "href": "republica-en-un-grafico.html#gráficos-publicados",
-    "title": "La República en un gráfico",
-    "section": "Gráficos publicados",
-    "text": "Gráficos publicados\n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
+    "objectID": "republica-habla-de.html#últimos-análisis",
+    "href": "republica-habla-de.html#últimos-análisis",
+    "title": "La República habla de",
+    "section": "Últimos análisis",
+    "text": "Últimos análisis\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "series.html",
