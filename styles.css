@@ -242,31 +242,48 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
   #quarto-header .navbar-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.45rem;
-    min-height: 54px;
+    min-height: 50px;
     padding-left: 0;
     padding-right: 0;
   }
 
   #quarto-header .navbar-brand-container {
+    order: 2;
+    flex: 1 1 auto;
     margin-left: 0 !important;
-    margin-right: auto !important;
+    margin-right: 0 !important;
+  }
+
+  #quarto-header .navbar .navbar-brand-logo,
+  #quarto-header .navbar .navbar-brand {
+    max-width: 40px;
   }
 
   #quarto-header .navbar .navbar-logo {
-    max-width: 74px !important;
-    height: 34px !important;
-    max-height: 34px !important;
+    width: 32px !important;
+    max-width: 32px !important;
+    height: 32px !important;
+    max-height: 32px !important;
   }
 
   #quarto-search {
-    flex: 0 0 auto;
+    order: 4;
+    flex: 0 0 36px;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #quarto-header .navbar-toggler {
-    flex: 0 0 auto;
-    width: 40px;
-    height: 40px;
+    order: 1;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
     padding: 0;
     border: 1px solid var(--lm-border-dark);
     border-radius: 4px;
@@ -274,6 +291,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
   }
 
   #quarto-header .navbar-collapse {
+    order: 5;
     flex-basis: 100%;
     margin: 0.45rem -0.75rem 0;
     padding: 0.85rem 0.95rem 1rem;
@@ -311,7 +329,21 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
   }
 
   #quarto-header .quarto-navbar-tools {
-    margin-top: 0.7rem;
+    order: 3;
+    flex: 0 0 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #quarto-header .navbar .quarto-color-scheme-toggle {
+    width: 34px !important;
+    height: 34px !important;
+    margin-left: 0;
+    border-width: 1px !important;
+    background-size: 15px !important;
   }
 }
 

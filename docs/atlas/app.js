@@ -26,6 +26,22 @@ const els = {
   menuToggle: document.getElementById("menu-toggle")
 };
 
+const ARTICLE_ROUTES = {
+  "2026-01-06-Perpectiva_del_desarrollo": "../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html",
+  "2026-02-14-mipymes-rd": "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html",
+  "2026-01-20-Turismo_expansion": "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html",
+  "2026-03-04-transporte-masivo": "../posts/republica-habla-de/2026-03-04-transporte-masivo/index.html",
+  "2025-12-19_deuda_publica": "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html"
+};
+
+const VISUAL_ARTICLES = {
+  business: "2026-01-06-Perpectiva_del_desarrollo",
+  mipymes: "2026-02-14-mipymes-rd",
+  tourism: "2026-01-20-Turismo_expansion",
+  transport: "2026-03-04-transporte-masivo",
+  debt: "2025-12-19_deuda_publica"
+};
+
 async function boot() {
   try {
     const [atlasResponse, mapResponse, regionMapResponse, worldMapResponse, articleResponse] = await Promise.all([
@@ -479,17 +495,20 @@ function renderVisualLab() {
     return "";
   }
 
+  const visualMapActions = `${articleLink(VISUAL_ARTICLES[state.visualMap])}${chartExpandButton("visual-map")}`;
+  const visualMapToolbar = [
+    chartToggle("visual", "business", "Empresas"),
+    chartToggle("visual", "mipymes", "MiPyMES"),
+    chartToggle("visual", "tourism", "Turismo")
+  ].join("");
+
   return `
     <section class="chart-card chart-card-wide map-card">
       <div class="card-head">
         <div>
           <h3>Mapas desde articulos</h3>
         </div>
-        <div class="chart-toolbar">
-          ${chartToggle("visual", "business", "Empresas")}
-          ${chartToggle("visual", "mipymes", "MiPyMES")}
-          ${chartToggle("visual", "tourism", "Turismo")}
-        </div>
+        ${chartControls(visualMapToolbar, visualMapActions)}
       </div>
       <div class="map-workbench">
         <div class="map-canvas-wrap">
@@ -499,15 +518,39 @@ function renderVisualLab() {
       </div>
     </section>
     <section class="chart-card">
-      <h3>Demanda turistica por motivo</h3>
+      <div class="card-head">
+        <div>
+          <h3>Demanda turistica por motivo</h3>
+        </div>
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}`)}
+      </div>
       <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turisticos"></canvas>
     </section>
     <section class="chart-card">
-      <h3>Empleo formal y alquiler</h3>
+      <div class="card-head">
+        <div>
+          <h3>Empleo formal y alquiler</h3>
+        </div>
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.transport)}${chartExpandButton("transport-space")}`)}
+      </div>
       <canvas id="transport-space" height="340" aria-label="Scatter de empleo formal y alquiler"></canvas>
     </section>
     <section class="chart-card chart-card-wide">
-      <h3>Servicio de deuda</h3>
+      <div class="card-head">
+        <div>
+          <h3>Deuda publica</h3>
+        </div>
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-burden")}`)}
+      </div>
+      <canvas id="debt-burden" height="360" aria-label="Rigidez fiscal e intereses"></canvas>
+    </section>
+    <section class="chart-card chart-card-wide">
+      <div class="card-head">
+        <div>
+          <h3>Servicio de deuda</h3>
+        </div>
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-service")}`)}
+      </div>
       <canvas id="debt-service" height="360" aria-label="Servicio de deuda por componente"></canvas>
     </section>
   `;
@@ -532,6 +575,26 @@ function chartToggle(scope, id, label) {
     visual: state.visualMap
   }[scope];
   return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
+}
+
+function chartControls(toolbarHtml = "", actionsHtml = "") {
+  if (!toolbarHtml && !actionsHtml) return "";
+  return `
+    <div class="chart-controls">
+      ${toolbarHtml ? `<div class="chart-toolbar">${toolbarHtml}</div>` : ""}
+      ${actionsHtml ? `<div class="chart-actions">${actionsHtml}</div>` : ""}
+    </div>
+  `;
+}
+
+function articleLink(articleId, label = "Leer analisis") {
+  const href = ARTICLE_ROUTES[articleId];
+  if (!href) return "";
+  return `<a class="article-link" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
+}
+
+function chartExpandButton(canvasId) {
+  return `<button class="chart-expand" type="button" data-action="expand-chart" data-canvas="${escapeHtml(canvasId)}" title="Ver a pantalla completa">Ampliar</button>`;
 }
 
 function hydrateCharts(module) {
@@ -663,7 +726,40 @@ function hydrateCharts(module) {
 }
 
 function hydrateVisualLab() {
-  const mapConfig = {
+  const mapConfig = visualMapConfig();
+
+  drawChoroplethMap(document.getElementById("visual-map"), mapConfig.features, mapConfig);
+
+  drawTreemapChart(document.getElementById("tourism-treemap"), state.articleVisuals.tourism.treemap, {
+    title: "Estructura de motivaciones turisticas",
+    labelField: "motivo",
+    valueField: "porcentaje",
+    categoryField: "categoria"
+  });
+
+  drawComplexScatterChart(document.getElementById("transport-space"), state.articleVisuals.transport.rentEmployment, transportScatterOptions());
+
+  drawDebtBurdenChart(document.getElementById("debt-burden"), state.articleVisuals.debt.service, {
+    title: "Servicio total e intereses",
+    labelField: "anio",
+    serviceField: "service",
+    shareField: "interest_share"
+  });
+
+  drawStackedBarChart(document.getElementById("debt-service"), state.articleVisuals.debt.service, {
+    title: "Servicio de deuda por componente",
+    labelField: "anio",
+    fields: [
+      { field: "principal", label: "Principal", color: "#466a8f" },
+      { field: "interest", label: "Intereses", color: "#c86448" },
+      { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
+    ],
+    unit: "US$ MM"
+  });
+}
+
+function visualMapConfig() {
+  return {
     business: {
       features: territoryMapFeatures(),
       title: "Densidad empresarial por provincia",
@@ -709,17 +805,10 @@ function hydrateVisualLab() {
       showLabels: false
     }
   }[state.visualMap];
+}
 
-  drawChoroplethMap(document.getElementById("visual-map"), mapConfig.features, mapConfig);
-
-  drawTreemapChart(document.getElementById("tourism-treemap"), state.articleVisuals.tourism.treemap, {
-    title: "Estructura de motivaciones turisticas",
-    labelField: "motivo",
-    valueField: "porcentaje",
-    categoryField: "categoria"
-  });
-
-  drawComplexScatterChart(document.getElementById("transport-space"), state.articleVisuals.transport.rentEmployment, {
+function transportScatterOptions() {
+  return {
     title: "Prima de ubicacion vs empleo formal",
     xField: "median_rent_thousand",
     yField: "employment_share",
@@ -741,18 +830,7 @@ function hydrateVisualLab() {
       "Periurbana GSD": "#6b7554",
       Resto: "#466a8f"
     }
-  });
-
-  drawStackedBarChart(document.getElementById("debt-service"), state.articleVisuals.debt.service, {
-    title: "Servicio de deuda por componente",
-    labelField: "anio",
-    fields: [
-      { field: "principal", label: "Principal", color: "#466a8f" },
-      { field: "interest", label: "Intereses", color: "#c86448" },
-      { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
-    ],
-    unit: "US$ MM"
-  });
+  };
 }
 
 function visibleModules() {
@@ -848,6 +926,10 @@ function hydrateModuleActions() {
       flashButton(button, "Descargado");
     });
   });
+
+  els.stage.querySelectorAll('[data-action="expand-chart"]').forEach((button) => {
+    button.addEventListener("click", () => openChartFullscreen(button.dataset.canvas));
+  });
 }
 
 function currentViewUrl() {
@@ -885,6 +967,112 @@ function flashButton(button, label) {
   }, 1200);
 }
 
+function openChartFullscreen(canvasId) {
+  const sourceCanvas = document.getElementById(canvasId);
+  if (!sourceCanvas) return;
+  const card = sourceCanvas.closest(".chart-card");
+  const title = card?.querySelector("h3")?.textContent || "Grafico";
+  const article = card?.querySelector(".article-link");
+  const modal = document.createElement("div");
+  modal.className = "atlas-modal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.innerHTML = `
+    <section class="atlas-modal-panel">
+      <header class="atlas-modal-head">
+        <h2>${escapeHtml(title)}</h2>
+        <div class="atlas-modal-actions">
+          ${article ? article.outerHTML : ""}
+          <button class="atlas-modal-close" type="button">Cerrar</button>
+        </div>
+      </header>
+      <div class="atlas-modal-body">
+        <canvas id="expanded-${escapeHtml(canvasId)}" height="640" aria-label="${escapeHtml(title)}"></canvas>
+      </div>
+    </section>
+  `;
+
+  const close = () => {
+    document.body.classList.remove("modal-open");
+    window.removeEventListener("keydown", onKeydown);
+    modal.remove();
+  };
+  const onKeydown = (event) => {
+    if (event.key === "Escape") close();
+  };
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
+  });
+  modal.querySelector(".atlas-modal-close").addEventListener("click", close);
+  document.body.appendChild(modal);
+  document.body.classList.add("modal-open");
+  window.addEventListener("keydown", onKeydown);
+
+  window.requestAnimationFrame(() => {
+    const expandedCanvas = modal.querySelector("canvas");
+    redrawExpandedChart(canvasId, expandedCanvas, sourceCanvas);
+  });
+}
+
+function redrawExpandedChart(canvasId, canvas, sourceCanvas) {
+  if (!canvas) return;
+  if (canvasId === "visual-map") {
+    const mapConfig = visualMapConfig();
+    drawChoroplethMap(canvas, mapConfig.features, {
+      ...mapConfig,
+      inspectorId: null,
+      mapId: `${mapConfig.mapId}-fullscreen`
+    });
+    return;
+  }
+
+  if (canvasId === "tourism-treemap") {
+    drawTreemapChart(canvas, state.articleVisuals.tourism.treemap, {
+      title: "Estructura de motivaciones turisticas",
+      labelField: "motivo",
+      valueField: "porcentaje",
+      categoryField: "categoria"
+    });
+    return;
+  }
+
+  if (canvasId === "transport-space") {
+    drawComplexScatterChart(canvas, state.articleVisuals.transport.rentEmployment, transportScatterOptions());
+    return;
+  }
+
+  if (canvasId === "debt-burden") {
+    drawDebtBurdenChart(canvas, state.articleVisuals.debt.service, {
+      title: "Servicio total e intereses",
+      labelField: "anio",
+      serviceField: "service",
+      shareField: "interest_share"
+    });
+    return;
+  }
+
+  if (canvasId === "debt-service") {
+    drawStackedBarChart(canvas, state.articleVisuals.debt.service, {
+      title: "Servicio de deuda por componente",
+      labelField: "anio",
+      fields: [
+        { field: "principal", label: "Principal", color: "#466a8f" },
+        { field: "interest", label: "Intereses", color: "#c86448" },
+        { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
+      ],
+      unit: "US$ MM"
+    });
+    return;
+  }
+
+  if (!sourceCanvas) return;
+  const ctx = setupCanvas(canvas);
+  const { width, height } = canvas.getBoundingClientRect();
+  clearCanvas(ctx, width, height);
+  ctx.drawImage(sourceCanvas, 0, 0, width, height);
+}
+
 function renderBarRows(rows, options) {
   const max = options.max || Math.max(...rows.map((item) => Math.abs(item[options.valueField])), 1);
   return rows.map((item) => {
@@ -920,11 +1108,14 @@ function drawDualLineChart(canvas, labels, series, title) {
   drawGrid(ctx, width, height, padding, 4);
   drawCanvasTitle(ctx, title, padding.left, 18);
 
+  const tooltipPoints = [];
   series.forEach((serie) => {
     const points = serie.values.map((value, index) => ({
       x: padding.left + (plotW * index) / Math.max(serie.values.length - 1, 1),
       y: padding.top + plotH - ((value - min) / span) * plotH,
-      value
+      value,
+      period: labels[index],
+      label: serie.label
     }));
 
     ctx.beginPath();
@@ -941,6 +1132,7 @@ function drawDualLineChart(canvas, labels, series, title) {
       ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
       ctx.fillStyle = serie.color;
       ctx.fill();
+      tooltipPoints.push({ ...point, radius: 10 });
     });
   });
 
@@ -958,6 +1150,10 @@ function drawDualLineChart(canvas, labels, series, title) {
   }
 
   drawLegend(ctx, series, padding.left, height - 4);
+  bindPointTooltip(canvas, tooltipPoints, (point) => `
+    <strong>${escapeHtml(point.label)}</strong>
+    <span>${escapeHtml(point.period)}: ${formatNumber(point.value)}</span>
+  `);
 }
 
 function drawHorizontalBarChart(canvas, rows, options) {
@@ -970,6 +1166,7 @@ function drawHorizontalBarChart(canvas, rows, options) {
   const rowHeight = Math.min(34, (height - padding.top - padding.bottom) / rows.length);
   const gap = Math.max(8, rowHeight * 0.35);
   const barH = Math.max(13, rowHeight - gap);
+  const boxes = [];
 
   clearCanvas(ctx, width, height);
   drawCanvasTitle(ctx, options.title, padding.left, 18);
@@ -984,10 +1181,16 @@ function drawHorizontalBarChart(canvas, rows, options) {
     ctx.fillText(String(item[options.labelField]), 8, y + barH - 2);
     ctx.fillStyle = value < 0 ? "#c74b4b" : index === 0 ? "#c86448" : "#466a8f";
     ctx.fillRect(padding.left, y, barW, barH);
+    boxes.push({ x: padding.left, y, width: barW, height: barH, item, value });
     ctx.fillStyle = "#191b1f";
     ctx.font = "700 12px Inter";
     ctx.fillText(formatNumber(value), padding.left + barW + 8, y + barH - 2);
   });
+
+  bindBoxTooltip(canvas, boxes, (box) => `
+    <strong>${escapeHtml(box.item[options.labelField])}</strong>
+    <span>${formatNumber(box.value)}${escapeHtml(options.suffix || "")}</span>
+  `);
 }
 
 function drawCategoricalCountChart(canvas, rows, field, title) {
@@ -1016,6 +1219,7 @@ function drawGroupedBarChart(canvas, rows, options) {
   const groupW = plotW / rows.length;
   const barW = Math.min(18, groupW / (options.fields.length + 1));
   const max = Math.max(...rows.flatMap((row) => options.fields.map((field) => row[field.field])), 100);
+  const boxes = [];
 
   clearCanvas(ctx, width, height);
   drawCanvasTitle(ctx, options.title, padding.left, 18);
@@ -1029,6 +1233,7 @@ function drawGroupedBarChart(canvas, rows, options) {
       const y = padding.top + plotH - barH;
       ctx.fillStyle = field.color;
       ctx.fillRect(x, y, barW, barH);
+      boxes.push({ x, y, width: barW, height: barH, item: row, field, value });
     });
 
     ctx.save();
@@ -1041,6 +1246,10 @@ function drawGroupedBarChart(canvas, rows, options) {
   });
 
   drawLegend(ctx, options.fields.map((field) => ({ label: field.label, color: field.color })), padding.left, 32);
+  bindBoxTooltip(canvas, boxes, (box) => `
+    <strong>${escapeHtml(box.item[options.labelField])}</strong>
+    <span>${escapeHtml(box.field.label)}: ${formatNumber(box.value)}</span>
+  `);
 }
 
 function drawTreemapChart(canvas, rows, options) {
@@ -1095,6 +1304,104 @@ function drawTreemapChart(canvas, rows, options) {
     <span>${formatNumber(box.item[options.valueField])}% de motivaciones</span>
     <span>${escapeHtml(box.item[options.categoryField])}</span>
   `);
+}
+
+function drawDebtBurdenChart(canvas, rows, options) {
+  if (!canvas) return;
+  const ctx = setupCanvas(canvas);
+  const { width, height } = canvas.getBoundingClientRect();
+  const padding = width < 420
+    ? { top: 46, right: 18, bottom: 54, left: 48 }
+    : { top: 46, right: 52, bottom: 58, left: 62 };
+  const plotW = width - padding.left - padding.right;
+  const plotH = height - padding.top - padding.bottom;
+  const serviceMax = Math.max(...rows.map((row) => Number(row[options.serviceField])), 1);
+  const shareMax = 70;
+  const gap = width < 420 ? 4 : 7;
+  const barW = Math.max(8, (plotW - gap * (rows.length - 1)) / rows.length);
+  const boxes = [];
+  const points = [];
+
+  const xAt = (index) => padding.left + index * (barW + gap);
+  const shareY = (value) => padding.top + plotH - (Number(value) / shareMax) * plotH;
+
+  clearCanvas(ctx, width, height);
+  drawCanvasTitle(ctx, options.title, padding.left, 22);
+  drawGrid(ctx, width, height, padding, 4);
+
+  rows.forEach((row, index) => {
+    const service = Number(row[options.serviceField]);
+    const x = xAt(index);
+    const barH = (service / serviceMax) * plotH;
+    const y = padding.top + plotH - barH;
+    ctx.fillStyle = index === rows.length - 1 ? "#c86448" : "#466a8f";
+    ctx.fillRect(x, y, barW, barH);
+    boxes.push({ x, y, width: barW, height: barH, item: row, value: service });
+
+    const point = {
+      x: x + barW / 2,
+      y: shareY(row[options.shareField]),
+      radius: 10,
+      item: row,
+      value: Number(row[options.shareField])
+    };
+    points.push(point);
+
+    ctx.fillStyle = "#6b7280";
+    ctx.font = "10px Inter";
+    if (index % 2 === 0 || width > 520) {
+      ctx.fillText(String(row[options.labelField]).slice(-2), x, height - 18);
+    }
+  });
+
+  ctx.beginPath();
+  points.forEach((point, index) => {
+    if (index === 0) ctx.moveTo(point.x, point.y);
+    else ctx.lineTo(point.x, point.y);
+  });
+  ctx.strokeStyle = "#2a9d8f";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  points.forEach((point) => {
+    ctx.beginPath();
+    ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = "#2a9d8f";
+    ctx.fill();
+  });
+
+  drawLegend(ctx, [
+    { label: "Servicio total", color: "#466a8f" },
+    { label: "Intereses / servicio", color: "#2a9d8f" }
+  ], padding.left, 40);
+
+  bindCanvasTooltip(canvas, (event) => {
+    const cursor = getCanvasPoint(canvas, event);
+    const point = points.find((candidate) => {
+      const dx = cursor.x - candidate.x;
+      const dy = cursor.y - candidate.y;
+      return Math.sqrt(dx * dx + dy * dy) <= candidate.radius + 2;
+    });
+    if (point) {
+      return `
+        <strong>${escapeHtml(point.item[options.labelField])}</strong>
+        <span>Intereses: ${formatNumber(point.value)}%</span>
+        <span>Servicio: ${formatNumber(point.item[options.serviceField])} US$ MM</span>
+      `;
+    }
+    const box = boxes.find((candidate) => (
+      cursor.x >= candidate.x &&
+      cursor.x <= candidate.x + candidate.width &&
+      cursor.y >= candidate.y &&
+      cursor.y <= candidate.y + candidate.height
+    ));
+    if (!box) return null;
+    return `
+      <strong>${escapeHtml(box.item[options.labelField])}</strong>
+      <span>Servicio: ${formatNumber(box.value)} US$ MM</span>
+      <span>Intereses: ${formatNumber(box.item[options.shareField])}%</span>
+    `;
+  });
 }
 
 function drawStackedBarChart(canvas, rows, options) {
@@ -1322,7 +1629,7 @@ function drawChoroplethMap(canvas, features, options) {
   paint(currentPinnedEntry() || topEntry);
   syncInspector(currentPinnedEntry() || topEntry, Boolean(currentPinnedEntry()));
 
-  canvas.onmousemove = (event) => {
+  const focusMapEntry = (event, pin = false) => {
     const point = getCanvasPoint(canvas, event);
     const found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
     if (!found) {
@@ -1330,9 +1637,10 @@ function drawChoroplethMap(canvas, features, options) {
       paint(currentPinnedEntry() || topEntry);
       syncInspector(currentPinnedEntry() || topEntry, Boolean(currentPinnedEntry()));
       hideTooltip();
-      return;
+      return null;
     }
     canvas.style.cursor = "pointer";
+    if (pin) state.mapPinned[mapId] = mapEntryKey(found, options);
     paint(found);
     syncInspector(found, mapEntryKey(found, options) === state.mapPinned[mapId]);
     const valueLabel = Number.isFinite(found.value)
@@ -1350,18 +1658,23 @@ function drawChoroplethMap(canvas, features, options) {
       <span>${valueLabel}</span>
       ${extraRows}
     `, event);
+    return found;
   };
 
-  canvas.onclick = (event) => {
-    const point = getCanvasPoint(canvas, event);
-    const found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
-    if (!found) return;
-    state.mapPinned[mapId] = mapEntryKey(found, options);
-    paint(found);
-    syncInspector(found, true);
+  canvas.onmousemove = null;
+  canvas.onclick = null;
+  canvas.onmouseleave = null;
+  canvas.onpointermove = (event) => {
+    if (event.pointerType === "touch") return;
+    focusMapEntry(event, false);
   };
 
-  canvas.onmouseleave = () => {
+  canvas.onpointerdown = (event) => {
+    const found = focusMapEntry(event, true);
+    if (found && event.pointerType !== "mouse") event.preventDefault();
+  };
+
+  canvas.onpointerleave = () => {
     const selected = currentPinnedEntry() || topEntry;
     canvas.style.cursor = "default";
     paint(selected);
@@ -1446,6 +1759,7 @@ function drawScatterChart(canvas, rows, options) {
   const xMax = Math.max(...xValues) + 4;
   const yMin = Math.min(...yValues) - 4;
   const yMax = Math.max(...yValues) + 4;
+  const points = [];
 
   clearCanvas(ctx, width, height);
   drawCanvasTitle(ctx, options.title, padding.left, 18);
@@ -1462,6 +1776,7 @@ function drawScatterChart(canvas, rows, options) {
     ctx.strokeStyle = "#ffffff";
     ctx.lineWidth = 2;
     ctx.stroke();
+    points.push({ x, y, radius: radius + 4, item });
     if (index < 6) {
       ctx.fillStyle = "#191b1f";
       ctx.font = "11px Inter";
@@ -1477,6 +1792,13 @@ function drawScatterChart(canvas, rows, options) {
   ctx.rotate(-Math.PI / 2);
   ctx.fillText("Mercado", 0, 0);
   ctx.restore();
+
+  bindPointTooltip(canvas, points, (point) => `
+    <strong>${escapeHtml(point.item[options.labelField])}</strong>
+    <span>${escapeHtml(options.xLabel || "Infraestructura")}: ${formatNumber(point.item[options.xField])}</span>
+    <span>${escapeHtml(options.yLabel || "Mercado")}: ${formatNumber(point.item[options.yField])}</span>
+    <span>${escapeHtml(options.sizeLabel || "Oportunidad")}: ${formatNumber(point.item[options.sizeField])}</span>
+  `);
 }
 
 function drawAxisLabels(ctx, xLabel, yLabel, padding, width, height) {
@@ -1491,7 +1813,7 @@ function drawAxisLabels(ctx, xLabel, yLabel, padding, width, height) {
 }
 
 function bindPointTooltip(canvas, points, content) {
-  canvas.onmousemove = (event) => {
+  bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
     const found = points.find((point) => {
       const dx = cursor.x - point.x;
@@ -1499,19 +1821,12 @@ function bindPointTooltip(canvas, points, content) {
       return Math.sqrt(dx * dx + dy * dy) <= point.radius + 2;
     });
 
-    if (!found) {
-      hideTooltip();
-      return;
-    }
-
-    showTooltip(content(found), event);
-  };
-
-  canvas.onmouseleave = hideTooltip;
+    return found ? content(found) : null;
+  });
 }
 
 function bindBoxTooltip(canvas, boxes, content) {
-  canvas.onmousemove = (event) => {
+  bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
     const found = boxes.find((box) => (
       cursor.x >= box.x &&
@@ -1520,15 +1835,40 @@ function bindBoxTooltip(canvas, boxes, content) {
       cursor.y <= box.y + box.height
     ));
 
-    if (!found) {
+    return found ? content(found) : null;
+  });
+}
+
+function bindCanvasTooltip(canvas, resolveContent) {
+  canvas.onmousemove = null;
+  canvas.onclick = null;
+  canvas.onmouseleave = null;
+  canvas.onpointermove = (event) => {
+    if (event.pointerType === "touch") return;
+    const html = resolveContent(event);
+    canvas.style.cursor = html ? "pointer" : "default";
+    if (!html) {
       hideTooltip();
       return;
     }
-
-    showTooltip(content(found), event);
+    showTooltip(html, event);
   };
 
-  canvas.onmouseleave = hideTooltip;
+  canvas.onpointerdown = (event) => {
+    const html = resolveContent(event);
+    canvas.style.cursor = html ? "pointer" : "default";
+    if (!html) {
+      hideTooltip();
+      return;
+    }
+    showTooltip(html, event);
+    if (event.pointerType !== "mouse") event.preventDefault();
+  };
+
+  canvas.onpointerleave = () => {
+    canvas.style.cursor = "default";
+    hideTooltip();
+  };
 }
 
 function layoutTreemap(items, x, y, width, height, valueField, boxes) {
@@ -1678,9 +2018,10 @@ function hexToRgb(hex) {
 
 function getCanvasPoint(canvas, event) {
   const rect = canvas.getBoundingClientRect();
+  const source = event.touches?.[0] || event.changedTouches?.[0] || event;
   return {
-    x: event.clientX - rect.left,
-    y: event.clientY - rect.top
+    x: source.clientX - rect.left,
+    y: source.clientY - rect.top
   };
 }
 
@@ -1696,11 +2037,12 @@ function ensureTooltip() {
 
 function showTooltip(html, event) {
   if (!state.tooltip) state.tooltip = ensureTooltip();
+  const source = event.touches?.[0] || event.changedTouches?.[0] || event;
   state.tooltip.innerHTML = html;
   state.tooltip.style.opacity = "1";
   state.tooltip.style.transform = "translateY(0)";
-  state.tooltip.style.left = `${Math.min(window.innerWidth - 260, event.clientX + 14)}px`;
-  state.tooltip.style.top = `${Math.min(window.innerHeight - 120, event.clientY + 14)}px`;
+  state.tooltip.style.left = `${Math.max(8, Math.min(window.innerWidth - 260, source.clientX + 14))}px`;
+  state.tooltip.style.top = `${Math.max(8, Math.min(window.innerHeight - 120, source.clientY + 14))}px`;
 }
 
 function hideTooltip() {
@@ -1712,6 +2054,8 @@ function hideTooltip() {
 function setupCanvas(canvas) {
   const rect = canvas.getBoundingClientRect();
   const dpr = window.devicePixelRatio || 1;
+  canvas.classList.add("is-interactive");
+  canvas.style.touchAction = "manipulation";
   canvas.width = Math.max(1, Math.floor(rect.width * dpr));
   canvas.height = Math.max(1, Math.floor(rect.height * dpr));
   const ctx = canvas.getContext("2d");

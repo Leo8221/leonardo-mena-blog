@@ -226,11 +226,11 @@ debt <- read_csv(file.path(root, "posts", "republica-habla-de", "2025-12-19_deud
 payload <- list(
   updated = as.character(Sys.Date()),
   sources = list(
-    list(title = "Densidad empresarial por provincia", article = "2026-01-06-Perpectiva_del_desarrollo", files = c("PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE")),
-    list(title = "MiPyMES por region", article = "2026-02-14-mipymes-rd", files = c("REGCenso2010.shp", basename(mipyme_path))),
-    list(title = "Turismo por pais y motivo", article = "2026-01-20-Turismo_expansion", files = c("razones_turismo.csv", "rnaturalearth")),
-    list(title = "Transporte masivo y empleo formal", article = "2026-03-04-transporte-masivo", files = c("tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv")),
-    list(title = "Deuda publica", article = "2025-12-19_deuda_publica", files = c("deuda_rd.csv"))
+    list(title = "Densidad empresarial por provincia", article = "2026-01-06-Perpectiva_del_desarrollo", href = "../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html", files = c("PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE")),
+    list(title = "MiPyMES por region", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),
+    list(title = "Turismo por pais y motivo", article = "2026-01-20-Turismo_expansion", href = "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html", files = c("razones_turismo.csv", "rnaturalearth")),
+    list(title = "Transporte masivo y empleo formal", article = "2026-03-04-transporte-masivo", href = "../posts/republica-habla-de/2026-03-04-transporte-masivo/index.html", files = c("tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv")),
+    list(title = "Deuda publica", article = "2025-12-19_deuda_publica", href = "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html", files = c("deuda_rd.csv"))
   ),
   tourism = list(
     treemap = tourism_treemap,
