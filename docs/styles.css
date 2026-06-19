@@ -9,7 +9,7 @@
   --lm-bg-body: #f7f7f4;       /* Fondo principal */
   --lm-bg-card: #ffffff;       /* Fondo de tarjetas */
   --lm-bg-sec:  #eef1ed;       /* Fondos secundarios/inputs */
-
+  
   --lm-text-main: #191b1f;     /* Negro editorial */
   --lm-text-soft: #3f4752;     /* Gris de lectura */
   --lm-text-muted:#6b7280;     /* Gris auxiliar */
@@ -19,7 +19,7 @@
   --lm-terracota-dark: #a04d35;
   --lm-primario: #343a40;      /* Gris Plomo (Para números grandes) */
   --lm-olive: #6b7554;         /* Verde acento */
-
+  
   /* --- BORDES Y SOMBRAS --- */
   --lm-border: #dde3de;
   --lm-border-dark: #cbd5cf;
@@ -28,7 +28,7 @@
 
   /* --- ICONOS SVG (Codificados una sola vez) --- */
   --icon-sun: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23c86448' viewBox='0 0 16 16'%3E%3Cpath d='M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z'/%3E%3C/svg%3E");
-
+  
   --icon-moon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z'/%3E%3Cpath d='M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z'/%3E%3C/svg%3E");
 }
 
@@ -37,18 +37,18 @@ body.quarto-dark {
   --lm-bg-body: #272b30;
   --lm-bg-card: #1e2124;
   --lm-bg-sec:  #32383e;
-
+  
   --lm-text-main: #e8e6e3;
   --lm-text-soft: #b0b3b8;
   --lm-text-muted:#7a7f85;
-
+  
   --lm-terracota: #e07a5f;     /* Más brillante para fondo oscuro */
   --lm-terracota-dark: #ff9f85;
   --lm-primario: #e8e6e3;      /* Blanco hueso para números */
-
+  
   --lm-border: #3e444a;
   --lm-border-dark: #4f575e;
-
+  
   --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
@@ -194,7 +194,7 @@ body.quarto-dark .navbar .navbar-logo.dark-content {
   align-items: center;
   justify-content: center;
   vertical-align: middle !important;
-
+  
   /* Caja */
   background-color: var(--lm-bg-sec) !important;
   border: 2px solid var(--lm-border-dark) !important;
@@ -202,11 +202,11 @@ body.quarto-dark .navbar .navbar-logo.dark-content {
   width: 40px !important;
   height: 40px !important;
   margin-left: 15px;
-
+  
   /* Icono */
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: 18px !important;
+  background-size: 18px !important; 
   transition: all 0.2s ease;
 }
 
@@ -589,7 +589,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 }
 
 /* ==========================================================================
-   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO
+   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO 
    ========================================================================== */
 
 /* Tarjetas Generales (Value Boxes y Gráficos) */
@@ -658,7 +658,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 
 /* --- ICONOS DE FONDO (MARCA DE AGUA) --- */
 /* Esto crea el efecto detrás del número */
-.value-box-showcase .bi,
+.value-box-showcase .bi, 
 .value-box-showcase i,
 .value-box-showcase svg {
     color: var(--lm-text-main) !important;
@@ -672,13 +672,13 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 /* --- COLORES SEMÁNTICOS (LÓGICA ECONÓMICA) --- */
 
 /* Verde (Bueno/Dentro de meta) */
-.text-success { color: #388e3c !important; }
+.text-success { color: #388e3c !important; } 
 
 /* Rojo (Malo/Alerta) */
-.text-danger  { color: #d32f2f !important; }
+.text-danger  { color: #d32f2f !important; } 
 
 /* Amarillo/Naranja (Precaución) */
-.text-warning { color: #f57f17 !important; }
+.text-warning { color: #f57f17 !important; } 
 
 /* Azul/Terracota (Neutro o informativo) */
 .text-primary { color: var(--lm-terracota) !important; }
@@ -933,8 +933,8 @@ footer, .nav-footer {
    6. RESPONSIVE & MOBILE FIXES
    ========================================================================== */
 
-@media (max-width: 1024px) {
-    .home .home-grid { grid-template-columns: 1fr; }
+@media (max-width: 1024px) { 
+    .home .home-grid { grid-template-columns: 1fr; } 
 }
 
 @media (max-width: 768px) {
@@ -1355,16 +1355,16 @@ body.editorial-post .post-nav-label {
   body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
     font-size: 3.5em;
   }
-
+  
   body.editorial-post .big-number {
     font-size: 3rem;
   }
-
+  
   body.editorial-post .pullquote {
     font-size: 1.35rem;
     padding-left: 1.5rem;
   }
-
+  
   body.editorial-post #quarto-document-content p {
     text-align: left; /* Quitar justificación en mobile */
   }
@@ -1391,11 +1391,11 @@ div.giscus {
   max-width: 720px; /* Mismo ancho que tu texto para que no se desborde */
   margin-left: auto;
   margin-right: auto;
-
+  
   /* 2. Separación del Artículo */
   margin-top: 4rem;      /* Mucho aire arriba */
   padding-top: 2rem;     /* Espacio entre la línea y la caja */
-
+  
   /* 3. Línea Divisoria Editorial */
   border-top: 1px solid var(--lm-border-dark);
 }
@@ -1581,19 +1581,19 @@ body.editorial-post .related-post-card p {
     padding-top: 1.5rem;
     margin-bottom: 2rem;
   }
-
+  
   /* Ocultar el tercer artículo y siguientes */
   body.editorial-post .related-post-card:nth-child(n+3) {
     display: none;
   }
-
+  
   /* Lista vertical simple (NO grid) */
   body.editorial-post .related-posts-grid {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-
+  
   /* Cards como lista compacta */
   body.editorial-post .related-post-card {
     background: transparent;
@@ -1602,18 +1602,18 @@ body.editorial-post .related-post-card p {
     padding: 1.25rem 0;
     margin: 0;
   }
-
+  
   /* Último item sin borde */
   body.editorial-post .related-post-card:last-child {
     border-bottom: none;
   }
-
+  
   /* Título más compacto en mobile */
   body.editorial-post .related-post-card h4 {
     font-size: 0.95rem;
     margin-bottom: 0.35rem;
   }
-
+  
   /* Indicador visual sutil (flecha) */
   body.editorial-post .related-post-card h4::before {
     content: "→ ";
@@ -1621,7 +1621,7 @@ body.editorial-post .related-post-card p {
     font-weight: 700;
     margin-right: 0.35rem;
   }
-
+  
   /* Descripción compacta */
   body.editorial-post .related-post-card p {
     font-size: 0.8rem;
@@ -1632,7 +1632,7 @@ body.editorial-post .related-post-card p {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
+  
   /* Quitar efectos hover en mobile */
   body.editorial-post .related-post-card:hover {
     background: transparent;
@@ -1670,7 +1670,7 @@ body.editorial-post .bib-title {
 
 /* Icono opcional antes del título (puedes usar un SVG o emoji) */
 body.editorial-post .bib-title::before {
-  content: "📚";
+  content: "📚"; 
   font-size: 1rem;
 }
 
@@ -1765,7 +1765,7 @@ body.editorial-post .bib-link:hover {
     margin: 0;
     box-shadow: none;
   }
-
+  
   body.editorial-post .bib-card:last-child {
     border-bottom: none;
   }
@@ -2012,7 +2012,7 @@ body.editorial-post .share-buttons-sticky {
   body.editorial-post .share-buttons-sticky {
     display: none !important;
   }
-
+  
   /* Ajustes para mobile */
   .share-minimal {
     margin: 3rem 0 2rem 0;
@@ -2437,10 +2437,10 @@ body.quarto-dark .share-minimal a {
    ========================================================================== */
 
 body.quarto-dark.editorial-post .key-takeaways {
-  background: rgba(255, 255, 255, 0.05);
-
+  background: rgba(255, 255, 255, 0.05); 
+  
   box-shadow: none;
-
+  
   border-left: 5px solid var(--lm-terracota);
 }
 
@@ -2451,16 +2451,16 @@ body.quarto-dark.editorial-post .key-takeaways-title {
 
 /* El texto de la lista */
 body.quarto-dark.editorial-post .key-takeaways li {
-  color: #e0e0e0;
+  color: #e0e0e0; 
 }
 
 /* Las bolitas de los números (1, 2, 3...) */
 body.quarto-dark.editorial-post .key-takeaways li::before {
-  background: var(--lm-terracota);
-  color: #121212;
+  background: var(--lm-terracota); 
+  color: #121212; 
 }
 
 /* Las negritas dentro del texto */
 body.quarto-dark.editorial-post .key-takeaways strong {
-  color: #fff;
+  color: #fff; 
 }
