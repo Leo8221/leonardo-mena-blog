@@ -137,7 +137,7 @@
       "type": "Explorador",
       "family": "Comercio",
       "topic": "Comercio",
-      "summary": "Vista para socios, productos, balance y oportunidades de sofisticacion exportadora de Republica Dominicana.",
+      "summary": "Vista para socios, rubros, balance y oportunidades de sofisticacion exportadora de Republica Dominicana.",
       "source": "UN Comtrade, OEC, Aduanas RD",
       "sourceDetail": "Estructura preparada para series de comercio por socio, producto y flujo.",
       "question": "Que vendemos, a quien y con que margen de sofisticacion?",

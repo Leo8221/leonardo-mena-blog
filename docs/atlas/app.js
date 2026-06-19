@@ -18,6 +18,25 @@ const state = {
   mapPinned: {}
 };
 
+const CHART_SYSTEM = {
+  touchBreakpoint: 720,
+  colors: {
+    ink: "#191b1f",
+    soft: "#3f4752",
+    muted: "#6b7280",
+    blue: "#466a8f",
+    teal: "#2a9d8f",
+    terracotta: "#c86448",
+    gold: "#d4ac0d",
+    olive: "#6b7554",
+    card: "#ffffff"
+  },
+  hitPadding: {
+    mouse: 2,
+    touch: 14
+  }
+};
+
 const els = {
   nav: document.getElementById("module-nav"),
   search: document.getElementById("atlas-search"),
@@ -1474,6 +1493,7 @@ function drawComplexScatterChart(canvas, rows, options) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
+  const isCompact = width < 520;
   const padding = { top: 54, right: 34, bottom: 62, left: 70 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
@@ -1487,12 +1507,7 @@ function drawComplexScatterChart(canvas, rows, options) {
   const sizeMax = Math.max(...sizeValues, 1);
   const xRef = options.xReference ?? (xMin + xMax) / 2;
   const yRef = options.yReference ?? (yMin + yMax) / 2;
-  const transformValue = (value, mode) => {
-    const numeric = Number(value);
-    if (mode === "sqrt") return Math.sign(numeric) * Math.sqrt(Math.abs(numeric));
-    if (mode === "log") return Math.sign(numeric) * Math.log1p(Math.abs(numeric));
-    return numeric;
-  };
+  const transformValue = (value, mode) => transformChartValue(value, mode);
   const xDomainMin = transformValue(xMin, options.xTransform);
   const xDomainMax = transformValue(xMax, options.xTransform);
   const yDomainMin = transformValue(yMin, options.yTransform);
@@ -1503,11 +1518,14 @@ function drawComplexScatterChart(canvas, rows, options) {
   const xRefPos = xScale(xRef);
   const yRefPos = yScale(yRef);
   const points = [];
+  const visibleLabelCount = isCompact
+    ? Math.min(options.mobileLabelCount ?? 3, options.labelCount || 5)
+    : (options.labelCount || 5);
   const labelRows = new Set(
     rows
       .slice()
       .sort((a, b) => Number(b[options.labelTopBy || options.sizeField]) - Number(a[options.labelTopBy || options.sizeField]))
-      .slice(0, options.labelCount || 5)
+      .slice(0, visibleLabelCount)
       .map((item) => item[options.labelField])
   );
 
@@ -1542,7 +1560,7 @@ function drawComplexScatterChart(canvas, rows, options) {
       const radius = 7 + Math.sqrt(Number(item[options.sizeField]) / sizeMax) * 18;
       const net = Number(item[options.categoryField]);
       const category = item[options.categoryField];
-      const color = options.colorMap?.[category] || (Number.isFinite(net) ? (net >= 0 ? "#2a9d8f" : "#c86448") : "#466a8f");
+      const color = options.colorMap?.[category] || (Number.isFinite(net) ? (net >= 0 ? CHART_SYSTEM.colors.teal : CHART_SYSTEM.colors.terracotta) : CHART_SYSTEM.colors.blue);
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2);
       ctx.fillStyle = addAlpha(color, 0.68);
@@ -1553,15 +1571,15 @@ function drawComplexScatterChart(canvas, rows, options) {
       points.push({ x, y, radius, item, color });
 
       if (labelRows.has(item[options.labelField])) {
-        ctx.fillStyle = "#191b1f";
+        ctx.fillStyle = CHART_SYSTEM.colors.ink;
         ctx.font = "700 11px Inter";
-        ctx.fillText(item[options.labelField], x + radius + 5, y + 4);
+        drawPointLabel(ctx, item[options.labelField], x, y, radius, width, height);
       }
     });
 
   drawLegend(ctx, options.legend || [
-    { label: "Superavit relativo", color: "#2a9d8f" },
-    { label: "Deficit relativo", color: "#c86448" }
+    { label: "Superavit relativo", color: CHART_SYSTEM.colors.teal },
+    { label: "Deficit relativo", color: CHART_SYSTEM.colors.terracotta }
   ], padding.left, 40);
 
   bindPointTooltip(canvas, points, (point) => `
@@ -1570,6 +1588,28 @@ function drawComplexScatterChart(canvas, rows, options) {
     <span>${escapeHtml(options.yLabel)}: ${formatNumber(point.item[options.yField])}</span>
     <span>${escapeHtml(options.sizeLabel || "Tamano")}: ${formatNumber(point.item[options.sizeField])}</span>
   `);
+}
+
+function drawPointLabel(ctx, label, x, y, radius, width, height) {
+  const maxWidth = Math.max(60, Math.min(150, width - 24));
+  const text = fitCanvasText(ctx, String(label), maxWidth);
+  const textWidth = ctx.measureText(text).width;
+  const rightX = x + radius + 5;
+  const leftX = x - radius - textWidth - 5;
+  const labelX = rightX + textWidth <= width - 8
+    ? rightX
+    : Math.max(8, leftX);
+  const labelY = Math.max(14, Math.min(height - 10, y + 4));
+  ctx.fillText(text, labelX, labelY);
+}
+
+function fitCanvasText(ctx, text, maxWidth) {
+  if (ctx.measureText(text).width <= maxWidth) return text;
+  let trimmed = text;
+  while (trimmed.length > 4 && ctx.measureText(`${trimmed}...`).width > maxWidth) {
+    trimmed = trimmed.slice(0, -1);
+  }
+  return `${trimmed.trim()}...`;
 }
 
 function drawChoroplethMap(canvas, features, options) {
@@ -1858,10 +1898,11 @@ function drawAxisLabels(ctx, xLabel, yLabel, padding, width, height) {
 function bindPointTooltip(canvas, points, content) {
   bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
+    const hitPadding = touchLikeEvent(event) ? CHART_SYSTEM.hitPadding.touch : CHART_SYSTEM.hitPadding.mouse;
     const found = points.find((point) => {
       const dx = cursor.x - point.x;
       const dy = cursor.y - point.y;
-      return Math.sqrt(dx * dx + dy * dy) <= point.radius + 2;
+      return Math.sqrt(dx * dx + dy * dy) <= point.radius + hitPadding;
     });
 
     return found ? content(found) : null;
@@ -1912,6 +1953,18 @@ function bindCanvasTooltip(canvas, resolveContent) {
     canvas.style.cursor = "default";
     hideTooltip();
   };
+
+  canvas.onpointercancel = () => {
+    canvas.style.cursor = "default";
+    hideTooltip(true);
+  };
+}
+
+function transformChartValue(value, mode) {
+  const numeric = Number(value);
+  if (mode === "sqrt") return Math.sign(numeric) * Math.sqrt(Math.abs(numeric));
+  if (mode === "log") return Math.sign(numeric) * Math.log1p(Math.abs(numeric));
+  return numeric;
 }
 
 function layoutTreemap(items, x, y, width, height, valueField, boxes) {
@@ -2068,6 +2121,10 @@ function getCanvasPoint(canvas, event) {
   };
 }
 
+function touchLikeEvent(event) {
+  return event.pointerType === "touch" || event.pointerType === "pen" || window.matchMedia(`(max-width: ${CHART_SYSTEM.touchBreakpoint}px), (pointer: coarse)`).matches;
+}
+
 function ensureTooltip() {
   let tooltip = document.querySelector(".atlas-tooltip");
   if (!tooltip) {
@@ -2081,11 +2138,18 @@ function ensureTooltip() {
 function showTooltip(html, event, options = {}) {
   if (!state.tooltip) state.tooltip = ensureTooltip();
   const source = event.touches?.[0] || event.changedTouches?.[0] || event;
+  const sheetTooltip = touchLikeEvent(event);
   state.tooltipPinned = Boolean(options.pinned);
   state.tooltip.innerHTML = html;
   state.tooltip.classList.toggle("is-pinned", state.tooltipPinned);
+  state.tooltip.classList.toggle("is-touch-sheet", sheetTooltip);
   state.tooltip.style.opacity = "1";
   state.tooltip.style.transform = "translateY(0)";
+  if (sheetTooltip) {
+    state.tooltip.style.left = "";
+    state.tooltip.style.top = "";
+    return;
+  }
   state.tooltip.style.left = `${Math.max(8, Math.min(window.innerWidth - 260, source.clientX + 14))}px`;
   state.tooltip.style.top = `${Math.max(8, Math.min(window.innerHeight - 120, source.clientY + 14))}px`;
 }
@@ -2095,6 +2159,7 @@ function hideTooltip(force = false) {
   if (state.tooltipPinned && !force) return;
   state.tooltipPinned = false;
   state.tooltip.classList.remove("is-pinned");
+  state.tooltip.classList.remove("is-touch-sheet");
   state.tooltip.style.opacity = "0";
   state.tooltip.style.transform = "translateY(4px)";
 }

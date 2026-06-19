@@ -3,6 +3,9 @@
 Atlas es la superficie interactiva del sitio. El articulo sigue siendo la
 narrativa; el Atlas convierte sus datos en piezas explorables.
 
+Para agregar una vista nueva sin recorrer toda la app, usar primero
+`atlas/GUIDE.md`.
+
 ## Flujo normal
 
 1. Preparar datos en R.
