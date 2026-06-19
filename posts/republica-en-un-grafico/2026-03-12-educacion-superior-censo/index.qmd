@@ -11,7 +11,6 @@ categories:
 draft: false
 format:
   html:
-    css: styles.css
     toc: true
     toc-location: left
 include-after-body:
@@ -448,7 +447,7 @@ A título personal: no creo que el objetivo deba ser que todos terminen con un t
   <div class="related-posts-title">📚 Sigue leyendo</div>
   <div class="related-posts-grid">
     <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2026-02-15-banco-malo/index.html">El mito del Banco Malo</a></h4>
+      <h4><a href="../2026-02-14-mipymes-rd/">El mito del Banco Malo</a></h4>
       <p>Por qué las MiPyMES realmente no tienen crédito</p>
     </div>
     <div class="related-post-card">
