@@ -5,8 +5,6 @@ toc: false
 ---
 
 ::: {.hub-header}
-# Mitos económicos
-
 Un espacio para separar intuiciones populares, medias verdades y errores frecuentes en economía.
 
 ::: {.hub-meta}

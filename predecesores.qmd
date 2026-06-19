@@ -10,8 +10,6 @@ listing:
 ---
 
 ::: {.hub-header}
-# Mis predecesores
-
 Economistas, ideas y autores que ayudan a pensar mejor los problemas actuales.
 
 ::: {.hub-meta}

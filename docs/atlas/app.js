@@ -5,6 +5,7 @@ const state = {
   worldGeojson: null,
   articleVisuals: null,
   tooltip: null,
+  tooltipPinned: false,
   active: "pulso-macro",
   query: "",
   family: "all",
@@ -189,6 +190,7 @@ function renderOverviewIfActive() {
 
 function renderStage() {
   if (!state.data) return;
+  hideTooltip(true);
 
   if (state.active === "overview") {
     renderOverview();
@@ -621,7 +623,9 @@ function hydrateCharts(module) {
       imae: "IMAE interanual (%)",
       tpm: "TPM (%)"
     };
-    drawLineChart(document.getElementById("macro-chart"), labels, values, titles[state.macroMetric]);
+    drawLineChart(document.getElementById("macro-chart"), labels, values, titles[state.macroMetric], {
+      stepped: state.macroMetric === "tpm"
+    });
   }
 
   if (module.chart === "external") {
@@ -818,6 +822,10 @@ function transportScatterOptions() {
     xLabel: "Alquiler mediano anual (RD$ miles)",
     yLabel: "% del empleo formal",
     sizeLabel: "Empleos",
+    xTransform: "sqrt",
+    yTransform: "sqrt",
+    labelTopBy: "jobs",
+    labelCount: 4,
     xReference: 80,
     yReference: 5,
     legend: [
@@ -970,6 +978,7 @@ function flashButton(button, label) {
 function openChartFullscreen(canvasId) {
   const sourceCanvas = document.getElementById(canvasId);
   if (!sourceCanvas) return;
+  hideTooltip(true);
   const card = sourceCanvas.closest(".chart-card");
   const title = card?.querySelector("h3")?.textContent || "Grafico";
   const article = card?.querySelector(".article-link");
@@ -993,6 +1002,7 @@ function openChartFullscreen(canvasId) {
   `;
 
   const close = () => {
+    hideTooltip(true);
     document.body.classList.remove("modal-open");
     window.removeEventListener("keydown", onKeydown);
     modal.remove();
@@ -1088,11 +1098,17 @@ function renderBarRows(rows, options) {
   }).join("");
 }
 
-function drawLineChart(canvas, labels, values, title) {
-  drawDualLineChart(canvas, labels, [{ label: title, values, color: "#466a8f" }], title);
+function drawLineChart(canvas, labels, values, title, options = {}) {
+  drawDualLineChart(
+    canvas,
+    labels,
+    [{ label: title, values, color: options.color || "#466a8f", stepped: options.stepped }],
+    title,
+    options
+  );
 }
 
-function drawDualLineChart(canvas, labels, series, title) {
+function drawDualLineChart(canvas, labels, series, title, options = {}) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
@@ -1110,6 +1126,7 @@ function drawDualLineChart(canvas, labels, series, title) {
 
   const tooltipPoints = [];
   series.forEach((serie) => {
+    const isStepped = Boolean(serie.stepped || options.stepped);
     const points = serie.values.map((value, index) => ({
       x: padding.left + (plotW * index) / Math.max(serie.values.length - 1, 1),
       y: padding.top + plotH - ((value - min) / span) * plotH,
@@ -1121,7 +1138,13 @@ function drawDualLineChart(canvas, labels, series, title) {
     ctx.beginPath();
     points.forEach((point, index) => {
       if (index === 0) ctx.moveTo(point.x, point.y);
-      else ctx.lineTo(point.x, point.y);
+      else if (isStepped) {
+        const previous = points[index - 1];
+        ctx.lineTo(point.x, previous.y);
+        ctx.lineTo(point.x, point.y);
+      } else {
+        ctx.lineTo(point.x, point.y);
+      }
     });
     ctx.strokeStyle = serie.color;
     ctx.lineWidth = 3;
@@ -1321,6 +1344,9 @@ function drawDebtBurdenChart(canvas, rows, options) {
   const barW = Math.max(8, (plotW - gap * (rows.length - 1)) / rows.length);
   const boxes = [];
   const points = [];
+  const serviceColor = "#466a8f";
+  const serviceHighlight = "#9f5f4b";
+  const shareColor = "#6b7554";
 
   const xAt = (index) => padding.left + index * (barW + gap);
   const shareY = (value) => padding.top + plotH - (Number(value) / shareMax) * plotH;
@@ -1334,7 +1360,7 @@ function drawDebtBurdenChart(canvas, rows, options) {
     const x = xAt(index);
     const barH = (service / serviceMax) * plotH;
     const y = padding.top + plotH - barH;
-    ctx.fillStyle = index === rows.length - 1 ? "#c86448" : "#466a8f";
+    ctx.fillStyle = index === rows.length - 1 ? serviceHighlight : serviceColor;
     ctx.fillRect(x, y, barW, barH);
     boxes.push({ x, y, width: barW, height: barH, item: row, value: service });
 
@@ -1359,20 +1385,20 @@ function drawDebtBurdenChart(canvas, rows, options) {
     if (index === 0) ctx.moveTo(point.x, point.y);
     else ctx.lineTo(point.x, point.y);
   });
-  ctx.strokeStyle = "#2a9d8f";
+  ctx.strokeStyle = shareColor;
   ctx.lineWidth = 3;
   ctx.stroke();
 
   points.forEach((point) => {
     ctx.beginPath();
     ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
-    ctx.fillStyle = "#2a9d8f";
+    ctx.fillStyle = shareColor;
     ctx.fill();
   });
 
   drawLegend(ctx, [
-    { label: "Servicio total", color: "#466a8f" },
-    { label: "Intereses / servicio", color: "#2a9d8f" }
+    { label: "Servicio total", color: serviceColor },
+    { label: "Intereses / servicio", color: shareColor }
   ], padding.left, 40);
 
   bindCanvasTooltip(canvas, (event) => {
@@ -1461,12 +1487,29 @@ function drawComplexScatterChart(canvas, rows, options) {
   const sizeMax = Math.max(...sizeValues, 1);
   const xRef = options.xReference ?? (xMin + xMax) / 2;
   const yRef = options.yReference ?? (yMin + yMax) / 2;
+  const transformValue = (value, mode) => {
+    const numeric = Number(value);
+    if (mode === "sqrt") return Math.sign(numeric) * Math.sqrt(Math.abs(numeric));
+    if (mode === "log") return Math.sign(numeric) * Math.log1p(Math.abs(numeric));
+    return numeric;
+  };
+  const xDomainMin = transformValue(xMin, options.xTransform);
+  const xDomainMax = transformValue(xMax, options.xTransform);
+  const yDomainMin = transformValue(yMin, options.yTransform);
+  const yDomainMax = transformValue(yMax, options.yTransform);
 
-  const xScale = (value) => padding.left + ((value - xMin) / (xMax - xMin || 1)) * plotW;
-  const yScale = (value) => padding.top + plotH - ((value - yMin) / (yMax - yMin || 1)) * plotH;
+  const xScale = (value) => padding.left + ((transformValue(value, options.xTransform) - xDomainMin) / (xDomainMax - xDomainMin || 1)) * plotW;
+  const yScale = (value) => padding.top + plotH - ((transformValue(value, options.yTransform) - yDomainMin) / (yDomainMax - yDomainMin || 1)) * plotH;
   const xRefPos = xScale(xRef);
   const yRefPos = yScale(yRef);
   const points = [];
+  const labelRows = new Set(
+    rows
+      .slice()
+      .sort((a, b) => Number(b[options.labelTopBy || options.sizeField]) - Number(a[options.labelTopBy || options.sizeField]))
+      .slice(0, options.labelCount || 5)
+      .map((item) => item[options.labelField])
+  );
 
   clearCanvas(ctx, width, height);
   drawGrid(ctx, width, height, padding, 4);
@@ -1509,7 +1552,7 @@ function drawComplexScatterChart(canvas, rows, options) {
       ctx.stroke();
       points.push({ x, y, radius, item, color });
 
-      if (index < (options.labelCount || 5)) {
+      if (labelRows.has(item[options.labelField])) {
         ctx.fillStyle = "#191b1f";
         ctx.font = "700 11px Inter";
         ctx.fillText(item[options.labelField], x + radius + 5, y + 4);
@@ -1636,7 +1679,7 @@ function drawChoroplethMap(canvas, features, options) {
       canvas.style.cursor = "default";
       paint(currentPinnedEntry() || topEntry);
       syncInspector(currentPinnedEntry() || topEntry, Boolean(currentPinnedEntry()));
-      hideTooltip();
+      hideTooltip(pin);
       return null;
     }
     canvas.style.cursor = "pointer";
@@ -1657,7 +1700,7 @@ function drawChoroplethMap(canvas, features, options) {
       <strong>${escapeHtml(found.feature.properties[options.labelField] || options.fallbackLabel)}</strong>
       <span>${valueLabel}</span>
       ${extraRows}
-    `, event);
+    `, event, { pinned: pin && event.pointerType !== "mouse" });
     return found;
   };
 
@@ -1851,17 +1894,17 @@ function bindCanvasTooltip(canvas, resolveContent) {
       hideTooltip();
       return;
     }
-    showTooltip(html, event);
+    showTooltip(html, event, { pinned: false });
   };
 
   canvas.onpointerdown = (event) => {
     const html = resolveContent(event);
     canvas.style.cursor = html ? "pointer" : "default";
     if (!html) {
-      hideTooltip();
+      hideTooltip(true);
       return;
     }
-    showTooltip(html, event);
+    showTooltip(html, event, { pinned: event.pointerType !== "mouse" });
     if (event.pointerType !== "mouse") event.preventDefault();
   };
 
@@ -2035,18 +2078,23 @@ function ensureTooltip() {
   return tooltip;
 }
 
-function showTooltip(html, event) {
+function showTooltip(html, event, options = {}) {
   if (!state.tooltip) state.tooltip = ensureTooltip();
   const source = event.touches?.[0] || event.changedTouches?.[0] || event;
+  state.tooltipPinned = Boolean(options.pinned);
   state.tooltip.innerHTML = html;
+  state.tooltip.classList.toggle("is-pinned", state.tooltipPinned);
   state.tooltip.style.opacity = "1";
   state.tooltip.style.transform = "translateY(0)";
   state.tooltip.style.left = `${Math.max(8, Math.min(window.innerWidth - 260, source.clientX + 14))}px`;
   state.tooltip.style.top = `${Math.max(8, Math.min(window.innerHeight - 120, source.clientY + 14))}px`;
 }
 
-function hideTooltip() {
+function hideTooltip(force = false) {
   if (!state.tooltip) return;
+  if (state.tooltipPinned && !force) return;
+  state.tooltipPinned = false;
+  state.tooltip.classList.remove("is-pinned");
   state.tooltip.style.opacity = "0";
   state.tooltip.style.transform = "translateY(4px)";
 }

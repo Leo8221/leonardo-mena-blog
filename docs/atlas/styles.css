@@ -723,7 +723,7 @@ canvas[height="620"] {
 
 .atlas-tooltip {
   position: fixed;
-  z-index: 50;
+  z-index: 140;
   max-width: 250px;
   border: 1px solid var(--border-strong);
   border-radius: 8px;
@@ -736,6 +736,10 @@ canvas[height="620"] {
   pointer-events: none;
   transform: translateY(4px);
   transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.atlas-tooltip.is-pinned {
+  border-color: color-mix(in srgb, var(--terracotta) 42%, var(--border-strong));
 }
 
 .atlas-tooltip strong,
@@ -765,10 +769,11 @@ canvas[height="620"] {
 }
 
 .bar-track {
-  height: 12px;
+  height: 11px;
   overflow: hidden;
   border-radius: 999px;
-  background: var(--panel);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 82%, var(--card));
 }
 
 .bar-fill {
@@ -776,7 +781,7 @@ canvas[height="620"] {
   min-width: 2px;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--teal), var(--terracotta));
+  background: color-mix(in srgb, var(--terracotta) 88%, var(--ink));
 }
 
 .atlas-modal {

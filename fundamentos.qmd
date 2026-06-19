@@ -10,8 +10,6 @@ listing:
 ---
 
 ::: {.hub-header}
-# Fundamentos
-
 Conceptos que aparecen todo el tiempo en la conversación pública, explicados con precisión y sin perder claridad.
 
 ::: {.hub-meta}

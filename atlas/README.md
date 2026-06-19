@@ -60,6 +60,41 @@ Renderers reutilizables en `atlas/app.js`:
 - `drawDebtBurdenChart`
 - `drawStackedBarChart`
 
+## Opciones simples de graficos
+
+Estas opciones se declaran donde se llama el renderer. No cambian los datos;
+solo cambian como se leen visualmente.
+
+- Series escalonadas: usar `drawLineChart(..., { stepped: true })`. Sirve para
+  tasas de politica como la TPM, donde el dato cambia por decision y no de forma
+  continua.
+- Scatter con outliers fuertes: usar `xTransform: "sqrt"` y/o
+  `yTransform: "sqrt"` en `drawComplexScatterChart`. Mantiene el valor real en
+  el tooltip, pero separa mejor los puntos cuando DN o Santo Domingo aplastan el
+  resto.
+- Etiquetas limpias en scatter: usar `labelTopBy: "jobs"` y `labelCount: 4`.
+  El grafico muestra los nodos principales; los demas se leen tocando/clickeando.
+- Barras 0-100: usar `renderBarRows()`. La estetica sale de `atlas/styles.css`
+  con relleno mate y track neutro, para que no parezca un componente ajeno.
+- Movil: los tooltips de canvas se fijan con tap y se apagan al tocar otro punto,
+  cambiar de modulo o cerrar modal. No hay que programarlo por grafico.
+- Pantalla completa: usar `chartExpandButton("id-del-canvas")`. El renderer se
+  redibuja en el modal y conserva la interaccion.
+
+Equivalentes utiles en R:
+
+```r
+# Linea escalonada para TPM
+ggplot(tpm, aes(fecha, valor)) +
+  geom_step(linewidth = 1)
+
+# Scatter comprimido sin cambiar el dato del tooltip/tabla
+ggplot(provincias, aes(alquiler, empleo, size = empleos)) +
+  geom_point(alpha = 0.75) +
+  scale_x_continuous(trans = "sqrt") +
+  scale_y_continuous(trans = "sqrt")
+```
+
 ## Pipeline desde articulos
 
 Usar esto cuando un articulo publicado tiene datos que merecen una pieza

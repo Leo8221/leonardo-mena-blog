@@ -11,8 +11,6 @@ listing:
 ---
 
 ::: {.hub-header}
-# La República habla de
-
 Análisis de coyuntura económica dominicana con una tesis clara: qué cambió, por qué importa y qué mecanismo explica el resultado.
 
 ::: {.hub-meta}

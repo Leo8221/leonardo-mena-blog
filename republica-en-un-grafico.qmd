@@ -11,8 +11,6 @@ listing:
 ---
 
 ::: {.hub-header}
-# La República en un gráfico
-
 Una visualización, una lectura y una implicación para entender mejor la economía dominicana.
 
 ::: {.hub-meta}

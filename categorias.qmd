@@ -16,8 +16,6 @@ listing:
 ---
 
 ::: {.hub-header}
-# Categorías
-
 Explora el archivo por tema. Las categorías de producto quedaron normalizadas para evitar duplicados como variantes de La República en un gráfico.
 :::
 

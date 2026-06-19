@@ -11,8 +11,6 @@ format:
 ---
 
 ::: {.hub-header}
-# Observatorio
-
 [Abrir Atlas](atlas/index.html)
 
 :::
