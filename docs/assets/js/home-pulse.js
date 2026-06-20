@@ -22,7 +22,7 @@ const buildMetricCard = (metric, modulesById, updated) => {
   const module = modulesById.get(metric.module);
   const link = document.createElement("a");
   link.className = "home-pulse-card";
-  link.href = `atlas/index.html#${encodeURIComponent(metric.module || "overview")}`;
+  link.href = `atlas/?view=${encodeURIComponent(metric.module || "overview")}`;
   link.dataset.tone = metric.tone || "neutral";
   link.setAttribute(
     "aria-label",
@@ -52,7 +52,7 @@ const renderPulse = async () => {
   if (!pulseRoot) return;
 
   try {
-    const response = await fetch("atlas/data/atlas-data.json", { cache: "no-store" });
+    const response = await fetch("atlas/data/atlas-data.json", { cache: "default" });
     if (!response.ok) {
       renderFallback();
       return;
@@ -76,3 +76,14 @@ const renderPulse = async () => {
 };
 
 renderPulse();
+
+document.querySelectorAll('a[href$="suscribete.html"], a[href$="suscribete.qmd"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "newsletter_click", {
+        referrer_section: "home",
+        device_type: window.matchMedia("(max-width: 680px)").matches ? "mobile" : "desktop"
+      });
+    }
+  });
+});

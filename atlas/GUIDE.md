@@ -232,6 +232,56 @@ Cada ficha sale del módulo:
 No escribas texto público de relleno. Si la fuente, metodología o artículo no
 están listos, el módulo debe quedar oculto.
 
+## Guía de lectura compacta
+
+Cada módulo puede tener una guía breve para que el lector entienda la unidad,
+qué significa un valor alto, qué significa un valor bajo y qué no permite
+concluir.
+
+La opción más simple es usar la guía por defecto definida en `MODULE_GUIDES`,
+en `atlas/app.js`. Si un módulo necesita algo más específico, agrega en el
+módulo:
+
+```json
+"readingGuide": {
+  "unit": "Tasa en %.",
+  "high": "Mayor incidencia relativa del indicador.",
+  "low": "Menor incidencia relativa del indicador.",
+  "limit": "No prueba causalidad; sirve para comparación descriptiva."
+}
+```
+
+Mantén cada frase corta. La guía ayuda a leer el gráfico; la metodología y los
+matices largos van en la ficha fuente o en el artículo.
+
+## URLs, estado y analítica
+
+Atlas debe poder compartirse como herramienta. Cuando agregues un filtro, métrica
+o selector importante:
+
+1. Guarda su estado en la URL con `updateUrlState()`.
+2. Lee su estado inicial con `getUrlState()`.
+3. Registra el evento con `trackAtlasEvent()`.
+4. Restaura la vista en `popstate` si afecta el botón Atrás.
+
+Eventos actuales:
+
+- `atlas_open`
+- `atlas_module_open`
+- `atlas_search`
+- `atlas_search_zero_results`
+- `atlas_filter_change`
+- `atlas_chart_toggle`
+- `atlas_map_selection`
+- `atlas_fullscreen_open`
+- `atlas_csv_download`
+- `atlas_png_download`
+- `atlas_copy_link`
+- `atlas_related_article_open`
+
+Usa propiedades pequeñas y consistentes: `module_id`, `chart_id`, `metric`,
+`filter`, `query_length`, `device_type` y `referrer_section`.
+
 ## R mínimo
 
 ```r

@@ -41,8 +41,9 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
   drawCanvasTitle(ctx, title, padding.left, 18);
 
   const tooltipPoints = [];
-  series.forEach((serie) => {
+  series.forEach((serie, serieIndex) => {
     const isStepped = Boolean(serie.stepped || options.stepped);
+    const dashPatterns = [[], [6, 4], [2, 4]];
     const points = serie.values.map((value, index) => ({
       x: padding.left + (plotW * index) / Math.max(serie.values.length - 1, 1),
       y: padding.top + plotH - ((value - min) / span) * plotH,
@@ -62,17 +63,35 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
         ctx.lineTo(point.x, point.y);
       }
     });
+    ctx.setLineDash(dashPatterns[serieIndex % dashPatterns.length]);
     ctx.strokeStyle = serie.color;
     ctx.lineWidth = 3;
     ctx.stroke();
+    ctx.setLineDash([]);
 
     points.forEach((point) => {
       ctx.beginPath();
-      ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
+      if (serieIndex % 3 === 1) {
+        ctx.rect(point.x - 4, point.y - 4, 8, 8);
+      } else if (serieIndex % 3 === 2) {
+        ctx.moveTo(point.x, point.y - 5);
+        ctx.lineTo(point.x + 5, point.y + 4);
+        ctx.lineTo(point.x - 5, point.y + 4);
+        ctx.closePath();
+      } else {
+        ctx.arc(point.x, point.y, 4, 0, Math.PI * 2);
+      }
       ctx.fillStyle = serie.color;
       ctx.fill();
       tooltipPoints.push({ ...point, radius: 10 });
     });
+
+    const last = points[points.length - 1];
+    if (last && width > 520) {
+      ctx.fillStyle = serie.color;
+      ctx.font = "700 11px Inter";
+      ctx.fillText(`${serie.label} ${formatNumber(last.value)}`, Math.min(last.x + 8, width - padding.right - 96), last.y - 8);
+    }
   });
 
   ctx.fillStyle = "#6b7280";
@@ -118,7 +137,7 @@ function drawHorizontalBarChart(canvas, rows, options) {
     ctx.fillStyle = "#3f4752";
     ctx.font = "12px Inter";
     ctx.fillText(String(item[options.labelField]), 8, y + barH - 2);
-    ctx.fillStyle = value < 0 ? "#c74b4b" : index === 0 ? "#c86448" : "#466a8f";
+    ctx.fillStyle = value < 0 ? "#8f3d32" : "#466a8f";
     ctx.fillRect(padding.left, y, barW, barH);
     boxes.push({ x: padding.left, y, width: barW, height: barH, item, value });
     ctx.fillStyle = "#191b1f";

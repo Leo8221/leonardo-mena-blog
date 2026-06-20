@@ -17,7 +17,9 @@ const state = {
   territoryMapMetric: "business_density",
   territoryRegion: "all",
   visualMap: "business",
-  mapPinned: {}
+  mapPinned: {},
+  booted: false,
+  lastTrackedSearch: ""
 };
 
 const els = {
@@ -30,7 +32,11 @@ const els = {
   mobileNav: document.getElementById("mobile-module-nav"),
   stage: document.getElementById("module-stage"),
   menuToggle: document.getElementById("menu-toggle"),
-  sidebar: document.getElementById("atlas-sidebar")
+  sidebar: document.getElementById("atlas-sidebar"),
+  sidebarBackdrop: document.getElementById("sidebar-backdrop"),
+  main: document.getElementById("atlas-main"),
+  status: document.getElementById("atlas-status"),
+  topbarShare: document.getElementById("atlas-share")
 };
 
 let sidebarReturnFocus = null;
@@ -53,9 +59,66 @@ const OVERVIEW_GROUPS = [
   }
 ];
 
+const MODULE_GUIDES = {
+  "pulso-macro": {
+    unit: "Series macro en %, RD$/US$ o indice.",
+    high: "Un valor alto no siempre es bueno: depende del indicador activo.",
+    low: "Un valor bajo puede indicar alivio, desaceleracion o menor presion.",
+    limit: "No explica causas por si solo; sirve para ubicar el momento."
+  },
+  sectores: {
+    unit: "Indice de presion, escala 0-100.",
+    high: "Mas presion relativa bajo las condiciones actuales.",
+    low: "Menor exposicion relativa dentro del grupo visible.",
+    limit: "No reemplaza cuentas sectoriales ni estados financieros."
+  },
+  "contexto-externo": {
+    unit: "Indice externo normalizado, escala 0-100.",
+    high: "Entorno internacional mas exigente para la economia local.",
+    low: "Menor presion externa agregada.",
+    limit: "Resume senales globales; no pronostica choques especificos."
+  },
+  "comercio-exterior": {
+    unit: "Participacion, balance e indice de oportunidad.",
+    high: "Mayor peso comercial u oportunidad relativa, segun metrica.",
+    low: "Menor peso relativo dentro de los socios o rubros visibles.",
+    limit: "No mide rentabilidad ni sustitucion productiva completa."
+  },
+  "mercado-laboral": {
+    unit: "Tasas en %, informalidad e indice salarial relativo.",
+    high: "Puede significar mejor insercion o mayor informalidad, segun metrica.",
+    low: "Puede indicar rezago o menor exposicion al problema medido.",
+    limit: "Comparacion descriptiva; no prueba causalidad educativa."
+  },
+  "costo-vida": {
+    unit: "Inflacion en % e indices de presion 0-100.",
+    high: "Mayor presion sobre precios o canales de traspaso.",
+    low: "Menor contribucion relativa al episodio de precios.",
+    limit: "No sustituye el IPC oficial ni mide bienestar completo."
+  },
+  "territorio-infraestructura": {
+    unit: "Indices territoriales, densidad y puntajes relativos.",
+    high: "Mayor escala, conectividad u oportunidad, segun metrica.",
+    low: "Menor presencia relativa dentro del territorio comparado.",
+    limit: "Prioriza donde mirar; no decide inversion por si solo."
+  },
+  "mipymes-productividad": {
+    unit: "Indicadores relativos e indices 0-100.",
+    high: "Mayor acceso, formalidad, productividad o barrera, segun metrica.",
+    low: "Menor avance o menor intensidad del problema medido.",
+    limit: "No describe cada empresa; resume patrones por segmento."
+  },
+  "laboratorio-visual": {
+    unit: "Mapas y graficos derivados de articulos publicados.",
+    high: "Mayor concentracion o intensidad del indicador seleccionado.",
+    low: "Menor presencia relativa en la capa visible.",
+    limit: "Demostracion analitica; la interpretacion completa vive en el articulo."
+  }
+};
+
 async function boot() {
   try {
-    const atlasResponse = await fetch("data/atlas-data.json", { cache: "no-store" });
+    const atlasResponse = await fetch("data/atlas-data.json", { cache: "default" });
     if (!atlasResponse.ok) throw new Error(`HTTP ${atlasResponse.status}`);
     state.data = await atlasResponse.json();
     state.tooltip = ensureTooltip();
@@ -64,13 +127,13 @@ async function boot() {
     return;
   }
 
-  const hashId = window.location.hash.replace("#", "");
-  if (visibleModules().some((module) => module.id === hashId)) {
-    state.active = hashId;
-  }
-
   bindEvents();
+  applyStateFromUrl();
   syncFilterState();
+  updateDocumentTitle();
+  updateUrlState({ replace: true });
+  state.booted = true;
+  trackAtlasEvent("atlas_open", { referrer_section: document.referrer ? "external" : "direct" });
   render();
 }
 
@@ -81,6 +144,8 @@ function bindEvents() {
     renderNavigation();
     renderMobileNavigation();
     renderOverviewIfActive();
+    updateUrlState({ replace: true });
+    trackSearchUsage();
   });
 
   els.searchClear.addEventListener("click", () => {
@@ -90,6 +155,8 @@ function bindEvents() {
     renderNavigation();
     renderMobileNavigation();
     renderOverviewIfActive();
+    updateUrlState({ replace: true });
+    trackAtlasEvent("atlas_search", { query_length: 0 });
     els.search.focus();
   });
 
@@ -101,6 +168,8 @@ function bindEvents() {
       renderNavigation();
       renderMobileNavigation();
       renderOverviewIfActive();
+      updateUrlState({ replace: true });
+      trackAtlasEvent("atlas_filter_change", { filter: state.family });
     });
   });
 
@@ -124,15 +193,37 @@ function bindEvents() {
     closeSidebar({ restoreFocus: false });
   });
 
+  if (els.sidebarBackdrop) {
+    els.sidebarBackdrop.addEventListener("click", () => closeSidebar({ restoreFocus: true }));
+  }
+
+  if (els.topbarShare) {
+    els.topbarShare.addEventListener("click", async () => {
+      const copied = await copyText(currentViewUrl());
+      flashButton(els.topbarShare, copied ? "Copiado" : "Copiar");
+      trackAtlasEvent("atlas_copy_link", { referrer_section: "topbar" });
+    });
+  }
+
   window.addEventListener("resize", debounce(() => {
     renderStage();
   }, 140));
 
+  window.addEventListener("popstate", () => {
+    applyStateFromUrl();
+    syncFilterState();
+    syncSearchState();
+    renderMetrics();
+    renderNavigation();
+    renderMobileNavigation();
+    renderStage();
+  });
+
   window.addEventListener("hashchange", () => {
-    const route = window.location.hash.replace("#", "") || "overview";
-    if (route !== state.active) {
-      setActive(route);
-    }
+    if (!window.location.hash) return;
+    applyStateFromUrl();
+    updateUrlState({ replace: true });
+    render();
   });
 }
 
@@ -156,7 +247,7 @@ function renderMetrics() {
   `).join("");
 
   els.metricStrip.querySelectorAll(".metric-card").forEach((card) => {
-    card.addEventListener("click", () => setActive(card.dataset.module));
+    card.addEventListener("click", () => setActive(card.dataset.module, { source: "metric-strip" }));
   });
 }
 
@@ -204,7 +295,7 @@ function renderNavigation() {
 
   els.nav.innerHTML = buttons.join("") + empty;
   els.nav.querySelectorAll(".module-button").forEach((button) => {
-    button.addEventListener("click", () => setActive(button.dataset.module));
+    button.addEventListener("click", () => setActive(button.dataset.module, { source: "sidebar" }));
   });
   bindResetFilterButtons(els.nav);
 }
@@ -237,7 +328,7 @@ function renderMobileNavigation() {
   els.mobileNav.innerHTML = buttons.join("");
   els.mobileNav.querySelectorAll(".mobile-module-card").forEach((button) => {
     if (button.dataset.module) {
-      button.addEventListener("click", () => setActive(button.dataset.module));
+      button.addEventListener("click", () => setActive(button.dataset.module, { source: "mobile-nav" }));
     }
   });
   bindResetFilterButtons(els.mobileNav);
@@ -258,6 +349,7 @@ function renderOverviewIfActive() {
 function renderStage() {
   if (!state.data) return;
   hideTooltip(true);
+  if (els.stage) els.stage.setAttribute("aria-busy", "false");
   if (els.app) {
     els.app.dataset.view = state.active === "overview" ? "overview" : "module";
   }
@@ -275,6 +367,7 @@ function renderStage() {
   }
 
   if (!moduleAssetsReady(module)) {
+    if (els.stage) els.stage.setAttribute("aria-busy", "true");
     renderAssetsLoading(module);
     ensureModuleAssets(module);
     return;
@@ -293,6 +386,8 @@ function renderStage() {
 
   hydrateModuleActions();
   hydrateCharts(module);
+  announceModule(module);
+  updateDocumentTitle();
 }
 
 function renderOverview() {
@@ -330,9 +425,11 @@ function renderOverview() {
   `;
 
   els.stage.querySelectorAll(".module-card").forEach((button) => {
-    button.addEventListener("click", () => setActive(button.dataset.module));
+    button.addEventListener("click", () => setActive(button.dataset.module, { source: "overview" }));
   });
   hydrateModuleActions();
+  announceModule(null);
+  updateDocumentTitle();
 }
 
 function renderOverviewGroup(group) {
@@ -400,7 +497,6 @@ function renderStageActions(canExport) {
   return `
     <div class="stage-actions">
       <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Enlace</button>
-      ${canExport ? `<button class="stage-action" type="button" data-action="export-chart" title="Descargar gráfico visible">PNG</button>` : ""}
       ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">CSV</button>` : ""}
     </div>
   `;
@@ -441,7 +537,30 @@ function renderModuleBrief(module) {
           <span>${escapeHtml(module.insight)}</span>
         </p>
       ` : ""}
+      ${renderModuleGuide(module)}
     </section>
+  `;
+}
+
+function renderModuleGuide(module) {
+  const guide = module.readingGuide || MODULE_GUIDES[module.id];
+  if (!guide) return "";
+  const items = [
+    ["Unidad", guide.unit],
+    ["Alto", guide.high],
+    ["Bajo", guide.low],
+    ["Límite", guide.limit]
+  ].filter(([, value]) => Boolean(value));
+
+  return `
+    <dl class="module-guide" aria-label="Guía de lectura">
+      ${items.map(([label, value]) => `
+        <div>
+          <dt>${escapeHtml(label)}</dt>
+          <dd>${escapeHtml(value)}</dd>
+        </div>
+      `).join("")}
+    </dl>
   `;
 }
 
@@ -536,12 +655,12 @@ function renderDatasetCard(module, dataset, index) {
         <table>
           <caption class="sr-only">${escapeHtml(module.title)}: ${escapeHtml(dataset.title)}</caption>
           <thead>
-            <tr>${columns.map((column) => `<th scope="col">${escapeHtml(column.label)}</th>`).join("")}</tr>
+            <tr>${columns.map((column) => `<th scope="col"${isNumericColumn(visibleRows, column.field) ? ' data-type="number"' : ""}>${escapeHtml(column.label)}</th>`).join("")}</tr>
           </thead>
           <tbody>
             ${visibleRows.map((row) => `
               <tr>
-                ${columns.map((column) => `<td>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
+                ${columns.map((column) => `<td${isNumericColumn(visibleRows, column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
               </tr>
             `).join("")}
           </tbody>
@@ -552,6 +671,11 @@ function renderDatasetCard(module, dataset, index) {
       </p>
     </details>
   `;
+}
+
+function isNumericColumn(rows, field) {
+  const sample = rows.map((row) => row[field]).filter((value) => value !== null && value !== undefined && value !== "");
+  return sample.length > 0 && sample.every((value) => Number.isFinite(Number(value)));
 }
 
 function moduleDatasets(module) {
@@ -829,6 +953,7 @@ function renderMacro() {
           ${chartToggle("macro", "imae", "IMAE")}
           ${chartToggle("macro", "tpm", "TPM")}
         </div>
+        <div class="chart-actions">${chartDownloadButton("macro-chart")}</div>
       </div>
       <canvas id="macro-chart" height="320" aria-label="Gráfico de línea macro"></canvas>
     </section>
@@ -1035,7 +1160,7 @@ function renderVisualLab() {
     return "";
   }
 
-  const visualMapActions = `${articleLink(VISUAL_ARTICLES[state.visualMap])}${chartExpandButton("visual-map")}`;
+  const visualMapActions = `${articleLink(VISUAL_ARTICLES[state.visualMap])}${chartExpandButton("visual-map")}${chartDownloadButton("visual-map")}`;
   const visualMapToolbar = [
     chartToggle("visual", "business", "Empresas"),
     chartToggle("visual", "mipymes", "MiPyMES"),
@@ -1062,7 +1187,7 @@ function renderVisualLab() {
         <div>
           <h3>Demanda turística por motivo</h3>
         </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}`)}
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}${chartDownloadButton("tourism-treemap")}`)}
       </div>
       <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turísticos"></canvas>
     </section>
@@ -1071,7 +1196,7 @@ function renderVisualLab() {
         <div>
           <h3>Empleo formal y alquiler</h3>
         </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.transport)}${chartExpandButton("transport-space")}`)}
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.transport)}${chartExpandButton("transport-space")}${chartDownloadButton("transport-space")}`)}
       </div>
       <canvas id="transport-space" height="340" aria-label="Scatter de empleo formal y alquiler"></canvas>
     </section>
@@ -1080,7 +1205,7 @@ function renderVisualLab() {
         <div>
           <h3>Deuda pública</h3>
         </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-burden")}`)}
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-burden")}${chartDownloadButton("debt-burden")}`)}
       </div>
       <canvas id="debt-burden" height="360" aria-label="Rigidez fiscal e intereses"></canvas>
     </section>
@@ -1089,7 +1214,7 @@ function renderVisualLab() {
         <div>
           <h3>Servicio de deuda</h3>
         </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-service")}`)}
+        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-service")}${chartDownloadButton("debt-service")}`)}
       </div>
       <canvas id="debt-service" height="360" aria-label="Servicio de deuda por componente"></canvas>
     </section>
@@ -1137,6 +1262,10 @@ function chartExpandButton(canvasId) {
   return `<button class="chart-expand" type="button" data-action="expand-chart" data-canvas="${escapeHtml(canvasId)}" title="Ver a pantalla completa">Ampliar</button>`;
 }
 
+function chartDownloadButton(canvasId) {
+  return `<button class="chart-expand" type="button" data-action="download-chart" data-canvas="${escapeHtml(canvasId)}" title="Descargar este grafico">PNG</button>`;
+}
+
 function hydrateCharts(module) {
   els.stage.querySelectorAll(".chart-toggle").forEach((button) => {
     button.addEventListener("click", () => {
@@ -1148,6 +1277,11 @@ function hydrateCharts(module) {
       if (scope === "territoryMap") state.territoryMapMetric = metric;
       if (scope === "territory") state.territoryRegion = metric;
       if (scope === "visual") state.visualMap = metric;
+      updateUrlState({ replace: true });
+      trackAtlasEvent(scope === "visual" || scope === "territoryMap" ? "atlas_map_selection" : "atlas_chart_toggle", {
+        chart_id: scope,
+        metric
+      });
       renderStage();
     });
   });
@@ -1389,7 +1523,14 @@ const ASSET_URLS = {
 function requiredAssets(module) {
   if (!module) return [];
   if (module.chart === "territory") return ["geojson"];
-  if (module.chart === "visualLab") return ["articleVisuals", "geojson", "regionGeojson", "worldGeojson"];
+  if (module.chart === "visualLab") {
+    const mapAsset = {
+      business: "geojson",
+      mipymes: "regionGeojson",
+      tourism: "worldGeojson"
+    }[state.visualMap] || "geojson";
+    return ["articleVisuals", mapAsset];
+  }
   return [];
 }
 
@@ -1409,7 +1550,7 @@ function ensureModuleAssets(module) {
 function loadAtlasAsset(key) {
   if (state[key]) return Promise.resolve(state[key]);
   if (state.assetPromises[key]) return state.assetPromises[key];
-  state.assetPromises[key] = fetch(ASSET_URLS[key], { cache: "no-store" })
+  state.assetPromises[key] = fetch(ASSET_URLS[key], { cache: "default" })
     .then((response) => (response && response.ok ? response.json() : null))
     .then((data) => {
       if (data) {
@@ -1424,6 +1565,39 @@ function loadAtlasAsset(key) {
       return null;
     });
   return state.assetPromises[key];
+}
+
+function deviceType() {
+  if (window.matchMedia("(max-width: 680px)").matches) return "mobile";
+  if (window.matchMedia("(max-width: 1024px)").matches) return "tablet";
+  return "desktop";
+}
+
+function trackAtlasEvent(name, params = {}) {
+  const module = findModule(state.active);
+  const payload = {
+    module_id: params.module_id || state.active,
+    chart_id: params.chart_id || "",
+    metric: params.metric || activeMetricForModule(module),
+    filter: params.filter || state.family,
+    query_length: Number.isFinite(params.query_length) ? params.query_length : state.query.length,
+    device_type: deviceType(),
+    referrer_section: params.referrer_section || "atlas"
+  };
+  if (typeof window.gtag === "function") {
+    window.gtag("event", name, payload);
+  }
+  window.dispatchEvent(new CustomEvent("atlas:analytics", { detail: { name, payload } }));
+}
+
+function trackSearchUsage() {
+  const key = `${state.query}|${state.family}`;
+  if (key === state.lastTrackedSearch) return;
+  state.lastTrackedSearch = key;
+  trackAtlasEvent("atlas_search", { query_length: state.query.length });
+  if (state.query && filteredModules().length === 0) {
+    trackAtlasEvent("atlas_search_zero_results", { query_length: state.query.length });
+  }
 }
 
 function visibleModules() {
@@ -1494,20 +1668,101 @@ function findModule(id) {
   return visibleModules().find((module) => module.id === id);
 }
 
-function setActive(moduleId) {
+function setActive(moduleId, options = {}) {
   const next = moduleId === "overview" || findModule(moduleId) ? moduleId : "overview";
+  const previous = state.active;
   state.active = next;
-  if (next === "overview") {
-    history.replaceState(null, "", window.location.pathname);
-  } else {
-    history.replaceState(null, "", `#${next}`);
-  }
+  updateUrlState({ replace: Boolean(options.replace) || next === previous });
   closeSidebar({ restoreFocus: false });
   syncMetricState();
   syncSearchState();
   renderNavigation();
   renderMobileNavigation();
   renderStage();
+  if (next !== previous || state.booted) {
+    trackAtlasEvent("atlas_module_open", {
+      module_id: next,
+      referrer_section: options.source || "navigation"
+    });
+  }
+}
+
+function buildAtlasUrl() {
+  const url = new URL(window.location.href);
+  url.hash = "";
+  const params = new URLSearchParams();
+  if (state.active !== "overview") params.set("view", state.active);
+  if (state.family !== "all") params.set("filter", state.family);
+  if (state.query) params.set("q", state.query);
+  const module = findModule(state.active);
+  const metric = activeMetricForModule(module);
+  if (metric) params.set("metric", metric);
+  if (module?.chart === "territory" && state.territoryRegion !== "all") params.set("region", state.territoryRegion);
+  if (module?.chart === "visualLab") params.set("map", state.visualMap);
+  url.search = params.toString();
+  return url;
+}
+
+function updateUrlState({ replace = false } = {}) {
+  if (!state.data) return;
+  const url = buildAtlasUrl();
+  const method = replace ? "replaceState" : "pushState";
+  history[method](null, "", url);
+  updateDocumentTitle();
+}
+
+function applyStateFromUrl() {
+  const url = new URL(window.location.href);
+  const legacyHash = url.hash ? url.hash.replace(/^#/, "").split("?")[0] : "";
+  const view = url.searchParams.get("view") || legacyHash;
+  if (view && (view === "overview" || findModule(view))) state.active = view;
+  const filter = url.searchParams.get("filter");
+  if (filter) state.family = filter;
+  const query = url.searchParams.get("q");
+  if (query !== null) {
+    state.query = query.trim().toLowerCase();
+    if (els.search) els.search.value = query;
+  }
+  const module = findModule(state.active);
+  const metric = url.searchParams.get("metric");
+  if (metric) setActiveMetricForModule(module, metric);
+  const region = url.searchParams.get("region");
+  if (region) state.territoryRegion = region;
+  const map = url.searchParams.get("map");
+  if (map) state.visualMap = map;
+}
+
+function activeMetricForModule(module) {
+  if (!module) return "";
+  if (module.chart === "macro") return state.macroMetric;
+  if (module.chart === "trade") return state.tradeMetric;
+  if (module.chart === "labor") return state.laborMetric;
+  if (module.chart === "territory") return state.territoryMapMetric;
+  if (module.chart === "visualLab") return state.visualMap;
+  return "";
+}
+
+function setActiveMetricForModule(module, metric) {
+  if (!module || !metric) return;
+  if (module.chart === "macro") state.macroMetric = metric;
+  if (module.chart === "trade") state.tradeMetric = metric;
+  if (module.chart === "labor") state.laborMetric = metric;
+  if (module.chart === "territory") state.territoryMapMetric = metric;
+  if (module.chart === "visualLab") state.visualMap = metric;
+}
+
+function updateDocumentTitle() {
+  const module = findModule(state.active);
+  const metric = activeMetricForModule(module);
+  const metricLabel = metric ? metric.replaceAll("_", " ") : "";
+  document.title = module
+    ? `${metricLabel ? `${metricLabel} | ` : ""}${module.title} | Atlas`
+    : "Atlas | Economia aplicada RD";
+}
+
+function announceModule(module) {
+  if (!els.status) return;
+  els.status.textContent = module ? `Modulo ${module.title} cargado.` : "Portada del Atlas cargada.";
 }
 
 function bindResetFilterButtons(root) {
@@ -1529,27 +1784,13 @@ function resetAtlasFilters({ focusSearch = false } = {}) {
 }
 
 function hydrateModuleActions() {
+  ensureCanvasDownloadActions();
   bindResetFilterButtons(els.stage);
 
   els.stage.querySelectorAll('[data-action="copy-link"]').forEach((button) => {
     button.addEventListener("click", async () => {
       const copied = await copyText(currentViewUrl());
       flashButton(button, copied ? "Copiado" : "Copiar");
-    });
-  });
-
-  els.stage.querySelectorAll('[data-action="export-chart"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      const canvas = els.stage.querySelector("canvas");
-      if (!canvas) {
-        flashButton(button, "Sin gráfico");
-        return;
-      }
-      const link = document.createElement("a");
-      link.download = `atlas-${state.active}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-      flashButton(button, "Descargado");
     });
   });
 
@@ -1566,6 +1807,7 @@ function hydrateModuleActions() {
         return;
       }
       downloadDatasetsCsv(module, datasets);
+      trackAtlasEvent("atlas_csv_download", { chart_id: "module", metric: activeMetricForModule(module) });
       flashButton(button, "Descargado");
     });
   });
@@ -1582,12 +1824,44 @@ function hydrateModuleActions() {
         return;
       }
       downloadDatasetsCsv(module, [dataset]);
+      trackAtlasEvent("atlas_csv_download", { chart_id: dataset.id, metric: activeMetricForModule(module) });
       flashButton(button, "OK");
     });
   });
 
   els.stage.querySelectorAll('[data-action="expand-chart"]').forEach((button) => {
     button.addEventListener("click", () => openChartFullscreen(button.dataset.canvas));
+  });
+
+  els.stage.querySelectorAll('[data-action="download-chart"]').forEach((button) => {
+    button.addEventListener("click", () => downloadCanvasPng(button.dataset.canvas, button));
+  });
+
+  els.stage.querySelectorAll(".article-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      trackAtlasEvent("atlas_related_article_open", {
+        chart_id: link.closest(".chart-card")?.querySelector("canvas")?.id || "module"
+      });
+    });
+  });
+}
+
+function ensureCanvasDownloadActions() {
+  els.stage.querySelectorAll(".chart-card canvas[id]").forEach((canvas) => {
+    const card = canvas.closest(".chart-card");
+    if (!card || card.querySelector(`[data-action="download-chart"][data-canvas="${canvas.id}"]`)) return;
+    const head = card.querySelector(".card-head");
+    let actions = head ? head.querySelector(".chart-actions") : null;
+    if (!actions) {
+      actions = document.createElement("div");
+      actions.className = head ? "chart-actions" : "chart-actions chart-actions-inline";
+      if (head) {
+        head.appendChild(actions);
+      } else {
+        canvas.before(actions);
+      }
+    }
+    actions.insertAdjacentHTML("beforeend", chartDownloadButton(canvas.id));
   });
 }
 
@@ -1685,8 +1959,10 @@ function syncMetricState() {
 
 function openSidebar() {
   sidebarReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-  document.body.classList.add("sidebar-open");
+  document.body.classList.add("sidebar-open", "no-scroll");
   els.menuToggle.setAttribute("aria-expanded", "true");
+  if (els.sidebarBackdrop) els.sidebarBackdrop.hidden = false;
+  if (els.main) els.main.inert = true;
   if (window.matchMedia("(max-width: 920px)").matches) {
     window.requestAnimationFrame(() => {
       const target = els.search || els.sidebar.querySelector("button, a, input");
@@ -1696,8 +1972,10 @@ function openSidebar() {
 }
 
 function closeSidebar({ restoreFocus = false } = {}) {
-  document.body.classList.remove("sidebar-open");
+  document.body.classList.remove("sidebar-open", "no-scroll");
   els.menuToggle.setAttribute("aria-expanded", "false");
+  if (els.sidebarBackdrop) els.sidebarBackdrop.hidden = true;
+  if (els.main) els.main.inert = false;
   if (restoreFocus && sidebarReturnFocus) {
     sidebarReturnFocus.focus();
   }

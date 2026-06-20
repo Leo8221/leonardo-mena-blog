@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
 @import url("../assets/css/tokens.css");
 
+:root {
+  --ui-caption: 0.75rem;
+  --ui-label: 0.8125rem;
+  --ui-body: 0.875rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +24,10 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
   overflow-x: clip;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 button,
@@ -99,6 +109,19 @@ summary:focus-visible,
   padding: 1rem;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  z-index: 18;
+  inset: 0;
+  border: 0;
+  background: rgba(25, 27, 31, 0.36);
+  backdrop-filter: blur(2px);
+}
+
+.sidebar-backdrop[hidden] {
+  display: none;
 }
 
 .atlas-app[data-view="overview"] .atlas-sidebar {
@@ -376,7 +399,8 @@ summary:focus-visible,
   gap: 0.55rem;
 }
 
-.topbar-actions a {
+.topbar-actions a,
+.topbar-share {
   min-height: var(--lm-control-min);
   display: inline-flex;
   align-items: center;
@@ -384,13 +408,19 @@ summary:focus-visible,
   border-radius: 999px;
   background: var(--card);
   color: var(--soft);
-  font-size: 0.82rem;
+  cursor: pointer;
+  font-size: var(--ui-label);
   font-weight: 750;
   padding: 0 0.8rem;
 }
 
-.topbar-actions a:first-child {
+.topbar-actions a:first-of-type {
   border-color: var(--terracotta);
+  color: var(--terracotta-dark);
+}
+
+.topbar-share {
+  display: none;
   color: var(--terracotta-dark);
 }
 
@@ -444,7 +474,7 @@ summary:focus-visible,
 
 .metric-card small {
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: var(--ui-caption);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -459,7 +489,7 @@ summary:focus-visible,
 
 .metric-card span {
   color: var(--soft);
-  font-size: 0.66rem;
+  font-size: var(--ui-caption);
   font-weight: 700;
 }
 
@@ -710,6 +740,35 @@ summary:focus-visible,
   text-transform: uppercase;
 }
 
+.module-guide {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+}
+
+.module-guide div {
+  border-top: 1px solid var(--border);
+  padding-top: 0.55rem;
+}
+
+.module-guide dt {
+  color: var(--terracotta-dark);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--ui-caption);
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.module-guide dd {
+  margin: 0.22rem 0 0;
+  color: var(--soft);
+  font-size: var(--ui-label);
+  font-weight: 650;
+  line-height: 1.35;
+}
+
 .chart-card {
   min-height: 320px;
   padding: 0.85rem;
@@ -768,6 +827,11 @@ summary:focus-visible,
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.35rem;
+}
+
+.chart-actions-inline {
+  justify-content: flex-start;
+  margin: 0 0 0.65rem;
 }
 
 .chart-toggle {
@@ -1052,7 +1116,7 @@ canvas[height="620"] {
   min-width: 2px;
   height: 100%;
   border-radius: inherit;
-  background: color-mix(in srgb, var(--terracotta) 88%, var(--ink));
+  background: var(--blue);
 }
 
 .atlas-modal {
@@ -1258,6 +1322,14 @@ body.modal-open {
 
 .data-table-wrap {
   overflow-x: auto;
+  background:
+    linear-gradient(90deg, var(--card) 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(270deg, var(--card) 30%, rgba(255, 255, 255, 0)) 100% 0,
+    linear-gradient(90deg, rgba(25, 27, 31, 0.12), rgba(255, 255, 255, 0)),
+    linear-gradient(270deg, rgba(25, 27, 31, 0.12), rgba(255, 255, 255, 0)) 100% 0;
+  background-attachment: local, local, scroll, scroll;
+  background-repeat: no-repeat;
+  background-size: 28px 100%, 28px 100%, 12px 100%, 12px 100%;
   padding: 0.65rem;
 }
 
@@ -1287,6 +1359,19 @@ body.modal-open {
 .data-table-wrap td {
   color: var(--soft);
   font-weight: 650;
+}
+
+.data-table-wrap th[data-type="number"],
+.data-table-wrap td[data-type="number"] {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.data-table-wrap th:first-child,
+.data-table-wrap td:first-child {
+  position: sticky;
+  left: 0;
+  background: var(--card);
 }
 
 .data-table-note {
@@ -1551,6 +1636,10 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .module-guide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .card-head {
     display: grid;
   }
@@ -1587,11 +1676,11 @@ body.modal-open {
     top: 0;
     z-index: 12;
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.45rem;
     min-height: 52px;
-    margin: 0 -0.65rem 0.55rem;
+    margin: 0 0 0.55rem;
     padding: 0.5rem 0.65rem;
     background: rgba(248, 248, 245, 0.96);
     backdrop-filter: blur(10px);
@@ -1607,7 +1696,7 @@ body.modal-open {
   }
 
   .topbar-title {
-    display: none;
+    display: block;
   }
 
   .topbar-title p {
@@ -1615,30 +1704,48 @@ body.modal-open {
   }
 
   .topbar-actions {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
     justify-self: end;
     flex-wrap: nowrap;
     gap: 0.28rem;
-    min-width: 0;
+    min-width: max-content;
   }
 
-  .topbar-actions a {
+  .topbar-actions a,
+  .topbar-share {
     min-height: var(--lm-control-min);
-    font-size: 0.72rem;
+    font-size: var(--ui-label);
     padding: 0 0.52rem;
   }
 
-  .topbar-actions a:nth-child(n+3) {
-    display: none;
+  .topbar-share {
+    display: inline-flex;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.65rem;
+    z-index: 14;
+    width: var(--lm-control-min);
+    justify-content: center;
+    overflow: hidden;
+    color: transparent;
+    padding: 0;
   }
 
-  .topbar-actions a:nth-child(n+2) {
+  .topbar-share::before {
+    content: "Link";
+    color: var(--terracotta-dark);
+    font-size: 0.72rem;
+    line-height: 1;
+  }
+
+  .topbar-actions a {
     display: none;
   }
 
   .mobile-atlas-nav {
-    display: grid;
-    gap: 0.5rem;
-    margin-bottom: 0.65rem;
+    display: none;
   }
 
   .mobile-filter-row,
@@ -1659,7 +1766,7 @@ body.modal-open {
   .mobile-filter-row .filter-pill {
     flex: 0 0 auto;
     min-height: var(--lm-control-min);
-    font-size: 0.72rem;
+    font-size: var(--ui-caption);
     padding: 0 0.68rem;
   }
 
@@ -1692,7 +1799,7 @@ body.modal-open {
 
   .mobile-module-card small {
     color: var(--terracotta);
-    font-size: 0.58rem;
+    font-size: var(--ui-caption);
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1715,13 +1822,22 @@ body.modal-open {
   .module-card,
   .stage-header,
   .stage-header > div {
-    width: calc(100vw - 2.5rem);
-    max-width: calc(100vw - 2.5rem);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .module-guide {
+    grid-template-columns: 1fr;
   }
 
   .module-card h3,
   .module-card p,
   .module-reading,
+  .module-brief,
+  .module-brief p,
+  .module-brief span,
+  .module-guide,
+  .module-guide dd,
   .module-card-footer,
   .stage-header p {
     width: 100%;
@@ -1759,7 +1875,7 @@ body.modal-open {
   }
 
   .metric-card small {
-    font-size: 0.54rem;
+    font-size: var(--ui-caption);
   }
 
   .metric-card strong {
@@ -1770,7 +1886,7 @@ body.modal-open {
     display: block;
     margin-top: 0.18rem;
     color: var(--muted);
-    font-size: 0.62rem;
+    font-size: var(--ui-caption);
     font-style: normal;
     font-weight: 700;
     line-height: 1.2;
@@ -1808,7 +1924,9 @@ body.modal-open {
   }
 
   .stage-actions {
-    display: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.35rem;
   }
 
   .chart-layout {

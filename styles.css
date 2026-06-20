@@ -283,6 +283,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
   #quarto-header .navbar-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 0.45rem;
     width: 100%;
@@ -294,7 +295,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 
   #quarto-header .navbar-brand-container {
     order: 2;
-    flex: 1 1 auto;
+    flex: 0 0 42px;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -320,6 +321,7 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    margin-left: 0 !important;
   }
 
   #quarto-header .navbar-toggler {
@@ -385,13 +387,14 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     align-items: center;
     justify-content: center;
     margin-top: 0;
-    margin-left: auto;
+    margin-left: 0 !important;
+    position: static !important;
   }
 
   #quarto-header .navbar .quarto-color-scheme-toggle {
     width: 34px !important;
     height: 34px !important;
-    margin-left: 0;
+    margin-left: 0 !important;
     border-width: 1px !important;
     background-size: 15px !important;
   }
@@ -1241,7 +1244,9 @@ body.editorial-post #title-block-header .quarto-title-meta {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
+  row-gap: 0.45rem;
 }
 
 body.editorial-post #title-block-header .quarto-categories {
@@ -1279,8 +1284,17 @@ body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
 /* --- PÁRRAFOS Y LECTURABILIDAD --- */
 body.editorial-post #quarto-document-content p {
   margin-bottom: 1.5rem;
+  max-width: 70ch;
   text-align: left;
+  text-wrap: pretty;
   hyphens: none;
+  overflow-wrap: break-word;
+}
+
+body.editorial-post #quarto-document-content li {
+  max-width: 70ch;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 /* Primer párrafo más grande (lede) */
@@ -1657,9 +1671,9 @@ div.giscus {
   border-top: 1px solid var(--lm-border-dark);
 }
 
- Agregar un pequeño texto antes si la línea no es suficiente */
+/* Agregar un pequeno texto antes si la linea no es suficiente */
 div.giscus::before {
-  content: "Discusion";
+  content: "Discusión";
   display: block;
   font-family: "Inter", sans-serif; /* O fuente sans */
   font-size: 0.75rem;
@@ -2175,7 +2189,7 @@ body.editorial-post .share-buttons-sticky {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  z-index: 9999; /* Aumentado para estar sobre todo */
+  z-index: 20;
   pointer-events: auto; /* Asegurar que sean clickeables */
 }
 
@@ -2264,7 +2278,7 @@ body.editorial-post .share-buttons-sticky {
   border: 1px solid var(--lm-border-dark);
   border-radius: 999px;
   background: transparent;
-  color: var(--lm-text);
+  color: var(--lm-text-main);
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
@@ -2307,7 +2321,7 @@ body.editorial-post .share-buttons-sticky {
   width: 100%;
   border: 1px solid var(--lm-border);
   border-radius: 6px;
-  background: var(--lm-bg);
+  background: var(--lm-bg-card);
   color: var(--lm-text-soft);
   font-family: 'Inter', sans-serif;
   font-size: 0.78rem;
@@ -2328,7 +2342,7 @@ body.editorial-post .share-buttons-sticky {
    RESPONSIVE: MOBILE
    ========================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* OCULTAR botones flotantes en mobile */
   body .share-buttons-sticky,
   body.editorial-post .share-buttons-sticky {
@@ -2631,16 +2645,37 @@ body.quarto-dark .share-minimal a {
 
 @media (max-width: 680px) {
   #quarto-search {
-    display: none !important;
+    display: inline-flex !important;
+  }
+
+  body:has(.home-shell),
+  body:has(.home-shell) #quarto-content,
+  body:has(.home-shell) #quarto-document-content,
+  body:has(.home-shell) main {
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+
+  body:has(.home-shell) #quarto-content.page-columns {
+    display: block;
+  }
+
+  body:has(.home-shell) #quarto-document-content.content.column-page {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .home-shell {
-    width: 100%;
-    max-width: none;
+    width: calc(100vw - 4rem);
+    max-width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     overflow-x: clip;
-    padding: 2rem 1rem 3rem;
+    padding: 2rem 0 3rem;
   }
 
   .home-lede h1 {
@@ -2651,11 +2686,12 @@ body.quarto-dark .share-minimal a {
   }
 
   .home-lede p {
-    max-width: 100%;
+    max-width: 28ch;
     font-size: 1rem;
   }
 
   .home-signature {
+    max-width: 27ch;
     font-size: 0.8rem;
     line-height: 1.4;
   }
@@ -2692,6 +2728,12 @@ body.quarto-dark .share-minimal a {
   .home-about-copy,
   .home-newsletter,
   .home-latest-section,
+  #home-featured,
+  #home-featured .list,
+  #home-featured .g-col-1,
+  #home-featured .quarto-grid-link,
+  #home-featured .quarto-grid-item,
+  #home-featured .card,
   #listing-home-featured,
   #listing-home-featured .list,
   #listing-home-featured .g-col-1,
@@ -2724,11 +2766,40 @@ body.quarto-dark .share-minimal a {
   }
 
   .home-actions > p,
-  .home-pulse-list,
   .home-paths,
   .home-about-section {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .home-hero { order: 1; }
+  .home-grid { order: 2; }
+  .home-pulse-section { order: 3; }
+  .home-latest-section { order: 4; }
+  .home-paths-section { order: 5; }
+  .home-about-section { order: 6; }
+
+  .home-pulse-section {
+    border-top: 1px solid var(--lm-border);
+    padding-top: 1rem;
+  }
+
+  .home-pulse-section > p {
+    display: none;
+  }
+
+  .home-pulse-list {
+    display: flex;
+    gap: 0.7rem;
+    margin: 0 -1rem;
+    overflow-x: auto;
+    padding: 0 1rem 0.25rem;
+    scroll-snap-type: x proximity;
+  }
+
+  .home-pulse-card {
+    flex: 0 0 min(78vw, 18rem);
+    scroll-snap-align: start;
   }
 
   .home-pulse-section,
@@ -2810,6 +2881,13 @@ body.quarto-dark .share-minimal a {
   .home-pulse-card,
   .home-actions > p,
   .home-action,
+  #home-featured,
+  #home-featured .list,
+  #home-featured .g-col-1,
+  #home-featured .quarto-grid-link,
+  #home-featured .quarto-grid-item,
+  #home-featured .card,
+  #home-featured .card-body,
   #listing-home-featured,
   #listing-home-featured .list,
   #listing-home-featured .g-col-1,
@@ -2835,7 +2913,25 @@ body.quarto-dark .share-minimal a {
     min-width: 0 !important;
   }
 
+  #home-featured .quarto-grid-link,
+  #home-featured .card,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .card {
+    display: block !important;
+    overflow: hidden;
+  }
+
+  #home-featured img,
+  #listing-home-featured img,
+  #home-latest img,
+  #listing-home-latest img {
+    max-width: 100% !important;
+  }
+
   .home-lede p,
+  #home-featured .card-title,
+  #home-featured .card-text,
+  #home-featured .card-text p,
   #listing-home-featured .card-title,
   #listing-home-featured .card-text,
   #listing-home-featured .card-text p,

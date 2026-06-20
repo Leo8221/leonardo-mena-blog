@@ -1,8 +1,9 @@
 // Atlas interaction helpers for sharing, fullscreen, and exports.
 function currentViewUrl() {
-  const url = new URL(window.location.href);
-  url.hash = state.active === "overview" ? "" : state.active;
-  return url.toString();
+  if (typeof buildAtlasUrl === "function") {
+    return buildAtlasUrl().toString();
+  }
+  return new URL(window.location.href).toString();
 }
 
 async function copyText(value) {
@@ -38,6 +39,9 @@ function openChartFullscreen(canvasId) {
   const sourceCanvas = document.getElementById(canvasId);
   if (!sourceCanvas) return;
   hideTooltip(true);
+  if (typeof trackAtlasEvent === "function") {
+    trackAtlasEvent("atlas_fullscreen_open", { chart_id: canvasId });
+  }
   const card = sourceCanvas.closest(".chart-card");
   const title = card?.querySelector("h3")?.textContent || "Gráfico";
   const article = card?.querySelector(".article-link");
@@ -102,6 +106,26 @@ function openChartFullscreen(canvasId) {
     const expandedCanvas = modal.querySelector("canvas");
     redrawExpandedChart(canvasId, expandedCanvas, sourceCanvas);
   });
+}
+
+function downloadCanvasPng(canvasId, button = null) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) {
+    if (button) flashButton(button, "Sin grafico");
+    return;
+  }
+  const module = findModule(state.active);
+  const metric = activeMetricForModule(module);
+  const generated = String(state.data?.generatedAt || state.data?.updated || "").slice(0, 10) || "sin-fecha";
+  const parts = ["atlas", state.active, canvasId, metric, generated].filter(Boolean);
+  const link = document.createElement("a");
+  link.download = `${parts.map(slugify).join("-")}.png`;
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+  if (typeof trackAtlasEvent === "function") {
+    trackAtlasEvent("atlas_png_download", { chart_id: canvasId, metric });
+  }
+  if (button) flashButton(button, "PNG");
 }
 
 function redrawExpandedChart(canvasId, canvas, sourceCanvas) {

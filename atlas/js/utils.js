@@ -135,9 +135,16 @@ function debounce(fn, wait) {
 function renderLoadError(error) {
   els.stage.innerHTML = `
     <div class="empty-state">
-      <strong>No se pudo cargar el Atlas.</strong>
-      <p>Revisa que <code>atlas/data/atlas-data.json</code> exista y que la pagina se abra desde un servidor local o GitHub Pages.</p>
-      <p>${escapeHtml(error.message)}</p>
+      <strong>No pudimos cargar los datos del Atlas.</strong>
+      <p>Intenta de nuevo o vuelve al blog mientras se resuelve la carga.</p>
+      <div class="empty-actions">
+        <button class="stage-action" type="button" onclick="window.location.reload()">Reintentar</button>
+        <a class="stage-action" href="../">Volver al blog</a>
+      </div>
+      <details>
+        <summary>Detalles tecnicos</summary>
+        <p>${escapeHtml(error.message)}</p>
+      </details>
     </div>
   `;
 }

@@ -18,6 +18,13 @@
   <meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
   <link rel="icon" href="../image/logo_leonardo_mena.png">
   <link rel="stylesheet" href="styles.css?v=20260621">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-W3JC0G3RJ1");
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -68,6 +75,7 @@
       <nav class="module-nav" id="module-nav" aria-label="Módulos del Atlas"></nav>
 
     </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
 
     <main class="atlas-main" id="atlas-main" tabindex="-1">
       <header class="atlas-topbar">
@@ -101,7 +109,8 @@
       <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales del Atlas"></section>
 
       <section class="workspace-grid">
-        <section class="module-stage" id="module-stage" aria-live="polite"></section>
+        <div class="sr-only" id="atlas-status" role="status" aria-live="polite"></div>
+        <section class="module-stage" id="module-stage" aria-busy="true"></section>
       </section>
     </main>
   </div>
