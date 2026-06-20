@@ -30,6 +30,14 @@ function requireMatch(relativePath, checks) {
   }
 }
 
+function forbidText(relativePath, checks) {
+  const content = read(relativePath);
+  for (const [label, pattern] of checks) {
+    const found = pattern instanceof RegExp ? pattern.test(content) : content.includes(pattern);
+    if (found) failures.push(`${relativePath}: contiene ${label}`);
+  }
+}
+
 function walk(relativePath, extensions = new Set([".js", ".html"])) {
   const fullPath = path.join(ROOT, relativePath);
   if (!fs.existsSync(fullPath)) return [];
@@ -65,8 +73,13 @@ requireText("_quarto.yml", [
 
 requireText("index.qmd", [
   ["pulso de portada", "data-home-pulse"],
+  ["canonical de portada", "include-in-header: home-head.html"],
   ["include del pulso de portada", "include-after-body: home-pulse.html"],
   ["titulo SEO sin nombre duplicado", 'pagetitle: "Economía aplicada RD"']
+]);
+
+requireText("home-head.html", [
+  ["canonical raíz", '<link rel="canonical" href="https://leo8221.github.io/leonardo-mena-blog/">']
 ]);
 
 requireText("home-pulse.html", [
@@ -91,6 +104,7 @@ requireText("styles.css", [
 requireText("atlas/index.html", [
   ["skip link propio", 'href="#atlas-main"'],
   ["main destino", 'id="atlas-main"'],
+  ["nav Blog hacia raíz canonical", '<a href="../">Blog</a>'],
   ["nav Archivo hacia archivo general", '<a href="../archivo.html">Archivo</a>']
 ]);
 
@@ -116,13 +130,20 @@ if (includeDocs) {
   }
   requireText("docs/atlas/index.html", [
     ["skip link del Atlas publicado", 'href="#atlas-main"'],
+    ["nav Blog publicado hacia raíz canonical", '<a href="../">Blog</a>'],
     ["nav Archivo publicado", '<a href="../archivo.html">Archivo</a>']
   ]);
   requireMatch("docs/index.html", [
+    ["canonical raíz", /<link rel="canonical" href="https:\/\/leo8221\.github\.io\/leonardo-mena-blog\/">/],
     ["titulo SEO sin duplicar nombre", /<title>Economía aplicada RD\s+[–-]\s+Leonardo Mena<\/title>/]
   ]);
   requireText("docs/sitemap.xml", [
+    ["portada canonical en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/</loc>"],
     ["Atlas en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/atlas/</loc>"]
+  ]);
+  forbidText("docs/sitemap.xml", [
+    ["portada no canonical en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>"],
+    ["observatorio heredado en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/observatorio.html</loc>"]
   ]);
   requireMatch("docs/atlas/index.html", [
     ["cache busting de estilos Atlas publicado", /styles\.css\?v=\d{8}/],

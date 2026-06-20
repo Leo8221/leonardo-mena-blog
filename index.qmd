@@ -4,6 +4,7 @@ description: "Economía aplicada dominicana con análisis, datos y visualizacion
 image: image/social-preview.png
 page-layout: full
 toc: false
+include-in-header: home-head.html
 include-after-body: home-pulse.html
 listing:
   - id: home-featured
