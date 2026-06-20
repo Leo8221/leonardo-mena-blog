@@ -5,6 +5,10 @@
 library(ggplot2)
 library(scales)
 
+`%||%` <- function(x, y) {
+  if (is.null(x)) y else x
+}
+
 # ------------------------------------------------------------------------------
 # PALETA DE COLORES
 # ------------------------------------------------------------------------------
@@ -278,4 +282,13 @@ theme_lm_map <- function() {
       legend.justification = "left",
       legend.margin = margin(b = 10)    # Espacio entre leyenda y mapa
     )
+}
+
+# ==============================================================================
+# EXTENSIONES STORYTELLING
+# ==============================================================================
+
+lm_storytelling_file <- file.path("R", "graficos_storytelling.R")
+if (file.exists(lm_storytelling_file)) {
+  source(lm_storytelling_file, encoding = "UTF-8")
 }
