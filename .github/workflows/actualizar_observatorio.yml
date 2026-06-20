@@ -1,8 +1,22 @@
 name: Actualizar Observatorio
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.qmd"
+      - "_quarto.yml"
+      - "styles.css"
+      - "atlas/**"
+      - "datos/**"
+      - "images/**"
+      - "posts/**"
+      - "reading-progress.html"
+      - "share-buttons-auto.html"
+      - ".github/workflows/actualizar_observatorio.yml"
   schedule:
-    - cron: '0 22 * * *'
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -16,19 +30,20 @@ jobs:
       RENV_CONFIG_PAK_ENABLED: true
 
     steps:
-      - name: Chequear código
+      - name: Chequear codigo
         uses: actions/checkout@v4
 
       - name: Instalar Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.9.38
 
       - name: Instalar R
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: 'release'
+          r-version: "release"
           use-public-rspm: true
 
-      # 🔥 Necesario para sf y mapas
       - name: Instalar dependencias del sistema
         run: |
           sudo apt-get update
@@ -43,7 +58,6 @@ jobs:
             libproj-dev \
             libudunits2-dev
 
-      # ⚡ Cache inteligente de paquetes R
       - name: Instalar y cachear paquetes R
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
@@ -72,27 +86,24 @@ jobs:
             any::rnaturalearthdata
             any::treemapify
 
-      # 🧹 Limpieza fuerte de caches de render
       - name: Limpiar caches de Quarto
         run: |
           rm -rf _freeze/
           rm -rf observatorio_cache/
           rm -rf *_cache/
 
-      # 🏗 Render completo
-      - name: Renderizar Proyecto
+      - name: Renderizar proyecto
         run: quarto render --no-cache
 
-      # 🚀 Commit automático solo si hay cambios
       - name: Guardar cambios
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add docs/
           if git diff --staged --quiet; then
-            echo "⚠️ Sin cambios"
+            echo "Sin cambios"
           else
-            git commit -m "🔄 Auto-update: $(date +'%Y-%m-%d %H:%M UTC')"
+            git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M UTC')"
             git push
-            echo "✅ Publicado"
+            echo "Publicado"
           fi
