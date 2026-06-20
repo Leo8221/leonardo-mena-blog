@@ -7,6 +7,7 @@
 
 html {
   min-width: 320px;
+  scroll-padding-top: 1rem;
 }
 
 body {
@@ -25,6 +26,50 @@ input {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: calc(var(--lm-z-modal) + 1);
+  top: 0.65rem;
+  left: 0.65rem;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--terracotta);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 800;
+  padding: 0 0.85rem;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform var(--lm-transition-fast);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .atlas-app {
@@ -154,7 +199,7 @@ a {
 
 .filter-pill,
 .menu-toggle {
-  min-height: 36px;
+  min-height: var(--lm-control-min);
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--card);
@@ -240,7 +285,7 @@ a {
 
 .nav-reset {
   width: fit-content;
-  min-height: 30px;
+  min-height: var(--lm-control-min);
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   background: var(--card);
@@ -301,7 +346,7 @@ a {
 }
 
 .topbar-actions a {
-  min-height: 36px;
+  min-height: var(--lm-control-min);
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border);
@@ -450,7 +495,7 @@ a {
 }
 
 .stage-action {
-  min-height: 30px;
+  min-height: var(--lm-control-min);
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--card);
@@ -713,7 +758,7 @@ a {
 
 .article-link,
 .chart-expand {
-  min-height: 30px;
+  min-height: var(--lm-control-min);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1495,7 +1540,7 @@ body.modal-open {
   }
 
   .menu-toggle {
-    min-height: 32px;
+    min-height: var(--lm-control-min);
     padding: 0 0.68rem;
   }
 
@@ -1518,7 +1563,7 @@ body.modal-open {
   }
 
   .topbar-actions a {
-    min-height: 32px;
+    min-height: var(--lm-control-min);
     font-size: 0.72rem;
     padding: 0 0.52rem;
   }
@@ -1546,7 +1591,7 @@ body.modal-open {
 
   .mobile-filter-row .filter-pill {
     flex: 0 0 auto;
-    min-height: 31px;
+    min-height: var(--lm-control-min);
     font-size: 0.72rem;
     padding: 0 0.68rem;
   }
@@ -1740,13 +1785,13 @@ body.modal-open {
 
   .chart-toggle {
     flex: 0 0 auto;
-    min-height: 38px;
+    min-height: var(--lm-control-min);
     padding: 0 0.72rem;
   }
 
   .article-link,
   .chart-expand {
-    min-height: 38px;
+    min-height: var(--lm-control-min);
     padding: 0 0.72rem;
   }
 

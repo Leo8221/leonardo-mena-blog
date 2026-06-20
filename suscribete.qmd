@@ -1,24 +1,22 @@
 ---
+title: "Suscríbete"
 pagetitle: "Suscríbete"
+description: "Recibe los nuevos análisis de economía aplicada, datos y visuales del blog."
 page-layout: custom
 section-divs: false
 toc: false
 ---
 
-::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh; text-align: center; font-family: sans-serif; color: inherit;"}
+::: {.subscribe-shell}
+::: {.subscribe-panel}
 
-# 📬 {style="font-size: 3rem; margin-bottom: 0;"}
+## Economía aplicada en tu correo
 
-# Economía. {style="margin-top: 10px; margin-bottom: 10px;"}
+Datos, visuales y criterio para leer la economía sin ruido.
 
-::: {style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 30px;"}
-Contenido del blog explicado en tu correo.
+<iframe class="subscribe-embed" title="Formulario de suscripción" src="https://leonardomena824.substack.com/embed" loading="lazy"></iframe>
+
+[Volver al inicio](index.qmd){.subscribe-back}
+
 :::
-
-<iframe src="https://leonardomena824.substack.com/embed" width="480" height="150" style="border:none; background:white; border-radius: 8px;" frameborder="0" scrolling="no"></iframe>
-
-::: {style="margin-top: 30px; opacity: 0.6;"}
-[← Volver al inicio](index.qmd)
-:::
-
 :::

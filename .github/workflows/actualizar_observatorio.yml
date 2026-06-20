@@ -15,6 +15,7 @@ on:
       - "posts/**"
       - "reading-progress.html"
       - "share-buttons-auto.html"
+      - "skip-link.html"
       - ".github/workflows/actualizar_observatorio.yml"
   schedule:
     - cron: "0 22 * * *"
@@ -104,6 +105,9 @@ jobs:
 
       - name: Validar texto publicado
         run: node atlas/scripts/check-text-integrity.mjs --include-docs
+
+      - name: Validar contrato del sitio
+        run: node atlas/scripts/check-site-contract.mjs --include-docs
 
       - name: Guardar cambios
         run: |

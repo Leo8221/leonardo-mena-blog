@@ -29,13 +29,13 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 
 ## Fases
 
-- [ ] Fase 1: sistema de diseno compartido y `DESIGN-SYSTEM.md`.
+- [x] Fase 1: sistema de diseno compartido y `DESIGN-SYSTEM.md`.
 - [x] Fase 2: cabecera y navegacion global sin CTA inline.
 - [ ] Fase 3: portada del blog con hero, Pulso RD, destacado, caminos, ultimas publicaciones, Sobre Leonardo y boletin.
 - [ ] Fase 4: portada movil fluida desde 320 px.
 - [ ] Fase 5: secciones, archivo, categorias y paginas de series.
 - [ ] Fase 6: Sobre mi honesto, editorial y sin credenciales inventadas.
-- [ ] Fase 7: Suscripcion responsive, sin estilos inline innecesarios.
+- [x] Fase 7: Suscripcion responsive, sin estilos inline innecesarios.
 - [ ] Fase 8: articulos con mejor lectura, metadatos, figuras, captions y navegacion.
 - [x] Fase 9: compartir y progreso de lectura accesibles.
 - [x] Fase 10: identidad del Atlas como parte del sitio.
@@ -46,8 +46,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Fase 15: alternativas textuales/tabulares para graficos Canvas.
 - [x] Fase 16: exportacion PNG y CSV con nombres y metadatos correctos.
 - [x] Fase 17: modales con foco, escape, focus trap y retorno de foco.
-- [ ] Fase 18: responsive del Atlas en 320, 360, 390, 430, 768, 920, 1024, 1180 y 1440 px.
-- [ ] Fase 19: accesibilidad global, `:focus-visible` y `prefers-reduced-motion`.
+- [x] Fase 18: responsive del Atlas en 320, 360, 390, 430, 768, 920, 1024, 1180 y 1440 px.
+- [x] Fase 19: accesibilidad global, `:focus-visible` y `prefers-reduced-motion`.
 
 ## Avance actual
 
@@ -77,7 +77,11 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Metric strip del Atlas visible en movil con scroll horizontal, contexto textual y estado activo.
 - [x] Modulos del Atlas agregan vista tabular, CSV por dataset y CSV completo con metadatos de modulo, fuente, corte y generacion.
 - [x] Modal de pantalla completa del Atlas devuelve foco, cierra con Escape y atrapa Tab dentro del dialogo.
-- [ ] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
+- [x] Agregado skip link global para paginas Quarto y skip link propio del Atlas.
+- [x] Agregado contrato `atlas/scripts/check-site-contract.mjs` y validacion en GitHub Actions.
+- [x] Suscripcion convertida a pagina responsive sin `iframe` de ancho fijo ni estilos inline.
+- [x] Controles moviles del Atlas subidos a objetivo tactil minimo compartido.
+- [x] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
 - [x] Validada portada guiada del Atlas en escritorio y captura movil Edge headless a 500 px; Edge headless a 390 px recorta una viewport interna mayor, asi que no se uso como evidencia visual definitiva.
 
 ## Archivos afectados previstos
@@ -130,11 +134,16 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Validar que no haya mojibake en fuente ni salida despues de `quarto render`.
 - [x] `quarto render --no-cache`
 - [x] QA local de Atlas: portada por defecto, grupos por pregunta, modulo por hash, ficha fuente, metodologia expandible y consola limpia.
-- [ ] Probar portada y Atlas en 320, 360, 390, 430, 768, 1024 y 1440 px.
-- [ ] Revisar consola JS en portada, articulo, Sobre mi, Suscribete y Atlas.
-- [ ] Revisar navegacion por teclado y foco visible.
+- [x] Probar portada y Atlas en 320, 360, 390, 430, 768, 1024 y 1440 px.
+- [x] Revisar consola JS en portada, articulo, Sobre mi, Suscribete y Atlas.
+- [x] Revisar navegacion por teclado y foco visible.
 - [x] Revisar consola JS en articulo validado: sin errores ni warnings.
 - [x] QA local de Atlas: tablas por modulo, CSV disponible, modal fullscreen con foco/Escape/Tab y consola limpia.
+- [x] `node atlas/scripts/check-site-contract.mjs`
+- [x] `node atlas/scripts/check-site-contract.mjs --include-docs`
+- [x] QA browser local en home, Sobre mi, Suscribete y Atlas: 320, 360, 390, 430, 768, 1024 y 1440 px sin overflow ni errores de consola.
+- [x] QA browser local extra de Atlas: 920 y 1180 px sin overflow ni errores de consola.
+- [x] QA browser local de modal Atlas en movil 390 px: abrir, canvas visible, foco en cerrar y cierre correcto.
 
 ## Criterios de aceptacion
 

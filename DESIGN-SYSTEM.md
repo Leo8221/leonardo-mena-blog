@@ -95,11 +95,13 @@ No declares colores oscuros en componentes salvo que el token no alcance. Si un 
 
 ## Accesibilidad
 
+- El blog carga `skip-link.html` desde `_quarto.yml`; el Atlas tiene su propio enlace de salto a `#atlas-main`.
 - Usa `:focus-visible` para links, botones, toggles, inputs y controles del Atlas.
 - Respeta `prefers-reduced-motion`.
 - No ocultes contenido esencial en mobile.
 - Los enlaces externos con `target="_blank"` deben usar `rel="noopener noreferrer"`.
 - Las imagenes funcionales necesitan texto alternativo util o nombre accesible.
+- Ejecuta `node atlas/scripts/check-site-contract.mjs` antes de publicar cambios de layout; con `--include-docs` valida tambien la salida renderizada.
 
 ## Como Extender
 
