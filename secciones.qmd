@@ -7,41 +7,41 @@ toc: false
 
 ::: {.product-grid}
 ::: {.product-card .product-card-primary}
-<span class="product-kicker">Interactivo</span>
+<span class="product-kicker">Datos</span>
 
 ## Atlas
 
-Mapas, indicadores y sectores.
+Mapas, indicadores y gráficos.
 
 [Abrir Atlas](atlas/index.html)
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Análisis editorial</span>
+<span class="product-kicker">Análisis</span>
 
 ## La República habla de
 
-Coyuntura dominicana con datos y postura.
+Coyuntura dominicana con datos y contexto.
 
 [Leer análisis](republica-habla-de.qmd)
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Visualización</span>
+<span class="product-kicker">Gráficos</span>
 
 ## La República en un gráfico
 
-Una visualización, una lectura, una implicación.
+Un gráfico, una lectura y una pregunta.
 
 [Ver gráficos](republica-en-un-grafico.qmd)
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Escuela pública</span>
+<span class="product-kicker">Escuela</span>
 
 ## Fundamentos
 
-Conceptos, mitos y predecesores intelectuales.
+Conceptos y autores para ordenar ideas.
 
 [Aprender fundamentos](fundamentos.qmd)
 :::
@@ -51,7 +51,7 @@ Conceptos, mitos y predecesores intelectuales.
 
 ## Biblioteca del sitio
 
-Todo el contenido publicado.
+Todo lo publicado.
 
 [Explorar archivo](archivo.qmd)
 :::

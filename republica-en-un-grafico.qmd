@@ -11,38 +11,38 @@ listing:
 ---
 
 ::: {.hub-header}
-Una visualización, una lectura y una implicación para entender mejor la economía dominicana.
+Gráficos para mirar una pregunta económica con datos.
 
 ::: {.hub-meta}
 <span class="hub-chip">Gráficos</span>
-<span class="hub-chip">Series dominicanas</span>
-<span class="hub-chip">Lectura rápida</span>
+<span class="hub-chip">Datos</span>
+<span class="hub-chip">Lectura breve</span>
 :::
 :::
 
 ::: {.series-grid}
 ::: {.series-card}
-<span class="product-kicker">Promesa</span>
+<span class="product-kicker">Idea</span>
 
-## Un argumento visual
+## El gráfico ordena
 
-El gráfico no acompaña el texto: lo organiza.
+La imagen debe ayudar a pensar, no solo decorar.
 :::
 
 ::: {.series-card}
 <span class="product-kicker">Rigor</span>
 
-## Fuente visible
+## Fuente clara
 
-Cada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo.
+Cada entrega debe decir de dónde sale el dato.
 :::
 
 ::: {.series-card}
 <span class="product-kicker">Criterio</span>
 
-## Implicación económica
+## Qué queda
 
-El cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública.
+El cierre deja una pregunta o una lectura posible.
 :::
 :::
 

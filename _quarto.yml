@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "!investigacion.qmd"
+    - "!mitos-economicos.qmd"
     - "posts/**/*.qmd"
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
@@ -65,8 +66,6 @@ website:
         menu:
           - text: "Mis predecesores"
             href: predecesores.qmd
-          - text: "Mitos económicos"
-            href: mitos-economicos.qmd
           - text: "Fundamentos"
             href: fundamentos.qmd
       - text: Archivo

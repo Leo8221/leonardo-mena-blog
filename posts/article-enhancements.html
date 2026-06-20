@@ -21,5 +21,77 @@
   } else {
     titleBlock.appendChild(meta);
   }
+
+  const figureTargets = Array.from(content.querySelectorAll(
+    "figure, .quarto-figure, .cell-output-display"
+  )).filter((node) => {
+    if (node.closest(".article-figure-modal")) return false;
+    if (node.dataset.figureEnhanced === "true") return false;
+    if (node.classList.contains("cell-output-display") && node.closest("figure, .quarto-figure")) return false;
+    return node.querySelector("img, svg, canvas");
+  });
+
+  if (!figureTargets.length) return;
+
+  const modal = document.createElement("div");
+  modal.className = "article-figure-modal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "article-figure-modal-title");
+  modal.innerHTML = `
+    <div class="article-figure-modal-panel" role="document">
+      <div class="article-figure-modal-head">
+        <p class="article-figure-modal-title" id="article-figure-modal-title">Gráfico ampliado</p>
+        <button class="article-figure-close" type="button">Cerrar</button>
+      </div>
+      <div class="article-figure-modal-body"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const modalBody = modal.querySelector(".article-figure-modal-body");
+  const closeButton = modal.querySelector(".article-figure-close");
+  let lastTrigger = null;
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
+    modalBody.innerHTML = "";
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  function openModal(target, trigger) {
+    lastTrigger = trigger;
+    const clone = target.cloneNode(true);
+    clone.querySelectorAll(".article-figure-tools").forEach((node) => node.remove());
+    clone.removeAttribute("id");
+    modalBody.innerHTML = "";
+    modalBody.appendChild(clone);
+    modal.classList.add("is-open");
+    document.body.classList.add("no-scroll");
+    closeButton.focus();
+  }
+
+  closeButton.addEventListener("click", closeModal);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  });
+
+  figureTargets.forEach((target) => {
+    target.dataset.figureEnhanced = "true";
+    const tools = document.createElement("div");
+    tools.className = "article-figure-tools";
+    const button = document.createElement("button");
+    button.className = "article-figure-expand";
+    button.type = "button";
+    button.textContent = "Ampliar";
+    button.setAttribute("aria-label", "Ampliar gráfico");
+    tools.appendChild(button);
+    target.insertBefore(tools, target.firstChild);
+    button.addEventListener("click", () => openModal(target, button));
+  });
 })();
 </script>

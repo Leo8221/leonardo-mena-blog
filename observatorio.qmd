@@ -3,6 +3,7 @@ title: "Observatorio"
 description: "Atlas."
 page-layout: full
 toc: false
+search: false
 format:
   html:
     include-in-header:

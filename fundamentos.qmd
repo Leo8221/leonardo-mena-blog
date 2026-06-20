@@ -10,12 +10,12 @@ listing:
 ---
 
 ::: {.hub-header}
-Conceptos que aparecen todo el tiempo en la conversación pública, explicados con precisión y sin perder claridad.
+Conceptos que aparecen seguido en la conversación pública.
 
 ::: {.hub-meta}
 <span class="hub-chip">Conceptos</span>
-<span class="hub-chip">Lectura económica</span>
-<span class="hub-chip">Base técnica</span>
+<span class="hub-chip">Economía</span>
+<span class="hub-chip">Base</span>
 :::
 :::
 
@@ -25,7 +25,7 @@ Conceptos que aparecen todo el tiempo en la conversación pública, explicados c
 
 ## Primero los cimientos
 
-PIB, inflación, déficit, productividad y otros conceptos antes de entrar al debate.
+PIB, inflación, déficit, productividad y otros conceptos básicos.
 :::
 
 ::: {.series-card}
@@ -33,7 +33,7 @@ PIB, inflación, déficit, productividad y otros conceptos antes de entrar al de
 
 ## Ejemplos dominicanos
 
-Las explicaciones se aterrizan en datos y decisiones reales de República Dominicana.
+Ejemplos cercanos, cuando ayudan a entender mejor.
 :::
 
 ::: {.series-card}
@@ -41,7 +41,7 @@ Las explicaciones se aterrizan en datos y decisiones reales de República Domini
 
 ## Puerta de entrada
 
-Esta serie sostiene a Mitos económicos y Mis predecesores.
+Una entrada sencilla para volver a conceptos que se usan mucho.
 :::
 :::
 

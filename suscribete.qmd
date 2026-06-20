@@ -10,12 +10,12 @@ toc: false
 ::: {.subscribe-shell}
 ::: {.subscribe-panel}
 
-## Una lectura económica cuando haya algo que valga la pena decir
+## Una lectura cuando haya algo que decir
 
-Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.
+Nuevos análisis, gráficos y cambios importantes del Atlas. Sin correos diarios.
 
 ::: {.subscribe-notes}
-- Análisis nuevos cuando haya una lectura clara.
+- Análisis nuevos cuando estén listos.
 - Visuales y mapas publicados en el blog o en Atlas.
 - Avisos puntuales, no una rutina diaria de correos.
 :::
@@ -23,9 +23,9 @@ Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos n
 ::: {.subscribe-preview}
 <span class="section-kicker">Ejemplo de envío</span>
 
-**Una lectura breve:** qué cambió, por qué importa y dónde ver el gráfico o la fuente.
+**Una lectura breve:** qué cambió y dónde ver el gráfico o la fuente.
 
-**Tres enlaces:** el análisis nuevo, una vista del Atlas y una nota para seguir leyendo.
+**Enlaces útiles:** el análisis nuevo, una vista del Atlas y una nota para seguir leyendo.
 :::
 
 <iframe class="subscribe-embed" title="Formulario de suscripción" src="https://leonardomena824.substack.com/embed" loading="lazy"></iframe>

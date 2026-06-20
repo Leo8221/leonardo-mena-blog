@@ -11,35 +11,35 @@
     "href": "secciones.html#atlas",
     "title": "Secciones",
     "section": "Atlas",
-    "text": "Atlas\nMapas, indicadores y sectores.\nAbrir Atlas"
+    "text": "Atlas\nMapas, indicadores y gráficos.\nAbrir Atlas"
   },
   {
     "objectID": "secciones.html#la-república-habla-de",
     "href": "secciones.html#la-república-habla-de",
     "title": "Secciones",
     "section": "La República habla de",
-    "text": "La República habla de\nCoyuntura dominicana con datos y postura.\nLeer análisis"
+    "text": "La República habla de\nCoyuntura dominicana con datos y contexto.\nLeer análisis"
   },
   {
     "objectID": "secciones.html#la-república-en-un-gráfico",
     "href": "secciones.html#la-república-en-un-gráfico",
     "title": "Secciones",
     "section": "La República en un gráfico",
-    "text": "La República en un gráfico\nUna visualización, una lectura, una implicación.\nVer gráficos"
+    "text": "La República en un gráfico\nUn gráfico, una lectura y una pregunta.\nVer gráficos"
   },
   {
     "objectID": "secciones.html#fundamentos",
     "href": "secciones.html#fundamentos",
     "title": "Secciones",
     "section": "Fundamentos",
-    "text": "Fundamentos\nConceptos, mitos y predecesores intelectuales.\nAprender fundamentos"
+    "text": "Fundamentos\nConceptos y autores para ordenar ideas.\nAprender fundamentos"
   },
   {
     "objectID": "secciones.html#biblioteca-del-sitio",
     "href": "secciones.html#biblioteca-del-sitio",
     "title": "Secciones",
     "section": "Biblioteca del sitio",
-    "text": "Biblioteca del sitio\nTodo el contenido publicado.\nExplorar archivo"
+    "text": "Biblioteca del sitio\nTodo lo publicado.\nExplorar archivo"
   },
   {
     "objectID": "republica-en-un-grafico.html",
@@ -49,25 +49,25 @@
     "text": "Saltar al contenido"
   },
   {
-    "objectID": "republica-en-un-grafico.html#un-argumento-visual",
-    "href": "republica-en-un-grafico.html#un-argumento-visual",
+    "objectID": "republica-en-un-grafico.html#el-gráfico-ordena",
+    "href": "republica-en-un-grafico.html#el-gráfico-ordena",
     "title": "La República en un gráfico",
-    "section": "Un argumento visual",
-    "text": "Un argumento visual\nEl gráfico no acompaña el texto: lo organiza."
+    "section": "El gráfico ordena",
+    "text": "El gráfico ordena\nLa imagen debe ayudar a pensar, no solo decorar."
   },
   {
-    "objectID": "republica-en-un-grafico.html#fuente-visible",
-    "href": "republica-en-un-grafico.html#fuente-visible",
+    "objectID": "republica-en-un-grafico.html#fuente-clara",
+    "href": "republica-en-un-grafico.html#fuente-clara",
     "title": "La República en un gráfico",
-    "section": "Fuente visible",
-    "text": "Fuente visible\nCada entrega debe dejar claro de dónde sale el dato y qué transformación se hizo."
+    "section": "Fuente clara",
+    "text": "Fuente clara\nCada entrega debe decir de dónde sale el dato."
   },
   {
-    "objectID": "republica-en-un-grafico.html#implicación-económica",
-    "href": "republica-en-un-grafico.html#implicación-económica",
+    "objectID": "republica-en-un-grafico.html#qué-queda",
+    "href": "republica-en-un-grafico.html#qué-queda",
     "title": "La República en un gráfico",
-    "section": "Implicación económica",
-    "text": "Implicación económica\nEl cierre siempre conecta la evidencia con una decisión, tensión o pregunta pública."
+    "section": "Qué queda",
+    "text": "Qué queda\nEl cierre deja una pregunta o una lectura posible."
   },
   {
     "objectID": "republica-en-un-grafico.html#gráficos-publicados",
@@ -308,97 +308,6 @@
     "text": "¿Es un mal indicador?\nAhora llega la pregunta del millón: si tiene tantos problemas para explicar ciertos eventos y si no es capaz de medirlo todo… ¿es un mal indicador? ¿Por qué los economistas lo siguen usando tanto?\nSobre la primera pregunta, la respuesta es un rotundo: ¡No! El PIB, como todo indicador, busca resumir la realidad en un número fácilmente comparable e interpretable. Tiene sus puntos flojos, sí, pero ningún indicador pretende explicarlo todo por sí solo.\nSi voy a Piantini y su “PIB” de enero es de 30,000 pesos, y luego voy a Los Guandules y su PIB es de 5,000 pesos, incluso sin tener más contexto, ya tengo una imagen clara de la situación. Por eso, más que un llamado a desechar el PIB por sus limitaciones, este post es una invitación a usarlo con criterio. Mientras tengamos en mente qué es lo que realmente mide, el PIB sigue siendo una herramienta grandiosa para obtener una imagen rápida de un hogar, una comunidad o un país.\n\n\n\n\n\n\nImportantePara recordar\n\n\n\nEl PIB es excelente para medir producción económica, pero no pretende capturar bienestar. Como todo indicador, su valor está en saber qué mide y qué no.\n\n\nY tú, ¿qué opinas del PIB luego de leer este post?"
   },
   {
-    "objectID": "mitos-economicos.html",
-    "href": "mitos-economicos.html",
-    "title": "Mitos económicos",
-    "section": "",
-    "text": "Saltar al contenido"
-  },
-  {
-    "objectID": "mitos-economicos.html#que-se-cree",
-    "href": "mitos-economicos.html#que-se-cree",
-    "title": "Mitos económicos",
-    "section": "Que se cree",
-    "text": "Que se cree\nCada entrada arrancará desde una afirmación concreta que aparece en medios, redes o conversaciones públicas."
-  },
-  {
-    "objectID": "mitos-economicos.html#que-dice-la-evidencia",
-    "href": "mitos-economicos.html#que-dice-la-evidencia",
-    "title": "Mitos económicos",
-    "section": "Que dice la evidencia",
-    "text": "Que dice la evidencia\nLa respuesta usará teoría económica, datos disponibles y límites explícitos."
-  },
-  {
-    "objectID": "mitos-economicos.html#que-queda-en-pie",
-    "href": "mitos-economicos.html#que-queda-en-pie",
-    "title": "Mitos económicos",
-    "section": "Que queda en pie",
-    "text": "Que queda en pie\nEl objetivo no es ganar una discusión, sino dejar una regla mental más limpia."
-  },
-  {
-    "objectID": "fundamentos.html",
-    "href": "fundamentos.html",
-    "title": "Fundamentos",
-    "section": "",
-    "text": "Saltar al contenido"
-  },
-  {
-    "objectID": "fundamentos.html#primero-los-cimientos",
-    "href": "fundamentos.html#primero-los-cimientos",
-    "title": "Fundamentos",
-    "section": "Primero los cimientos",
-    "text": "Primero los cimientos\nPIB, inflación, déficit, productividad y otros conceptos antes de entrar al debate."
-  },
-  {
-    "objectID": "fundamentos.html#ejemplos-dominicanos",
-    "href": "fundamentos.html#ejemplos-dominicanos",
-    "title": "Fundamentos",
-    "section": "Ejemplos dominicanos",
-    "text": "Ejemplos dominicanos\nLas explicaciones se aterrizan en datos y decisiones reales de República Dominicana."
-  },
-  {
-    "objectID": "fundamentos.html#puerta-de-entrada",
-    "href": "fundamentos.html#puerta-de-entrada",
-    "title": "Fundamentos",
-    "section": "Puerta de entrada",
-    "text": "Puerta de entrada\nEsta serie sostiene a Mitos económicos y Mis predecesores."
-  },
-  {
-    "objectID": "fundamentos.html#artículos-de-la-serie",
-    "href": "fundamentos.html#artículos-de-la-serie",
-    "title": "Fundamentos",
-    "section": "Artículos de la serie",
-    "text": "Artículos de la serie\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "archivo.html",
-    "href": "archivo.html",
-    "title": "Archivo",
-    "section": "",
-    "text": "Saltar al contenido"
-  },
-  {
-    "objectID": "archivo.html#todas-las-publicaciones",
-    "href": "archivo.html#todas-las-publicaciones",
-    "title": "Archivo",
-    "section": "Todas las publicaciones",
-    "text": "Todas las publicaciones"
-  },
-  {
-    "objectID": "categorias.html",
-    "href": "categorias.html",
-    "title": "Categorías",
-    "section": "",
-    "text": "Saltar al contenido"
-  },
-  {
-    "objectID": "categorias.html#índice-completo",
-    "href": "categorias.html#índice-completo",
-    "title": "Categorías",
-    "section": "Índice completo",
-    "text": "Índice completo\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nLa República en un gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República habla de\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa República en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Leer la economía sin ruido.",
@@ -406,11 +315,11 @@
     "text": "Saltar al contenido"
   },
   {
-    "objectID": "index.html#tres-señales-para-abrir-el-tablero",
-    "href": "index.html#tres-señales-para-abrir-el-tablero",
+    "objectID": "index.html#tres-señales-para-ubicarse",
+    "href": "index.html#tres-señales-para-ubicarse",
     "title": "Leer la economía sin ruido.",
-    "section": "Tres señales para abrir el tablero",
-    "text": "Tres señales para abrir el tablero"
+    "section": "Tres señales para ubicarse",
+    "text": "Tres señales para ubicarse"
   },
   {
     "objectID": "index.html#últimas-publicaciones",
@@ -427,25 +336,81 @@
     "text": "Tres formas de entrar"
   },
   {
-    "objectID": "index.html#economía-como-forma-de-leer-el-país",
-    "href": "index.html#economía-como-forma-de-leer-el-país",
+    "objectID": "index.html#por-qué-escribo",
+    "href": "index.html#por-qué-escribo",
     "title": "Leer la economía sin ruido.",
-    "section": "Economía como forma de leer el país",
-    "text": "Economía como forma de leer el país\nEste sitio usa la escritura como método de aprendizaje y análisis. Busca claridad, trazabilidad y contexto dominicano: separar dato, lectura y opinión sin convertir la economía en jerga.\nConocer el enfoque"
+    "section": "Por qué escribo",
+    "text": "Por qué escribo\nEscribo para aprender mejor y ordenar ideas. Me interesa separar dato, lectura y opinión sin convertir la economía en jerga.\nLeer más"
   },
   {
     "objectID": "index.html#una-lectura-cuando-haya-algo-que-decir",
     "href": "index.html#una-lectura-cuando-haya-algo-que-decir",
     "title": "Leer la economía sin ruido.",
     "section": "Una lectura cuando haya algo que decir",
-    "text": "Una lectura cuando haya algo que decir\nNuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.\nSuscribirme"
+    "text": "Una lectura cuando haya algo que decir\nNuevos análisis, gráficos y cambios importantes del Atlas. Sin correos diarios.\nSuscribirme"
   },
   {
-    "objectID": "observatorio.html",
-    "href": "observatorio.html",
-    "title": "Observatorio",
+    "objectID": "categorias.html",
+    "href": "categorias.html",
+    "title": "Categorías",
     "section": "",
-    "text": "Saltar al contenido\n\n\n\n\n\nAbrir Atlas"
+    "text": "Saltar al contenido"
+  },
+  {
+    "objectID": "categorias.html#artículos",
+    "href": "categorias.html#artículos",
+    "title": "Categorías",
+    "section": "Artículos",
+    "text": "Artículos\n\n\n   \n    \n    \n      Ordenar por\n      Por defecto\n      \n        Título\n      \n      \n        Fecha - Más antiguo\n      \n      \n        Fecha - Más reciente\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLa revolución educativa dominicana: lo que el censo nos dice y lo que no\n\n\n\nEducación\n\nCenso 2022\n\nCapital Humano\n\nLa República en un gráfico\n\n\n\nEn cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es un privilegio de pocos. Pero el sistema capta más de lo que retiene, y lo que estudian hombres y mujeres sigue siendo muy distinto.\n\n\n\n\n\n12 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nTransporte masivo: Qué es, qué no es y qué trae a la mesa\n\n\n\nTransporte\n\nDesarrollo\n\nMiPyMES\n\nLa República habla de\n\n\n\nEl Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana.\n\n\n\n\n\n5 mar 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito\n\n\n\nMiPyMES\n\nDesarrollo\n\nFinanciamiento\n\nLa República en un gráfico\n\n\n\nEl 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia.\n\n\n\n\n\n15 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl Rey Efectivo: La resistencia del billete en la era digital\n\n\n\nEconometría\n\nEconomía Dominicana\n\nLa República en un gráfico\n\n\n\nUn análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?\n\n\n\n\n\n4 feb 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEl modelo turístico dominicano: ¿Agotamiento o especialización extrema?\n\n\n\nTurismo\n\nDesarrollo\n\nLa República habla de\n\n\n\nLos datos revelan una concentración extrema en el modelo ‘Sol y Playa’. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen.\n\n\n\n\n\n22 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nFrédéric Bastiat: El primer economista influencer\n\n\n\nMis predecesores\n\nFundamentos\n\n\n\nLa historia del economista que popularizó ‘lo que no se ve’ y por qué sus ideas siguen siendo revolucionarias 170 años después\n\n\n\n\n\n15 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nPerspectiva del desarrollo: Densidad empresarial\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\ndistribución espacial de las empresas en RD\n\n\n\n\n\n6 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa República en un gráfico: 10 años de transformación\n\n\n\nLa República en un gráfico\n\nDesarrollo\n\n\n\nexplicación de los cambios en el habito de consumo de los dominicanos\n\n\n\n\n\n5 ene 2026\n\n\n\n\n\n\n\n\n\n\n\n\nLa aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación\n\n\n\nLa República habla de\n\nDeuda\n\n\n\nexplicación de los intereses de la deuda sobre las recaudaciones fiscales.\n\n\n\n\n\n20 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\n\nFundamentos\n\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGráfico #0: Cómo leo la economía dominicana\n\n\n\nLa República en un gráfico\n\nMetodología\n\n\n\nUn primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana.\n\n\n\n\n\n11 dic 2025\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "archivo.html",
+    "href": "archivo.html",
+    "title": "Archivo",
+    "section": "",
+    "text": "Saltar al contenido"
+  },
+  {
+    "objectID": "archivo.html#todas-las-publicaciones",
+    "href": "archivo.html#todas-las-publicaciones",
+    "title": "Archivo",
+    "section": "Todas las publicaciones",
+    "text": "Todas las publicaciones"
+  },
+  {
+    "objectID": "fundamentos.html",
+    "href": "fundamentos.html",
+    "title": "Fundamentos",
+    "section": "",
+    "text": "Saltar al contenido"
+  },
+  {
+    "objectID": "fundamentos.html#primero-los-cimientos",
+    "href": "fundamentos.html#primero-los-cimientos",
+    "title": "Fundamentos",
+    "section": "Primero los cimientos",
+    "text": "Primero los cimientos\nPIB, inflación, déficit, productividad y otros conceptos básicos."
+  },
+  {
+    "objectID": "fundamentos.html#ejemplos-dominicanos",
+    "href": "fundamentos.html#ejemplos-dominicanos",
+    "title": "Fundamentos",
+    "section": "Ejemplos dominicanos",
+    "text": "Ejemplos dominicanos\nEjemplos cercanos, cuando ayudan a entender mejor."
+  },
+  {
+    "objectID": "fundamentos.html#puerta-de-entrada",
+    "href": "fundamentos.html#puerta-de-entrada",
+    "title": "Fundamentos",
+    "section": "Puerta de entrada",
+    "text": "Puerta de entrada\nUna entrada sencilla para volver a conceptos que se usan mucho."
+  },
+  {
+    "objectID": "fundamentos.html#artículos-de-la-serie",
+    "href": "fundamentos.html#artículos-de-la-serie",
+    "title": "Fundamentos",
+    "section": "Artículos de la serie",
+    "text": "Artículos de la serie\n\n\n\n\n\nEl PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?\n\n\nExplicacion tecnica del PIB.\n\n\n\n\n\n18 dic 2025\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html",

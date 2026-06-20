@@ -747,6 +747,31 @@ summary:focus-visible,
   margin: 0.85rem 0 0;
 }
 
+.module-guide-disclosure {
+  grid-column: 1 / -1;
+  margin-top: 0.15rem;
+}
+
+.module-guide-disclosure summary {
+  width: fit-content;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--soft);
+  cursor: pointer;
+  font-size: var(--ui-label);
+  font-weight: 800;
+  padding: 0 0.75rem;
+}
+
+.module-guide-disclosure[open] summary {
+  border-color: color-mix(in srgb, var(--terracotta) 38%, var(--border));
+  color: var(--terracotta-dark);
+}
+
 .module-guide div {
   border-top: 1px solid var(--border);
   padding-top: 0.55rem;
@@ -1322,6 +1347,8 @@ body.modal-open {
 
 .data-table-wrap {
   overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
   background:
     linear-gradient(90deg, var(--card) 30%, rgba(255, 255, 255, 0)),
     linear-gradient(270deg, var(--card) 30%, rgba(255, 255, 255, 0)) 100% 0,
@@ -1377,6 +1404,10 @@ body.modal-open {
 .data-table-note {
   margin: 0;
   padding: 0 0.65rem 0.7rem;
+}
+
+.data-table-note::before {
+  content: "Desliza para ver columnas. ";
 }
 
 .table-row,
@@ -1704,13 +1735,10 @@ body.modal-open {
   }
 
   .topbar-actions {
-    position: absolute;
-    top: 0.5rem;
-    right: 0;
     justify-self: end;
     flex-wrap: nowrap;
     gap: 0.28rem;
-    min-width: max-content;
+    min-width: 0;
   }
 
   .topbar-actions a,
@@ -1742,6 +1770,14 @@ body.modal-open {
 
   .topbar-actions a {
     display: none;
+  }
+
+  .topbar-actions a:first-child {
+    min-height: var(--lm-control-min);
+    display: inline-flex;
+    border-color: var(--terracotta);
+    color: var(--terracotta-dark);
+    padding: 0 0.72rem;
   }
 
   .mobile-atlas-nav {
@@ -1828,6 +1864,10 @@ body.modal-open {
 
   .module-guide {
     grid-template-columns: 1fr;
+  }
+
+  .module-guide-disclosure {
+    margin-top: 0.25rem;
   }
 
   .module-card h3,

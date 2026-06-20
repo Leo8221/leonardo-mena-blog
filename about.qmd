@@ -1,7 +1,7 @@
 ---
 title: "Sobre mí"
 pagetitle: "Sobre mí"
-description: "Enfoque editorial, principios y rutas de entrada del blog de economía aplicada."
+description: "Sobre el blog, sus criterios y rutas de entrada."
 page-layout: custom
 section-divs: false
 toc: false
@@ -19,7 +19,7 @@ toc: false
 
 # Escribir para entender mejor.
 
-Este blog ordena datos, argumentos y visuales sobre República Dominicana. No busca convertir la economía en jerga: busca separar señal, ruido y criterio.
+Este blog ordena datos, argumentos y gráficos sobre República Dominicana. La idea es separar dato, lectura y opinión con calma.
 
 ::: {.about-links}
 [X](https://x.com/leonardomena824)
@@ -31,9 +31,9 @@ Este blog ordena datos, argumentos y visuales sobre República Dominicana. No bu
 :::
 
 ::: {.about-manifesto}
-## Manifiesto breve
+## Sobre el sitio
 
-La economía está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial. Aquí escribo desde la curiosidad de quien todavía está tratando de entenderlo, con datos en mano y contexto dominicano.
+La economía está en el transporte, en el carrito del supermercado y en lo que significa un aumento salarial. Escribo desde la curiosidad de quien todavía está aprendiendo, con datos y contexto dominicano.
 
 Soy Leonardo Mena, estudiante de Economía en la UASD. Escribir me obliga a buscar fuentes, revisar supuestos y confrontar lo que leo en los libros con lo que pasa en la calle.
 :::
@@ -41,17 +41,17 @@ Soy Leonardo Mena, estudiante de Economía en la UASD. Escribir me obliga a busc
 ::: {.about-principles}
 ::: {.about-principle}
 <span>01</span>
-**Distinguir dato, lectura y opinión.** No todo número habla por sí solo, pero no toda interpretación pesa lo mismo.
+**Distinguir dato, lectura y opinión.** No todo número habla solo, y no toda interpretación pesa igual.
 :::
 
 ::: {.about-principle}
 <span>02</span>
-**Mantener trazabilidad.** Cuando una conclusión depende de una fuente o una transformación, debe poder revisarse.
+**Dejar rastro.** Si una conclusión depende de una fuente o una transformación, debe poder revisarse.
 :::
 
 ::: {.about-principle}
 <span>03</span>
-**Escribir para pensar.** El texto no cierra conversaciones; intenta hacerlas más claras.
+**Escribir para pensar.** El texto no cierra conversaciones; intenta ordenarlas.
 :::
 :::
 

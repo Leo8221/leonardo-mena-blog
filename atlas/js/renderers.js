@@ -630,7 +630,18 @@ function drawChoroplethMap(canvas, features, options) {
 
   const focusMapEntry = (event, pin = false) => {
     const point = getCanvasPoint(canvas, event);
-    const found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
+    let found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
+    if (!found && touchLikeEvent(event)) {
+      const radius = Math.max(28, Math.min(54, width * 0.1));
+      found = entries
+        .filter((entry) => Number.isFinite(entry.value))
+        .map((entry) => ({
+          entry,
+          distance: Math.hypot(entry.centroid[0] - point.x, entry.centroid[1] - point.y)
+        }))
+        .filter((item) => item.distance <= radius)
+        .sort((a, b) => a.distance - b.distance)[0]?.entry || null;
+    }
     if (!found) {
       canvas.style.cursor = "default";
       paint(currentPinnedEntry() || topEntry);

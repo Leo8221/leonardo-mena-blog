@@ -43,18 +43,18 @@ let sidebarReturnFocus = null;
 
 const OVERVIEW_GROUPS = [
   {
-    title: "¿Qué está pasando ahora?",
-    summary: "Coyuntura, precios y señales externas para ubicar el momento económico.",
+    title: "Ahora",
+    summary: "Coyuntura, precios y señales externas.",
     modules: ["pulso-macro", "contexto-externo", "costo-vida"]
   },
   {
-    title: "¿Dónde están las oportunidades y restricciones?",
-    summary: "Comercio, sectores y territorio para leer capacidad productiva y cuellos de botella.",
+    title: "Sectores y territorio",
+    summary: "Comercio, capacidad productiva y mapas.",
     modules: ["comercio-exterior", "sectores", "territorio-infraestructura"]
   },
   {
-    title: "¿Cómo se traduce en la vida económica?",
-    summary: "Trabajo, MiPyMES y visuales de artículos para conectar datos con experiencias concretas.",
+    title: "Trabajo y empresas",
+    summary: "Mercado laboral, MiPyMES y gráficos de artículos.",
     modules: ["mercado-laboral", "mipymes-productividad", "laboratorio-visual"]
   }
 ];
@@ -62,57 +62,57 @@ const OVERVIEW_GROUPS = [
 const MODULE_GUIDES = {
   "pulso-macro": {
     unit: "Series macro en %, RD$/US$ o indice.",
-    high: "Un valor alto no siempre es bueno: depende del indicador activo.",
-    low: "Un valor bajo puede indicar alivio, desaceleracion o menor presion.",
-    limit: "No explica causas por si solo; sirve para ubicar el momento."
+    high: "Depende del indicador activo.",
+    low: "Puede ser alivio, desaceleracion o menor presion.",
+    limit: "Sirve para ubicarse; no explica causas por si solo."
   },
   sectores: {
     unit: "Indice de presion, escala 0-100.",
-    high: "Mas presion relativa bajo las condiciones actuales.",
+    high: "Mas presion relativa en esta comparacion.",
     low: "Menor exposicion relativa dentro del grupo visible.",
-    limit: "No reemplaza cuentas sectoriales ni estados financieros."
+    limit: "Es una lectura inicial, no una cuenta sectorial."
   },
   "contexto-externo": {
     unit: "Indice externo normalizado, escala 0-100.",
-    high: "Entorno internacional mas exigente para la economia local.",
+    high: "Mas presion externa en el indice.",
     low: "Menor presion externa agregada.",
-    limit: "Resume senales globales; no pronostica choques especificos."
+    limit: "Resume senales; no pronostica choques."
   },
   "comercio-exterior": {
-    unit: "Participacion, balance e indice de oportunidad.",
-    high: "Mayor peso comercial u oportunidad relativa, segun metrica.",
+    unit: "Participacion, balance e indice.",
+    high: "Mayor peso relativo, segun metrica.",
     low: "Menor peso relativo dentro de los socios o rubros visibles.",
-    limit: "No mide rentabilidad ni sustitucion productiva completa."
+    limit: "No mide rentabilidad."
   },
   "mercado-laboral": {
     unit: "Tasas en %, informalidad e indice salarial relativo.",
-    high: "Puede significar mejor insercion o mayor informalidad, segun metrica.",
+    high: "Cambia de sentido segun la metrica.",
     low: "Puede indicar rezago o menor exposicion al problema medido.",
-    limit: "Comparacion descriptiva; no prueba causalidad educativa."
+    limit: "Comparacion descriptiva."
   },
   "costo-vida": {
     unit: "Inflacion en % e indices de presion 0-100.",
-    high: "Mayor presion sobre precios o canales de traspaso.",
+    high: "Mayor presion en la serie visible.",
     low: "Menor contribucion relativa al episodio de precios.",
-    limit: "No sustituye el IPC oficial ni mide bienestar completo."
+    limit: "No sustituye el IPC oficial."
   },
   "territorio-infraestructura": {
     unit: "Indices territoriales, densidad y puntajes relativos.",
-    high: "Mayor escala, conectividad u oportunidad, segun metrica.",
+    high: "Mayor valor en la metrica activa.",
     low: "Menor presencia relativa dentro del territorio comparado.",
-    limit: "Prioriza donde mirar; no decide inversion por si solo."
+    limit: "Ayuda a mirar; no decide por si solo."
   },
   "mipymes-productividad": {
     unit: "Indicadores relativos e indices 0-100.",
-    high: "Mayor acceso, formalidad, productividad o barrera, segun metrica.",
+    high: "Mayor valor en la metrica activa.",
     low: "Menor avance o menor intensidad del problema medido.",
-    limit: "No describe cada empresa; resume patrones por segmento."
+    limit: "Resume patrones por segmento."
   },
   "laboratorio-visual": {
-    unit: "Mapas y graficos derivados de articulos publicados.",
-    high: "Mayor concentracion o intensidad del indicador seleccionado.",
+    unit: "Mapas y graficos de articulos.",
+    high: "Mayor intensidad del indicador.",
     low: "Menor presencia relativa en la capa visible.",
-    limit: "Demostracion analitica; la interpretacion completa vive en el articulo."
+    limit: "La lectura completa esta en el articulo."
   }
 };
 
@@ -266,7 +266,7 @@ function renderNavEmpty() {
   return `
     <div class="nav-empty">
       <strong>Sin coincidencias</strong>
-      <span>Ajusta la búsqueda o vuelve al Atlas completo.</span>
+      <span>Ajusta la búsqueda o limpia los filtros.</span>
       <button class="nav-reset" type="button" data-action="reset-filters">Ver todo</button>
     </div>
   `;
@@ -454,7 +454,7 @@ function renderOverviewCard(module) {
       ${module.question ? `<p class="module-question">${escapeHtml(module.question)}</p>` : ""}
       ${module.insight ? `
         <span class="module-reading">
-          <strong>La lectura</strong>
+          <strong>Lectura</strong>
           <span>${escapeHtml(module.insight)}</span>
         </span>
       ` : ""}
@@ -477,7 +477,7 @@ function renderAssetsLoading(module) {
     </div>
     <div class="empty-state">
       <strong>Cargando datos de esta vista</strong>
-      <span>El Atlas carga mapas y visuales pesados solo cuando se abre el módulo.</span>
+      <span>Los mapas cargan cuando hacen falta.</span>
     </div>
   `;
   hydrateModuleActions();
@@ -487,7 +487,7 @@ function renderEmptyOverview() {
   return `
     <div class="empty-state">
       <strong>No hay módulos con esos filtros.</strong>
-      <span>Prueba otra búsqueda o vuelve a ver todo el Atlas.</span>
+      <span>Prueba otra búsqueda o limpia los filtros.</span>
       <button class="stage-action" type="button" data-action="reset-filters">Restablecer filtros</button>
     </div>
   `;
@@ -530,10 +530,9 @@ function renderModuleBrief(module) {
   return `
     <section class="module-brief" aria-label="Lectura del módulo">
       ${module.question ? `<p class="module-brief-question">${escapeHtml(module.question)}</p>` : ""}
-      ${module.summary ? `<p>${escapeHtml(module.summary)}</p>` : ""}
       ${module.insight ? `
         <p class="module-brief-reading">
-          <strong>La lectura</strong>
+          <strong>Lectura</strong>
           <span>${escapeHtml(module.insight)}</span>
         </p>
       ` : ""}
@@ -553,14 +552,17 @@ function renderModuleGuide(module) {
   ].filter(([, value]) => Boolean(value));
 
   return `
-    <dl class="module-guide" aria-label="Guía de lectura">
-      ${items.map(([label, value]) => `
-        <div>
-          <dt>${escapeHtml(label)}</dt>
-          <dd>${escapeHtml(value)}</dd>
-        </div>
-      `).join("")}
-    </dl>
+    <details class="module-guide-disclosure">
+      <summary>Notas</summary>
+      <dl class="module-guide" aria-label="Guía de lectura">
+        ${items.map(([label, value]) => `
+          <div>
+            <dt>${escapeHtml(label)}</dt>
+            <dd>${escapeHtml(value)}</dd>
+          </div>
+        `).join("")}
+      </dl>
+    </details>
   `;
 }
 
@@ -578,9 +580,9 @@ function renderSourceCard(module) {
     : "";
 
   return `
-    <aside class="source-card" aria-label="Ficha fuente">
+    <aside class="source-card" aria-label="Fuente">
       <div class="source-card-main">
-        <span>Ficha fuente</span>
+        <span>Fuente</span>
         <strong>${escapeHtml(sourceLabel)}</strong>
         ${info.detail ? `<p>${escapeHtml(info.detail)}</p>` : ""}
       </div>
@@ -1252,7 +1254,7 @@ function chartControls(toolbarHtml = "", actionsHtml = "") {
   `;
 }
 
-function articleLink(articleId, label = "Leer análisis") {
+function articleLink(articleId, label = "Artículo") {
   const href = ARTICLE_ROUTES[articleId];
   if (!href) return "";
   return `<a class="article-link" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
@@ -1757,12 +1759,12 @@ function updateDocumentTitle() {
   const metricLabel = metric ? metric.replaceAll("_", " ") : "";
   document.title = module
     ? `${metricLabel ? `${metricLabel} | ` : ""}${module.title} | Atlas`
-    : "Atlas | Economia aplicada RD";
+    : "Atlas";
 }
 
 function announceModule(module) {
   if (!els.status) return;
-  els.status.textContent = module ? `Modulo ${module.title} cargado.` : "Portada del Atlas cargada.";
+  els.status.textContent = module ? `${module.title} cargado.` : "Atlas cargado.";
 }
 
 function bindResetFilterButtons(root) {
