@@ -25,6 +25,7 @@ listing:
   - id: home-latest
     contents:
       - posts/**/*.qmd
+      - "!posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.qmd"
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
       - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     sort: "date desc"
@@ -83,20 +84,19 @@ Datos de corte del Atlas. No son datos en vivo; son una entrada rápida para exp
 :::
 :::
 
-::: {.home-side}
-
-::: {.home-side-note}
-<span class="section-kicker">Entrada rápida</span>
-
-## Del argumento al dato
-
-El texto ordena la lectura; Atlas deja mover la pregunta.
-
-[Abrir Atlas](atlas/index.html)
 :::
 
+::: {.home-latest-section}
+::: {.section-header}
+<span class="section-kicker">Archivo vivo</span>
+
+## Últimas publicaciones
+
+[Ver archivo completo](archivo.qmd)
 :::
 
+::: {#home-latest}
+:::
 :::
 
 ::: {.home-paths-section}
@@ -146,19 +146,6 @@ Este sitio usa la escritura como método de aprendizaje y análisis. Busca clari
 Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.
 
 [Suscribirme](suscribete.qmd)
-:::
-:::
-
-::: {.home-latest-section}
-::: {.section-header}
-<span class="section-kicker">Archivo vivo</span>
-
-## Últimas publicaciones
-
-[Ver archivo completo](archivo.qmd)
-:::
-
-::: {#home-latest}
 :::
 :::
 

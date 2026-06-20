@@ -607,8 +607,9 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 
 .home-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.8fr) minmax(16rem, 0.7fr);
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 900px;
+    gap: 1.4rem;
     align-items: start;
 }
 
@@ -657,8 +658,8 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 .home-paths {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.8rem;
-    margin-top: 1rem;
+    gap: 1.1rem;
+    margin-top: 1.35rem;
 }
 
 .home-paths > p {
@@ -668,21 +669,17 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
 .home-path {
     display: grid;
     gap: 0.45rem;
-    border: 1px solid var(--lm-border);
-    border-radius: var(--lm-radius-sm);
-    background: var(--lm-bg-card);
+    border-top: 2px solid var(--lm-border-dark);
     color: var(--lm-text-main);
-    min-height: 10rem;
-    padding: 1rem;
+    min-height: auto;
+    padding: 1rem 0 0;
     text-decoration: none;
-    transition: border-color var(--lm-transition-fast), transform var(--lm-transition-fast), box-shadow var(--lm-transition-fast);
+    transition: border-color var(--lm-transition-fast), color var(--lm-transition-fast);
 }
 
 .home-path:hover {
-    border-color: var(--lm-border-dark);
-    box-shadow: var(--lm-shadow-panel);
+    border-color: var(--lm-terracota);
     color: var(--lm-text-main);
-    transform: translateY(-1px);
 }
 
 .home-path strong {
@@ -1184,9 +1181,15 @@ footer, .nav-footer {
 
 /* --- CONTENEDOR PRINCIPAL DEL POST --- */
 body.editorial-post #quarto-document-content {
-  max-width: 720px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 3rem 2rem;
+}
+
+body.editorial-post #title-block-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1rem;
 }
 
 /* --- HEADER DEL POST (Hero) --- */
@@ -1214,20 +1217,20 @@ body.editorial-post .post-categories a {
 
 /* Título del post */
 body.editorial-post #title-block-header h1.title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem);
   line-height: 1.1;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   font-weight: 700;
 }
 
 /* Bajada/Descripción */
 body.editorial-post #title-block-header .description {
-  font-size: 1.35rem;
+  font-size: 1.12rem;
   line-height: 1.5;
   color: var(--lm-text-soft);
-  margin-bottom: 1.5rem;
-  font-style: italic;
+  margin-bottom: 1.1rem;
+  font-style: normal;
 }
 
 /* Metadata (autor, fecha) */
@@ -1239,6 +1242,27 @@ body.editorial-post #title-block-header .quarto-title-meta {
   letter-spacing: 0.08em;
   display: flex;
   gap: 1.5rem;
+}
+
+body.editorial-post #title-block-header .quarto-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 0.8rem;
+}
+
+body.editorial-post #title-block-header .quarto-category:nth-of-type(n+4) {
+  display: none;
+}
+
+body.editorial-post .article-reading-time {
+  color: var(--lm-text-muted);
+  font-family: var(--lm-font-sans);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  margin-top: 0.55rem;
+  text-transform: uppercase;
 }
 
 /* --- DROP CAP (Letra Capital al inicio) --- */
@@ -1255,8 +1279,8 @@ body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
 /* --- PÁRRAFOS Y LECTURABILIDAD --- */
 body.editorial-post #quarto-document-content p {
   margin-bottom: 1.5rem;
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+  hyphens: none;
 }
 
 /* Primer párrafo más grande (lede) */
@@ -1344,8 +1368,20 @@ body.editorial-post .data-box-content {
 
 /* --- FIGURAS Y GRÁFICOS --- */
 body.editorial-post figure {
-  margin: 3rem 0;
+  margin: 3rem auto;
   padding: 0;
+}
+
+body.editorial-post #quarto-document-content figure,
+body.editorial-post #quarto-document-content .quarto-figure,
+body.editorial-post #quarto-document-content .cell-output-display:has(img),
+body.editorial-post #quarto-document-content .cell-output-display:has(svg),
+body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
+  width: min(100vw - 2rem, 1120px);
+  max-width: none;
+  margin-left: 50%;
+  margin-right: 0;
+  transform: translateX(-50%);
 }
 
 body.editorial-post figcaption {
@@ -1416,12 +1452,13 @@ body.editorial-post .section-divider {
 
 /* Key Takeaways */
 body.editorial-post .key-takeaways {
-  background: linear-gradient(135deg, #fff5e6 0%, #fef3e8 100%);
-  border-left: 5px solid var(--lm-terracota);
-  padding: 2rem 2.5rem;
+  background: var(--lm-bg-card);
+  border: 1px solid var(--lm-border);
+  border-left: 3px solid var(--lm-terracota);
+  padding: 1.25rem 1.4rem;
   margin: 2.5rem 0 3rem 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  border-radius: 0 8px 8px 0;
+  box-shadow: none;
+  border-radius: var(--lm-radius-sm);
 }
 
 body.editorial-post .key-takeaways-title {
@@ -1451,6 +1488,10 @@ body.editorial-post .key-takeaways li {
   line-height: 1.6;
   color: var(--lm-text-main);
   counter-increment: takeaway-counter;
+}
+
+body.editorial-post .key-takeaways li:nth-child(n+4) {
+  display: none;
 }
 
 body.editorial-post .key-takeaways li::before {
@@ -1526,6 +1567,7 @@ body.editorial-post #TOC a:hover {
 
 /* --- IMÁGENES EN POSTS --- */
 body.editorial-post #quarto-document-content img {
+  width: auto;
   max-width: 100%;
   height: auto;
   display: block;
@@ -2828,10 +2870,53 @@ body.quarto-dark .share-minimal a {
 
 body.quarto-dark.editorial-post .key-takeaways {
   background: rgba(255, 255, 255, 0.05); 
-  
   box-shadow: none;
-  
-  border-left: 5px solid var(--lm-terracota);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid var(--lm-terracota);
+}
+
+@media (max-width: 680px) {
+  body.editorial-post #title-block-header,
+  body.editorial-post #quarto-document-content {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.editorial-post #title-block-header h1.title {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.6rem);
+    line-height: 1.04;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  body.editorial-post #title-block-header .description {
+    font-size: 1rem;
+  }
+
+  body.editorial-post #title-block-header .quarto-title-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  body.editorial-post #title-block-header .quarto-category:nth-of-type(n+3) {
+    display: none;
+  }
+
+  body.editorial-post #quarto-document-content figure,
+  body.editorial-post #quarto-document-content .quarto-figure,
+  body.editorial-post #quarto-document-content .cell-output-display:has(img),
+  body.editorial-post #quarto-document-content .cell-output-display:has(svg),
+  body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
 }
 
 /* Título de la caja ("HALLAZGOS PRINCIPALES") */
@@ -2853,6 +2938,116 @@ body.quarto-dark.editorial-post .key-takeaways li::before {
 /* Las negritas dentro del texto */
 body.quarto-dark.editorial-post .key-takeaways strong {
   color: #fff; 
+}
+
+.about-shell {
+  width: min(100% - 2rem, 1100px);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  border-bottom: 2px solid var(--lm-border-dark);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.about-mark {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--lm-border);
+  background: var(--lm-bg-card);
+  aspect-ratio: 1;
+  padding: 1.2rem;
+}
+
+.about-mark img {
+  width: min(100%, 16rem);
+  height: auto;
+}
+
+.about-intro h1 {
+  max-width: 8.6ch;
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.92;
+}
+
+.about-intro p,
+.about-manifesto p {
+  max-width: 42rem;
+  color: var(--lm-text-soft);
+  font-family: var(--lm-font-sans);
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.about-links,
+.about-routes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
+}
+
+.about-links a,
+.about-route {
+  min-height: var(--lm-control-min);
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--lm-border-dark);
+  border-radius: var(--lm-radius-xs);
+  color: var(--lm-text-main);
+  font-family: var(--lm-font-sans);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0 0.9rem;
+  text-decoration: none;
+}
+
+.about-links a:hover,
+.about-route:hover {
+  border-color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
+}
+
+.about-manifesto,
+.about-principles,
+.about-routes {
+  margin-top: clamp(2.2rem, 5vw, 4rem);
+}
+
+.about-manifesto h2,
+.about-routes h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.about-principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-principle {
+  border-top: 2px solid var(--lm-border-dark);
+  padding-top: 0.9rem;
+  color: var(--lm-text-soft);
+  font-family: var(--lm-font-sans);
+  line-height: 1.55;
+}
+
+.about-principle span {
+  display: block;
+  color: var(--lm-terracota);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.45rem;
 }
 
 .subscribe-shell {
@@ -2918,6 +3113,20 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   background: var(--lm-terracota);
 }
 
+.subscribe-preview {
+  max-width: 34rem;
+  margin: 0 auto 1.55rem;
+  border-top: 1px solid var(--lm-border-dark);
+  border-bottom: 1px solid var(--lm-border);
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.subscribe-preview p {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+}
+
 .subscribe-embed {
   display: block;
   width: min(100%, 480px);
@@ -2960,6 +3169,25 @@ body.quarto-dark.editorial-post .key-takeaways strong {
 }
 
 @media (max-width: 480px) {
+  .about-shell {
+    width: 100%;
+    padding: 2.4rem 1rem 3.5rem;
+  }
+
+  .about-hero,
+  .about-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mark {
+    width: min(100%, 14rem);
+  }
+
+  .about-intro h1 {
+    max-width: 9ch;
+    font-size: 3rem;
+  }
+
   .subscribe-shell {
     min-height: auto;
     padding-top: 3.5rem;
@@ -2972,6 +3200,7 @@ body.quarto-dark.editorial-post .key-takeaways strong {
 
   .subscribe-panel p,
   .subscribe-notes,
+  .subscribe-preview,
   .subscribe-fallback,
   .subscribe-privacy,
   .subscribe-embed {

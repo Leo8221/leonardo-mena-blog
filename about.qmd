@@ -1,59 +1,67 @@
 ---
 title: "Sobre mí"
-about:
-  template: solana
-  links:
-    - icon: twitter
-      text: X (Twitter)
-      href: https://x.com/leonardomena824
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/leonardo-mena-3b140724a/
-    - icon: github
-      text: Github
-      href: https://github.com/Leo8221
-    - icon: envelope
-      text: Email
-      href: mailto:leonardomena824@gmail.com
+pagetitle: "Sobre mí"
+description: "Enfoque editorial, principios y rutas de entrada del blog de economía aplicada."
+page-layout: custom
+section-divs: false
+toc: false
 ---
 
-## Sobre este blog
+::: {.about-shell}
 
-La economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.
+::: {.about-hero}
+::: {.about-mark}
+![](image/logo_leonardo_mena.svg){alt="LM Economía"}
+:::
 
-Este blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de **separar la señal del ruido**: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.
+::: {.about-intro}
+<span class="section-kicker">Economía aplicada RD</span>
 
-A veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar.
+# Escribir para entender mejor.
 
----
+Este blog ordena datos, argumentos y visuales sobre República Dominicana. No busca convertir la economía en jerga: busca separar señal, ruido y criterio.
 
-## Quién escribe
+::: {.about-links}
+[X](https://x.com/leonardomena824)
+[LinkedIn](https://www.linkedin.com/in/leonardo-mena-3b140724a/)
+[GitHub](https://github.com/Leo8221)
+[Email](mailto:leonardomena824@gmail.com)
+:::
+:::
+:::
 
-Soy **Leonardo Mena**, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.
+::: {.about-manifesto}
+## Manifiesto breve
 
-No escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.
+La economía está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial. Aquí escribo desde la curiosidad de quien todavía está tratando de entenderlo, con datos en mano y contexto dominicano.
 
-### Lo que ofrezco
+Soy Leonardo Mena, estudiante de Economía en la UASD. Escribir me obliga a buscar fuentes, revisar supuestos y confrontar lo que leo en los libros con lo que pasa en la calle.
+:::
 
-* **Transparencia:** Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.
-* **Claridad:** Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.
-* **Contexto:** Todos los análisis están pensados desde y para la República Dominicana.
+::: {.about-principles}
+::: {.about-principle}
+<span>01</span>
+**Distinguir dato, lectura y opinión.** No todo número habla por sí solo, pero no toda interpretación pesa lo mismo.
+:::
 
-Esto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano.
+::: {.about-principle}
+<span>02</span>
+**Mantener trazabilidad.** Cuando una conclusión depende de una fuente o una transformación, debe poder revisarse.
+:::
 
-### Principios editoriales
+::: {.about-principle}
+<span>03</span>
+**Escribir para pensar.** El texto no cierra conversaciones; intenta hacerlas más claras.
+:::
+:::
 
-- **Distinguir dato, lectura y opinión.** No todo número habla por sí solo, pero tampoco toda interpretación vale lo mismo.
-- **Mantener trazabilidad.** Cuando una conclusión depende de una fuente o una transformación, debe poder revisarse.
-- **Escribir para entender.** El texto no busca cerrar conversaciones, sino hacerlas más claras.
+::: {.about-routes}
+## Por dónde seguir
 
-### Temas que sigo de cerca
+[Atlas](atlas/index.html){.about-route}
+[Análisis](republica-habla-de.qmd){.about-route}
+[Visuales](republica-en-un-grafico.qmd){.about-route}
+[Fundamentos](fundamentos.qmd){.about-route}
+:::
 
-- Coyuntura macroeconómica dominicana.
-- Finanzas públicas, deuda, precios y política monetaria.
-- Productividad, MIPYMES, empleo y territorio.
-- Visualización de datos como herramienta de análisis económico.
-
-### Por dónde seguir
-
-Puedes empezar por [Atlas](atlas/index.html), revisar los [análisis de coyuntura](republica-habla-de.qmd) o explorar las [visualizaciones publicadas](republica-en-un-grafico.qmd).
+:::

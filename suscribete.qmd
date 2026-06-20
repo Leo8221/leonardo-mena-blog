@@ -20,6 +20,14 @@ Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos n
 - Avisos puntuales, no una rutina diaria de correos.
 :::
 
+::: {.subscribe-preview}
+<span class="section-kicker">Ejemplo de envío</span>
+
+**Una lectura breve:** qué cambió, por qué importa y dónde ver el gráfico o la fuente.
+
+**Tres enlaces:** el análisis nuevo, una vista del Atlas y una nota para seguir leyendo.
+:::
+
 <iframe class="subscribe-embed" title="Formulario de suscripción" src="https://leonardomena824.substack.com/embed" loading="lazy"></iframe>
 
 ::: {.subscribe-fallback}

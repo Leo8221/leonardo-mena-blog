@@ -1,0 +1,25 @@
+<script>
+(function () {
+  const body = document.body;
+  if (!body || !body.classList.contains("editorial-post")) return;
+
+  const content = document.getElementById("quarto-document-content");
+  const titleBlock = document.getElementById("title-block-header");
+  if (!content || !titleBlock || titleBlock.querySelector(".article-reading-time")) return;
+
+  const text = content.innerText || "";
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 230));
+  const label = `${minutes} min de lectura`;
+  const meta = document.createElement("div");
+  meta.className = "article-reading-time";
+  meta.textContent = label;
+
+  const metaBlock = titleBlock.querySelector(".quarto-title-meta");
+  if (metaBlock) {
+    metaBlock.insertAdjacentElement("afterend", meta);
+  } else {
+    titleBlock.appendChild(meta);
+  }
+})();
+</script>

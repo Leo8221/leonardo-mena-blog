@@ -52,20 +52,12 @@ website:
     logo-alt: "Leonardo Mena - inicio"
     background: "#ffffff"
     left:
-      - href: index.qmd
-        text: Inicio
-      - href: secciones.qmd
-        text: Secciones
       - text: Análisis
         menu:
           - text: "La República habla de"
             href: republica-habla-de.qmd
           - text: "La República en un gráfico"
             href: republica-en-un-grafico.qmd
-          - text: "Archivo completo"
-            href: archivo.qmd
-          - text: "Categorías"
-            href: categorias.qmd
       - href: atlas/index.html
         text: "Atlas"
         icon: graph-up
@@ -77,12 +69,20 @@ website:
             href: mitos-economicos.qmd
           - text: "Fundamentos"
             href: fundamentos.qmd
+      - text: Archivo
+        menu:
+          - text: "Archivo completo"
+            href: archivo.qmd
+          - text: "Categorías"
+            href: categorias.qmd
+          - text: "Secciones"
+            href: secciones.qmd
+      - href: about.qmd
+        text: "Sobre mí"
     right:
       - text: "Suscríbete"
         href: suscribete.qmd
         aria-label: "Suscribirse al boletín"
-      - href: about.qmd
-        text: "Sobre mí"
 
 
   # Configuración para compartir en redes

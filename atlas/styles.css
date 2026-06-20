@@ -8,6 +8,7 @@
 html {
   min-width: 320px;
   scroll-padding-top: 1rem;
+  overflow-x: clip;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   color: var(--ink);
   font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
+  overflow-x: clip;
 }
 
 button,
@@ -74,8 +76,15 @@ summary:focus-visible,
 
 .atlas-app {
   display: grid;
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   grid-template-columns: 300px minmax(0, 1fr);
+  overflow-x: clip;
+}
+
+.atlas-app[data-view="overview"] {
+  grid-template-columns: 92px minmax(0, 1fr);
 }
 
 .atlas-sidebar {
@@ -89,6 +98,26 @@ summary:focus-visible,
   background: color-mix(in srgb, var(--card) 88%, var(--panel));
   padding: 1rem;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.atlas-app[data-view="overview"] .atlas-sidebar {
+  align-items: center;
+  padding: 1rem 0.7rem;
+}
+
+.atlas-app[data-view="overview"] .brand-lockup {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.atlas-app[data-view="overview"] .brand-lockup span,
+.atlas-app[data-view="overview"] .brand-lockup div,
+.atlas-app[data-view="overview"] .search-box,
+.atlas-app[data-view="overview"] .filter-group,
+.atlas-app[data-view="overview"] .module-nav,
+.atlas-app[data-view="overview"] .sidebar-footer {
+  display: none;
 }
 
 .brand-lockup {
@@ -298,6 +327,8 @@ summary:focus-visible,
 
 .atlas-main {
   min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
   padding: 0.85rem clamp(1rem, 2.5vw, 1.75rem) 1.5rem;
 }
 
@@ -553,7 +584,7 @@ summary:focus-visible,
 }
 
 .module-card {
-  min-height: 240px;
+  min-height: 190px;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -1465,12 +1496,39 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .atlas-app[data-view="overview"] {
+    grid-template-columns: 1fr;
+  }
+
   .atlas-sidebar {
     position: fixed;
     z-index: 20;
     width: min(340px, calc(100vw - 32px));
     transform: translateX(-105%);
     transition: transform 0.2s ease;
+  }
+
+  .atlas-app[data-view="overview"] .atlas-sidebar {
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .atlas-app[data-view="overview"] .brand-lockup {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
+
+  .atlas-app[data-view="overview"] .brand-lockup div,
+  .atlas-app[data-view="overview"] .brand-lockup span,
+  .atlas-app[data-view="overview"] .search-box,
+  .atlas-app[data-view="overview"] .filter-group,
+  .atlas-app[data-view="overview"] .module-nav,
+  .atlas-app[data-view="overview"] .sidebar-footer {
+    display: revert;
+  }
+
+  .atlas-app[data-view="overview"] .module-nav {
+    display: grid;
   }
 
   body.sidebar-open .atlas-sidebar {
@@ -1560,12 +1618,21 @@ body.modal-open {
     justify-self: end;
     flex-wrap: nowrap;
     gap: 0.28rem;
+    min-width: 0;
   }
 
   .topbar-actions a {
     min-height: var(--lm-control-min);
     font-size: 0.72rem;
     padding: 0 0.52rem;
+  }
+
+  .topbar-actions a:nth-child(n+3) {
+    display: none;
+  }
+
+  .topbar-actions a:nth-child(n+2) {
+    display: none;
   }
 
   .mobile-atlas-nav {
@@ -1639,6 +1706,34 @@ body.modal-open {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+
+  .module-stage,
+  .overview-shell,
+  .overview-group,
+  .module-grid,
+  .module-card,
+  .stage-header,
+  .stage-header > div {
+    width: calc(100vw - 2.5rem);
+    max-width: calc(100vw - 2.5rem);
+  }
+
+  .module-card h3,
+  .module-card p,
+  .module-reading,
+  .module-card-footer,
+  .stage-header p {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .module-card-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
   }
 
   .metric-strip {

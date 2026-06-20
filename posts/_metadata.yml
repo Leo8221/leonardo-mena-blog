@@ -1,3 +1,8 @@
+format:
+  html:
+    body-class: editorial-post
+    include-after-body: article-enhancements.html
+
 comments: 
   giscus:
     repo: Leo8221/leonardo-mena-blog
