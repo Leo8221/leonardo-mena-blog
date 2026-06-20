@@ -12,6 +12,7 @@ project:
     - .nojekyll
     - robots.txt
     - tema_graficos.R
+    - assets/css/tokens.css
     - atlas/index.html
     - atlas/app.js
     - atlas/js/config.js
@@ -47,6 +48,7 @@ website:
   navbar:
     title: false
     logo: image/logo_leonardo_mena.svg
+    logo-alt: "Leonardo Mena - inicio"
     background: "#ffffff"
     left:
       - href: index.qmd
@@ -75,7 +77,7 @@ website:
           - text: "Fundamentos"
             href: fundamentos.qmd
     right:
-      - text: "<span style='background-color:#c86448; color:white; padding:5px 10px; border-radius:4px; font-weight:bold;'>Suscríbete</span>"
+      - text: "Suscríbete"
         href: suscribete.qmd
         aria-label: "Suscribirse al boletín"
       - href: about.qmd
@@ -89,15 +91,15 @@ website:
   # Pie de página
   page-footer:
     left: |
-      <p style="margin: 0;">© 2026 Leonardo Mena · Economía Aplicada</p>
+      <p class="footer-brand">© 2026 Leonardo Mena · Economía Aplicada</p>
     center: |
       <a href="https://leo8221.github.io/leonardo-mena-blog/about.html">Sobre m&iacute;</a> &middot;
       <a href="mailto:leonardomena824@gmail.com">Contacto</a>
     right: |
-      <a href="https://x.com/leonardomena824" target="_blank"><i class="bi bi-twitter"></i></a> · 
-      <a href="https://www.instagram.com/leonardomena824/" target="_blank"><i class="bi bi-instagram"></i></a> · 
-      <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank"><i class="bi bi-linkedin"></i></a> ·
-      <a href="https://github.com/Leo8221" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://x.com/leonardomena824" target="_blank" rel="noopener noreferrer" aria-label="X de Leonardo Mena"><i class="bi bi-twitter"></i></a> ·
+      <a href="https://www.instagram.com/leonardomena824/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Leonardo Mena"><i class="bi bi-instagram"></i></a> ·
+      <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Leonardo Mena"><i class="bi bi-linkedin"></i></a> ·
+      <a href="https://github.com/Leo8221" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Leonardo Mena"><i class="bi bi-github"></i></a>
 
 format:
   html:

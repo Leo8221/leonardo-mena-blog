@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
-
-:root {
-  --bg: #f7f7f4;
-  --card: #ffffff;
-  --panel: #eef1ed;
-  --ink: #191b1f;
-  --soft: #3f4752;
-  --muted: #6b7280;
-  --border: #dde3de;
-  --border-strong: #cbd5cf;
-  --terracotta: #c86448;
-  --terracotta-dark: #a04d35;
-  --olive: #6b7554;
-  --blue: #466a8f;
-  --teal: #2a9d8f;
-  --gold: #d4ac0d;
-  --red: #c74b4b;
-  --shadow: 0 16px 40px rgba(25, 27, 31, 0.08);
-}
+@import url("../assets/css/tokens.css");
 
 * {
   box-sizing: border-box;
@@ -84,8 +66,8 @@ a {
 
 .brand-lockup strong {
   font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.65rem;
-  line-height: 1;
+  font-size: 1.22rem;
+  line-height: 1.02;
 }
 
 .brand-lockup small {
@@ -221,6 +203,13 @@ a {
 
 .topbar-title {
   min-width: 0;
+}
+
+.topbar-title p {
+  margin: 0.12rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
 }
 
 .eyebrow {
@@ -1154,6 +1143,10 @@ body.modal-open {
 
   .atlas-topbar h1 {
     font-size: 1.32rem;
+  }
+
+  .topbar-title p {
+    display: none;
   }
 
   .topbar-actions {

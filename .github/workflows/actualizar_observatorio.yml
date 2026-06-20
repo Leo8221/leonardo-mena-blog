@@ -8,6 +8,7 @@ on:
       - "**.qmd"
       - "_quarto.yml"
       - "styles.css"
+      - "assets/**"
       - "atlas/**"
       - "datos/**"
       - "images/**"
@@ -81,6 +82,7 @@ jobs:
             any::ggrepel
             any::sf
             any::stringi
+            any::jsonlite
             any::tidyquant
             any::rnaturalearth
             any::rnaturalearthdata
@@ -91,6 +93,11 @@ jobs:
           rm -rf _freeze/
           rm -rf observatorio_cache/
           rm -rf *_cache/
+
+      - name: Regenerar datos del Atlas
+        run: |
+          Rscript atlas/scripts/build-article-visuals.R
+          node atlas/scripts/build-atlas-data.mjs
 
       - name: Renderizar proyecto
         run: quarto render --no-cache

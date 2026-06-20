@@ -3,54 +3,13 @@
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('assets/css/tokens.css');
 
 :root {
-  /* --- PALETA DE COLOR: MODO CLARO (Editorial Crema) --- */
-  --lm-bg-body: #f7f7f4;       /* Fondo principal */
-  --lm-bg-card: #ffffff;       /* Fondo de tarjetas */
-  --lm-bg-sec:  #eef1ed;       /* Fondos secundarios/inputs */
-  
-  --lm-text-main: #191b1f;     /* Negro editorial */
-  --lm-text-soft: #3f4752;     /* Gris de lectura */
-  --lm-text-muted:#6b7280;     /* Gris auxiliar */
-
-  /* --- ACENTOS --- */
-  --lm-terracota: #c86448;     /* Tu marca principal */
-  --lm-terracota-dark: #a04d35;
-  --lm-primario: #343a40;      /* Gris Plomo (Para números grandes) */
-  --lm-olive: #6b7554;         /* Verde acento */
-  
-  /* --- BORDES Y SOMBRAS --- */
-  --lm-border: #dde3de;
-  --lm-border-dark: #cbd5cf;
-  --shadow-soft: 0 2px 6px rgba(26, 21, 18, 0.06);
-  --shadow-md: 0 4px 16px rgba(26, 21, 18, 0.08);
-
   /* --- ICONOS SVG (Codificados una sola vez) --- */
   --icon-sun: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23c86448' viewBox='0 0 16 16'%3E%3Cpath d='M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z'/%3E%3C/svg%3E");
   
   --icon-moon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z'/%3E%3Cpath d='M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z'/%3E%3C/svg%3E");
-}
-
-/* --- MODO OSCURO (Slate Adaptado) --- */
-body.quarto-dark {
-  --lm-bg-body: #272b30;
-  --lm-bg-card: #1e2124;
-  --lm-bg-sec:  #32383e;
-  
-  --lm-text-main: #e8e6e3;
-  --lm-text-soft: #b0b3b8;
-  --lm-text-muted:#7a7f85;
-  
-  --lm-terracota: #e07a5f;     /* Más brillante para fondo oscuro */
-  --lm-terracota-dark: #ff9f85;
-  --lm-primario: #e8e6e3;      /* Blanco hueso para números */
-  
-  --lm-border: #3e444a;
-  --lm-border-dark: #4f575e;
-  
-  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================================================
@@ -187,6 +146,37 @@ body.quarto-dark .navbar .navbar-logo.dark-content {
   color: var(--lm-terracota) !important;
 }
 
+.navbar-nav .nav-link:focus-visible,
+.dropdown-item:focus-visible,
+.navbar-toggler:focus-visible,
+.quarto-color-scheme-toggle:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--lm-terracota) !important;
+  outline-offset: 3px;
+}
+
+#quarto-header .navbar-nav .nav-link[href$="suscribete.html"] {
+  min-height: var(--lm-control-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--lm-terracota);
+  border-radius: var(--lm-radius-xs);
+  background: var(--lm-terracota);
+  color: #fff !important;
+  font-weight: 800;
+  padding-inline: 0.85rem;
+}
+
+#quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:hover,
+#quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:focus-visible {
+  background: var(--lm-terracota-dark);
+  border-color: var(--lm-terracota-dark);
+  color: #fff !important;
+}
+
 /* Aplica tanto al navbar del blog como al header del dashboard */
 .navbar .quarto-color-scheme-toggle,
 .quarto-dashboard-header .quarto-color-scheme-toggle {
@@ -318,6 +308,13 @@ body.quarto-dark .quarto-dashboard-header .quarto-color-scheme-toggle {
     color: var(--lm-text-main) !important;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
+  }
+
+  #quarto-header .navbar-nav .nav-link[href$="suscribete.html"] {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.45rem;
+    padding: 0 1rem;
   }
 
   #quarto-header .dropdown-menu {
@@ -928,6 +925,10 @@ footer, .nav-footer {
     border-top: 1px solid var(--lm-border-dark);
     background: var(--lm-bg-card);
     color: var(--lm-text-muted);
+}
+
+.footer-brand {
+    margin: 0;
 }
 /* ==========================================================================
    6. RESPONSIVE & MOBILE FIXES

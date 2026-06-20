@@ -10,11 +10,12 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - `quarto render` falla dentro del sandbox por permisos al ejecutar `dart-sass`, pero compila fuera del sandbox.
 - La compilacion local usa Quarto `1.8.26`; el `docs/` publicado venia de Quarto `1.9.38`, por lo que el render local produce churn grande de HTML, hashes y librerias. Ese churn se guardo en stash como `baseline quarto 1.8 docs render`.
 - Atlas ya esta modularizado en `atlas/js/`, con datos generados y guia basica, pero aun no cumple todas las fases del goal.
-- El sistema visual del blog sigue concentrado en `styles.css`; Atlas usa tokens propios en `atlas/styles.css`.
-- `_quarto.yml` todavia tiene CTA de suscripcion con HTML inline.
+- El sistema visual del blog sigue concentrado en `styles.css`, pero ya existe una fuente compartida de tokens en `assets/css/tokens.css`.
+- Atlas ya consume los alias de marca desde `assets/css/tokens.css` en vez de declarar su propia paleta base.
+- `_quarto.yml` ya no tiene CTA de suscripcion con HTML inline.
 - `share-buttons-auto.html` ya no contiene logs de depuracion ni reintentos.
 - `reading-progress.html` ya respeta `prefers-reduced-motion` y usa `requestAnimationFrame`.
-- El workflow de publicacion ahora se dispara en `push` a `main` para fuentes del sitio y fija Quarto `1.9.38`, igual que la salida actual en `docs/`.
+- El workflow de publicacion ahora se dispara en `push` a `main` para fuentes del sitio, regenera datos del Atlas antes del render y fija Quarto `1.9.38`, igual que la salida actual en `docs/`.
 
 ## Objetivos
 
@@ -60,6 +61,11 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Workflow actualizado para publicar en push con Quarto `1.9.38`.
 - [x] Validacion browser movil de portada: sin overflow horizontal y header compacto.
 - [x] Validacion browser movil/escritorio de articulo: compartir, progreso, consola limpia y fallback de copia manual.
+- [x] Creado `DESIGN-SYSTEM.md`.
+- [x] Creado `assets/css/tokens.css` como fuente compartida para blog y Atlas.
+- [x] Eliminado CTA inline del navbar; ahora se estiliza desde CSS.
+- [x] Footer sin estilo inline y enlaces externos con `rel`.
+- [x] Workflow actualizado para regenerar datos del Atlas antes de publicar y observar cambios en `assets/**`.
 - [ ] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
 - [ ] Consolidar documentacion duplicada de Atlas (`README.md`, `GUIDE.md`, `GUIA.md`).
 
@@ -75,9 +81,12 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - `about.qmd`
 - `suscribete.qmd`
 - `styles.css`
+- `assets/css/tokens.css`
+- `DESIGN-SYSTEM.md`
 - `reading-progress.html`
 - `share-buttons-auto.html`
 - `tema_graficos.R`
+- `.github/workflows/actualizar_observatorio.yml`
 - `atlas/index.html`
 - `atlas/styles.css`
 - `atlas/app.js`
