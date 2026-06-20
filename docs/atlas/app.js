@@ -21,11 +21,16 @@ const state = {
 const els = {
   nav: document.getElementById("module-nav"),
   search: document.getElementById("atlas-search"),
+  searchClear: document.getElementById("atlas-search-clear"),
+  resultCount: document.getElementById("atlas-result-count"),
   metricStrip: document.getElementById("metric-strip"),
   mobileNav: document.getElementById("mobile-module-nav"),
   stage: document.getElementById("module-stage"),
-  menuToggle: document.getElementById("menu-toggle")
+  menuToggle: document.getElementById("menu-toggle"),
+  sidebar: document.getElementById("atlas-sidebar")
 };
+
+let sidebarReturnFocus = null;
 
 const OVERVIEW_GROUPS = [
   {
@@ -79,14 +84,27 @@ async function boot() {
 function bindEvents() {
   els.search.addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
+    syncSearchState();
     renderNavigation();
+    renderMobileNavigation();
     renderOverviewIfActive();
+  });
+
+  els.searchClear.addEventListener("click", () => {
+    state.query = "";
+    els.search.value = "";
+    syncSearchState();
+    renderNavigation();
+    renderMobileNavigation();
+    renderOverviewIfActive();
+    els.search.focus();
   });
 
   document.querySelectorAll(".filter-pill").forEach((button) => {
     button.addEventListener("click", () => {
       state.family = button.dataset.filter;
       syncFilterState();
+      syncSearchState();
       renderNavigation();
       renderMobileNavigation();
       renderOverviewIfActive();
@@ -94,8 +112,23 @@ function bindEvents() {
   });
 
   els.menuToggle.addEventListener("click", () => {
-    const isOpen = document.body.classList.toggle("sidebar-open");
-    els.menuToggle.setAttribute("aria-expanded", String(isOpen));
+    if (document.body.classList.contains("sidebar-open")) {
+      closeSidebar({ restoreFocus: true });
+    } else {
+      openSidebar();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.body.classList.contains("sidebar-open")) {
+      closeSidebar({ restoreFocus: true });
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("sidebar-open")) return;
+    if (els.sidebar.contains(event.target) || els.menuToggle.contains(event.target)) return;
+    closeSidebar({ restoreFocus: false });
   });
 
   window.addEventListener("resize", debounce(() => {
@@ -111,6 +144,8 @@ function bindEvents() {
 }
 
 function render() {
+  syncFilterState();
+  syncSearchState();
   renderMetrics();
   renderNavigation();
   renderMobileNavigation();
@@ -119,7 +154,7 @@ function render() {
 
 function renderMetrics() {
   els.metricStrip.innerHTML = state.data.metrics.map((metric) => `
-    <button class="metric-card" type="button" data-module="${metric.module}" data-tone="${metric.tone}">
+    <button class="metric-card ${state.active === metric.module ? "is-active" : ""}" type="button" data-module="${metric.module}" data-tone="${metric.tone}" aria-label="${escapeHtml(`${metric.label}: ${metric.value}. ${metric.delta}. ${metric.meta || ""}`)}"${state.active === metric.module ? ' aria-current="page"' : ""}>
       <small>${escapeHtml(metric.label)}</small>
       <strong>${escapeHtml(metric.value)}</strong>
       <span>${escapeHtml(metric.delta)}</span>
@@ -132,49 +167,87 @@ function renderMetrics() {
   });
 }
 
+function navigationModules() {
+  const filtered = filteredModules();
+  const activeModule = state.active !== "overview" ? findModule(state.active) : null;
+  const openOutsideFilters = Boolean(activeModule && !filtered.some((module) => module.id === activeModule.id));
+  return {
+    filtered,
+    openOutsideFilters,
+    modules: openOutsideFilters ? [activeModule, ...filtered] : filtered
+  };
+}
+
+function renderNavEmpty() {
+  return `
+    <div class="nav-empty">
+      <strong>Sin coincidencias</strong>
+      <span>Ajusta la búsqueda o vuelve al Atlas completo.</span>
+      <button class="nav-reset" type="button" data-action="reset-filters">Ver todo</button>
+    </div>
+  `;
+}
+
 function renderNavigation() {
-  const modules = filteredModules();
+  const nav = navigationModules();
   const buttons = [
-    `<button class="module-button ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview">
+    `<button class="module-button ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview"${state.active === "overview" ? ' aria-current="page"' : ""}>
       <small>Atlas</small>
       <strong>Portada</strong>
       <span>${visibleModules().length} vistas</span>
     </button>`,
-    ...modules.map((module) => `
-      <button class="module-button ${state.active === module.id ? "is-active" : ""}" type="button" data-module="${module.id}">
+    ...nav.modules.map((module) => {
+      const outsideFilter = nav.openOutsideFilters && module.id === state.active;
+      return `
+      <button class="module-button ${state.active === module.id ? "is-active" : ""} ${outsideFilter ? "is-outside-filter" : ""}" type="button" data-module="${module.id}"${state.active === module.id ? ' aria-current="page"' : ""}>
         <small>${escapeHtml(module.family)}</small>
         <strong>${escapeHtml(module.title)}</strong>
-        <span>${escapeHtml(module.topic)}</span>
+        <span>${escapeHtml(outsideFilter ? "Vista abierta" : module.topic)}</span>
       </button>
-    `)
+    `;
+    })
   ];
+  const empty = nav.filtered.length === 0 ? renderNavEmpty() : "";
 
-  els.nav.innerHTML = buttons.join("");
+  els.nav.innerHTML = buttons.join("") + empty;
   els.nav.querySelectorAll(".module-button").forEach((button) => {
     button.addEventListener("click", () => setActive(button.dataset.module));
   });
+  bindResetFilterButtons(els.nav);
 }
 
 function renderMobileNavigation() {
   if (!els.mobileNav) return;
-  const modules = filteredModules();
+  const nav = navigationModules();
   const buttons = [
-    `<button class="mobile-module-card ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview">
+    `<button class="mobile-module-card ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview"${state.active === "overview" ? ' aria-current="page"' : ""}>
       <small>Atlas</small>
       <strong>Portada</strong>
     </button>`,
-    ...modules.map((module) => `
-      <button class="mobile-module-card ${state.active === module.id ? "is-active" : ""}" type="button" data-module="${module.id}">
+    ...nav.modules.map((module) => {
+      const outsideFilter = nav.openOutsideFilters && module.id === state.active;
+      return `
+      <button class="mobile-module-card ${state.active === module.id ? "is-active" : ""} ${outsideFilter ? "is-outside-filter" : ""}" type="button" data-module="${module.id}"${state.active === module.id ? ' aria-current="page"' : ""}>
         <small>${escapeHtml(module.family)}</small>
-        <strong>${escapeHtml(module.title)}</strong>
+        <strong>${escapeHtml(outsideFilter ? `${module.title} · abierta` : module.title)}</strong>
       </button>
-    `)
+    `;
+    }),
+    nav.filtered.length === 0 ? `
+      <button class="mobile-module-card is-reset" type="button" data-action="reset-filters">
+        <small>Filtro</small>
+        <strong>Ver todo</strong>
+      </button>
+    ` : ""
   ];
 
   els.mobileNav.innerHTML = buttons.join("");
   els.mobileNav.querySelectorAll(".mobile-module-card").forEach((button) => {
-    button.addEventListener("click", () => setActive(button.dataset.module));
+    if (button.dataset.module) {
+      button.addEventListener("click", () => setActive(button.dataset.module));
+    }
   });
+  bindResetFilterButtons(els.mobileNav);
   const activeButton = els.mobileNav.querySelector(".mobile-module-card.is-active");
   if (activeButton && window.matchMedia("(max-width: 640px)").matches) {
     window.requestAnimationFrame(() => {
@@ -1047,25 +1120,34 @@ function setActive(moduleId) {
   } else {
     history.replaceState(null, "", `#${next}`);
   }
-  document.body.classList.remove("sidebar-open");
-  els.menuToggle.setAttribute("aria-expanded", "false");
+  closeSidebar({ restoreFocus: false });
+  syncMetricState();
+  syncSearchState();
   renderNavigation();
   renderMobileNavigation();
   renderStage();
 }
 
-function hydrateModuleActions() {
-  els.stage.querySelectorAll('[data-action="reset-filters"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      state.query = "";
-      state.family = "all";
-      if (els.search) els.search.value = "";
-      syncFilterState();
-      renderNavigation();
-      renderMobileNavigation();
-      renderStage();
-    });
+function bindResetFilterButtons(root) {
+  root.querySelectorAll('[data-action="reset-filters"]').forEach((button) => {
+    button.addEventListener("click", () => resetAtlasFilters({ focusSearch: true }));
   });
+}
+
+function resetAtlasFilters({ focusSearch = false } = {}) {
+  state.query = "";
+  state.family = "all";
+  if (els.search) els.search.value = "";
+  syncFilterState();
+  syncSearchState();
+  renderNavigation();
+  renderMobileNavigation();
+  renderStage();
+  if (focusSearch && els.search) els.search.focus();
+}
+
+function hydrateModuleActions() {
+  bindResetFilterButtons(els.stage);
 
   els.stage.querySelectorAll('[data-action="copy-link"]').forEach((button) => {
     button.addEventListener("click", async () => {
@@ -1100,6 +1182,51 @@ function syncFilterState() {
     item.classList.toggle("is-active", active);
     item.setAttribute("aria-pressed", String(active));
   });
+}
+
+function syncSearchState() {
+  if (!state.data || !els.resultCount) return;
+  const total = visibleModules().length;
+  const filtered = filteredModules();
+  const activeModule = state.active !== "overview" ? findModule(state.active) : null;
+  const activeOutsideFilters = Boolean(activeModule && !filtered.some((module) => module.id === activeModule.id));
+  const hasQuery = Boolean(state.query);
+  if (els.searchClear) els.searchClear.hidden = !hasQuery;
+  const countText = !hasQuery && state.family === "all" ? `${total} vistas` : `${filtered.length} de ${total} vistas`;
+  els.resultCount.textContent = activeOutsideFilters ? `${countText}. Abierta fuera del filtro.` : countText;
+}
+
+function syncMetricState() {
+  if (!els.metricStrip) return;
+  els.metricStrip.querySelectorAll(".metric-card").forEach((card) => {
+    const active = card.dataset.module === state.active;
+    card.classList.toggle("is-active", active);
+    if (active) {
+      card.setAttribute("aria-current", "page");
+    } else {
+      card.removeAttribute("aria-current");
+    }
+  });
+}
+
+function openSidebar() {
+  sidebarReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  document.body.classList.add("sidebar-open");
+  els.menuToggle.setAttribute("aria-expanded", "true");
+  if (window.matchMedia("(max-width: 920px)").matches) {
+    window.requestAnimationFrame(() => {
+      const target = els.search || els.sidebar.querySelector("button, a, input");
+      if (target) target.focus();
+    });
+  }
+}
+
+function closeSidebar({ restoreFocus = false } = {}) {
+  document.body.classList.remove("sidebar-open");
+  els.menuToggle.setAttribute("aria-expanded", "false");
+  if (restoreFocus && sidebarReturnFocus) {
+    sidebarReturnFocus.focus();
+  }
 }
 
 function slugify(value) {
