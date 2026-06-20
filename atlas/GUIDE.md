@@ -13,6 +13,7 @@ algo no está listo, no se muestra.
 - `atlas/scripts/build-article-visuals.R`: transforma datos nacidos de artículos
   publicados.
 - `atlas/app.js`: estructura de vistas, navegación, filtros e hidratación.
+  También define `moduleDatasets()`, que alimenta tablas y CSV.
 - `atlas/js/renderers.js`: motores de gráficos, mapas y canvas.
 - `atlas/js/interactions.js`: enlace, PNG, modales y pantalla completa.
 - `atlas/styles.css`: sistema visual propio del Atlas, usando tokens
@@ -74,9 +75,12 @@ que las métricas apunten a módulos visibles y conserva `question`, `summary`,
 4. Registra el módulo en `atlas/data/atlas-source.json`.
 5. Usa `visible: false` o `status: "Borrador"` hasta que esté listo.
 6. Reutiliza un renderer existente antes de crear uno nuevo.
-7. Corre los scripts de generación y el render.
-8. Revisa `/atlas/` en desktop y móvil.
-9. Toca al menos un mapa, una burbuja, una barra y un gráfico ampliado.
+7. Agrega el dataset de respaldo en `moduleDatasets()` para que el gráfico
+   tenga tabla y CSV.
+8. Corre los scripts de generación y el render.
+9. Revisa `/atlas/` en desktop y móvil.
+10. Toca al menos un mapa, una burbuja, una barra, un CSV y un gráfico
+    ampliado.
 
 ## Tipos disponibles
 
@@ -173,6 +177,28 @@ chartControls("", chartExpandButton("id-del-canvas"))
 Después agrega el caso en `redrawExpandedChart()` para redibujar el gráfico en
 el modal y conservar la interacción.
 
+### Tabla y CSV
+
+Cada gráfico Canvas debe tener una alternativa tabular. El lugar único para
+declararla es `moduleDatasets()` en `atlas/app.js`:
+
+```js
+dataset("mi-dataset", "Nombre visible", rows, [
+  col("periodo", "Periodo"),
+  col("valor", "Valor")
+])
+```
+
+El Atlas genera:
+
+- una tabla compacta al final del módulo;
+- CSV por dataset;
+- CSV completo por módulo;
+- columnas de metadatos: módulo, dataset, fuente, corte y fecha de generación.
+
+Si el gráfico cambia por un filtro o toggle, el dataset debe reflejar la vista
+activa sin perder el dato original.
+
 ## Datos desde artículos
 
 Usa este flujo cuando un artículo publicado tiene datos que merecen una pieza
@@ -247,4 +273,6 @@ Los datos públicos deben estar en UTF-8. Si trabajas en R desde Windows:
 5. `quarto render`
 6. Revisar `/atlas/` en desktop.
 7. Revisar `/atlas/` en móvil.
-8. Confirmar que las secciones incompletas sigan ocultas.
+8. Descargar al menos un CSV.
+9. Abrir un gráfico ampliado y probar Escape/Tab.
+10. Confirmar que las secciones incompletas sigan ocultas.

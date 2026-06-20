@@ -388,6 +388,7 @@ function renderStageActions(canExport) {
     <div class="stage-actions">
       <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Enlace</button>
       ${canExport ? `<button class="stage-action" type="button" data-action="export-chart" title="Descargar gráfico visible">PNG</button>` : ""}
+      ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">CSV</button>` : ""}
     </div>
   `;
 }
@@ -412,6 +413,7 @@ function renderModuleBody(module) {
       ${body}
       ${renderSourceCard(module)}
     </div>
+    ${renderDataAppendix(module)}
   `;
 }
 
@@ -479,6 +481,326 @@ function sourceRelatedLabel(href) {
   if (value.includes("republica-en-un-grafico")) return "Visuales";
   if (value.includes("archivo")) return "Archivo";
   return "Abrir";
+}
+
+function renderDataAppendix(module) {
+  const datasets = moduleDatasets(module).filter((dataset) => dataset.rows.length > 0);
+  if (!datasets.length) return "";
+
+  return `
+    <section class="data-appendix" aria-label="Datos tabulares del módulo">
+      <div class="data-appendix-head">
+        <div>
+          <span>Datos</span>
+          <h3>Vista tabular</h3>
+        </div>
+        <button class="stage-action" type="button" data-action="export-csv">CSV completo</button>
+      </div>
+      <div class="data-table-grid">
+        ${datasets.map((dataset, index) => renderDatasetCard(module, dataset, index)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderDatasetCard(module, dataset, index) {
+  const rows = dataset.rows;
+  const columns = datasetColumns(dataset);
+  const visibleRows = rows.slice(0, dataset.visibleRows || 12);
+  const remaining = rows.length - visibleRows.length;
+  return `
+    <details class="data-table-card" ${index === 0 ? "open" : ""}>
+      <summary>
+        <span>
+          <strong>${escapeHtml(dataset.title)}</strong>
+          ${dataset.note ? `<small>${escapeHtml(dataset.note)}</small>` : ""}
+        </span>
+      </summary>
+      <div class="data-table-actions">
+        <button class="data-download" type="button" data-action="download-dataset" data-dataset="${escapeHtml(dataset.id)}">CSV</button>
+      </div>
+      <div class="data-table-wrap">
+        <table>
+          <caption class="sr-only">${escapeHtml(module.title)}: ${escapeHtml(dataset.title)}</caption>
+          <thead>
+            <tr>${columns.map((column) => `<th scope="col">${escapeHtml(column.label)}</th>`).join("")}</tr>
+          </thead>
+          <tbody>
+            ${visibleRows.map((row) => `
+              <tr>
+                ${columns.map((column) => `<td>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+      <p class="data-table-note">
+        ${visibleRows.length} de ${rows.length} filas${remaining > 0 ? ". Descarga el CSV para ver el conjunto completo." : "."}
+      </p>
+    </details>
+  `;
+}
+
+function moduleDatasets(module) {
+  const series = state.data.series;
+  const geoRows = (features, fields) => {
+    return (features || []).map((feature) => pickFields(feature.properties || {}, fields));
+  };
+
+  const datasets = {
+    macro: () => [
+      dataset("macro", "Indicadores macro", series.macro, [
+        col("period", "Periodo"),
+        col("dolar", "Dólar"),
+        col("inflacion", "Inflación"),
+        col("imae", "IMAE"),
+        col("tpm", "TPM")
+      ], `Serie activa: ${macroMetricLabel()}`)
+    ],
+    external: () => [
+      dataset("presion-externa", "Presión externa", series.external, [
+        col("period", "Periodo"),
+        col("pressure", "Índice")
+      ]),
+      dataset("drivers-externos", "Drivers externos", series.drivers, [
+        col("driver", "Driver"),
+        col("value", "Valor")
+      ])
+    ],
+    sectors: () => [
+      dataset("sectores", "Sensibilidad sectorial", series.sectors, [
+        col("sector", "Sector"),
+        col("pressure", "Presión"),
+        col("driver", "Driver"),
+        col("direction", "Señal")
+      ])
+    ],
+    trade: () => [
+      dataset("socios", "Socios comerciales", series.trade.partners, [
+        col("name", "Socio"),
+        col("exports", "Exporta"),
+        col("imports", "Importa"),
+        col("balance", "Balance"),
+        col("opportunity", "Oportunidad")
+      ], `Ranking activo: ${tradeMetricLabel()}`),
+      dataset("canasta", "Canasta exportadora", series.trade.products, [
+        col("name", "Producto"),
+        col("share", "Share"),
+        col("complexity", "Complejidad"),
+        col("signal", "Señal")
+      ]),
+      dataset("flujos", "Flujos recientes", series.trade.flows, [
+        col("period", "Periodo"),
+        col("exports", "Exporta"),
+        col("imports", "Importa")
+      ])
+    ],
+    labor: () => [
+      dataset("resultados", "Resultados laborales", series.labor.outcomes, [
+        col("group", "Grupo"),
+        col("employment", "Empleo"),
+        col("informality", "Informalidad"),
+        col("wageIndex", "Salario")
+      ], `Métrica activa: ${laborMetricLabel()}`),
+      dataset("sectores", "Empleo por sector", series.labor.sectors, [
+        col("name", "Sector"),
+        col("jobs", "Empleo"),
+        col("wageIndex", "Salario")
+      ]),
+      dataset("tendencia", "Tendencia laboral", series.labor.trend, [
+        col("period", "Periodo"),
+        col("employment", "Empleo"),
+        col("realWage", "Salario real")
+      ])
+    ],
+    prices: () => [
+      dataset("inflacion", "Inflación", series.prices.timeline, [
+        col("period", "Periodo"),
+        col("headline", "General"),
+        col("core", "Subyacente")
+      ]),
+      dataset("rubros", "Rubros", series.prices.components, [
+        col("component", "Rubro"),
+        col("contribution", "Contribución"),
+        col("pressure", "Presión")
+      ]),
+      dataset("traspaso", "Canales de traspaso", series.prices.passThrough, [
+        col("channel", "Canal"),
+        col("value", "Valor"),
+        col("note", "Nota")
+      ])
+    ],
+    territory: () => [
+      dataset("mapa", "Mapa territorial", territoryMapRows().map((row) => pickFields(row, [
+        "province", "business_density", "opportunity", "businesses", "population"
+      ])), [
+        col("province", "Provincia"),
+        col("business_density", "Densidad"),
+        col("opportunity", "Oportunidad"),
+        col("businesses", "Empresas"),
+        col("population", "Población")
+      ], `Mapa activo: ${territoryMapMetricLabel()}`),
+      dataset("provincias", "Provincias", territoryRows(), [
+        col("province", "Provincia"),
+        col("region", "Región"),
+        col("opportunity", "Oportunidad"),
+        col("infrastructure", "Infraestructura"),
+        col("labor", "Trabajo"),
+        col("market", "Mercado")
+      ], `Región activa: ${state.territoryRegion === "all" ? "Todas" : state.territoryRegion}`)
+    ],
+    mipymes: () => [
+      dataset("finanzas", "Acceso y productividad", series.mipymes.finance, [
+        col("segment", "Segmento"),
+        col("access", "Acceso"),
+        col("formalization", "Formalidad"),
+        col("productivity", "Productividad")
+      ]),
+      dataset("barreras", "Barreras principales", series.mipymes.barriers, [
+        col("barrier", "Barrera"),
+        col("value", "Valor")
+      ]),
+      dataset("escalera", "Escalera productiva", series.mipymes.ladder, [
+        col("stage", "Etapa"),
+        col("focus", "Foco"),
+        col("score", "Puntaje")
+      ])
+    ],
+    visualLab: () => {
+      if (!state.articleVisuals) return [];
+      const mapConfig = visualMapConfig();
+      const mapRows = geoRows(mapConfig.features, visualMapFields());
+      return [
+        dataset("mapa-articulo", `Mapa: ${mapConfig.label}`, mapRows, visualMapColumns(), `Vista activa: ${visualMapLabel()}`),
+        dataset("turismo-motivos", "Turismo por motivo", state.articleVisuals.tourism.treemap, [
+          col("motivo", "Motivo"),
+          col("porcentaje", "%"),
+          col("categoria", "Categoría")
+        ]),
+        dataset("empleo-alquiler", "Empleo formal y alquiler", state.articleVisuals.transport.rentEmployment, [
+          col("province", "Provincia"),
+          col("category", "Categoría"),
+          col("jobs", "Empleos"),
+          col("employment_share", "Empleo formal"),
+          col("median_rent_thousand", "Alquiler")
+        ]),
+        dataset("deuda", "Servicio de deuda", state.articleVisuals.debt.service, [
+          col("anio", "Año"),
+          col("principal", "Principal"),
+          col("interest", "Intereses"),
+          col("commissions", "Comisiones"),
+          col("service", "Servicio"),
+          col("interest_share", "Intereses / servicio")
+        ])
+      ];
+    }
+  }[module.chart];
+
+  return datasets ? datasets() : [];
+}
+
+function dataset(id, title, rows, columns, note = "") {
+  return {
+    id,
+    title,
+    note,
+    columns,
+    rows: Array.isArray(rows) ? rows.filter(Boolean) : []
+  };
+}
+
+function col(field, label) {
+  return { field, label };
+}
+
+function datasetColumns(dataset) {
+  if (Array.isArray(dataset.columns) && dataset.columns.length) return dataset.columns;
+  const fields = new Set();
+  dataset.rows.forEach((row) => Object.keys(row || {}).forEach((key) => fields.add(key)));
+  return [...fields].map((field) => col(field, field));
+}
+
+function pickFields(row, fields) {
+  return fields.reduce((result, field) => {
+    result[field] = row?.[field];
+    return result;
+  }, {});
+}
+
+function formatTableCell(value) {
+  if (value === null || value === undefined || value === "") return "—";
+  if (typeof value === "number") return formatNumber(value);
+  return String(value);
+}
+
+function macroMetricLabel() {
+  return {
+    dolar: "Dólar",
+    inflacion: "Inflación",
+    imae: "IMAE",
+    tpm: "TPM"
+  }[state.macroMetric] || state.macroMetric;
+}
+
+function tradeMetricLabel() {
+  return {
+    exports: "Exporta",
+    imports: "Importa",
+    opportunity: "Oportunidad",
+    balance: "Balance"
+  }[state.tradeMetric] || state.tradeMetric;
+}
+
+function laborMetricLabel() {
+  return {
+    employment: "Empleo",
+    informality: "Informalidad",
+    wageIndex: "Salario"
+  }[state.laborMetric] || state.laborMetric;
+}
+
+function territoryMapMetricLabel() {
+  return {
+    business_density: "Densidad empresarial",
+    opportunity: "Oportunidad"
+  }[state.territoryMapMetric] || state.territoryMapMetric;
+}
+
+function visualMapLabel() {
+  return {
+    business: "Empresas",
+    mipymes: "MiPyMES",
+    tourism: "Turismo"
+  }[state.visualMap] || state.visualMap;
+}
+
+function visualMapFields() {
+  return {
+    business: ["province", "business_density", "opportunity", "businesses", "population"],
+    mipymes: ["region", "pct_micro", "pct_informal"],
+    tourism: ["country", "beach_pct"]
+  }[state.visualMap];
+}
+
+function visualMapColumns() {
+  return {
+    business: [
+      col("province", "Provincia"),
+      col("business_density", "Densidad"),
+      col("opportunity", "Oportunidad"),
+      col("businesses", "Empresas"),
+      col("population", "Población")
+    ],
+    mipymes: [
+      col("region", "Región"),
+      col("pct_micro", "Microempresas"),
+      col("pct_informal", "Informalidad")
+    ],
+    tourism: [
+      col("country", "País"),
+      col("beach_pct", "Sol y playa")
+    ]
+  }[state.visualMap];
 }
 
 function renderMacro() {
@@ -1171,9 +1493,101 @@ function hydrateModuleActions() {
     });
   });
 
+  els.stage.querySelectorAll('[data-action="export-csv"]').forEach((button) => {
+    button.addEventListener("click", () => {
+      const module = findModule(state.active);
+      if (!module) {
+        flashButton(button, "Sin datos");
+        return;
+      }
+      const datasets = moduleDatasets(module).filter((dataset) => dataset.rows.length > 0);
+      if (!datasets.length) {
+        flashButton(button, "Sin datos");
+        return;
+      }
+      downloadDatasetsCsv(module, datasets);
+      flashButton(button, "Descargado");
+    });
+  });
+
+  els.stage.querySelectorAll('[data-action="download-dataset"]').forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const module = findModule(state.active);
+      const datasetId = button.dataset.dataset;
+      const dataset = module ? moduleDatasets(module).find((item) => item.id === datasetId) : null;
+      if (!module || !dataset) {
+        flashButton(button, "Sin datos");
+        return;
+      }
+      downloadDatasetsCsv(module, [dataset]);
+      flashButton(button, "OK");
+    });
+  });
+
   els.stage.querySelectorAll('[data-action="expand-chart"]').forEach((button) => {
     button.addEventListener("click", () => openChartFullscreen(button.dataset.canvas));
   });
+}
+
+function downloadDatasetsCsv(module, datasets) {
+  const csv = datasetsToCsv(module, datasets);
+  const suffix = datasets.length === 1 ? datasets[0].id : "datos";
+  const generated = String(state.data.generatedAt || state.data.updated || "").slice(0, 10) || "sin-fecha";
+  downloadTextFile(csv, `atlas-${module.id}-${suffix}-${generated}.csv`, "text/csv;charset=utf-8");
+}
+
+function datasetsToCsv(module, datasets) {
+  const info = module.sourceInfo || {};
+  const metaColumns = [
+    "module_id",
+    "module_title",
+    "dataset",
+    "source",
+    "corte",
+    "generated_at"
+  ];
+  const fields = new Set();
+  datasets.forEach((dataset) => {
+    datasetColumns(dataset).forEach((column) => fields.add(column.field));
+  });
+  const dataFields = [...fields];
+  const rows = [metaColumns.concat(dataFields).map(csvEscape).join(",")];
+
+  datasets.forEach((dataset) => {
+    dataset.rows.forEach((row) => {
+      const values = [
+        module.id,
+        module.title,
+        dataset.title,
+        info.label || module.source || "",
+        info.updated || "",
+        state.data.generatedAt || ""
+      ].concat(dataFields.map((field) => row[field]));
+      rows.push(values.map(csvEscape).join(","));
+    });
+  });
+
+  return rows.join("\r\n");
+}
+
+function csvEscape(value) {
+  if (value === null || value === undefined) return "";
+  const text = Array.isArray(value) ? value.join("; ") : String(value);
+  return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
+function downloadTextFile(content, filename, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
 function syncFilterState() {

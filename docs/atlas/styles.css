@@ -1048,6 +1048,15 @@ body.modal-open {
   overflow: hidden;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .roadmap-panel {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1080,6 +1089,133 @@ body.modal-open {
 .ladder-list {
   display: grid;
   gap: 0.65rem;
+}
+
+.data-appendix {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--card) 88%, var(--panel));
+  margin-top: 0.75rem;
+  padding: 0.85rem;
+}
+
+.data-appendix-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.65rem;
+}
+
+.data-appendix-head span {
+  display: block;
+  color: var(--terracotta);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.data-appendix-head h3 {
+  margin: 0.18rem 0 0;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.data-table-grid {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.data-table-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.data-table-card summary {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.68rem 0.8rem;
+}
+
+.data-table-card summary strong {
+  display: block;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.05;
+}
+
+.data-table-card summary small,
+.data-table-note {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.data-table-actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border);
+  padding: 0.55rem 0.65rem 0;
+}
+
+.data-download {
+  min-height: 30px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--terracotta-dark);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 0 0.7rem;
+}
+
+.data-table-wrap {
+  overflow-x: auto;
+  padding: 0.65rem;
+}
+
+.data-table-wrap table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.data-table-wrap th,
+.data-table-wrap td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table-wrap th {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.data-table-wrap td {
+  color: var(--soft);
+  font-weight: 650;
+}
+
+.data-table-note {
+  margin: 0;
+  padding: 0 0.65rem 0.7rem;
 }
 
 .table-row,
@@ -1537,6 +1673,26 @@ body.modal-open {
 
   .chart-layout {
     gap: 0.62rem;
+  }
+
+  .data-appendix {
+    margin-top: 0.62rem;
+    padding: 0.68rem;
+  }
+
+  .data-appendix-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .data-table-card summary {
+    min-height: 50px;
+    padding: 0.6rem 0.68rem;
+  }
+
+  .data-table-wrap {
+    margin: 0 -0.68rem;
+    padding: 0.55rem 0.68rem;
   }
 
   .chart-card {

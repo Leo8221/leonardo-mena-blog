@@ -42,10 +42,10 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Fase 11: portada guiada del Atlas por preguntas.
 - [x] Fase 12: busqueda y filtros del Atlas con accesibilidad y estados vacios.
 - [x] Fase 13: metricas del Atlas visibles y correctas en movil.
-- [ ] Fase 14: modulos del Atlas con lectura, fuente, metodologia expandible y relacionados.
-- [ ] Fase 15: alternativas textuales/tabulares para graficos Canvas.
-- [ ] Fase 16: exportacion PNG y CSV con nombres y metadatos correctos.
-- [ ] Fase 17: modales con foco, escape, focus trap y retorno de foco.
+- [x] Fase 14: modulos del Atlas con lectura, fuente, metodologia expandible y relacionados.
+- [x] Fase 15: alternativas textuales/tabulares para graficos Canvas.
+- [x] Fase 16: exportacion PNG y CSV con nombres y metadatos correctos.
+- [x] Fase 17: modales con foco, escape, focus trap y retorno de foco.
 - [ ] Fase 18: responsive del Atlas en 320, 360, 390, 430, 768, 920, 1024, 1180 y 1440 px.
 - [ ] Fase 19: accesibilidad global, `:focus-visible` y `prefers-reduced-motion`.
 
@@ -75,6 +75,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Modulos del Atlas muestran pregunta, resumen, lectura y ficha fuente con metodologia expandible.
 - [x] Busqueda/filtros del Atlas con contador, limpiar busqueda, estados vacios, `aria-current`, `aria-pressed` y cierre movil con Escape/clic fuera.
 - [x] Metric strip del Atlas visible en movil con scroll horizontal, contexto textual y estado activo.
+- [x] Modulos del Atlas agregan vista tabular, CSV por dataset y CSV completo con metadatos de modulo, fuente, corte y generacion.
+- [x] Modal de pantalla completa del Atlas devuelve foco, cierra con Escape y atrapa Tab dentro del dialogo.
 - [ ] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
 - [x] Validada portada guiada del Atlas en escritorio y captura movil Edge headless a 500 px; Edge headless a 390 px recorta una viewport interna mayor, asi que no se uso como evidencia visual definitiva.
 
@@ -132,6 +134,7 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [ ] Revisar consola JS en portada, articulo, Sobre mi, Suscribete y Atlas.
 - [ ] Revisar navegacion por teclado y foco visible.
 - [x] Revisar consola JS en articulo validado: sin errores ni warnings.
+- [x] QA local de Atlas: tablas por modulo, CSV disponible, modal fullscreen con foco/Escape/Tab y consola limpia.
 
 ## Criterios de aceptacion
 

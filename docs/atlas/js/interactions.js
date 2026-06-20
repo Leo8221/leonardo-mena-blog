@@ -41,14 +41,16 @@ function openChartFullscreen(canvasId) {
   const card = sourceCanvas.closest(".chart-card");
   const title = card?.querySelector("h3")?.textContent || "Gráfico";
   const article = card?.querySelector(".article-link");
+  const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   const modal = document.createElement("div");
   modal.className = "atlas-modal";
   modal.setAttribute("role", "dialog");
   modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", `modal-title-${canvasId}`);
   modal.innerHTML = `
-    <section class="atlas-modal-panel">
+    <section class="atlas-modal-panel" tabindex="-1">
       <header class="atlas-modal-head">
-        <h2>${escapeHtml(title)}</h2>
+        <h2 id="modal-title-${escapeHtml(canvasId)}">${escapeHtml(title)}</h2>
         <div class="atlas-modal-actions">
           ${article ? article.outerHTML : ""}
           <button class="atlas-modal-close" type="button">Cerrar</button>
@@ -63,20 +65,38 @@ function openChartFullscreen(canvasId) {
   const close = () => {
     hideTooltip(true);
     document.body.classList.remove("modal-open");
-    window.removeEventListener("keydown", onKeydown);
+    modal.removeEventListener("keydown", onKeydown);
     modal.remove();
+    if (previousFocus && document.contains(previousFocus)) previousFocus.focus();
   };
   const onKeydown = (event) => {
-    if (event.key === "Escape") close();
+    if (event.key === "Escape") {
+      close();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusables = modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   };
 
   modal.addEventListener("click", (event) => {
     if (event.target === modal) close();
   });
-  modal.querySelector(".atlas-modal-close").addEventListener("click", close);
   document.body.appendChild(modal);
+  const closeButton = modal.querySelector(".atlas-modal-close");
+  closeButton.addEventListener("click", close);
   document.body.classList.add("modal-open");
-  window.addEventListener("keydown", onKeydown);
+  modal.addEventListener("keydown", onKeydown);
+  closeButton.focus();
 
   window.requestAnimationFrame(() => {
     const expandedCanvas = modal.querySelector("canvas");
