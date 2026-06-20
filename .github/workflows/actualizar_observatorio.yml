@@ -103,6 +103,9 @@ jobs:
       - name: Renderizar proyecto
         run: quarto render --no-cache
 
+      - name: Asegurar Atlas en sitemap
+        run: node atlas/scripts/ensure-sitemap.mjs
+
       - name: Validar texto publicado
         run: node atlas/scripts/check-text-integrity.mjs --include-docs
 

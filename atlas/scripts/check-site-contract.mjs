@@ -65,11 +65,16 @@ requireText("_quarto.yml", [
 
 requireText("index.qmd", [
   ["pulso de portada", "data-home-pulse"],
-  ["include del pulso de portada", "include-after-body: home-pulse.html"]
+  ["include del pulso de portada", "include-after-body: home-pulse.html"],
+  ["titulo SEO sin nombre duplicado", 'pagetitle: "Economía aplicada RD"']
 ]);
 
 requireText("home-pulse.html", [
   ["script del pulso de portada", "assets/js/home-pulse.js"]
+]);
+
+requireText(".github/workflows/actualizar_observatorio.yml", [
+  ["sitemap post-render", "node atlas/scripts/ensure-sitemap.mjs"]
 ]);
 
 requireText("skip-link.html", [
@@ -85,7 +90,8 @@ requireText("styles.css", [
 
 requireText("atlas/index.html", [
   ["skip link propio", 'href="#atlas-main"'],
-  ["main destino", 'id="atlas-main"']
+  ["main destino", 'id="atlas-main"'],
+  ["nav Archivo hacia archivo general", '<a href="../archivo.html">Archivo</a>']
 ]);
 
 requireMatch("atlas/index.html", [
@@ -109,7 +115,14 @@ if (includeDocs) {
     ]);
   }
   requireText("docs/atlas/index.html", [
-    ["skip link del Atlas publicado", 'href="#atlas-main"']
+    ["skip link del Atlas publicado", 'href="#atlas-main"'],
+    ["nav Archivo publicado", '<a href="../archivo.html">Archivo</a>']
+  ]);
+  requireMatch("docs/index.html", [
+    ["titulo SEO sin duplicar nombre", /<title>Economía aplicada RD\s+[–-]\s+Leonardo Mena<\/title>/]
+  ]);
+  requireText("docs/sitemap.xml", [
+    ["Atlas en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/atlas/</loc>"]
   ]);
   requireMatch("docs/atlas/index.html", [
     ["cache busting de estilos Atlas publicado", /styles\.css\?v=\d{8}/],

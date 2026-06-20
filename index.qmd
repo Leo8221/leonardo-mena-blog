@@ -1,5 +1,5 @@
 ---
-pagetitle: "Leonardo Mena · Economía Aplicada"
+pagetitle: "Economía aplicada RD"
 description: "Economía aplicada dominicana con análisis, datos y visualizaciones."
 image: image/social-preview.png
 page-layout: full
