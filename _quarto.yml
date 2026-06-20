@@ -13,6 +13,7 @@ project:
     - robots.txt
     - tema_graficos.R
     - assets/css/tokens.css
+    - assets/js/home-pulse.js
     - atlas/index.html
     - atlas/app.js
     - atlas/js/config.js

@@ -4,6 +4,7 @@ description: "Economía aplicada dominicana con análisis, datos y visualizacion
 image: image/social-preview.png
 page-layout: full
 toc: false
+include-after-body: home-pulse.html
 listing:
   - id: home-featured
     contents:
@@ -37,17 +38,39 @@ listing:
 
 ::: {.home-shell}
 
+::: {.home-hero}
 ::: {.home-lede}
 <span class="home-kicker">Economía aplicada RD</span>
 
 # Leer la economía sin ruido.
 
-Datos, visuales y criterio para leer coyuntura, sectores y territorio.
+Análisis, datos y visualizaciones para entender la economía dominicana con contexto.
+
+<span class="home-signature">Economía, datos y visualizaciones sobre República Dominicana.</span>
 :::
 
 ::: {.home-actions}
-[Abrir Atlas](atlas/index.html){.home-action .home-action-primary}
+[Explorar Atlas](atlas/index.html){.home-action .home-action-primary}
 [Leer análisis](republica-habla-de.qmd){.home-action}
+:::
+:::
+
+::: {.home-pulse-section}
+::: {.section-header}
+<span class="section-kicker">Pulso RD</span>
+
+## Tres señales para abrir el tablero
+:::
+
+Datos de corte del Atlas. No son datos en vivo; son una entrada rápida para explorar el tablero completo.
+
+::: {.home-pulse-list data-home-pulse="" aria-live="polite"}
+<a class="home-pulse-card home-pulse-fallback" href="atlas/index.html">
+  <span>Atlas</span>
+  <strong>Indicadores disponibles</strong>
+  <em>Abre el Atlas para ver el corte de datos y las fuentes.</em>
+</a>
+:::
 :::
 
 ::: {.home-grid}
@@ -61,26 +84,68 @@ Datos, visuales y criterio para leer coyuntura, sectores y territorio.
 
 ::: {.home-side}
 
-<a class="home-side-card home-side-card-primary" href="atlas/index.html">
-  <span>Atlas</span>
-  <strong>Datos, mapas y sectores.</strong>
-  <em>Entrar</em>
-</a>
+::: {.home-side-note}
+<span class="section-kicker">Entrada rápida</span>
 
-<a class="home-side-card" href="republica-en-un-grafico.qmd">
-  <span>Visuales</span>
-  <strong>Gráficos y mapas.</strong>
-  <em>Ver</em>
-</a>
+## Del argumento al dato
 
-<a class="home-side-card" href="fundamentos.qmd">
-  <span>Fundamentos</span>
-  <strong>Ideas base para leer economía.</strong>
-  <em>Leer</em>
-</a>
+El texto ordena la lectura; Atlas deja mover la pregunta.
+
+[Abrir Atlas](atlas/index.html)
+:::
 
 :::
 
+:::
+
+::: {.home-paths-section}
+::: {.section-header}
+<span class="section-kicker">Caminos de exploración</span>
+
+## Tres formas de entrar
+:::
+
+::: {.home-paths}
+<a class="home-path" href="republica-habla-de.qmd">
+  <span>Entender la coyuntura</span>
+  <strong>Para leer debates económicos con una tesis clara.</strong>
+  <em>Análisis con datos, mecanismo e implicación.</em>
+</a>
+
+<a class="home-path" href="atlas/index.html">
+  <span>Explorar los datos</span>
+  <strong>Para comparar indicadores, mapas, sectores y territorio.</strong>
+  <em>Atlas interactivo con fuentes, corte y descarga.</em>
+</a>
+
+<a class="home-path" href="fundamentos.qmd">
+  <span>Aprender fundamentos</span>
+  <strong>Para construir criterio antes de entrar al ruido.</strong>
+  <em>Conceptos, ideas y explicaciones base.</em>
+</a>
+:::
+:::
+
+::: {.home-about-section}
+::: {.home-about-copy}
+<span class="section-kicker">El enfoque</span>
+
+## Economía como forma de leer el país
+
+Este sitio usa la escritura como método de aprendizaje y análisis. Busca claridad, trazabilidad y contexto dominicano: separar dato, lectura y opinión sin convertir la economía en jerga.
+
+[Conocer el enfoque](about.qmd)
+:::
+
+::: {.home-newsletter}
+<span class="section-kicker">Boletín</span>
+
+## Una lectura cuando haya algo que decir
+
+Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.
+
+[Suscribirme](suscribete.qmd)
+:::
 :::
 
 ::: {.home-latest-section}

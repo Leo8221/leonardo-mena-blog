@@ -31,8 +31,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 
 - [x] Fase 1: sistema de diseno compartido y `DESIGN-SYSTEM.md`.
 - [x] Fase 2: cabecera y navegacion global sin CTA inline.
-- [ ] Fase 3: portada del blog con hero, Pulso RD, destacado, caminos, ultimas publicaciones, Sobre Leonardo y boletin.
-- [ ] Fase 4: portada movil fluida desde 320 px.
+- [x] Fase 3: portada del blog con hero, Pulso RD, destacado, caminos, ultimas publicaciones, enfoque y boletin.
+- [x] Fase 4: portada movil fluida desde 320 px.
 - [x] Fase 5: secciones, archivo, categorias y paginas de series.
 - [x] Fase 6: Sobre mi honesto, editorial y sin credenciales inventadas.
 - [x] Fase 7: Suscripcion responsive, sin estilos inline innecesarios.
@@ -86,6 +86,9 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Secciones, series y archivo revisados para textos visibles con tildes, jerarquia editorial y sin estilos inline en fuente.
 - [x] Sobre mi ampliado con principios editoriales, temas y rutas de exploracion sin inventar credenciales.
 - [x] Suscripcion completada con frecuencia honesta, fallback a Substack y nota breve de privacidad.
+- [x] Portada del blog actualizada con Pulso RD cargado desde `atlas/data/atlas-data.json`, caminos editoriales, entrada rapida al Atlas, bloque de enfoque y boletin.
+- [x] Portada movil corregida sin ancho artificial de 360 px, sin ocultar imagen destacada y con cinta superior simplificada para evitar recortes.
+- [x] `assets/js/home-pulse.js` agregado como recurso Quarto y cubierto por el contrato del sitio.
 
 ## Archivos afectados previstos
 
@@ -149,6 +152,9 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] QA browser local de modal Atlas en movil 390 px: abrir, canvas visible, foco en cerrar y cierre correcto.
 - [x] QA browser local en Sobre mi, Archivo, Secciones, Suscribete, Republica habla de, Republica en un grafico y Series: 320, 390, 768 y 1440 px sin overflow ni errores de consola.
 - [x] Verificacion puntual de iframe de Substack en 320 px: ancho computado 286 px dentro del contenedor.
+- [x] `node --check assets/js/home-pulse.js`
+- [x] QA Edge headless de portada servida por HTTP a 390 px: Pulso RD carga `Dolar spot`, `Inflacion interanual` y `Brecha laboral joven` desde JSON.
+- [x] Captura Edge headless de portada movil a 390 px: header sin recorte visible, titulo de Pulso RD envuelve y CTA no se amontonan.
 
 ## Criterios de aceptacion
 

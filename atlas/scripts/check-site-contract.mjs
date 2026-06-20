@@ -45,6 +45,7 @@ function checkNoConsoleLogs() {
   const files = [
     "reading-progress.html",
     "share-buttons-auto.html",
+    ...walk("assets/js"),
     ...walk("atlas/js"),
     "atlas/app.js"
   ];
@@ -58,7 +59,17 @@ function checkNoConsoleLogs() {
 
 requireText("_quarto.yml", [
   ["include-before-body: skip-link.html", "include-before-body: skip-link.html"],
-  ["tokens como recurso", "assets/css/tokens.css"]
+  ["tokens como recurso", "assets/css/tokens.css"],
+  ["pulso de portada como recurso", "assets/js/home-pulse.js"]
+]);
+
+requireText("index.qmd", [
+  ["pulso de portada", "data-home-pulse"],
+  ["include del pulso de portada", "include-after-body: home-pulse.html"]
+]);
+
+requireText("home-pulse.html", [
+  ["script del pulso de portada", "assets/js/home-pulse.js"]
 ]);
 
 requireText("skip-link.html", [
