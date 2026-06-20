@@ -14,6 +14,10 @@ project:
     - tema_graficos.R
     - atlas/index.html
     - atlas/app.js
+    - atlas/js/config.js
+    - atlas/js/utils.js
+    - atlas/js/renderers.js
+    - atlas/js/interactions.js
     - atlas/styles.css
     - atlas/data/atlas-data.json
     - atlas/data/article-visuals.json

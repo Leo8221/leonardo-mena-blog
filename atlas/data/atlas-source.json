@@ -11,7 +11,7 @@
   "metrics": [
     {
       "id": "usd",
-      "label": "Dolar spot",
+      "label": "Dólar spot",
       "value": "RD$ 59,15",
       "delta": "-0,35% vs. ayer",
       "meta": "Tasa de venta",
@@ -20,7 +20,7 @@
     },
     {
       "id": "inflation",
-      "label": "Inflacion interanual",
+      "label": "Inflación interanual",
       "value": "5,35%",
       "delta": "Fuera de meta",
       "meta": "Meta BCRD: 4% +/- 1 pp",
@@ -29,7 +29,7 @@
     },
     {
       "id": "trade",
-      "label": "Socio exportador lider",
+      "label": "Socio exportador líder",
       "value": "EE. UU.",
       "delta": "52% del bloque visible",
       "meta": "Comercio exterior",
@@ -56,7 +56,7 @@
     },
     {
       "id": "mipyme",
-      "label": "Principal friccion MIPYME",
+      "label": "Principal fricción MIPYME",
       "value": "Financiamiento",
       "delta": "Barrera transversal",
       "meta": "Productividad",
@@ -73,17 +73,17 @@
       "type": "Monitor",
       "family": "Macro",
       "topic": "Coyuntura",
-      "summary": "Seguimiento de tipo de cambio, inflacion, TPM e IMAE para leer el pulso semanal de la economia dominicana.",
+      "summary": "Seguimiento de tipo de cambio, inflación, TPM e IMAE para leer el pulso semanal de la economía dominicana.",
       "source": "BCRD",
-      "sourceDetail": "Series publicas del Banco Central: mercado cambiario, precios, politica monetaria e IMAE.",
+      "sourceDetail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
       "question": "Que esta cambiando en la coyuntura dominicana?",
       "insight": "El modulo separa nivel, variacion y contexto para evitar que un solo indicador cargue toda la interpretacion macro.",
       "chart": "macro",
       "methodology": [
         "Tipo de cambio: tasa de venta spot.",
-        "Inflacion: variacion interanual del IPC.",
-        "TPM: tasa de politica monetaria vigente.",
-        "Actividad: variacion interanual del IMAE."
+        "Inflación: variación interanual del IPC.",
+        "TPM: tasa de política monetaria vigente.",
+        "Actividad: variación interanual del IMAE."
       ],
       "related": ["republica-habla-de.html", "republica-en-un-grafico.html"]
     },
@@ -95,7 +95,7 @@
       "type": "Modelo",
       "family": "Sectores",
       "topic": "Sectores",
-      "summary": "Ranking de exposicion sectorial ante demanda, precios, financiamiento, tipo de cambio, energia y entorno externo.",
+      "summary": "Ranking de exposición sectorial ante demanda, precios, financiamiento, tipo de cambio, energía y entorno externo.",
       "source": "BCRD, FRED, Yahoo Finance",
       "sourceDetail": "Modelo de sensibilidad con pesos transparentes por sector y drivers macro normalizados.",
       "question": "Que sectores lucen mas expuestos bajo las condiciones actuales?",
@@ -103,8 +103,8 @@
       "chart": "sectors",
       "methodology": [
         "Los drivers se normalizan en escala 0-100.",
-        "Cada sector usa pesos predefinidos por sensibilidad economica.",
-        "El driver principal es el de mayor contribucion al indice del sector."
+        "Cada sector usa pesos predefinidos por sensibilidad económica.",
+        "El driver principal es el de mayor contribución al índice del sector."
       ],
       "related": ["republica-habla-de.html"]
     },
@@ -113,19 +113,19 @@
       "title": "Condiciones externas",
       "status": "Activo",
       "visible": true,
-      "type": "Indice",
+      "type": "Índice",
       "family": "Macro",
       "topic": "Entorno global",
-      "summary": "Indice de presion externa para seguir energia, tasas, dolar global, volatilidad y ciclo real externo.",
+      "summary": "Índice de presión externa para seguir energía, tasas, dólar global, volatilidad y ciclo real externo.",
       "source": "FRED, Yahoo Finance",
       "sourceDetail": "Variables globales normalizadas y agregadas en escala 0-100.",
       "question": "El entorno global sopla a favor o en contra?",
       "insight": "La lectura compacta permite conectar shocks globales con turismo, transporte, precios y financiamiento local.",
       "chart": "external",
       "methodology": [
-        "Valores altos indican condiciones externas mas adversas.",
-        "La senal se suaviza para reducir ruido de mercado.",
-        "Los componentes mantienen unidades comparables mediante normalizacion."
+        "Valores altos indican condiciones externas más adversas.",
+        "La señal se suaviza para reducir ruido de mercado.",
+        "Los componentes mantienen unidades comparables mediante normalización."
       ],
       "related": ["republica-habla-de.html"]
     },
@@ -137,16 +137,16 @@
       "type": "Explorador",
       "family": "Comercio",
       "topic": "Comercio",
-      "summary": "Vista para socios, rubros, balance y oportunidades de sofisticacion exportadora de Republica Dominicana.",
+      "summary": "Vista para socios, rubros, balance y oportunidades de sofisticación exportadora de República Dominicana.",
       "source": "UN Comtrade, OEC, Aduanas RD",
-      "sourceDetail": "Estructura preparada para series de comercio por socio, producto y flujo.",
+      "sourceDetail": "Estructura preparada para series de comercio por socio, rubro y flujo.",
       "question": "Que vendemos, a quien y con que margen de sofisticacion?",
       "insight": "El modulo obliga a mirar concentracion, balance y oportunidad a la vez, no solo el ranking de socios.",
       "chart": "trade",
       "methodology": [
-        "Los socios se comparan por participacion relativa en el bloque visible.",
+        "Los socios se comparan por participación relativa en el bloque visible.",
         "La oportunidad combina escala de mercado y complejidad potencial.",
-        "El balance se interpreta como senal exploratoria, no como diagnostico completo."
+        "El balance se interpreta como señal exploratoria, no como diagnóstico completo."
       ],
       "related": ["republica-en-un-grafico.html"]
     },
@@ -155,13 +155,13 @@
       "title": "Mercado laboral y salarios",
       "status": "Activo",
       "visible": true,
-      "type": "Analisis",
+      "type": "Análisis",
       "family": "Trabajo",
       "topic": "Trabajo",
-      "summary": "Panel para empleo, informalidad, salarios, educacion y brechas de insercion laboral.",
+      "summary": "Panel para empleo, informalidad, salarios, educación y brechas de inserción laboral.",
       "source": "ONE, BCRD ENCFT, TSS",
       "sourceDetail": "Estructura de lectura para combinar censo, encuesta laboral y registros administrativos.",
-      "question": "Donde se esta creando valor laboral y donde persisten brechas?",
+      "question": "Donde se está creando valor laboral y donde persisten brechas?",
       "insight": "La separacion por educacion y tipo de insercion evita confundir mas escolaridad con mejor trayectoria laboral automatica.",
       "chart": "labor",
       "methodology": [
@@ -179,10 +179,10 @@
       "type": "Monitor",
       "family": "Precios",
       "topic": "Precios",
-      "summary": "Lectura interactiva de inflacion por rubros, alimentos, combustibles y canales de segunda ronda.",
+      "summary": "Lectura interactiva de inflación por rubros, alimentos, combustibles y canales de segunda ronda.",
       "source": "BCRD, MICM, Ministerio de Hacienda",
       "sourceDetail": "Componentes de precios y canales de traspaso hacia hogares y costos productivos.",
-      "question": "Que rubros explican la presion de precios que siente la gente?",
+      "question": "Que rubros explican la presión de precios que siente la gente?",
       "insight": "El foco esta en separar el shock inicial del canal que lo convierte en costo cotidiano.",
       "chart": "prices",
       "methodology": [
@@ -197,19 +197,19 @@
       "title": "Territorio e infraestructura",
       "status": "Activo",
       "visible": true,
-      "type": "Mapa analitico",
+      "type": "Mapa analítico",
       "family": "Territorio",
       "topic": "Territorio",
-      "summary": "Modulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
+      "summary": "Módulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
       "source": "ONE, MOPC, registros administrativos",
-      "sourceDetail": "Indice territorial compuesto por mercado, infraestructura y capital humano.",
+      "sourceDetail": "Índice territorial compuesto por mercado, infraestructura y capital humano.",
       "question": "Como se distribuyen oportunidades y restricciones en el territorio?",
       "insight": "La comparacion territorial ayuda a separar escala economica, conectividad y capacidad laboral.",
       "chart": "territory",
       "methodology": [
-        "El indice de oportunidad combina mercado, infraestructura y fuerza laboral.",
-        "La vista por region permite comparar nodos y periferias.",
-        "Los puntajes son una capa de priorizacion para analisis posteriores."
+        "El índice de oportunidad combina mercado, infraestructura y fuerza laboral.",
+        "La vista por región permite comparar nodos y periferias.",
+        "Los puntajes son una capa de priorización para análisis posteriores."
       ],
       "related": ["republica-habla-de.html"]
     },
@@ -218,18 +218,18 @@
       "title": "MiPyMES y productividad",
       "status": "Activo",
       "visible": true,
-      "type": "Analisis",
+      "type": "Análisis",
       "family": "Empresas",
       "topic": "Empresas",
-      "summary": "Seccion para financiamiento, formalidad, productividad, tamano empresarial y barreras de crecimiento.",
+      "summary": "Sección para financiamiento, formalidad, productividad, tamaño empresarial y barreras de crecimiento.",
       "source": "Encuestas MiPyMES, BCRD, DGII",
-      "sourceDetail": "Lectura por tamano, formalidad, acceso financiero y brechas de gestion.",
+      "sourceDetail": "Lectura por tamaño, formalidad, acceso financiero y brechas de gestión.",
       "question": "Que limita la productividad empresarial y donde hay margen de mejora?",
       "insight": "El modulo mira las MiPyMES como sistema de restricciones: dinero, formalidad, gestion y mercado.",
       "chart": "mipymes",
       "methodology": [
         "Las barreras se expresan como intensidad relativa.",
-        "La escalera productiva compara micro, pequena y mediana empresa.",
+        "La escalera productiva compara micro, pequeña y mediana empresa.",
         "El acceso financiero se cruza con formalidad para evitar lecturas aisladas."
       ],
       "related": ["republica-en-un-grafico.html"]
@@ -239,19 +239,19 @@
       "title": "Laboratorio visual",
       "status": "Activo",
       "visible": true,
-      "type": "Demo analitica",
+      "type": "Demo analítica",
       "family": "Visuales",
-      "topic": "Cartografia y graficos",
-      "summary": "Galeria interactiva construida con mapas y graficos reales de articulos publicados.",
-      "source": "Articulos publicados",
-      "sourceDetail": "Activos generados desde shapefiles, CSV y XLSX usados en articulos sobre territorio, MiPyMES, turismo, transporte y deuda.",
+      "topic": "Cartografía y gráficos",
+      "summary": "Galería interactiva construida con mapas y gráficos reales de artículos publicados.",
+      "source": "Artículos publicados",
+      "sourceDetail": "Activos generados desde shapefiles, CSV y XLSX usados en artículos sobre territorio, MiPyMES, turismo, transporte y deuda.",
       "question": "Que puede hacer el Atlas con datos reales que ya viven en los articulos?",
       "insight": "Un articulo con datos trazables puede crecer hasta convertirse en pieza explorable.",
       "chart": "visualLab",
       "methodology": [
-        "Cada visual nace de archivos usados por articulos existentes, no de datos decorativos.",
-        "Los mapas se exportan como GeoJSON liviano para interaccion en navegador.",
-        "Los articulos con datos pueden convertirse en piezas explorables."
+        "Cada visual nace de archivos usados por artículos existentes, no de datos decorativos.",
+        "Los mapas se exportan como GeoJSON liviano para interacción en navegador.",
+        "Los artículos con datos pueden convertirse en piezas explorables."
       ],
       "related": ["republica-en-un-grafico.html", "republica-habla-de.html"]
     }

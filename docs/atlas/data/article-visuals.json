@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18",
+  "updated": "2026-06-19",
   "sources": [
     {
       "title": "Densidad empresarial por provincia",
@@ -8,13 +8,13 @@
       "files": ["PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE"]
     },
     {
-      "title": "MiPyMES por region",
+      "title": "MiPyMES por región",
       "article": "2026-02-14-mipymes-rd",
       "href": "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html",
       "files": ["REGCenso2010.shp", "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx"]
     },
     {
-      "title": "Turismo por pais y motivo",
+      "title": "Turismo por país y motivo",
       "article": "2026-01-20-Turismo_expansion",
       "href": "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html",
       "files": ["razones_turismo.csv", "rnaturalearth"]
@@ -26,7 +26,7 @@
       "files": ["tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv"]
     },
     {
-      "title": "Deuda publica",
+      "title": "Deuda pública",
       "article": "2025-12-19_deuda_publica",
       "href": "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
       "files": "deuda_rd.csv"
@@ -316,7 +316,7 @@
         "median_rent_thousand": 90.98
       },
       {
-        "province": "San Cristobal",
+        "province": "San Cristóbal",
         "category": "Periurbana GSD",
         "workers": 55197,
         "jobs": 58250,
@@ -433,7 +433,7 @@
         "median_rent_thousand": 72
       },
       {
-        "province": "Sanchez Ramirez",
+        "province": "Sánchez Ramírez",
         "category": "Resto",
         "workers": 9136,
         "jobs": 10922,
@@ -478,7 +478,7 @@
         "median_rent_thousand": 75.235
       },
       {
-        "province": "Dajabon",
+        "province": "Dajabón",
         "category": "Resto",
         "workers": 2861,
         "jobs": 3011,
@@ -514,7 +514,7 @@
         "median_rent_thousand": 36
       },
       {
-        "province": "San Jose de Ocoa",
+        "province": "San José de Ocoa",
         "category": "Resto",
         "workers": 1612,
         "jobs": 1655,
@@ -567,7 +567,7 @@
         "workers": 83858
       },
       {
-        "province": "San Cristobal",
+        "province": "San Cristóbal",
         "employment_share": 2.51,
         "jobs": 58250,
         "workers": 55197

@@ -12,10 +12,30 @@ suppressPackageStartupMessages({
   library(rnaturalearth)
 })
 
+options(encoding = "UTF-8")
+suppressWarnings({
+  locale_ok <- Sys.setlocale("LC_CTYPE", "Spanish_Dominican Republic.utf8")
+  if (is.na(locale_ok)) Sys.setlocale("LC_CTYPE", "Spanish_Dominican Republic.1252")
+})
+
 sf_use_s2(FALSE)
 
 root <- getwd()
 out_dir <- file.path(root, "atlas", "data")
+
+read_csv_utf8 <- function(path, ...) {
+  read_csv(path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, ...)
+}
+
+validate_no_mojibake <- function(path) {
+  text <- readLines(path, encoding = "UTF-8", warn = FALSE)
+  bad_patterns <- c(intToUtf8(0x00c3), intToUtf8(0x00c2), intToUtf8(0xfffd), "C1", "SC!")
+  bad <- grep(paste(bad_patterns, collapse = "|"), text, value = TRUE)
+  if (length(bad) > 0) {
+    stop("Encoding check failed for ", path, call. = FALSE)
+  }
+  invisible(path)
+}
 
 normalize_key <- function(x) {
   x |>
@@ -35,6 +55,7 @@ clean_label <- function(x) {
 write_geojson <- function(sf_obj, path) {
   if (file.exists(path)) unlink(path)
   st_write(sf_obj, path, driver = "GeoJSON", quiet = TRUE)
+  validate_no_mojibake(path)
 }
 
 # MiPyMES regional map from the published article.
@@ -93,37 +114,38 @@ write_geojson(regions_mipymes, file.path(out_dir, "rd-regions-mipymes.geojson"))
 
 # Tourism world map and treemap from the tourism article.
 tourism_dir <- file.path(root, "posts", "republica-habla-de", "2026-01-20-Turismo_expansion")
-tourism_country <- read_csv(file.path(tourism_dir, "razones_turismo.csv"), show_col_types = FALSE) |>
+tourism_country <- read_csv_utf8(file.path(tourism_dir, "razones_turismo.csv")) |>
   rename(country_survey = 1, beach_pct = 2) |>
   mutate(
+    country_key = normalize_key(country_survey),
     country_en = case_when(
-      country_survey == "Canadá" ~ "Canada",
-      country_survey == "Estados Unidos" ~ "United States of America",
-      country_survey == "México" ~ "Mexico",
-      country_survey == "Haití" ~ "Haiti",
-      country_survey == "República Dominicana" ~ "Dominican Republic",
-      country_survey == "Curazao" ~ "Curaçao",
-      str_detect(country_survey, "Caicos y Turcas") ~ "Turks and Caicos Islands",
-      str_detect(country_survey, "Vírgenes Americanas") ~ "United States Virgin Islands",
-      country_survey == "San Martin" ~ "Saint Martin",
-      country_survey == "Brasil" ~ "Brazil",
-      country_survey == "Perú" ~ "Peru",
-      country_survey == "Alemania" ~ "Germany",
-      country_survey == "Bélgica" ~ "Belgium",
-      country_survey == "Dinamarca" ~ "Denmark",
-      country_survey == "España" ~ "Spain",
-      country_survey == "Finlandia" ~ "Finland",
-      country_survey == "Francia" ~ "France",
-      country_survey == "Grecia" ~ "Greece",
-      country_survey == "Holanda" ~ "Netherlands",
-      country_survey == "Italia" ~ "Italy",
-      country_survey == "Japón" ~ "Japan",
-      country_survey == "Republica Checa" ~ "Czechia",
-      country_survey == "Rusia" ~ "Russia",
-      country_survey == "Suecia" ~ "Sweden",
-      country_survey == "Suiza" ~ "Switzerland",
-      country_survey %in% c("Reino Unido", "Escocia") ~ "United Kingdom",
-      country_survey == "Corea del Sur" ~ "South Korea",
+      country_key == "CANADA" ~ "Canada",
+      country_key == "ESTADOS UNIDOS" ~ "United States of America",
+      country_key == "MEXICO" ~ "Mexico",
+      country_key == "HAITI" ~ "Haiti",
+      country_key == "REPUBLICA DOMINICANA" ~ "Dominican Republic",
+      country_key == "CURAZAO" ~ "Cura\u00e7ao",
+      str_detect(country_key, "CAICOS Y TURCAS") ~ "Turks and Caicos Islands",
+      str_detect(country_key, "VIRGENES AMERICANAS") ~ "United States Virgin Islands",
+      country_key == "SAN MARTIN" ~ "Saint Martin",
+      country_key == "BRASIL" ~ "Brazil",
+      country_key == "PERU" ~ "Peru",
+      country_key == "ALEMANIA" ~ "Germany",
+      country_key == "BELGICA" ~ "Belgium",
+      country_key == "DINAMARCA" ~ "Denmark",
+      country_key == "ESPANA" ~ "Spain",
+      country_key == "FINLANDIA" ~ "Finland",
+      country_key == "FRANCIA" ~ "France",
+      country_key == "GRECIA" ~ "Greece",
+      country_key == "HOLANDA" ~ "Netherlands",
+      country_key == "ITALIA" ~ "Italy",
+      country_key == "JAPON" ~ "Japan",
+      country_key == "REPUBLICA CHECA" ~ "Czechia",
+      country_key == "RUSIA" ~ "Russia",
+      country_key == "SUECIA" ~ "Sweden",
+      country_key == "SUIZA" ~ "Switzerland",
+      country_key %in% c("REINO UNIDO", "ESCOCIA") ~ "United Kingdom",
+      country_key == "COREA DEL SUR" ~ "South Korea",
       TRUE ~ country_survey
     )
   )
@@ -168,19 +190,23 @@ tourism_treemap <- tibble::tribble(
 
 # Transport article: relationship between rent and formal employment concentration.
 transport_dir <- file.path(root, "posts", "republica-habla-de", "2026-03-04-transporte-masivo")
-employment <- read_csv(file.path(transport_dir, "tss_trabajadores_provincia_2021.csv"), show_col_types = FALSE) |>
+employment <- read_csv_utf8(file.path(transport_dir, "tss_trabajadores_provincia_2021.csv")) |>
   mutate(
     province_key = normalize_key(provincia),
     province = case_when(
       province_key == "SANTIAGO DE LOS CABALLEROS" ~ "Santiago",
-      province_key == "MONSENOR NOUEL" ~ "Monseñor Nouel",
-      province_key == "MARIA TRINIDAD SANCHEZ" ~ "M. Trinidad Sánchez",
+      province_key == "MONSENOR NOUEL" ~ "Monse\u00f1or Nouel",
+      province_key == "MARIA TRINIDAD SANCHEZ" ~ "M. Trinidad S\u00e1nchez",
       province_key == "SAN JUAN DE LA MAGUANA" ~ "San Juan",
+      province_key == "SAN CRISTOBAL" ~ "San Crist\u00f3bal",
+      province_key == "SAN JOSE DE OCOA" ~ "San Jos\u00e9 de Ocoa",
+      province_key == "SANCHEZ RAMIREZ" ~ "S\u00e1nchez Ram\u00edrez",
+      province_key == "DAJABON" ~ "Dajab\u00f3n",
       TRUE ~ clean_label(stri_trans_general(provincia, "Latin-ASCII"))
     )
   )
 
-rent <- read_csv(file.path(transport_dir, "mipymes_alquiler_prov_expandido.csv"), show_col_types = FALSE) |>
+rent <- read_csv_utf8(file.path(transport_dir, "mipymes_alquiler_prov_expandido.csv")) |>
   filter(clasificacion == "Microempresa") |>
   mutate(
     province_key = normalize_key(provincia),
@@ -196,7 +222,7 @@ transport_space <- employment |>
     median_rent_thousand = median_rent_rd / 1000,
     category = case_when(
       province == "Distrito Nacional" ~ "DN",
-      province %in% c("Santo Domingo", "San Cristobal") ~ "Periurbana GSD",
+      province %in% c("Santo Domingo", "San Crist\u00f3bal") ~ "Periurbana GSD",
       TRUE ~ "Resto"
     )
   ) |>
@@ -212,7 +238,7 @@ transport_space <- employment |>
   )
 
 # Debt article: compact fiscal burden series.
-debt <- read_csv(file.path(root, "posts", "republica-habla-de", "2025-12-19_deuda_publica", "deuda_rd.csv"), show_col_types = FALSE) |>
+debt <- read_csv_utf8(file.path(root, "posts", "republica-habla-de", "2025-12-19_deuda_publica", "deuda_rd.csv")) |>
   group_by(anio) |>
   summarise(
     principal = sum(principal, na.rm = TRUE),
@@ -227,10 +253,10 @@ payload <- list(
   updated = as.character(Sys.Date()),
   sources = list(
     list(title = "Densidad empresarial por provincia", article = "2026-01-06-Perpectiva_del_desarrollo", href = "../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html", files = c("PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE")),
-    list(title = "MiPyMES por region", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),
-    list(title = "Turismo por pais y motivo", article = "2026-01-20-Turismo_expansion", href = "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html", files = c("razones_turismo.csv", "rnaturalearth")),
+    list(title = "MiPyMES por regi\u00f3n", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),
+    list(title = "Turismo por pa\u00eds y motivo", article = "2026-01-20-Turismo_expansion", href = "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html", files = c("razones_turismo.csv", "rnaturalearth")),
     list(title = "Transporte masivo y empleo formal", article = "2026-03-04-transporte-masivo", href = "../posts/republica-habla-de/2026-03-04-transporte-masivo/index.html", files = c("tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv")),
-    list(title = "Deuda publica", article = "2025-12-19_deuda_publica", href = "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html", files = c("deuda_rd.csv"))
+    list(title = "Deuda p\u00fablica", article = "2025-12-19_deuda_publica", href = "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html", files = c("deuda_rd.csv"))
   ),
   tourism = list(
     treemap = tourism_treemap,
@@ -250,5 +276,7 @@ payload <- list(
   )
 )
 
-write_json(payload, file.path(out_dir, "article-visuals.json"), pretty = TRUE, auto_unbox = TRUE, na = "null")
+article_visuals_path <- file.path(out_dir, "article-visuals.json")
+write_json(payload, article_visuals_path, pretty = TRUE, auto_unbox = TRUE, na = "null")
+validate_no_mojibake(article_visuals_path)
 message("Article visual assets built in ", out_dir)

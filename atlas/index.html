@@ -3,10 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atlas</title>
-  <meta name="description" content="Atlas de mapas, indicadores y secciones de economia aplicada.">
+  <title>Atlas | Economía aplicada RD</title>
+  <meta name="description" content="Mapas interactivos, indicadores y visuales de economía dominicana: macro, sectores, comercio, territorio, MiPyMES y artículos publicados.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leo8221.github.io/leonardo-mena-blog/atlas/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Atlas | Economía aplicada RD">
+  <meta property="og:description" content="Mapas interactivos, indicadores y visuales de economía dominicana: macro, sectores, comercio, territorio, MiPyMES y artículos publicados.">
+  <meta property="og:url" content="https://leo8221.github.io/leonardo-mena-blog/atlas/">
+  <meta property="og:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atlas | Economía aplicada RD">
+  <meta name="twitter:description" content="Mapas interactivos, indicadores y visuales de economía dominicana: macro, sectores, comercio, territorio, MiPyMES y artículos publicados.">
+  <meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
   <link rel="icon" href="../image/logo_leonardo_mena.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260619">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DataCatalog",
+      "name": "Atlas",
+      "description": "Mapas interactivos, indicadores y visuales de economía dominicana.",
+      "url": "https://leo8221.github.io/leonardo-mena-blog/atlas/",
+      "inLanguage": "es",
+      "creator": {
+        "@type": "Person",
+        "name": "Leonardo Mena"
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="atlas-app" data-view="overview">
@@ -73,6 +98,10 @@
     </main>
   </div>
 
-  <script src="app.js"></script>
+  <script src="js/config.js?v=20260619"></script>
+  <script src="js/utils.js?v=20260619"></script>
+  <script src="js/renderers.js?v=20260619"></script>
+  <script src="js/interactions.js?v=20260619"></script>
+  <script src="app.js?v=20260619"></script>
 </body>
 </html>

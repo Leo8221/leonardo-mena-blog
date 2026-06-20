@@ -61,7 +61,16 @@ const publicModules = visibleModules.map((module) => {
     related,
     ...publicModule
   } = module;
-  return publicModule;
+  return {
+    ...publicModule,
+    sourceInfo: {
+      label: module.source,
+      detail: sourceDetail || "",
+      updated: module.updated || source.updated || "",
+      methodology: Array.isArray(methodology) ? methodology.slice(0, 2) : [],
+      related: Array.isArray(related) ? related.filter(Boolean) : []
+    }
+  };
 });
 
 const output = {

@@ -3,7 +3,7 @@
   "metrics": [
     {
       "id": "usd",
-      "label": "Dolar spot",
+      "label": "Dólar spot",
       "value": "RD$ 59,15",
       "delta": "-0,35% vs. ayer",
       "meta": "Tasa de venta",
@@ -12,7 +12,7 @@
     },
     {
       "id": "inflation",
-      "label": "Inflacion interanual",
+      "label": "Inflación interanual",
       "value": "5,35%",
       "delta": "Fuera de meta",
       "meta": "Meta BCRD: 4% +/- 1 pp",
@@ -21,7 +21,7 @@
     },
     {
       "id": "trade",
-      "label": "Socio exportador lider",
+      "label": "Socio exportador líder",
       "value": "EE. UU.",
       "delta": "52% del bloque visible",
       "meta": "Comercio exterior",
@@ -48,7 +48,7 @@
     },
     {
       "id": "mipyme",
-      "label": "Principal friccion MIPYME",
+      "label": "Principal fricción MIPYME",
       "value": "Financiamiento",
       "delta": "Barrera transversal",
       "meta": "Productividad",
@@ -709,7 +709,7 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-06-19T04:16:25.032Z",
+  "generatedAt": "2026-06-20T02:10:28.798Z",
   "modules": [
     {
       "id": "pulso-macro",
@@ -719,9 +719,22 @@
       "type": "Monitor",
       "family": "Macro",
       "topic": "Coyuntura",
-      "summary": "Seguimiento de tipo de cambio, inflacion, TPM e IMAE para leer el pulso semanal de la economia dominicana.",
+      "summary": "Seguimiento de tipo de cambio, inflación, TPM e IMAE para leer el pulso semanal de la economía dominicana.",
       "source": "BCRD",
-      "chart": "macro"
+      "chart": "macro",
+      "sourceInfo": {
+        "label": "BCRD",
+        "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Tipo de cambio: tasa de venta spot.",
+          "Inflación: variación interanual del IPC."
+        ],
+        "related": [
+          "republica-habla-de.html",
+          "republica-en-un-grafico.html"
+        ]
+      }
     },
     {
       "id": "sectores",
@@ -731,21 +744,45 @@
       "type": "Modelo",
       "family": "Sectores",
       "topic": "Sectores",
-      "summary": "Ranking de exposicion sectorial ante demanda, precios, financiamiento, tipo de cambio, energia y entorno externo.",
+      "summary": "Ranking de exposición sectorial ante demanda, precios, financiamiento, tipo de cambio, energía y entorno externo.",
       "source": "BCRD, FRED, Yahoo Finance",
-      "chart": "sectors"
+      "chart": "sectors",
+      "sourceInfo": {
+        "label": "BCRD, FRED, Yahoo Finance",
+        "detail": "Modelo de sensibilidad con pesos transparentes por sector y drivers macro normalizados.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Los drivers se normalizan en escala 0-100.",
+          "Cada sector usa pesos predefinidos por sensibilidad económica."
+        ],
+        "related": [
+          "republica-habla-de.html"
+        ]
+      }
     },
     {
       "id": "contexto-externo",
       "title": "Condiciones externas",
       "status": "Activo",
       "visible": true,
-      "type": "Indice",
+      "type": "Índice",
       "family": "Macro",
       "topic": "Entorno global",
-      "summary": "Indice de presion externa para seguir energia, tasas, dolar global, volatilidad y ciclo real externo.",
+      "summary": "Índice de presión externa para seguir energía, tasas, dólar global, volatilidad y ciclo real externo.",
       "source": "FRED, Yahoo Finance",
-      "chart": "external"
+      "chart": "external",
+      "sourceInfo": {
+        "label": "FRED, Yahoo Finance",
+        "detail": "Variables globales normalizadas y agregadas en escala 0-100.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Valores altos indican condiciones externas más adversas.",
+          "La señal se suaviza para reducir ruido de mercado."
+        ],
+        "related": [
+          "republica-habla-de.html"
+        ]
+      }
     },
     {
       "id": "comercio-exterior",
@@ -755,21 +792,45 @@
       "type": "Explorador",
       "family": "Comercio",
       "topic": "Comercio",
-      "summary": "Vista para socios, rubros, balance y oportunidades de sofisticacion exportadora de Republica Dominicana.",
+      "summary": "Vista para socios, rubros, balance y oportunidades de sofisticación exportadora de República Dominicana.",
       "source": "UN Comtrade, OEC, Aduanas RD",
-      "chart": "trade"
+      "chart": "trade",
+      "sourceInfo": {
+        "label": "UN Comtrade, OEC, Aduanas RD",
+        "detail": "Estructura preparada para series de comercio por socio, rubro y flujo.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Los socios se comparan por participación relativa en el bloque visible.",
+          "La oportunidad combina escala de mercado y complejidad potencial."
+        ],
+        "related": [
+          "republica-en-un-grafico.html"
+        ]
+      }
     },
     {
       "id": "mercado-laboral",
       "title": "Mercado laboral y salarios",
       "status": "Activo",
       "visible": true,
-      "type": "Analisis",
+      "type": "Análisis",
       "family": "Trabajo",
       "topic": "Trabajo",
-      "summary": "Panel para empleo, informalidad, salarios, educacion y brechas de insercion laboral.",
+      "summary": "Panel para empleo, informalidad, salarios, educación y brechas de inserción laboral.",
       "source": "ONE, BCRD ENCFT, TSS",
-      "chart": "labor"
+      "chart": "labor",
+      "sourceInfo": {
+        "label": "ONE, BCRD ENCFT, TSS",
+        "detail": "Estructura de lectura para combinar censo, encuesta laboral y registros administrativos.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Las tasas se leen por grupo educativo y cohorte laboral.",
+          "La informalidad funciona como guardrail de calidad del empleo."
+        ],
+        "related": [
+          "republica-en-un-grafico.html"
+        ]
+      }
     },
     {
       "id": "costo-vida",
@@ -779,45 +840,94 @@
       "type": "Monitor",
       "family": "Precios",
       "topic": "Precios",
-      "summary": "Lectura interactiva de inflacion por rubros, alimentos, combustibles y canales de segunda ronda.",
+      "summary": "Lectura interactiva de inflación por rubros, alimentos, combustibles y canales de segunda ronda.",
       "source": "BCRD, MICM, Ministerio de Hacienda",
-      "chart": "prices"
+      "chart": "prices",
+      "sourceInfo": {
+        "label": "BCRD, MICM, Ministerio de Hacienda",
+        "detail": "Componentes de precios y canales de traspaso hacia hogares y costos productivos.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Las contribuciones se expresan en puntos porcentuales.",
+          "Los canales de traspaso se normalizan en escala 0-100."
+        ],
+        "related": [
+          "republica-habla-de.html"
+        ]
+      }
     },
     {
       "id": "territorio-infraestructura",
       "title": "Territorio e infraestructura",
       "status": "Activo",
       "visible": true,
-      "type": "Mapa analitico",
+      "type": "Mapa analítico",
       "family": "Territorio",
       "topic": "Territorio",
-      "summary": "Modulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
+      "summary": "Módulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
       "source": "ONE, MOPC, registros administrativos",
-      "chart": "territory"
+      "chart": "territory",
+      "sourceInfo": {
+        "label": "ONE, MOPC, registros administrativos",
+        "detail": "Índice territorial compuesto por mercado, infraestructura y capital humano.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "El índice de oportunidad combina mercado, infraestructura y fuerza laboral.",
+          "La vista por región permite comparar nodos y periferias."
+        ],
+        "related": [
+          "republica-habla-de.html"
+        ]
+      }
     },
     {
       "id": "mipymes-productividad",
       "title": "MiPyMES y productividad",
       "status": "Activo",
       "visible": true,
-      "type": "Analisis",
+      "type": "Análisis",
       "family": "Empresas",
       "topic": "Empresas",
-      "summary": "Seccion para financiamiento, formalidad, productividad, tamano empresarial y barreras de crecimiento.",
+      "summary": "Sección para financiamiento, formalidad, productividad, tamaño empresarial y barreras de crecimiento.",
       "source": "Encuestas MiPyMES, BCRD, DGII",
-      "chart": "mipymes"
+      "chart": "mipymes",
+      "sourceInfo": {
+        "label": "Encuestas MiPyMES, BCRD, DGII",
+        "detail": "Lectura por tamaño, formalidad, acceso financiero y brechas de gestión.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Las barreras se expresan como intensidad relativa.",
+          "La escalera productiva compara micro, pequeña y mediana empresa."
+        ],
+        "related": [
+          "republica-en-un-grafico.html"
+        ]
+      }
     },
     {
       "id": "laboratorio-visual",
       "title": "Laboratorio visual",
       "status": "Activo",
       "visible": true,
-      "type": "Demo analitica",
+      "type": "Demo analítica",
       "family": "Visuales",
-      "topic": "Cartografia y graficos",
-      "summary": "Galeria interactiva construida con mapas y graficos reales de articulos publicados.",
-      "source": "Articulos publicados",
-      "chart": "visualLab"
+      "topic": "Cartografía y gráficos",
+      "summary": "Galería interactiva construida con mapas y gráficos reales de artículos publicados.",
+      "source": "Artículos publicados",
+      "chart": "visualLab",
+      "sourceInfo": {
+        "label": "Artículos publicados",
+        "detail": "Activos generados desde shapefiles, CSV y XLSX usados en artículos sobre territorio, MiPyMES, turismo, transporte y deuda.",
+        "updated": "2026-06-18",
+        "methodology": [
+          "Cada visual nace de archivos usados por artículos existentes, no de datos decorativos.",
+          "Los mapas se exportan como GeoJSON liviano para interacción en navegador."
+        ],
+        "related": [
+          "republica-en-un-grafico.html",
+          "republica-habla-de.html"
+        ]
+      }
     }
   ],
   "moduleCount": 9
