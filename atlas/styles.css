@@ -1696,16 +1696,28 @@ body.modal-open {
 }
 
 @media (max-width: 640px) {
+  html,
+  body,
+  .atlas-app,
+  .atlas-main {
+    max-width: 100%;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     background: #f8f8f5;
   }
 
   .atlas-main {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 0.65rem 1.25rem;
-    overflow-x: clip;
+    overflow-x: visible;
   }
 
   .atlas-topbar {
@@ -1745,6 +1757,7 @@ body.modal-open {
     flex-wrap: nowrap;
     gap: 0.28rem;
     min-width: 0;
+    max-width: 100%;
   }
 
   .topbar-actions a,
@@ -1797,12 +1810,16 @@ body.modal-open {
     margin: 0 -0.65rem;
     overflow-x: auto;
     padding: 0 0.65rem 0.12rem;
-    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
+    scrollbar-width: thin;
   }
 
   .mobile-filter-row::-webkit-scrollbar,
   .mobile-module-nav::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 8px;
   }
 
   .mobile-filter-row .filter-pill {
@@ -1862,10 +1879,20 @@ body.modal-open {
   .overview-group,
   .module-grid,
   .module-card,
+  .chart-layout,
+  .chart-card,
+  .map-card,
+  .map-workbench,
+  .map-canvas-wrap,
+  .map-inspector,
+  .data-appendix,
+  .data-table-grid,
+  .data-table-card,
   .stage-header,
   .stage-header > div {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
   }
 
   .module-guide {
@@ -1904,12 +1931,15 @@ body.modal-open {
     margin: 0 -0.65rem 0.58rem;
     overflow-x: auto;
     padding: 0 0.65rem 0.12rem;
+    overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
-    scrollbar-width: none;
+    scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
+    scrollbar-width: thin;
   }
 
   .metric-strip::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 8px;
   }
 
   .metric-card {
@@ -1982,6 +2012,7 @@ body.modal-open {
   .data-appendix {
     margin-top: 0.62rem;
     padding: 0.68rem;
+    overflow: hidden;
   }
 
   .data-appendix-head {
@@ -1995,10 +2026,13 @@ body.modal-open {
   }
 
   .data-table-wrap {
+    display: block;
+    width: 100%;
     margin: 0;
     max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
+    overscroll-behavior-x: contain;
     padding: 0.55rem 0.48rem 0.7rem;
     scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
     scrollbar-width: thin;
@@ -2037,7 +2071,32 @@ body.modal-open {
 
   .chart-card {
     min-height: 0;
+    overflow-x: auto;
+    overflow-y: visible;
+    overscroll-behavior-x: contain;
     padding: 0.72rem;
+    scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
+    scrollbar-width: thin;
+  }
+
+  .chart-card::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .chart-card::-webkit-scrollbar-track {
+    background: rgba(40, 40, 40, 0.1);
+    border-radius: 999px;
+  }
+
+  .chart-card::-webkit-scrollbar-thumb {
+    background: var(--terracotta);
+    border-radius: 999px;
+  }
+
+  .chart-card canvas:not(#territory-map):not(#visual-map) {
+    width: 100%;
+    min-width: min(620px, 168vw);
+    max-width: none;
   }
 
   .card-head {
@@ -2054,11 +2113,14 @@ body.modal-open {
   }
 
   .chart-toolbar {
+    width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
     min-width: 0;
+    overscroll-behavior-x: contain;
     padding-bottom: 0.08rem;
-    scrollbar-width: none;
+    scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
+    scrollbar-width: thin;
   }
 
   .chart-controls {
@@ -2075,7 +2137,8 @@ body.modal-open {
   }
 
   .chart-toolbar::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 8px;
   }
 
   .chart-toggle {
@@ -2092,14 +2155,19 @@ body.modal-open {
 
   .map-canvas-wrap {
     min-height: 430px;
+    width: 100%;
+    min-width: min(560px, 150vw);
   }
 
   canvas[height="620"],
   .map-canvas-wrap canvas {
+    max-width: 100%;
     height: 430px;
   }
 
   .map-card {
+    overflow-x: auto;
+    overflow-y: visible;
     padding: 0.62rem;
   }
 
@@ -2145,8 +2213,10 @@ body.modal-open {
 
   .atlas-modal-panel {
     width: 100%;
+    max-width: 100%;
     max-height: none;
     border-radius: 0;
+    overflow-x: hidden;
   }
 
   .atlas-modal-head {
@@ -2165,6 +2235,8 @@ body.modal-open {
   }
 
   .atlas-modal-body {
+    max-width: 100%;
+    overflow-x: auto;
     padding: 0.6rem;
   }
 
