@@ -76,8 +76,8 @@
       "summary": "Seguimiento de tipo de cambio, inflación, TPM e IMAE para leer el pulso semanal de la economía dominicana.",
       "source": "BCRD",
       "sourceDetail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
-      "question": "Que esta cambiando en la coyuntura dominicana?",
-      "insight": "El modulo separa nivel, variacion y contexto para evitar que un solo indicador cargue toda la interpretacion macro.",
+      "question": "¿Qué está cambiando en la coyuntura dominicana?",
+      "insight": "El módulo separa nivel, variación y contexto para evitar que un solo indicador cargue toda la interpretación macro.",
       "chart": "macro",
       "methodology": [
         "Tipo de cambio: tasa de venta spot.",
@@ -98,7 +98,7 @@
       "summary": "Ranking de exposición sectorial ante demanda, precios, financiamiento, tipo de cambio, energía y entorno externo.",
       "source": "BCRD, FRED, Yahoo Finance",
       "sourceDetail": "Modelo de sensibilidad con pesos transparentes por sector y drivers macro normalizados.",
-      "question": "Que sectores lucen mas expuestos bajo las condiciones actuales?",
+      "question": "¿Qué sectores lucen más expuestos bajo las condiciones actuales?",
       "insight": "No sustituye cuentas sectoriales oficiales; funciona como capa de lectura para priorizar donde mirar primero.",
       "chart": "sectors",
       "methodology": [
@@ -119,7 +119,7 @@
       "summary": "Índice de presión externa para seguir energía, tasas, dólar global, volatilidad y ciclo real externo.",
       "source": "FRED, Yahoo Finance",
       "sourceDetail": "Variables globales normalizadas y agregadas en escala 0-100.",
-      "question": "El entorno global sopla a favor o en contra?",
+      "question": "¿El entorno global sopla a favor o en contra?",
       "insight": "La lectura compacta permite conectar shocks globales con turismo, transporte, precios y financiamiento local.",
       "chart": "external",
       "methodology": [
@@ -140,8 +140,8 @@
       "summary": "Vista para socios, rubros, balance y oportunidades de sofisticación exportadora de República Dominicana.",
       "source": "UN Comtrade, OEC, Aduanas RD",
       "sourceDetail": "Estructura preparada para series de comercio por socio, rubro y flujo.",
-      "question": "Que vendemos, a quien y con que margen de sofisticacion?",
-      "insight": "El modulo obliga a mirar concentracion, balance y oportunidad a la vez, no solo el ranking de socios.",
+      "question": "¿Qué vendemos, a quién y con qué margen de sofisticación?",
+      "insight": "El módulo obliga a mirar concentración, balance y oportunidad a la vez, no solo el ranking de socios.",
       "chart": "trade",
       "methodology": [
         "Los socios se comparan por participación relativa en el bloque visible.",
@@ -161,8 +161,8 @@
       "summary": "Panel para empleo, informalidad, salarios, educación y brechas de inserción laboral.",
       "source": "ONE, BCRD ENCFT, TSS",
       "sourceDetail": "Estructura de lectura para combinar censo, encuesta laboral y registros administrativos.",
-      "question": "Donde se está creando valor laboral y donde persisten brechas?",
-      "insight": "La separacion por educacion y tipo de insercion evita confundir mas escolaridad con mejor trayectoria laboral automatica.",
+      "question": "¿Dónde se está creando valor laboral y dónde persisten brechas?",
+      "insight": "La separación por educación y tipo de inserción evita confundir más escolaridad con mejor trayectoria laboral automática.",
       "chart": "labor",
       "methodology": [
         "Las tasas se leen por grupo educativo y cohorte laboral.",
@@ -182,8 +182,8 @@
       "summary": "Lectura interactiva de inflación por rubros, alimentos, combustibles y canales de segunda ronda.",
       "source": "BCRD, MICM, Ministerio de Hacienda",
       "sourceDetail": "Componentes de precios y canales de traspaso hacia hogares y costos productivos.",
-      "question": "Que rubros explican la presión de precios que siente la gente?",
-      "insight": "El foco esta en separar el shock inicial del canal que lo convierte en costo cotidiano.",
+      "question": "¿Qué rubros explican la presión de precios que siente la gente?",
+      "insight": "El foco está en separar el shock inicial del canal que lo convierte en costo cotidiano.",
       "chart": "prices",
       "methodology": [
         "Las contribuciones se expresan en puntos porcentuales.",
@@ -203,8 +203,8 @@
       "summary": "Módulo para movilidad, densidad, infraestructura, servicios y brechas provinciales.",
       "source": "ONE, MOPC, registros administrativos",
       "sourceDetail": "Índice territorial compuesto por mercado, infraestructura y capital humano.",
-      "question": "Como se distribuyen oportunidades y restricciones en el territorio?",
-      "insight": "La comparacion territorial ayuda a separar escala economica, conectividad y capacidad laboral.",
+      "question": "¿Cómo se distribuyen oportunidades y restricciones en el territorio?",
+      "insight": "La comparación territorial ayuda a separar escala económica, conectividad y capacidad laboral.",
       "chart": "territory",
       "methodology": [
         "El índice de oportunidad combina mercado, infraestructura y fuerza laboral.",
@@ -224,8 +224,8 @@
       "summary": "Sección para financiamiento, formalidad, productividad, tamaño empresarial y barreras de crecimiento.",
       "source": "Encuestas MiPyMES, BCRD, DGII",
       "sourceDetail": "Lectura por tamaño, formalidad, acceso financiero y brechas de gestión.",
-      "question": "Que limita la productividad empresarial y donde hay margen de mejora?",
-      "insight": "El modulo mira las MiPyMES como sistema de restricciones: dinero, formalidad, gestion y mercado.",
+      "question": "¿Qué limita la productividad empresarial y dónde hay margen de mejora?",
+      "insight": "El módulo mira las MiPyMES como sistema de restricciones: dinero, formalidad, gestión y mercado.",
       "chart": "mipymes",
       "methodology": [
         "Las barreras se expresan como intensidad relativa.",
@@ -245,7 +245,7 @@
       "summary": "Galería interactiva construida con mapas y gráficos reales de artículos publicados.",
       "source": "Artículos publicados",
       "sourceDetail": "Activos generados desde shapefiles, CSV y XLSX usados en artículos sobre territorio, MiPyMES, turismo, transporte y deuda.",
-      "question": "Que puede hacer el Atlas con datos reales que ya viven en los articulos?",
+      "question": "¿Qué puede hacer el Atlas con datos reales que ya viven en los artículos?",
       "insight": "Un articulo con datos trazables puede crecer hasta convertirse en pieza explorable.",
       "chart": "visualLab",
       "methodology": [
@@ -316,7 +316,7 @@
         { "name": "Oro y minerales", "share": 31, "complexity": 42, "signal": "Concentracion alta" },
         { "name": "Instrumentos medicos", "share": 18, "complexity": 82, "signal": "Sofisticacion alta" },
         { "name": "Tabaco y cigarros", "share": 11, "complexity": 54, "signal": "Marca exportadora" },
-        { "name": "Textiles", "share": 9, "complexity": 49, "signal": "Integracion regional" },
+        { "name": "Textiles", "share": 9, "complexity": 49, "signal": "Integración regional" },
         { "name": "Cacao y derivados", "share": 5, "complexity": 57, "signal": "Valor agregado potencial" }
       ],
       "flows": [
@@ -381,12 +381,12 @@
         { "province": "Santo Domingo", "region": "Ozama", "opportunity": 84, "infrastructure": 82, "labor": 81, "market": 92 },
         { "province": "Santiago", "region": "Norte", "opportunity": 79, "infrastructure": 78, "labor": 77, "market": 82 },
         { "province": "La Altagracia", "region": "Este", "opportunity": 73, "infrastructure": 70, "labor": 64, "market": 78 },
-        { "province": "San Pedro de Macoris", "region": "Este", "opportunity": 66, "infrastructure": 67, "labor": 61, "market": 70 },
+        { "province": "San Pedro de Macorís", "region": "Este", "opportunity": 66, "infrastructure": 67, "labor": 61, "market": 70 },
         { "province": "Puerto Plata", "region": "Norte", "opportunity": 64, "infrastructure": 65, "labor": 59, "market": 68 },
         { "province": "La Vega", "region": "Norte", "opportunity": 62, "infrastructure": 61, "labor": 63, "market": 60 },
-        { "province": "San Cristobal", "region": "Sur", "opportunity": 59, "infrastructure": 57, "labor": 58, "market": 61 },
+        { "province": "San Cristóbal", "region": "Sur", "opportunity": 59, "infrastructure": 57, "labor": 58, "market": 61 },
         { "province": "Barahona", "region": "Sur", "opportunity": 46, "infrastructure": 43, "labor": 49, "market": 45 },
-        { "province": "Elias Pina", "region": "Sur", "opportunity": 34, "infrastructure": 31, "labor": 39, "market": 32 }
+        { "province": "Elías Piña", "region": "Sur", "opportunity": 34, "infrastructure": 31, "labor": 39, "market": 32 }
       ]
     },
     "mipymes": {

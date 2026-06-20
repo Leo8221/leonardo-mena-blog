@@ -102,6 +102,9 @@ jobs:
       - name: Renderizar proyecto
         run: quarto render --no-cache
 
+      - name: Validar texto publicado
+        run: node atlas/scripts/check-text-integrity.mjs --include-docs
+
       - name: Guardar cambios
         run: |
           git config --global user.name "GitHub Actions Bot"

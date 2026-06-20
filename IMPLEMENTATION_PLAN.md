@@ -13,6 +13,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - El sistema visual del blog sigue concentrado en `styles.css`, pero ya existe una fuente compartida de tokens en `assets/css/tokens.css`.
 - Atlas ya consume los alias de marca desde `assets/css/tokens.css` en vez de declarar su propia paleta base.
 - `_quarto.yml` ya no tiene CTA de suscripcion con HTML inline.
+- El generador del Atlas conserva `question`, `insight` y metodologia completa en el JSON publico, y valida IDs, metricas, series, fechas y texto con codificacion sospechosa.
+- La portada del Atlas ya esta agrupada por preguntas y no como cuadricula plana.
 - `share-buttons-auto.html` ya no contiene logs de depuracion ni reintentos.
 - `reading-progress.html` ya respeta `prefers-reduced-motion` y usa `requestAnimationFrame`.
 - El workflow de publicacion ahora se dispara en `push` a `main` para fuentes del sitio, regenera datos del Atlas antes del render y fija Quarto `1.9.38`, igual que la salida actual en `docs/`.
@@ -28,7 +30,7 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 ## Fases
 
 - [ ] Fase 1: sistema de diseno compartido y `DESIGN-SYSTEM.md`.
-- [ ] Fase 2: cabecera y navegacion global sin CTA inline.
+- [x] Fase 2: cabecera y navegacion global sin CTA inline.
 - [ ] Fase 3: portada del blog con hero, Pulso RD, destacado, caminos, ultimas publicaciones, Sobre Leonardo y boletin.
 - [ ] Fase 4: portada movil fluida desde 320 px.
 - [ ] Fase 5: secciones, archivo, categorias y paginas de series.
@@ -36,8 +38,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [ ] Fase 7: Suscripcion responsive, sin estilos inline innecesarios.
 - [ ] Fase 8: articulos con mejor lectura, metadatos, figuras, captions y navegacion.
 - [x] Fase 9: compartir y progreso de lectura accesibles.
-- [ ] Fase 10: identidad del Atlas como parte del sitio.
-- [ ] Fase 11: portada guiada del Atlas por preguntas.
+- [x] Fase 10: identidad del Atlas como parte del sitio.
+- [x] Fase 11: portada guiada del Atlas por preguntas.
 - [ ] Fase 12: busqueda y filtros del Atlas con accesibilidad y estados vacios.
 - [ ] Fase 13: metricas del Atlas visibles y correctas en movil.
 - [ ] Fase 14: modulos del Atlas con lectura, fuente, metodologia expandible y relacionados.
@@ -66,8 +68,13 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Eliminado CTA inline del navbar; ahora se estiliza desde CSS.
 - [x] Footer sin estilo inline y enlaces externos con `rel`.
 - [x] Workflow actualizado para regenerar datos del Atlas antes de publicar y observar cambios en `assets/**`.
+- [x] Consolidada documentacion del Atlas: `README.md` corto, `GUIDE.md` unica guia operativa y `GUIA.md` eliminado.
+- [x] Agregado `atlas/scripts/check-text-integrity.mjs` para detectar mojibake, caracteres de reemplazo y UTF-8 invalido.
+- [x] Workflow actualizado para validar texto publicado despues de `quarto render`.
+- [x] Portada del Atlas organizada por preguntas con familia, tipo, pregunta, resumen, lectura, fuente, corte y CTA.
+- [x] Modulos del Atlas muestran pregunta, resumen, lectura y ficha fuente con metodologia expandible.
 - [ ] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
-- [ ] Consolidar documentacion duplicada de Atlas (`README.md`, `GUIDE.md`, `GUIA.md`).
+- [x] Validada portada guiada del Atlas en escritorio y captura movil Edge headless a 500 px; Edge headless a 390 px recorta una viewport interna mayor, asi que no se uso como evidencia visual definitiva.
 
 ## Archivos afectados previstos
 
@@ -93,6 +100,7 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - `atlas/js/*.js`
 - `atlas/data/atlas-source.json`
 - `atlas/scripts/build-atlas-data.mjs`
+- `atlas/scripts/check-text-integrity.mjs`
 - `atlas/scripts/build-article-visuals.R`
 - `.github/workflows/actualizar_observatorio.yml`
 - `docs/` como salida generada/publicable.
@@ -110,10 +118,14 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 
 - [x] `quarto render` fuera del sandbox: pasa con Quarto local `1.8.26`, pero genera churn no aceptado en `docs/`.
 - [x] Definir version de Quarto para build reproducible en CI.
-- [ ] `node atlas/scripts/build-atlas-data.mjs`
-- [ ] `Rscript atlas/scripts/build-article-visuals.R`
-- [ ] `node --check` para JS del Atlas.
-- [ ] Validar que no haya mojibake en fuente ni salida.
+- [x] `node atlas/scripts/build-atlas-data.mjs`
+- [x] `Rscript atlas/scripts/build-article-visuals.R` pasa con advertencias locales conocidas de locale y `st_simplify`.
+- [x] `node --check` para JS del Atlas.
+- [x] `node atlas/scripts/check-text-integrity.mjs`
+- [x] `node atlas/scripts/check-text-integrity.mjs --include-docs`
+- [x] Validar que no haya mojibake en fuente ni salida despues de `quarto render`.
+- [x] `quarto render --no-cache`
+- [x] QA local de Atlas: portada por defecto, grupos por pregunta, modulo por hash, ficha fuente, metodologia expandible y consola limpia.
 - [ ] Probar portada y Atlas en 320, 360, 390, 430, 768, 1024 y 1440 px.
 - [ ] Revisar consola JS en portada, articulo, Sobre mi, Suscribete y Atlas.
 - [ ] Revisar navegacion por teclado y foco visible.

@@ -1,17 +1,25 @@
-# Guia de trabajo del Atlas
+# Guía de trabajo del Atlas
 
-Esta guia es para mantener el Atlas sin convertirlo en una pieza dificil de
-editar. La regla base: el articulo explica; el Atlas deja explorar datos reales.
-Si algo no esta listo, no se muestra.
+Esta guía existe para que Atlas pueda crecer sin tocar toda la aplicación cada
+vez. La regla base: el artículo explica; Atlas deja explorar datos reales. Si
+algo no está listo, no se muestra.
 
-## Ruta rapida
+## Qué tocar
 
-1. Trabaja los datos en R.
-2. Exporta una tabla limpia o GeoJSON a `atlas/data/`.
-3. Si es un modulo principal, registralo en `atlas/data/atlas-source.json`.
-4. Si viene de un articulo, agregalo en `atlas/scripts/build-article-visuals.R`.
-5. Reutiliza un renderer existente en `atlas/app.js`.
-6. Ejecuta:
+- `atlas/data/atlas-source.json`: módulos principales, filtros, textos,
+  fuentes, fechas de corte y series base.
+- `atlas/scripts/build-atlas-data.mjs`: valida y publica el contrato final en
+  `atlas/data/atlas-data.json`.
+- `atlas/scripts/build-article-visuals.R`: transforma datos nacidos de artículos
+  publicados.
+- `atlas/app.js`: estructura de vistas, navegación, filtros e hidratación.
+- `atlas/js/renderers.js`: motores de gráficos, mapas y canvas.
+- `atlas/js/interactions.js`: enlace, PNG, modales y pantalla completa.
+- `atlas/styles.css`: sistema visual propio del Atlas, usando tokens
+  compartidos desde `assets/css/tokens.css`.
+- `_quarto.yml`: solo si agregas un recurso nuevo que GitHub Pages debe copiar.
+
+## Ruta rápida
 
 ```powershell
 Rscript atlas/scripts/build-article-visuals.R
@@ -19,23 +27,84 @@ node atlas/scripts/build-atlas-data.mjs
 quarto render
 ```
 
-## Que archivo tocar
+Antes de cerrar un cambio de JavaScript:
 
-- `atlas/data/atlas-source.json`: modulos principales, filtros, texto corto,
-  metadata y series base.
-- `atlas/scripts/build-atlas-data.mjs`: normaliza lo que sale de
-  `atlas-source.json`.
-- `atlas/scripts/build-article-visuals.R`: datos que nacen de articulos ya
-  publicados.
-- `atlas/app.js`: renderers e interaccion.
-- `atlas/styles.css`: sistema visual, responsive, botones, modales y tooltips.
-- `_quarto.yml`: solo si agregas un recurso nuevo que GitHub Pages debe copiar.
+```powershell
+node --check atlas/app.js
+node --check atlas/js/config.js
+node --check atlas/js/utils.js
+node --check atlas/js/renderers.js
+node --check atlas/js/interactions.js
+```
 
-## Opciones listas
+Para revisar texto roto o problemas simples de acentos:
 
-Usa estas opciones antes de crear un grafico desde cero.
+```powershell
+node atlas/scripts/check-text-integrity.mjs
+```
 
-### Linea simple
+## Contrato de módulo
+
+Cada módulo activo en `atlas/data/atlas-source.json` necesita:
+
+- `id`: identificador estable, sin espacios.
+- `title`: nombre visible.
+- `visible: true`.
+- `status: "Activo"`.
+- `family`, `topic`, `type`.
+- `summary`: resumen breve.
+- `question`: pregunta que responde.
+- `insight`: lectura principal.
+- `source` y `sourceDetail`.
+- `updated` si el corte difiere de `updated` global.
+- `chart`: tipo que se renderiza en `atlas/app.js`.
+- `methodology`: lista breve y verificable.
+- `related`: rutas reales relacionadas.
+
+El generador oculta borradores, valida IDs, valida campos esenciales, comprueba
+que las métricas apunten a módulos visibles y conserva `question`, `summary`,
+`insight`, `sourceInfo`, `methodology` y `related` en el JSON público.
+
+## Agregar una sección
+
+1. Crea o limpia los datos.
+2. Si vienen de un artículo, agrega la transformación en
+   `atlas/scripts/build-article-visuals.R`.
+3. Exporta el archivo necesario a `atlas/data/`.
+4. Registra el módulo en `atlas/data/atlas-source.json`.
+5. Usa `visible: false` o `status: "Borrador"` hasta que esté listo.
+6. Reutiliza un renderer existente antes de crear uno nuevo.
+7. Corre los scripts de generación y el render.
+8. Revisa `/atlas/` en desktop y móvil.
+9. Toca al menos un mapa, una burbuja, una barra y un gráfico ampliado.
+
+## Tipos disponibles
+
+- `macro`: líneas para series cortas. La TPM puede ir escalonada.
+- `external`: índice y drivers externos.
+- `sectors`: barras de sensibilidad.
+- `trade`: scatter de oportunidad y ranking.
+- `labor`: barras por grupo.
+- `prices`: inflación y canales de traspaso.
+- `territory`: mapa provincial y vista territorial.
+- `mipymes`: barras, barreras y escalera productiva.
+- `visualLab`: mapas y gráficos nacidos de artículos.
+
+Renderers reutilizables:
+
+- `drawLineChart`
+- `drawDualLineChart`
+- `drawHorizontalBarChart`
+- `drawGroupedBarChart`
+- `drawComplexScatterChart`
+- `drawChoroplethMap`
+- `drawTreemapChart`
+- `drawDebtBurdenChart`
+- `drawStackedBarChart`
+
+## Opciones de gráfico
+
+### Línea escalonada
 
 ```js
 drawLineChart(canvas, labels, values, "TPM (%)", {
@@ -43,33 +112,31 @@ drawLineChart(canvas, labels, values, "TPM (%)", {
 });
 ```
 
-Usa `stepped: true` para tasas que cambian por decision, como TPM.
+Úsala para tasas que cambian por decisión, como la TPM.
 
-### Barras horizontales
+### Barras 0-100
 
 ```js
-drawHorizontalBarChart(canvas, rows, {
+renderBarRows(rows, {
   labelField: "sector",
-  valueField: "presion",
-  title: "Presion por sector",
-  max: 100
+  valueField: "pressure",
+  max: 100,
+  suffix: "/100"
 });
 ```
 
-Sirve para rankings 0-100, brechas o indices.
+La estética de las barras sale de `atlas/styles.css`: relleno mate y track
+neutro, sin gradientes ajenos a la marca.
 
 ### Burbujas con outliers
 
 ```js
 drawComplexScatterChart(canvas, rows, {
-  title: "Empleo formal y alquiler",
   xField: "rent",
   yField: "formal_employment",
   sizeField: "jobs",
   labelField: "province",
   categoryField: "zone",
-  xLabel: "Alquiler mediano anual",
-  yLabel: "% de empleo formal",
   xTransform: "sqrt",
   yTransform: "sqrt",
   labelTopBy: "jobs",
@@ -78,17 +145,17 @@ drawComplexScatterChart(canvas, rows, {
 });
 ```
 
-`sqrt` o `log` comprimen la escala visual sin cambiar el dato que aparece en el
-tooltip. Esto es util cuando Santo Domingo o el Distrito aplastan el resto.
+`sqrt` o `log` comprimen la escala visual sin cambiar el dato real mostrado en
+tooltip o tabla. Sirve cuando Distrito Nacional o Santo Domingo aplastan el
+resto de puntos.
 
 ### Mapa
 
 ```js
 drawChoroplethMap(canvas, features, {
-  title: "Republica Dominicana",
   valueField: "business_density",
   labelField: "province",
-  unit: "empresas por 10 mil hab.",
+  unit: "empresas por 1,000 hab.",
   inspectorId: "territory-map-inspector",
   mapId: "territory"
 });
@@ -99,16 +166,47 @@ de etiqueta.
 
 ### Pantalla completa
 
-En el HTML del modulo:
-
 ```js
 chartControls("", chartExpandButton("id-del-canvas"))
 ```
 
-Despues agrega el caso en `redrawExpandedChart()` para que el modal redibuje el
-grafico y conserve la interaccion.
+Después agrega el caso en `redrawExpandedChart()` para redibujar el gráfico en
+el modal y conservar la interacción.
 
-## R: exportar datos simples
+## Datos desde artículos
+
+Usa este flujo cuando un artículo publicado tiene datos que merecen una pieza
+interactiva:
+
+1. Mantén el artículo como fuente narrativa.
+2. Agrega la transformación en `atlas/scripts/build-article-visuals.R`.
+3. Exporta a `atlas/data/`.
+4. Registra el artículo en `sources` con `title`, `article`, `href` y `files`.
+5. Conecta la visual en `renderVisualLab()` o en un módulo propio.
+6. Corre R, Node y Quarto.
+
+Activos actuales desde artículos:
+
+- `rd-provinces.geojson`: densidad empresarial por provincia.
+- `rd-regions-mipymes.geojson`: microempresas e informalidad por región.
+- `world-tourism.geojson`: preferencia por playa por país de origen.
+- `article-visuals.json`: turismo, empleo-alquiler, deuda y registro de
+  fuentes.
+
+## Fichas fuente
+
+Cada ficha sale del módulo:
+
+- `source`: nombre corto.
+- `sourceDetail`: origen claro de los datos.
+- `updated`: fecha de corte del dato.
+- `methodology`: criterios verificables.
+- `related`: rutas reales a artículos o series.
+
+No escribas texto público de relleno. Si la fuente, metodología o artículo no
+están listos, el módulo debe quedar oculto.
+
+## R mínimo
 
 ```r
 library(dplyr)
@@ -131,32 +229,22 @@ write_json(
 )
 ```
 
+## Acentos y texto
+
+Los datos públicos deben estar en UTF-8. Si trabajas en R desde Windows:
+
+- Lee CSV con helpers que fuercen UTF-8 cuando sea necesario.
+- Normaliza claves de unión, no textos visibles.
+- No publiques mojibake ni caracteres de reemplazo.
+- Ejecuta `node atlas/scripts/check-text-integrity.mjs` antes de cerrar.
+
 ## Checklist antes de publicar
 
-1. `node --check atlas/app.js`
+1. `Rscript atlas/scripts/build-article-visuals.R`
 2. `node atlas/scripts/build-atlas-data.mjs`
-3. `Rscript atlas/scripts/build-article-visuals.R`
-4. `quarto render`
-5. Revisar `/atlas/` en desktop.
-6. Revisar `/atlas/` en movil.
-7. Tocar un mapa, una burbuja, una barra y un grafico ampliado.
+3. `node atlas/scripts/check-text-integrity.mjs`
+4. `node --check` para los JS del Atlas.
+5. `quarto render`
+6. Revisar `/atlas/` en desktop.
+7. Revisar `/atlas/` en móvil.
 8. Confirmar que las secciones incompletas sigan ocultas.
-
-## Cuando crear un renderer nuevo
-
-Crea un renderer solo si no puedes expresar la idea con `drawLineChart`,
-`drawHorizontalBarChart`, `drawGroupedBarChart`, `drawComplexScatterChart`,
-`drawChoroplethMap`, `drawTreemapChart`, `drawDebtBurdenChart` o
-`drawStackedBarChart`.
-
-Un buen renderer nuevo debe recibir:
-
-- `canvas`
-- `rows` o `features`
-- `options`
-
-Y debe cerrar con una interaccion reusable:
-
-- `bindPointTooltip()` para puntos.
-- `bindBoxTooltip()` para barras, areas o rectangulos.
-- logica propia solo si es un mapa.

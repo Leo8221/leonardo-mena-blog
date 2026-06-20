@@ -51,6 +51,7 @@ Reglas persistentes para trabajar en este repositorio.
   - `node --check atlas/js/utils.js`
   - `node --check atlas/js/renderers.js`
   - `node --check atlas/js/interactions.js`
+  - `node atlas/scripts/check-text-integrity.mjs`
   - `quarto render`
   - revision visual en desktop y movil cuando cambie UI.
 - Si una validacion no se ejecuta o solo pasa con advertencias, decirlo claramente.

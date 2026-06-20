@@ -250,7 +250,6 @@ debt <- read_csv_utf8(file.path(root, "posts", "republica-habla-de", "2025-12-19
   )
 
 payload <- list(
-  updated = as.character(Sys.Date()),
   sources = list(
     list(title = "Densidad empresarial por provincia", article = "2026-01-06-Perpectiva_del_desarrollo", href = "../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html", files = c("PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE")),
     list(title = "MiPyMES por regi\u00f3n", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),

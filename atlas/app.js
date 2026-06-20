@@ -6,7 +6,7 @@ const state = {
   articleVisuals: null,
   tooltip: null,
   tooltipPinned: false,
-  active: "pulso-macro",
+  active: "overview",
   query: "",
   family: "all",
   macroMetric: "dolar",
@@ -26,6 +26,24 @@ const els = {
   stage: document.getElementById("module-stage"),
   menuToggle: document.getElementById("menu-toggle")
 };
+
+const OVERVIEW_GROUPS = [
+  {
+    title: "¿Qué está pasando ahora?",
+    summary: "Coyuntura, precios y señales externas para ubicar el momento económico.",
+    modules: ["pulso-macro", "contexto-externo", "costo-vida"]
+  },
+  {
+    title: "¿Dónde están las oportunidades y restricciones?",
+    summary: "Comercio, sectores y territorio para leer capacidad productiva y cuellos de botella.",
+    modules: ["comercio-exterior", "sectores", "territorio-infraestructura"]
+  },
+  {
+    title: "¿Cómo se traduce en la vida económica?",
+    summary: "Trabajo, MiPyMES y visuales de artículos para conectar datos con experiencias concretas.",
+    modules: ["mercado-laboral", "mipymes-productividad", "laboratorio-visual"]
+  }
+];
 
 async function boot() {
   try {
@@ -54,6 +72,7 @@ async function boot() {
   }
 
   bindEvents();
+  syncFilterState();
   render();
 }
 
@@ -67,9 +86,7 @@ function bindEvents() {
   document.querySelectorAll(".filter-pill").forEach((button) => {
     button.addEventListener("click", () => {
       state.family = button.dataset.filter;
-      document.querySelectorAll(".filter-pill").forEach((item) => {
-        item.classList.toggle("is-active", item.dataset.filter === state.family);
-      });
+      syncFilterState();
       renderNavigation();
       renderMobileNavigation();
       renderOverviewIfActive();
@@ -205,25 +222,36 @@ function renderStage() {
 
 function renderOverview() {
   const modules = filteredModules();
+  const groupedIds = new Set(OVERVIEW_GROUPS.flatMap((group) => group.modules));
+  const grouped = OVERVIEW_GROUPS.map((group) => {
+    return {
+      ...group,
+      modules: modules.filter((module) => group.modules.includes(module.id))
+    };
+  }).filter((group) => group.modules.length > 0);
+  const ungrouped = modules.filter((module) => !groupedIds.has(module.id));
+  if (ungrouped.length > 0) {
+    grouped.push({
+      title: "Otras vistas",
+      summary: "Módulos activos todavía no asignados a una pregunta principal.",
+      modules: ungrouped
+    });
+  }
+
   els.stage.innerHTML = `
     <div class="stage-header">
       <div>
         <p class="eyebrow">${escapeHtml(state.data.brand.shortName)}</p>
         <h2>Atlas</h2>
+        <p>Explora los datos desde preguntas, no desde una lista plana de gráficos.</p>
       </div>
       ${renderStageActions(false)}
     </div>
-    <div class="module-grid">
-      ${modules.map((module) => `
-        <button class="module-card" type="button" data-module="${module.id}">
-          <h3>${escapeHtml(module.title)}</h3>
-          <footer>
-            <span>${escapeHtml(module.family)}</span>
-            <span>${escapeHtml(module.type)}</span>
-          </footer>
-        </button>
-      `).join("")}
-    </div>
+    ${modules.length ? `
+      <div class="overview-shell">
+        ${grouped.map(renderOverviewGroup).join("")}
+      </div>
+    ` : renderEmptyOverview()}
   `;
 
   els.stage.querySelectorAll(".module-card").forEach((button) => {
@@ -232,11 +260,61 @@ function renderOverview() {
   hydrateModuleActions();
 }
 
+function renderOverviewGroup(group) {
+  return `
+    <section class="overview-group" aria-labelledby="overview-${slugify(group.title)}">
+      <div class="overview-group-head">
+        <h3 id="overview-${slugify(group.title)}">${escapeHtml(group.title)}</h3>
+        <p>${escapeHtml(group.summary)}</p>
+      </div>
+      <div class="module-grid">
+        ${group.modules.map(renderOverviewCard).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderOverviewCard(module) {
+  const source = module.sourceInfo || {};
+  return `
+    <button class="module-card" type="button" data-module="${module.id}">
+      <span class="module-card-meta">
+        <span>${escapeHtml(module.family)}</span>
+        <span>${escapeHtml(module.type)}</span>
+      </span>
+      <h3>${escapeHtml(module.title)}</h3>
+      ${module.question ? `<p class="module-question">${escapeHtml(module.question)}</p>` : ""}
+      ${module.summary ? `<p>${escapeHtml(module.summary)}</p>` : ""}
+      ${module.insight ? `
+        <span class="module-reading">
+          <strong>La lectura</strong>
+          <span>${escapeHtml(module.insight)}</span>
+        </span>
+      ` : ""}
+      <span class="module-card-footer">
+        <span>${escapeHtml(source.label || module.source || "Fuente")}</span>
+        <span>${source.updated ? `Corte ${escapeHtml(source.updated)}` : "Abrir"}</span>
+        <strong>Abrir</strong>
+      </span>
+    </button>
+  `;
+}
+
+function renderEmptyOverview() {
+  return `
+    <div class="empty-state">
+      <strong>No hay módulos con esos filtros.</strong>
+      <span>Prueba otra búsqueda o vuelve a ver todo el Atlas.</span>
+      <button class="stage-action" type="button" data-action="reset-filters">Restablecer filtros</button>
+    </div>
+  `;
+}
+
 function renderStageActions(canExport) {
   return `
     <div class="stage-actions">
       <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Enlace</button>
-      ${canExport ? `<button class="stage-action" type="button" data-action="export-chart" title="Descargar grafico visible">PNG</button>` : ""}
+      ${canExport ? `<button class="stage-action" type="button" data-action="export-chart" title="Descargar gráfico visible">PNG</button>` : ""}
     </div>
   `;
 }
@@ -256,10 +334,26 @@ function renderModuleBody(module) {
 
   const body = renderer ? renderer(module) : renderUnsupported(module);
   return `
+    ${renderModuleBrief(module)}
     <div class="chart-layout">
       ${body}
       ${renderSourceCard(module)}
     </div>
+  `;
+}
+
+function renderModuleBrief(module) {
+  return `
+    <section class="module-brief" aria-label="Lectura del módulo">
+      ${module.question ? `<p class="module-brief-question">${escapeHtml(module.question)}</p>` : ""}
+      ${module.summary ? `<p>${escapeHtml(module.summary)}</p>` : ""}
+      ${module.insight ? `
+        <p class="module-brief-reading">
+          <strong>La lectura</strong>
+          <span>${escapeHtml(module.insight)}</span>
+        </p>
+      ` : ""}
+    </section>
   `;
 }
 
@@ -268,7 +362,7 @@ function renderSourceCard(module) {
   if (!info) return "";
 
   const sourceLabel = info.label || module.source || "Fuente";
-  const method = Array.isArray(info.methodology) ? info.methodology.find(Boolean) : "";
+  const methods = Array.isArray(info.methodology) ? info.methodology.filter(Boolean) : [];
   const links = Array.isArray(info.related)
     ? info.related.map((href) => {
       const safeHref = sourceRelatedHref(href);
@@ -285,8 +379,16 @@ function renderSourceCard(module) {
       </div>
       <dl>
         ${info.updated ? `<div><dt>Corte</dt><dd>${escapeHtml(info.updated)}</dd></div>` : ""}
-        ${method ? `<div><dt>Lectura</dt><dd>${escapeHtml(method)}</dd></div>` : ""}
+        ${state.data.generatedAt ? `<div><dt>Generado</dt><dd>${escapeHtml(state.data.generatedAt.slice(0, 10))}</dd></div>` : ""}
       </dl>
+      ${methods.length ? `
+        <details class="source-method">
+          <summary>Metodología</summary>
+          <ul>
+            ${methods.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </details>
+      ` : ""}
       ${links ? `<nav class="source-links" aria-label="Enlaces relacionados">${links}</nav>` : ""}
     </aside>
   `;
@@ -401,7 +503,7 @@ function renderLabor() {
     <section class="chart-card chart-card-wide">
       <div class="card-head">
         <div>
-          <h3>Insercion por educacion</h3>
+          <h3>Inserción por educación</h3>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("labor", "employment", "Empleo")}
@@ -430,7 +532,7 @@ function renderPrices() {
       <canvas id="prices-chart" height="320" aria-label="Gráfico de inflación general y subyacente"></canvas>
     </section>
     <section class="chart-card">
-      <h3>Contribucion por rubro</h3>
+      <h3>Contribución por rubro</h3>
       <div class="driver-list">${renderBarRows(state.data.series.prices.components, {
         labelField: "component",
         valueField: "pressure",
@@ -554,7 +656,7 @@ function renderVisualLab() {
         </div>
         ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}`)}
       </div>
-      <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turisticos"></canvas>
+      <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turísticos"></canvas>
     </section>
     <section class="chart-card">
       <div class="card-head">
@@ -728,7 +830,7 @@ function hydrateCharts(module) {
       mapId: "territory",
       tooltipRows: [
         { field: "businesses", label: "Empresas" },
-        { field: "population", label: "Poblacion" }
+        { field: "population", label: "Población" }
       ]
     });
     drawScatterChart(document.getElementById("territory-chart"), territoryRows(), {
@@ -805,7 +907,7 @@ function visualMapConfig() {
       mapId: "visual-business",
       tooltipRows: [
         { field: "businesses", label: "Empresas" },
-        { field: "population", label: "Poblacion" }
+        { field: "population", label: "Población" }
       ]
     },
     mipymes: {
@@ -841,7 +943,7 @@ function visualMapConfig() {
 
 function transportScatterOptions() {
   return {
-    title: "Prima de ubicacion vs empleo formal",
+    title: "Prima de ubicación vs empleo formal",
     xField: "median_rent_thousand",
     yField: "employment_share",
     sizeField: "jobs",
@@ -876,7 +978,19 @@ function visibleModules() {
 function filteredModules() {
   return visibleModules().filter((module) => {
     const matchesFamily = state.family === "all" || statusKey(module.family) === statusKey(state.family);
-    const text = `${module.title} ${module.topic} ${module.type} ${module.summary || ""} ${module.source || ""}`.toLowerCase();
+    const source = module.sourceInfo || {};
+    const text = [
+      module.title,
+      module.question,
+      module.summary,
+      module.insight,
+      module.topic,
+      module.type,
+      module.family,
+      module.source,
+      source.label,
+      source.detail
+    ].filter(Boolean).join(" ").toLowerCase();
     const matchesQuery = !state.query || normalizeText(text).includes(normalizeText(state.query));
     return matchesFamily && matchesQuery;
   });
@@ -941,6 +1055,18 @@ function setActive(moduleId) {
 }
 
 function hydrateModuleActions() {
+  els.stage.querySelectorAll('[data-action="reset-filters"]').forEach((button) => {
+    button.addEventListener("click", () => {
+      state.query = "";
+      state.family = "all";
+      if (els.search) els.search.value = "";
+      syncFilterState();
+      renderNavigation();
+      renderMobileNavigation();
+      renderStage();
+    });
+  });
+
   els.stage.querySelectorAll('[data-action="copy-link"]').forEach((button) => {
     button.addEventListener("click", async () => {
       const copied = await copyText(currentViewUrl());
@@ -952,7 +1078,7 @@ function hydrateModuleActions() {
     button.addEventListener("click", () => {
       const canvas = els.stage.querySelector("canvas");
       if (!canvas) {
-        flashButton(button, "Sin grafico");
+        flashButton(button, "Sin gráfico");
         return;
       }
       const link = document.createElement("a");
@@ -966,6 +1092,20 @@ function hydrateModuleActions() {
   els.stage.querySelectorAll('[data-action="expand-chart"]').forEach((button) => {
     button.addEventListener("click", () => openChartFullscreen(button.dataset.canvas));
   });
+}
+
+function syncFilterState() {
+  document.querySelectorAll(".filter-pill").forEach((item) => {
+    const active = item.dataset.filter === state.family;
+    item.classList.toggle("is-active", active);
+    item.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function slugify(value) {
+  return normalizeText(value)
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 boot();
