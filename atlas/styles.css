@@ -1995,8 +1995,44 @@ body.modal-open {
   }
 
   .data-table-wrap {
-    margin: 0 -0.68rem;
-    padding: 0.55rem 0.68rem;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.55rem 0.48rem 0.7rem;
+    scrollbar-color: var(--terracotta) rgba(40, 40, 40, 0.12);
+    scrollbar-width: thin;
+  }
+
+  .data-table-wrap table {
+    width: max-content;
+    min-width: max(720px, 185vw);
+  }
+
+  .data-table-wrap th,
+  .data-table-wrap td {
+    min-width: 116px;
+    white-space: nowrap;
+  }
+
+  .data-table-wrap th:first-child,
+  .data-table-wrap td:first-child {
+    min-width: 176px;
+    position: static;
+  }
+
+  .data-table-wrap::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .data-table-wrap::-webkit-scrollbar-track {
+    background: rgba(40, 40, 40, 0.1);
+    border-radius: 999px;
+  }
+
+  .data-table-wrap::-webkit-scrollbar-thumb {
+    background: var(--terracotta);
+    border-radius: 999px;
   }
 
   .chart-card {

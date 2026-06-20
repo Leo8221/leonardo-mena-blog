@@ -323,6 +323,16 @@ body.quarto-dark #quarto-header .nav-link.active {
 }
 
 @media (max-width: 991.98px) {
+  #quarto-header,
+  #quarto-header.headroom,
+  #quarto-header.headroom--pinned,
+  #quarto-header.headroom--unpinned {
+    position: fixed !important;
+    inset: 0 0 auto 0;
+    z-index: 1040;
+    transform: none !important;
+  }
+
   #quarto-header .navbar {
     padding: 0.35rem 0.75rem;
     overflow: visible;
@@ -332,8 +342,9 @@ body.quarto-dark #quarto-header .nav-link.active {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.45rem;
+    position: relative;
     width: 100%;
     max-width: 100%;
     min-height: 50px;
@@ -384,14 +395,38 @@ body.quarto-dark #quarto-header .nav-link.active {
     background: var(--lm-bg-card);
   }
 
+  #quarto-header .navbar-toggler-icon {
+    width: 18px;
+    height: 14px;
+    display: block;
+    margin: 0 auto;
+    background-image: linear-gradient(
+      to bottom,
+      var(--lm-text-main) 0 2px,
+      transparent 2px 6px,
+      var(--lm-text-main) 6px 8px,
+      transparent 8px 12px,
+      var(--lm-text-main) 12px 14px
+    ) !important;
+    background-size: 18px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   #quarto-header .navbar-collapse {
     order: 5;
-    flex-basis: 100%;
-    margin: 0.45rem -0.75rem 0;
+    position: fixed;
+    top: calc(56px + env(safe-area-inset-top));
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+    flex-basis: auto;
+    margin: 0;
     padding: 0.85rem 0.95rem 1rem;
-    border-top: 1px solid var(--lm-border);
+    border: 1px solid var(--lm-border);
     background: var(--lm-bg-card);
     box-shadow: var(--shadow-sm);
+    z-index: 1039;
   }
 
   #quarto-header .navbar-collapse:not(.show) {
@@ -401,7 +436,7 @@ body.quarto-dark #quarto-header .nav-link.active {
   #quarto-header .navbar-collapse.show,
   #quarto-header .navbar-collapse.collapsing {
     display: block !important;
-    max-height: calc(100dvh - 64px);
+    max-height: calc(100dvh - 74px);
     overflow-y: auto;
   }
 
@@ -483,6 +518,17 @@ body.quarto-dark #quarto-header .nav-link.active {
   body.quarto-dark #quarto-header .navbar .navbar-logo {
     display: block;
     object-fit: contain;
+  }
+
+  body.quarto-dark #quarto-header .navbar-toggler-icon {
+    background-image: linear-gradient(
+      to bottom,
+      #f3f0ea 0 2px,
+      transparent 2px 6px,
+      #f3f0ea 6px 8px,
+      transparent 8px 12px,
+      #f3f0ea 12px 14px
+    ) !important;
   }
 }
 
@@ -3925,7 +3971,7 @@ body.quarto-dark .site-tour-ring {
 @media (max-width: 680px) {
   .site-tour-trigger {
     position: absolute;
-    top: 0.75rem;
+    top: calc(4.25rem + env(safe-area-inset-top));
     right: 1rem;
     z-index: 2;
     min-height: 30px;
