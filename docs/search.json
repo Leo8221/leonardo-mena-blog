@@ -385,27 +385,6 @@
     "text": "Todas las publicaciones"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Sobre mí",
-    "section": "",
-    "text": "Saltar al contenido"
-  },
-  {
-    "objectID": "about.html#sobre-este-blog",
-    "href": "about.html#sobre-este-blog",
-    "title": "Sobre mí",
-    "section": "Sobre este blog",
-    "text": "Sobre este blog\nLa economía no debería ser un idioma reservado para oficinas técnicas. Está en el precio del transporte, en lo que cuesta llenar el carrito y en lo que significa un aumento salarial.\nEste blog nace porque creo que los datos económicos deben servir para entender mejor nuestro país, no para impresionar en conferencias. Aquí trato de separar la señal del ruido: leer lo que dicen las cifras, explicar lo que significan y, cuando hace falta, tomar posición.\nA veces eso significa explicar un concepto. Otras, cuestionar una narrativa. Siempre desde el contexto dominicano, porque la economía se vive diferente en cada lugar."
-  },
-  {
-    "objectID": "about.html#quién-escribe",
-    "href": "about.html#quién-escribe",
-    "title": "Sobre mí",
-    "section": "Quién escribe",
-    "text": "Quién escribe\nSoy Leonardo Mena, estudiante de Economía en la UASD. Este blog es parte de cómo aprendo: escribir me obliga a entender mejor, a buscar los datos y a confrontar lo que leo en los libros con lo que pasa en la calle.\nNo escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosidad de quien todavía está tratando de entenderlo.\n\nLo que ofrezco\n\nTransparencia: Si uso un dato, digo de dónde sale. Si es mi opinión, lo aclaro.\nClaridad: Trato de explicar sin simplificar hasta mentir, pero también sin esconderme detrás de tecnicismos.\nContexto: Todos los análisis están pensados desde y para la República Dominicana.\n\nEsto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano.\n\n\nPrincipios editoriales\n\nDistinguir dato, lectura y opinión. No todo número habla por sí solo, pero tampoco toda interpretación vale lo mismo.\nMantener trazabilidad. Cuando una conclusión depende de una fuente o una transformación, debe poder revisarse.\nEscribir para entender. El texto no busca cerrar conversaciones, sino hacerlas más claras.\n\n\n\nTemas que sigo de cerca\n\nCoyuntura macroeconómica dominicana.\nFinanzas públicas, deuda, precios y política monetaria.\nProductividad, MIPYMES, empleo y territorio.\nVisualización de datos como herramienta de análisis económico.\n\n\n\nPor dónde seguir\nPuedes empezar por Atlas, revisar los análisis de coyuntura o explorar las visualizaciones publicadas."
-  },
-  {
     "objectID": "categorias.html",
     "href": "categorias.html",
     "title": "Categorías",
@@ -434,11 +413,11 @@
     "text": "Tres señales para abrir el tablero"
   },
   {
-    "objectID": "index.html#del-argumento-al-dato",
-    "href": "index.html#del-argumento-al-dato",
+    "objectID": "index.html#últimas-publicaciones",
+    "href": "index.html#últimas-publicaciones",
     "title": "Leer la economía sin ruido.",
-    "section": "Del argumento al dato",
-    "text": "Del argumento al dato\nEl texto ordena la lectura; Atlas deja mover la pregunta.\nAbrir Atlas"
+    "section": "Últimas publicaciones",
+    "text": "Últimas publicaciones\nVer archivo completo"
   },
   {
     "objectID": "index.html#tres-formas-de-entrar",
@@ -460,13 +439,6 @@
     "title": "Leer la economía sin ruido.",
     "section": "Una lectura cuando haya algo que decir",
     "text": "Una lectura cuando haya algo que decir\nNuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.\nSuscribirme"
-  },
-  {
-    "objectID": "index.html#últimas-publicaciones",
-    "href": "index.html#últimas-publicaciones",
-    "title": "Leer la economía sin ruido.",
-    "section": "Últimas publicaciones",
-    "text": "Últimas publicaciones\nVer archivo completo"
   },
   {
     "objectID": "observatorio.html",

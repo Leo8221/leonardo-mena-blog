@@ -281,14 +281,6 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
-<span class="menu-text">Inicio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../secciones.html"> 
-<span class="menu-text">Secciones</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Análisis</span>
@@ -301,14 +293,6 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
         <li>
     <a class="dropdown-item" href="../../../republica-en-un-grafico.html">
  <span class="dropdown-text">La República en un gráfico</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../../archivo.html">
- <span class="dropdown-text">Archivo completo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../../categorias.html">
- <span class="dropdown-text">Categorías</span></a>
   </li>  
     </ul>
   </li>
@@ -336,15 +320,34 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-archivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Archivo</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-archivo">    
+        <li>
+    <a class="dropdown-item" href="../../../archivo.html">
+ <span class="dropdown-text">Archivo completo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../categorias.html">
+ <span class="dropdown-text">Categorías</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../secciones.html">
+ <span class="dropdown-text">Secciones</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">Sobre mí</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../suscribete.html"> 
 <span class="menu-text">Suscríbete</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../about.html"> 
-<span class="menu-text">Sobre mí</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -507,6 +510,31 @@ Figura&nbsp;1: Ilustración: Producción vs.&nbsp;Bienestar (Simulación)
 </section>
 
 </main> <!-- /main -->
+<script>
+(function () {
+  const body = document.body;
+  if (!body || !body.classList.contains("editorial-post")) return;
+
+  const content = document.getElementById("quarto-document-content");
+  const titleBlock = document.getElementById("title-block-header");
+  if (!content || !titleBlock || titleBlock.querySelector(".article-reading-time")) return;
+
+  const text = content.innerText || "";
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 230));
+  const label = `${minutes} min de lectura`;
+  const meta = document.createElement("div");
+  meta.className = "article-reading-time";
+  meta.textContent = label;
+
+  const metaBlock = titleBlock.querySelector(".quarto-title-meta");
+  if (metaBlock) {
+    metaBlock.insertAdjacentElement("afterend", meta);
+  } else {
+    titleBlock.appendChild(meta);
+  }
+})();
+</script>
 <script>
 (function () {
   if (!document.body.classList.contains("editorial-post")) {

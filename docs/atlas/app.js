@@ -4,6 +4,8 @@ const state = {
   regionGeojson: null,
   worldGeojson: null,
   articleVisuals: null,
+  assetPromises: {},
+  assetFailures: {},
   tooltip: null,
   tooltipPinned: false,
   active: "overview",
@@ -19,6 +21,7 @@ const state = {
 };
 
 const els = {
+  app: document.querySelector(".atlas-app"),
   nav: document.getElementById("module-nav"),
   search: document.getElementById("atlas-search"),
   searchClear: document.getElementById("atlas-search-clear"),
@@ -52,19 +55,9 @@ const OVERVIEW_GROUPS = [
 
 async function boot() {
   try {
-    const [atlasResponse, mapResponse, regionMapResponse, worldMapResponse, articleResponse] = await Promise.all([
-      fetch("data/atlas-data.json", { cache: "no-store" }),
-      fetch("data/rd-provinces.geojson", { cache: "no-store" }).catch(() => null),
-      fetch("data/rd-regions-mipymes.geojson", { cache: "no-store" }).catch(() => null),
-      fetch("data/world-tourism.geojson", { cache: "no-store" }).catch(() => null),
-      fetch("data/article-visuals.json", { cache: "no-store" }).catch(() => null)
-    ]);
+    const atlasResponse = await fetch("data/atlas-data.json", { cache: "no-store" });
     if (!atlasResponse.ok) throw new Error(`HTTP ${atlasResponse.status}`);
     state.data = await atlasResponse.json();
-    state.geojson = mapResponse && mapResponse.ok ? await mapResponse.json() : null;
-    state.regionGeojson = regionMapResponse && regionMapResponse.ok ? await regionMapResponse.json() : null;
-    state.worldGeojson = worldMapResponse && worldMapResponse.ok ? await worldMapResponse.json() : null;
-    state.articleVisuals = articleResponse && articleResponse.ok ? await articleResponse.json() : null;
     state.tooltip = ensureTooltip();
   } catch (error) {
     renderLoadError(error);
@@ -265,6 +258,9 @@ function renderOverviewIfActive() {
 function renderStage() {
   if (!state.data) return;
   hideTooltip(true);
+  if (els.app) {
+    els.app.dataset.view = state.active === "overview" ? "overview" : "module";
+  }
 
   if (state.active === "overview") {
     renderOverview();
@@ -275,6 +271,12 @@ function renderStage() {
   if (!module) {
     state.active = "overview";
     renderOverview();
+    return;
+  }
+
+  if (!moduleAssetsReady(module)) {
+    renderAssetsLoading(module);
+    ensureModuleAssets(module);
     return;
   }
 
@@ -351,13 +353,8 @@ function renderOverviewCard(module) {
   const source = module.sourceInfo || {};
   return `
     <button class="module-card" type="button" data-module="${module.id}">
-      <span class="module-card-meta">
-        <span>${escapeHtml(module.family)}</span>
-        <span>${escapeHtml(module.type)}</span>
-      </span>
       <h3>${escapeHtml(module.title)}</h3>
       ${module.question ? `<p class="module-question">${escapeHtml(module.question)}</p>` : ""}
-      ${module.summary ? `<p>${escapeHtml(module.summary)}</p>` : ""}
       ${module.insight ? `
         <span class="module-reading">
           <strong>La lectura</strong>
@@ -367,10 +364,26 @@ function renderOverviewCard(module) {
       <span class="module-card-footer">
         <span>${escapeHtml(source.label || module.source || "Fuente")}</span>
         <span>${source.updated ? `Corte ${escapeHtml(source.updated)}` : "Abrir"}</span>
-        <strong>Abrir</strong>
       </span>
     </button>
   `;
+}
+
+function renderAssetsLoading(module) {
+  els.stage.innerHTML = `
+    <div class="stage-header">
+      <div>
+        <p class="eyebrow">${escapeHtml(module.family)} / ${escapeHtml(module.topic)}</p>
+        <h2>${escapeHtml(module.title)}</h2>
+      </div>
+      ${renderStageActions(false)}
+    </div>
+    <div class="empty-state">
+      <strong>Cargando datos de esta vista</strong>
+      <span>El Atlas carga mapas y visuales pesados solo cuando se abre el módulo.</span>
+    </div>
+  `;
+  hydrateModuleActions();
 }
 
 function renderEmptyOverview() {
@@ -1364,6 +1377,53 @@ function transportScatterOptions() {
       Resto: "#466a8f"
     }
   };
+}
+
+const ASSET_URLS = {
+  geojson: "data/rd-provinces.geojson",
+  regionGeojson: "data/rd-regions-mipymes.geojson",
+  worldGeojson: "data/world-tourism.geojson",
+  articleVisuals: "data/article-visuals.json"
+};
+
+function requiredAssets(module) {
+  if (!module) return [];
+  if (module.chart === "territory") return ["geojson"];
+  if (module.chart === "visualLab") return ["articleVisuals", "geojson", "regionGeojson", "worldGeojson"];
+  return [];
+}
+
+function moduleAssetsReady(module) {
+  return requiredAssets(module).every((key) => Boolean(state[key]) || Boolean(state.assetFailures[key]));
+}
+
+function ensureModuleAssets(module) {
+  const keys = requiredAssets(module);
+  if (!keys.length) return Promise.resolve();
+  const activeId = module.id;
+  return Promise.all(keys.map(loadAtlasAsset)).finally(() => {
+    if (state.active === activeId) renderStage();
+  });
+}
+
+function loadAtlasAsset(key) {
+  if (state[key]) return Promise.resolve(state[key]);
+  if (state.assetPromises[key]) return state.assetPromises[key];
+  state.assetPromises[key] = fetch(ASSET_URLS[key], { cache: "no-store" })
+    .then((response) => (response && response.ok ? response.json() : null))
+    .then((data) => {
+      if (data) {
+        state[key] = data;
+      } else {
+        state.assetFailures[key] = true;
+      }
+      return data;
+    })
+    .catch(() => {
+      state.assetFailures[key] = true;
+      return null;
+    });
+  return state.assetPromises[key];
 }
 
 function visibleModules() {
