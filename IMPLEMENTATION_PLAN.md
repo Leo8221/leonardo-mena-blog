@@ -40,8 +40,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Fase 9: compartir y progreso de lectura accesibles.
 - [x] Fase 10: identidad del Atlas como parte del sitio.
 - [x] Fase 11: portada guiada del Atlas por preguntas.
-- [ ] Fase 12: busqueda y filtros del Atlas con accesibilidad y estados vacios.
-- [ ] Fase 13: metricas del Atlas visibles y correctas en movil.
+- [x] Fase 12: busqueda y filtros del Atlas con accesibilidad y estados vacios.
+- [x] Fase 13: metricas del Atlas visibles y correctas en movil.
 - [ ] Fase 14: modulos del Atlas con lectura, fuente, metodologia expandible y relacionados.
 - [ ] Fase 15: alternativas textuales/tabulares para graficos Canvas.
 - [ ] Fase 16: exportacion PNG y CSV con nombres y metadatos correctos.
@@ -73,6 +73,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Workflow actualizado para validar texto publicado despues de `quarto render`.
 - [x] Portada del Atlas organizada por preguntas con familia, tipo, pregunta, resumen, lectura, fuente, corte y CTA.
 - [x] Modulos del Atlas muestran pregunta, resumen, lectura y ficha fuente con metodologia expandible.
+- [x] Busqueda/filtros del Atlas con contador, limpiar busqueda, estados vacios, `aria-current`, `aria-pressed` y cierre movil con Escape/clic fuera.
+- [x] Metric strip del Atlas visible en movil con scroll horizontal, contexto textual y estado activo.
 - [ ] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
 - [x] Validada portada guiada del Atlas en escritorio y captura movil Edge headless a 500 px; Edge headless a 390 px recorta una viewport interna mayor, asi que no se uso como evidencia visual definitiva.
 

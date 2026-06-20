@@ -99,6 +99,44 @@ a {
   padding: 0 0.8rem;
 }
 
+.search-control {
+  position: relative;
+}
+
+.search-control input {
+  padding-right: 2.6rem;
+}
+
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 0.35rem;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--soft);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.search-clear[hidden] {
+  display: none;
+}
+
+.search-results-count {
+  min-height: 1rem;
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.25;
+}
+
 .search-box input:focus {
   outline: 2px solid color-mix(in srgb, var(--terracotta) 35%, transparent);
   border-color: var(--terracotta);
@@ -160,6 +198,11 @@ a {
   box-shadow: 0 10px 28px rgba(25, 27, 31, 0.08);
 }
 
+.module-button.is-outside-filter {
+  border-style: dashed;
+  background: color-mix(in srgb, var(--paper) 82%, var(--card));
+}
+
 .module-button small {
   color: var(--muted);
   font-size: 0.7rem;
@@ -177,6 +220,35 @@ a {
 .module-button span {
   color: var(--soft);
   font-size: 0.82rem;
+}
+
+.nav-empty {
+  display: grid;
+  gap: 0.35rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  padding: 0.75rem;
+}
+
+.nav-empty strong {
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.nav-reset {
+  width: fit-content;
+  min-height: 30px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--terracotta-dark);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 0 0.7rem;
 }
 
 .atlas-main {
@@ -275,12 +347,23 @@ a {
 .metric-card {
   min-width: 0;
   min-height: 62px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-color: color-mix(in srgb, var(--border) 72%, transparent);
   box-shadow: none;
   padding: 0.55rem 0.65rem;
+}
+
+.metric-card:hover,
+.metric-card.is-active {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 24px rgba(25, 27, 31, 0.08);
+}
+
+.metric-card.is-active {
+  background: color-mix(in srgb, var(--terracotta) 7%, var(--card));
 }
 
 .metric-card small {
@@ -1353,6 +1436,12 @@ body.modal-open {
     background: color-mix(in srgb, var(--terracotta) 8%, var(--card));
   }
 
+  .mobile-module-card.is-outside-filter,
+  .mobile-module-card.is-reset {
+    border-style: dashed;
+    background: color-mix(in srgb, var(--paper) 82%, var(--card));
+  }
+
   .mobile-module-card small {
     color: var(--terracotta);
     font-size: 0.58rem;
@@ -1372,7 +1461,43 @@ body.modal-open {
   }
 
   .metric-strip {
+    display: flex;
+    gap: 0.42rem;
+    margin: 0 -0.65rem 0.58rem;
+    overflow-x: auto;
+    padding: 0 0.65rem 0.12rem;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .metric-strip::-webkit-scrollbar {
     display: none;
+  }
+
+  .metric-card {
+    flex: 0 0 168px;
+    min-height: 86px;
+    justify-content: flex-start;
+    padding: 0.62rem;
+    scroll-snap-align: start;
+  }
+
+  .metric-card small {
+    font-size: 0.54rem;
+  }
+
+  .metric-card strong {
+    font-size: 1.18rem;
+  }
+
+  .metric-card em {
+    display: block;
+    margin-top: 0.18rem;
+    color: var(--muted);
+    font-size: 0.62rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   .workspace-grid {

@@ -45,7 +45,11 @@
 
       <div class="search-box">
         <label for="atlas-search">Buscar módulo</label>
-        <input id="atlas-search" type="search" placeholder="Comercio, sectores, precios...">
+        <div class="search-control">
+          <input id="atlas-search" type="search" placeholder="Comercio, sectores, precios..." autocomplete="off">
+          <button class="search-clear" id="atlas-search-clear" type="button" aria-label="Limpiar búsqueda" hidden>×</button>
+        </div>
+        <p class="search-results-count" id="atlas-result-count" aria-live="polite"></p>
       </div>
 
       <div class="filter-group" aria-label="Filtros por familia">
@@ -93,7 +97,7 @@
         <nav class="mobile-module-nav" id="mobile-module-nav" aria-label="Vistas del Atlas"></nav>
       </section>
 
-      <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales"></section>
+      <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales del Atlas"></section>
 
       <section class="workspace-grid">
         <section class="module-stage" id="module-stage" aria-live="polite"></section>
@@ -101,10 +105,10 @@
     </main>
   </div>
 
-  <script src="js/config.js?v=20260619"></script>
-  <script src="js/utils.js?v=20260619"></script>
-  <script src="js/renderers.js?v=20260619"></script>
-  <script src="js/interactions.js?v=20260619"></script>
-  <script src="app.js?v=20260619"></script>
+  <script src="js/config.js?v=20260620"></script>
+  <script src="js/utils.js?v=20260620"></script>
+  <script src="js/renderers.js?v=20260620"></script>
+  <script src="js/interactions.js?v=20260620"></script>
+  <script src="app.js?v=20260620"></script>
 </body>
 </html>
