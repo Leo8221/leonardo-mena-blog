@@ -21,6 +21,7 @@ project:
     - atlas/js/utils.js
     - atlas/js/renderers.js
     - atlas/js/interactions.js
+    - atlas/js/tour.js
     - atlas/styles.css
     - atlas/data/atlas-data.json
     - atlas/data/article-visuals.json
@@ -108,6 +109,7 @@ format:
       dark: slate
     css: styles.css
     include-before-body: skip-link.html
+    include-after-body: site-tour.html
     html-math-method: katex
     lazy-load: true
     toc: true            

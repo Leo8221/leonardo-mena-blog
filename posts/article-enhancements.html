@@ -23,11 +23,11 @@
   }
 
   const figureTargets = Array.from(content.querySelectorAll(
-    "figure, .quarto-figure, .cell-output-display"
+    ".quarto-float.quarto-figure, figure"
   )).filter((node) => {
     if (node.closest(".article-figure-modal")) return false;
     if (node.dataset.figureEnhanced === "true") return false;
-    if (node.classList.contains("cell-output-display") && node.closest("figure, .quarto-figure")) return false;
+    if (node.closest(".quarto-figure") && !node.classList.contains("quarto-figure")) return false;
     return node.querySelector("img, svg, canvas");
   });
 

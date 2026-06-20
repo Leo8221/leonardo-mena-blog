@@ -87,13 +87,11 @@ No son datos en vivo. El corte y las fuentes están en Atlas.
 :::
 
 ::: {.home-latest-section}
-::: {.section-header}
 <span class="section-kicker">Archivo vivo</span>
 
 ## Últimas publicaciones
 
 [Ver archivo completo](archivo.qmd)
-:::
 
 ::: {#home-latest}
 :::
