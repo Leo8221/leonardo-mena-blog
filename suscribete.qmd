@@ -10,11 +10,25 @@ toc: false
 ::: {.subscribe-shell}
 ::: {.subscribe-panel}
 
-## Economía aplicada en tu correo
+## Una lectura económica cuando haya algo que valga la pena decir
 
-Datos, visuales y criterio para leer la economía sin ruido.
+Nuevos análisis, gráficos y actualizaciones del Atlas. Sin titulares vacíos ni correos diarios.
+
+::: {.subscribe-notes}
+- Análisis nuevos cuando haya una lectura clara.
+- Visuales y mapas publicados en el blog o en Atlas.
+- Avisos puntuales, no una rutina diaria de correos.
+:::
 
 <iframe class="subscribe-embed" title="Formulario de suscripción" src="https://leonardomena824.substack.com/embed" loading="lazy"></iframe>
+
+::: {.subscribe-fallback}
+Si el formulario no carga, puedes abrir la suscripción directamente en [Substack](https://leonardomena824.substack.com/).
+:::
+
+::: {.subscribe-privacy}
+Tu correo se gestiona desde Substack. Puedes darte de baja desde cualquier envío.
+:::
 
 [Volver al inicio](index.qmd){.subscribe-back}
 

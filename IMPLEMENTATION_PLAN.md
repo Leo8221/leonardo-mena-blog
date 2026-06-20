@@ -33,8 +33,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Fase 2: cabecera y navegacion global sin CTA inline.
 - [ ] Fase 3: portada del blog con hero, Pulso RD, destacado, caminos, ultimas publicaciones, Sobre Leonardo y boletin.
 - [ ] Fase 4: portada movil fluida desde 320 px.
-- [ ] Fase 5: secciones, archivo, categorias y paginas de series.
-- [ ] Fase 6: Sobre mi honesto, editorial y sin credenciales inventadas.
+- [x] Fase 5: secciones, archivo, categorias y paginas de series.
+- [x] Fase 6: Sobre mi honesto, editorial y sin credenciales inventadas.
 - [x] Fase 7: Suscripcion responsive, sin estilos inline innecesarios.
 - [ ] Fase 8: articulos con mejor lectura, metadatos, figuras, captions y navegacion.
 - [x] Fase 9: compartir y progreso de lectura accesibles.
@@ -83,6 +83,9 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] Controles moviles del Atlas subidos a objetivo tactil minimo compartido.
 - [x] Ejecutar inspeccion visual completa de Atlas, Sobre mi y Suscribete.
 - [x] Validada portada guiada del Atlas en escritorio y captura movil Edge headless a 500 px; Edge headless a 390 px recorta una viewport interna mayor, asi que no se uso como evidencia visual definitiva.
+- [x] Secciones, series y archivo revisados para textos visibles con tildes, jerarquia editorial y sin estilos inline en fuente.
+- [x] Sobre mi ampliado con principios editoriales, temas y rutas de exploracion sin inventar credenciales.
+- [x] Suscripcion completada con frecuencia honesta, fallback a Substack y nota breve de privacidad.
 
 ## Archivos afectados previstos
 
@@ -144,6 +147,8 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - [x] QA browser local en home, Sobre mi, Suscribete y Atlas: 320, 360, 390, 430, 768, 1024 y 1440 px sin overflow ni errores de consola.
 - [x] QA browser local extra de Atlas: 920 y 1180 px sin overflow ni errores de consola.
 - [x] QA browser local de modal Atlas en movil 390 px: abrir, canvas visible, foco en cerrar y cierre correcto.
+- [x] QA browser local en Sobre mi, Archivo, Secciones, Suscribete, Republica habla de, Republica en un grafico y Series: 320, 390, 768 y 1440 px sin overflow ni errores de consola.
+- [x] Verificacion puntual de iframe de Substack en 320 px: ancho computado 286 px dentro del contenedor.
 
 ## Criterios de aceptacion
 

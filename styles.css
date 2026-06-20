@@ -2295,6 +2295,20 @@ body.quarto-dark .share-minimal a {
   padding: 0 2rem 3rem 2rem;
 }
 
+.archive-header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.archive-header p {
+  max-width: 680px;
+  color: var(--lm-text-soft);
+  font-family: var(--lm-font-sans);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
 .empty-state {
   max-width: 760px;
   margin: 0 auto 3rem auto;
@@ -2354,6 +2368,7 @@ body.quarto-dark .share-minimal a {
   .product-grid,
   .series-grid,
   .categories-grid,
+  .archive-header,
   .section-listing-wrap {
     grid-template-columns: 1fr;
     padding-left: 0;
@@ -2619,6 +2634,43 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   line-height: 1.65;
 }
 
+.subscribe-notes {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 34rem;
+  margin: 0 auto 1.55rem;
+  padding: 0;
+  text-align: left;
+}
+
+.subscribe-notes ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subscribe-notes li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--lm-text-soft);
+  font-family: var(--lm-font-sans);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.subscribe-notes li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--lm-terracota);
+}
+
 .subscribe-embed {
   display: block;
   width: min(100%, 480px);
@@ -2628,6 +2680,24 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   border: 1px solid var(--lm-border);
   border-radius: var(--lm-radius-sm);
   background: #fff;
+}
+
+.subscribe-fallback,
+.subscribe-privacy {
+  max-width: 34rem;
+  margin: 0.9rem auto 0;
+  color: var(--lm-text-muted);
+  font-family: var(--lm-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.subscribe-fallback a {
+  color: var(--lm-terracota-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
 }
 
 .subscribe-back {
@@ -2654,6 +2724,9 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   }
 
   .subscribe-panel p,
+  .subscribe-notes,
+  .subscribe-fallback,
+  .subscribe-privacy,
   .subscribe-embed {
     margin-left: 0;
   }

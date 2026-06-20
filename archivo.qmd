@@ -19,12 +19,10 @@ listing:
     categories: "Categorías"
 ---
 
-::: archive-header
-<p style="font-size: 1.1rem; color: var(--lm-text-soft); max-width: 680px; line-height: 1.6;">
+::: {.archive-header}
 
 Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos.
 
-</p>
 :::
 
 ------------------------------------------------------------------------

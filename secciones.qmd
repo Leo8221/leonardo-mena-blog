@@ -17,27 +17,27 @@ Mapas, indicadores y sectores.
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Analisis editorial</span>
+<span class="product-kicker">Análisis editorial</span>
 
-## La Republica habla de
+## La República habla de
 
 Coyuntura dominicana con datos y postura.
 
-[Leer analisis](republica-habla-de.qmd)
+[Leer análisis](republica-habla-de.qmd)
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Visualizacion</span>
+<span class="product-kicker">Visualización</span>
 
-## La Republica en un grafico
+## La República en un gráfico
 
-Una visualizacion, una lectura, una implicacion.
+Una visualización, una lectura, una implicación.
 
-[Ver graficos](republica-en-un-grafico.qmd)
+[Ver gráficos](republica-en-un-grafico.qmd)
 :::
 
 ::: {.product-card}
-<span class="product-kicker">Escuela publica</span>
+<span class="product-kicker">Escuela pública</span>
 
 ## Fundamentos
 

@@ -40,3 +40,20 @@ No escribo desde la autoridad de quien ya lo sabe todo. Escribo desde la curiosi
 * **Contexto:** Todos los análisis están pensados desde y para la República Dominicana.
 
 Esto no es un blog de proclamas ni de verdades absolutas. Es un espacio para pensar en voz alta, con datos en mano.
+
+### Principios editoriales
+
+- **Distinguir dato, lectura y opinión.** No todo número habla por sí solo, pero tampoco toda interpretación vale lo mismo.
+- **Mantener trazabilidad.** Cuando una conclusión depende de una fuente o una transformación, debe poder revisarse.
+- **Escribir para entender.** El texto no busca cerrar conversaciones, sino hacerlas más claras.
+
+### Temas que sigo de cerca
+
+- Coyuntura macroeconómica dominicana.
+- Finanzas públicas, deuda, precios y política monetaria.
+- Productividad, MIPYMES, empleo y territorio.
+- Visualización de datos como herramienta de análisis económico.
+
+### Por dónde seguir
+
+Puedes empezar por [Atlas](atlas/index.html), revisar los [análisis de coyuntura](republica-habla-de.qmd) o explorar las [visualizaciones publicadas](republica-en-un-grafico.qmd).

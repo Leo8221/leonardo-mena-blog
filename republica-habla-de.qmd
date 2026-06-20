@@ -30,9 +30,9 @@ Cada texto parte de una pregunta pública y termina con una implicación concret
 :::
 
 ::: {.series-card}
-<span class="product-kicker">Metodo</span>
+<span class="product-kicker">Método</span>
 
-## Dato, mecanismo, limite
+## Dato, mecanismo, límite
 
 La serie separa el dato observado, la explicación probable y lo que todavía no se puede afirmar.
 :::
@@ -42,7 +42,7 @@ La serie separa el dato observado, la explicación probable y lo que todavía no
 
 ## Para seguir agenda
 
-Ideal para temas fiscales, precios, sectores productivos y debates de politica publica.
+Ideal para temas fiscales, precios, sectores productivos y debates de política pública.
 :::
 :::
 

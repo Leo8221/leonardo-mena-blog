@@ -16,7 +16,7 @@ Una visualización, una lectura y una implicación para entender mejor la econom
 ::: {.hub-meta}
 <span class="hub-chip">Gráficos</span>
 <span class="hub-chip">Series dominicanas</span>
-<span class="hub-chip">Lectura rapida</span>
+<span class="hub-chip">Lectura rápida</span>
 :::
 :::
 
