@@ -36,10 +36,81 @@ const els = {
   sidebarBackdrop: document.getElementById("sidebar-backdrop"),
   main: document.getElementById("atlas-main"),
   status: document.getElementById("atlas-status"),
-  topbarShare: document.getElementById("atlas-share")
+  topbarShare: document.getElementById("atlas-share"),
+  themeToggle: document.getElementById("atlas-theme-toggle")
 };
 
 let sidebarReturnFocus = null;
+const ATLAS_THEME_STORAGE_KEY = "quarto-color-scheme";
+const atlasThemeMedia = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+
+function storedAtlasTheme() {
+  try {
+    const stored = window.localStorage.getItem(ATLAS_THEME_STORAGE_KEY);
+    if (stored === "alternate") return "dark";
+    if (stored === "default") return "light";
+  } catch (error) {
+    return null;
+  }
+  return null;
+}
+
+function preferredAtlasTheme() {
+  return storedAtlasTheme()
+    || document.documentElement.dataset.theme
+    || (atlasThemeMedia?.matches ? "dark" : "light");
+}
+
+function applyAtlasTheme(theme, { persist = false, rerender = false } = {}) {
+  const dark = theme === "dark";
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  document.body.classList.toggle("atlas-dark", dark);
+  document.body.classList.toggle("atlas-light", !dark);
+
+  if (els.themeToggle) {
+    els.themeToggle.setAttribute("aria-pressed", String(dark));
+    els.themeToggle.setAttribute("aria-label", dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    els.themeToggle.title = dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+  }
+
+  if (persist) {
+    try {
+      window.localStorage.setItem(ATLAS_THEME_STORAGE_KEY, dark ? "alternate" : "default");
+    } catch (error) {
+      // Ignore storage failures; the visual state still changes for this page.
+    }
+  }
+
+  if (typeof syncChartSystemColors === "function") syncChartSystemColors();
+  if (rerender && state.booted) renderStage();
+}
+
+function toggleAtlasTheme() {
+  const nextTheme = document.body.classList.contains("atlas-dark") ? "light" : "dark";
+  applyAtlasTheme(nextTheme, { persist: true, rerender: true });
+  trackAtlasEvent("atlas_theme_toggle", { theme: nextTheme });
+}
+
+function initAtlasTheme() {
+  applyAtlasTheme(preferredAtlasTheme());
+
+  if (els.themeToggle) {
+    els.themeToggle.addEventListener("click", toggleAtlasTheme);
+  }
+
+  window.addEventListener("storage", (event) => {
+    if (event.key === ATLAS_THEME_STORAGE_KEY) {
+      applyAtlasTheme(storedAtlasTheme() || "light", { rerender: true });
+    }
+  });
+
+  if (atlasThemeMedia) {
+    atlasThemeMedia.addEventListener("change", (event) => {
+      if (storedAtlasTheme()) return;
+      applyAtlasTheme(event.matches ? "dark" : "light", { rerender: true });
+    });
+  }
+}
 
 const OVERVIEW_GROUPS = [
   {
@@ -496,7 +567,7 @@ function renderEmptyOverview() {
 function renderStageActions(canExport) {
   return `
     <div class="stage-actions">
-      <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Enlace</button>
+      <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Copiar enlace</button>
       ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">CSV</button>` : ""}
     </div>
   `;
@@ -1989,4 +2060,5 @@ function slugify(value) {
     .replace(/^-|-$/g, "");
 }
 
+initAtlasTheme();
 boot();

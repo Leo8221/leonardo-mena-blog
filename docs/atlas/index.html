@@ -17,6 +17,17 @@
   <meta name="twitter:description" content="Datos, mapas y gráficos del blog de economía de Leonardo Mena.">
   <meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
   <link rel="icon" href="../image/logo_leonardo_mena.png">
+  <script>
+    (function () {
+      try {
+        var stored = window.localStorage.getItem("quarto-color-scheme");
+        var dark = stored === "alternate" || (!stored && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css?v=20260621">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
   <script>
@@ -86,8 +97,7 @@
         </div>
         <div class="topbar-actions">
           <a href="../">Blog</a>
-          <a href="../archivo.html">Archivo</a>
-          <a href="../secciones.html">Secciones</a>
+          <button class="atlas-theme-toggle" id="atlas-theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Alternar modo oscuro"></button>
           <button class="topbar-tour" id="atlas-tour-start" type="button">Guía</button>
         </div>
       </header>

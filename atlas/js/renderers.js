@@ -18,7 +18,7 @@ function drawLineChart(canvas, labels, values, title, options = {}) {
   drawDualLineChart(
     canvas,
     labels,
-    [{ label: title, values, color: options.color || "#466a8f", stepped: options.stepped }],
+    [{ label: title, values, color: options.color || CHART_SYSTEM.colors.blue, stepped: options.stepped }],
     title,
     options
   );
@@ -94,7 +94,7 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
     }
   });
 
-  ctx.fillStyle = "#6b7280";
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
   labels.forEach((label, index) => {
     const x = padding.left + (plotW * index) / Math.max(labels.length - 1, 1);
@@ -134,13 +134,13 @@ function drawHorizontalBarChart(canvas, rows, options) {
     const y = padding.top + index * (barH + gap);
     const available = width - padding.left - padding.right;
     const barW = Math.abs(value) / max * available;
-    ctx.fillStyle = "#3f4752";
+    ctx.fillStyle = CHART_SYSTEM.colors.soft;
     ctx.font = "12px Inter";
     ctx.fillText(String(item[options.labelField]), 8, y + barH - 2);
-    ctx.fillStyle = value < 0 ? "#8f3d32" : "#466a8f";
+    ctx.fillStyle = value < 0 ? CHART_SYSTEM.colors.terracotta : CHART_SYSTEM.colors.blue;
     ctx.fillRect(padding.left, y, barW, barH);
     boxes.push({ x: padding.left, y, width: barW, height: barH, item, value });
-    ctx.fillStyle = "#191b1f";
+    ctx.fillStyle = CHART_SYSTEM.colors.ink;
     ctx.font = "700 12px Inter";
     ctx.fillText(formatNumber(value), padding.left + barW + 8, y + barH - 2);
   });
@@ -197,7 +197,7 @@ function drawGroupedBarChart(canvas, rows, options) {
     ctx.save();
     ctx.translate(padding.left + rowIndex * groupW + groupW / 2, height - 18);
     ctx.rotate(-Math.PI / 6);
-    ctx.fillStyle = "#6b7280";
+    ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "11px Inter";
     ctx.fillText(row[options.labelField], -36, 0);
     ctx.restore();
@@ -219,9 +219,9 @@ function drawTreemapChart(canvas, rows, options) {
   const plotH = height - padding.top - padding.bottom;
   const total = rows.reduce((sum, item) => sum + Number(item[options.valueField]), 0) || 1;
   const colors = {
-    Masivo: "#eef1ed",
-    Vinculado: "#466a8f",
-    Nicho: "#c86448"
+    Masivo: CHART_SYSTEM.colors.panel,
+    Vinculado: CHART_SYSTEM.colors.blue,
+    Nicho: CHART_SYSTEM.colors.terracotta
   };
   const boxes = [];
 
@@ -243,13 +243,13 @@ function drawTreemapChart(canvas, rows, options) {
   boxes.forEach((box) => {
     const category = box.item[options.categoryField];
     const value = Number(box.item[options.valueField]);
-    ctx.fillStyle = colors[category] || "#6b7280";
+    ctx.fillStyle = colors[category] || CHART_SYSTEM.colors.muted;
     ctx.fillRect(box.x, box.y, box.width, box.height);
     ctx.strokeStyle = "#ffffff";
     ctx.lineWidth = 2;
     ctx.strokeRect(box.x, box.y, box.width, box.height);
     if (box.width > 72 && box.height > 42) {
-      ctx.fillStyle = category === "Masivo" ? "#191b1f" : "#ffffff";
+      ctx.fillStyle = category === "Masivo" ? CHART_SYSTEM.colors.ink : "#ffffff";
       ctx.font = value > 20 ? "800 18px Inter" : "700 12px Inter";
       ctx.fillText(String(box.item[options.labelField]).slice(0, 18), box.x + 8, box.y + 22);
       ctx.font = "700 12px Inter";
@@ -279,9 +279,9 @@ function drawDebtBurdenChart(canvas, rows, options) {
   const barW = Math.max(8, (plotW - gap * (rows.length - 1)) / rows.length);
   const boxes = [];
   const points = [];
-  const serviceColor = "#466a8f";
-  const serviceHighlight = "#9f5f4b";
-  const shareColor = "#6b7554";
+  const serviceColor = CHART_SYSTEM.colors.blue;
+  const serviceHighlight = CHART_SYSTEM.colors.terracotta;
+  const shareColor = CHART_SYSTEM.colors.olive;
 
   const xAt = (index) => padding.left + index * (barW + gap);
   const shareY = (value) => padding.top + plotH - (Number(value) / shareMax) * plotH;
@@ -308,7 +308,7 @@ function drawDebtBurdenChart(canvas, rows, options) {
     };
     points.push(point);
 
-    ctx.fillStyle = "#6b7280";
+    ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "10px Inter";
     if (index % 2 === 0 || width > 520) {
       ctx.fillText(String(row[options.labelField]).slice(-2), x, height - 18);
@@ -393,7 +393,7 @@ function drawStackedBarChart(canvas, rows, options) {
       ctx.fillRect(x, y, barW, barH);
       boxes.push({ x, y, width: barW, height: barH, item: row, field, value });
     });
-    ctx.fillStyle = "#6b7280";
+    ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "10px Inter";
     ctx.fillText(String(row[options.labelField]).slice(-2), x - 1, height - 16);
   });
@@ -453,7 +453,7 @@ function drawComplexScatterChart(canvas, rows, options) {
   ctx.fillStyle = "rgba(200, 100, 72, 0.07)";
   ctx.fillRect(padding.left, yRefPos, xRefPos - padding.left, padding.top + plotH - yRefPos);
 
-  ctx.strokeStyle = "#7f8a95";
+  ctx.strokeStyle = CHART_SYSTEM.colors.muted;
   ctx.lineWidth = 1;
   ctx.setLineDash([5, 5]);
   ctx.beginPath();
@@ -544,7 +544,7 @@ function drawChoroplethMap(canvas, features, options) {
   if (!coordinates.length || !values.length) {
     clearCanvas(ctx, width, height);
     if (!isCompact) drawCanvasTitle(ctx, options.title, padding.left, 22);
-    ctx.fillStyle = "#6b7280";
+    ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "13px Inter";
     ctx.fillText("Sin datos cartograficos para esta vista.", padding.left, height / 2);
     updateMapInspector(options.inspectorId, null, options, [], false);
@@ -592,8 +592,8 @@ function drawChoroplethMap(canvas, features, options) {
     if (!isCompact) drawCanvasTitle(ctx, options.title, padding.left, 22);
     entries.forEach((entry) => {
       ctx.fillStyle = Number.isFinite(entry.value)
-        ? interpolateColor(options.colorStart || "#edf4f2", options.colorEnd || "#c86448", normalizeRatio(entry.value, min, max))
-        : "#f1f1ee";
+        ? interpolateColor(options.colorStart || CHART_SYSTEM.colors.panel, options.colorEnd || CHART_SYSTEM.colors.terracotta, normalizeRatio(entry.value, min, max))
+        : CHART_SYSTEM.colors.panel;
       ctx.fill(entry.path);
       ctx.strokeStyle = "#ffffff";
       ctx.lineWidth = 1;
@@ -605,7 +605,7 @@ function drawChoroplethMap(canvas, features, options) {
       ctx.fillStyle = "rgba(255, 255, 255, 0.22)";
       ctx.fill(highlightEntry.path);
       ctx.restore();
-      ctx.strokeStyle = "#191b1f";
+      ctx.strokeStyle = CHART_SYSTEM.colors.ink;
       ctx.lineWidth = 2.8;
       ctx.stroke(highlightEntry.path);
     }
@@ -788,13 +788,13 @@ function drawScatterChart(canvas, rows, options) {
     ctx.stroke();
     points.push({ x, y, radius: radius + 4, item });
     if (index < 6) {
-      ctx.fillStyle = "#191b1f";
+      ctx.fillStyle = CHART_SYSTEM.colors.ink;
       ctx.font = "11px Inter";
       ctx.fillText(item[options.labelField], x + radius + 4, y + 4);
     }
   });
 
-  ctx.fillStyle = "#6b7280";
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
   ctx.fillText("Infraestructura", padding.left, height - 12);
   ctx.save();
@@ -812,7 +812,7 @@ function drawScatterChart(canvas, rows, options) {
 }
 
 function drawAxisLabels(ctx, xLabel, yLabel, padding, width, height) {
-  ctx.fillStyle = "#6b7280";
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
   ctx.fillText(xLabel, padding.left, height - 16);
   ctx.save();
@@ -968,7 +968,7 @@ function drawMapLabels(ctx, entries, options, max) {
     const label = entry.feature.properties[options.labelField];
     if (!entry.centroid) return;
     const ratio = normalizeRatio(entry.value, 0, max);
-    ctx.fillStyle = ratio > 0.58 ? "#ffffff" : "#191b1f";
+    ctx.fillStyle = ratio > 0.58 ? "#ffffff" : CHART_SYSTEM.colors.ink;
     ctx.font = "700 10px Inter";
     ctx.fillText(String(label).replace("Santo Domingo", "S. Domingo"), entry.centroid[0] - 22, entry.centroid[1]);
   });
@@ -996,13 +996,13 @@ function drawMapLegend(ctx, min, max, width, height, padding, options = {}) {
   const x = padding.left;
   const y = height - 28;
   const gradient = ctx.createLinearGradient(x, y, x + legendW, y);
-  gradient.addColorStop(0, options.colorStart || "#edf4f2");
-  gradient.addColorStop(1, options.colorEnd || "#c86448");
+  gradient.addColorStop(0, options.colorStart || CHART_SYSTEM.colors.panel);
+  gradient.addColorStop(1, options.colorEnd || CHART_SYSTEM.colors.terracotta);
   ctx.fillStyle = gradient;
   ctx.fillRect(x, y, legendW, legendH);
-  ctx.strokeStyle = "#cbd5cf";
+  ctx.strokeStyle = CHART_SYSTEM.colors.border;
   ctx.strokeRect(x, y, legendW, legendH);
-  ctx.fillStyle = "#6b7280";
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
   const minLabel = formatNumber(min);
   const maxLabel = formatNumber(max);
   ctx.fillText(minLabel, x, y + 26);

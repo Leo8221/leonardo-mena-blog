@@ -63,14 +63,35 @@ function setupCanvas(canvas) {
   return ctx;
 }
 
+function cssVar(name, fallback) {
+  const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  return value || fallback;
+}
+
+function syncChartSystemColors() {
+  if (!window.CHART_SYSTEM && typeof CHART_SYSTEM === "undefined") return;
+  const colors = CHART_SYSTEM.colors;
+  colors.ink = cssVar("--ink", "#191b1f");
+  colors.soft = cssVar("--soft", "#3f4752");
+  colors.muted = cssVar("--muted", "#6b7280");
+  colors.border = cssVar("--border", "#dde3de");
+  colors.blue = cssVar("--blue", "#466a8f");
+  colors.teal = cssVar("--teal", "#2a9d8f");
+  colors.terracotta = cssVar("--terracotta", "#c86448");
+  colors.gold = cssVar("--gold", "#d4ac0d");
+  colors.olive = cssVar("--olive", "#6b7554");
+  colors.card = cssVar("--card", "#ffffff");
+  colors.panel = cssVar("--panel", "#eef1ed");
+}
+
 function clearCanvas(ctx, width, height) {
   ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = "#ffffff";
+  ctx.fillStyle = CHART_SYSTEM.colors.card;
   ctx.fillRect(0, 0, width, height);
 }
 
 function drawCanvasTitle(ctx, title, x, y) {
-  ctx.fillStyle = "#3f4752";
+  ctx.fillStyle = CHART_SYSTEM.colors.soft;
   ctx.font = "700 12px Inter";
   ctx.fillText(title, x, y);
 }
@@ -80,7 +101,7 @@ function drawLegend(ctx, series, x, y) {
   series.forEach((item) => {
     ctx.fillStyle = item.color;
     ctx.fillRect(x + offset, y - 10, 10, 10);
-    ctx.fillStyle = "#3f4752";
+    ctx.fillStyle = CHART_SYSTEM.colors.soft;
     ctx.font = "11px Inter";
     ctx.fillText(item.label, x + offset + 14, y);
     offset += ctx.measureText(item.label).width + 42;
@@ -90,7 +111,7 @@ function drawLegend(ctx, series, x, y) {
 function drawGrid(ctx, width, height, padding, steps) {
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
-  ctx.strokeStyle = "#dde3de";
+  ctx.strokeStyle = CHART_SYSTEM.colors.border;
   ctx.lineWidth = 1;
   ctx.setLineDash([2, 4]);
   for (let i = 0; i <= steps; i += 1) {
