@@ -42,6 +42,13 @@ include-after-body:
 </ul>
 </div>
 
+<div class="data-box">
+<span class="data-box-title">Nota metodológica</span>
+<div class="data-box-content">
+La fuente central del análisis es la Encuesta Nacional de las Micro, Pequeñas y Medianas Empresas 2022-2023 (ENMIPYMES), levantada por Banco Central R.D. y MICM. Las comparaciones descriptivas usan los microdatos de la encuesta; cuando se reportan asociaciones entre cuenta bancaria, formalidad y acceso a crédito, se interpretan como relaciones observadas en corte transversal, no como causalidad automática.
+</div>
+</div>
+
 En el artículo pasado exploramos los componentes financieros desde la demanda (el consumidor y el efectivo), para cerrar el ciclo en esta entrega analizaremos la otra cara de la moneda: **los componentes de la oferta empresarial**.
 
 La palabra "empresario" genera cierta imagen mental: un señor con traje, dueño de un edificio y una flota de vehículos. Llamémosle **Pedro**.

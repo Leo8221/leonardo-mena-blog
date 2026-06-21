@@ -3888,23 +3888,28 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   top: calc(4.75rem + env(safe-area-inset-top));
   bottom: auto;
   z-index: 850;
-  min-height: 34px;
-  border: 1px solid color-mix(in srgb, var(--lm-terracota) 70%, var(--lm-border));
+  min-height: var(--lm-control-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--lm-terracota) 72%, var(--lm-border));
   border-radius: 999px;
-  background: color-mix(in srgb, var(--lm-bg-card) 92%, var(--lm-terracota) 8%);
+  background: var(--lm-bg-card);
   color: var(--lm-terracota-dark);
-  box-shadow: 0 8px 22px rgba(25, 27, 31, 0.08);
+  box-shadow: 0 10px 24px rgba(25, 27, 31, 0.12);
   cursor: pointer;
   font-family: var(--lm-font-sans);
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  opacity: 0.96;
-  padding: 0 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  opacity: 1;
+  padding: 0 0.85rem;
+  text-transform: uppercase;
 }
 
 .site-tour-trigger[data-new="true"] {
   border-color: var(--lm-terracota);
+  background: color-mix(in srgb, var(--lm-bg-card) 88%, var(--lm-terracota) 12%);
   color: var(--lm-terracota-dark);
 }
 
@@ -3912,8 +3917,9 @@ body.quarto-dark.editorial-post .key-takeaways strong {
 .site-tour-trigger:focus-visible {
   border-color: var(--lm-terracota);
   color: var(--lm-terracota-dark);
-  background: var(--lm-bg-card);
-  opacity: 1;
+  background: color-mix(in srgb, var(--lm-bg-card) 86%, var(--lm-terracota) 14%);
+  box-shadow: 0 12px 28px rgba(25, 27, 31, 0.18);
+  transform: translateY(-1px);
 }
 
 .site-tour[hidden] {
@@ -4040,9 +4046,17 @@ body.quarto-dark .site-tour-popover {
 }
 
 body.quarto-dark .site-tour-trigger {
-  border-color: color-mix(in srgb, var(--lm-terracota) 68%, var(--lm-border-dark));
-  background: color-mix(in srgb, #20252a 82%, var(--lm-terracota) 18%);
-  color: rgba(250, 247, 240, 0.92);
+  border-color: #c86448;
+  background: #20252a;
+  color: #ffb199;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+body.quarto-dark .site-tour-trigger[data-new="true"],
+body.quarto-dark .site-tour-trigger:hover,
+body.quarto-dark .site-tour-trigger:focus-visible {
+  background: color-mix(in srgb, #20252a 82%, #c86448 18%);
+  color: #ffb199;
 }
 
 body.quarto-dark .site-tour-body,

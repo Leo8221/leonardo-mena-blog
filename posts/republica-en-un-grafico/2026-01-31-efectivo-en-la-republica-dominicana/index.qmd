@@ -46,7 +46,7 @@ library(ggplot2)
 </div>
 
 <div class="key-takeaways">
-  <span class="key-takeaways-title">En Resumen</span>
+  <span class="key-takeaways-title">Conclusiones Clave</span>
   <ol>
     <li><strong>El efectivo es omnipresente:</strong> Domina el 91% de las compras en bajo valor y el 79% en bienes de alto valor.</li>
     <li><strong>Rompe barreras demográficas:</strong> Ni la edad ni el ingreso alto eliminan su uso.</li>
@@ -191,6 +191,13 @@ print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectiv
 <div class="big-number">17 pp</div> <div class="big-number-label">Aumento en la probabilidad de ser digital al tener cuenta bancaria</div>
 
 Estos hallazgos sugieren que las políticas destinadas a aumentar la inclusión financiera, como facilitar el acceso a cuentas bancarias y promover la educación financiera, podrían ser estrategias efectivas para reducir la dependencia del efectivo. Al mejorar la infraestructura financiera y educar a la población sobre los beneficios y seguridad de los métodos digitales, se podría fomentar un cambio gradual en los hábitos de pago. No por nada, tener educación superior también tiene un impacto positivo en la adopción de métodos digitales, aunque en menor medida siguen siendo 10 puntos porcentuales.
+
+<div class="data-box">
+<span class="data-box-title">Nota metodológica</span>
+<div class="data-box-content">
+El modelo usa microdatos de la ENIEF 2023 y estima una regresión logística donde la variable dependiente identifica uso de métodos digitales frente a efectivo en transacciones cotidianas. Los resultados se reportan como efectos marginales promedio para que la lectura sea directa en puntos porcentuales: por eso “tener cuenta bancaria” se interpreta como un aumento aproximado de 17 pp en la probabilidad de usar medios digitales, manteniendo constantes las demás variables incluidas en el modelo.
+</div>
+</div>
 
 <div class="data-box"> <span class="data-box-title">Dato Curioso</span> <div class="data-box-content"> <strong>La Paradoja de la Educación:</strong> Un porcentaje considerable de personas con educación superior utilizan efectivo deliberadamente para un <strong>"mejor control de sus finanzas"</strong>. Esto sugiere que usan la "fricción" del efectivo como una herramienta de disciplina presupuestaria. </div> </div>
 

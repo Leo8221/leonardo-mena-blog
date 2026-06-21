@@ -2,7 +2,7 @@
 title: "Perspectiva del desarrollo: Densidad empresarial"
 date: "2026-01-06"
 author: "Leonardo Mena"
-description: "distribución espacial de las empresas en RD"
+description: "El Distrito Nacional concentra 36 empresas formales por cada 1,000 habitantes; Elías Piña apenas 1.5. La desigualdad territorial empieza en la densidad de oportunidades."
 image: "mapa_densidad_2024.png"
 twitter-card:
  image: "mapa_densidad_2024.png"
@@ -116,7 +116,7 @@ mapa_listo <- mapa_rd |>
 # 3. POBLACIÓN
 # ------------------------------------------------------------------------------
 poblacion <- read_excel(
-  "cuadro-estimaciones-proyecciones-población-total-por-año-según-región-provincia-2000-2030.xlsx",
+  "poblacion-provincias-2000-2030.xlsx",
   skip = 5
 ) |> 
   clean_names() |> 
@@ -132,7 +132,7 @@ poblacion <- read_excel(
 # 4. EMPRESAS
 # ------------------------------------------------------------------------------
 empresas <- read_csv(
-  "Distribución de empresas registradas según provincia. 2015-2024.csv",
+  "empresas-provincia-2015-2024.csv",
   show_col_types = FALSE
 ) |> 
   clean_names() |> 

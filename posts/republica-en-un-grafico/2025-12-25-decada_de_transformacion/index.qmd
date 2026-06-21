@@ -2,7 +2,7 @@
 title: "La República en un gráfico: 10 años de transformación"
 date: "2026-01-05"
 author: "Leonardo Mena"
-description: "explicación de los cambios en el habito de consumo de los dominicanos"
+description: "Entre 2010 y 2020, la canasta dominicana se movió hacia conectividad y bienestar: comunicaciones y bienes diversos ganaron peso mientras alimentos y transporte cedieron espacio."
 image: "portada_canasta_familiar.png"
 twitter-card:
   image: "portada_canasta_familiar.png"

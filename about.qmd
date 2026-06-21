@@ -33,9 +33,11 @@ Este blog ordena datos, argumentos y gráficos sobre República Dominicana. La i
 ::: {.about-manifesto}
 ## Sobre el sitio
 
-La economía está en el transporte, en el carrito del supermercado y en lo que significa un aumento salarial. Escribo desde la curiosidad de quien todavía está aprendiendo, con datos y contexto dominicano.
+Soy Leonardo Mena, estudiante de Economía en la UASD. Este blog nace de una incomodidad sencilla: muchas conversaciones económicas en República Dominicana se quedan atrapadas entre titulares, opiniones rápidas y datos sueltos. Escribir me obliga a detenerme, buscar la fuente, armar el gráfico y preguntarme si la conclusión realmente sale de los datos.
 
-Soy Leonardo Mena, estudiante de Economía en la UASD. Escribir me obliga a buscar fuentes, revisar supuestos y confrontar lo que leo en los libros con lo que pasa en la calle.
+La economía que me interesa está en el transporte, en el carrito del supermercado, en el efectivo que todavía domina el colmado, en una MiPyME que no pide crédito y en una provincia donde casi no hay empresas formales. Ahí es donde los promedios nacionales empiezan a fallar: dicen algo del país, pero muchas veces esconden las diferencias territoriales, sociales y productivas que explican cómo vive la gente.
+
+Uso el blog como una libreta pública. No pretende cerrar debates ni hablar desde una autoridad definitiva; pretende mostrar el camino entre una pregunta y una lectura razonable. Si algo intento aportar es mirar los temas dominicanos con más paciencia: separar el dato de la intuición, conectar la teoría con casos concretos y dejar suficiente rastro para que cualquiera pueda revisar, corregir o continuar el análisis.
 :::
 
 ::: {.about-principles}

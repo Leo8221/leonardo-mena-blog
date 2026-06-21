@@ -48,7 +48,6 @@ listing:
 
 Análisis y datos para mirar la economía dominicana con más calma.
 
-<span class="home-signature">Datos y lectura económica sobre República Dominicana.</span>
 :::
 
 ::: {.home-actions}

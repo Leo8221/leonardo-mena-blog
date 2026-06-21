@@ -45,11 +45,20 @@ Los tapones, el calor, el hacinamiento en vehículos viejos y en mal estado o el
 Pero dado que nada viene sin un coste, es importante entender tanto las ventajas como los desafíos que el transporte masivo trae consigo. En este artículo exploraremos qué puede y qué no puede hacer el transporte masivo en la República Dominicana, y por qué el debate sobre su costo fiscal suele empezar con los números equivocados.
 
 <div class="key-takeaways">
-<span class="key-takeaways-title">Lo que encontrarás en este análisis</span>
-- **El Metro no sustituye al carro** — y los datos del parque vehicular lo confirman sin ambigüedad.
-- **Sí mueve a más de 100 millones de personas al año**, reduciendo tiempos y costos reales para quienes dependen del sistema.
-- **El subsidio operativo real es RD$35 por pasajero**, no los RD$136 que circula en el debate público — la diferencia está en confundir inversión en infraestructura con gasto operativo.
-- **El impacto más subestimado** es territorial: el transporte masivo puede reducir la prima de accesibilidad que hoy encarece el alquiler en el Distrito Nacional y desconecta a las MiPyMES periurbanas del mercado laboral central.
+<span class="key-takeaways-title">Conclusiones Clave</span>
+<ul>
+<li><strong>El Metro no sustituye al carro:</strong> y los datos del parque vehicular lo confirman sin ambigüedad.</li>
+<li><strong>Sí mueve a más de 100 millones de personas al año:</strong> reduce tiempos y costos reales para quienes dependen del sistema.</li>
+<li><strong>El subsidio operativo real es RD$35 por pasajero:</strong> no RD$136. La diferencia está en confundir inversión en infraestructura con gasto operativo.</li>
+<li><strong>El impacto más subestimado es territorial:</strong> el transporte masivo puede reducir la prima de accesibilidad que hoy encarece el alquiler en el Distrito Nacional y desconecta a las MiPyMES periurbanas del mercado laboral central.</li>
+</ul>
+</div>
+
+<div class="data-box">
+<div class="data-box-title">Nota metodológica</div>
+<div class="data-box-content">
+El artículo combina series administrativas de OPRET/SIGEF, parque vehicular de la DGII, datos de tránsito de la JTCE y evidencia territorial de ENMIPYMES/TSS. El subsidio operativo se estima separando gasto recurrente de inversión de capital: remuneraciones, servicios y materiales menos ingresos por taquilla, dividido entre pasajeros transportados. Las obras de expansión se tratan como inversión en infraestructura, no como costo operativo por viaje.
+</div>
 </div>
 
 ## Qué no es el transporte masivo
@@ -496,29 +505,28 @@ El subsidio de RD$35 por pasajero no es un derroche. Es el precio de mantener ac
 ```
 
 ```{=html}
-<div class="share-minimal">
-  <p>Si este análisis te resultó útil, considera compartirlo en 
-  <a href="#" data-share="linkedin">LinkedIn</a>, 
-  <a href="#" data-share="twitter">Twitter</a> o 
-  <a href="#" data-share="whatsapp">WhatsApp</a>.</p>
-</div>
-```
-
-```{=html}
-<div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
-  <div class="related-posts-grid">
-    <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
-      <p>Cambios en la canasta familiar</p>
+<div class="bibliography-section">
+  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <div class="bib-grid">
+    <div class="bib-card">
+      <h4>OPRET / SIGEF (DIGEPRES)</h4>
+      <p>Ejecución presupuestaria utilizada para separar operación corriente, inversión de capital e ingresos por taquilla del Metro de Santo Domingo.</p>
+      <a href="https://sigef.hacienda.gob.do/" target="_blank" class="bib-link">Consultar SIGEF ↗</a>
     </div>
-    <div class="related-post-card">
-      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
-      <p>Análisis de la deuda pública dominicana</p>
+    <div class="bib-card">
+      <h4>DGII</h4>
+      <p>Parque vehicular por tipo de vehículo, usado para contrastar la expansión del transporte masivo con el crecimiento de la movilidad privada.</p>
+      <a href="https://dgii.gov.do/estadisticas/parqueVehicular/" target="_blank" class="bib-link">Ver parque vehicular ↗</a>
     </div>
-    <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
-      <p>Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.</p>
+    <div class="bib-card">
+      <h4>JTCE / OPRET</h4>
+      <p>Series de pasajeros transportados y operación del sistema, utilizadas para calcular magnitudes anuales y costo operativo por viaje.</p>
+      <a href="https://www.opret.gob.do/" target="_blank" class="bib-link">Ver OPRET ↗</a>
+    </div>
+    <div class="bib-card">
+      <h4>ENMIPYMES / TSS</h4>
+      <p>Datos de estructura empresarial, empleo formal y territorio usados para conectar movilidad, accesibilidad y oportunidades productivas.</p>
+      <a href="https://www.bancentral.gov.do/" target="_blank" class="bib-link">Ver Banco Central ↗</a>
     </div>
   </div>
 </div>
