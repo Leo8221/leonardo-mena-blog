@@ -25,6 +25,18 @@ Reglas persistentes para trabajar en este repositorio.
 - Distinguir fecha de corte de datos y fecha tecnica de generacion.
 - Los graficos del Atlas deben partir de datos reproducibles o archivos reales de articulos.
 
+## Quarto, R y encoding
+
+- No agregar `.Rprofile`, `.Renviron` ni cambios globales de locale/encoding al repo para "arreglar" renders locales. Si R arranca con `LC_CTYPE=C` o muestra avisos como `Setting LC_CTYPE=C.UTF-8 failed` en Windows, detenerse: ese entorno puede convertir acentos en literales `<U+00E9>` dentro de graficos SVG.
+- En Windows, antes de renderizar desde una sesion automatizada, verificar que R lea UTF-8 correctamente con `l10n_info()[["UTF-8"]] == TRUE`. Si falla por variables `LC_ALL`, `LC_CTYPE` o `LANG` heredadas del shell, corregir la sesion de ejecucion, no el contenido generado ni los textos del articulo.
+- No corregir regresiones de encoding editando solo `docs/`, sustituyendo strings, cambiando SVG a PNG o restaurando outputs antiguos. La correccion permanente debe quedar en el archivo fuente o en el entorno real de render.
+
+## Mapas y joins geograficos
+
+- No hacer `left_join()` de mapas contra nombres con acentos, mayusculas o textos dependientes del encoding del shapefile. Crear claves estables y ASCII, por ejemplo con `janitor::make_clean_names()`, codigos oficiales o IDs reproducibles.
+- Todo mapa que agregue regiones debe validar despues del join: si faltan regiones, si una geometria queda agrupada como `NA`, o si las metricas quedan incompletas, el chunk debe fallar con `stop()` antes de publicar.
+- Caso de referencia: el mapa de MiPyMES se rompio cuando `TOPONIMIA` no coincidio con strings acentuados y se publico una sola geometria gris con `NA`. Esa clase de fallo debe detectarse en fuente y en revision visual, nunca resolverse restaurando `docs/`.
+
 ## Diseno
 
 - Mantener identidad editorial: fondo crema, terracota, oliva, azul de datos, negro editorial y superficies blancas.
@@ -54,6 +66,10 @@ Reglas persistentes para trabajar en este repositorio.
   - `node atlas/scripts/check-text-integrity.mjs`
   - `quarto render`
   - revision visual en desktop y movil cuando cambie UI.
+- Despues de `quarto render`, si se regeneran SVGs con texto o mapas, revisar visualmente al menos las figuras afectadas. Para MiPyMES, confirmar especificamente:
+  - el mapa muestra Norte, Sur, Este y Metropolitana con porcentajes reales, no `NA`;
+  - las figuras SVG muestran acentos normales (`tamano` no debe aparecer como `<U+00F1>` ni texto equivalente roto);
+  - `docs/posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg` y `fig-acceso-credito-formal-tamano-1.svg` se ven correctos en navegador.
 - Si una validacion no se ejecuta o solo pasa con advertencias, decirlo claramente.
 
 ## Git
