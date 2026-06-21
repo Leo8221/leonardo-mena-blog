@@ -1139,11 +1139,10 @@ function renderPrices() {
     </section>
     <section class="chart-card">
       <h3>Contribución por rubro</h3>
-      <div class="driver-list">${renderBarRows(state.data.series.prices.components, {
+      <div class="contribution-list">${renderContributionRows(state.data.series.prices.components, {
         labelField: "component",
-        valueField: "pressure",
-        max: 100,
-        suffix: "/100"
+        valueField: "contribution",
+        suffix: " p.p."
       })}</div>
     </section>
     <section class="chart-card">
@@ -1152,7 +1151,7 @@ function renderPrices() {
         ${state.data.series.prices.passThrough.map((item) => `
           <div class="table-row">
             <strong>${escapeHtml(item.channel)}</strong>
-            <span>${formatNumber(item.value)}/100</span>
+            <span>Índice ${formatNumber(item.value)}</span>
             <em>${escapeHtml(item.note)}</em>
           </div>
         `).join("")}
@@ -1336,7 +1335,12 @@ function chartExpandButton(canvasId) {
 }
 
 function chartDownloadButton(canvasId) {
-  return `<button class="chart-expand" type="button" data-action="download-chart" data-canvas="${escapeHtml(canvasId)}" title="Descargar este grafico">PNG</button>`;
+  return `<button class="chart-download" type="button" data-action="download-chart" data-canvas="${escapeHtml(canvasId)}" title="Descargar este grafico">Descargar PNG</button>`;
+}
+
+function chartEvents(scope, metric = null) {
+  const events = state.data.series.events?.[scope] || [];
+  return events.filter((event) => !Array.isArray(event.metrics) || !metric || event.metrics.includes(metric));
 }
 
 function hydrateCharts(module) {
@@ -1369,7 +1373,8 @@ function hydrateCharts(module) {
       tpm: "TPM (%)"
     };
     drawLineChart(document.getElementById("macro-chart"), labels, values, titles[state.macroMetric], {
-      stepped: state.macroMetric === "tpm"
+      stepped: state.macroMetric === "tpm",
+      events: chartEvents("macro", state.macroMetric)
     });
   }
 
@@ -1378,7 +1383,8 @@ function hydrateCharts(module) {
       document.getElementById("external-chart"),
       state.data.series.external.map((item) => item.period),
       state.data.series.external.map((item) => item.pressure),
-      "Presión externa"
+      "Presión externa",
+      { events: chartEvents("external") }
     );
   }
 
@@ -1430,7 +1436,8 @@ function hydrateCharts(module) {
         { label: "General", values: state.data.series.prices.timeline.map((item) => item.headline), color: "#c86448" },
         { label: "Subyacente", values: state.data.series.prices.timeline.map((item) => item.core), color: "#466a8f" }
       ],
-      "Inflación (%)"
+      "Inflación (%)",
+      { events: chartEvents("prices") }
     );
   }
 
@@ -1453,7 +1460,9 @@ function hydrateCharts(module) {
       xField: "infrastructure",
       yField: "market",
       sizeField: "opportunity",
-      labelField: "province"
+      labelField: "province",
+      xLabel: "Infraestructura",
+      yLabel: "Mercado"
     });
   }
 

@@ -962,7 +962,8 @@ body.atlas-dark .topbar-tour {
 }
 
 .article-link,
-.chart-expand {
+.chart-expand,
+.chart-download {
   min-height: var(--lm-control-min);
   display: inline-flex;
   align-items: center;
@@ -983,6 +984,7 @@ body.atlas-dark .topbar-tour {
 }
 
 .chart-expand:hover,
+.chart-download:hover,
 .article-link:hover {
   border-color: var(--terracotta);
   color: var(--terracotta-dark);
@@ -1202,6 +1204,54 @@ canvas[height="620"] {
 .driver-list {
   display: grid;
   gap: 0.65rem;
+}
+
+.contribution-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contribution-row {
+  position: relative;
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--terracotta) 16%, transparent) var(--share), transparent var(--share)),
+    var(--card);
+  color: var(--soft);
+  font-size: 0.86rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.contribution-rank {
+  width: 24px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--terracotta-dark);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.contribution-row strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contribution-row > span:last-child {
+  color: var(--terracotta-dark);
+  font-weight: 900;
 }
 
 .bar-row {
@@ -2219,8 +2269,9 @@ body.modal-open {
 
   .chart-actions {
     flex: 0 0 auto;
-    flex-wrap: nowrap;
-    margin-left: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
   }
 
   .chart-toolbar::-webkit-scrollbar {
@@ -2235,7 +2286,8 @@ body.modal-open {
   }
 
   .article-link,
-  .chart-expand {
+  .chart-expand,
+  .chart-download {
     min-height: var(--lm-control-min);
     padding: 0 0.72rem;
   }
@@ -2243,7 +2295,7 @@ body.modal-open {
   .map-canvas-wrap {
     min-height: 430px;
     width: 100%;
-    min-width: min(560px, 150vw);
+    min-width: 0;
   }
 
   canvas[height="620"],
@@ -2287,6 +2339,13 @@ body.modal-open {
   .bar-row {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .contribution-row {
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    min-height: 38px;
+    gap: 0.45rem;
+    padding: 0.48rem 0.52rem;
   }
 
   .table-row {

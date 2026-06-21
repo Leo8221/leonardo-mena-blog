@@ -179,6 +179,58 @@
         "pressure": 54.5
       }
     ],
+    "events": {
+      "macro": [
+        {
+          "period": "Ene",
+          "label": "Salto cambiario",
+          "metrics": [
+            "dolar"
+          ]
+        },
+        {
+          "period": "Mar",
+          "label": "Menor IMAE",
+          "metrics": [
+            "imae"
+          ]
+        },
+        {
+          "period": "May",
+          "label": "Pico inflacionario",
+          "metrics": [
+            "inflacion"
+          ]
+        },
+        {
+          "period": "May",
+          "label": "Recorte TPM",
+          "metrics": [
+            "tpm"
+          ]
+        }
+      ],
+      "external": [
+        {
+          "period": "Mar",
+          "label": "Aceleración"
+        },
+        {
+          "period": "May",
+          "label": "Máximo reciente"
+        }
+      ],
+      "prices": [
+        {
+          "period": "May",
+          "label": "Salto de inflación"
+        },
+        {
+          "period": "Jun",
+          "label": "Persistencia"
+        }
+      ]
+    },
     "drivers": [
       {
         "driver": "Demanda interna",
@@ -709,7 +761,7 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-06-21T19:51:32.963Z",
+  "generatedAt": "2026-06-21T20:36:05.562Z",
   "modules": [
     {
       "id": "pulso-macro",

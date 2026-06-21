@@ -14,6 +14,25 @@ function renderBarRows(rows, options) {
   }).join("");
 }
 
+function renderContributionRows(rows, options) {
+  const sortedRows = rows
+    .slice()
+    .sort((a, b) => Math.abs(Number(b[options.valueField])) - Math.abs(Number(a[options.valueField])));
+  const max = Math.max(...sortedRows.map((item) => Math.abs(Number(item[options.valueField]))), 1);
+  return sortedRows.map((item, index) => {
+    const value = Number(item[options.valueField]);
+    const width = Math.min(100, Math.abs(value) / max * 100);
+    const sign = value > 0 ? "+" : "";
+    return `
+      <div class="contribution-row" style="--share:${width}%">
+        <span class="contribution-rank">${index + 1}</span>
+        <strong>${escapeHtml(item[options.labelField])}</strong>
+        <span>${sign}${formatNumber(value)}${options.suffix || ""}</span>
+      </div>
+    `;
+  }).join("");
+}
+
 function drawLineChart(canvas, labels, values, title, options = {}) {
   drawDualLineChart(
     canvas,
@@ -39,6 +58,9 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
   clearCanvas(ctx, width, height);
   drawGrid(ctx, width, height, padding, 4);
   drawCanvasTitle(ctx, title, padding.left, 18);
+
+  const eventMarkers = [];
+  drawEventMarkers(ctx, labels, options.events || [], padding, plotW, plotH, width, eventMarkers);
 
   const tooltipPoints = [];
   series.forEach((serie, serieIndex) => {
@@ -108,10 +130,73 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
   }
 
   drawLegend(ctx, series, padding.left, height - 4);
-  bindPointTooltip(canvas, tooltipPoints, (point) => `
-    <strong>${escapeHtml(point.label)}</strong>
-    <span>${escapeHtml(point.period)}: ${formatNumber(point.value)}</span>
-  `);
+  bindCanvasTooltip(canvas, (event) => {
+    const cursor = getCanvasPoint(canvas, event);
+    const eventMarker = eventMarkers.find((marker) => (
+      cursor.x >= marker.x &&
+      cursor.x <= marker.x + marker.width &&
+      cursor.y >= marker.y &&
+      cursor.y <= marker.y + marker.height
+    ));
+    if (eventMarker) {
+      return `
+        <strong>${escapeHtml(eventMarker.item.label)}</strong>
+        <span>${escapeHtml(eventMarker.item.period)}</span>
+      `;
+    }
+    const hitPadding = touchLikeEvent(event) ? CHART_SYSTEM.hitPadding.touch : CHART_SYSTEM.hitPadding.mouse;
+    const point = tooltipPoints.find((candidate) => {
+      const dx = cursor.x - candidate.x;
+      const dy = cursor.y - candidate.y;
+      return Math.sqrt(dx * dx + dy * dy) <= candidate.radius + hitPadding;
+    });
+    return point ? `
+      <strong>${escapeHtml(point.label)}</strong>
+      <span>${escapeHtml(point.period)}: ${formatNumber(point.value)}</span>
+    ` : null;
+  });
+}
+
+function drawEventMarkers(ctx, labels, events, padding, plotW, plotH, width, markers) {
+  if (!Array.isArray(events) || events.length === 0) return;
+  const visibleEvents = events
+    .map((item) => ({ ...item, index: labels.indexOf(item.period) }))
+    .filter((item) => item.index >= 0);
+  if (visibleEvents.length === 0) return;
+
+  ctx.save();
+  ctx.font = "700 10px Inter";
+  visibleEvents.forEach((item, eventIndex) => {
+    const x = padding.left + (plotW * item.index) / Math.max(labels.length - 1, 1);
+    ctx.beginPath();
+    ctx.setLineDash([4, 4]);
+    ctx.strokeStyle = addAlpha(CHART_SYSTEM.colors.terracotta, 0.62);
+    ctx.lineWidth = 1;
+    ctx.moveTo(x, padding.top);
+    ctx.lineTo(x, padding.top + plotH);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    markers.push({
+      x: x - 10,
+      y: padding.top,
+      width: 20,
+      height: plotH,
+      item
+    });
+
+    if (width > 520 || eventIndex === visibleEvents.length - 1) {
+      const label = fitCanvasText(ctx, item.label, width < 520 ? 86 : 120);
+      const textWidth = ctx.measureText(label).width;
+      const labelX = Math.max(padding.left, Math.min(x + 5, width - padding.right - textWidth - 8));
+      const labelY = padding.top + 12 + (eventIndex % 2) * 14;
+      ctx.fillStyle = addAlpha(CHART_SYSTEM.colors.card, 0.94);
+      ctx.fillRect(labelX - 4, labelY - 10, textWidth + 8, 14);
+      ctx.fillStyle = CHART_SYSTEM.colors.terracotta;
+      ctx.fillText(label, labelX, labelY);
+    }
+  });
+  ctx.restore();
 }
 
 function drawHorizontalBarChart(canvas, rows, options) {
@@ -219,9 +304,9 @@ function drawTreemapChart(canvas, rows, options) {
   const plotH = height - padding.top - padding.bottom;
   const total = rows.reduce((sum, item) => sum + Number(item[options.valueField]), 0) || 1;
   const colors = {
-    Masivo: CHART_SYSTEM.colors.panel,
-    Vinculado: CHART_SYSTEM.colors.blue,
-    Nicho: CHART_SYSTEM.colors.terracotta
+    Masivo: CHART_SYSTEM.colors.terracotta,
+    Vinculado: CHART_SYSTEM.colors.olive,
+    Nicho: CHART_SYSTEM.colors.gold
   };
   const boxes = [];
 
@@ -249,7 +334,7 @@ function drawTreemapChart(canvas, rows, options) {
     ctx.lineWidth = 2;
     ctx.strokeRect(box.x, box.y, box.width, box.height);
     if (box.width > 72 && box.height > 42) {
-      ctx.fillStyle = category === "Masivo" ? CHART_SYSTEM.colors.ink : "#ffffff";
+      ctx.fillStyle = category === "Nicho" ? CHART_SYSTEM.colors.ink : "#ffffff";
       ctx.font = value > 20 ? "800 18px Inter" : "700 12px Inter";
       ctx.fillText(String(box.item[options.labelField]).slice(0, 18), box.x + 8, box.y + 22);
       ctx.font = "700 12px Inter";
@@ -410,7 +495,9 @@ function drawComplexScatterChart(canvas, rows, options) {
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
   const isCompact = width < 520;
-  const padding = { top: 54, right: 34, bottom: 62, left: 70 };
+  const padding = isCompact
+    ? { top: 72, right: 22, bottom: 62, left: 50 }
+    : { top: 54, right: 34, bottom: 62, left: 70 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
   const xValues = rows.map((item) => Number(item[options.xField]));
@@ -760,7 +847,10 @@ function drawScatterChart(canvas, rows, options) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
-  const padding = { top: 40, right: 30, bottom: 48, left: 54 };
+  const isCompact = width < 520;
+  const padding = isCompact
+    ? { top: 58, right: 18, bottom: 48, left: 42 }
+    : { top: 40, right: 30, bottom: 48, left: 54 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
   const xValues = rows.map((item) => item[options.xField]);
@@ -796,12 +886,16 @@ function drawScatterChart(canvas, rows, options) {
 
   ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
-  ctx.fillText("Infraestructura", padding.left, height - 12);
-  ctx.save();
-  ctx.translate(14, padding.top + plotH);
-  ctx.rotate(-Math.PI / 2);
-  ctx.fillText("Mercado", 0, 0);
-  ctx.restore();
+  ctx.fillText(options.xLabel || "Infraestructura", padding.left, height - 12);
+  if (isCompact) {
+    ctx.fillText(options.yLabel || "Mercado", padding.left, padding.top - 14);
+  } else {
+    ctx.save();
+    ctx.translate(14, padding.top + plotH);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText(options.yLabel || "Mercado", 0, 0);
+    ctx.restore();
+  }
 
   bindPointTooltip(canvas, points, (point) => `
     <strong>${escapeHtml(point.item[options.labelField])}</strong>
@@ -815,11 +909,15 @@ function drawAxisLabels(ctx, xLabel, yLabel, padding, width, height) {
   ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
   ctx.fillText(xLabel, padding.left, height - 16);
-  ctx.save();
-  ctx.translate(18, padding.top + (height - padding.top - padding.bottom) / 2 + padding.bottom);
-  ctx.rotate(-Math.PI / 2);
-  ctx.fillText(yLabel, 0, 0);
-  ctx.restore();
+  if (width < 520) {
+    ctx.fillText(yLabel, padding.left, padding.top - 10);
+  } else {
+    ctx.save();
+    ctx.translate(18, padding.top + (height - padding.top - padding.bottom) / 2 + padding.bottom);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText(yLabel, 0, 0);
+    ctx.restore();
+  }
 }
 
 function bindPointTooltip(canvas, points, content) {
