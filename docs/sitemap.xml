@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/</loc>
+    <lastmod>2026-06-21T15:10:51.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://leo8221.github.io/leonardo-mena-blog/atlas/</loc>
+    <lastmod>2026-06-21T15:10:51.420Z</lastmod>
+  </url>
+  <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/suscribete.html</loc>
     <lastmod>2026-06-20T17:54:59.374Z</lastmod>
   </url>
@@ -37,10 +45,6 @@
     <lastmod>2026-06-18T02:38:31.242Z</lastmod>
   </url>
   <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>
-    <lastmod>2026-06-21T15:10:51.420Z</lastmod>
-  </url>
-  <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/categorias.html</loc>
     <lastmod>2026-06-20T17:54:59.341Z</lastmod>
   </url>
@@ -55,10 +59,6 @@
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/fundamentos.html</loc>
     <lastmod>2026-06-20T17:54:59.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://leo8221.github.io/leonardo-mena-blog/observatorio.html</loc>
-    <lastmod>2026-06-20T17:54:59.369Z</lastmod>
   </url>
   <url>
     <loc>https://leo8221.github.io/leonardo-mena-blog/posts/predecesores/2026-01-09-_Frederic_Bastiat/index.html</loc>
