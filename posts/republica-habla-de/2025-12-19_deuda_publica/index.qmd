@@ -373,17 +373,17 @@ Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una 
   <div class="related-posts-grid">
 
         <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html">Perspectiva de desarrollo</a></h4>
+      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">Década de transformación</a></h4>
+      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">Década de transformación</a></h4>
       <p>Análisis de los cambios en la canasta familiar dominicana.</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <h4><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h4>
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     

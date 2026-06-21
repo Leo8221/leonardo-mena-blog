@@ -7,10 +7,13 @@ const homeUrl = "https://leo8221.github.io/leonardo-mena-blog/";
 const homeIndexUrl = "https://leo8221.github.io/leonardo-mena-blog/index.html";
 const atlasUrl = "https://leo8221.github.io/leonardo-mena-blog/atlas/";
 const legacyObservatorioUrl = "https://leo8221.github.io/leonardo-mena-blog/observatorio.html";
+const siteUrl = "https://leo8221.github.io/leonardo-mena-blog/";
 
 if (!fs.existsSync(sitemapPath)) {
   throw new Error("docs/sitemap.xml no existe. Ejecuta quarto render antes de actualizar el sitemap.");
 }
+
+injectCanonicalLinks();
 
 const sitemap = fs.readFileSync(sitemapPath, "utf8");
 
@@ -24,11 +27,15 @@ if (!withoutDuplicateAtlas.includes(closingTag)) {
   throw new Error("docs/sitemap.xml no contiene </urlset>.");
 }
 
+const withCanonicalUrls = normalizeSitemapUrls(withoutDuplicateAtlas);
+const withoutCanonicalHome = removeUrlEntry(withCanonicalUrls, homeUrl);
+const withoutCanonicalAtlas = removeUrlEntry(withoutCanonicalHome, atlasUrl);
+
 const canonicalEntries = [
   `  <url>\n    <loc>${homeUrl}</loc>\n  </url>\n`,
   `  <url>\n    <loc>${atlasUrl}</loc>\n  </url>\n`
 ].join("");
-const updated = withoutDuplicateAtlas.replace(closingTag, `${canonicalEntries}</urlset>`);
+const updated = dedupeSitemapUrls(withoutCanonicalAtlas.replace(closingTag, `${canonicalEntries}</urlset>`));
 
 if (updated !== sitemap) {
   fs.writeFileSync(sitemapPath, updated, "utf8");
@@ -42,6 +49,75 @@ function removeUrlEntry(xml, url) {
   const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const entryPattern = new RegExp(`\\s*<url>\\s*<loc>${escapedUrl}<\\/loc>[\\s\\S]*?<\\/url>\\s*`, "g");
   return xml.replace(entryPattern, "\n");
+}
+
+function normalizeSitemapUrls(xml) {
+  return xml.replace(/<loc>([^<]+)<\/loc>/g, (_, url) => `<loc>${canonicalizeUrl(url)}</loc>`);
+}
+
+function dedupeSitemapUrls(xml) {
+  const seen = new Set();
+  return xml.replace(/\s*<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>\s*/g, (entry, url) => {
+    if (seen.has(url)) return "\n";
+    seen.add(url);
+    return entry;
+  });
+}
+
+function canonicalizeUrl(url) {
+  if (url === homeIndexUrl) return homeUrl;
+  if (url.endsWith("/index.html")) return url.slice(0, -("index.html".length));
+  return url;
+}
+
+function injectCanonicalLinks() {
+  const docsDir = path.join(root, "docs");
+  if (!fs.existsSync(docsDir)) return;
+
+  for (const file of findHtmlFiles(docsDir)) {
+    const relativePath = path.relative(docsDir, file).replace(/\\/g, "/");
+    const canonical = canonicalUrlForHtml(relativePath);
+    let html = fs.readFileSync(file, "utf8");
+    const linkTag = `<link rel="canonical" href="${canonical}">`;
+    const ogUrlTag = `<meta property="og:url" content="${canonical}">`;
+
+    html = normalizeInternalLinks(html, relativePath);
+
+    if (/<link\s+rel="canonical"[^>]*>/i.test(html)) {
+      html = html.replace(/<link\s+rel="canonical"[^>]*>/i, linkTag);
+    } else {
+      html = html.replace("</head>", `${linkTag}\n</head>`);
+    }
+
+    if (/<meta\s+property="og:url"[^>]*>/i.test(html)) {
+      html = html.replace(/<meta\s+property="og:url"[^>]*>/i, ogUrlTag);
+    } else {
+      html = html.replace("</head>", `${ogUrlTag}\n</head>`);
+    }
+
+    fs.writeFileSync(file, html, "utf8");
+  }
+}
+
+function canonicalUrlForHtml(relativePath) {
+  if (relativePath === "index.html") return homeUrl;
+  if (relativePath.endsWith("/index.html")) {
+    return `${siteUrl}${relativePath.slice(0, -("index.html".length))}`;
+  }
+  return `${siteUrl}${relativePath}`;
+}
+
+function normalizeInternalLinks(html, relativePath) {
+  const prefix = relativeRootPrefix(relativePath);
+  return html
+    .replace(/href="\/posts\/([^"]+)\/index\.html"/g, `href="${prefix}posts/$1/"`)
+    .replace(/href="((?:\.\.\/)+posts\/[^"]+)\/index\.html"/g, `href="$1/"`);
+}
+
+function relativeRootPrefix(relativePath) {
+  const directory = path.posix.dirname(relativePath.replace(/\\/g, "/"));
+  if (directory === ".") return "";
+  return "../".repeat(directory.split("/").filter(Boolean).length);
 }
 
 function pruneUnreferencedFigureFiles() {

@@ -201,12 +201,12 @@ La próxima vez que escuches que la inflación subió o bajó, recuerda que detr
   <div class="related-posts-grid">
     
     <div class="related-post-card">
-      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
       <p>Análisis de la Deuda pública dominicana</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <h4><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h4>
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     

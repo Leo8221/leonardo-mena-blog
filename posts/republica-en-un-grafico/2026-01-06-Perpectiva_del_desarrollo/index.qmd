@@ -288,17 +288,17 @@ La concentración económica es una dinámica natural del desarrollo, no un erro
   <div class="related-posts-grid">
     
     <div class="related-post-card">
-      <h4><a href="/posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/index.html">10 años de transformación</a></h4>
+      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
       <p>Cambios en la canasta familiar</p>
     </div>
 
     <div class="related-post-card">
-      <h4><a href="/posts/republica-habla-de/2025-12-19_deuda_publica/index.html">La aritmética desagradable de la deuda</a></h4>
+      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
       <p>Análisis de la Deuda pública dominicana</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html">El PIB y la trampa del bienestar</a></h4>
+      <h4><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h4>
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     
