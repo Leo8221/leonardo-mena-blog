@@ -84,21 +84,36 @@ mapa_regiones <- st_read("../../../mapa_rd/region/REGCenso2010.shp", quiet = TRU
   st_transform(4326)
 
 mapeo_regiones <- tribble(
-  ~region_shapefile,              ~region_encuesta,
-  "REGIÓN CIBAO NORTE",           "Norte",
-  "REGIÓN CIBAO SUR",             "Norte",
-  "REGIÓN CIBAO NORDESTE",        "Norte",
-  "REGIÓN CIBAO NOROESTE",        "Norte",
-  "REGIÓN VALDESIA",              "Sur",
-  "REGIÓN ENRIQUILLO",            "Sur",
-  "REGIÓN EL VALLE",              "Sur",
-  "REGIÓN YUMA",                  "Este",
-  "REGIÓN HIGUAMO",               "Este",
-  "REGIÓN OZAMA O METROPOLITANA", "Metropolitana"
+  ~region_key,                        ~region_encuesta,
+  "region_cibao_norte",               "Norte",
+  "region_cibao_sur",                 "Norte",
+  "region_cibao_nordeste",            "Norte",
+  "region_cibao_noroeste",            "Norte",
+  "region_valdesia",                  "Sur",
+  "region_enriquillo",                "Sur",
+  "region_el_valle",                  "Sur",
+  "region_yuma",                      "Este",
+  "region_higuamo",                   "Este",
+  "region_ozama_o_metropolitana",     "Metropolitana"
 )
 
-mapa_agrupado <- mapa_regiones |>
-  left_join(mapeo_regiones, by = c("TOPONIMIA" = "region_shapefile")) |>
+mapa_regiones_mapeado <- mapa_regiones |>
+  mutate(region_key = janitor::make_clean_names(TOPONIMIA)) |>
+  left_join(mapeo_regiones, by = "region_key")
+
+if (any(is.na(mapa_regiones_mapeado$region_encuesta))) {
+  regiones_sin_mapeo <- mapa_regiones_mapeado |>
+    st_drop_geometry() |>
+    filter(is.na(region_encuesta)) |>
+    pull(TOPONIMIA)
+  stop(
+    "Regiones del shapefile sin mapeo: ",
+    paste(regiones_sin_mapeo, collapse = ", "),
+    call. = FALSE
+  )
+}
+
+mapa_agrupado <- mapa_regiones_mapeado |>
   group_by(region_encuesta) |>
   summarise(geometry = st_union(geometry))
 
@@ -132,6 +147,10 @@ mapa_final <- mapa_agrupado |>
       round(pct_informal, 0), "% informal"
     )
   )
+
+if (nrow(mapa_final) != 4 || any(is.na(mapa_final$pct_micro)) || any(is.na(mapa_final$pct_informal))) {
+  stop("El mapa de MiPyMES no tiene las cuatro regiones con datos completos.", call. = FALSE)
+}
 
 ggplot(mapa_final) +
   geom_sf(aes(fill = pct_micro), color = pal$crema, linewidth = 0.8) +
