@@ -97,6 +97,9 @@ jobs:
 
       - name: Regenerar datos del Atlas
         run: |
+          Rscript atlas/scripts/fetch-atlas-sources.R
+          Rscript atlas/scripts/build-bcrd-live-data.R
+          Rscript atlas/scripts/build-map-assets.R
           Rscript atlas/scripts/build-article-visuals.R
           node atlas/scripts/build-atlas-data.mjs
 

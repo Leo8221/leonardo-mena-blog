@@ -6,6 +6,8 @@ _freeze/
 observatorio_cache/
 .aider*
 .codex-remote-attachments/
+atlas/data/raw/
+atlas/data/source-run.json
 
 # Local unfinished drafts. Remove these lines when the posts are ready to publish.
 posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/

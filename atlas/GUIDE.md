@@ -12,21 +12,39 @@ algo no está listo, no se muestra.
   `atlas/data/atlas-data.json`.
 - `atlas/scripts/build-article-visuals.R`: transforma datos nacidos de artículos
   publicados.
-- `atlas/app.js`: estructura de vistas, navegación, filtros e hidratación.
-  También define `moduleDatasets()`, que alimenta tablas y CSV.
-- `atlas/js/renderers.js`: motores de gráficos, mapas y canvas.
+- `atlas/app.js`: estado global, tema, arranque y render principal.
+- `atlas/js/app-navigation.js`: portada, filtros, sidebar y navegación móvil.
+- `atlas/js/app-panels.js`: paneles de fuente, metodología, tablas y CSV.
+- `atlas/js/app-modules.js`: HTML de módulos, controles e hidratación de gráficos.
+- `atlas/js/app-data.js`: carga de datos, URL state, analítica y descargas.
+- `atlas/js/app-ui.js`: sincronización de filtros y utilidades de UI.
+- `atlas/js/renderers.js`: motores de gráficos y canvas.
+- `atlas/js/map-renderers.js`: mapas choropleth e inspector lateral.
 - `atlas/js/interactions.js`: enlace, PNG, modales y pantalla completa.
-- `atlas/styles.css`: sistema visual propio del Atlas, usando tokens
-  compartidos desde `assets/css/tokens.css`.
+- `atlas/styles.css`: entrada CSS modular. Cada bloque vive en `atlas/css/` y
+  usa tokens compartidos desde `assets/css/tokens.css`.
 - `_quarto.yml`: solo si agregas un recurso nuevo que GitHub Pages debe copiar.
 
 ## Ruta rápida
 
 ```powershell
+Rscript atlas/scripts/fetch-atlas-sources.R
+Rscript atlas/scripts/build-bcrd-live-data.R
+Rscript atlas/scripts/build-map-assets.R
 Rscript atlas/scripts/build-article-visuals.R
 node atlas/scripts/build-atlas-data.mjs
 quarto render
 ```
+
+La ingesta vive en `atlas/data/source-manifest.json`. Una fuente con `mode:
+"url"` se descarga a `atlas/data/raw/<id>/`; una fuente `local` se valida y, si
+`cache: true`, se copia a ese cache. Para BCRD, `mode: "bcrd_custom_view"` lee
+el `CustomView` oficial, descubre los Excel publicados y descarga solo los
+archivos que coinciden con `includePatterns`. `build-bcrd-live-data.R` parsea
+los Excel descargados y produce `atlas/data/bcrd-live-data.json`, que
+`build-atlas-data.mjs` usa para reemplazar series estaticas de macro, precios y
+comercio. Los demas procesadores leen primero desde `atlas/data/raw/` y solo
+caen al archivo local si no hay cache.
 
 Antes de cerrar un cambio de JavaScript:
 
@@ -35,7 +53,14 @@ node --check atlas/app.js
 node --check atlas/js/config.js
 node --check atlas/js/utils.js
 node --check atlas/js/renderers.js
+node --check atlas/js/map-renderers.js
 node --check atlas/js/interactions.js
+node --check atlas/js/app-navigation.js
+node --check atlas/js/app-panels.js
+node --check atlas/js/app-modules.js
+node --check atlas/js/app-data.js
+node --check atlas/js/app-ui.js
+node --check atlas/js/bootstrap.js
 ```
 
 Para revisar texto roto o problemas simples de acentos:
@@ -58,7 +83,7 @@ Cada módulo activo en `atlas/data/atlas-source.json` necesita:
 - `insight`: lectura principal.
 - `source` y `sourceDetail`.
 - `updated` si el corte difiere de `updated` global.
-- `chart`: tipo que se renderiza en `atlas/app.js`.
+- `chart`: tipo que se renderiza desde `atlas/js/app-modules.js`.
 - `methodology`: lista breve y verificable.
 - `related`: rutas reales relacionadas.
 
@@ -180,7 +205,7 @@ el modal y conservar la interacción.
 ### Tabla y CSV
 
 Cada gráfico Canvas debe tener una alternativa tabular. El lugar único para
-declararla es `moduleDatasets()` en `atlas/app.js`:
+declararla es `moduleDatasets()` en `atlas/js/app-panels.js`:
 
 ```js
 dataset("mi-dataset", "Nombre visible", rows, [
@@ -239,7 +264,7 @@ qué significa un valor alto, qué significa un valor bajo y qué no permite
 concluir.
 
 La opción más simple es usar la guía por defecto definida en `MODULE_GUIDES`,
-en `atlas/app.js`. Si un módulo necesita algo más específico, agrega en el
+en `atlas/js/app-panels.js`. Si un módulo necesita algo más específico, agrega en el
 módulo:
 
 ```json

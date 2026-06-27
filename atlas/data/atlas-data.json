@@ -1,39 +1,39 @@
 {
-  "updated": "2026-06-18",
+  "updated": "2026-06-27",
   "metrics": [
     {
       "id": "usd",
       "label": "Dólar spot",
-      "value": "RD$ 59,15",
-      "delta": "-0,35% vs. ayer",
-      "meta": "Tasa de venta",
+      "value": "RD$ 59.46",
+      "delta": "-0.92 vs. mes anterior",
+      "meta": "Venta promedio mensual BCRD, May 2026",
       "tone": "good",
       "module": "pulso-macro"
     },
     {
       "id": "inflation",
       "label": "Inflación interanual",
-      "value": "5,35%",
+      "value": "5.35%",
       "delta": "Fuera de meta",
-      "meta": "Meta BCRD: 4% +/- 1 pp",
+      "meta": "IPC interanual BCRD, May 2026",
       "tone": "warn",
       "module": "pulso-macro"
     },
     {
       "id": "trade",
-      "label": "Socio exportador líder",
-      "value": "EE. UU.",
-      "delta": "52% del bloque visible",
-      "meta": "Comercio exterior",
+      "label": "Exportaciones totales",
+      "value": "US$ 15957.6 MM",
+      "delta": "Exportaciones 2025",
+      "meta": "BCRD sector externo",
       "tone": "neutral",
       "module": "comercio-exterior"
     },
     {
       "id": "labor",
-      "label": "Brecha laboral joven",
-      "value": "24 pp",
-      "delta": "Superior vs. secundaria",
-      "meta": "Capital humano",
+      "label": "Ocupación informal",
+      "value": "54.1%",
+      "delta": "Ocupación informal",
+      "meta": "ENCFT, ultimo trimestre disponible",
       "tone": "warn",
       "module": "mercado-laboral"
     },
@@ -67,116 +67,100 @@
     },
     "macro": [
       {
-        "period": "Sep",
-        "dolar": 57.8,
-        "inflacion": 3.2,
-        "imae": 4.5,
-        "tpm": 7
-      },
-      {
-        "period": "Oct",
-        "dolar": 58.4,
-        "inflacion": 3.4,
-        "imae": 4.1,
-        "tpm": 6.75
-      },
-      {
-        "period": "Nov",
-        "dolar": 59.1,
-        "inflacion": 3.6,
-        "imae": 4.3,
-        "tpm": 6.5
-      },
-      {
-        "period": "Dic",
-        "dolar": 60.2,
-        "inflacion": 3.8,
-        "imae": 4,
-        "tpm": 6.25
-      },
-      {
-        "period": "Ene",
-        "dolar": 63.9,
-        "inflacion": 3.3,
-        "imae": 4.2,
+        "period": "Ago 2025",
+        "dolar": 62.2947,
+        "inflacion": 3.7136,
+        "imae": 1.5046,
         "tpm": 5.75
       },
       {
-        "period": "Feb",
-        "dolar": 62.6,
-        "inflacion": 3.5,
-        "imae": 4,
+        "period": "Sep 2025",
+        "dolar": 62.9986,
+        "inflacion": 3.7556,
+        "imae": 1.1136,
         "tpm": 5.75
       },
       {
-        "period": "Mar",
-        "dolar": 60.1,
-        "inflacion": 3.8,
-        "imae": 3.7,
+        "period": "Oct 2025",
+        "dolar": 63.7691,
+        "inflacion": 4.2315,
+        "imae": 0.1832,
         "tpm": 5.5
       },
       {
-        "period": "Abr",
-        "dolar": 61,
-        "inflacion": 4.1,
-        "imae": 3.8,
-        "tpm": 5.5
-      },
-      {
-        "period": "May",
-        "dolar": 59.7,
-        "inflacion": 5.35,
-        "imae": 4,
+        "period": "Nov 2025",
+        "dolar": 63.8935,
+        "inflacion": 4.8111,
+        "imae": 3.1567,
         "tpm": 5.25
       },
       {
-        "period": "Jun",
-        "dolar": 59.15,
-        "inflacion": 5.35,
-        "imae": 3.8,
+        "period": "Dic 2025",
+        "dolar": 63.6423,
+        "inflacion": 4.9521,
+        "imae": 2.3096,
+        "tpm": 5.25
+      },
+      {
+        "period": "Ene 2026",
+        "dolar": 63.5063,
+        "inflacion": 4.984,
+        "imae": 3.4869,
+        "tpm": 5.25
+      },
+      {
+        "period": "Feb 2026",
+        "dolar": 62.1964,
+        "inflacion": 4.6724,
+        "imae": 3.8646,
+        "tpm": 5.25
+      },
+      {
+        "period": "Mar 2026",
+        "dolar": 60.6703,
+        "inflacion": 4.6291,
+        "imae": 5.0708,
+        "tpm": 5.25
+      },
+      {
+        "period": "Abr 2026",
+        "dolar": 60.3846,
+        "inflacion": 5.1143,
+        "imae": 3.7724,
+        "tpm": 5.25
+      },
+      {
+        "period": "May 2026",
+        "dolar": 59.463,
+        "inflacion": 5.3461,
+        "imae": 4.7274,
         "tpm": 5.25
       }
     ],
     "external": [
       {
-        "period": "Sep",
-        "pressure": 49.2
+        "period": "2020",
+        "pressure": 31.2
       },
       {
-        "period": "Oct",
-        "pressure": 50.1
+        "period": "2021",
+        "pressure": 55.2
       },
       {
-        "period": "Nov",
-        "pressure": 51.7
+        "period": "2022",
+        "pressure": 77.7
       },
       {
-        "period": "Dic",
-        "pressure": 52
+        "period": "2023",
+        "pressure": 87.4
       },
       {
-        "period": "Ene",
-        "pressure": 52.2
+        "period": "2024",
+        "pressure": 100
       },
       {
-        "period": "Feb",
-        "pressure": 51.8
-      },
-      {
-        "period": "Mar",
-        "pressure": 53.5
-      },
-      {
-        "period": "Abr",
-        "pressure": 54.4
-      },
-      {
-        "period": "May",
-        "pressure": 55.4
-      },
-      {
-        "period": "Jun",
-        "pressure": 54.5
+        "period": "2025",
+        "pressure": 98.3
       }
     ],
     "events": {
@@ -233,358 +217,327 @@
     },
     "drivers": [
       {
-        "driver": "Demanda interna",
-        "value": 48
+        "driver": "Viajes",
+        "value": 100
       },
       {
-        "driver": "Precios domesticos",
-        "value": 61
+        "driver": "Transporte",
+        "value": 10.4
       },
       {
-        "driver": "Financiamiento",
-        "value": 53
+        "driver": "Otros servicios",
+        "value": 8.4
       },
       {
-        "driver": "Tipo de cambio",
-        "value": 38
-      },
-      {
-        "driver": "Energia",
-        "value": 58
-      },
-      {
-        "driver": "Entorno externo",
-        "value": 54.5
+        "driver": "Financieros",
+        "value": 2.3
       }
     ],
     "sectors": [
       {
-        "sector": "Turismo",
-        "pressure": 41.2,
-        "driver": "Entorno externo",
-        "direction": "Externo"
-      },
-      {
         "sector": "Industria",
-        "pressure": 41.1,
-        "driver": "Energia",
-        "direction": "Costos"
-      },
-      {
-        "sector": "Servicios financieros",
-        "pressure": 39.5,
-        "driver": "Financiamiento",
-        "direction": "Tasas"
-      },
-      {
-        "sector": "Transporte",
-        "pressure": 39.2,
-        "driver": "Energia",
-        "direction": "Costos"
-      },
-      {
-        "sector": "Construccion",
-        "pressure": 37.8,
-        "driver": "Financiamiento",
-        "direction": "Tasas"
-      },
-      {
-        "sector": "Agropecuaria",
-        "pressure": 36.2,
-        "driver": "Energia",
-        "direction": "Costos"
-      },
-      {
-        "sector": "MiPyMES y consumo",
-        "pressure": 35.9,
-        "driver": "Demanda interna",
-        "direction": "Demanda"
+        "pressure": 100,
+        "driver": "Produccion",
+        "direction": "PIB"
       },
       {
         "sector": "Comercio",
-        "pressure": 34.1,
+        "pressure": 49.2,
         "driver": "Demanda interna",
-        "direction": "Demanda"
+        "direction": "PIB"
+      },
+      {
+        "sector": "Construccion",
+        "pressure": 42.4,
+        "driver": "Financiamiento",
+        "direction": "Credito"
+      },
+      {
+        "sector": "Transporte",
+        "pressure": 29.8,
+        "driver": "Servicios",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Turismo",
+        "pressure": 26.4,
+        "driver": "Viajes",
+        "direction": "Servicios"
+      },
+      {
+        "sector": "Agropecuaria",
+        "pressure": 19.5,
+        "driver": "Produccion",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Servicios financieros",
+        "pressure": 18.7,
+        "driver": "Financiamiento",
+        "direction": "Credito"
       }
     ],
     "trade": {
-      "partners": [
-        {
-          "name": "Estados Unidos",
-          "exports": 52,
-          "imports": 43,
-          "balance": 8,
-          "opportunity": 78
-        },
-        {
-          "name": "Haiti",
-          "exports": 16,
-          "imports": 2,
-          "balance": 14,
-          "opportunity": 55
-        },
-        {
-          "name": "Suiza",
-          "exports": 8,
-          "imports": 1,
-          "balance": 7,
-          "opportunity": 63
-        },
-        {
-          "name": "China",
-          "exports": 2,
-          "imports": 18,
-          "balance": -16,
-          "opportunity": 48
-        },
-        {
-          "name": "Espana",
-          "exports": 4,
-          "imports": 5,
-          "balance": -1,
-          "opportunity": 51
-        },
-        {
-          "name": "Mexico",
-          "exports": 3,
-          "imports": 7,
-          "balance": -4,
-          "opportunity": 46
-        }
-      ],
+      "partners": [],
       "products": [
         {
-          "name": "Oro y minerales",
-          "share": 31,
-          "complexity": 42,
-          "signal": "Concentracion alta"
+          "name": "Perlas finas (naturales) o cultivadas, piedras preciosas o semipreciosas, metales preciosos, chapados de metal precioso (plaqué) y manufacturas de estas materias; bisutería; monedas",
+          "share": 23.6,
+          "complexity": 628,
+          "signal": "DGA 2026"
         },
         {
-          "name": "Instrumentos medicos",
-          "share": 18,
-          "complexity": 82,
-          "signal": "Sofisticacion alta"
+          "name": "Instrumentos y aparatos de óptica, fotografía o cinematografía, de medida, control o precisión; instrumentos y aparatos médicoquirúrgicos; partes y accesorios de estos instrumentos o aparatos",
+          "share": 13.8,
+          "complexity": 542.8,
+          "signal": "DGA 2026"
         },
         {
-          "name": "Tabaco y cigarros",
-          "share": 11,
-          "complexity": 54,
-          "signal": "Marca exportadora"
+          "name": "Tabaco y sucedáneo del tabaco elaborados",
+          "share": 9.7,
+          "complexity": 212.9,
+          "signal": "DGA 2026"
         },
         {
-          "name": "Textiles",
-          "share": 9,
-          "complexity": 49,
-          "signal": "Integración regional"
+          "name": "Maquinas y aparatos, material eléctrico y sus partes; aparatos para la grabación o la reproduccíon de sonido, aparatos para la grabación o la reproducción de imagenes y sonidos en televisión y las partes y accesorios de estos aparatos",
+          "share": 9.4,
+          "complexity": 66.9,
+          "signal": "DGA 2026"
         },
         {
-          "name": "Cacao y derivados",
-          "share": 5,
-          "complexity": 57,
-          "signal": "Valor agregado potencial"
+          "name": "Plástico y sus manufacturas",
+          "share": 4.8,
+          "complexity": 34.1,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Prendas y complementos (accesorios), de vestir, de punto",
+          "share": 3.7,
+          "complexity": 387.7,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Productos farmacéuticos",
+          "share": 3.6,
+          "complexity": 53.5,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Fundición, hierro y acero",
+          "share": 3,
+          "complexity": 41.6,
+          "signal": "DGA 2026"
         }
       ],
       "flows": [
         {
           "period": "2021",
-          "exports": 100,
-          "imports": 126
+          "exports": 12486.4,
+          "imports": 24282
         },
         {
           "period": "2022",
-          "exports": 108,
-          "imports": 134
+          "exports": 13750.2,
+          "imports": 30912.6
         },
         {
           "period": "2023",
-          "exports": 111,
-          "imports": 132
+          "exports": 12949.8,
+          "imports": 28813.1
         },
         {
           "period": "2024",
-          "exports": 116,
-          "imports": 137
+          "exports": 13928.8,
+          "imports": 29803
         },
         {
           "period": "2025",
-          "exports": 121,
-          "imports": 141
+          "exports": 15957.6,
+          "imports": 29792.9
         }
       ]
     },
     "labor": {
-      "outcomes": [
-        {
-          "group": "Primaria o menos",
-          "employment": 55,
-          "informality": 68,
-          "wageIndex": 72
-        },
-        {
-          "group": "Secundaria",
-          "employment": 63,
-          "informality": 52,
-          "wageIndex": 88
-        },
-        {
-          "group": "Tecnica",
-          "employment": 72,
-          "informality": 37,
-          "wageIndex": 107
-        },
-        {
-          "group": "Universitaria",
-          "employment": 79,
-          "informality": 26,
-          "wageIndex": 134
-        },
-        {
-          "group": "Posgrado",
-          "employment": 83,
-          "informality": 18,
-          "wageIndex": 158
-        }
-      ],
+      "outcomes": [],
       "trend": [
         {
+          "period": "2020",
+          "employment": 1.91,
+          "employers": 71.1
+        },
+        {
           "period": "2021",
-          "employment": 59,
-          "realWage": 94
+          "employment": 2.09,
+          "employers": 84.6
         },
         {
           "period": "2022",
-          "employment": 61,
-          "realWage": 97
+          "employment": 2.29,
+          "employers": 92.5
         },
         {
           "period": "2023",
-          "employment": 63,
-          "realWage": 99
+          "employment": 2.36,
+          "employers": 98.5
         },
         {
           "period": "2024",
-          "employment": 64,
-          "realWage": 101
+          "employment": 2.42,
+          "employers": 104.6
         },
         {
           "period": "2025",
-          "employment": 65,
-          "realWage": 103
+          "employment": 2.5,
+          "employers": 109.4
+        },
+        {
+          "period": "2026",
+          "employment": 2.55,
+          "employers": 111.4
         }
       ],
       "sectors": [
         {
-          "name": "Servicios",
-          "jobs": 38,
-          "wageIndex": 104
+          "name": "Otros Servicios",
+          "jobs": 20.6
         },
         {
           "name": "Comercio",
-          "jobs": 22,
-          "wageIndex": 88
+          "jobs": 20
         },
         {
-          "name": "Industria",
-          "jobs": 13,
-          "wageIndex": 99
+          "name": "Industrias 2/",
+          "jobs": 10.3
         },
         {
-          "name": "Construccion",
-          "jobs": 9,
-          "wageIndex": 92
+          "name": "Hoteles, Bares y Restaurantes",
+          "jobs": 8.6
         },
         {
-          "name": "Agropecuaria",
-          "jobs": 8,
-          "wageIndex": 76
+          "name": "Construcción",
+          "jobs": 8.1
+        },
+        {
+          "name": "Transporte y Comunicaciones",
+          "jobs": 6.9
+        },
+        {
+          "name": "Enseñanza",
+          "jobs": 6.7
+        }
+      ],
+      "indicators": [
+        {
+          "group": "Total Global de Participación",
+          "value": 66.3
+        },
+        {
+          "group": "Tasa de Ocupación",
+          "value": 63
+        },
+        {
+          "group": "Ocupación Informal",
+          "value": 54.1
+        },
+        {
+          "group": "SU1: Tasa de Desocupación 4/",
+          "value": 5
+        },
+        {
+          "group": "Tasa de Inactividad",
+          "value": 33.7
         }
       ]
     },
     "prices": {
       "components": [
         {
-          "component": "Alimentos",
-          "contribution": 1.6,
-          "pressure": 73
-        },
-        {
           "component": "Transporte",
-          "contribution": 1.1,
-          "pressure": 68
+          "contribution": 2.16,
+          "pressure": 100
         },
         {
-          "component": "Vivienda y servicios",
-          "contribution": 0.8,
-          "pressure": 57
+          "component": "Recreación y Cultura",
+          "contribution": -0.98,
+          "pressure": 45.3
         },
         {
-          "component": "Restaurantes",
-          "contribution": 0.6,
-          "pressure": 54
+          "component": "Alimentos y Bebidas no Alcohólicas",
+          "contribution": -0.58,
+          "pressure": 26.9
         },
         {
-          "component": "Otros bienes",
-          "contribution": 0.4,
-          "pressure": 42
+          "component": "Bienes y Servicios Diversos",
+          "contribution": 0.42,
+          "pressure": 19.2
+        },
+        {
+          "component": "Restaurantes y Hoteles",
+          "contribution": 0.41,
+          "pressure": 18.9
+        },
+        {
+          "component": "Salud",
+          "contribution": 0.36,
+          "pressure": 16.9
+        },
+        {
+          "component": "Bebidas Alcohólicas y Tabaco",
+          "contribution": 0.18,
+          "pressure": 8.3
         }
       ],
-      "passThrough": [
-        {
-          "channel": "Combustibles",
-          "value": 78,
-          "note": "Shock inicial"
-        },
-        {
-          "channel": "Transporte",
-          "value": 66,
-          "note": "Costos logisticos"
-        },
-        {
-          "channel": "Alimentos",
-          "value": 61,
-          "note": "Canasta cotidiana"
-        },
-        {
-          "channel": "Expectativas",
-          "value": 44,
-          "note": "Persistencia"
-        },
-        {
-          "channel": "Subsidios",
-          "value": 36,
-          "note": "Amortiguador"
-        }
-      ],
+      "passThrough": [],
       "timeline": [
         {
-          "period": "Ene",
-          "headline": 3.3,
-          "core": 4.1
+          "period": "Ago 2025",
+          "headline": 3.7136,
+          "core": 4.3196
         },
         {
-          "period": "Feb",
-          "headline": 3.5,
-          "core": 4
+          "period": "Sep 2025",
+          "headline": 3.7556,
+          "core": 4.3514
         },
         {
-          "period": "Mar",
-          "headline": 3.8,
-          "core": 4.2
+          "period": "Oct 2025",
+          "headline": 4.2315,
+          "core": 4.6659
         },
         {
-          "period": "Abr",
-          "headline": 4.1,
-          "core": 4.3
+          "period": "Nov 2025",
+          "headline": 4.8111,
+          "core": 4.7419
         },
         {
-          "period": "May",
-          "headline": 5.35,
-          "core": 4.5
+          "period": "Dic 2025",
+          "headline": 4.9521,
+          "core": 4.8511
         },
         {
-          "period": "Jun",
-          "headline": 5.35,
-          "core": 4.6
+          "period": "Ene 2026",
+          "headline": 4.984,
+          "core": 4.8923
+        },
+        {
+          "period": "Feb 2026",
+          "headline": 4.6724,
+          "core": 4.7623
+        },
+        {
+          "period": "Mar 2026",
+          "headline": 4.6291,
+          "core": 4.5848
+        },
+        {
+          "period": "Abr 2026",
+          "headline": 5.1143,
+          "core": 4.8659
+        },
+        {
+          "period": "May 2026",
+          "headline": 5.3461,
+          "core": 4.8614
         }
       ]
     },
@@ -757,11 +710,399 @@
       ]
     }
   },
+  "liveDataCutoff": {
+    "macro": "May 2026",
+    "prices": "May 2026",
+    "trade": 2025
+  },
   "brand": {
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-06-21T20:36:05.562Z",
+  "generatedAt": "2026-06-27T21:37:49.852Z",
+  "sourceRun": {
+    "generatedAt": "2026-06-27T21:36:52Z",
+    "manifestVersion": 1,
+    "summary": {
+      "total": 20,
+      "downloaded": 11,
+      "cached": 7,
+      "verified": 2,
+      "manual": 0,
+      "failed": 0
+    },
+    "sources": [
+      {
+        "id": "territory-province-shapefile",
+        "label": "ONE - provincias Censo 2010",
+        "mode": "local",
+        "kind": "directory",
+        "status": "verified",
+        "required": true,
+        "bytes": null,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-01-04T09:52:05Z",
+        "md5": "",
+        "usedBy": [
+          "build-map-assets.R"
+        ],
+        "updatePolicy": "Base cartografica estable; revisar solo ante cambio oficial."
+      },
+      {
+        "id": "territory-business-register",
+        "label": "Empresas registradas por provincia",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 11107,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "ee597dd9fb3b8d362500e0d3347642d7",
+        "usedBy": [
+          "build-map-assets.R"
+        ],
+        "updatePolicy": "Sustituir por URL oficial cuando haya endpoint estable."
+      },
+      {
+        "id": "territory-population-one",
+        "label": "ONE - proyecciones de poblacion por provincia",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 48893,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "e31818c3849d928234aa54ff0c62ad46",
+        "usedBy": [
+          "build-map-assets.R"
+        ],
+        "updatePolicy": "Sustituir por URL oficial cuando haya endpoint estable."
+      },
+      {
+        "id": "mipymes-region-shapefile",
+        "label": "ONE - regiones Censo 2010",
+        "mode": "local",
+        "kind": "directory",
+        "status": "verified",
+        "required": true,
+        "bytes": null,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-01-04T09:52:05Z",
+        "md5": "",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Base cartografica estable; revisar solo ante cambio oficial."
+      },
+      {
+        "id": "mipymes-enmipymes-2023",
+        "label": "Encuesta Nacional a las MiPyMES 2023",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 5841080,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "67ca1da92976758f59b314c16475206c",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Encuesta de corte fijo; actualizar cuando exista nueva ronda."
+      },
+      {
+        "id": "tourism-reasons",
+        "label": "Motivos de turismo por pais",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 730,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "7f6c0b92081ab5e85f827424fa473482",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Sustituir por URL oficial cuando haya endpoint estable."
+      },
+      {
+        "id": "transport-tss-workers-2021",
+        "label": "TSS - trabajadores por provincia 2021",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 1024,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "6a21a8eb84f6b46fc994748a25d7a721",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Sustituir por descarga oficial si TSS publica serie reutilizable."
+      },
+      {
+        "id": "transport-mipymes-rent",
+        "label": "MiPyMES - alquiler por provincia expandido",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 3386,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "7af7d83a7586727feded645946e63505",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Derivado de ENMIPYMES; actualizar junto con nueva ronda."
+      },
+      {
+        "id": "debt-service-rd",
+        "label": "Servicio de deuda publica RD",
+        "mode": "local",
+        "kind": "file",
+        "status": "cached",
+        "required": true,
+        "bytes": 5501,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "5356bca075b056d11d7d79d800600f26",
+        "usedBy": [
+          "build-article-visuals.R"
+        ],
+        "updatePolicy": "Sustituir por SIGEF/Hacienda cuando haya endpoint estable."
+      },
+      {
+        "id": "bcrd-sector-real",
+        "label": "BCRD - sector real",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 272644,
+        "discovered": 37,
+        "selected": 3,
+        "downloaded": 3,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-precios",
+        "label": "BCRD - precios",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 435714,
+        "discovered": 30,
+        "selected": 4,
+        "downloaded": 4,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-sector-externo",
+        "label": "BCRD - sector externo",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 2563632,
+        "discovered": 42,
+        "selected": 8,
+        "downloaded": 8,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-encft",
+        "label": "BCRD - ENCFT",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 506907,
+        "discovered": 18,
+        "selected": 4,
+        "downloaded": 4,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-sector-fiscal",
+        "label": "BCRD - sector fiscal",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 195774,
+        "discovered": 1,
+        "selected": 1,
+        "downloaded": 1,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-monetario",
+        "label": "BCRD - sector monetario y financiero",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 453946,
+        "discovered": 44,
+        "selected": 5,
+        "downloaded": 5,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "bcrd-mercado-cambiario",
+        "label": "BCRD - mercado cambiario",
+        "mode": "bcrd_custom_view",
+        "kind": "dataset",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 354531,
+        "discovered": 14,
+        "selected": 1,
+        "downloaded": 1,
+        "modifiedAt": "",
+        "md5": "",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde el CustomView oficial del BCRD."
+      },
+      {
+        "id": "tss-empleos-cotizantes",
+        "label": "TSS - empleos cotizantes",
+        "mode": "url",
+        "kind": "file",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 11776,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:50Z",
+        "md5": "f315a81ccf168243633d01a1031c5372",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde datos abiertos de la TSS."
+      },
+      {
+        "id": "tss-empleadores-cotizantes",
+        "label": "TSS - empleadores cotizantes",
+        "mode": "url",
+        "kind": "file",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 5407,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:51Z",
+        "md5": "a31c65e35327f0943e7275f8d9ae0755",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde datos abiertos de la TSS."
+      },
+      {
+        "id": "dga-importaciones-capitulo",
+        "label": "DGA - importaciones por capitulo",
+        "mode": "url",
+        "kind": "file",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 1112890,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:51Z",
+        "md5": "77ea99e05047e482a0140aff3e6b51a8",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde datos abiertos de la DGA."
+      },
+      {
+        "id": "dga-exportaciones-capitulo",
+        "label": "DGA - exportaciones por capitulo",
+        "mode": "url",
+        "kind": "file",
+        "status": "downloaded",
+        "required": false,
+        "bytes": 1056092,
+        "discovered": null,
+        "selected": null,
+        "downloaded": null,
+        "modifiedAt": "2026-06-27T21:36:52Z",
+        "md5": "52fd936ed9acb6fb1cc1271bd674844e",
+        "usedBy": [
+          "build-atlas-data.mjs"
+        ],
+        "updatePolicy": "Descarga automatica desde datos abiertos de la DGA."
+      }
+    ]
+  },
+  "liveData": {
+    "generatedAt": "2026-06-27T21:37:07Z",
+    "dataCutoff": {
+      "macro": "May 2026",
+      "prices": "May 2026",
+      "trade": 2025
+    },
+    "active": true
+  },
   "modules": [
     {
       "id": "pulso-macro",
@@ -776,10 +1117,12 @@
       "question": "¿Qué cambió en los datos recientes?",
       "insight": "Conviene mirar nivel y variación por separado.",
       "chart": "macro",
+      "dataMode": "Automático",
       "sourceInfo": {
         "label": "BCRD",
         "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
-        "updated": "2026-06-18",
+        "dataMode": "Automático",
+        "updated": "2026-06-27",
         "methodology": [
           "Tipo de cambio: tasa de venta spot.",
           "Inflación: variación interanual del IPC.",
@@ -801,14 +1144,16 @@
       "family": "Sectores",
       "topic": "Sectores",
       "summary": "Exposición sectorial ante demanda, precios, financiamiento y energía.",
-      "source": "BCRD, FRED, Yahoo Finance",
+      "source": "BCRD",
       "question": "¿Qué sectores parecen más expuestos?",
-      "insight": "Es una primera mirada, no una cuenta sectorial.",
+      "insight": "Peso relativo y señal dominante por sector.",
       "chart": "sectors",
+      "dataMode": "Modelo",
       "sourceInfo": {
-        "label": "BCRD, FRED, Yahoo Finance",
-        "detail": "Modelo de sensibilidad con pesos transparentes por sector y drivers macro normalizados.",
-        "updated": "2026-06-18",
+        "label": "BCRD",
+        "detail": "PIB por actividad económica y drivers normalizados.",
+        "dataMode": "Modelo",
+        "updated": "2026-06-27",
         "methodology": [
           "Los drivers se normalizan en escala 0-100.",
           "Cada sector usa pesos predefinidos por sensibilidad económica.",
@@ -828,14 +1173,16 @@
       "family": "Macro",
       "topic": "Entorno global",
       "summary": "Energía, tasas, dólar global y ciclo externo.",
-      "source": "FRED, Yahoo Finance",
+      "source": "BCRD",
       "question": "¿Qué tan exigente está el entorno externo?",
-      "insight": "La serie junta señales globales que pueden tocar precios, turismo o financiamiento.",
+      "insight": "Señales externas para leer servicios, turismo y financiamiento.",
       "chart": "external",
+      "dataMode": "Modelo",
       "sourceInfo": {
-        "label": "FRED, Yahoo Finance",
-        "detail": "Variables globales normalizadas y agregadas en escala 0-100.",
-        "updated": "2026-06-18",
+        "label": "BCRD",
+        "detail": "Balanza de servicios y series externas del Banco Central.",
+        "dataMode": "Modelo",
+        "updated": "2026-06-27",
         "methodology": [
           "Valores altos indican condiciones externas más adversas.",
           "La señal se suaviza para reducir ruido de mercado.",
@@ -855,18 +1202,20 @@
       "family": "Comercio",
       "topic": "Comercio",
       "summary": "Socios, rubros y balance comercial.",
-      "source": "UN Comtrade, OEC, Aduanas RD",
-      "question": "¿Qué vendemos y a quién?",
-      "insight": "El ranking ayuda, pero no basta: también importa la concentración y el balance.",
+      "source": "BCRD, DGA",
+      "question": "¿Cómo se mueven las exportaciones e importaciones?",
+      "insight": "Exportaciones, importaciones y canasta exportadora en una sola vista.",
       "chart": "trade",
+      "dataMode": "Automático",
       "sourceInfo": {
-        "label": "UN Comtrade, OEC, Aduanas RD",
-        "detail": "Estructura preparada para series de comercio por socio, rubro y flujo.",
-        "updated": "2026-06-18",
+        "label": "BCRD, DGA",
+        "detail": "BCRD para flujos agregados y DGA para capítulos de exportación.",
+        "dataMode": "Automático",
+        "updated": "2026-06-27",
         "methodology": [
-          "Los socios se comparan por participación relativa en el bloque visible.",
-          "La oportunidad combina escala de mercado y complejidad potencial.",
-          "El balance se interpreta como señal exploratoria, no como diagnóstico completo."
+          "Se descargan los Excel oficiales del CustomView de sector externo del BCRD.",
+          "Los flujos anuales suman los trimestres disponibles de exportaciones e importaciones.",
+          "La canasta exportadora usa capítulos publicados por la DGA cuando están disponibles."
         ],
         "related": [
           "republica-en-un-grafico.html"
@@ -882,18 +1231,20 @@
       "family": "Trabajo",
       "topic": "Trabajo",
       "summary": "Empleo, informalidad, salarios y educación.",
-      "source": "ONE, BCRD ENCFT, TSS",
-      "question": "¿Cómo se ven empleo e informalidad por grupo?",
-      "insight": "Más escolaridad no siempre se traduce de forma automática en mejor inserción.",
+      "source": "BCRD ENCFT",
+      "question": "¿Qué dicen los últimos indicadores laborales?",
+      "insight": "Tasas laborales recientes y ocupación por rama de actividad.",
       "chart": "labor",
+      "dataMode": "Automático",
       "sourceInfo": {
-        "label": "ONE, BCRD ENCFT, TSS",
-        "detail": "Estructura de lectura para combinar censo, encuesta laboral y registros administrativos.",
-        "updated": "2026-06-18",
+        "label": "BCRD ENCFT",
+        "detail": "Excel oficiales de la Encuesta Nacional Continua de Fuerza de Trabajo.",
+        "dataMode": "Automático",
+        "updated": "2026-06-27",
         "methodology": [
-          "Las tasas se leen por grupo educativo y cohorte laboral.",
-          "La informalidad funciona como guardrail de calidad del empleo.",
-          "El indice salarial es relativo para comparar direcciones, no pesos corrientes."
+          "Se descargan los Excel oficiales de ENCFT desde el CustomView del BCRD.",
+          "Los indicadores toman el último trimestre disponible.",
+          "La distribución por rama usa ocupados por actividad económica."
         ],
         "related": [
           "republica-en-un-grafico.html"
@@ -909,18 +1260,20 @@
       "family": "Precios",
       "topic": "Precios",
       "summary": "Inflación, rubros, alimentos y combustibles.",
-      "source": "BCRD, MICM, Ministerio de Hacienda",
-      "question": "¿Dónde se concentra la presión de precios?",
-      "insight": "Ayuda separar el shock inicial del costo que llega al hogar.",
+      "source": "BCRD",
+      "question": "¿Dónde se concentra la presión reciente de precios?",
+      "insight": "Inflación general, subyacente y variación mensual por grupo.",
       "chart": "prices",
+      "dataMode": "Automático",
       "sourceInfo": {
-        "label": "BCRD, MICM, Ministerio de Hacienda",
-        "detail": "Componentes de precios y canales de traspaso hacia hogares y costos productivos.",
-        "updated": "2026-06-18",
+        "label": "BCRD",
+        "detail": "Excel oficiales de IPC general, subyacente e IPC por grupos.",
+        "dataMode": "Automático",
+        "updated": "2026-06-27",
         "methodology": [
-          "Las contribuciones se expresan en puntos porcentuales.",
-          "Los canales de traspaso se normalizan en escala 0-100.",
-          "Subsidios y combustibles se tratan como amortiguadores, no como eliminadores del shock."
+          "Se descargan los Excel oficiales de precios del BCRD.",
+          "La inflación general y subyacente usa variación interanual mensual.",
+          "Los grupos se ordenan por la variación mensual absoluta más reciente."
         ],
         "related": [
           "republica-habla-de.html"
@@ -940,10 +1293,12 @@
       "question": "¿Qué diferencias aparecen en el territorio?",
       "insight": "La comparación separa escala económica, conectividad y empleo.",
       "chart": "territory",
+      "dataMode": "Corte fijo",
       "sourceInfo": {
         "label": "ONE, MOPC, registros administrativos",
         "detail": "Índice territorial compuesto por mercado, infraestructura y capital humano.",
-        "updated": "2026-06-18",
+        "dataMode": "Corte fijo",
+        "updated": "2026-06-27",
         "methodology": [
           "El índice de oportunidad combina mercado, infraestructura y fuerza laboral.",
           "La vista por región permite comparar nodos y periferias.",
@@ -967,10 +1322,12 @@
       "question": "¿Qué limita a las MiPyMES?",
       "insight": "El problema rara vez es una sola cosa: dinero, formalidad, gestión y mercado se mezclan.",
       "chart": "mipymes",
+      "dataMode": "Artículo",
       "sourceInfo": {
         "label": "Encuestas MiPyMES, BCRD, DGII",
         "detail": "Lectura por tamaño, formalidad, acceso financiero y brechas de gestión.",
-        "updated": "2026-06-18",
+        "dataMode": "Artículo",
+        "updated": "2026-06-27",
         "methodology": [
           "Las barreras se expresan como intensidad relativa.",
           "La escalera productiva compara micro, pequeña y mediana empresa.",
@@ -994,10 +1351,12 @@
       "question": "¿Qué datos de artículos se pueden explorar?",
       "insight": "Algunos gráficos del blog también pueden leerse como piezas interactivas.",
       "chart": "visualLab",
+      "dataMode": "Artículo",
       "sourceInfo": {
         "label": "Artículos publicados",
         "detail": "Activos generados desde shapefiles, CSV y XLSX usados en artículos sobre territorio, MiPyMES, turismo, transporte y deuda.",
-        "updated": "2026-06-18",
+        "dataMode": "Artículo",
+        "updated": "2026-06-27",
         "methodology": [
           "Cada visual nace de archivos usados por artículos existentes, no de datos decorativos.",
           "Los mapas se exportan como GeoJSON liviano para interacción en navegador.",

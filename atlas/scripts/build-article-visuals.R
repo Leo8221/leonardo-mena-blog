@@ -23,6 +23,11 @@ sf_use_s2(FALSE)
 root <- getwd()
 out_dir <- file.path(root, "atlas", "data")
 
+source_cache_path <- function(source_id, fallback_path) {
+  cached <- file.path(out_dir, "raw", source_id, basename(fallback_path))
+  if (file.exists(cached)) cached else fallback_path
+}
+
 read_csv_utf8 <- function(path, ...) {
   read_csv(path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, ...)
 }
@@ -60,7 +65,10 @@ write_geojson <- function(sf_obj, path) {
 
 # MiPyMES regional map from the published article.
 mipyme_dir <- file.path(root, "posts", "republica-en-un-grafico", "2026-02-14-mipymes-rd")
-mipyme_path <- file.path(mipyme_dir, "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx")
+mipyme_path <- source_cache_path(
+  "mipymes-enmipymes-2023",
+  file.path(mipyme_dir, "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx")
+)
 
 regions_shape <- st_read(file.path(root, "mapa_rd", "region", "REGCenso2010.shp"), quiet = TRUE) |>
   st_transform(32619) |>
@@ -114,7 +122,7 @@ write_geojson(regions_mipymes, file.path(out_dir, "rd-regions-mipymes.geojson"))
 
 # Tourism world map and treemap from the tourism article.
 tourism_dir <- file.path(root, "posts", "republica-habla-de", "2026-01-20-Turismo_expansion")
-tourism_country <- read_csv_utf8(file.path(tourism_dir, "razones_turismo.csv")) |>
+tourism_country <- read_csv_utf8(source_cache_path("tourism-reasons", file.path(tourism_dir, "razones_turismo.csv"))) |>
   rename(country_survey = 1, beach_pct = 2) |>
   mutate(
     country_key = normalize_key(country_survey),
@@ -190,7 +198,7 @@ tourism_treemap <- tibble::tribble(
 
 # Transport article: relationship between rent and formal employment concentration.
 transport_dir <- file.path(root, "posts", "republica-habla-de", "2026-03-04-transporte-masivo")
-employment <- read_csv_utf8(file.path(transport_dir, "tss_trabajadores_provincia_2021.csv")) |>
+employment <- read_csv_utf8(source_cache_path("transport-tss-workers-2021", file.path(transport_dir, "tss_trabajadores_provincia_2021.csv"))) |>
   mutate(
     province_key = normalize_key(provincia),
     province = case_when(
@@ -206,7 +214,7 @@ employment <- read_csv_utf8(file.path(transport_dir, "tss_trabajadores_provincia
     )
   )
 
-rent <- read_csv_utf8(file.path(transport_dir, "mipymes_alquiler_prov_expandido.csv")) |>
+rent <- read_csv_utf8(source_cache_path("transport-mipymes-rent", file.path(transport_dir, "mipymes_alquiler_prov_expandido.csv"))) |>
   filter(clasificacion == "Microempresa") |>
   mutate(
     province_key = normalize_key(provincia),
@@ -238,7 +246,7 @@ transport_space <- employment |>
   )
 
 # Debt article: compact fiscal burden series.
-debt <- read_csv_utf8(file.path(root, "posts", "republica-habla-de", "2025-12-19_deuda_publica", "deuda_rd.csv")) |>
+debt <- read_csv_utf8(source_cache_path("debt-service-rd", file.path(root, "posts", "republica-habla-de", "2025-12-19_deuda_publica", "deuda_rd.csv"))) |>
   group_by(anio) |>
   summarise(
     principal = sum(principal, na.rm = TRUE),

@@ -21,9 +21,24 @@ project:
     - atlas/js/config.js
     - atlas/js/utils.js
     - atlas/js/renderers.js
+    - atlas/js/map-renderers.js
     - atlas/js/interactions.js
+    - atlas/js/app-navigation.js
+    - atlas/js/app-panels.js
+    - atlas/js/app-modules.js
+    - atlas/js/app-data.js
+    - atlas/js/app-ui.js
+    - atlas/js/bootstrap.js
     - atlas/js/tour.js
     - atlas/styles.css
+    - atlas/css/base.css
+    - atlas/css/layout.css
+    - atlas/css/overview.css
+    - atlas/css/charts.css
+    - atlas/css/tables.css
+    - atlas/css/sources.css
+    - atlas/css/responsive.css
+    - atlas/css/tour.css
     - atlas/data/atlas-data.json
     - atlas/data/article-visuals.json
     - atlas/data/rd-provinces.geojson

@@ -21,6 +21,14 @@ out_path <- file.path(root, "atlas", "data", "rd-provinces.geojson")
 population_path <- list.files(post_dir, pattern = "poblaci", full.names = TRUE)[1]
 business_path <- list.files(post_dir, pattern = "empresas", full.names = TRUE)[1]
 
+source_cache_path <- function(source_id, fallback_path) {
+  cached <- file.path(root, "atlas", "data", "raw", source_id, basename(fallback_path))
+  if (file.exists(cached)) cached else fallback_path
+}
+
+population_path <- source_cache_path("territory-population-one", population_path)
+business_path <- source_cache_path("territory-business-register", business_path)
+
 normalize_key <- function(x) {
   x |>
     str_to_upper() |>

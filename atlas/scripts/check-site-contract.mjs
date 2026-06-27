@@ -87,7 +87,45 @@ requireText("home-pulse.html", [
 ]);
 
 requireText(".github/workflows/actualizar_observatorio.yml", [
+  ["ingesta de fuentes Atlas", "Rscript atlas/scripts/fetch-atlas-sources.R"],
+  ["transformacion BCRD viva", "Rscript atlas/scripts/build-bcrd-live-data.R"],
+  ["mapa provincial Atlas", "Rscript atlas/scripts/build-map-assets.R"],
+  ["visuales de articulos Atlas", "Rscript atlas/scripts/build-article-visuals.R"],
+  ["datos publicos Atlas", "node atlas/scripts/build-atlas-data.mjs"],
   ["sitemap post-render", "node atlas/scripts/ensure-sitemap.mjs"]
+]);
+
+requireText("atlas/data/source-manifest.json", [
+  ["manifiesto de fuentes", '"sources"'],
+  ["fuentes BCRD CustomView", '"mode": "bcrd_custom_view"'],
+  ["CustomView sector real", "2533-sector-real"],
+  ["CustomView precios", "2534-precios"],
+  ["CustomView sector externo", "2532-sector-externo"],
+  ["CustomView ENCFT", "2541-encuesta-continua-encft"],
+  ["CustomView sector fiscal", "2535-sector-fiscal"],
+  ["CustomView monetario", "2536-sector-monetario-y-financiero"],
+  ["CustomView mercado cambiario", "2538-mercado-cambiario"],
+  ["fuente local cacheable", '"cache": true']
+]);
+
+requireText("atlas/scripts/fetch-atlas-sources.R", [
+  ["registro source-run", "source-run.json"],
+  ["cache raw", 'file.path(atlas_dir, "data", "raw")'],
+  ["soporte URL", 'mode == "url"'],
+  ["soporte BCRD CustomView", 'mode == "bcrd_custom_view"'],
+  ["extraccion de Excel BCRD", "extract_excel_links"]
+]);
+
+requireText("atlas/scripts/build-bcrd-live-data.R", [
+  ["salida BCRD viva", "bcrd-live-data.json"],
+  ["lectura IPC", "ipc_base_2019-2020.xls"],
+  ["lectura dolar", "TASA_DOLAR_REFERENCIA_MC.xlsx"],
+  ["lectura TPM", "Serie_TPM.xlsx"]
+]);
+
+requireText("atlas/scripts/build-atlas-data.mjs", [
+  ["hidratacion BCRD", "applyLiveBcrdData"],
+  ["metadatos BCRD vivos", "publicLiveData"]
 ]);
 
 requireText("skip-link.html", [
@@ -110,10 +148,18 @@ requireText("atlas/index.html", [
 
 requireMatch("atlas/index.html", [
   ["cache busting de estilos", /styles\.css\?v=\d{8}/],
-  ["cache busting de app", /app\.js\?v=\d{8}/]
+  ["cache busting de app", /app\.js\?v=\d{8}/],
+  ["renderer de mapas modular", /js\/map-renderers\.js\?v=\d{8}/],
+  ["bootstrap modular", /js\/bootstrap\.js\?v=\d{8}/]
 ]);
 
 requireText("atlas/styles.css", [
+  ["imports del CSS modular", "@import url(\"css/base.css"],
+  ["imports responsive", "@import url(\"css/responsive.css"]
+]);
+
+requireText("atlas/css/base.css", [
+  ["tokens compartidos desde la raiz", "../../assets/css/tokens.css"],
   ["estilos de skip link", ".skip-link"],
   ["focus-visible global", ":focus-visible"],
   ["prefers-reduced-motion", "prefers-reduced-motion"]
@@ -147,7 +193,9 @@ if (includeDocs) {
   ]);
   requireMatch("docs/atlas/index.html", [
     ["cache busting de estilos Atlas publicado", /styles\.css\?v=\d{8}/],
-    ["cache busting de app Atlas publicado", /app\.js\?v=\d{8}/]
+    ["cache busting de app Atlas publicado", /app\.js\?v=\d{8}/],
+    ["renderer de mapas modular Atlas publicado", /js\/map-renderers\.js\?v=\d{8}/],
+    ["bootstrap modular Atlas publicado", /js\/bootstrap\.js\?v=\d{8}/]
   ]);
 }
 

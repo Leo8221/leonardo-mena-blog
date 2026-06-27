@@ -1,0 +1,499 @@
+{
+  "generatedAt": "2026-06-27T21:37:07Z",
+  "dataCutoff": {
+    "macro": "May 2026",
+    "prices": "May 2026",
+    "trade": 2025
+  },
+  "series": {
+    "macro": [
+      {
+        "period": "Ago 2025",
+        "year": 2025,
+        "month": 8,
+        "dolar": 62.2947,
+        "inflacion": 3.7136,
+        "imae": 1.5046,
+        "tpm": 5.75
+      },
+      {
+        "period": "Sep 2025",
+        "year": 2025,
+        "month": 9,
+        "dolar": 62.9986,
+        "inflacion": 3.7556,
+        "imae": 1.1136,
+        "tpm": 5.75
+      },
+      {
+        "period": "Oct 2025",
+        "year": 2025,
+        "month": 10,
+        "dolar": 63.7691,
+        "inflacion": 4.2315,
+        "imae": 0.1832,
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2025",
+        "year": 2025,
+        "month": 11,
+        "dolar": 63.8935,
+        "inflacion": 4.8111,
+        "imae": 3.1567,
+        "tpm": 5.25
+      },
+      {
+        "period": "Dic 2025",
+        "year": 2025,
+        "month": 12,
+        "dolar": 63.6423,
+        "inflacion": 4.9521,
+        "imae": 2.3096,
+        "tpm": 5.25
+      },
+      {
+        "period": "Ene 2026",
+        "year": 2026,
+        "month": 1,
+        "dolar": 63.5063,
+        "inflacion": 4.984,
+        "imae": 3.4869,
+        "tpm": 5.25
+      },
+      {
+        "period": "Feb 2026",
+        "year": 2026,
+        "month": 2,
+        "dolar": 62.1964,
+        "inflacion": 4.6724,
+        "imae": 3.8646,
+        "tpm": 5.25
+      },
+      {
+        "period": "Mar 2026",
+        "year": 2026,
+        "month": 3,
+        "dolar": 60.6703,
+        "inflacion": 4.6291,
+        "imae": 5.0708,
+        "tpm": 5.25
+      },
+      {
+        "period": "Abr 2026",
+        "year": 2026,
+        "month": 4,
+        "dolar": 60.3846,
+        "inflacion": 5.1143,
+        "imae": 3.7724,
+        "tpm": 5.25
+      },
+      {
+        "period": "May 2026",
+        "year": 2026,
+        "month": 5,
+        "dolar": 59.463,
+        "inflacion": 5.3461,
+        "imae": 4.7274,
+        "tpm": 5.25
+      }
+    ],
+    "external": [
+      {
+        "period": "2020",
+        "pressure": 31.2
+      },
+      {
+        "period": "2021",
+        "pressure": 55.2
+      },
+      {
+        "period": "2022",
+        "pressure": 77.7
+      },
+      {
+        "period": "2023",
+        "pressure": 87.4
+      },
+      {
+        "period": "2024",
+        "pressure": 100
+      },
+      {
+        "period": "2025",
+        "pressure": 98.3
+      }
+    ],
+    "drivers": [
+      {
+        "driver": "Viajes",
+        "value": 100
+      },
+      {
+        "driver": "Transporte",
+        "value": 10.4
+      },
+      {
+        "driver": "Otros servicios",
+        "value": 8.4
+      },
+      {
+        "driver": "Financieros",
+        "value": 2.3
+      }
+    ],
+    "sectors": [
+      {
+        "sector": "Industria",
+        "pressure": 100,
+        "driver": "Produccion",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Comercio",
+        "pressure": 49.2,
+        "driver": "Demanda interna",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Construccion",
+        "pressure": 42.4,
+        "driver": "Financiamiento",
+        "direction": "Credito"
+      },
+      {
+        "sector": "Transporte",
+        "pressure": 29.8,
+        "driver": "Servicios",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Turismo",
+        "pressure": 26.4,
+        "driver": "Viajes",
+        "direction": "Servicios"
+      },
+      {
+        "sector": "Agropecuaria",
+        "pressure": 19.5,
+        "driver": "Produccion",
+        "direction": "PIB"
+      },
+      {
+        "sector": "Servicios financieros",
+        "pressure": 18.7,
+        "driver": "Financiamiento",
+        "direction": "Credito"
+      }
+    ],
+    "prices": {
+      "timeline": [
+        {
+          "period": "Ago 2025",
+          "year": 2025,
+          "month": 8,
+          "headline": 3.7136,
+          "core": 4.3196
+        },
+        {
+          "period": "Sep 2025",
+          "year": 2025,
+          "month": 9,
+          "headline": 3.7556,
+          "core": 4.3514
+        },
+        {
+          "period": "Oct 2025",
+          "year": 2025,
+          "month": 10,
+          "headline": 4.2315,
+          "core": 4.6659
+        },
+        {
+          "period": "Nov 2025",
+          "year": 2025,
+          "month": 11,
+          "headline": 4.8111,
+          "core": 4.7419
+        },
+        {
+          "period": "Dic 2025",
+          "year": 2025,
+          "month": 12,
+          "headline": 4.9521,
+          "core": 4.8511
+        },
+        {
+          "period": "Ene 2026",
+          "year": 2026,
+          "month": 1,
+          "headline": 4.984,
+          "core": 4.8923
+        },
+        {
+          "period": "Feb 2026",
+          "year": 2026,
+          "month": 2,
+          "headline": 4.6724,
+          "core": 4.7623
+        },
+        {
+          "period": "Mar 2026",
+          "year": 2026,
+          "month": 3,
+          "headline": 4.6291,
+          "core": 4.5848
+        },
+        {
+          "period": "Abr 2026",
+          "year": 2026,
+          "month": 4,
+          "headline": 5.1143,
+          "core": 4.8659
+        },
+        {
+          "period": "May 2026",
+          "year": 2026,
+          "month": 5,
+          "headline": 5.3461,
+          "core": 4.8614
+        }
+      ],
+      "components": [
+        {
+          "component": "Transporte",
+          "contribution": 2.16,
+          "pressure": 100
+        },
+        {
+          "component": "Recreación y Cultura",
+          "contribution": -0.98,
+          "pressure": 45.3
+        },
+        {
+          "component": "Alimentos y Bebidas no Alcohólicas",
+          "contribution": -0.58,
+          "pressure": 26.9
+        },
+        {
+          "component": "Bienes y Servicios Diversos",
+          "contribution": 0.42,
+          "pressure": 19.2
+        },
+        {
+          "component": "Restaurantes y Hoteles",
+          "contribution": 0.41,
+          "pressure": 18.9
+        },
+        {
+          "component": "Salud",
+          "contribution": 0.36,
+          "pressure": 16.9
+        },
+        {
+          "component": "Bebidas Alcohólicas y Tabaco",
+          "contribution": 0.18,
+          "pressure": 8.3
+        }
+      ]
+    },
+    "trade": {
+      "flows": [
+        {
+          "period": "2021",
+          "exports": 12486.4,
+          "imports": 24282
+        },
+        {
+          "period": "2022",
+          "exports": 13750.2,
+          "imports": 30912.6
+        },
+        {
+          "period": "2023",
+          "exports": 12949.8,
+          "imports": 28813.1
+        },
+        {
+          "period": "2024",
+          "exports": 13928.8,
+          "imports": 29803
+        },
+        {
+          "period": "2025",
+          "exports": 15957.6,
+          "imports": 29792.9
+        }
+      ],
+      "products": [
+        {
+          "name": "Perlas finas (naturales) o cultivadas, piedras preciosas o semipreciosas, metales preciosos, chapados de metal precioso (plaqué) y manufacturas de estas materias; bisutería; monedas",
+          "share": 23.6,
+          "complexity": 628,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Instrumentos y aparatos de óptica, fotografía o cinematografía, de medida, control o precisión; instrumentos y aparatos médicoquirúrgicos; partes y accesorios de estos instrumentos o aparatos",
+          "share": 13.8,
+          "complexity": 542.8,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Tabaco y sucedáneo del tabaco elaborados",
+          "share": 9.7,
+          "complexity": 212.9,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Maquinas y aparatos, material eléctrico y sus partes; aparatos para la grabación o la reproduccíon de sonido, aparatos para la grabación o la reproducción de imagenes y sonidos en televisión y las partes y accesorios de estos aparatos",
+          "share": 9.4,
+          "complexity": 66.9,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Plástico y sus manufacturas",
+          "share": 4.8,
+          "complexity": 34.1,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Prendas y complementos (accesorios), de vestir, de punto",
+          "share": 3.7,
+          "complexity": 387.7,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Productos farmacéuticos",
+          "share": 3.6,
+          "complexity": 53.5,
+          "signal": "DGA 2026"
+        },
+        {
+          "name": "Fundición, hierro y acero",
+          "share": 3,
+          "complexity": 41.6,
+          "signal": "DGA 2026"
+        }
+      ]
+    },
+    "labor": {
+      "indicators": [
+        {
+          "group": "Total Global de Participación",
+          "value": 66.3
+        },
+        {
+          "group": "Tasa de Ocupación",
+          "value": 63
+        },
+        {
+          "group": "Ocupación Informal",
+          "value": 54.1
+        },
+        {
+          "group": "SU1: Tasa de Desocupación 4/",
+          "value": 5
+        },
+        {
+          "group": "Tasa de Inactividad",
+          "value": 33.7
+        }
+      ],
+      "sectors": [
+        {
+          "name": "Otros Servicios",
+          "jobs": 20.6
+        },
+        {
+          "name": "Comercio",
+          "jobs": 20
+        },
+        {
+          "name": "Industrias 2/",
+          "jobs": 10.3
+        },
+        {
+          "name": "Hoteles, Bares y Restaurantes",
+          "jobs": 8.6
+        },
+        {
+          "name": "Construcción",
+          "jobs": 8.1
+        },
+        {
+          "name": "Transporte y Comunicaciones",
+          "jobs": 6.9
+        },
+        {
+          "name": "Enseñanza",
+          "jobs": 6.7
+        }
+      ],
+      "trend": [
+        {
+          "period": "2020",
+          "employment": 1.91,
+          "employers": 71.1
+        },
+        {
+          "period": "2021",
+          "employment": 2.09,
+          "employers": 84.6
+        },
+        {
+          "period": "2022",
+          "employment": 2.29,
+          "employers": 92.5
+        },
+        {
+          "period": "2023",
+          "employment": 2.36,
+          "employers": 98.5
+        },
+        {
+          "period": "2024",
+          "employment": 2.42,
+          "employers": 104.6
+        },
+        {
+          "period": "2025",
+          "employment": 2.5,
+          "employers": 109.4
+        },
+        {
+          "period": "2026",
+          "employment": 2.55,
+          "employers": 111.4
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "usd": {
+      "value": "RD$ 59.46",
+      "delta": "-0.92 vs. mes anterior",
+      "meta": "Venta promedio mensual BCRD, May 2026",
+      "tone": "good"
+    },
+    "inflation": {
+      "value": "5.35%",
+      "delta": "Fuera de meta",
+      "meta": "IPC interanual BCRD, May 2026",
+      "tone": "warn"
+    },
+    "trade": {
+      "label": "Exportaciones totales",
+      "value": "US$ 15957.6 MM",
+      "delta": "Exportaciones 2025",
+      "meta": "BCRD sector externo",
+      "tone": "neutral"
+    },
+    "labor": {
+      "label": "Ocupación informal",
+      "value": "54.1%",
+      "delta": "Ocupación informal",
+      "meta": "ENCFT, ultimo trimestre disponible",
+      "tone": "warn"
+    }
+  }
+}
