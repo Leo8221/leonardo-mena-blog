@@ -20,7 +20,10 @@ project:
     - atlas/app.js
     - atlas/js/config.js
     - atlas/js/utils.js
+    - atlas/js/chart-helpers.js
+    - atlas/js/chart-tooltips.js
     - atlas/js/renderers.js
+    - atlas/js/geo-utils.js
     - atlas/js/map-renderers.js
     - atlas/js/interactions.js
     - atlas/js/app-navigation.js

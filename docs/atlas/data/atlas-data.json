@@ -719,9 +719,9 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-06-27T23:02:34.092Z",
+  "generatedAt": "2026-06-27T21:37:49.852Z",
   "sourceRun": {
-    "generatedAt": "2026-06-27T23:02:27Z",
+    "generatedAt": "2026-06-27T21:36:52Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -743,7 +743,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T22:59:59Z",
+        "modifiedAt": "2026-01-04T09:52:05Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -757,12 +757,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 10775,
+        "bytes": 11107,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
-        "md5": "d322c449484d8abc89587f4f804545d4",
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "ee597dd9fb3b8d362500e0d3347642d7",
         "usedBy": [
           "build-map-assets.R"
         ],
@@ -779,7 +779,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
+        "modifiedAt": "2026-06-27T21:36:33Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -797,7 +797,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T22:59:59Z",
+        "modifiedAt": "2026-01-04T09:52:05Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -815,7 +815,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
+        "modifiedAt": "2026-06-27T21:36:33Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -829,12 +829,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 681,
+        "bytes": 730,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
-        "md5": "226b4db570fb0e107cf1d166450be3c1",
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "7f6c0b92081ab5e85f827424fa473482",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -847,12 +847,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 991,
+        "bytes": 1024,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
-        "md5": "d5b5f62dcb3b7295db679eda8ac64185",
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "6a21a8eb84f6b46fc994748a25d7a721",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -865,12 +865,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 3306,
+        "bytes": 3386,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
-        "md5": "1978ad56bb09c68b463d86890fd87abc",
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "7af7d83a7586727feded645946e63505",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -883,12 +883,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 5396,
+        "bytes": 5501,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:09Z",
-        "md5": "e14445e6783730b92d7ae21c37a029a2",
+        "modifiedAt": "2026-06-27T21:36:33Z",
+        "md5": "5356bca075b056d11d7d79d800600f26",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -1031,7 +1031,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:25Z",
+        "modifiedAt": "2026-06-27T21:36:50Z",
         "md5": "f315a81ccf168243633d01a1031c5372",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1049,7 +1049,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:25Z",
+        "modifiedAt": "2026-06-27T21:36:51Z",
         "md5": "a31c65e35327f0943e7275f8d9ae0755",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1067,7 +1067,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:26Z",
+        "modifiedAt": "2026-06-27T21:36:51Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1085,7 +1085,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T23:02:27Z",
+        "modifiedAt": "2026-06-27T21:36:52Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1095,7 +1095,7 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-06-27T23:02:28Z",
+    "generatedAt": "2026-06-27T21:37:07Z",
     "dataCutoff": {
       "macro": "May 2026",
       "prices": "May 2026",
