@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10",
+  "updated": "2026-07-11",
   "metrics": [
     {
       "id": "usd",
@@ -719,9 +719,9 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-07-10T22:59:36.584Z",
+  "generatedAt": "2026-07-11T22:47:46.656Z",
   "sourceRun": {
-    "generatedAt": "2026-07-10T22:59:29Z",
+    "generatedAt": "2026-07-11T22:47:37Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -743,7 +743,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:57:33Z",
+        "modifiedAt": "2026-07-11T22:44:52Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -761,7 +761,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "d322c449484d8abc89587f4f804545d4",
         "usedBy": [
           "build-map-assets.R"
@@ -779,7 +779,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -797,7 +797,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:57:33Z",
+        "modifiedAt": "2026-07-11T22:44:52Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -815,7 +815,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -833,7 +833,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "226b4db570fb0e107cf1d166450be3c1",
         "usedBy": [
           "build-article-visuals.R"
@@ -851,7 +851,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "d5b5f62dcb3b7295db679eda8ac64185",
         "usedBy": [
           "build-article-visuals.R"
@@ -869,7 +869,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "1978ad56bb09c68b463d86890fd87abc",
         "usedBy": [
           "build-article-visuals.R"
@@ -887,7 +887,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:19Z",
+        "modifiedAt": "2026-07-11T22:47:20Z",
         "md5": "e14445e6783730b92d7ae21c37a029a2",
         "usedBy": [
           "build-article-visuals.R"
@@ -1009,7 +1009,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 354990,
+        "bytes": 354894,
         "discovered": 14,
         "selected": 1,
         "downloaded": 1,
@@ -1031,7 +1031,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:28Z",
+        "modifiedAt": "2026-07-11T22:47:35Z",
         "md5": "f315a81ccf168243633d01a1031c5372",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1049,7 +1049,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:28Z",
+        "modifiedAt": "2026-07-11T22:47:35Z",
         "md5": "a31c65e35327f0943e7275f8d9ae0755",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1067,7 +1067,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:29Z",
+        "modifiedAt": "2026-07-11T22:47:36Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1085,7 +1085,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-10T22:59:29Z",
+        "modifiedAt": "2026-07-11T22:47:37Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1095,7 +1095,7 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-07-10T22:59:30Z",
+    "generatedAt": "2026-07-11T22:47:38Z",
     "dataCutoff": {
       "macro": "May 2026",
       "prices": "May 2026",
@@ -1122,7 +1122,7 @@
         "label": "BCRD",
         "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
         "dataMode": "Automático",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Tipo de cambio: tasa de venta spot.",
           "Inflación: variación interanual del IPC.",
@@ -1153,7 +1153,7 @@
         "label": "BCRD",
         "detail": "PIB por actividad económica y drivers normalizados.",
         "dataMode": "Modelo",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Los drivers se normalizan en escala 0-100.",
           "Cada sector usa pesos predefinidos por sensibilidad económica.",
@@ -1182,7 +1182,7 @@
         "label": "BCRD",
         "detail": "Balanza de servicios y series externas del Banco Central.",
         "dataMode": "Modelo",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Valores altos indican condiciones externas más adversas.",
           "La señal se suaviza para reducir ruido de mercado.",
@@ -1211,7 +1211,7 @@
         "label": "BCRD, DGA",
         "detail": "BCRD para flujos agregados y DGA para capítulos de exportación.",
         "dataMode": "Automático",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Se descargan los Excel oficiales del CustomView de sector externo del BCRD.",
           "Los flujos anuales suman los trimestres disponibles de exportaciones e importaciones.",
@@ -1240,7 +1240,7 @@
         "label": "BCRD ENCFT",
         "detail": "Excel oficiales de la Encuesta Nacional Continua de Fuerza de Trabajo.",
         "dataMode": "Automático",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Se descargan los Excel oficiales de ENCFT desde el CustomView del BCRD.",
           "Los indicadores toman el último trimestre disponible.",
@@ -1269,7 +1269,7 @@
         "label": "BCRD",
         "detail": "Excel oficiales de IPC general, subyacente e IPC por grupos.",
         "dataMode": "Automático",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Se descargan los Excel oficiales de precios del BCRD.",
           "La inflación general y subyacente usa variación interanual mensual.",
@@ -1298,7 +1298,7 @@
         "label": "ONE, MOPC, registros administrativos",
         "detail": "Índice territorial compuesto por mercado, infraestructura y capital humano.",
         "dataMode": "Corte fijo",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "El índice de oportunidad combina mercado, infraestructura y fuerza laboral.",
           "La vista por región permite comparar nodos y periferias.",
@@ -1327,7 +1327,7 @@
         "label": "Encuestas MiPyMES, BCRD, DGII",
         "detail": "Lectura por tamaño, formalidad, acceso financiero y brechas de gestión.",
         "dataMode": "Artículo",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Las barreras se expresan como intensidad relativa.",
           "La escalera productiva compara micro, pequeña y mediana empresa.",
@@ -1356,7 +1356,7 @@
         "label": "Artículos publicados",
         "detail": "Activos generados desde shapefiles, CSV y XLSX usados en artículos sobre territorio, MiPyMES, turismo, transporte y deuda.",
         "dataMode": "Artículo",
-        "updated": "2026-07-10",
+        "updated": "2026-07-11",
         "methodology": [
           "Cada visual nace de archivos usados por artículos existentes, no de datos decorativos.",
           "Los mapas se exportan como GeoJSON liviano para interacción en navegador.",
