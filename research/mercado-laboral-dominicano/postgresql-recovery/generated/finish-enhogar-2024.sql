@@ -1,0 +1,70 @@
+\set ON_ERROR_STOP on
+CREATE INDEX IF NOT EXISTS enhogar_personas_hogar_idx ON public.personas (upm, hvivien, hhogar, hlinea);
+CREATE INDEX IF NOT EXISTS enhogar_personas_demografia_idx ON public.personas (region, hzona, p202, p203);
+CREATE INDEX IF NOT EXISTS enhogar_hogares_id_idx ON public.hogares (upm, hvivien, hhogar);
+CREATE INDEX IF NOT EXISTS enhogar_hogares_territorio_idx ON public.hogares (region, hzona);
+
+CREATE OR REPLACE VIEW public.hogares_analiticos AS
+SELECT DISTINCT ON (upm, hvivien, hhogar) h.*
+FROM public.hogares h
+WHERE hresult = 1 AND fexpansion IS NOT NULL
+ORDER BY upm, hvivien, hhogar, (ecode2 = 999) DESC, ecode2 DESC;
+
+CREATE OR REPLACE VIEW public.personas_analiticas AS
+SELECT *
+FROM public.personas
+WHERE hlinea IS NOT NULL AND fexpansion IS NOT NULL;
+
+CREATE OR REPLACE VIEW public.personas_hogar AS
+SELECT
+  p.*,
+  h.hresult,
+  h.hmiembro,
+  h.v101 AS tipo_vivienda_code,
+  h.v105 AS tenencia_code,
+  h.v116 AS alumbrado_code,
+  h.v117 AS horas_electricidad,
+  h.grup_sec AS grupo_socioeconomico_hogar
+FROM public.personas_analiticas p
+LEFT JOIN public.hogares_analiticos h USING (upm, hvivien, hhogar);
+
+CREATE TABLE IF NOT EXISTS meta.fuentes (
+  tabla text PRIMARY KEY,
+  archivo text NOT NULL,
+  filas bigint NOT NULL,
+  sha256 text NOT NULL,
+  captura_archive text NOT NULL,
+  pagina_oficial text NOT NULL,
+  cargado_en timestamptz NOT NULL DEFAULT now()
+);
+TRUNCATE meta.fuentes;
+INSERT INTO meta.fuentes (tabla, archivo, filas, sha256, captura_archive, pagina_oficial) VALUES
+  ('personas', 'BD_ENH24_PERSONAS.csv', 31822, '0F3A60246FA5A1659011A36627663E1B079CF7B911616A724B6192630137B2ED', '20250722075124', 'https://www.one.gob.do/datos-y-estadisticas/'),
+  ('hogares', 'BD_ENH24_HOGARES.csv', 12018, 'C475E180341D98222CBB1A5E548BC5CB49E8CB5B591EF3E0C58532D6C07A9967', '20250722075109', 'https://www.one.gob.do/datos-y-estadisticas/');
+
+CREATE TABLE IF NOT EXISTS meta.calidad (
+  metrica text PRIMARY KEY,
+  valor bigint NOT NULL,
+  nota text NOT NULL,
+  medido_en timestamptz NOT NULL DEFAULT now()
+);
+TRUNCATE meta.calidad;
+INSERT INTO meta.calidad (metrica, valor, nota) VALUES
+  ('personas_microdato', 31822, 'Todas las filas publicadas; incluye entrevistas incompletas.'),
+  ('personas_analiticas', 30160, 'Filas con linea de persona y factor de expansion.'),
+  ('personas_sin_factor', 1662, 'No deben entrar en estimaciones ponderadas.'),
+  ('llaves_persona_duplicadas', 4, 'Llaves upm-vivienda-hogar-linea repetidas en el archivo oficial.'),
+  ('hogares_microdato', 12018, 'Todas las filas publicadas; incluye resultados incompletos.'),
+  ('hogares_completos', 10359, 'Filas con entrevista completa y factor de expansion.'),
+  ('llaves_hogar_analiticas_unicas', 10356, 'Vista deduplicada usada como contexto de personas.'),
+  ('llaves_hogar_duplicadas', 7, 'Llaves upm-vivienda-hogar repetidas en el archivo oficial.');
+
+DO $$
+BEGIN
+  IF (SELECT COUNT(*) FROM public.personas) <> 31822 THEN RAISE EXCEPTION 'Conteo inesperado en personas'; END IF;
+  IF (SELECT COUNT(*) FROM public.hogares) <> 12018 THEN RAISE EXCEPTION 'Conteo inesperado en hogares'; END IF;
+  IF (SELECT COUNT(*) FROM public.personas_analiticas) <> 30160 THEN RAISE EXCEPTION 'Conteo inesperado en personas analiticas'; END IF;
+  IF (SELECT COUNT(*) FROM public.hogares_analiticos) <> 10356 THEN RAISE EXCEPTION 'Conteo inesperado en hogares analiticos'; END IF;
+  IF (SELECT COUNT(*) FROM public.personas_hogar) <> 30160 THEN RAISE EXCEPTION 'Join personas-hogar incompleto'; END IF;
+END
+$$;

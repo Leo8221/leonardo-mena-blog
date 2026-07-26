@@ -1,0 +1,6 @@
+"chequeo","estado","detalle"
+"Parejas únicas por hogar","OK","3622 parejas analíticas"
+"Educación válida en ambos miembros","OK","90,8% de hogares con pareja válida"
+"Factor de expansión presente","OK","FEXPANSION"
+"Modelo logit converge","OK","glm quasibinomial ponderado por factor de expansión"
+"No se filtra por ocupación","OK","La ocupación no forma parte del filtro principal ni del ajuste base"

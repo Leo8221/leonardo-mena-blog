@@ -1,0 +1,41 @@
+---
+title: "La trampa del empleo informal"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Figuras sobre informalidad, estructura laboral y costo legal de formalizar un empleo en República Dominicana."
+categories:
+  - "Trabajo"
+  - "Informalidad"
+  - "La República habla de"
+draft: true
+format:
+  html:
+    toc: false
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+```{=html}
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/01_formalidad_informalidad_tendencia.svg" alt="Tendencia de la composición formal e informal del empleo según la ENCFT."><figcaption>Formalidad e informalidad en la población ocupada, ENCFT.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/02_informalidad_por_rama.svg" alt="Porcentaje de ocupados informales dentro de cada rama de actividad."><figcaption>Informalidad dentro de cada rama de actividad.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/03_informalidad_por_educacion.svg" alt="Porcentaje de informalidad por nivel educativo."><figcaption>Informalidad por nivel educativo.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/04_costo_legal_formalizacion.svg" alt="Escenario de costo mensual de formalizar un empleado según salario bruto."><figcaption>Escenario legal de formalización: TSS, INFOTEP, salario 13 y vacaciones anualizadas.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/05_matriz_formal_informal_rama.svg" alt="Mapa de calor de ocupados formales e informales por rama."><figcaption>Matriz de ocupados formales e informales por rama.</figcaption></figure>
+```
+
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/06_proporcion_informal_100.svg" alt="Cuadricula de 100 celdas con la proporcion observada de empleo informal."><figcaption>Cuadricula proporcional: cada celda representa aproximadamente 1% del empleo ocupado.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/07_mapa_rd_presion_laboral.svg" alt="Mapa de Republica Dominicana con SU4 por macroregion."><figcaption>Presion laboral amplia por macroregion. SU4 no es una tasa de informalidad.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/08_costo_formalizacion_escenarios.svg" alt="Costo adicional de formalizar un empleado como porcentaje del salario bruto, incluyendo escenarios por encima de los topes de cotizacion."><figcaption>Costo adicional sobre el salario: los topes de cotización rompen la proporcionalidad en salarios altos.</figcaption></figure>
+
+## Fuentes y materiales reproducibles
+
+- [Constructor de figuras](../../../research/build-five-post-graphics.R)
+- [Datos procesados](../../../research/trampa-empleo-informal/data/procesados/)
+- [Mapa de figuras](../../../research/trampa-empleo-informal/chart-map.csv)
+- [Topes TSS vigentes desde febrero de 2026](https://tss.gob.do/tss-informa-nuevos-topes-de-cotizacion-del-regimen-contributivo/)
+- [Estadísticas laborales del BCRD](https://www.bancentral.gov.do/a/d/3866-estadisticas-tradicionales)
+- [Guía TSS 2024](https://www.tss.gob.do/assets/guiausuario24b.pdf)
+- [Resolución TSS 01-2025](https://www.tss.gob.do/assets/reso01-2025.pdf)

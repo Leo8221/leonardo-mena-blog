@@ -29,6 +29,7 @@ Reglas persistentes para trabajar en este repositorio.
 
 - No agregar `.Rprofile`, `.Renviron` ni cambios globales de locale/encoding al repo para "arreglar" renders locales. Si R arranca con `LC_CTYPE=C` o muestra avisos como `Setting LC_CTYPE=C.UTF-8 failed` en Windows, detenerse: ese entorno puede convertir acentos en literales `<U+00E9>` dentro de graficos SVG.
 - En Windows, antes de renderizar desde una sesion automatizada, verificar que R lea UTF-8 correctamente con `l10n_info()[["UTF-8"]] == TRUE`. Si falla por variables `LC_ALL`, `LC_CTYPE` o `LANG` heredadas del shell, corregir la sesion de ejecucion, no el contenido generado ni los textos del articulo.
+- Para renders y scripts R reproducibles en este repositorio, usar `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\render-quarto.ps1 -QuartoArgs @('render')` y `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\run-r.ps1`. Para Python, usar `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\run-python.ps1`; el wrapper resuelve el Python instalado desde el registro y evita intérpretes embebidos de otras aplicaciones. Estos wrappers fijan las runtimes sin depender de cuál aparezca primero en el `PATH`.
 - No corregir regresiones de encoding editando solo `docs/`, sustituyendo strings, cambiando SVG a PNG o restaurando outputs antiguos. La correccion permanente debe quedar en el archivo fuente o en el entorno real de render.
 
 ## Mapas y joins geograficos

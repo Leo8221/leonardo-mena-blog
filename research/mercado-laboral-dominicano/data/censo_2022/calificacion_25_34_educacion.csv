@@ -1,0 +1,13 @@
+﻿sexo,educacion,grupo_calificacion_ocupacion,personas,pct_dentro_sexo_educacion
+Hombre,No superior,Media calificacion,213714,78.88
+Hombre,No superior,Ocupaciones elementales,32491,11.99
+Hombre,No superior,Alta calificacion,24729,9.13
+Hombre,Superior,Media calificacion,51981,51.66
+Hombre,Superior,Alta calificacion,44766,44.49
+Hombre,Superior,Ocupaciones elementales,3867,3.84
+Mujer,No superior,Media calificacion,117433,70.42
+Mujer,No superior,Ocupaciones elementales,38681,23.19
+Mujer,No superior,Alta calificacion,10654,6.39
+Mujer,Superior,Media calificacion,84596,50.14
+Mujer,Superior,Alta calificacion,76764,45.50
+Mujer,Superior,Ocupaciones elementales,7345,4.35

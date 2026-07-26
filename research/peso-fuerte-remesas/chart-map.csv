@@ -1,0 +1,4 @@
+id,pregunta,familia,fuente,advertencia
+01_remesas_tipo_cambio_poder_compra,¿Qué ocurre con una remesa cuando cambia el peso?,Índice temporal,BCRD,Deflactor: IPC nacional
+02_poder_compra_remesas,¿Cuánto poder de compra queda?,Línea con referencia,BCRD,No estima la canasta de cada hogar
+03_mapa_calor_poder_compra,Mapa mensual del poder de compra,Mapa de calor,BCRD,"Índice relativo, no canasta individual"

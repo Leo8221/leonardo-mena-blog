@@ -8,6 +8,10 @@ observatorio_cache/
 .codex-remote-attachments/
 atlas/data/raw/
 atlas/data/source-run.json
+/.quarto-localappdata/
+/.quarto-appdata/
+/.tmp-videojuegos-preview/
+/.r-library/
 
 # Local unfinished drafts. Remove these lines when the posts are ready to publish.
 posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/

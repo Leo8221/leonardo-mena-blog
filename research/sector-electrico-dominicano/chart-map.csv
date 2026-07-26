@@ -1,0 +1,6 @@
+id,pregunta,familia,fuente,advertencia
+01_matriz_generacion_2024,¿De dónde sale la energía?,Barras ordenadas,MEM,Cifras acumuladas 2024
+02_perdidas_recuperacion_cobranza,¿Qué parte de la energía se pierde o recupera?,Barras comparables,MEM,Indicadores no son partes aditivas
+03_deficit_y_subsidio_electricidad,¿Cómo llega la ineficiencia al fisco?,Barras monetarias,MEM,Valores acumulados 2024
+05_mapa_calor_indicadores_gestion,¿Cómo cambiaron los indicadores de gestión?,Mapa de calor,MEM,Solo indicadores con comparación explícita en el boletín
+06_mapa_rd_perdidas_electricas_provincia,¿Dónde se concentra la energía perdida?,Mapa de RD,MEM,Corte móvil; EDE superpuestas agregadas por GWh

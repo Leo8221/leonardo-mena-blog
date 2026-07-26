@@ -1,0 +1,34 @@
+---
+title: "Peso fuerte, remesas que rinden menos"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Figuras sobre remesas, tipo de cambio y poder de compra real en República Dominicana."
+categories:
+  - "Remesas"
+  - "Tipo de cambio"
+  - "La República en un gráfico"
+draft: true
+format:
+  html:
+    toc: false
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+```{=html}
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/01_remesas_tipo_cambio_poder_compra.svg" alt="Índices de remesas en dólares, pesos por cien dólares y poder de compra real desde 2010."><figcaption>Remesas, tipo de cambio y poder de compra real.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/02_poder_compra_remesas.svg" alt="Poder de compra real de los pesos recibidos por cada cien dólares."><figcaption>Poder de compra real de US$100 recibidos.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/03_mapa_calor_poder_compra.svg" alt="Mapa de calor mensual del poder de compra relativo de cien dólares por año."><figcaption>Poder de compra por mes y año.</figcaption></figure>
+```
+
+## Fuentes y materiales reproducibles
+
+- [Constructor de figuras](../../../research/build-five-post-graphics.R)
+- [Datos procesados](../../../research/peso-fuerte-remesas/data/procesados/)
+- [Mapa de figuras](../../../research/peso-fuerte-remesas/chart-map.csv)
+- [Estadísticas tradicionales del BCRD](https://www.bancentral.gov.do/a/d/3866-estadisticas-tradicionales)
+- [Mercado cambiario del BCRD](https://bancentral.gov.do/a/CustomView/2538-mercado-cambiario)
+

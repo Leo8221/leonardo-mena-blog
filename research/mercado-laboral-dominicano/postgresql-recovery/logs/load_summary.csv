@@ -1,0 +1,7 @@
+﻿year,db,table,columns,rows,source_file
+2010,censo_2010,hogares,54,2671979,"D:\datos_one_censos\2010\CENSO2010RD-HOGARES.csv"
+2010,censo_2010,personas,78,9445281,"D:\datos_one_censos\2010\CENSO2010RD-PERSONAS.csv"
+2010,censo_2010,viviendas,77,2662800,"D:\datos_one_censos\2010\CENSO2010RD-VIVIENDA-COMUNIDAD.csv"
+2002,censo_2002,hogares,43,2194162,"D:\datos_one_censos\2002\CENSO2002RD-HOGARES.csv"
+2002,censo_2002,personas,84,8562541,"D:\datos_one_censos\2002\CENSO2002RD-PERSONAS.csv"
+2002,censo_2002,viviendas,32,2446930,"D:\datos_one_censos\2002\CENSO2002RD-VIVIENDAS.csv"

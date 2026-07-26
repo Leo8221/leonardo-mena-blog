@@ -1,0 +1,2 @@
+"fuente","n_muestra_parejas","parejas_expandidas","observado_pct","esperado_nacional_pct","esperado_condicionado_pct","kappa_nacional","kappa_condicionado","probabilidad_ajustada_logit_pct","n_modelo_logit","cobertura_modelo_logit_pct","cobertura_educativa_pct","modelo_logit_convergio","fecha_tecnica"
+"ENHOGAR 2024",3622,1348328.04840678,58.662694690044,33.3198473437251,41.9307681728593,0.380065826737935,0.288137555650674,59.2501026597169,2991,82.5786858089453,90.845247052922,TRUE,"2026-07-25"

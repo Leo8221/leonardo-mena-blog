@@ -1,0 +1,13 @@
+sexo,educacion,grupo_calificacion_ocupacion,personas,pct_dentro_sexo_educacion,calificacion,grupo,etiqueta
+Hombre,No superior,Media calificacion,213714,78.88,Calificación media,Hombres · No superior,78.9%
+Hombre,No superior,Ocupaciones elementales,32491,11.99,Ocupaciones elementales,Hombres · No superior,12.0%
+Hombre,No superior,Alta calificacion,24729,9.13,Alta calificación,Hombres · No superior,9.1%
+Hombre,Superior,Media calificacion,51981,51.66,Calificación media,Hombres · Superior,51.7%
+Hombre,Superior,Alta calificacion,44766,44.49,Alta calificación,Hombres · Superior,44.5%
+Hombre,Superior,Ocupaciones elementales,3867,3.84,Ocupaciones elementales,Hombres · Superior,3.8%
+Mujer,No superior,Media calificacion,117433,70.42,Calificación media,Mujeres · No superior,70.4%
+Mujer,No superior,Ocupaciones elementales,38681,23.19,Ocupaciones elementales,Mujeres · No superior,23.2%
+Mujer,No superior,Alta calificacion,10654,6.39,Alta calificación,Mujeres · No superior,6.4%
+Mujer,Superior,Media calificacion,84596,50.14,Calificación media,Mujeres · Superior,50.1%
+Mujer,Superior,Alta calificacion,76764,45.5,Alta calificación,Mujeres · Superior,45.5%
+Mujer,Superior,Ocupaciones elementales,7345,4.35,Ocupaciones elementales,Mujeres · Superior,4.3%

@@ -1,0 +1,36 @@
+---
+title: "Por qué el pollo explica más la inflación que el dólar"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Descomposición visual de la inflación dominicana, usando el pollo como caso instrumental."
+categories:
+  - "Inflación"
+  - "Precios"
+  - "La República en un gráfico"
+draft: true
+format:
+  html:
+    toc: false
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+```{=html}
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/01_descomposicion_ipc.svg" alt="Descomposición mensual de la inflación dominicana por componentes del IPC desde enero de 2025 hasta junio de 2026."><figcaption>La inflación mensual es la suma ponderada de muchos componentes.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/02_heatmap_contribuciones_ipc.svg" alt="Mapa de calor de las contribuciones mensuales de los doce grupos del IPC dominicano."><figcaption>Los motores de la inflación cambian de un mes a otro.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/03_caso_instrumental_pollo.svg" alt="Contribución mensual del pollo fresco al IPC comparada con la inflación mensual total."><figcaption>El pollo muestra la diferencia entre variar mucho y tener una gran incidencia.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/04_general_vs_subyacente.svg" alt="Inflación mensual general frente a inflación subyacente en República Dominicana."><figcaption>La inflación general y la subyacente no siempre se mueven juntas.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/05_puente_junio_2026.svg" alt="Puente de incidencias aproximadas por grupo que cierra en la inflación oficial de junio de 2026."><figcaption>El dato oficial de junio se puede leer como una suma de incidencias.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/06_dolar_vs_transables.svg" alt="Variación interanual de bienes transables frente al tipo de cambio del dólar."><figcaption>El dólar transmite presión a los bienes transables, pero no explica todo el IPC.</figcaption></figure>
+```
+
+## Fuentes y materiales reproducibles
+
+- [Constructor de figuras](../../../research/build-inflation-graphics.R)
+- [Datos procesados](../../../research/pollo-inflacion/data/procesados/)
+- [Mapa de figuras](../../../research/pollo-inflacion/chart-map.csv)
+- [Informe IPC de junio de 2026 del BCRD](https://www.bancentral.gov.do/a/d/6611)
+- [Consulta del IPC del BCRD](https://www.bancentral.gov.do/a/ipc-consulta)

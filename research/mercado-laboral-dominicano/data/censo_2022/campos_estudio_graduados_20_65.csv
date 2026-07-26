@@ -1,0 +1,24 @@
+﻿carrera,sexo,p45_codes,n,total_validos,total_top11,pct_sobre_validos,pct_normalizado_top11,pct_ref_borrador,dif_pp_vs_borrador_norm_top11
+Educacion/Docencia,Hombre,111-114,29524,249962,214588,11.81,13.76,12.9,0.86
+Educacion/Docencia,Mujer,111-114,120729,473196,417766,25.51,28.90,26.9,2.00
+Administracion,Hombre,411-413,49347,249962,214588,19.74,23.00,21.5,1.50
+Administracion,Mujer,411-413,102484,473196,417766,21.66,24.53,22.8,1.73
+Derecho,Hombre,421,28083,249962,214588,11.23,13.09,12.3,0.79
+Derecho,Mujer,421,34628,473196,417766,7.32,8.29,7.7,0.59
+Psicologia/Social,Hombre,313,4375,249962,214588,1.75,2.04,2.0,0.04
+Psicologia/Social,Mujer,313,41072,473196,417766,8.68,9.83,9.2,0.63
+Ingenieria,Hombre,"713-716,719",25295,249962,214588,10.12,11.79,11.3,0.49
+Ingenieria,Mujer,"713-716,719",6672,473196,417766,1.41,1.60,1.6,0.00
+Informatica/TIC,Hombre,613,22193,249962,214588,8.88,10.34,10.1,0.24
+Informatica/TIC,Mujer,613,10014,473196,417766,2.12,2.40,2.3,0.10
+Arquitectura/Civil,Hombre,731-732,17868,249962,214588,7.15,8.33,7.8,0.53
+Arquitectura/Civil,Mujer,731-732,9733,473196,417766,2.06,2.33,2.2,0.13
+Negocios/Marketing,Hombre,414,16518,249962,214588,6.61,7.70,7.3,0.40
+Negocios/Marketing,Mujer,414,29257,473196,417766,6.18,7.00,7.3,-0.30
+Medicina,Hombre,912,10822,249962,214588,4.33,5.04,4.7,0.34
+Medicina,Mujer,912,31148,473196,417766,6.58,7.46,6.9,0.56
+Enfermeria/Salud,Hombre,913-916,2366,249962,214588,0.95,1.10,1.0,0.10
+Enfermeria/Salud,Mujer,913-916,29962,473196,417766,6.33,7.17,6.7,0.47
+Ciencias Agricolas,Hombre,"811-812,821,831,841",8197,249962,214588,3.28,3.82,3.6,0.22
+Ciencias Agricolas,Mujer,"811-812,821,831,841",2067,473196,417766,0.44,0.49,0.5,-0.01
+

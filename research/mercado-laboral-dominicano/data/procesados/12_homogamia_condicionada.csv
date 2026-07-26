@@ -1,0 +1,7 @@
+"orden","indicador_id","indicador","familia","n","observado_n","observado_pct","esperado_nacional_pct","esperado_region_pct","esperado_principal_pct","kappa_nacional","kappa_region","kappa_principal","cobertura_pct","categorias_jefatura","categorias_pareja","n_estratos_principal","mediana_n_estrato_principal","pct_filas_estratos_menor_10_principal","parejas_base","errores_qa","advertencias_qa","fecha_tecnica"
+1,"grupo_edad_10","Grupo de edad","Demografia",1731814,816554,47.1502,18.169,19.0976,19.1477,0.3542,0.3467,0.3463,100,7,7,222,2091,0.0133,1731814,0,1,"2026-07-18"
+4,"nivel_educativo","Nivel educativo","Educacion",1538050,853532,55.4944,31.2154,37.2705,37.8335,0.353,0.2905,0.2841,88.8115,6,6,5117,45,0.3429,1731814,0,1,"2026-07-18"
+22,"autoidentificacion","Autoidentificacion etnorracial","Identidad",1702268,788830,46.3399,23.8304,25.4162,25.9074,0.2955,0.2805,0.2758,98.2939,8,8,5220,53,0.3048,1731814,0,1,"2026-07-18"
+9,"dificultad_funcional","Alguna dificultad funcional","Salud",1731385,1324958,76.5259,64.3377,68.6137,68.701,0.3418,0.2521,0.25,99.9752,2,2,5251,53,0.3035,1731814,0,1,"2026-07-18"
+21,"categoria_ocupacional","Categoria ocupacional","Trabajo",957284,608868,63.6037,54.9516,54.5794,54.6838,0.1921,0.1987,0.1968,55.2764,5,5,4669,29,0.588,1731814,0,1,"2026-07-18"
+6,"campo_estudio","Campo amplio de estudio","Educacion",172429,55225,32.0277,21.4162,22.4195,22.8848,0.135,0.1238,0.1186,9.9566,11,11,3031,8,3.29,1731814,0,1,"2026-07-18"

@@ -1,0 +1,1334 @@
+location,level,year,total,male,female
+Total país,pais,2000,8397802.0,4215984.0,4181818.0
+Total país,pais,2001,8512996.0,4272872.0,4240124.0
+Total país,pais,2002,8627509.0,4329381.0,4298128.0
+Total país,pais,2003,8745084.0,4387444.0,4357640.0
+Total país,pais,2004,8857648.0,4442944.0,4414704.0
+Total país,pais,2005,8968144.0,4497384.0,4470760.0
+Total país,pais,2006,9071458.0,4547998.0,4523460.0
+Total país,pais,2007,9174058.0,4598212.0,4575846.0
+Total país,pais,2008,9279602.0,4649902.0,4629700.0
+Total país,pais,2009,9380152.0,4699042.0,4681110.0
+Total país,pais,2010,9478612.0,4747103.0,4731509.0
+Total país,pais,2011,9580139.0,4796628.0,4783511.0
+Total país,pais,2012,9680963.0,4845755.0,4835208.0
+Total país,pais,2013,9784680.0,4896319.0,4888361.0
+Total país,pais,2014,9883486.0,4944386.0,4939100.0
+Total país,pais,2015,9980243.0,4991398.0,4988845.0
+Total país,pais,2016,10075045.0,5037329.0,5037716.0
+Total país,pais,2017,10169172.0,5082876.0,5086296.0
+Total país,pais,2018,10266149.0,5129824.0,5136325.0
+Total país,pais,2019,10358320.0,5174343.0,5183977.0
+Total país,pais,2020,10448499.0,5217831.0,5230668.0
+Total país,pais,2021,10535535.0,5259642.0,5275893.0
+Total país,pais,2022,10621938.0,5301077.0,5320861.0
+Total país,pais,2023,10711155.0,5343879.0,5367276.0
+Total país,pais,2024,10795677.0,5384319.0,5411358.0
+Total país,pais,2025,10878267.0,5423759.0,5454508.0
+Total país,pais,2026,10954360.0,5459841.0,5494519.0
+Total país,pais,2027,11029816.0,5495541.0,5534275.0
+Total país,pais,2028,11108039.0,5532563.0,5575476.0
+Total país,pais,2029,11181613.0,5567261.0,5614352.0
+Total país,pais,2030,11253284.0,5600973.0,5652311.0
+Región Metropolitana,region,2000,2678097.0,1302920.9999999998,1375176.0
+Región Metropolitana,region,2001,2745420.0,1335499.0,1409921.0
+Región Metropolitana,region,2002,2813736.0,1368529.0,1445207.0
+Región Metropolitana,region,2003,2881867.0,1401492.0,1480375.0
+Región Metropolitana,region,2004,2948343.0,1433637.0,1514706.0
+Región Metropolitana,region,2005,3012855.0,1464832.0,1548023.0
+Región Metropolitana,region,2006,3080965.0,1497612.0,1583353.0
+Región Metropolitana,region,2007,3148864.0,1530262.0,1618602.0
+Región Metropolitana,region,2008,3217778.0,1563418.0,1654360.0
+Región Metropolitana,region,2009,3284950.0,1595724.0,1689226.0
+Región Metropolitana,region,2010,3351393.0,1627640.0,1723753.0
+Región Metropolitana,region,2011,3413273.0,1657522.0,1755751.0
+Región Metropolitana,region,2012,3474896.0,1687273.0,1787623.0
+Región Metropolitana,region,2013,3537578.0,1717525.0,1820053.0
+Región Metropolitana,region,2014,3598513.0,1746925.0,1851588.0
+Región Metropolitana,region,2015,3658648.0,1775918.0,1882730.0
+Región Metropolitana,region,2016,3717178.0,1804234.0,1912944.0
+Región Metropolitana,region,2017,3775455.0,1832404.0,1943051.0
+Región Metropolitana,region,2018,3834835.0,1861105.0,1973730.0
+Región Metropolitana,region,2019,3892386.0,1888904.0,2003482.0
+Región Metropolitana,region,2020,3949189.0,1916333.0,2032856.0
+Región Metropolitana,region,2021,4004906.0,1943241.0,2061665.0
+Región Metropolitana,region,2022,4060388.0,1970017.0,2090371.0
+Región Metropolitana,region,2023,4116946.0,1997291.0,2119655.0
+Región Metropolitana,region,2024,4171715.0,2023695.0,2148020.0
+Región Metropolitana,region,2025,4225716.0,2049711.0,2176005.0
+Región Metropolitana,region,2026,4277696.0,2074714.0,2202982.0
+Región Metropolitana,region,2027,4329427.0,2099589.0,2229838.0
+Región Metropolitana,region,2028,4382276.0,2124966.0,2257310.0
+Región Metropolitana,region,2029,4433280.0,2149458.0,2283822.0
+Región Metropolitana,region,2030,4483519.0,2173557.0,2309962.0
+Distrito Nacional,provincia,2000,895592.0,425727.0,469865.0
+Distrito Nacional,provincia,2001,904140.0,429930.0,474210.0
+Distrito Nacional,provincia,2002,912825.0,434201.0,478624.0
+Distrito Nacional,provincia,2003,921624.0,438522.0,483102.0
+Distrito Nacional,provincia,2004,929891.0,442585.0,487306.0
+Distrito Nacional,provincia,2005,937747.0,446440.0,491307.0
+Distrito Nacional,provincia,2006,944029.0,449555.0,494474.0
+Distrito Nacional,provincia,2007,950237.0,452631.0,497606.0
+Distrito Nacional,provincia,2008,956751.0,455851.0,500900.0
+Distrito Nacional,provincia,2009,962748.0,458824.0,503924.0
+Distrito Nacional,provincia,2010,968532.0,461688.0,506844.0
+Distrito Nacional,provincia,2011,976548.0,465374.0,511174.0
+Distrito Nacional,provincia,2012,984490.0,469017.0,515473.0
+Distrito Nacional,provincia,2013,992730.0,472805.0,519925.0
+Distrito Nacional,provincia,2014,1000464.0,476344.0,524120.0
+Distrito Nacional,provincia,2015,1007997.0,479788.0,528209.0
+Distrito Nacional,provincia,2016,1015150.0,483081.0,532069.0
+Distrito Nacional,provincia,2017,1022236.0,486340.0,535896.0
+Distrito Nacional,provincia,2018,1029607.0,489728.0,539879.0
+Distrito Nacional,provincia,2019,1036494.0,492885.0,543609.0
+Distrito Nacional,provincia,2020,1043186.0,495947.0,547239.0
+Distrito Nacional,provincia,2021,1049567.0,498868.0,550699.0
+Distrito Nacional,provincia,2022,1055879.0,501750.0,554129.0
+Distrito Nacional,provincia,2023,1062476.0,504767.0,557709.0
+Distrito Nacional,provincia,2024,1068607.0,507557.0,561050.0
+Distrito Nacional,provincia,2025,1074546.0,510253.0,564293.0
+Distrito Nacional,provincia,2026,1080010.0,512728.0,567282.0
+Distrito Nacional,provincia,2027,1085413.0,515167.0,570246.0
+Distrito Nacional,provincia,2028,1091084.0,517727.0,573357.0
+Distrito Nacional,provincia,2029,1096298.0,520070.0,576228.0
+Distrito Nacional,provincia,2030,1101332.0,522325.0,579007.0
+Santo Domingo,provincia,2000,1782504.9999999998,877193.9999999998,905311.0
+Santo Domingo,provincia,2001,1841280.0,905569.0,935711.0
+Santo Domingo,provincia,2002,1900911.0,934328.0,966583.0
+Santo Domingo,provincia,2003,1960243.0,962970.0,997273.0
+Santo Domingo,provincia,2004,2018452.0,991052.0,1027400.0
+Santo Domingo,provincia,2005,2075108.0,1018392.0,1056716.0
+Santo Domingo,provincia,2006,2136936.0,1048057.0,1088879.0
+Santo Domingo,provincia,2007,2198627.0,1077631.0,1120996.0
+Santo Domingo,provincia,2008,2261027.0,1107567.0,1153460.0
+Santo Domingo,provincia,2009,2322202.0,1136900.0,1185302.0
+Santo Domingo,provincia,2010,2382861.0,1165952.0,1216909.0
+Santo Domingo,provincia,2011,2436725.0,1192148.0,1244577.0
+Santo Domingo,provincia,2012,2490406.0,1218256.0,1272150.0
+Santo Domingo,provincia,2013,2544848.0,1244720.0,1300128.0
+Santo Domingo,provincia,2014,2598049.0,1270581.0,1327468.0
+Santo Domingo,provincia,2015,2650651.0,1296130.0,1354521.0
+Santo Domingo,provincia,2016,2702028.0,1321153.0,1380875.0
+Santo Domingo,provincia,2017,2753219.0,1346064.0,1407155.0
+Santo Domingo,provincia,2018,2805228.0,1371377.0,1433851.0
+Santo Domingo,provincia,2019,2855892.0,1396019.0,1459873.0
+Santo Domingo,provincia,2020,2906003.0,1420386.0,1485617.0
+Santo Domingo,provincia,2021,2955339.0,1444373.0,1510966.0
+Santo Domingo,provincia,2022,3004509.0,1468267.0,1536242.0
+Santo Domingo,provincia,2023,3054470.0,1492524.0,1561946.0
+Santo Domingo,provincia,2024,3103108.0,1516138.0,1586970.0
+Santo Domingo,provincia,2025,3151170.0,1539458.0,1611712.0
+Santo Domingo,provincia,2026,3197686.0,1561986.0,1635700.0
+Santo Domingo,provincia,2027,3244014.0,1584422.0,1659592.0
+Santo Domingo,provincia,2028,3291192.0,1607239.0,1683953.0
+Santo Domingo,provincia,2029,3336982.0,1629388.0,1707594.0
+Santo Domingo,provincia,2030,3382187.0,1651232.0,1730955.0
+Región Cibao Norte,region,2000,1418209.0,711084.0,707125.0
+Región Cibao Norte,region,2001,1430635.0,717422.0,713213.0
+Región Cibao Norte,region,2002,1442537.0,723499.0,719038.0
+Región Cibao Norte,region,2003,1455357.0,730034.0,725323.0
+Región Cibao Norte,region,2004,1467336.0,736134.0,731202.0
+Región Cibao Norte,region,2005,1479394.0,742267.0,737127.0
+Región Cibao Norte,region,2006,1488180.0,746755.0,741425.0
+Región Cibao Norte,region,2007,1496842.0,751171.0,745671.0
+Región Cibao Norte,region,2008,1505982.0,755824.0,750158.0
+Región Cibao Norte,region,2009,1514308.0,760068.0,754240.0
+Región Cibao Norte,region,2010,1522302.0,764136.0,758166.0
+Región Cibao Norte,region,2011,1532585.0,768768.0,763817.0
+Región Cibao Norte,region,2012,1542762.0,773343.0,769419.0
+Región Cibao Norte,region,2013,1553392.0,778141.0,775251.0
+Región Cibao Norte,region,2014,1563236.0,782536.0,780700.0
+Región Cibao Norte,region,2015,1572773.0,786775.0,785998.0
+Región Cibao Norte,region,2016,1582048.0,790899.0,791149.0
+Región Cibao Norte,region,2017,1591210.0,794963.0,796247.0
+Región Cibao Norte,region,2018,1600820.0,799242.0,801578.0
+Región Cibao Norte,region,2019,1609682.0,803147.0,806535.0
+Región Cibao Norte,region,2020,1618235.0,806891.0,811344.0
+Región Cibao Norte,region,2021,1626456.0,810460.0,815996.0
+Región Cibao Norte,region,2022,1634577.0,813969.0,820608.0
+Región Cibao Norte,region,2023,1643125.0,817685.0,825440.0
+Región Cibao Norte,region,2024,1650961.0,821043.0,829918.0
+Región Cibao Norte,region,2025,1658496.0,824248.0,834248.0
+Región Cibao Norte,region,2026,1665135.0,827006.0,838129.0
+Región Cibao Norte,region,2027,1671689.0,829706.0,841983.0
+Región Cibao Norte,region,2028,1678643.0,832601.0,846042.0
+Región Cibao Norte,region,2029,1684900.0,835147.0,849753.0
+Región Cibao Norte,region,2030,1690875.0,837547.0,853328.0
+Espaillat,provincia,2000,220780.0,112126.0,108654.0
+Espaillat,provincia,2001,222302.0,112957.0,109345.0
+Espaillat,provincia,2002,223737.0,113743.0,109994.0
+Espaillat,provincia,2003,225323.0,114608.0,110715.0
+Espaillat,provincia,2004,226774.0,115399.0,111375.0
+Espaillat,provincia,2005,228244.0,116200.0,112044.0
+Espaillat,provincia,2006,229176.0,116728.0,112448.0
+Espaillat,provincia,2007,230086.0,117245.0,112841.0
+Espaillat,provincia,2008,231078.0,117804.0,113274.0
+Espaillat,provincia,2009,231937.0,118292.0,113645.0
+Espaillat,provincia,2010,232747.0,118756.0,113991.0
+Espaillat,provincia,2011,233518.0,119129.0,114389.0
+Espaillat,provincia,2012,234277.0,119496.0,114781.0
+Espaillat,provincia,2013,235103.0,119896.0,115207.0
+Espaillat,provincia,2014,235805.0,120231.0,115574.0
+Espaillat,provincia,2015,236467.0,120545.0,115922.0
+Espaillat,provincia,2016,237169.0,120869.0,116300.0
+Espaillat,provincia,2017,237855.0,121184.0,116671.0
+Espaillat,provincia,2018,238608.0,121530.0,117078.0
+Espaillat,provincia,2019,239252.0,121823.0,117429.0
+Espaillat,provincia,2020,239845.0,122089.0,117756.0
+Espaillat,provincia,2021,240428.0,122343.0,118085.0
+Espaillat,provincia,2022,241001.0,122588.0,118413.0
+Espaillat,provincia,2023,241635.0,122864.0,118771.0
+Espaillat,provincia,2024,242158.0,123083.0,119075.0
+Espaillat,provincia,2025,242644.0,123283.0,119361.0
+Espaillat,provincia,2026,242993.0,123410.0,119583.0
+Espaillat,provincia,2027,243336.0,123532.0,119804.0
+Espaillat,provincia,2028,243731.0,123681.0,120050.0
+Espaillat,provincia,2029,244027.0,123777.0,120250.0
+Espaillat,provincia,2030,244280.0,123852.0,120428.0
+Puerto Plata,provincia,2000,306709.0,155346.0,151363.0
+Puerto Plata,provincia,2001,308762.0,156490.0,152272.0
+Puerto Plata,provincia,2002,310698.0,157574.0,153124.0
+Puerto Plata,provincia,2003,312835.0,158759.0,154076.0
+Puerto Plata,provincia,2004,314791.0,159849.0,154942.0
+Puerto Plata,provincia,2005,316776.0,160953.0,155823.0
+Puerto Plata,provincia,2006,318008.0,161679.0,156329.0
+Puerto Plata,provincia,2007,319216.0,162389.0,156827.0
+Puerto Plata,provincia,2008,320522.0,163149.0,157373.0
+Puerto Plata,provincia,2009,321658.0,163823.0,157835.0
+Puerto Plata,provincia,2010,322722.0,164458.0,158264.0
+Puerto Plata,provincia,2011,323919.0,164991.0,158928.0
+Puerto Plata,provincia,2012,325089.0,165508.0,159581.0
+Puerto Plata,provincia,2013,326356.0,166075.0,160281.0
+Puerto Plata,provincia,2014,327459.0,166557.0,160902.0
+Puerto Plata,provincia,2015,328498.0,167004.0,161494.0
+Puerto Plata,provincia,2016,329482.0,167423.0,162059.0
+Puerto Plata,provincia,2017,330439.0,167829.0,162610.0
+Puerto Plata,provincia,2018,331491.0,168281.0,163210.0
+Puerto Plata,provincia,2019,332386.0,168653.0,163733.0
+Puerto Plata,provincia,2020,333221.0,168992.0,164229.0
+Puerto Plata,provincia,2021,333940.0,169266.0,164674.0
+Puerto Plata,provincia,2022,334639.0,169528.0,165111.0
+Puerto Plata,provincia,2023,335424.0,169832.0,165592.0
+Puerto Plata,provincia,2024,336066.0,170063.0,166003.0
+Puerto Plata,provincia,2025,336645.0,170262.0,166383.0
+Puerto Plata,provincia,2026,337006.0,170348.0,166658.0
+Puerto Plata,provincia,2027,337348.0,170423.0,166925.0
+Puerto Plata,provincia,2028,337770.0,170538.0,167232.0
+Puerto Plata,provincia,2029,338053.0,170581.0,167472.0
+Puerto Plata,provincia,2030,338282.0,170596.0,167686.0
+Santiago,provincia,2000,890720.0,443612.0,447108.0
+Santiago,provincia,2001,899571.0,447975.0,451596.0
+Santiago,provincia,2002,908102.0,452182.0,455920.0
+Santiago,provincia,2003,917199.0,456667.0,460532.0
+Santiago,provincia,2004,925771.0,460886.0,464885.0
+Santiago,provincia,2005,934374.0,465114.0,469260.0
+Santiago,provincia,2006,940996.0,468348.0,472648.0
+Santiago,provincia,2007,947540.0,471537.0,476003.0
+Santiago,provincia,2008,954382.0,474871.0,479511.0
+Santiago,provincia,2009,960713.0,477953.0,482760.0
+Santiago,provincia,2010,966833.0,480922.0,485911.0
+Santiago,provincia,2011,975148.0,484648.0,490500.0
+Santiago,provincia,2012,983396.0,488339.0,495057.0
+Santiago,provincia,2013,991933.0,492170.0,499763.0
+Santiago,provincia,2014,999972.0,495748.0,504224.0
+Santiago,provincia,2015,1007808.0,499226.0,508582.0
+Santiago,provincia,2016,1015397.0,502607.0,512790.0
+Santiago,provincia,2017,1022916.0,505950.0,516966.0
+Santiago,provincia,2018,1030721.0,509431.0,521290.0
+Santiago,provincia,2019,1038044.0,512671.0,525373.0
+Santiago,provincia,2020,1045169.0,515810.0,529359.0
+Santiago,provincia,2021,1052088.0,518851.0,533237.0
+Santiago,provincia,2022,1058937.0,521853.0,537084.0
+Santiago,provincia,2023,1066066.0,524989.0,541077.0
+Santiago,provincia,2024,1072737.0,527897.0,544840.0
+Santiago,provincia,2025,1079207.0,530703.0,548504.0
+Santiago,provincia,2026,1085136.0,533248.0,551888.0
+Santiago,provincia,2027,1091005.0,535751.0,555254.0
+Santiago,provincia,2028,1097142.0,538382.0,558760.0
+Santiago,provincia,2029,1102820.0,540789.0,562031.0
+Santiago,provincia,2030,1108313.0,543099.0,565214.0
+Región Cibao Sur,region,2000,690457.0,353039.0,337418.0
+Región Cibao Sur,region,2001,693776.0,354675.0,339101.0
+Región Cibao Sur,region,2002,696821.0,356174.0,340647.0
+Región Cibao Sur,region,2003,700324.0,357902.0,342422.0
+Región Cibao Sur,region,2004,703421.0,359420.0,344001.0
+Región Cibao Sur,region,2005,706589.0,360971.0,345618.0
+Región Cibao Sur,region,2006,708033.0,361635.0,346398.0
+Región Cibao Sur,region,2007,709406.0,362262.0,347144.0
+Región Cibao Sur,region,2008,711017.0,363012.0,348005.0
+Región Cibao Sur,region,2009,712238.0,363554.0,348684.0
+Región Cibao Sur,region,2010,713303.0,364018.0,349285.0
+Región Cibao Sur,region,2011,715983.0,365322.0,350661.0
+Región Cibao Sur,region,2012,718607.0,366599.0,352008.0
+Región Cibao Sur,region,2013,721444.0,367981.0,353463.0
+Región Cibao Sur,region,2014,723916.0,369172.0,354744.0
+Región Cibao Sur,region,2015,726244.0,370288.0,355956.0
+Región Cibao Sur,region,2016,728586.0,371394.0,357192.0
+Región Cibao Sur,region,2017,730882.0,372468.0,358414.0
+Región Cibao Sur,region,2018,733379.0,373642.0,359737.0
+Región Cibao Sur,region,2019,735534.0,374645.0,360889.0
+Región Cibao Sur,region,2020,737546.0,375571.0,361975.0
+Región Cibao Sur,region,2021,739316.0,376362.0,362954.0
+Región Cibao Sur,region,2022,741046.0,377132.0,363914.0
+Región Cibao Sur,region,2023,742974.0,377998.0,364976.0
+Región Cibao Sur,region,2024,744571.0,378695.0,365876.0
+Región Cibao Sur,region,2025,746040.0,379322.0,366718.0
+Región Cibao Sur,region,2026,746952.0,379665.0,367287.0
+Región Cibao Sur,region,2027,747819.0,379977.0,367842.0
+Región Cibao Sur,region,2028,748873.0,380380.0,368493.0
+Región Cibao Sur,region,2029,749611.0,380623.0,368988.0
+Región Cibao Sur,region,2030,750224.0,380801.0,369423.0
+La Vega,provincia,2000,377746.0,193054.0,184692.0
+La Vega,provincia,2001,380091.0,194240.0,185851.0
+La Vega,provincia,2002,382288.0,195351.0,186937.0
+La Vega,provincia,2003,384734.0,196586.0,188148.0
+La Vega,provincia,2004,386961.0,197709.0,189252.0
+La Vega,provincia,2005,389220.0,198846.0,190374.0
+La Vega,provincia,2006,390546.0,199503.0,191043.0
+La Vega,provincia,2007,391838.0,200141.0,191697.0
+La Vega,provincia,2008,393259.0,200844.0,192415.0
+La Vega,provincia,2009,394461.0,201434.0,193027.0
+La Vega,provincia,2010,395582.0,201981.0,193601.0
+La Vega,provincia,2011,397319.0,202791.0,194528.0
+La Vega,provincia,2012,399024.0,203586.0,195438.0
+La Vega,provincia,2013,400850.0,204437.0,196413.0
+La Vega,provincia,2014,402471.0,205186.0,197285.0
+La Vega,provincia,2015,404013.0,205892.0,198121.0
+La Vega,provincia,2016,405510.0,206570.0,198940.0
+La Vega,provincia,2017,406990.0,207232.0,199758.0
+La Vega,provincia,2018,408579.0,207950.0,200629.0
+La Vega,provincia,2019,409973.0,208570.0,201403.0
+La Vega,provincia,2020,411290.0,209149.0,202141.0
+La Vega,provincia,2021,412469.0,209652.0,202817.0
+La Vega,provincia,2022,413623.0,210142.0,203481.0
+La Vega,provincia,2023,414887.0,210684.0,204203.0
+La Vega,provincia,2024,415965.0,211133.0,204832.0
+La Vega,provincia,2025,416974.0,211544.0,205430.0
+La Vega,provincia,2026,417701.0,211810.0,205891.0
+La Vega,provincia,2027,418404.0,212061.0,206343.0
+La Vega,provincia,2028,419217.0,212367.0,206850.0
+La Vega,provincia,2029,419846.0,212576.0,207270.0
+La Vega,provincia,2030,420408.0,212752.0,207656.0
+Sánchez Ramírez,provincia,2000,148305.0,76665.0,71640.0
+Sánchez Ramírez,provincia,2001,148891.0,76960.0,71931.0
+Sánchez Ramírez,provincia,2002,149415.0,77225.0,72190.0
+Sánchez Ramírez,provincia,2003,150042.0,77542.0,72500.0
+Sánchez Ramírez,provincia,2004,150578.0,77810.0,72768.0
+Sánchez Ramírez,provincia,2005,151133.0,78088.0,73045.0
+Sánchez Ramírez,provincia,2006,151314.0,78172.0,73142.0
+Sánchez Ramírez,provincia,2007,151475.0,78245.0,73230.0
+Sánchez Ramírez,provincia,2008,151689.0,78348.0,73341.0
+Sánchez Ramírez,provincia,2009,151819.0,78403.0,73416.0
+Sánchez Ramírez,provincia,2010,151916.0,78442.0,73474.0
+Sánchez Ramírez,provincia,2011,151958.0,78486.0,73472.0
+Sánchez Ramírez,provincia,2012,151987.0,78522.0,73465.0
+Sánchez Ramírez,provincia,2013,152059.0,78582.0,73477.0
+Sánchez Ramírez,provincia,2014,152057.0,78601.0,73456.0
+Sánchez Ramírez,provincia,2015,152023.0,78603.0,73420.0
+Sánchez Ramírez,provincia,2016,152036.0,78620.0,73416.0
+Sánchez Ramírez,provincia,2017,152027.0,78625.0,73402.0
+Sánchez Ramírez,provincia,2018,152069.0,78656.0,73413.0
+Sánchez Ramírez,provincia,2019,152038.0,78649.0,73389.0
+Sánchez Ramírez,provincia,2020,151978.0,78625.0,73353.0
+Sánchez Ramírez,provincia,2021,151888.0,78585.0,73303.0
+Sánchez Ramírez,provincia,2022,151791.0,78543.0,73248.0
+Sánchez Ramírez,provincia,2023,151733.0,78519.0,73214.0
+Sánchez Ramírez,provincia,2024,151612.0,78461.0,73151.0
+Sánchez Ramírez,provincia,2025,151460.0,78387.0,73073.0
+Sánchez Ramírez,provincia,2026,151193.0,78255.0,72938.0
+Sánchez Ramírez,provincia,2027,150918.0,78115.0,72803.0
+Sánchez Ramírez,provincia,2028,150678.0,77993.0,72685.0
+Sánchez Ramírez,provincia,2029,150381.0,77842.0,72539.0
+Sánchez Ramírez,provincia,2030,150051.0,77674.0,72377.0
+Monseñor Nouel,provincia,2000,164406.0,83320.0,81086.0
+Monseñor Nouel,provincia,2001,164794.0,83475.0,81319.0
+Monseñor Nouel,provincia,2002,165118.0,83598.0,81520.0
+Monseñor Nouel,provincia,2003,165548.0,83774.0,81774.0
+Monseñor Nouel,provincia,2004,165882.0,83901.0,81981.0
+Monseñor Nouel,provincia,2005,166236.0,84037.0,82199.0
+Monseñor Nouel,provincia,2006,166173.0,83960.0,82213.0
+Monseñor Nouel,provincia,2007,166093.0,83876.0,82217.0
+Monseñor Nouel,provincia,2008,166069.0,83820.0,82249.0
+Monseñor Nouel,provincia,2009,165958.0,83717.0,82241.0
+Monseñor Nouel,provincia,2010,165805.0,83595.0,82210.0
+Monseñor Nouel,provincia,2011,166706.0,84045.0,82661.0
+Monseñor Nouel,provincia,2012,167596.0,84491.0,83105.0
+Monseñor Nouel,provincia,2013,168535.0,84962.0,83573.0
+Monseñor Nouel,provincia,2014,169388.0,85385.0,84003.0
+Monseñor Nouel,provincia,2015,170208.0,85793.0,84415.0
+Monseñor Nouel,provincia,2016,171040.0,86204.0,84836.0
+Monseñor Nouel,provincia,2017,171865.0,86611.0,85254.0
+Monseñor Nouel,provincia,2018,172731.0,87036.0,85695.0
+Monseñor Nouel,provincia,2019,173523.0,87426.0,86097.0
+Monseñor Nouel,provincia,2020,174278.0,87797.0,86481.0
+Monseñor Nouel,provincia,2021,174959.0,88125.0,86834.0
+Monseñor Nouel,provincia,2022,175632.0,88447.0,87185.0
+Monseñor Nouel,provincia,2023,176354.0,88795.0,87559.0
+Monseñor Nouel,provincia,2024,176994.0,89101.0,87893.0
+Monseñor Nouel,provincia,2025,177606.0,89391.0,88215.0
+Monseñor Nouel,provincia,2026,178058.0,89600.0,88458.0
+Monseñor Nouel,provincia,2027,178497.0,89801.0,88696.0
+Monseñor Nouel,provincia,2028,178978.0,90020.0,88958.0
+Monseñor Nouel,provincia,2029,179384.0,90205.0,89179.0
+Monseñor Nouel,provincia,2030,179765.0,90375.0,89390.0
+Región Cibao Nordeste,region,2000,596169.0,305163.0,291006.0
+Región Cibao Nordeste,region,2001,600043.0,307081.0,292962.0
+Región Cibao Nordeste,region,2002,603696.0,308885.0,294811.0
+Región Cibao Nordeste,region,2003,607734.0,310887.0,296847.0
+Región Cibao Nordeste,region,2004,611427.0,312710.0,298717.0
+Región Cibao Nordeste,region,2005,615155.0,314543.0,300612.0
+Región Cibao Nordeste,region,2006,617478.0,315654.0,301824.0
+Región Cibao Nordeste,region,2007,619756.0,316744.0,303012.0
+Región Cibao Nordeste,region,2008,622225.0,317923.0,304302.0
+Región Cibao Nordeste,region,2009,624367.0,318935.0,305432.0
+Región Cibao Nordeste,region,2010,626363.0,319874.0,306489.0
+Región Cibao Nordeste,region,2011,628355.0,320886.0,307469.0
+Región Cibao Nordeste,region,2012,630295.0,321869.0,308426.0
+Región Cibao Nordeste,region,2013,632430.0,322952.0,309478.0
+Región Cibao Nordeste,region,2014,634231.0,323862.0,310369.0
+Región Cibao Nordeste,region,2015,635915.0,324707.0,311208.0
+Región Cibao Nordeste,region,2016,637663.0,325561.0,312102.0
+Región Cibao Nordeste,region,2017,639379.0,326395.0,312984.0
+Región Cibao Nordeste,region,2018,641259.0,327312.0,313947.0
+Región Cibao Nordeste,region,2019,642855.0,328085.0,314770.0
+Región Cibao Nordeste,region,2020,644318.0,328783.0,315535.0
+Región Cibao Nordeste,region,2021,645618.0,329381.0,316237.0
+Región Cibao Nordeste,region,2022,646892.0,329963.0,316929.0
+Región Cibao Nordeste,region,2023,648321.0,330621.0,317700.0
+Región Cibao Nordeste,region,2024,649468.0,331135.0,318333.0
+Región Cibao Nordeste,region,2025,650506.0,331591.0,318915.0
+Región Cibao Nordeste,region,2026,651088.0,331805.0,319283.0
+Región Cibao Nordeste,region,2027,651638.0,331989.0,319649.0
+Región Cibao Nordeste,region,2028,652338.0,332260.0,320078.0
+Región Cibao Nordeste,region,2029,652776.0,332387.0,320389.0
+Región Cibao Nordeste,region,2030,653095.0,332456.0,320639.0
+Duarte,provincia,2000,278373.0,141457.0,136916.0
+Duarte,provincia,2001,280011.0,142295.0,137716.0
+Duarte,provincia,2002,281536.0,143075.0,138461.0
+Duarte,provincia,2003,283247.0,143949.0,139298.0
+Duarte,provincia,2004,284800.0,144740.0,140060.0
+Duarte,provincia,2005,286373.0,145541.0,140832.0
+Duarte,provincia,2006,287254.0,145989.0,141265.0
+Duarte,provincia,2007,288109.0,146422.0,141687.0
+Duarte,provincia,2008,289061.0,146904.0,142157.0
+Duarte,provincia,2009,289856.0,147305.0,142551.0
+Duarte,provincia,2010,290586.0,147674.0,142912.0
+Duarte,provincia,2011,291487.0,148115.0,143372.0
+Duarte,provincia,2012,292365.0,148542.0,143823.0
+Duarte,provincia,2013,293330.0,149015.0,144315.0
+Duarte,provincia,2014,294147.0,149409.0,144738.0
+Duarte,provincia,2015,294906.0,149774.0,145132.0
+Duarte,provincia,2016,295741.0,150166.0,145575.0
+Duarte,provincia,2017,296558.0,150549.0,146009.0
+Duarte,provincia,2018,297452.0,150969.0,146483.0
+Duarte,provincia,2019,298209.0,151319.0,146890.0
+Duarte,provincia,2020,298913.0,151642.0,147271.0
+Duarte,provincia,2021,299583.0,151940.0,147643.0
+Duarte,provincia,2022,300241.0,152230.0,148011.0
+Duarte,provincia,2023,300976.0,152557.0,148419.0
+Duarte,provincia,2024,301576.0,152816.0,148760.0
+Duarte,provincia,2025,302126.0,153048.0,149078.0
+Duarte,provincia,2026,302476.0,153174.0,149302.0
+Duarte,provincia,2027,302813.0,153289.0,149524.0
+Duarte,provincia,2028,303224.0,153443.0,149781.0
+Duarte,provincia,2029,303507.0,153529.0,149978.0
+Duarte,provincia,2030,303736.0,153589.0,150147.0
+María Trinidad Sánchez,provincia,2000,133158.0,69388.0,63770.0
+María Trinidad Sánchez,provincia,2001,134175.0,69815.0,64360.0
+María Trinidad Sánchez,provincia,2002,135142.0,70216.0,64926.0
+María Trinidad Sánchez,provincia,2003,136198.0,70664.0,65534.0
+María Trinidad Sánchez,provincia,2004,137180.0,71072.0,66108.0
+María Trinidad Sánchez,provincia,2005,138165.0,71482.0,66683.0
+María Trinidad Sánchez,provincia,2006,138833.0,71720.0,67113.0
+María Trinidad Sánchez,provincia,2007,139491.0,71954.0,67537.0
+María Trinidad Sánchez,provincia,2008,140194.0,72209.0,67985.0
+María Trinidad Sánchez,provincia,2009,140820.0,72423.0,68397.0
+María Trinidad Sánchez,provincia,2010,141414.0,72622.0,68792.0
+María Trinidad Sánchez,provincia,2011,141425.0,72623.0,68802.0
+María Trinidad Sánchez,provincia,2012,141421.0,72614.0,68807.0
+María Trinidad Sánchez,provincia,2013,141465.0,72630.0,68835.0
+María Trinidad Sánchez,provincia,2014,141432.0,72608.0,68824.0
+María Trinidad Sánchez,provincia,2015,141372.0,72570.0,68802.0
+María Trinidad Sánchez,provincia,2016,141331.0,72538.0,68793.0
+María Trinidad Sánchez,provincia,2017,141284.0,72502.0,68782.0
+María Trinidad Sánchez,provincia,2018,141275.0,72488.0,68787.0
+María Trinidad Sánchez,provincia,2019,141200.0,72437.0,68763.0
+María Trinidad Sánchez,provincia,2020,141097.0,72371.0,68726.0
+María Trinidad Sánchez,provincia,2021,140954.0,72283.0,68671.0
+María Trinidad Sánchez,provincia,2022,140803.0,72190.0,68613.0
+María Trinidad Sánchez,provincia,2023,140685.0,72113.0,68572.0
+María Trinidad Sánchez,provincia,2024,140506.0,72007.0,68499.0
+María Trinidad Sánchez,provincia,2025,140304.0,71887.0,68417.0
+María Trinidad Sánchez,provincia,2026,139989.0,71710.0,68279.0
+María Trinidad Sánchez,provincia,2027,139667.0,71528.0,68139.0
+María Trinidad Sánchez,provincia,2028,139377.0,71366.0,68011.0
+María Trinidad Sánchez,provincia,2029,139032.0,71173.0,67859.0
+María Trinidad Sánchez,provincia,2030,138662.0,70965.0,67697.0
+Hermanas Mirabal,provincia,2000,94515.0,48119.0,46396.0
+Hermanas Mirabal,provincia,2001,94452.0,48086.0,46366.0
+Hermanas Mirabal,provincia,2002,94358.0,48037.0,46321.0
+Hermanas Mirabal,provincia,2003,94323.0,48020.0,46303.0
+Hermanas Mirabal,provincia,2004,94229.0,47972.0,46257.0
+Hermanas Mirabal,provincia,2005,94154.0,47930.0,46224.0
+Hermanas Mirabal,provincia,2006,93839.0,47768.0,46071.0
+Hermanas Mirabal,provincia,2007,93520.0,47603.0,45917.0
+Hermanas Mirabal,provincia,2008,93220.0,47446.0,45774.0
+Hermanas Mirabal,provincia,2009,92882.0,47272.0,45610.0
+Hermanas Mirabal,provincia,2010,92517.0,47083.0,45434.0
+Hermanas Mirabal,provincia,2011,92503.0,47078.0,45425.0
+Hermanas Mirabal,provincia,2012,92485.0,47073.0,45412.0
+Hermanas Mirabal,provincia,2013,92495.0,47080.0,45415.0
+Hermanas Mirabal,provincia,2014,92451.0,47061.0,45390.0
+Hermanas Mirabal,provincia,2015,92394.0,47032.0,45362.0
+Hermanas Mirabal,provincia,2016,92353.0,47010.0,45343.0
+Hermanas Mirabal,provincia,2017,92311.0,46987.0,45324.0
+Hermanas Mirabal,provincia,2018,92289.0,46973.0,45316.0
+Hermanas Mirabal,provincia,2019,92229.0,46940.0,45289.0
+Hermanas Mirabal,provincia,2020,92148.0,46897.0,45251.0
+Hermanas Mirabal,provincia,2021,92045.0,46838.0,45207.0
+Hermanas Mirabal,provincia,2022,91939.0,46777.0,45162.0
+Hermanas Mirabal,provincia,2023,91851.0,46726.0,45125.0
+Hermanas Mirabal,provincia,2024,91726.0,46655.0,45071.0
+Hermanas Mirabal,provincia,2025,91586.0,46576.0,45010.0
+Hermanas Mirabal,provincia,2026,91387.0,46467.0,44920.0
+Hermanas Mirabal,provincia,2027,91180.0,46348.0,44832.0
+Hermanas Mirabal,provincia,2028,90992.0,46243.0,44749.0
+Hermanas Mirabal,provincia,2029,90773.0,46121.0,44652.0
+Hermanas Mirabal,provincia,2030,90535.0,45990.0,44545.0
+Samaná,provincia,2000,90123.0,46199.0,43924.0
+Samaná,provincia,2001,91405.0,46885.0,44520.0
+Samaná,provincia,2002,92660.0,47557.0,45103.0
+Samaná,provincia,2003,93966.0,48254.0,45712.0
+Samaná,provincia,2004,95218.0,48926.0,46292.0
+Samaná,provincia,2005,96463.0,49590.0,46873.0
+Samaná,provincia,2006,97552.0,50177.0,47375.0
+Samaná,provincia,2007,98636.0,50765.0,47871.0
+Samaná,provincia,2008,99750.0,51364.0,48386.0
+Samaná,provincia,2009,100809.0,51935.0,48874.0
+Samaná,provincia,2010,101846.0,52495.0,49351.0
+Samaná,provincia,2011,102940.0,53070.0,49870.0
+Samaná,provincia,2012,104024.0,53640.0,50384.0
+Samaná,provincia,2013,105140.0,54227.0,50913.0
+Samaná,provincia,2014,106201.0,54784.0,51417.0
+Samaná,provincia,2015,107243.0,55331.0,51912.0
+Samaná,provincia,2016,108238.0,55847.0,52391.0
+Samaná,provincia,2017,109226.0,56357.0,52869.0
+Samaná,provincia,2018,110243.0,56882.0,53361.0
+Samaná,provincia,2019,111217.0,57389.0,53828.0
+Samaná,provincia,2020,112160.0,57873.0,54287.0
+Samaná,provincia,2021,113036.0,58320.0,54716.0
+Samaná,provincia,2022,113909.0,58766.0,55143.0
+Samaná,provincia,2023,114809.0,59225.0,55584.0
+Samaná,provincia,2024,115660.0,59657.0,56003.0
+Samaná,provincia,2025,116490.0,60080.0,56410.0
+Samaná,provincia,2026,117236.0,60454.0,56782.0
+Samaná,provincia,2027,117978.0,60824.0,57154.0
+Samaná,provincia,2028,118745.0,61208.0,57537.0
+Samaná,provincia,2029,119464.0,61564.0,57900.0
+Samaná,provincia,2030,120162.0,61912.0,58250.0
+Región Cibao Noroeste,region,2000,383562.0,198965.0,184597.0
+Región Cibao Noroeste,region,2001,385323.0,199997.0,185326.0
+Región Cibao Noroeste,region,2002,386926.0,200946.0,185980.0
+Región Cibao Noroeste,region,2003,388789.0,202029.0,186760.0
+Región Cibao Noroeste,region,2004,390424.0,202995.0,187429.0
+Región Cibao Noroeste,region,2005,392095.0,203972.0,188123.0
+Región Cibao Noroeste,region,2006,392818.0,204454.0,188364.0
+Región Cibao Noroeste,region,2007,393504.0,204920.0,188584.0
+Región Cibao Noroeste,region,2008,394311.0,205448.0,188863.0
+Región Cibao Noroeste,region,2009,394913.0,205862.0,189051.0
+Región Cibao Noroeste,region,2010,395424.0,206233.0,189191.0
+Región Cibao Noroeste,region,2011,397819.0,207364.0,190455.0
+Región Cibao Noroeste,region,2012,400199.0,208472.0,191727.0
+Región Cibao Noroeste,region,2013,402682.0,209642.0,193040.0
+Región Cibao Noroeste,region,2014,404966.0,210705.0,194261.0
+Región Cibao Noroeste,region,2015,407175.0,211731.0,195444.0
+Región Cibao Noroeste,region,2016,409325.0,212711.0,196614.0
+Región Cibao Noroeste,region,2017,411439.0,213677.0,197762.0
+Región Cibao Noroeste,region,2018,413673.0,214699.0,198974.0
+Región Cibao Noroeste,region,2019,415711.0,215619.0,200092.0
+Región Cibao Noroeste,region,2020,417674.0,216499.0,201175.0
+Región Cibao Noroeste,region,2021,419485.0,217307.0,202178.0
+Región Cibao Noroeste,region,2022,421262.0,218094.0,203168.0
+Región Cibao Noroeste,region,2023,423151.0,218939.0,204212.0
+Región Cibao Noroeste,region,2024,424856.0,219691.0,205165.0
+Región Cibao Noroeste,region,2025,426490.0,220397.0,206093.0
+Región Cibao Noroeste,region,2026,427923.0,221005.0,206918.0
+Región Cibao Noroeste,region,2027,429326.0,221592.0,207734.0
+Región Cibao Noroeste,region,2028,430852.0,222243.0,208609.0
+Región Cibao Noroeste,region,2029,432179.0,222790.0,209389.0
+Región Cibao Noroeste,region,2030,433443.0,223304.0,210139.0
+Dajabón,provincia,2000,60859.0,31080.0,29779.0
+Dajabón,provincia,2001,61281.0,31318.0,29963.0
+Dajabón,provincia,2002,61677.0,31543.0,30134.0
+Dajabón,provincia,2003,62114.0,31789.0,30325.0
+Dajabón,provincia,2004,62517.0,32017.0,30500.0
+Dajabón,provincia,2005,62924.0,32247.0,30677.0
+Dajabón,provincia,2006,63181.0,32400.0,30781.0
+Dajabón,provincia,2007,63437.0,32553.0,30884.0
+Dajabón,provincia,2008,63711.0,32716.0,30995.0
+Dajabón,provincia,2009,63950.0,32859.0,31091.0
+Dajabón,provincia,2010,64176.0,32996.0,31180.0
+Dajabón,provincia,2011,64401.0,33120.0,31281.0
+Dajabón,provincia,2012,64626.0,33239.0,31387.0
+Dajabón,provincia,2013,64868.0,33371.0,31497.0
+Dajabón,provincia,2014,65071.0,33481.0,31590.0
+Dajabón,provincia,2015,65271.0,33590.0,31681.0
+Dajabón,provincia,2016,65519.0,33720.0,31799.0
+Dajabón,provincia,2017,65760.0,33848.0,31912.0
+Dajabón,provincia,2018,66017.0,33982.0,32035.0
+Dajabón,provincia,2019,66249.0,34103.0,32146.0
+Dajabón,provincia,2020,66467.0,34218.0,32249.0
+Dajabón,provincia,2021,66675.0,34327.0,32348.0
+Dajabón,provincia,2022,66883.0,34433.0,32450.0
+Dajabón,provincia,2023,67104.0,34549.0,32555.0
+Dajabón,provincia,2024,67296.0,34646.0,32650.0
+Dajabón,provincia,2025,67479.0,34741.0,32738.0
+Dajabón,provincia,2026,67613.0,34810.0,32803.0
+Dajabón,provincia,2027,67748.0,34876.0,32872.0
+Dajabón,provincia,2028,67903.0,34953.0,32950.0
+Dajabón,provincia,2029,68022.0,35013.0,33009.0
+Dajabón,provincia,2030,68134.0,35069.0,33065.0
+Monte Cristi,provincia,2000,108914.0,57010.0,51904.0
+Monte Cristi,provincia,2001,109187.0,57198.0,51989.0
+Monte Cristi,provincia,2002,109416.0,57363.0,52053.0
+Monte Cristi,provincia,2003,109715.0,57564.0,52151.0
+Monte Cristi,provincia,2004,109952.0,57733.0,52219.0
+Monte Cristi,provincia,2005,110202.0,57906.0,52296.0
+Monte Cristi,provincia,2006,110177.0,57934.0,52243.0
+Monte Cristi,provincia,2007,110135.0,57955.0,52180.0
+Monte Cristi,provincia,2008,110130.0,57994.0,52136.0
+Monte Cristi,provincia,2009,110068.0,58001.0,52067.0
+Monte Cristi,provincia,2010,109982.0,57997.0,51985.0
+Monte Cristi,provincia,2011,110790.0,58389.0,52401.0
+Monte Cristi,provincia,2012,111590.0,58771.0,52819.0
+Monte Cristi,provincia,2013,112425.0,59173.0,53252.0
+Monte Cristi,provincia,2014,113200.0,59544.0,53656.0
+Monte Cristi,provincia,2015,113954.0,59904.0,54050.0
+Monte Cristi,provincia,2016,114624.0,60216.0,54408.0
+Monte Cristi,provincia,2017,115278.0,60521.0,54757.0
+Monte Cristi,provincia,2018,115970.0,60845.0,55125.0
+Monte Cristi,provincia,2019,116605.0,61136.0,55469.0
+Monte Cristi,provincia,2020,117221.0,61420.0,55801.0
+Monte Cristi,provincia,2021,117736.0,61649.0,56087.0
+Monte Cristi,provincia,2022,118240.0,61875.0,56365.0
+Monte Cristi,provincia,2023,118774.0,62113.0,56661.0
+Monte Cristi,provincia,2024,119260.0,62328.0,56932.0
+Monte Cristi,provincia,2025,119725.0,62529.0,57196.0
+Monte Cristi,provincia,2026,120123.0,62695.0,57428.0
+Monte Cristi,provincia,2027,120513.0,62857.0,57656.0
+Monte Cristi,provincia,2028,120939.0,63037.0,57902.0
+Monte Cristi,provincia,2029,121306.0,63186.0,58120.0
+Monte Cristi,provincia,2030,121658.0,63327.0,58331.0
+Santiago Rodríguez,provincia,2000,58495.0,30169.0,28326.0
+Santiago Rodríguez,provincia,2001,58499.0,30205.0,28294.0
+Santiago Rodríguez,provincia,2002,58481.0,30231.0,28250.0
+Santiago Rodríguez,provincia,2003,58504.0,30277.0,28227.0
+Santiago Rodríguez,provincia,2004,58492.0,30306.0,28186.0
+Santiago Rodríguez,provincia,2005,58481.0,30334.0,28147.0
+Santiago Rodríguez,provincia,2006,58327.0,30287.0,28040.0
+Santiago Rodríguez,provincia,2007,58172.0,30239.0,27933.0
+Santiago Rodríguez,provincia,2008,58029.0,30198.0,27831.0
+Santiago Rodríguez,provincia,2009,57858.0,30141.0,27717.0
+Santiago Rodríguez,provincia,2010,57673.0,30078.0,27595.0
+Santiago Rodríguez,provincia,2011,57637.0,30044.0,27593.0
+Santiago Rodríguez,provincia,2012,57603.0,30011.0,27592.0
+Santiago Rodríguez,provincia,2013,57573.0,29981.0,27592.0
+Santiago Rodríguez,provincia,2014,57525.0,29940.0,27585.0
+Santiago Rodríguez,provincia,2015,57460.0,29891.0,27569.0
+Santiago Rodríguez,provincia,2016,57428.0,29859.0,27569.0
+Santiago Rodríguez,provincia,2017,57390.0,29824.0,27566.0
+Santiago Rodríguez,provincia,2018,57372.0,29799.0,27573.0
+Santiago Rodríguez,provincia,2019,57322.0,29759.0,27563.0
+Santiago Rodríguez,provincia,2020,57266.0,29713.0,27553.0
+Santiago Rodríguez,provincia,2021,57209.0,29670.0,27539.0
+Santiago Rodríguez,provincia,2022,57143.0,29621.0,27522.0
+Santiago Rodríguez,provincia,2023,57095.0,29581.0,27514.0
+Santiago Rodríguez,provincia,2024,57023.0,29532.0,27491.0
+Santiago Rodríguez,provincia,2025,56940.0,29473.0,27467.0
+Santiago Rodríguez,provincia,2026,56844.0,29411.0,27433.0
+Santiago Rodríguez,provincia,2027,56741.0,29345.0,27396.0
+Santiago Rodríguez,provincia,2028,56654.0,29286.0,27368.0
+Santiago Rodríguez,provincia,2029,56544.0,29215.0,27329.0
+Santiago Rodríguez,provincia,2030,56424.0,29139.0,27285.0
+Valverde,provincia,2000,155294.0,80706.0,74588.0
+Valverde,provincia,2001,156356.0,81276.0,75080.0
+Valverde,provincia,2002,157352.0,81809.0,75543.0
+Valverde,provincia,2003,158456.0,82399.0,76057.0
+Valverde,provincia,2004,159463.0,82939.0,76524.0
+Valverde,provincia,2005,160488.0,83485.0,77003.0
+Valverde,provincia,2006,161133.0,83833.0,77300.0
+Valverde,provincia,2007,161760.0,84173.0,77587.0
+Valverde,provincia,2008,162441.0,84540.0,77901.0
+Valverde,provincia,2009,163037.0,84861.0,78176.0
+Valverde,provincia,2010,163593.0,85162.0,78431.0
+Valverde,provincia,2011,164991.0,85811.0,79180.0
+Valverde,provincia,2012,166380.0,86451.0,79929.0
+Valverde,provincia,2013,167816.0,87117.0,80699.0
+Valverde,provincia,2014,169170.0,87740.0,81430.0
+Valverde,provincia,2015,170490.0,88346.0,82144.0
+Valverde,provincia,2016,171754.0,88916.0,82838.0
+Valverde,provincia,2017,173011.0,89484.0,83527.0
+Valverde,provincia,2018,174314.0,90073.0,84241.0
+Valverde,provincia,2019,175535.0,90621.0,84914.0
+Valverde,provincia,2020,176720.0,91148.0,85572.0
+Valverde,provincia,2021,177865.0,91661.0,86204.0
+Valverde,provincia,2022,178996.0,92165.0,86831.0
+Valverde,provincia,2023,180178.0,92696.0,87482.0
+Valverde,provincia,2024,181277.0,93185.0,88092.0
+Valverde,provincia,2025,182346.0,93654.0,88692.0
+Valverde,provincia,2026,183343.0,94089.0,89254.0
+Valverde,provincia,2027,184324.0,94514.0,89810.0
+Valverde,provincia,2028,185356.0,94967.0,90389.0
+Valverde,provincia,2029,186307.0,95376.0,90931.0
+Valverde,provincia,2030,187227.0,95769.0,91458.0
+Región Valdesia,region,2000,955325.0,485615.0,469710.0
+Región Valdesia,region,2001,964287.0,490003.0,474284.0
+Región Valdesia,region,2002,972915.0,494218.0,478697.0
+Región Valdesia,region,2003,982131.0,498733.0,483398.0
+Región Valdesia,region,2004,990800.0,502967.0,487833.0
+Región Valdesia,region,2005,999485.0,507206.0,492279.0
+Región Valdesia,region,2006,1006070.0,510341.0,495729.0
+Región Valdesia,region,2007,1012576.0,513430.0,499146.0
+Región Valdesia,region,2008,1019402.0,516683.0,502719.0
+Región Valdesia,region,2009,1025677.0,519644.0,506033.0
+Región Valdesia,region,2010,1031736.0,522501.0,509235.0
+Región Valdesia,region,2011,1040105.0,526854.0,513251.0
+Región Valdesia,region,2012,1048388.0,531152.0,517236.0
+Región Valdesia,region,2013,1056996.0,535618.0,521378.0
+Región Valdesia,region,2014,1065059.0,539802.0,525257.0
+Región Valdesia,region,2015,1072912.0,543877.0,529035.0
+Región Valdesia,region,2016,1080758.0,547884.0,532874.0
+Región Valdesia,region,2017,1088531.0,551852.0,536679.0
+Región Valdesia,region,2018,1096613.0,555977.0,540636.0
+Región Valdesia,region,2019,1104173.0,559829.0,544344.0
+Región Valdesia,region,2020,1111524.0,563570.0,547954.0
+Región Valdesia,region,2021,1118537.0,567104.0,551433.0
+Región Valdesia,region,2022,1125473.0,570589.0,554884.0
+Región Valdesia,region,2023,1132724.0,574231.0,558493.0
+Región Valdesia,region,2024,1139468.0,577613.0,561855.0
+Región Valdesia,region,2025,1146008.0,580892.0,565116.0
+Región Valdesia,region,2026,1151642.0,583687.0,567955.0
+Región Valdesia,region,2027,1157208.0,586444.0,570764.0
+Región Valdesia,region,2028,1163062.0,589333.0,573729.0
+Región Valdesia,region,2029,1168432.0,591981.0,576451.0
+Región Valdesia,region,2030,1173600.0,594525.0,579075.0
+Azua,provincia,2000,204898.0,106894.0,98004.0
+Azua,provincia,2001,206219.0,107673.0,98546.0
+Azua,provincia,2002,207459.0,108411.0,99048.0
+Azua,provincia,2003,208832.0,109218.0,99614.0
+Azua,provincia,2004,210087.0,109961.0,100126.0
+Azua,provincia,2005,211359.0,110711.0,100648.0
+Azua,provincia,2006,212127.0,111202.0,100925.0
+Azua,provincia,2007,212874.0,111680.0,101194.0
+Azua,provincia,2008,213691.0,112197.0,101494.0
+Azua,provincia,2009,214395.0,112650.0,101745.0
+Azua,provincia,2010,215050.0,113079.0,101971.0
+Azua,provincia,2011,215915.0,113578.0,102337.0
+Azua,provincia,2012,216755.0,114061.0,102694.0
+Azua,provincia,2013,217670.0,114585.0,103085.0
+Azua,provincia,2014,218469.0,115046.0,103423.0
+Azua,provincia,2015,219224.0,115484.0,103740.0
+Azua,provincia,2016,219856.0,115837.0,104019.0
+Azua,provincia,2017,220470.0,116178.0,104292.0
+Azua,provincia,2018,221150.0,116557.0,104593.0
+Azua,provincia,2019,221726.0,116879.0,104847.0
+Azua,provincia,2020,222256.0,117176.0,105080.0
+Azua,provincia,2021,222610.0,117377.0,105233.0
+Azua,provincia,2022,222947.0,117566.0,105381.0
+Azua,provincia,2023,223346.0,117789.0,105557.0
+Azua,provincia,2024,223644.0,117956.0,105688.0
+Azua,provincia,2025,223906.0,118106.0,105800.0
+Azua,provincia,2026,223952.0,118139.0,105813.0
+Azua,provincia,2027,223984.0,118165.0,105819.0
+Azua,provincia,2028,224079.0,118220.0,105859.0
+Azua,provincia,2029,224075.0,118224.0,105851.0
+Azua,provincia,2030,224033.0,118209.0,105824.0
+Peravia,provincia,2000,166592.0,83416.0,83176.0
+Peravia,provincia,2001,168647.0,84334.0,84313.0
+Peravia,provincia,2002,170651.0,85227.0,85424.0
+Peravia,provincia,2003,172751.0,86169.0,86582.0
+Peravia,provincia,2004,174760.0,87063.0,87697.0
+Peravia,provincia,2005,176758.0,87953.0,88805.0
+Peravia,provincia,2006,178429.0,88666.0,89763.0
+Peravia,provincia,2007,180089.0,89372.0,90717.0
+Peravia,provincia,2008,181803.0,90106.0,91697.0
+Peravia,provincia,2009,183420.0,90788.0,92632.0
+Peravia,provincia,2010,184999.0,91454.0,93545.0
+Peravia,provincia,2011,186308.0,92131.0,94177.0
+Peravia,provincia,2012,187609.0,92804.0,94805.0
+Peravia,provincia,2013,188963.0,93501.0,95462.0
+Peravia,provincia,2014,190221.0,94153.0,96068.0
+Peravia,provincia,2015,191439.0,94782.0,96657.0
+Peravia,provincia,2016,192660.0,95405.0,97255.0
+Peravia,provincia,2017,193869.0,96022.0,97847.0
+Peravia,provincia,2018,195132.0,96666.0,98466.0
+Peravia,provincia,2019,196301.0,97261.0,99040.0
+Peravia,provincia,2020,197434.0,97837.0,99597.0
+Peravia,provincia,2021,198499.0,98372.0,100127.0
+Peravia,provincia,2022,199553.0,98900.0,100653.0
+Peravia,provincia,2023,200664.0,99454.0,101210.0
+Peravia,provincia,2024,201684.0,99965.0,101719.0
+Peravia,provincia,2025,202667.0,100456.0,102211.0
+Peravia,provincia,2026,203491.0,100863.0,102628.0
+Peravia,provincia,2027,204304.0,101265.0,103039.0
+Peravia,provincia,2028,205162.0,101686.0,103476.0
+Peravia,provincia,2029,205938.0,102065.0,103873.0
+Peravia,provincia,2030,206677.0,102429.0,104248.0
+San Cristóbal,provincia,2000,522641.0,263050.0,259591.0
+San Cristóbal,provincia,2001,528281.0,265687.0,262594.0
+San Cristóbal,provincia,2002,533743.0,268230.0,265513.0
+San Cristóbal,provincia,2003,539528.0,270937.0,268591.0
+San Cristóbal,provincia,2004,545006.0,273491.0,271515.0
+San Cristóbal,provincia,2005,550490.0,276044.0,274446.0
+San Cristóbal,provincia,2006,554855.0,278013.0,276842.0
+San Cristóbal,provincia,2007,559177.0,279958.0,279219.0
+San Cristóbal,provincia,2008,563675.0,281990.0,281685.0
+San Cristóbal,provincia,2009,567866.0,283865.0,284001.0
+San Cristóbal,provincia,2010,571941.0,285681.0,286260.0
+San Cristóbal,provincia,2011,578657.0,289102.0,289555.0
+San Cristóbal,provincia,2012,585327.0,292494.0,292833.0
+San Cristóbal,provincia,2013,592175.0,295976.0,296199.0
+San Cristóbal,provincia,2014,598726.0,299305.0,299421.0
+San Cristóbal,provincia,2015,605153.0,302573.0,302580.0
+San Cristóbal,provincia,2016,611677.0,305863.0,305814.0
+San Cristóbal,provincia,2017,618165.0,309132.0,309033.0
+San Cristóbal,provincia,2018,624820.0,312484.0,312336.0
+San Cristóbal,provincia,2019,631186.0,315688.0,315498.0
+San Cristóbal,provincia,2020,637429.0,318828.0,318601.0
+San Cristóbal,provincia,2021,643595.0,321910.0,321685.0
+San Cristóbal,provincia,2022,649724.0,324969.0,324755.0
+San Cristóbal,provincia,2023,656027.0,328115.0,327912.0
+San Cristóbal,provincia,2024,662043.0,331114.0,330929.0
+San Cristóbal,provincia,2025,667934.0,334050.0,333884.0
+San Cristóbal,provincia,2026,673349.0,336732.0,336617.0
+San Cristóbal,provincia,2027,678729.0,339393.0,339336.0
+San Cristóbal,provincia,2028,684275.0,342131.0,342144.0
+San Cristóbal,provincia,2029,689538.0,344730.0,344808.0
+San Cristóbal,provincia,2030,694682.0,347266.0,347416.0
+San José de Ocoa,provincia,2000,61194.0,32255.0,28939.0
+San José de Ocoa,provincia,2001,61140.0,32309.0,28831.0
+San José de Ocoa,provincia,2002,61062.0,32350.0,28712.0
+San José de Ocoa,provincia,2003,61020.0,32409.0,28611.0
+San José de Ocoa,provincia,2004,60947.0,32452.0,28495.0
+San José de Ocoa,provincia,2005,60878.0,32498.0,28380.0
+San José de Ocoa,provincia,2006,60659.0,32460.0,28199.0
+San José de Ocoa,provincia,2007,60436.0,32420.0,28016.0
+San José de Ocoa,provincia,2008,60233.0,32390.0,27843.0
+San José de Ocoa,provincia,2009,59996.0,32341.0,27655.0
+San José de Ocoa,provincia,2010,59746.0,32287.0,27459.0
+San José de Ocoa,provincia,2011,59225.0,32043.0,27182.0
+San José de Ocoa,provincia,2012,58697.0,31793.0,26904.0
+San José de Ocoa,provincia,2013,58188.0,31556.0,26632.0
+San José de Ocoa,provincia,2014,57643.0,31298.0,26345.0
+San José de Ocoa,provincia,2015,57096.0,31038.0,26058.0
+San José de Ocoa,provincia,2016,56565.0,30779.0,25786.0
+San José de Ocoa,provincia,2017,56027.0,30520.0,25507.0
+San José de Ocoa,provincia,2018,55511.0,30270.0,25241.0
+San José de Ocoa,provincia,2019,54960.0,30001.0,24959.0
+San José de Ocoa,provincia,2020,54405.0,29729.0,24676.0
+San José de Ocoa,provincia,2021,53833.0,29445.0,24388.0
+San José de Ocoa,provincia,2022,53249.0,29154.0,24095.0
+San José de Ocoa,provincia,2023,52687.0,28873.0,23814.0
+San José de Ocoa,provincia,2024,52097.0,28578.0,23519.0
+San José de Ocoa,provincia,2025,51501.0,28280.0,23221.0
+San José de Ocoa,provincia,2026,50850.0,27953.0,22897.0
+San José de Ocoa,provincia,2027,50191.0,27621.0,22570.0
+San José de Ocoa,provincia,2028,49546.0,27296.0,22250.0
+San José de Ocoa,provincia,2029,48881.0,26962.0,21919.0
+San José de Ocoa,provincia,2030,48208.0,26621.0,21587.0
+Región  Enriquillo,region,2000,336242.0,173837.0,162405.0
+Región  Enriquillo,region,2001,339973.0,175799.0,164174.0
+Región  Enriquillo,region,2002,343636.0,177733.0,165903.0
+Región  Enriquillo,region,2003,347457.0,179746.0,167711.0
+Región  Enriquillo,region,2004,351094.0,181654.0,169440.0
+Región  Enriquillo,region,2005,354704.0,183548.0,171156.0
+Región  Enriquillo,region,2006,357783.0,185182.0,172601.0
+Región  Enriquillo,region,2007,360837.0,186801.0,174036.0
+Región  Enriquillo,region,2008,364009.0,188482.0,175527.0
+Región  Enriquillo,region,2009,366984.0,190059.0,176925.0
+Región  Enriquillo,region,2010,369873.0,191589.0,178284.0
+Región  Enriquillo,region,2011,371353.0,192444.0,178909.0
+Región  Enriquillo,region,2012,372800.0,193284.0,179516.0
+Región  Enriquillo,region,2013,374358.0,194174.0,180184.0
+Región  Enriquillo,region,2014,375731.0,194972.0,180759.0
+Región  Enriquillo,region,2015,377027.0,195727.0,181300.0
+Región  Enriquillo,region,2016,378385.0,196471.0,181914.0
+Región  Enriquillo,region,2017,379726.0,197207.0,182519.0
+Región  Enriquillo,region,2018,381158.0,197989.0,183169.0
+Región  Enriquillo,region,2019,382413.0,198677.0,183736.0
+Región  Enriquillo,region,2020,383603.0,199332.0,184271.0
+Región  Enriquillo,region,2021,384637.0,199888.0,184749.0
+Región  Enriquillo,region,2022,385638.0,200426.0,185212.0
+Región  Enriquillo,region,2023,386749.0,201021.0,185728.0
+Región  Enriquillo,region,2024,387686.0,201521.0,186165.0
+Región  Enriquillo,region,2025,388555.0,201989.0,186566.0
+Región  Enriquillo,region,2026,389116.0,202280.0,186836.0
+Región  Enriquillo,region,2027,389650.0,202555.0,187095.0
+Región  Enriquillo,region,2028,390279.0,202876.0,187403.0
+Región  Enriquillo,region,2029,390750.0,203114.0,187636.0
+Región  Enriquillo,region,2030,391154.0,203316.0,187838.0
+Baoruco,provincia,2000,89742.0,46365.0,43377.0
+Baoruco,provincia,2001,90656.0,46857.0,43799.0
+Baoruco,provincia,2002,91539.0,47332.0,44207.0
+Baoruco,provincia,2003,92477.0,47840.0,44637.0
+Baoruco,provincia,2004,93365.0,48315.0,45050.0
+Baoruco,provincia,2005,94257.0,48795.0,45462.0
+Baoruco,provincia,2006,94945.0,49173.0,45772.0
+Baoruco,provincia,2007,95633.0,49547.0,46086.0
+Baoruco,provincia,2008,96344.0,49934.0,46410.0
+Baoruco,provincia,2009,97009.0,50299.0,46710.0
+Baoruco,provincia,2010,97650.0,50649.0,47001.0
+Baoruco,provincia,2011,97981.0,50881.0,47100.0
+Baoruco,provincia,2012,98305.0,51111.0,47194.0
+Baoruco,provincia,2013,98657.0,51352.0,47305.0
+Baoruco,provincia,2014,98962.0,51571.0,47391.0
+Baoruco,provincia,2015,99244.0,51776.0,47468.0
+Baoruco,provincia,2016,99607.0,52006.0,47601.0
+Baoruco,provincia,2017,99964.0,52235.0,47729.0
+Baoruco,provincia,2018,100348.0,52475.0,47873.0
+Baoruco,provincia,2019,100687.0,52693.0,47994.0
+Baoruco,provincia,2020,101005.0,52898.0,48107.0
+Baoruco,provincia,2021,101306.0,53086.0,48220.0
+Baoruco,provincia,2022,101597.0,53268.0,48329.0
+Baoruco,provincia,2023,101922.0,53469.0,48453.0
+Baoruco,provincia,2024,102193.0,53640.0,48553.0
+Baoruco,provincia,2025,102452.0,53806.0,48646.0
+Baoruco,provincia,2026,102607.0,53912.0,48695.0
+Baoruco,provincia,2027,102753.0,54009.0,48744.0
+Baoruco,provincia,2028,102929.0,54124.0,48805.0
+Baoruco,provincia,2029,103058.0,54214.0,48844.0
+Baoruco,provincia,2030,103172.0,54295.0,48877.0
+Barahona,provincia,2000,175827.0,90578.0,85249.0
+Barahona,provincia,2001,177271.0,91348.0,85923.0
+Barahona,provincia,2002,178653.0,92088.0,86565.0
+Barahona,provincia,2003,180148.0,92883.0,87265.0
+Barahona,provincia,2004,181540.0,93625.0,87915.0
+Barahona,provincia,2005,182941.0,94370.0,88571.0
+Barahona,provincia,2006,183926.0,94901.0,89025.0
+Barahona,provincia,2007,184902.0,95427.0,89475.0
+Barahona,provincia,2008,185932.0,95980.0,89952.0
+Barahona,provincia,2009,186864.0,96482.0,90382.0
+Barahona,provincia,2010,187755.0,96963.0,90792.0
+Barahona,provincia,2011,187972.0,97100.0,90872.0
+Barahona,provincia,2012,188169.0,97227.0,90942.0
+Barahona,provincia,2013,188426.0,97384.0,91042.0
+Barahona,provincia,2014,188584.0,97488.0,91096.0
+Barahona,provincia,2015,188706.0,97575.0,91131.0
+Barahona,provincia,2016,188820.0,97639.0,91181.0
+Barahona,provincia,2017,188929.0,97699.0,91230.0
+Barahona,provincia,2018,189080.0,97783.0,91297.0
+Barahona,provincia,2019,189149.0,97820.0,91329.0
+Barahona,provincia,2020,189177.0,97839.0,91338.0
+Barahona,provincia,2021,189100.0,97799.0,91301.0
+Barahona,provincia,2022,189012.0,97752.0,91260.0
+Barahona,provincia,2023,188970.0,97728.0,91242.0
+Barahona,provincia,2024,188850.0,97663.0,91187.0
+Barahona,provincia,2025,188694.0,97580.0,91114.0
+Barahona,provincia,2026,188370.0,97403.0,90967.0
+Barahona,provincia,2027,188035.0,97223.0,90812.0
+Barahona,provincia,2028,187745.0,97061.0,90684.0
+Barahona,provincia,2029,187378.0,96860.0,90518.0
+Barahona,provincia,2030,186978.0,96642.0,90336.0
+Independencia,provincia,2000,49869.0,25955.0,23914.0
+Independencia,provincia,2001,50229.0,26102.0,24127.0
+Independencia,provincia,2002,50579.0,26246.0,24333.0
+Independencia,provincia,2003,50949.0,26398.0,24551.0
+Independencia,provincia,2004,51298.0,26540.0,24758.0
+Independencia,provincia,2005,51651.0,26683.0,24968.0
+Independencia,provincia,2006,51883.0,26761.0,25122.0
+Independencia,provincia,2007,52109.0,26837.0,25272.0
+Independencia,provincia,2008,52356.0,26922.0,25434.0
+Independencia,provincia,2009,52572.0,26992.0,25580.0
+Independencia,provincia,2010,52773.0,27053.0,25720.0
+Independencia,provincia,2011,53353.0,27351.0,26002.0
+Independencia,provincia,2012,53930.0,27647.0,26283.0
+Independencia,provincia,2013,54521.0,27948.0,26573.0
+Independencia,provincia,2014,55083.0,28237.0,26846.0
+Independencia,provincia,2015,55638.0,28521.0,27117.0
+Independencia,provincia,2016,56203.0,28806.0,27397.0
+Independencia,provincia,2017,56763.0,29087.0,27676.0
+Independencia,provincia,2018,57339.0,29375.0,27964.0
+Independencia,provincia,2019,57883.0,29649.0,28234.0
+Independencia,provincia,2020,58424.0,29921.0,28503.0
+Independencia,provincia,2021,58951.0,30183.0,28768.0
+Independencia,provincia,2022,59472.0,30442.0,29030.0
+Independencia,provincia,2023,60010.0,30709.0,29301.0
+Independencia,provincia,2024,60527.0,30967.0,29560.0
+Independencia,provincia,2025,61024.0,31213.0,29811.0
+Independencia,provincia,2026,61507.0,31451.0,30056.0
+Independencia,provincia,2027,61988.0,31686.0,30302.0
+Independencia,provincia,2028,62479.0,31926.0,30553.0
+Independencia,provincia,2029,62948.0,32156.0,30792.0
+Independencia,provincia,2030,63408.0,32380.0,31028.0
+Pedernales,provincia,2000,20804.0,10939.0,9865.0
+Pedernales,provincia,2001,21817.0,11492.0,10325.0
+Pedernales,provincia,2002,22865.0,12067.0,10798.0
+Pedernales,provincia,2003,23883.0,12625.0,11258.0
+Pedernales,provincia,2004,24891.0,13174.0,11717.0
+Pedernales,provincia,2005,25855.0,13700.0,12155.0
+Pedernales,provincia,2006,27029.0,14347.0,12682.0
+Pedernales,provincia,2007,28193.0,14990.0,13203.0
+Pedernales,provincia,2008,29377.0,15646.0,13731.0
+Pedernales,provincia,2009,30539.0,16286.0,14253.0
+Pedernales,provincia,2010,31695.0,16924.0,14771.0
+Pedernales,provincia,2011,32047.0,17112.0,14935.0
+Pedernales,provincia,2012,32396.0,17299.0,15097.0
+Pedernales,provincia,2013,32754.0,17490.0,15264.0
+Pedernales,provincia,2014,33102.0,17676.0,15426.0
+Pedernales,provincia,2015,33439.0,17855.0,15584.0
+Pedernales,provincia,2016,33755.0,18020.0,15735.0
+Pedernales,provincia,2017,34070.0,18186.0,15884.0
+Pedernales,provincia,2018,34391.0,18356.0,16035.0
+Pedernales,provincia,2019,34694.0,18515.0,16179.0
+Pedernales,provincia,2020,34997.0,18674.0,16323.0
+Pedernales,provincia,2021,35280.0,18820.0,16460.0
+Pedernales,provincia,2022,35557.0,18964.0,16593.0
+Pedernales,provincia,2023,35847.0,19115.0,16732.0
+Pedernales,provincia,2024,36116.0,19251.0,16865.0
+Pedernales,provincia,2025,36385.0,19390.0,16995.0
+Pedernales,provincia,2026,36632.0,19514.0,17118.0
+Pedernales,provincia,2027,36874.0,19637.0,17237.0
+Pedernales,provincia,2028,37126.0,19765.0,17361.0
+Pedernales,provincia,2029,37366.0,19884.0,17482.0
+Pedernales,provincia,2030,37596.0,19999.0,17597.0
+Región  Del Valle,region,2000,299222.0,157005.0,142217.0
+Región  Del Valle,region,2001,299385.0,157124.0,142261.0
+Región  Del Valle,region,2002,299429.0,157177.0,142252.0
+Región  Del Valle,region,2003,299675.0,157337.0,142338.0
+Región  Del Valle,region,2004,299745.0,157403.0,142342.0
+Región  Del Valle,region,2005,299841.0,157483.0,142358.0
+Región  Del Valle,region,2006,299188.0,157167.0,142021.0
+Región  Del Valle,region,2007,298514.0,156838.0,141676.0
+Región  Del Valle,region,2008,297933.0,156559.0,141374.0
+Región  Del Valle,region,2009,297189.0,156192.0,140997.0
+Región  Del Valle,region,2010,296380.0,155789.0,140591.0
+Región  Del Valle,region,2011,295358.0,155436.0,139922.0
+Región  Del Valle,region,2012,294318.0,155070.0,139248.0
+Región  Del Valle,region,2013,293359.0,154751.0,138608.0
+Región  Del Valle,region,2014,292255.0,154353.0,137902.0
+Región  Del Valle,region,2015,291090.0,153920.0,137170.0
+Región  Del Valle,region,2016,289933.0,153457.0,136476.0
+Región  Del Valle,region,2017,288756.0,152981.0,135775.0
+Región  Del Valle,region,2018,287657.0,152547.0,135110.0
+Región  Del Valle,region,2019,286428.0,152045.0,134383.0
+Región  Del Valle,region,2020,285138.0,151506.0,133632.0
+Región  Del Valle,region,2021,283567.0,150813.0,132754.0
+Región  Del Valle,region,2022,281974.0,150108.0,131866.0
+Región  Del Valle,region,2023,280455.0,149441.0,131014.0
+Región  Del Valle,region,2024,278807.0,148706.0,130101.0
+Región  Del Valle,region,2025,277122.0,147949.0,129173.0
+Región  Del Valle,region,2026,275067.0,146993.0,128074.0
+Región  Del Valle,region,2027,272993.0,146026.0,126967.0
+Región  Del Valle,region,2028,270987.0,145093.0,125894.0
+Región  Del Valle,region,2029,268862.0,144097.0,124765.0
+Región  Del Valle,region,2030,266700.0,143081.0,123619.0
+Elías Piña,provincia,2000,62669.0,32606.0,30063.0
+Elías Piña,provincia,2001,62821.0,32698.0,30123.0
+Elías Piña,provincia,2002,62950.0,32778.0,30172.0
+Elías Piña,provincia,2003,63117.0,32878.0,30239.0
+Elías Piña,provincia,2004,63251.0,32960.0,30291.0
+Elías Piña,provincia,2005,63389.0,33045.0,30344.0
+Elías Piña,provincia,2006,63369.0,33047.0,30322.0
+Elías Piña,provincia,2007,63345.0,33046.0,30299.0
+Elías Piña,provincia,2008,63340.0,33056.0,30284.0
+Elías Piña,provincia,2009,63303.0,33048.0,30255.0
+Elías Piña,provincia,2010,63250.0,33032.0,30218.0
+Elías Piña,provincia,2011,63298.0,33134.0,30164.0
+Elías Piña,provincia,2012,63343.0,33233.0,30110.0
+Elías Piña,provincia,2013,63404.0,33344.0,30060.0
+Elías Piña,provincia,2014,63433.0,33435.0,29998.0
+Elías Piña,provincia,2015,63450.0,33520.0,29930.0
+Elías Piña,provincia,2016,63449.0,33585.0,29864.0
+Elías Piña,provincia,2017,63438.0,33643.0,29795.0
+Elías Piña,provincia,2018,63452.0,33715.0,29737.0
+Elías Piña,provincia,2019,63437.0,33772.0,29665.0
+Elías Piña,provincia,2020,63402.0,33818.0,29584.0
+Elías Piña,provincia,2021,63303.0,33824.0,29479.0
+Elías Piña,provincia,2022,63196.0,33825.0,29371.0
+Elías Piña,provincia,2023,63107.0,33837.0,29270.0
+Elías Piña,provincia,2024,62992.0,33833.0,29159.0
+Elías Piña,provincia,2025,62865.0,33824.0,29041.0
+Elías Piña,provincia,2026,62647.0,33763.0,28884.0
+Elías Piña,provincia,2027,62422.0,33697.0,28725.0
+Elías Piña,provincia,2028,62218.0,33642.0,28576.0
+Elías Piña,provincia,2029,61980.0,33571.0,28409.0
+Elías Piña,provincia,2030,61737.0,33495.0,28242.0
+San Juan,provincia,2000,236553.0,124399.0,112154.0
+San Juan,provincia,2001,236564.0,124426.0,112138.0
+San Juan,provincia,2002,236479.0,124399.0,112080.0
+San Juan,provincia,2003,236558.0,124459.0,112099.0
+San Juan,provincia,2004,236494.0,124443.0,112051.0
+San Juan,provincia,2005,236452.0,124438.0,112014.0
+San Juan,provincia,2006,235819.0,124120.0,111699.0
+San Juan,provincia,2007,235169.0,123792.0,111377.0
+San Juan,provincia,2008,234593.0,123503.0,111090.0
+San Juan,provincia,2009,233886.0,123144.0,110742.0
+San Juan,provincia,2010,233130.0,122757.0,110373.0
+San Juan,provincia,2011,232060.0,122302.0,109758.0
+San Juan,provincia,2012,230975.0,121837.0,109138.0
+San Juan,provincia,2013,229955.0,121407.0,108548.0
+San Juan,provincia,2014,228822.0,120918.0,107904.0
+San Juan,provincia,2015,227640.0,120400.0,107240.0
+San Juan,provincia,2016,226484.0,119872.0,106612.0
+San Juan,provincia,2017,225318.0,119338.0,105980.0
+San Juan,provincia,2018,224205.0,118832.0,105373.0
+San Juan,provincia,2019,222991.0,118273.0,104718.0
+San Juan,provincia,2020,221736.0,117688.0,104048.0
+San Juan,provincia,2021,220264.0,116989.0,103275.0
+San Juan,provincia,2022,218778.0,116283.0,102495.0
+San Juan,provincia,2023,217348.0,115604.0,101744.0
+San Juan,provincia,2024,215815.0,114873.0,100942.0
+San Juan,provincia,2025,214257.0,114125.0,100132.0
+San Juan,provincia,2026,212420.0,113230.0,99190.0
+San Juan,provincia,2027,210571.0,112329.0,98242.0
+San Juan,provincia,2028,208769.0,111451.0,97318.0
+San Juan,provincia,2029,206882.0,110526.0,96356.0
+San Juan,provincia,2030,204963.0,109586.0,95377.0
+Región  Yuma,region,2000,481681.0,244423.0,237258.0
+Región  Yuma,region,2001,494036.0,250980.0,243056.0
+Región  Yuma,region,2002,506625.0,257679.0,248946.0
+Región  Yuma,region,2003,519131.0,264310.0,254821.0
+Región  Yuma,region,2004,531334.0,270787.0,260547.0
+Región  Yuma,region,2005,543139.0,277035.0,266104.0
+Región  Yuma,region,2006,556272.0,284084.0,272188.0
+Región  Yuma,region,2007,569360.0,291108.0,278252.0
+Región  Yuma,region,2008,582634.0,298227.0,284407.0
+Región  Yuma,region,2009,595605.0,305185.0,290420.0
+Región  Yuma,region,2010,608432.0,312071.0,296361.0
+Región  Yuma,region,2011,619943.0,317753.0,302190.0
+Región  Yuma,region,2012,631409.0,323413.0,307996.0
+Región  Yuma,region,2013,643064.0,329163.0,313901.0
+Región  Yuma,region,2014,654396.0,334745.0,319651.0
+Región  Yuma,region,2015,665594.0,340260.0,325334.0
+Región  Yuma,region,2016,676460.0,345593.0,330867.0
+Región  Yuma,region,2017,687277.0,350899.0,336378.0
+Región  Yuma,region,2018,698277.0,356297.0,341980.0
+Región  Yuma,region,2019,708961.0,361531.0,347430.0
+Región  Yuma,region,2020,719511.0,366694.0,352817.0
+Región  Yuma,region,2021,729817.0,371731.0,358086.0
+Región  Yuma,region,2022,740086.0,376741.0,363345.0
+Región  Yuma,region,2023,750548.0,381850.0,368698.0
+Región  Yuma,region,2024,760680.0,386789.0,373891.0
+Región  Yuma,region,2025,770675.0,391654.0,379021.0
+Región  Yuma,region,2026,780378.0,396358.0,384020.0
+Región  Yuma,region,2027,790023.0,401025.0,388998.0
+Región  Yuma,region,2028,799876.0,405799.0,394077.0
+Región  Yuma,region,2029,809398.0,410401.0,398997.0
+Región  Yuma,region,2030,818775.0,414926.0,403849.0
+El Seibo,provincia,2000,87587.0,46765.0,40822.0
+El Seibo,provincia,2001,87758.0,46894.0,40864.0
+El Seibo,provincia,2002,87894.0,47005.0,40889.0
+El Seibo,provincia,2003,88091.0,47147.0,40944.0
+El Seibo,provincia,2004,88235.0,47262.0,40973.0
+El Seibo,provincia,2005,88387.0,47380.0,41007.0
+El Seibo,provincia,2006,88316.0,47378.0,40938.0
+El Seibo,provincia,2007,88237.0,47373.0,40864.0
+El Seibo,provincia,2008,88185.0,47381.0,40804.0
+El Seibo,provincia,2009,88091.0,47367.0,40724.0
+El Seibo,provincia,2010,87975.0,47339.0,40636.0
+El Seibo,provincia,2011,88526.0,47596.0,40930.0
+El Seibo,provincia,2012,89073.0,47849.0,41224.0
+El Seibo,provincia,2013,89643.0,48117.0,41526.0
+El Seibo,provincia,2014,90169.0,48358.0,41811.0
+El Seibo,provincia,2015,90676.0,48589.0,42087.0
+El Seibo,provincia,2016,91256.0,48852.0,42404.0
+El Seibo,provincia,2017,91826.0,49110.0,42716.0
+El Seibo,provincia,2018,92418.0,49378.0,43040.0
+El Seibo,provincia,2019,92973.0,49626.0,43347.0
+El Seibo,provincia,2020,93508.0,49864.0,43644.0
+El Seibo,provincia,2021,94049.0,50106.0,43943.0
+El Seibo,provincia,2022,94587.0,50344.0,44243.0
+El Seibo,provincia,2023,95146.0,50593.0,44553.0
+El Seibo,provincia,2024,95665.0,50821.0,44844.0
+El Seibo,provincia,2025,96165.0,51038.0,45127.0
+El Seibo,provincia,2026,96622.0,51234.0,45388.0
+El Seibo,provincia,2027,97071.0,51425.0,45646.0
+El Seibo,provincia,2028,97545.0,51630.0,45915.0
+El Seibo,provincia,2029,97981.0,51812.0,46169.0
+El Seibo,provincia,2030,98396.0,51985.0,46411.0
+La Altagracia,provincia,2000,178548.0,91632.0,86916.0
+La Altagracia,provincia,2001,187413.0,96392.0,91021.0
+La Altagracia,provincia,2002,196602.0,101340.0,95262.0
+La Altagracia,provincia,2003,205528.0,106131.0,99397.0
+La Altagracia,provincia,2004,214338.0,110863.0,103475.0
+La Altagracia,provincia,2005,222756.0,115371.0,107385.0
+La Altagracia,provincia,2006,233067.0,120966.0,112101.0
+La Altagracia,provincia,2007,243361.0,126549.0,116812.0
+La Altagracia,provincia,2008,253736.0,132177.0,121559.0
+La Altagracia,provincia,2009,263974.0,137729.0,126245.0
+La Altagracia,provincia,2010,274151.0,143252.0,130899.0
+La Altagracia,provincia,2011,282341.0,147338.0,135003.0
+La Altagracia,provincia,2012,290509.0,151414.0,139095.0
+La Altagracia,provincia,2013,298764.0,155531.0,143233.0
+La Altagracia,provincia,2014,306873.0,159574.0,147299.0
+La Altagracia,provincia,2015,314916.0,163581.0,151335.0
+La Altagracia,provincia,2016,322653.0,167429.0,155224.0
+La Altagracia,provincia,2017,330367.0,171263.0,159104.0
+La Altagracia,provincia,2018,338173.0,175147.0,163026.0
+La Altagracia,provincia,2019,345822.0,178945.0,166877.0
+La Altagracia,provincia,2020,353406.0,182710.0,170696.0
+La Altagracia,provincia,2021,360874.0,186410.0,174464.0
+La Altagracia,provincia,2022,368324.0,190099.0,178225.0
+La Altagracia,provincia,2023,375872.0,193837.0,182035.0
+La Altagracia,provincia,2024,383256.0,197491.0,185765.0
+La Altagracia,provincia,2025,390568.0,201105.0,189463.0
+La Altagracia,provincia,2026,397846.0,204686.0,193160.0
+La Altagracia,provincia,2027,405100.0,208251.0,196849.0
+La Altagracia,provincia,2028,412458.0,211870.0,200588.0
+La Altagracia,provincia,2029,419645.0,215400.0,204245.0
+La Altagracia,provincia,2030,426757.0,218889.0,207868.0
+La Romana,provincia,2000,215546.0,106026.0,109520.0
+La Romana,provincia,2001,218865.0,107694.0,111171.0
+La Romana,provincia,2002,222129.0,109334.0,112795.0
+La Romana,provincia,2003,225512.0,111032.0,114480.0
+La Romana,provincia,2004,228761.0,112662.0,116099.0
+La Romana,provincia,2005,231996.0,114284.0,117712.0
+La Romana,provincia,2006,234889.0,115740.0,119149.0
+La Romana,provincia,2007,237762.0,117186.0,120576.0
+La Romana,provincia,2008,240713.0,118669.0,122044.0
+La Romana,provincia,2009,243540.0,120089.0,123451.0
+La Romana,provincia,2010,246306.0,121480.0,124826.0
+La Romana,provincia,2011,249076.0,122819.0,126257.0
+La Romana,provincia,2012,251827.0,124150.0,127677.0
+La Romana,provincia,2013,254657.0,125515.0,129142.0
+La Romana,provincia,2014,257354.0,126813.0,130541.0
+La Romana,provincia,2015,260002.0,128090.0,131912.0
+La Romana,provincia,2016,262551.0,129312.0,133239.0
+La Romana,provincia,2017,265084.0,130526.0,134558.0
+La Romana,provincia,2018,267686.0,131772.0,135914.0
+La Romana,provincia,2019,270166.0,132960.0,137206.0
+La Romana,provincia,2020,272597.0,134120.0,138477.0
+La Romana,provincia,2021,274894.0,135215.0,139679.0
+La Romana,provincia,2022,277175.0,136298.0,140877.0
+La Romana,provincia,2023,279530.0,137420.0,142110.0
+La Romana,provincia,2024,281759.0,138477.0,143282.0
+La Romana,provincia,2025,283942.0,139511.0,144431.0
+La Romana,provincia,2026,285910.0,140438.0,145472.0
+La Romana,provincia,2027,287852.0,141349.0,146503.0
+La Romana,provincia,2028,289873.0,142299.0,147574.0
+La Romana,provincia,2029,291772.0,143189.0,148583.0
+La Romana,provincia,2030,293622.0,144052.0,149570.0
+Región Higuamo,region,2000,558838.0,283932.0,274906.0
+Región Higuamo,region,2001,560118.0,284292.0,275826.0
+Región Higuamo,region,2002,561188.0,284541.0,276647.0
+Región Higuamo,region,2003,562619.0,284974.0,277645.0
+Región Higuamo,region,2004,563724.0,285237.0,278487.0
+Región Higuamo,region,2005,564887.0,285527.0,279360.0
+Región Higuamo,region,2006,564671.0,285114.0,279557.0
+Región Higuamo,region,2007,564399.0,284676.0,279723.0
+Región Higuamo,region,2008,564311.0,284326.0,279985.0
+Región Higuamo,region,2009,563921.0,283819.0,280102.0
+Región Higuamo,region,2010,563406.0,283252.0,280154.0
+Región Higuamo,region,2011,565365.0,284279.0,281086.0
+Región Higuamo,region,2012,567289.0,285280.0,282009.0
+Región Higuamo,region,2013,569377.0,286372.0,283005.0
+Región Higuamo,region,2014,571183.0,287314.0,283869.0
+Región Higuamo,region,2015,572865.0,288195.0,284670.0
+Región Higuamo,region,2016,574709.0,289125.0,285584.0
+Región Higuamo,region,2017,576517.0,290030.0,286487.0
+Región Higuamo,region,2018,578478.0,291014.0,287464.0
+Región Higuamo,region,2019,580177.0,291861.0,288316.0
+Región Higuamo,region,2020,581761.0,292652.0,289109.0
+Región Higuamo,region,2021,583196.0,293355.0,289841.0
+Región Higuamo,region,2022,584602.0,294038.0,290564.0
+Región Higuamo,region,2023,586162.0,294802.0,291360.0
+Región Higuamo,region,2024,587465.0,295431.0,292034.0
+Región Higuamo,region,2025,588659.0,296006.0,292653.0
+Región Higuamo,region,2026,589363.0,296328.0,293035.0
+Región Higuamo,region,2027,590043.0,296638.0,293405.0
+Región Higuamo,region,2028,590853.0,297012.0,293841.0
+Región Higuamo,region,2029,591425.0,297263.0,294162.0
+Región Higuamo,region,2030,591899.0,297460.0,294439.0
+San Pedro de Macorís,provincia,2000,295915.0,147179.0,148736.0
+San Pedro de Macorís,provincia,2001,295910.0,147046.0,148864.0
+San Pedro de Macorís,provincia,2002,295791.0,146857.0,148934.0
+San Pedro de Macorís,provincia,2003,295870.0,146763.0,149107.0
+San Pedro de Macorís,provincia,2004,295773.0,146582.0,149191.0
+San Pedro de Macorís,provincia,2005,295709.0,146414.0,149295.0
+San Pedro de Macorís,provincia,2006,294905.0,145881.0,149024.0
+San Pedro de Macorís,provincia,2007,294076.0,145336.0,148740.0
+San Pedro de Macorís,provincia,2008,293340.0,144835.0,148505.0
+San Pedro de Macorís,provincia,2009,292447.0,144256.0,148191.0
+San Pedro de Macorís,provincia,2010,291491.0,143645.0,147846.0
+San Pedro de Macorís,provincia,2011,292956.0,144383.0,148573.0
+San Pedro de Macorís,provincia,2012,294398.0,145109.0,149289.0
+San Pedro de Macorís,provincia,2013,295926.0,145880.0,150046.0
+San Pedro de Macorís,provincia,2014,297314.0,146577.0,150737.0
+San Pedro de Macorís,provincia,2015,298633.0,147242.0,151391.0
+San Pedro de Macorís,provincia,2016,299933.0,147885.0,152048.0
+San Pedro de Macorís,provincia,2017,301215.0,148514.0,152701.0
+San Pedro de Macorís,provincia,2018,302577.0,149184.0,153393.0
+San Pedro de Macorís,provincia,2019,303801.0,149784.0,154017.0
+San Pedro de Macorís,provincia,2020,304966.0,150355.0,154611.0
+San Pedro de Macorís,provincia,2021,306002.0,150857.0,155145.0
+San Pedro de Macorís,provincia,2022,307027.0,151351.0,155676.0
+San Pedro de Macorís,provincia,2023,308126.0,151882.0,156244.0
+San Pedro de Macorís,provincia,2024,309092.0,152346.0,156746.0
+San Pedro de Macorís,provincia,2025,310003.0,152782.0,157221.0
+San Pedro de Macorís,provincia,2026,310635.0,153078.0,157557.0
+San Pedro de Macorís,provincia,2027,311250.0,153365.0,157885.0
+San Pedro de Macorís,provincia,2028,311939.0,153686.0,158253.0
+San Pedro de Macorís,provincia,2029,312499.0,153943.0,158556.0
+San Pedro de Macorís,provincia,2030,313007.0,154172.0,158835.0
+Monte Plata,provincia,2000,176955.0,92058.0,84897.0
+Monte Plata,provincia,2001,178177.0,92610.0,85567.0
+Monte Plata,provincia,2002,179335.0,93127.0,86208.0
+Monte Plata,provincia,2003,180605.0,93704.0,86901.0
+Monte Plata,provincia,2004,181773.0,94226.0,87547.0
+Monte Plata,provincia,2005,182957.0,94757.0,88200.0
+Monte Plata,provincia,2006,183714.0,95059.0,88655.0
+Monte Plata,provincia,2007,184449.0,95351.0,89098.0
+Monte Plata,provincia,2008,185248.0,95675.0,89573.0
+Monte Plata,provincia,2009,185944.0,95943.0,90001.0
+Monte Plata,provincia,2010,186602.0,96192.0,90410.0
+Monte Plata,provincia,2011,187040.0,96448.0,90592.0
+Monte Plata,provincia,2012,187462.0,96692.0,90770.0
+Monte Plata,provincia,2013,187942.0,96968.0,90974.0
+Monte Plata,provincia,2014,188328.0,97196.0,91132.0
+Monte Plata,provincia,2015,188671.0,97399.0,91272.0
+Monte Plata,provincia,2016,189166.0,97664.0,91502.0
+Monte Plata,provincia,2017,189649.0,97921.0,91728.0
+Monte Plata,provincia,2018,190179.0,98203.0,91976.0
+Monte Plata,provincia,2019,190628.0,98441.0,92187.0
+Monte Plata,provincia,2020,191033.0,98657.0,92376.0
+Monte Plata,provincia,2021,191447.0,98872.0,92575.0
+Monte Plata,provincia,2022,191845.0,99077.0,92768.0
+Monte Plata,provincia,2023,192298.0,99312.0,92986.0
+Monte Plata,provincia,2024,192665.0,99500.0,93165.0
+Monte Plata,provincia,2025,192997.0,99671.0,93326.0
+Monte Plata,provincia,2026,193180.0,99763.0,93417.0
+Monte Plata,provincia,2027,193353.0,99849.0,93504.0
+Monte Plata,provincia,2028,193570.0,99960.0,93610.0
+Monte Plata,provincia,2029,193710.0,100028.0,93682.0
+Monte Plata,provincia,2030,193818.0,100078.0,93740.0
+Hato Mayor,provincia,2000,85968.0,44695.0,41273.0
+Hato Mayor,provincia,2001,86031.0,44636.0,41395.0
+Hato Mayor,provincia,2002,86062.0,44557.0,41505.0
+Hato Mayor,provincia,2003,86144.0,44507.0,41637.0
+Hato Mayor,provincia,2004,86178.0,44429.0,41749.0
+Hato Mayor,provincia,2005,86221.0,44356.0,41865.0
+Hato Mayor,provincia,2006,86052.0,44174.0,41878.0
+Hato Mayor,provincia,2007,85874.0,43989.0,41885.0
+Hato Mayor,provincia,2008,85723.0,43816.0,41907.0
+Hato Mayor,provincia,2009,85530.0,43620.0,41910.0
+Hato Mayor,provincia,2010,85313.0,43415.0,41898.0
+Hato Mayor,provincia,2011,85369.0,43448.0,41921.0
+Hato Mayor,provincia,2012,85429.0,43479.0,41950.0
+Hato Mayor,provincia,2013,85509.0,43524.0,41985.0
+Hato Mayor,provincia,2014,85541.0,43541.0,42000.0
+Hato Mayor,provincia,2015,85561.0,43554.0,42007.0
+Hato Mayor,provincia,2016,85610.0,43576.0,42034.0
+Hato Mayor,provincia,2017,85653.0,43595.0,42058.0
+Hato Mayor,provincia,2018,85722.0,43627.0,42095.0
+Hato Mayor,provincia,2019,85748.0,43636.0,42112.0
+Hato Mayor,provincia,2020,85762.0,43640.0,42122.0
+Hato Mayor,provincia,2021,85747.0,43626.0,42121.0
+Hato Mayor,provincia,2022,85730.0,43610.0,42120.0
+Hato Mayor,provincia,2023,85738.0,43608.0,42130.0
+Hato Mayor,provincia,2024,85708.0,43585.0,42123.0
+Hato Mayor,provincia,2025,85659.0,43553.0,42106.0
+Hato Mayor,provincia,2026,85548.0,43487.0,42061.0
+Hato Mayor,provincia,2027,85440.0,43424.0,42016.0
+Hato Mayor,provincia,2028,85344.0,43366.0,41978.0
+Hato Mayor,provincia,2029,85216.0,43292.0,41924.0
+Hato Mayor,provincia,2030,85074.0,43210.0,41864.0

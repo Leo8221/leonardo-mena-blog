@@ -1,0 +1,170 @@
+﻿[
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/01_PET.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/01_PET.xlsx",
+        "bytes":  31989,
+        "sha256":  "92EE73270D9D9EA9BFC29D221385B8C68CF24D8D50DE26B7E3BF031EC856AA26",
+        "downloaded_at":  "2026-07-26T12:26:03.1202035-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/1_2_Ocupados_Ocupacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/1_2_Ocupados_Ocupacion.xlsx",
+        "bytes":  41905,
+        "sha256":  "8318AA5DB7497580F35B69C217E92880F89D39143101E4507477EB1BA91DD0A0",
+        "downloaded_at":  "2026-07-26T12:26:03.4562812-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/1_3_Ocupados_Categoria.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/1_3_Ocupados_Categoria.xlsx",
+        "bytes":  35337,
+        "sha256":  "B314E6890C80AA46C6976B9058DFC10490A30BB4B868CB484097165563C3A6F1",
+        "downloaded_at":  "2026-07-26T12:26:03.7155347-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/1_4_Ocupados_Edad.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/1_4_Ocupados_Edad.xlsx",
+        "bytes":  34008,
+        "sha256":  "1B580C4DA045E3D8CD3E95BC83A4E72546969EDA5253A27A1D22E986A341FF3F",
+        "downloaded_at":  "2026-07-26T12:26:03.9884873-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/1_5_Ocupados_Educacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/1_5_Ocupados_Educacion.xlsx",
+        "bytes":  31785,
+        "sha256":  "0CEA9FFF05F3787CFC32E363698AB89F0BA797053EEC7FF06B5E7712DB9A6F90",
+        "downloaded_at":  "2026-07-26T12:26:04.2852684-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/2_2_Sectores_Ocupacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/2_2_Sectores_Ocupacion.xlsx",
+        "bytes":  29018,
+        "sha256":  "997D7D354AD58D82C49F354839F3162EEBA4DD401D304BFD063A5A240CA33B0F",
+        "downloaded_at":  "2026-07-26T12:26:04.5425295-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/2_3_Sectores_Categoria.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/2_3_Sectores_Categoria.xlsx",
+        "bytes":  22995,
+        "sha256":  "26E4FC2FB21943BA38D734361E9A99153A374B69DEA29F91FA8C4C0E2789B313",
+        "downloaded_at":  "2026-07-26T12:26:04.7679990-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/2_4_Sectores_Edad.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/2_4_Sectores_Edad.xlsx",
+        "bytes":  22464,
+        "sha256":  "6A61DB75334433B6A42A0D2E6A1085235515D9FCD328DE04F5EA9E3945F2A3C9",
+        "downloaded_at":  "2026-07-26T12:26:05.0090629-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/2_5_Sectores_Educacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/2_5_Sectores_Educacion.xlsx",
+        "bytes":  22840,
+        "sha256":  "7B9956B5907FE7CB1E483BF488D19F52DE2A0C4115DB363F3892F0534F010B81",
+        "downloaded_at":  "2026-07-26T12:26:05.2907918-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/3_1_Deciles_Rama.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/3_1_Deciles_Rama.xlsx",
+        "bytes":  288519,
+        "sha256":  "C7060A09E90E4934168F93A30A69E7AB0B744D5070B52E0158C2EDBAB72622E0",
+        "downloaded_at":  "2026-07-26T12:26:06.0337016-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/3_2_Deciles_Ocupacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/3_2_Deciles_Ocupacion.xlsx",
+        "bytes":  229157,
+        "sha256":  "7368717FB6256E7D4F7691A4D5C675FF81ECC005A737E4E05ACE3D5A2C5A8A3A",
+        "downloaded_at":  "2026-07-26T12:26:07.3162407-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/3_3_Deciles_Categoria.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/3_3_Deciles_Categoria.xlsx",
+        "bytes":  155392,
+        "sha256":  "22A97D833A046C134815C4DBF5ACD99F4E7D64804E259DAEB31FC45B3526C375",
+        "downloaded_at":  "2026-07-26T12:26:07.6955801-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/3_4_Deciles_Edad.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/3_4_Deciles_Edad.xlsx",
+        "bytes":  135802,
+        "sha256":  "F87EFDE4459788FC1BE9B084E55CE86BB225174526E908F9228450E448E8054D",
+        "downloaded_at":  "2026-07-26T12:26:08.0745545-04:00"
+    },
+    {
+        "source":  "BCRD ENCFT",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/mercado-de-trabajo/documents/3_5_Deciles_Educacion.xlsx",
+        "file":  "atlas/data/raw/bcrd-encft/3_5_Deciles_Educacion.xlsx",
+        "bytes":  147503,
+        "sha256":  "C0881E069EBAA212ADB0076E3A5EA7383D77A08BE6B38715FB8214C2F0B42C82",
+        "downloaded_at":  "2026-07-26T12:26:08.4988651-04:00"
+    },
+    {
+        "source":  "BCRD IPC",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_articulos_base_2019-2020.xlsx",
+        "file":  "atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx",
+        "bytes":  843933,
+        "sha256":  "9ABA8886DFEA2B7E7D61EFB4A392A8C107CBC92DDF3F6402A18BB33CDBD49ADB",
+        "downloaded_at":  "2026-07-26T12:26:09.5444928-04:00"
+    },
+    {
+        "source":  "BCRD IPC",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_tnt_base_2019-2020.xls",
+        "file":  "atlas/data/raw/bcrd-precios/ipc_tnt_base_2019-2020.xls",
+        "bytes":  106496,
+        "sha256":  "D70DC85044AE164D317DDB87D10EA3D2078A17BB241629F47E0602B885D3525C",
+        "downloaded_at":  "2026-07-26T12:26:09.7875735-04:00"
+    },
+    {
+        "source":  "BCRD IPC",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/precios/documents/ipc_base_2019-2020_serie_referencial.xlsx",
+        "file":  "atlas/data/raw/bcrd-precios/ipc_base_2019-2020_serie_referencial.xlsx",
+        "bytes":  14517,
+        "sha256":  "D0BF5CF8D7C28311FB91E41F9FD1E24CFBD6BC64B55B819C8447AC2FF2564613",
+        "downloaded_at":  "2026-07-26T12:26:10.0271418-04:00"
+    },
+    {
+        "source":  "BCRD remesas",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/sector-externo/documents/Remesas_PR.xlsx",
+        "file":  "atlas/data/raw/bcrd-sector-externo/Remesas_PR.xlsx",
+        "bytes":  17742,
+        "sha256":  "3E4C707D077D0EAAAFE17297AD222D360389F3ED42DC6FCCD8EC5CBF93970FA5",
+        "downloaded_at":  "2026-07-26T12:26:10.2443093-04:00"
+    },
+    {
+        "source":  "BCRD remesas",
+        "url":  "https://cdn.bancentral.gov.do/documents/estadisticas/sector-externo/documents/Remesas_PE.xlsx",
+        "file":  "atlas/data/raw/bcrd-sector-externo/Remesas_PE.xlsx",
+        "bytes":  16621,
+        "sha256":  "8E0EC4F5923E1E7B5F2C41F8974133BBEC7B78F0B5A56E70E037E5A6B59E80ED",
+        "downloaded_at":  "2026-07-26T12:26:10.4725055-04:00"
+    },
+    {
+        "source":  "MEM",
+        "url":  "https://mem.gob.do/wp-content/uploads/2025/01/Boletin-Informativo-Generacion-y-Gestion-Energia-2024-V.2.pdf",
+        "file":  "research/sector-electrico-dominicano/data/raw/mem/boletin-generacion-2024.pdf",
+        "bytes":  763026,
+        "sha256":  "F7B01F162EFEBBC8B80BE737BB3917AD3A6B9608AA7D34695D146749CB6381FE",
+        "downloaded_at":  "2026-07-26T12:26:15.0157468-04:00"
+    },
+    {
+        "source":  "MEM",
+        "url":  "https://mem.gob.do/wp-content/uploads/2025/03/Boletin-Informativo-Distribucion-y-Comercializacion-de-Energia-de-las-EDE-diciembre-2024.pdf",
+        "file":  "research/sector-electrico-dominicano/data/raw/mem/boletin-distribucion-diciembre-2024.pdf",
+        "bytes":  954584,
+        "sha256":  "4F61CDC26D047E86AAD7E9CE56848FD89D50F54A5C192709D696CCB0E38EACDC",
+        "downloaded_at":  "2026-07-26T12:26:19.3163079-04:00"
+    }
+]

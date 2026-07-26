@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='792.00pt' height='475.20pt' viewBox='0 0 792.00 475.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw0NzUuMjA='>
+    <rect x='0.00' y='0.00' width='792.00' height='475.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0NzUuMjA=)'>
+<rect x='0.00' y='0.00' width='792.00' height='475.20' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpNDYuNzZ8NzcwLjA4fDkzLjA0fDQyMi43Ng=='>
+    <rect x='46.76' y='93.04' width='723.32' height='329.72' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDYuNzZ8NzcwLjA4fDkzLjA0fDQyMi43Ng==)'>
+<rect x='46.76' y='93.04' width='723.32' height='329.72' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<polyline points='46.76,376.38 770.08,376.38 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='46.76,312.35 770.08,312.35 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='46.76,248.32 770.08,248.32 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='46.76,184.29 770.08,184.29 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='46.76,120.26 770.08,120.26 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='101.03,422.76 101.03,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='173.58,422.76 173.58,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='246.12,422.76 246.12,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='317.88,422.76 317.88,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='388.85,422.76 388.85,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='461.40,422.76 461.40,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='533.94,422.76 533.94,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='605.70,422.76 605.70,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='676.67,422.76 676.67,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='749.22,422.76 749.22,93.04 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<line x1='46.76' y1='376.38' x2='770.08' y2='376.38' style='stroke-width: 0.96; stroke: #9B9B94; stroke-linecap: butt;' />
+<polyline points='53.72,251.59 78.16,347.38 101.03,281.11 125.47,407.77 149.13,388.72 173.58,223.17 197.23,207.38 221.68,247.15 246.12,281.32 269.78,346.66 294.22,325.94 317.88,151.40 342.33,259.21 366.77,272.91 388.85,275.95 413.29,368.35 436.95,349.25 461.40,310.28 485.05,255.62 509.50,149.62 533.94,268.35 557.60,199.68 582.04,147.61 605.70,108.03 630.15,249.46 654.59,368.24 676.67,289.21 701.12,219.86 724.77,278.60 749.22,212.59 ' style='stroke-width: 2.13; stroke: #B65C43; stroke-linecap: butt;' />
+<polyline points='53.72,226.98 78.16,286.81 101.03,257.57 125.47,289.98 149.13,312.59 173.58,265.47 197.23,290.22 221.68,231.25 246.12,268.53 269.78,306.98 294.22,309.74 317.88,208.01 342.33,222.20 366.77,230.78 388.85,248.76 413.29,323.56 436.95,283.99 461.40,287.42 485.05,279.60 509.50,190.37 533.94,258.73 557.60,210.28 582.04,286.45 605.70,174.46 630.15,209.56 654.59,270.64 676.67,303.23 701.12,237.35 724.77,285.39 749.22,257.92 ' style='stroke-width: 2.13; stroke: #4F789F; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0NzUuMjA=)'>
+<text x='41.38' y='379.81' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='41.38' y='315.78' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>0.2</text>
+<text x='41.38' y='251.75' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>0.4</text>
+<text x='41.38' y='187.72' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>0.6</text>
+<text x='41.38' y='123.69' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>0.8</text>
+<text x='101.03' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='16.50px' lengthAdjust='spacingAndGlyphs'>Mar</text>
+<text x='101.03' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text x='173.58' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.45px' lengthAdjust='spacingAndGlyphs'>Jun</text>
+<text x='173.58' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text x='246.12' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>Sep</text>
+<text x='246.12' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text x='317.88' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='17.05px' lengthAdjust='spacingAndGlyphs'>Dec</text>
+<text x='317.88' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text x='388.85' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='16.50px' lengthAdjust='spacingAndGlyphs'>Mar</text>
+<text x='388.85' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='461.40' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.45px' lengthAdjust='spacingAndGlyphs'>Jun</text>
+<text x='461.40' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='533.94' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='17.06px' lengthAdjust='spacingAndGlyphs'>Sep</text>
+<text x='533.94' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='605.70' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='17.05px' lengthAdjust='spacingAndGlyphs'>Dec</text>
+<text x='605.70' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='676.67' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='16.50px' lengthAdjust='spacingAndGlyphs'>Mar</text>
+<text x='676.67' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2026</text>
+<text x='749.22' y='435.01' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.45px' lengthAdjust='spacingAndGlyphs'>Jun</text>
+<text x='749.22' y='445.37' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2026</text>
+<text transform='translate(22.54,257.90) rotate(-90)' text-anchor='middle' style='font-size: 12.00px;fill: #252525; font-family: "Arial";' textLength='119.83px' lengthAdjust='spacingAndGlyphs'>Variación mensual (%)</text>
+<line x1='324.74' y1='66.47' x2='338.56' y2='66.47' style='stroke-width: 2.13; stroke: #B65C43; stroke-linecap: butt;' />
+<line x1='404.60' y1='66.47' x2='418.42' y2='66.47' style='stroke-width: 2.13; stroke: #4F789F; stroke-linecap: butt;' />
+<text x='346.27' y='69.90' style='font-size: 9.60px; font-family: "Arial";' textLength='50.62px' lengthAdjust='spacingAndGlyphs'>IPC general</text>
+<text x='426.13' y='69.90' style='font-size: 9.60px; font-family: "Arial";' textLength='67.70px' lengthAdjust='spacingAndGlyphs'>IPC subyacente</text>
+<text x='46.76' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='537.25px' lengthAdjust='spacingAndGlyphs'>Inflación mensual: IPC general frente a inflación subyacente · junio de 2026 incorpora el dato oficial del BCRD</text>
+<text x='46.76' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='533.75px' lengthAdjust='spacingAndGlyphs'>La inflación general y la subyacente no siempre se mueven juntas</text>
+<text x='46.76' y='459.46' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='362.61px' lengthAdjust='spacingAndGlyphs'>Fuente: BCRD, IPC general y subyacente · la subyacente excluye artículos volátiles y regulados</text>
+</g>
+</g>
+</svg>

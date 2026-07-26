@@ -27,6 +27,7 @@ const ignoredDirs = new Set([
   ".vscode",
   ".agents",
   ".codex-remote-attachments",
+  ".r-library",
   "_freeze",
   "_site",
   "observatorio_cache"

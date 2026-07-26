@@ -1,0 +1,51 @@
+﻿sexo,ocupacion_code,ocupacion_desc,ocupacion_gran_desc,grupo_calificacion_ocupacion,personas
+Mujer,421,Pagadores y cobradores de ventanilla y afines,Personal de apoyo administrativo,Media calificacion,16219
+Mujer,23,Profesionales de la educación,Profesionales científicos e intelectuales,Alta calificacion,12693
+Mujer,522,"Comerciantes y vendedores de tiendas, almacenes y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,11275
+Mujer,412,Secretarios (funciones generales),Personal de apoyo administrativo,Media calificacion,10263
+Hombre,522,"Comerciantes y vendedores de tiendas, almacenes y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,8555
+Mujer,422,Empleados de servicios de información al cliente,Personal de apoyo administrativo,Media calificacion,8095
+Mujer,241,Especialistas en finanzas,Profesionales científicos e intelectuales,Alta calificacion,7577
+Mujer,514,"Peluqueros, especialistas en tratamientos de belleza y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,6901
+Mujer,523,Cajeros de comercios y vendedores de boletas,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,6291
+Mujer,221,Médicos,Profesionales científicos e intelectuales,Alta calificacion,5579
+Mujer,222,Profesionales de enfermería y partería,Profesionales científicos e intelectuales,Alta calificacion,5409
+Mujer,911,Limpiadores y asistentes domésticos de hoteles y oficinas,Ocupaciones elementales,Ocupaciones elementales,5258
+Hombre,832,"Conductores de automóviles, camionetas y motocicletas",Operadores de instalaciones y máquinas y ensambladores,Media calificacion,5008
+Mujer,226,Otros profesionales de la salud,Profesionales científicos e intelectuales,Alta calificacion,4591
+Hombre,541,Personal de los servicios de protección,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,4573
+Mujer,334,Secretarios administrativos y especializados,Técnicos y profesionales de nivel medio,Alta calificacion,3959
+Hombre,422,Empleados de servicios de información al cliente,Personal de apoyo administrativo,Media calificacion,3852
+Hombre,421,Pagadores y cobradores de ventanilla y afines,Personal de apoyo administrativo,Media calificacion,3691
+Hombre,214,Ingenieros (excluyendo ingenieros en electrotecnología),Profesionales científicos e intelectuales,Alta calificacion,3523
+Mujer,524,Otros vendedores,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,3514
+Mujer,261,Profesionales en derecho,Profesionales científicos e intelectuales,Alta calificacion,3277
+Hombre,241,Especialistas en finanzas,Profesionales científicos e intelectuales,Alta calificacion,3202
+Hombre,23,Profesionales de la educación,Profesionales científicos e intelectuales,Alta calificacion,2713
+Mujer,332,Agentes comerciales y corredores,Técnicos y profesionales de nivel medio,Alta calificacion,2510
+Hombre,432,Empleados encargados del registro de materiales y de transportes,Personal de apoyo administrativo,Media calificacion,2476
+Mujer,263,Especialistas en ciencias sociales y teología,Profesionales científicos e intelectuales,Alta calificacion,2467
+Mujer,243,"Profesionales de las ventas, la comercialización y las relaciones públicas",Profesionales científicos e intelectuales,Alta calificacion,2122
+Hombre,251,Desarrolladores y analistas de software y multimedia,Profesionales científicos e intelectuales,Alta calificacion,2118
+Hombre,221,Médicos,Profesionales científicos e intelectuales,Alta calificacion,2096
+Hombre,216,"Arquitectos, urbanistas, agrimensores y diseñadores",Profesionales científicos e intelectuales,Alta calificacion,2081
+Mujer,331,Profesionales de nivel medio en finanzas y matemáticas,Técnicos y profesionales de nivel medio,Alta calificacion,2080
+Mujer,234,Profesores de educación primaria y nivel inicial,Profesionales científicos e intelectuales,Alta calificacion,2044
+Mujer,531,Cuidadores de niños y auxiliares de profesores,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,2014
+Hombre,351,Técnicos en operaciones de tecnología de la información y las comunicaciones y asistencia al usuario,Técnicos y profesionales de nivel medio,Alta calificacion,1946
+Mujer,541,Personal de los servicios de protección,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,1937
+Mujer,515,Supervisores de mantenimiento y limpieza de edificios,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,1924
+Mujer,513,Camareros,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,1911
+Hombre,261,Profesionales en derecho,Profesionales científicos e intelectuales,Alta calificacion,1860
+Hombre,723,Mecánicos y reparadores de máquinas,"Oficiales, operarios y artesanos de artes mecánicas y de otros oficios",Media calificacion,1818
+Hombre,741,Instaladores y reparadores de equipos eléctricos,"Oficiales, operarios y artesanos de artes mecánicas y de otros oficios",Media calificacion,1673
+Hombre,31,Profesionales de las ciencias y la ingeniería de nivel medio,Técnicos y profesionales de nivel medio,Alta calificacion,1653
+Hombre,142,Gerentes de comercios al por mayor y al por menor,Directores y gerentes,Alta calificacion,1644
+Mujer,142,Gerentes de comercios al por mayor y al por menor,Directores y gerentes,Alta calificacion,1627
+Hombre,711,Oficiales y operarios de la construcción (obra gruesa) y afines,"Oficiales, operarios y artesanos de artes mecánicas y de otros oficios",Media calificacion,1615
+Mujer,81,Operadores de instalaciones fijas y máquinas,Operadores de instalaciones y máquinas y ensambladores,Media calificacion,1606
+Mujer,216,"Arquitectos, urbanistas, agrimensores y diseñadores",Profesionales científicos e intelectuales,Alta calificacion,1553
+Mujer,431,Auxiliares contables y financieros,Personal de apoyo administrativo,Media calificacion,1535
+Hombre,524,Otros vendedores,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,1515
+Hombre,514,"Peluqueros, especialistas en tratamientos de belleza y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,1491
+Mujer,413,Operadores de máquinas de oficina,Personal de apoyo administrativo,Media calificacion,1490

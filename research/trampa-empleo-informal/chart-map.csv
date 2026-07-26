@@ -1,0 +1,9 @@
+id,pregunta,familia,fuente,advertencia
+01_formalidad_informalidad_tendencia,¿Cómo cambió la composición formal/informal?,Composición temporal,BCRD ENCFT,2026 T1 preliminar
+02_informalidad_por_rama,¿Dónde se concentra la informalidad?,Barras ordenadas,BCRD ENCFT,Corte más reciente
+03_informalidad_por_educacion,¿Qué relación tiene la educación con la formalidad?,Barras ordenadas,BCRD ENCFT,No es efecto causal
+04_costo_legal_formalizacion,¿Qué suma la legislación al costo de un empleado?,Líneas de escenarios,TSS/INFOTEP,Vacaciones anualizadas; no incluye cesantía ni ISR
+06_proporcion_informal_100,¿Qué proporción del empleo es informal?,Cuadrícula proporcional,BCRD ENCFT,100 celdas; cada celda equivale aproximadamente a 1%
+07_mapa_rd_presion_laboral,¿Dónde es más amplia la presión laboral?,Mapa de RD,BCRD ENCFT,SU4 regional; no es informalidad provincial
+08_costo_formalizacion_escenarios,¿Cuánto cuesta formalizar distintos salarios?,Escenarios comparables,TSS/INFOTEP,Supuestos ilustrativos; no incluye ISR ni cesantía
+05_matriz_formal_informal_rama,Composición del empleo por rama,Mapa de calor,BCRD ENCFT,Intensidad: millones de ocupados

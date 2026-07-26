@@ -83,9 +83,14 @@ ggplot(canasta, aes(x = cambio, y = grupo, fill = tipo)) +
   geom_vline(xintercept = 0, color = pal$texto, linewidth = 0.5) +
   
   geom_text(
-    aes(label = paste0(ifelse(cambio > 0, "+", ""), round(cambio, 1)),
-        x = ifelse(cambio > 0, cambio + 0.2, cambio - 0.2),
-        hjust = ifelse(cambio > 0, 0, 1)),
+    aes(
+      label = case_when(
+        abs(cambio) < 0.005 ~ "≈0",
+        TRUE ~ sprintf("%+.2f", cambio)
+      ),
+      x = ifelse(cambio >= 0, pmax(cambio + 0.25, 0.25), pmin(cambio - 0.25, -0.25)),
+      hjust = ifelse(cambio >= 0, 0, 1)
+    ),
     size = 3.8,
     color = pal$texto,
     fontface = "bold"
@@ -98,6 +103,11 @@ ggplot(canasta, aes(x = cambio, y = grupo, fill = tipo)) +
       "Caída fuerte" = pal$plomo,
       "Caída" = scales::alpha(pal$plomo, 0.7)
     )
+  ) +
+
+  scale_x_continuous(
+    labels = scales::label_number(accuracy = 0.1),
+    expand = expansion(mult = c(0.08, 0.18))
   ) +
   
   labs(

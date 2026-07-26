@@ -1,0 +1,38 @@
+---
+title: "Camus, Sísifo y el emprendedor MIPYME"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Figuras sobre productividad, supervivencia, crédito y obstáculos declarados por las MIPYMES dominicanas."
+categories:
+  - "MIPYMES"
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+```{=html}
+<figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/01_ingreso_por_empleado_formalidad.svg" alt="Ingreso total promedio por trabajador en MIPYMES formales e informales."><figcaption>Ingreso total promedio por trabajador y formalidad.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/02_problemas_de_supervivencia_mipyme.svg" alt="Problemas declarados por las MIPYMES, ordenados por porcentaje ponderado."><figcaption>Problemas declarados por las MIPYMES.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/03_credito_formalidad_tamano.svg" alt="Acceso a crédito por tamaño y formalidad de la empresa."><figcaption>Acceso a crédito por tamaño y formalidad.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/04_mapa_calor_problemas_tamano_formalidad.svg" alt="Mapa de calor de problemas declarados por tamaño y formalidad de la MIPYME."><figcaption>Problemas declarados por tamaño y formalidad.</figcaption></figure>
+```
+
+<figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/05_mapa_rd_formalidad_mipyme.svg" alt="Mapa de Republica Dominicana con porcentaje ponderado de MIPYMES formales por provincia."><figcaption>Formalidad MIPYME por provincia.</figcaption></figure>
+
+## Fuentes y materiales reproducibles
+
+- [Constructor de figuras](../../../research/build-five-post-graphics.R)
+- [Datos procesados](../../../research/camus-mipyme/data/procesados/)
+- [Datos de la tesis incorporados al repositorio](../../../research/camus-mipyme/data/raw/tesis/)
+- [Manifiesto SHA-256 de las bases de tesis](../../../research/camus-mipyme/data/raw/tesis/tesis-mipyme-manifest.csv)
+- [Importador reproducible de las bases de tesis](../../../tools/import-thesis-mipyme.ps1)
+- [Mapa de figuras](../../../research/camus-mipyme/chart-map.csv)
+- [Base MIPYME del blog](../../../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx)

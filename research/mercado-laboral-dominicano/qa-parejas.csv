@@ -1,0 +1,7 @@
+"chequeo","estado","detalle"
+"R lee UTF-8","OK","l10n_info UTF-8 = TRUE"
+"Controles PostgreSQL sin errores","OK","meta.controles_calidad_analitica: 0 errores"
+"Cuatro indicadores presentes","OK","situacion ocupacional, educacion, campo y ocupacion"
+"Universo de edades plausibles","OK","1.731.814"
+"Numeradores dentro de denominadores","OK","0 <= iguales <= denominador"
+"Porcentajes y coberturas en rango","OK","0-100"

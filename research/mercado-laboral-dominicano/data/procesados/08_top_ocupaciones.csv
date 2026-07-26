@@ -1,0 +1,31 @@
+sexo,ocupacion_code,ocupacion_desc,ocupacion_gran_desc,grupo_calificacion_ocupacion,personas,ocupacion_corta,ocupacion_panel
+Hombres,214,Ingenieros (excluyendo ingenieros en electrotecnología),Profesionales científicos e intelectuales,Alta calificacion,3523,"Ingenieros (excluyendo ingenieros en
+electrotecnología)","Hombres|Ingenieros (excluyendo ingenieros en
+electrotecnología)"
+Hombres,421,Pagadores y cobradores de ventanilla y afines,Personal de apoyo administrativo,Media calificacion,3691,"Pagadores y cobradores de ventanilla
+y afines","Hombres|Pagadores y cobradores de ventanilla
+y afines"
+Hombres,422,Empleados de servicios de información al cliente,Personal de apoyo administrativo,Media calificacion,3852,"Empleados de servicios de
+información al cliente","Hombres|Empleados de servicios de
+información al cliente"
+Hombres,541,Personal de los servicios de protección,Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,4573,"Personal de los servicios de
+protección","Hombres|Personal de los servicios de
+protección"
+Hombres,832,"Conductores de automóviles, camionetas y motocicletas",Operadores de instalaciones y máquinas y ensambladores,Media calificacion,5008,"Conductores de automóviles,
+camionetas y motocicletas","Hombres|Conductores de automóviles,
+camionetas y motocicletas"
+Hombres,522,"Comerciantes y vendedores de tiendas, almacenes y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,8555,"Comerciantes y vendedores de
+tiendas, almacenes y afines","Hombres|Comerciantes y vendedores de
+tiendas, almacenes y afines"
+Mujeres,241,Especialistas en finanzas,Profesionales científicos e intelectuales,Alta calificacion,7577,Especialistas en finanzas,Mujeres|Especialistas en finanzas
+Mujeres,422,Empleados de servicios de información al cliente,Personal de apoyo administrativo,Media calificacion,8095,"Empleados de servicios de
+información al cliente","Mujeres|Empleados de servicios de
+información al cliente"
+Mujeres,412,Secretarios (funciones generales),Personal de apoyo administrativo,Media calificacion,10263,Secretarios (funciones generales),Mujeres|Secretarios (funciones generales)
+Mujeres,522,"Comerciantes y vendedores de tiendas, almacenes y afines",Trabajadores de los servicios y vendedores de comercios y mercados,Media calificacion,11275,"Comerciantes y vendedores de
+tiendas, almacenes y afines","Mujeres|Comerciantes y vendedores de
+tiendas, almacenes y afines"
+Mujeres,23,Profesionales de la educación,Profesionales científicos e intelectuales,Alta calificacion,12693,Profesionales de la educación,Mujeres|Profesionales de la educación
+Mujeres,421,Pagadores y cobradores de ventanilla y afines,Personal de apoyo administrativo,Media calificacion,16219,"Pagadores y cobradores de ventanilla
+y afines","Mujeres|Pagadores y cobradores de ventanilla
+y afines"

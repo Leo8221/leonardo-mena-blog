@@ -1,0 +1,43 @@
+---
+title: "La trampa estructural del sector eléctrico"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Figuras sobre generación, pérdidas, recuperación, cobranza y déficit de las distribuidoras eléctricas."
+categories:
+  - "Electricidad"
+  - "Finanzas públicas"
+  - "La República habla de"
+draft: true
+format:
+  html:
+    toc: false
+include-after-body:
+  - ../../../reading-progress.html
+  - ../../../share-buttons-auto.html
+---
+
+<script>document.body.classList.add('editorial-post');</script>
+
+```{=html}
+<figure class="article-figure"><img src="../../../research/sector-electrico-dominicano/figuras/01_matriz_generacion_2024.svg" alt="Generación acumulada del SENI por combustible durante 2024."><figcaption>Matriz de generación del SENI por combustible.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/sector-electrico-dominicano/figuras/02_perdidas_recuperacion_cobranza.svg" alt="Indicadores agregados de pérdidas, recuperación y cobranza de las EDE en diciembre de 2024."><figcaption>Pérdidas, recuperación y cobranza.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/sector-electrico-dominicano/figuras/03_deficit_y_subsidio_electricidad.svg" alt="Déficits de las EDE y subsidio del Gobierno Central durante 2024."><figcaption>Déficits acumulados y subsidio.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/sector-electrico-dominicano/figuras/05_mapa_calor_indicadores_gestion.svg" alt="Mapa de calor que compara cobranza, recuperación de energía y recuperación de efectivo en diciembre de 2023 y 2024."><figcaption>Indicadores de gestión: diciembre de 2023 frente a diciembre de 2024.</figcaption></figure>
+```
+
+<figure class="article-figure"><img src="../../../research/sector-electrico-dominicano/figuras/06_mapa_rd_perdidas_electricas_provincia.svg" alt="Mapa de Republica Dominicana con perdidas totales de energia por provincia."><figcaption>Perdidas totales reportadas por provincia, agregadas por GWh cuando se superponen EDE; el informe no separa componentes tecnicos y no tecnicos.</figcaption></figure>
+
+## Fuentes y materiales reproducibles
+
+- [Constructor de figuras](../../../research/build-five-post-graphics.R)
+- [Datos procesados](../../../research/sector-electrico-dominicano/data/procesados/)
+- [Informe MEM de Gestión Comercial EDE, abril de 2026](https://mem.gob.do/wp-content/uploads/2026/07/Informe_Gestion_Comercial_EDE_abril_2026.pdf)
+- [Mapa de figuras](../../../research/sector-electrico-dominicano/chart-map.csv)
+- [Manifiesto local de boletines e informes MEM](../../../research/sector-electrico-dominicano/data/raw/mem/mem-electricity-manifest.csv)
+- [Descargador reproducible de series MEM](../../../tools/download-mem-electricity-series.ps1)
+- [Catálogo MEM de boletines de generación](https://mem.gob.do/category/sector-electrico/boletin-de-generacion-y-gestion-de-energia/)
+- [Catálogo MEM de distribución y comercialización](https://mem.gob.do/category/sector-electrico/boletin-de-distribucion-y-comercializacion-de-energia/)
+- [Catálogo MEM de informes de desempeño](https://mem.gob.do/category/sector-electrico/informe-de-desempeno/)
+- [Catálogo MEM de informes de gestión comercial](https://mem.gob.do/category/sector-electrico/informe-de-gestion-comercial/)
+- [Boletín MEM de generación 2024](https://mem.gob.do/wp-content/uploads/2025/01/Boletin-Informativo-Generacion-y-Gestion-Energia-2024-V.2.pdf)
+- [Boletín MEM de distribución diciembre 2024](https://mem.gob.do/wp-content/uploads/2025/03/Boletin-Informativo-Distribucion-y-Comercializacion-de-Energia-de-las-EDE-diciembre-2024.pdf)

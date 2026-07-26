@@ -1,0 +1,10 @@
+chequeo,estado,detalle
+UTF-8 de R,OK,LC_COLLATE=English_United States.utf8;LC_CTYPE=English_United States.utf8;LC_MONETARY=English_United States.utf8;LC_NUMERIC=C;LC_TIME=English_United States.utf8
+ENCFT nacional: 47 trimestres consecutivos,OK,2014 T3 a 2026 T1
+ENCFT por sexo: mismos periodos,OK,47 periodos por sexo
+Ramas por sexo reconcilian con total,OK,diferencia maxima 0.000 personas
+Ramas formal/informal reconcilian con totales,OK,diferencia menor de 0.5 personas por redondeo
+TSS: total igual a suma de componentes,OK,275 meses; diferencia maxima 0
+Censo: composiciones suman 100%,OK,4 grupos validados
+Censo: ocupaciones con etiquetas,OK,50 filas etiquetadas
+Cobertura CNO entre ocupados 25-34 con superior,OK,58.34%

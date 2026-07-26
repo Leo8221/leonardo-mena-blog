@@ -1,0 +1,8 @@
+"chequeo","estado","detalle"
+"R lee UTF-8","OK","l10n_info UTF-8 = TRUE"
+"Controles PostgreSQL sin errores","OK","meta.controles_calidad_analitica: 0 errores"
+"Universo de parejas unico","OK","1.731.814"
+"Doce indicadores calculados","OK","12 atributos individuales calculados; sin variables compartidas por hogar"
+"Cuatro resultados previos replicados","OK","ocupacion, educacion, campo y grupo ocupacional"
+"Marginales y porcentajes validos","OK","observado, esperado, kappa y cobertura dentro de rango"
+"Seleccion editorial de seis variables","OK","grupo_edad_10; nivel_educativo; dificultad_funcional; autoidentificacion; categoria_ocupacional; campo_estudio"

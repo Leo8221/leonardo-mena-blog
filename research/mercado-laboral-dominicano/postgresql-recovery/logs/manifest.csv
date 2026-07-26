@@ -1,0 +1,13 @@
+﻿year,db,table,kind,url,local_path,bytes
+2010,censo_2010,hogares,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/CENSO2010RD-HOGARES.csv","D:\datos_one_censos\2010\CENSO2010RD-HOGARES.csv",313700766
+2010,censo_2010,hogares,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/Libro%20de%20codigo%20BD_Hogares_Censo2010.htm","D:\datos_one_censos\2010\Libro_codigo_hogares_2010.htm",111973
+2010,censo_2010,personas,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/CENSO2010RD-PERSONAS.csv","D:\datos_one_censos\2010\CENSO2010RD-PERSONAS.csv",1797139777
+2010,censo_2010,personas,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/Libro%20de%20codigo%20BD_Personas_Censo2010.htm","D:\datos_one_censos\2010\Libro_codigo_personas_2010.htm",607225
+2010,censo_2010,viviendas,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/CENSO2010RD-VIVIENDA-COMUNIDAD.csv","D:\datos_one_censos\2010\CENSO2010RD-VIVIENDA-COMUNIDAD.csv",434174397
+2010,censo_2010,viviendas,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2010_PUB/Libro%20de%20codigo%20BD_Vivienda_Comunidad_Censo2010.htm","D:\datos_one_censos\2010\Libro_codigo_vivienda_comunidad_2010.htm",164035
+2002,censo_2002,hogares,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/CENSO2002RD-HOGARES.csv","D:\datos_one_censos\2002\CENSO2002RD-HOGARES.csv",195123138
+2002,censo_2002,hogares,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/Libro_de_codigos_BD_Hogares_Censo2002.htm","D:\datos_one_censos\2002\Libro_codigo_hogares_2002.htm",71764
+2002,censo_2002,personas,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/CENSO2002RD-PERSONAS.csv","D:\datos_one_censos\2002\CENSO2002RD-PERSONAS.csv",1630695992
+2002,censo_2002,personas,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/Libro_de_codigos_BD_Personas_Censo2002.htm","D:\datos_one_censos\2002\Libro_codigo_personas_2002.htm",164553
+2002,censo_2002,viviendas,csv,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/CENSO2002RD-VIVIENDAS.csv","D:\datos_one_censos\2002\CENSO2002RD-VIVIENDAS.csv",162013412
+2002,censo_2002,viviendas,codebook,"https://www.one.gob.do/catalogo-datos/CENSO_POBLACION_VIVIENDA/CNPV_2002_PUB/Libro_de_codigos_BD_Viviendas_Censo2002.htm","D:\datos_one_censos\2002\Libro_codigo_viviendas_2002.htm",56112

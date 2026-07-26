@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='756.00pt' height='381.60pt' viewBox='0 0 756.00 381.60'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3NTYuMDB8MC4wMHwzODEuNjA='>
+    <rect x='0.00' y='0.00' width='756.00' height='381.60' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3NTYuMDB8MC4wMHwzODEuNjA=)'>
+<rect x='0.00' y='0.00' width='756.00' height='381.60' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpNTMuOTV8NzM0LjA4fDUxLjg1fDMzOS41Mw=='>
+    <rect x='53.95' y='51.85' width='680.13' height='287.67' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTMuOTV8NzM0LjA4fDUxLjg1fDMzOS41Mw==)'>
+<rect x='53.95' y='51.85' width='680.13' height='287.67' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<rect x='53.95' y='92.39' width='544.10' height='75.84' style='stroke-width: 0.53; stroke: #252525; stroke-linecap: butt; stroke-linejoin: miter; fill: #76825A;' />
+<rect x='53.95' y='223.15' width='320.19' height='75.84' style='stroke-width: 0.53; stroke: #252525; stroke-linecap: butt; stroke-linejoin: miter; fill: #B65C43;' />
+<text x='603.11' y='133.66' style='font-size: 9.39px; font-weight: bold; font-family: "Arial";' textLength='63.11px' lengthAdjust='spacingAndGlyphs'>RD$ 1.354.288</text>
+<text x='378.57' y='264.42' style='font-size: 9.39px; font-weight: bold; font-family: "Arial";' textLength='55.28px' lengthAdjust='spacingAndGlyphs'>RD$ 796.962</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3NTYuMDB8MC4wMHwzODEuNjA=)'>
+<text x='48.57' y='264.50' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='34.62px' lengthAdjust='spacingAndGlyphs'>Informal</text>
+<text x='48.57' y='133.74' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='29.81px' lengthAdjust='spacingAndGlyphs'>Formal</text>
+<text x='53.95' y='351.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='27.17px' lengthAdjust='spacingAndGlyphs'>RD$ 0</text>
+<text x='214.66' y='351.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='56.48px' lengthAdjust='spacingAndGlyphs'>RD$ 400.000</text>
+<text x='375.36' y='351.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='56.48px' lengthAdjust='spacingAndGlyphs'>RD$ 800.000</text>
+<text x='536.07' y='351.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='64.48px' lengthAdjust='spacingAndGlyphs'>RD$ 1.200.000</text>
+<text x='696.77' y='351.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='64.48px' lengthAdjust='spacingAndGlyphs'>RD$ 1.600.000</text>
+<text x='53.95' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='402.59px' lengthAdjust='spacingAndGlyphs'>Ingreso total promedio por trabajador · ENMIPYMES 2023 · estimación ponderada</text>
+<text x='53.95' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='368.42px' lengthAdjust='spacingAndGlyphs'>El emprendedor no solo carga con el negocio</text>
+<text x='53.95' y='365.86' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='269.92px' lengthAdjust='spacingAndGlyphs'>Fuente: ONE/BCRD, ENMIPYMES 2023 · Elaboración: Leonardo Mena</text>
+</g>
+</g>
+</svg>

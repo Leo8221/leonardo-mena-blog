@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='756.00pt' height='417.60pt' viewBox='0 0 756.00 417.60'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3NTYuMDB8MC4wMHw0MTcuNjA='>
+    <rect x='0.00' y='0.00' width='756.00' height='417.60' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3NTYuMDB8MC4wMHw0MTcuNjA=)'>
+<rect x='0.00' y='0.00' width='756.00' height='417.60' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpNTcuOTV8NzM0LjA4fDUxLjg1fDM3NS41Mw=='>
+    <rect x='57.95' y='51.85' width='676.13' height='323.67' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTcuOTV8NzM0LjA4fDUxLjg1fDM3NS41Mw==)'>
+<rect x='57.95' y='51.85' width='676.13' height='323.67' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<polyline points='57.95,285.90 734.08,285.90 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='57.95,191.42 734.08,191.42 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='57.95,96.94 734.08,96.94 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='126.30,375.53 126.30,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='201.64,375.53 201.64,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='276.87,375.53 276.87,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='352.21,375.53 352.21,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='427.45,375.53 427.45,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='502.79,375.53 502.79,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='578.02,375.53 578.02,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='653.36,375.53 653.36,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='728.60,375.53 728.60,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<line x1='57.95' y1='191.42' x2='734.08' y2='191.42' style='stroke-width: 1.16; stroke: #9B9B94; stroke-dasharray: 6.21,6.21; stroke-linecap: butt;' />
+<polyline points='88.68,191.42 91.88,190.60 94.76,195.93 97.96,196.07 101.05,192.15 104.24,189.80 107.34,191.26 110.53,190.84 113.73,195.74 116.82,196.46 120.01,199.12 123.11,205.29 126.30,213.36 129.49,219.91 132.38,227.12 135.58,233.26 138.67,233.92 141.86,239.65 144.95,246.98 148.15,250.97 151.34,250.93 154.44,247.58 157.63,245.13 160.72,243.67 163.92,240.38 167.11,241.58 170.10,241.71 173.30,241.26 176.39,238.76 179.58,239.66 182.68,237.49 185.87,245.83 189.07,249.44 192.16,246.47 195.35,240.70 198.44,241.06 201.64,243.28 204.83,242.54 207.72,240.45 210.91,238.56 214.01,235.98 217.20,228.24 220.29,224.18 223.49,220.14 226.68,219.37 229.78,221.87 232.97,221.95 236.06,222.24 239.26,218.81 242.45,217.20 245.34,221.36 248.53,225.34 251.62,224.16 254.82,220.32 257.91,221.38 261.11,224.43 264.30,222.89 267.39,218.92 270.59,213.00 273.68,203.98 276.87,195.50 280.07,191.36 282.96,194.65 286.15,191.42 289.24,192.79 292.44,195.50 295.53,195.17 298.72,196.51 301.92,196.17 305.01,200.58 308.21,200.01 311.30,198.60 314.49,196.74 317.69,188.58 320.68,187.41 323.87,185.44 326.96,186.91 330.16,191.45 333.25,192.00 336.45,191.11 339.64,188.66 342.73,186.12 345.93,184.40 349.02,190.97 352.21,194.73 355.41,191.94 358.29,186.17 361.49,187.29 364.58,184.83 367.78,183.89 370.87,185.00 374.06,189.67 377.26,192.81 380.35,190.57 383.54,194.94 386.64,199.35 389.83,197.76 393.03,188.78 395.91,185.20 399.11,185.58 402.20,187.59 405.39,189.37 408.49,185.98 411.68,183.23 414.88,182.02 417.97,181.28 421.16,174.68 424.25,171.05 427.45,166.66 430.64,168.18 433.53,173.70 436.73,178.42 439.82,177.92 443.01,173.37 446.10,174.03 452.49,167.39 455.59,153.60 458.78,154.53 461.87,155.06 465.07,154.57 468.26,148.72 471.25,136.72 474.45,119.74 477.54,96.23 480.73,66.56 483.83,78.84 487.02,85.41 490.21,91.92 493.31,98.93 496.50,105.92 499.59,114.61 502.79,124.53 505.98,135.30 508.87,152.79 512.06,163.32 515.16,169.67 518.35,174.30 521.44,178.03 524.64,186.15 527.83,196.97 530.92,207.35 534.12,214.17 537.21,214.90 540.41,214.46 543.60,241.03 546.49,271.51 549.68,277.78 552.77,280.24 555.97,290.72 559.06,298.95 562.26,314.52 565.45,322.99 568.54,317.60 571.74,313.32 574.83,305.66 578.02,294.01 581.22,302.74 584.11,320.48 587.30,326.04 590.39,326.71 593.59,322.60 596.68,312.04 599.87,305.21 603.07,306.81 606.16,307.81 609.36,308.48 612.45,305.29 653.36,278.77 656.56,271.44 659.44,264.02 662.64,296.17 665.73,320.20 668.93,318.00 672.02,304.81 675.21,289.99 678.41,282.79 681.50,276.54 684.69,280.71 687.79,291.82 690.98,294.80 694.18,314.99 697.06,340.06 700.26,347.30 703.35,360.81 ' style='stroke-width: 2.35; stroke: #B65C43; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw3NTYuMDB8MC4wMHw0MTcuNjA=)'>
+<text x='52.57' y='289.34' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>90%</text>
+<text x='52.57' y='194.86' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='24.52px' lengthAdjust='spacingAndGlyphs'>100%</text>
+<text x='52.57' y='100.38' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='23.80px' lengthAdjust='spacingAndGlyphs'>110%</text>
+<text x='126.30' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='20.59px' lengthAdjust='spacingAndGlyphs'>2011</text>
+<text x='201.64' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2013</text>
+<text x='276.87' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2015</text>
+<text x='352.21' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2017</text>
+<text x='427.45' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2019</text>
+<text x='502.79' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2021</text>
+<text x='578.02' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2023</text>
+<text x='653.36' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='728.60' y='387.77' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='21.31px' lengthAdjust='spacingAndGlyphs'>2027</text>
+<text transform='translate(22.54,213.69) rotate(-90)' text-anchor='middle' style='font-size: 12.00px;fill: #252525; font-family: "Arial";' textLength='134.05px' lengthAdjust='spacingAndGlyphs'>Poder de compra relativo</text>
+<text x='57.95' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='418.30px' lengthAdjust='spacingAndGlyphs'>Poder de compra real de los pesos recibidos por cada US$100 · enero de 2010 = 100</text>
+<text x='57.95' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='351.36px' lengthAdjust='spacingAndGlyphs'>El tipo de cambio no cuenta toda la historia</text>
+<text x='57.95' y='401.86' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='300.69px' lengthAdjust='spacingAndGlyphs'>Cálculo: tipo de cambio de compra deflactado por IPC nacional · Fuente: BCRD</text>
+</g>
+</g>
+</svg>
