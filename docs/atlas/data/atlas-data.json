@@ -4,26 +4,26 @@
     {
       "id": "usd",
       "label": "Dólar spot",
-      "value": "RD$ 59.46",
-      "delta": "-0.92 vs. mes anterior",
-      "meta": "Venta promedio mensual BCRD, May 2026",
+      "value": "RD$ 59.24",
+      "delta": "-0.22 vs. mes anterior",
+      "meta": "Venta promedio mensual BCRD, Jun 2026",
       "tone": "good",
       "module": "pulso-macro"
     },
     {
       "id": "inflation",
       "label": "Inflación interanual",
-      "value": "5.35%",
+      "value": "5.67%",
       "delta": "Fuera de meta",
-      "meta": "IPC interanual BCRD, May 2026",
+      "meta": "IPC interanual BCRD, Jun 2026",
       "tone": "warn",
       "module": "pulso-macro"
     },
     {
       "id": "trade",
       "label": "Exportaciones totales",
-      "value": "US$ 15957.6 MM",
-      "delta": "Exportaciones 2025",
+      "value": "US$ 4156.8 MM",
+      "delta": "Exportaciones 2026",
       "meta": "BCRD sector externo",
       "tone": "neutral",
       "module": "comercio-exterior"
@@ -67,13 +67,6 @@
     },
     "macro": [
       {
-        "period": "Ago 2025",
-        "dolar": 62.2947,
-        "inflacion": 3.7136,
-        "imae": 1.5046,
-        "tpm": 5.75
-      },
-      {
         "period": "Sep 2025",
         "dolar": 62.9986,
         "inflacion": 3.7556,
@@ -105,54 +98,61 @@
         "period": "Ene 2026",
         "dolar": 63.5063,
         "inflacion": 4.984,
-        "imae": 3.4869,
+        "imae": 3.4874,
         "tpm": 5.25
       },
       {
         "period": "Feb 2026",
         "dolar": 62.1964,
         "inflacion": 4.6724,
-        "imae": 3.8646,
+        "imae": 3.872,
         "tpm": 5.25
       },
       {
         "period": "Mar 2026",
         "dolar": 60.6703,
         "inflacion": 4.6291,
-        "imae": 5.0708,
+        "imae": 5.0625,
         "tpm": 5.25
       },
       {
         "period": "Abr 2026",
         "dolar": 60.3846,
         "inflacion": 5.1143,
-        "imae": 3.7724,
+        "imae": 3.7909,
         "tpm": 5.25
       },
       {
         "period": "May 2026",
         "dolar": 59.463,
         "inflacion": 5.3461,
-        "imae": 4.7274,
+        "imae": 4.7123,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun 2026",
+        "dolar": 59.2435,
+        "inflacion": 5.6669,
+        "imae": 6.3813,
         "tpm": 5.25
       }
     ],
     "external": [
       {
         "period": "2020",
-        "pressure": 31.2
+        "pressure": 31.4
       },
       {
         "period": "2021",
-        "pressure": 55.2
+        "pressure": 54.4
       },
       {
         "period": "2022",
-        "pressure": 77.7
+        "pressure": 78.1
       },
       {
         "period": "2023",
-        "pressure": 87.4
+        "pressure": 87.8
       },
       {
         "period": "2024",
@@ -160,7 +160,7 @@
       },
       {
         "period": "2025",
-        "pressure": 98.3
+        "pressure": 97.9
       }
     ],
     "events": {
@@ -331,11 +331,6 @@
       ],
       "flows": [
         {
-          "period": "2021",
-          "exports": 12486.4,
-          "imports": 24282
-        },
-        {
           "period": "2022",
           "exports": 13750.2,
           "imports": 30912.6
@@ -352,8 +347,13 @@
         },
         {
           "period": "2025",
-          "exports": 15957.6,
+          "exports": 15697.3,
           "imports": 29792.9
+        },
+        {
+          "period": "2026",
+          "exports": 4156.8,
+          "imports": 7394.6
         }
       ]
     },
@@ -393,7 +393,7 @@
         {
           "period": "2026",
           "employment": 2.55,
-          "employers": 111.4
+          "employers": 112
         }
       ],
       "sectors": [
@@ -453,47 +453,42 @@
       "components": [
         {
           "component": "Transporte",
-          "contribution": 2.16,
+          "contribution": 1.14,
           "pressure": 100
         },
         {
-          "component": "Recreación y Cultura",
-          "contribution": -0.98,
-          "pressure": 45.3
-        },
-        {
-          "component": "Alimentos y Bebidas no Alcohólicas",
-          "contribution": -0.58,
-          "pressure": 26.9
-        },
-        {
           "component": "Bienes y Servicios Diversos",
-          "contribution": 0.42,
-          "pressure": 19.2
+          "contribution": 0.85,
+          "pressure": 75
         },
         {
           "component": "Restaurantes y Hoteles",
+          "contribution": 0.67,
+          "pressure": 58.7
+        },
+        {
+          "component": "Muebles",
+          "contribution": 0.53,
+          "pressure": 46.6
+        },
+        {
+          "component": "Alimentos y Bebidas no Alcohólicas",
           "contribution": 0.41,
-          "pressure": 18.9
+          "pressure": 35.7
         },
         {
           "component": "Salud",
-          "contribution": 0.36,
-          "pressure": 16.9
+          "contribution": 0.23,
+          "pressure": 20
         },
         {
           "component": "Bebidas Alcohólicas y Tabaco",
-          "contribution": 0.18,
-          "pressure": 8.3
+          "contribution": 0.22,
+          "pressure": 19
         }
       ],
       "passThrough": [],
       "timeline": [
-        {
-          "period": "Ago 2025",
-          "headline": 3.7136,
-          "core": 4.3196
-        },
         {
           "period": "Sep 2025",
           "headline": 3.7556,
@@ -538,6 +533,11 @@
           "period": "May 2026",
           "headline": 5.3461,
           "core": 4.8614
+        },
+        {
+          "period": "Jun 2026",
+          "headline": 5.6669,
+          "core": 4.9594
         }
       ]
     },
@@ -711,17 +711,17 @@
     }
   },
   "liveDataCutoff": {
-    "macro": "May 2026",
-    "prices": "May 2026",
-    "trade": 2025
+    "macro": "Jun 2026",
+    "prices": "Jun 2026",
+    "trade": 2026
   },
   "brand": {
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-07-26T18:51:10.831Z",
+  "generatedAt": "2026-07-26T21:06:30.803Z",
   "sourceRun": {
-    "generatedAt": "2026-06-27T21:36:52Z",
+    "generatedAt": "2026-07-26T21:06:24Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -743,7 +743,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-01-04T09:52:05Z",
+        "modifiedAt": "2026-07-26T21:03:53Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -757,12 +757,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 11107,
+        "bytes": 10775,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
-        "md5": "ee597dd9fb3b8d362500e0d3347642d7",
+        "modifiedAt": "2026-07-26T21:06:06Z",
+        "md5": "d322c449484d8abc89587f4f804545d4",
         "usedBy": [
           "build-map-assets.R"
         ],
@@ -779,7 +779,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
+        "modifiedAt": "2026-07-26T21:06:06Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -797,7 +797,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-01-04T09:52:05Z",
+        "modifiedAt": "2026-07-26T21:03:53Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -815,7 +815,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
+        "modifiedAt": "2026-07-26T21:06:06Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -829,12 +829,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 730,
+        "bytes": 681,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
-        "md5": "7f6c0b92081ab5e85f827424fa473482",
+        "modifiedAt": "2026-07-26T21:06:06Z",
+        "md5": "226b4db570fb0e107cf1d166450be3c1",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -847,12 +847,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 1024,
+        "bytes": 991,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
-        "md5": "6a21a8eb84f6b46fc994748a25d7a721",
+        "modifiedAt": "2026-07-26T21:06:06Z",
+        "md5": "d5b5f62dcb3b7295db679eda8ac64185",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -865,12 +865,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 3386,
+        "bytes": 3306,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
-        "md5": "7af7d83a7586727feded645946e63505",
+        "modifiedAt": "2026-07-26T21:06:06Z",
+        "md5": "1978ad56bb09c68b463d86890fd87abc",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -883,12 +883,12 @@
         "kind": "file",
         "status": "cached",
         "required": true,
-        "bytes": 5501,
+        "bytes": 5396,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:33Z",
-        "md5": "5356bca075b056d11d7d79d800600f26",
+        "modifiedAt": "2026-07-26T21:06:06Z",
+        "md5": "e14445e6783730b92d7ae21c37a029a2",
         "usedBy": [
           "build-article-visuals.R"
         ],
@@ -901,7 +901,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 272644,
+        "bytes": 277864,
         "discovered": 37,
         "selected": 3,
         "downloaded": 3,
@@ -919,7 +919,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 435714,
+        "bytes": 438946,
         "discovered": 30,
         "selected": 4,
         "downloaded": 4,
@@ -937,7 +937,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 2563632,
+        "bytes": 2488492,
         "discovered": 42,
         "selected": 8,
         "downloaded": 8,
@@ -991,7 +991,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 453946,
+        "bytes": 455504,
         "discovered": 44,
         "selected": 5,
         "downloaded": 5,
@@ -1009,7 +1009,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 354531,
+        "bytes": 355249,
         "discovered": 14,
         "selected": 1,
         "downloaded": 1,
@@ -1027,12 +1027,12 @@
         "kind": "file",
         "status": "downloaded",
         "required": false,
-        "bytes": 11776,
+        "bytes": 11817,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:50Z",
-        "md5": "f315a81ccf168243633d01a1031c5372",
+        "modifiedAt": "2026-07-26T21:06:22Z",
+        "md5": "867bd915b8f66c7bb5703f0eeee17e0c",
         "usedBy": [
           "build-atlas-data.mjs"
         ],
@@ -1045,12 +1045,12 @@
         "kind": "file",
         "status": "downloaded",
         "required": false,
-        "bytes": 5407,
+        "bytes": 5424,
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:51Z",
-        "md5": "a31c65e35327f0943e7275f8d9ae0755",
+        "modifiedAt": "2026-07-26T21:06:22Z",
+        "md5": "fbeba036b1070179c6b7e27966375ce0",
         "usedBy": [
           "build-atlas-data.mjs"
         ],
@@ -1067,7 +1067,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:51Z",
+        "modifiedAt": "2026-07-26T21:06:23Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1085,7 +1085,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-06-27T21:36:52Z",
+        "modifiedAt": "2026-07-26T21:06:24Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1095,11 +1095,11 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-06-27T21:37:07Z",
+    "generatedAt": "2026-07-26T21:06:25Z",
     "dataCutoff": {
-      "macro": "May 2026",
-      "prices": "May 2026",
-      "trade": 2025
+      "macro": "Jun 2026",
+      "prices": "Jun 2026",
+      "trade": 2026
     },
     "active": true
   },
