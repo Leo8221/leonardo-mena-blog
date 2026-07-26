@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='720.00pt' height='446.40pt' viewBox='0 0 720.00 446.40'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw0NDYuNDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='446.40' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0NDYuNDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='446.40' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpNzkuMjZ8Njk2LjA5fDUxLjg1fDM5MC4yMg=='>
+    <rect x='79.26' y='51.85' width='616.83' height='338.37' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNzkuMjZ8Njk2LjA5fDUxLjg1fDM5MC4yMg==)'>
+<rect x='79.26' y='51.85' width='616.83' height='338.37' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<polyline points='79.26,281.77 696.09,281.77 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='79.26,152.66 696.09,152.66 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='107.30,390.22 107.30,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='247.49,390.22 247.49,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='387.68,390.22 387.68,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='527.86,390.22 527.86,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='668.05,390.22 668.05,51.85 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='107.30,88.11 135.34,195.70 163.37,249.49 191.41,281.77 219.45,303.29 247.49,318.66 275.52,330.18 303.56,339.15 331.60,346.32 359.64,352.19 387.68,357.08 415.71,361.22 443.75,364.77 471.79,367.84 499.83,370.53 527.86,372.90 555.90,375.01 583.94,376.90 611.98,378.60 640.01,380.14 668.05,381.53 ' style='stroke-width: 2.45; stroke: #B65C43; stroke-linecap: butt;' />
+<circle cx='163.37' cy='249.49' r='3.37' style='stroke-width: 0.77; stroke: #B65C43; fill: #B65C43;' />
+<circle cx='387.68' cy='357.08' r='3.37' style='stroke-width: 0.77; stroke: #B65C43; fill: #B65C43;' />
+<circle cx='668.05' cy='381.53' r='3.37' style='stroke-width: 0.77; stroke: #B65C43; fill: #B65C43;' />
+<line x1='79.26' y1='390.22' x2='696.09' y2='390.22' style='stroke-width: 1.71; stroke: #4F789F; stroke-dasharray: 9.10,9.10; stroke-linecap: butt;' />
+<text x='499.83' y='391.77' style='font-size: 9.39px;fill: #4F789F; font-family: "Arial";' textLength='90.23px' lengthAdjust='spacingAndGlyphs'>costo futuro relevante</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0NDYuNDA=)'>
+<text x='73.88' y='285.20' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='37.83px' lengthAdjust='spacingAndGlyphs'>RD$ 500</text>
+<text x='73.88' y='156.09' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='45.83px' lengthAdjust='spacingAndGlyphs'>RD$ 1 000</text>
+<text x='107.30' y='402.47' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='247.49' y='402.47' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='387.68' y='402.47' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='527.86' y='402.47' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>15</text>
+<text x='668.05' y='402.47' text-anchor='middle' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='10.66px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='387.68' y='416.07' text-anchor='middle' style='font-size: 12.00px;fill: #252525; font-family: "Arial";' textLength='75.12px' lengthAdjust='spacingAndGlyphs'>Visitas futuras</text>
+<text transform='translate(22.54,221.04) rotate(-90)' text-anchor='middle' style='font-size: 12.00px;fill: #252525; font-family: "Arial";' textLength='136.05px' lengthAdjust='spacingAndGlyphs'>Costo promedio por visita</text>
+<text x='79.26' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='387.25px' lengthAdjust='spacingAndGlyphs'>Ejemplo ilustrativo: membresía de RD$2,500 y costo por visita futura de RD$80</text>
+<text x='79.26' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='474.19px' lengthAdjust='spacingAndGlyphs'>La cuota pagada cambia el promedio, no la decisión futura</text>
+<text x='79.26' y='430.66' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='384.89px' lengthAdjust='spacingAndGlyphs'>El costo hundido ya ocurrió; la decisión racional mira beneficios y costos que todavía pueden cambiar.</text>
+</g>
+</g>
+</svg>

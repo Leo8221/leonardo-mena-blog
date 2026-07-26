@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='720.00pt' height='504.00pt' viewBox='0 0 720.00 504.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1MDQuMDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='504.00' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpMTE4LjMzfDY5Ni4wOXw1MS44NXw0NjIuNDg='>
+    <rect x='118.33' y='51.85' width='577.76' height='410.63' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTE4LjMzfDY5Ni4wOXw1MS44NXw0NjIuNDg=)'>
+<rect x='118.33' y='51.85' width='577.76' height='410.63' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<rect x='118.33' y='257.17' width='288.88' height='205.31' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #4F789F;' />
+<rect x='407.21' y='257.17' width='288.88' height='205.31' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #B65C43;' />
+<rect x='118.33' y='51.85' width='288.88' height='205.31' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #C79B53;' />
+<rect x='407.21' y='51.85' width='288.88' height='205.31' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #76825A;' />
+<text x='262.77' y='357.61' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='76.50px' lengthAdjust='spacingAndGlyphs'>Mercado sano</text>
+<text x='262.77' y='370.18' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='102.44px' lengthAdjust='spacingAndGlyphs'>calidad observable</text>
+<text x='551.65' y='357.61' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='99.30px' lengthAdjust='spacingAndGlyphs'>Selección adversa</text>
+<text x='551.65' y='370.18' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='142.84px' lengthAdjust='spacingAndGlyphs'>el comprador no distingue</text>
+<text x='262.77' y='152.30' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='72.06px' lengthAdjust='spacingAndGlyphs'>Riesgo moral</text>
+<text x='262.77' y='164.86' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='154.91px' lengthAdjust='spacingAndGlyphs'>la conducta cambia después</text>
+<text x='551.65' y='152.30' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='68.92px' lengthAdjust='spacingAndGlyphs'>Señalización</text>
+<text x='551.65' y='164.86' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='146.67px' lengthAdjust='spacingAndGlyphs'>reputación o señal costosa</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1MDQuMDA=)'>
+<text x='112.95' y='363.05' text-anchor='end' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='86.50px' lengthAdjust='spacingAndGlyphs'>Antes del intercambio</text>
+<text x='112.95' y='157.73' text-anchor='end' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='99.00px' lengthAdjust='spacingAndGlyphs'>Después del intercambio</text>
+<text x='262.77' y='474.30' text-anchor='middle' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='105.50px' lengthAdjust='spacingAndGlyphs'>La información se observa</text>
+<text x='551.65' y='474.30' text-anchor='middle' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='97.50px' lengthAdjust='spacingAndGlyphs'>La información se oculta</text>
+<text x='118.33' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='282.03px' lengthAdjust='spacingAndGlyphs'>Mapa conceptual de problemas de información asimétrica</text>
+<text x='118.33' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='495.92px' lengthAdjust='spacingAndGlyphs'>La prudencia empieza donde la información no está repartida</text>
+<text x='118.33' y='488.26' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='419.86px' lengthAdjust='spacingAndGlyphs'>Esquema de teoría económica; Gracián funciona aquí como lente literario, no como autor de la teoría moderna.</text>
+</g>
+</g>
+</svg>
