@@ -719,9 +719,9 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-07-27T03:42:02.386Z",
+  "generatedAt": "2026-07-27T04:34:44.408Z",
   "sourceRun": {
-    "generatedAt": "2026-07-27T03:41:52Z",
+    "generatedAt": "2026-07-27T04:34:37Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -743,7 +743,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:39:21Z",
+        "modifiedAt": "2026-07-27T04:32:19Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -761,7 +761,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "d322c449484d8abc89587f4f804545d4",
         "usedBy": [
           "build-map-assets.R"
@@ -779,7 +779,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -797,7 +797,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:39:21Z",
+        "modifiedAt": "2026-07-27T04:32:19Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -815,7 +815,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -833,7 +833,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "226b4db570fb0e107cf1d166450be3c1",
         "usedBy": [
           "build-article-visuals.R"
@@ -851,7 +851,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "d5b5f62dcb3b7295db679eda8ac64185",
         "usedBy": [
           "build-article-visuals.R"
@@ -869,7 +869,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "1978ad56bb09c68b463d86890fd87abc",
         "usedBy": [
           "build-article-visuals.R"
@@ -887,7 +887,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:42Z",
+        "modifiedAt": "2026-07-27T04:34:26Z",
         "md5": "e14445e6783730b92d7ae21c37a029a2",
         "usedBy": [
           "build-article-visuals.R"
@@ -1031,7 +1031,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:50Z",
+        "modifiedAt": "2026-07-27T04:34:35Z",
         "md5": "867bd915b8f66c7bb5703f0eeee17e0c",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1049,7 +1049,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:50Z",
+        "modifiedAt": "2026-07-27T04:34:35Z",
         "md5": "fbeba036b1070179c6b7e27966375ce0",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1067,7 +1067,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:51Z",
+        "modifiedAt": "2026-07-27T04:34:36Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1085,7 +1085,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-07-27T03:41:52Z",
+        "modifiedAt": "2026-07-27T04:34:37Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1095,7 +1095,7 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-07-27T03:41:53Z",
+    "generatedAt": "2026-07-27T04:34:38Z",
     "dataCutoff": {
       "macro": "Jun 2026",
       "prices": "Jun 2026",
