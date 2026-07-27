@@ -218,13 +218,18 @@ official_june <- 0.51
 latest_raw <- groups |> filter(fecha == as.Date("2026-06-01"), !is.na(contribucion_pp)) |> group_by(grupo) |> summarise(contribucion_pp = sum(contribucion_pp), .groups = "drop") |> arrange(desc(contribucion_pp))
 latest_bridge <- bind_rows(slice_head(latest_raw, n = 5), tibble(grupo = "Resto de grupos", contribucion_pp = sum(latest_raw$contribucion_pp[-seq_len(min(5, nrow(latest_raw)))])))
 residual <- official_june - sum(latest_bridge$contribucion_pp)
-latest_bridge <- bind_rows(latest_bridge, tibble(grupo = "Ajuste de enlace", contribucion_pp = residual)) |> mutate(grupo = reorder(grupo, contribucion_pp), label_x = contribucion_pp + 0.005, label_hjust = 0)
+latest_bridge <- bind_rows(latest_bridge, tibble(grupo = "Ajuste de enlace", contribucion_pp = residual)) |> mutate(
+  grupo = reorder(grupo, contribucion_pp),
+  label_value = sprintf("%.2f", if_else(abs(contribucion_pp) < 0.005, 0, contribucion_pp)),
+  label_x = if_else(contribucion_pp < 0, contribucion_pp - 0.006, contribucion_pp + 0.006),
+  label_hjust = if_else(contribucion_pp < 0, 1, 0)
+)
 write_csv(latest_bridge, file.path(data_dir, "05_puente_junio_2026.csv"))
 p_bridge <- ggplot(latest_bridge, aes(contribucion_pp, grupo, fill = grupo == "Ajuste de enlace")) +
   geom_col(width = 0.68, colour = pal$tinta, linewidth = 0.2) +
-  geom_text(aes(x = label_x, label = sprintf("%.2f", contribucion_pp), hjust = label_hjust), size = 3.1, fontface = "bold") +
+  geom_text(aes(x = label_x, label = label_value, hjust = label_hjust), size = 3.1, fontface = "bold") +
   scale_fill_manual(values = c(`FALSE` = pal$terracota, `TRUE` = pal$gris), guide = "none") +
-  scale_x_continuous(limits = c(0, max(latest_bridge$label_x) + 0.025), expand = c(0, 0)) +
+  scale_x_continuous(limits = c(min(0, min(latest_bridge$label_x) - 0.012), max(latest_bridge$label_x) + 0.025), expand = c(0, 0)) +
   labs(title = "Descomposición de la inflación mensual de junio de 2026", subtitle = "Principales incidencias, resto de grupos y ajuste hasta el total oficial de 0.51%", x = "Puntos porcentuales", y = NULL, caption = "Fuente: BCRD, IPC de junio de 2026 e índices por grupo · el ajuste recoge redondeos y diferencias de enlace; no es un componente económico") +
   theme_editorial("x")
 export_plot(p_bridge, fig_dir, "05_puente_junio_2026", 10.5, 7.2)
