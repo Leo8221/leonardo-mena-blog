@@ -1,0 +1,25 @@
+---
+title: "La cuesta de agosto dominicana"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre la estacionalidad de precios del IPC dominicano."
+categories:
+  - "República Dominicana"
+  - "Inflación"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/cuesta-agosto/figuras/01_indice_estacional_ipc.svg" alt="Índice estacional mensual del IPC por grupo, normalizado al promedio anual de 2020 a 2025."><figcaption>Índice estacional del IPC por grupo.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/cuesta-agosto/figuras/02_agosto_por_grupo.svg" alt="Desviación del índice de agosto frente al promedio anual de cada grupo del IPC."><figcaption>Desviación del índice de agosto frente al promedio anual del grupo.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Datos procesados](../../../research/cuesta-agosto/data/procesados/)
+- [Mapa de figuras](../../../research/cuesta-agosto/chart-map.csv)
+

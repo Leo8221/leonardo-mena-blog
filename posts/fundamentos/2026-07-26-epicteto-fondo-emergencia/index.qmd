@@ -1,0 +1,24 @@
+---
+title: "Epicteto y por qué nadie tiene fondo de emergencia"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre restricciones materiales y respuesta ante emergencias financieras."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/epicteto-fondo-emergencia/figuras/01_respuesta_emergencia_ingreso.svg" alt="Respuesta declarada de los hogares dominicanos ante una emergencia financiera, por grupo de ingreso."><figcaption>Primera respuesta ante una emergencia financiera por grupo de ingreso.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Datos procesados](../../../research/epicteto-fondo-emergencia/data/procesados/)
+- [Mapa de figuras](../../../research/epicteto-fondo-emergencia/chart-map.csv)
+

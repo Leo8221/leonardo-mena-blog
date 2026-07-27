@@ -1,0 +1,24 @@
+---
+title: "El precio justo de Aristóteles frente al pricing dinámico"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre demanda, eficiencia y justicia percibida."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/precio-justo-pricing-dinamico/figuras/01_demanda_precio_dinamico.svg" alt="Relación conceptual entre demanda y precio dinámico."><figcaption>Demanda y precio dinámico en un esquema ilustrativo.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/precio-justo-pricing-dinamico/figuras/02_matriz_eficiencia_justicia.svg" alt="Matriz conceptual de eficiencia y justicia percibida."><figcaption>Eficiencia y justicia percibida como dimensiones distintas.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Mapa de figuras](../../../research/precio-justo-pricing-dinamico/chart-map.csv)
+

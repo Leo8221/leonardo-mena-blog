@@ -1,0 +1,27 @@
+---
+title: "Nearshoring y sus límites naturales"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre exportaciones, empleo, actividades e inversión de las zonas francas dominicanas."
+categories:
+  - "República Dominicana"
+  - "Comercio exterior"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/nearshoring-limites/figuras/01_exportaciones_importaciones_zonas_francas.svg" alt="Exportaciones e importaciones de zonas francas dominicanas entre 2015 y 2024."><figcaption>Exportaciones e importaciones de zonas francas.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/nearshoring-limites/figuras/02_empresas_empleos_zonas_francas.svg" alt="Empresas en operación y empleos directos de zonas francas entre 2015 y 2024."><figcaption>Empresas en operación y empleo directo.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/nearshoring-limites/figuras/03_actividad_empleo_exportaciones_zonas_francas.svg" alt="Empleo directo y exportaciones por actividad de zona franca en 2024."><figcaption>Empleo y exportaciones por actividad.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/nearshoring-limites/figuras/04_inversion_zonas_francas_region.svg" alt="Inversión acumulada de zonas francas por región en 2024."><figcaption>Inversión acumulada por región.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-data-rich-post-graphics.R)
+- [Datos procesados](../../../research/nearshoring-limites/data/procesados/)
+- [Mapa de figuras](../../../research/nearshoring-limites/chart-map.csv)
+

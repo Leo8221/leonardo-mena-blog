@@ -1,0 +1,23 @@
+---
+title: "El sunk cost de la membresía de gimnasio"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre costos hundidos y decisiones futuras."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/sunk-cost-gimnasio/figuras/01_costo_hundido_vs_costo_futuro.svg" alt="Comparación conceptual entre costo hundido y costo futuro de una membresía de gimnasio."><figcaption>Costo hundido frente a costos y beneficios que todavía pueden cambiar.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Mapa de figuras](../../../research/sunk-cost-gimnasio/chart-map.csv)
+

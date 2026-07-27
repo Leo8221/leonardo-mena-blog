@@ -1,0 +1,23 @@
+---
+title: "Kierkegaard y la decisión económica"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre decisión, incertidumbre y costo de oportunidad."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/kierkegaard-decision/figuras/01_arbol_decision_compromiso.svg" alt="Árbol conceptual de decisión y compromiso económico."><figcaption>Decisión, compromiso y caminos que dejan de estar disponibles.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Mapa de figuras](../../../research/kierkegaard-decision/chart-map.csv)
+

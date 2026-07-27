@@ -1,0 +1,27 @@
+---
+title: "Ingenios azucareros y el mito del desarrollo temprano"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual histórico sobre producción, exportaciones, CEA y control de la industria azucarera dominicana entre 1940 y 1990."
+categories:
+  - "República Dominicana"
+  - "Historia económica"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/ingenios-azucar/figuras/01_produccion_exportaciones_azucar_1940_1990.svg" alt="Producción y exportaciones de azúcar crudo de República Dominicana entre 1940 y 1990."><figcaption>Producción y exportaciones de azúcar crudo, 1940–1990.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/ingenios-azucar/figuras/02_produccion_cea_1970_1990.svg" alt="Producción de azúcar crudo del Consejo Estatal del Azúcar entre 1970 y 1990."><figcaption>Producción del CEA, 1970–1990.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/ingenios-azucar/figuras/03_control_trujillo_industria_1951_1957.svg" alt="Participación controlada por Trujillo en la industria azucarera entre 1951 y 1957."><figcaption>Control de Trujillo en la industria azucarera.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-historical-sugar-graphics.R)
+- [Datos procesados](../../../research/ingenios-azucar/data/procesados/)
+- [Fuentes históricas descargadas](../../../research/ingenios-azucar/data/raw/)
+- [Mapa de figuras](../../../research/ingenios-azucar/chart-map.csv)
+

@@ -1,0 +1,23 @@
+---
+title: "Baltasar Gracián y la economía de la información"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre prudencia y asimetría de información."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/gracian-economia-informacion/figuras/01_matriz_informacion_asimetrica.svg" alt="Matriz conceptual de información observada y oculta antes y después de un intercambio."><figcaption>Información observada y oculta en una relación de intercambio.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Mapa de figuras](../../../research/gracian-economia-informacion/chart-map.csv)
+

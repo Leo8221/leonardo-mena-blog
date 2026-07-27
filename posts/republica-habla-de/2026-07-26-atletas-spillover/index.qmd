@@ -1,0 +1,26 @@
+---
+title: "El mito del spillover de los atletas"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre estipendios, disciplinas y costo por persona en programas deportivos."
+categories:
+  - "República Dominicana"
+  - "Economía del deporte"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/atletas-spillover/figuras/01_atletas_estipendios_disciplina.svg" alt="Atletas con estipendio fijo y estipendio mensual por disciplina en 2025."><figcaption>Atletas y estipendios por disciplina.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/atletas-spillover/figuras/02_atletas_sexo_estipendios.svg" alt="Distribución por sexo de atletas con estipendio fijo en 2025."><figcaption>Distribución de atletas con estipendio fijo por sexo.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/atletas-spillover/figuras/03_costo_por_persona_programas_deportivos.svg" alt="Costo reportado por persona según programa deportivo en 2025."><figcaption>Costo reportado por persona según programa.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-data-rich-post-graphics.R)
+- [Datos procesados](../../../research/atletas-spillover/data/procesados/)
+- [Mapa de figuras](../../../research/atletas-spillover/chart-map.csv)
+

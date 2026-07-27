@@ -1,0 +1,24 @@
+---
+title: "La trampa de los ingresos medios"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre convergencia del ingreso y el límite del desarrollo."
+categories:
+  - "República Dominicana"
+  - "Desarrollo"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La narrativa se añadirá después. -->
+
+<figure class="article-figure"><img src="../../../research/trampa-ingresos-medios/figuras/01_trayectoria_ingreso_pc_ppp.svg" alt="Trayectoria indexada del ingreso per cápita de República Dominicana frente a economías de ingreso mediano alto desde 1990."><figcaption>Trayectoria comparada del ingreso per cápita.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Datos procesados](../../../research/trampa-ingresos-medios/data/procesados/)
+- [Mapa de figuras](../../../research/trampa-ingresos-medios/chart-map.csv)
+
