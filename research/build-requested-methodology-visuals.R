@@ -86,16 +86,16 @@ ipc_groups <- bind_rows(lapply(group_rows, function(row) tibble(
   grupo = str_remove(str_squish(as.character(raw_ipc[[1]][row])), "^[0-9]{2} "),
   anio = years[cols], mes = months[cols],
   indice = suppressWarnings(as.numeric(unlist(raw_ipc[row, cols], use.names = FALSE)))
-))) |> filter(anio >= 2020, anio <= 2025, !is.na(indice))
+))) |> filter(anio >= 2021, anio <= 2025, !is.na(indice))
 aug_year <- ipc_groups |> group_by(grupo, anio) |> mutate(indice_rel_anual = 100 * indice / mean(indice, na.rm = TRUE)) |> ungroup() |> filter(mes == 8) |> select(grupo, anio, indice_agosto = indice_rel_anual)
 write_csv(aug_year, file.path(cuesta_dir, "data", "procesados", "03_agosto_por_anio.csv"))
 aug_year_plot <- aug_year |> group_by(grupo) |> summarise(var = var(indice_agosto), .groups = "drop") |> arrange(desc(var)) |> pull(grupo)
 p_cuesta_year <- aug_year |> mutate(grupo = factor(grupo, levels = aug_year_plot)) |> ggplot(aes(anio, grupo, fill = indice_agosto)) +
   geom_tile(colour = pal$crema, linewidth = .4) + geom_text(aes(label = sprintf("%.1f", indice_agosto)), size = 2.7, fontface = "bold") +
-  scale_x_continuous(breaks = 2020:2025) + scale_fill_gradient2(low = pal$azul, mid = pal$crema, high = pal$terracota, midpoint = 100, name = "Indice") +
+  scale_x_continuous(breaks = 2021:2025) + scale_fill_gradient2(low = pal$azul, mid = pal$crema, high = pal$terracota, midpoint = 100, name = "Indice") +
   labs(title = "La cuesta de agosto no aparece todos los años igual", subtitle = "Indice de agosto frente al promedio anual de cada grupo · 100 = promedio del año", x = NULL, y = NULL, caption = "Fuente: BCRD, IPC por grupos · cifras descriptivas; no identifican una causa estacional") + theme_editorial("none") + theme(axis.text.y = element_text(size = 8.5))
 export_plot(p_cuesta_year, file.path(cuesta_dir, "figuras"), "03_agosto_por_anio", 10.5, 7.4)
-write_map(cuesta_dir, list(tibble(id = "01_indice_estacional_ipc", pregunta = "¿La presion de precios tiene un patron mensual?", familia = "Mapa de calor estacional", fuente = "BCRD IPC", advertencia = "Indice descriptivo, no causal"), tibble(id = "02_agosto_por_grupo", pregunta = "¿Que grupos se encarecen relativamente en agosto?", familia = "Barras ordenadas", fuente = "BCRD IPC", advertencia = "Promedio 2020-2025"), tibble(id = "03_agosto_por_anio", pregunta = "¿La cuesta se repite con la misma intensidad?", familia = "Mapa de calor por año", fuente = "BCRD IPC", advertencia = "Agosto se compara con el promedio de su propio año")))
+write_map(cuesta_dir, list(tibble(id = "01_indice_estacional_ipc", pregunta = "¿La presion de precios tiene un patron mensual?", familia = "Mapa de calor estacional", fuente = "BCRD IPC", advertencia = "Indice descriptivo, no causal"), tibble(id = "02_agosto_por_grupo", pregunta = "¿Que grupos se encarecen relativamente en agosto?", familia = "Barras ordenadas", fuente = "BCRD IPC", advertencia = "Promedio 2021-2025"), tibble(id = "03_agosto_por_anio", pregunta = "¿La cuesta se repite con la misma intensidad?", familia = "Mapa de calor por año", fuente = "BCRD IPC", advertencia = "Agosto se compara con el promedio de su propio año")))
 
 # 15. Ingreso mediano: complementar ingreso con productividad y apertura.
 middle_dir <- file.path(repo_root, "research", "trampa-ingresos-medios")

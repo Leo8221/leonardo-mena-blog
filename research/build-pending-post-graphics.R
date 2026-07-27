@@ -89,7 +89,7 @@ ipc_groups <- bind_rows(lapply(group_rows, function(row) tibble(
 assert_true(max(ipc_groups$fecha) >= as.Date("2026-06-01"), "El IPC no llega al corte oficial esperado.")
 
 aug <- ipc_groups |>
-  filter(anio >= 2020, anio <= 2025) |>
+  filter(anio >= 2021, anio <= 2025) |>
   group_by(grupo, anio) |>
   mutate(indice_rel_anual = 100 * indice / mean(indice, na.rm = TRUE)) |>
   ungroup() |>
@@ -102,18 +102,18 @@ p_aug_heat <- ggplot(aug_heat, aes(mes, grupo, fill = indice_estacional)) +
   geom_tile(colour = pal$crema, linewidth = .35) +
   scale_x_continuous(breaks = 1:12, labels = c("Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"), expand = c(0, 0)) +
   scale_fill_gradient2(low = pal$azul, mid = pal$crema, high = pal$terracota, midpoint = 100, name = "Índice") +
-  labs(title = "La presión de precios cambia según el mes", subtitle = "Índice estacional del IPC por grupo · promedio 2020–2025 = 100", x = NULL, y = NULL, caption = "Fuente: BCRD, IPC por grupos · cada grupo se normaliza contra su propio promedio anual") +
+  labs(title = "La presión de precios cambia según el mes", subtitle = "Índice estacional del IPC por grupo · promedio 2021–2025 = 100", x = NULL, y = NULL, caption = "Fuente: BCRD, IPC por grupos · cada grupo se normaliza contra su propio promedio anual") +
   theme_editorial("none") + theme(axis.text.y = element_text(size = 8.5))
 export_plot(p_aug_heat, file.path(repo_root, "research", "cuesta-agosto", "figuras"), "01_indice_estacional_ipc", 11, 7.7)
 p_aug_bar <- aug |> filter(mes == 8) |> arrange(indice_estacional) |> mutate(grupo = factor(grupo, levels = grupo), desviacion_pct = indice_estacional - 100) |>
   ggplot(aes(desviacion_pct, grupo)) + geom_segment(aes(x = 0, xend = desviacion_pct, y = grupo, yend = grupo), colour = pal$terracota, linewidth = 5, lineend = "butt") +
   geom_vline(xintercept = 0, colour = pal$gris, linetype = "dashed") + geom_text(aes(label = sprintf("%+.1f%%", desviacion_pct)), hjust = -.12, size = 3.1, fontface = "bold") +
   scale_x_continuous(labels = function(x) sprintf("%+.1f%%", x), limits = c(min(aug$indice_estacional) - 100 - .15, max(aug$indice_estacional) - 100 + .55), expand = c(0, 0)) +
-  labs(title = "Agosto no presiona todos los rubros por igual", subtitle = "Desviación del índice de agosto frente al promedio anual del mismo grupo · 2020–2025", x = "Diferencia frente al promedio anual", y = NULL, caption = "Fuente: BCRD, IPC por grupos · 0% equivale al promedio anual del grupo") + theme_editorial("x")
+  labs(title = "Agosto no presiona todos los rubros por igual", subtitle = "Desviación del índice de agosto frente al promedio anual del mismo grupo · 2021–2025", x = "Diferencia frente al promedio anual", y = NULL, caption = "Fuente: BCRD, IPC por grupos · 0% equivale al promedio anual del grupo") + theme_editorial("x")
 export_plot(p_aug_bar, file.path(repo_root, "research", "cuesta-agosto", "figuras"), "02_agosto_por_grupo", 10.5, 7.4)
 write_map(file.path(repo_root, "research", "cuesta-agosto"), list(
   tibble(id = "01_indice_estacional_ipc", pregunta = "¿La presión de precios tiene un patrón mensual?", familia = "Mapa de calor estacional", fuente = "BCRD IPC", advertencia = "Índice descriptivo, no causal"),
-  tibble(id = "02_agosto_por_grupo", pregunta = "¿Qué grupos se encarecen relativamente en agosto?", familia = "Barras ordenadas", fuente = "BCRD IPC", advertencia = "Promedio 2020–2025")
+  tibble(id = "02_agosto_por_grupo", pregunta = "¿Qué grupos se encarecen relativamente en agosto?", familia = "Barras ordenadas", fuente = "BCRD IPC", advertencia = "Promedio 2021–2025")
 ))
 
 # 2. Epicteto: fondo de emergencia sin moralizar la restricción material.

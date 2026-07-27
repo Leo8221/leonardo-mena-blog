@@ -1,4 +1,4 @@
 id,pregunta,familia,fuente,advertencia
 01_indice_estacional_ipc,¿La presion de precios tiene un patron mensual?,Mapa de calor estacional,BCRD IPC,"Indice descriptivo, no causal"
-02_agosto_por_grupo,¿Que grupos se encarecen relativamente en agosto?,Barras ordenadas,BCRD IPC,Promedio 2020-2025
+02_agosto_por_grupo,¿Que grupos se encarecen relativamente en agosto?,Barras ordenadas,BCRD IPC,Promedio 2021-2025
 03_agosto_por_anio,¿La cuesta se repite con la misma intensidad?,Mapa de calor por año,BCRD IPC,Agosto se compara con el promedio de su propio año
