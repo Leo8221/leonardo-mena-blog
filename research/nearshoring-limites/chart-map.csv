@@ -1,0 +1,5 @@
+id,pregunta,familia,fuente,advertencia
+01_exportaciones_importaciones_zonas_francas,¿Cómo cambia el saldo externo de zonas francas?,Líneas comparables,CNZFE/BCRD,2024 preliminar
+02_empresas_empleos_zonas_francas,¿La expansión empresarial se traduce en empleo al mismo ritmo?,Tendencias en panel,CNZFE,Empleos directos sin operadoras
+03_actividad_empleo_exportaciones_zonas_francas,¿Qué actividades concentran empleo y exportaciones?,Barras facetadas,CNZFE,Exportaciones en millones de US$
+04_inversion_zonas_francas_region,¿Dónde se concentra la inversión?,Barras ordenadas,CNZFE,"Inversión acumulada, no flujo anual"

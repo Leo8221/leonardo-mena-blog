@@ -1,0 +1,4 @@
+id,pregunta,familia,fuente,advertencia
+01_atletas_estipendios_disciplina,¿Dónde se concentra el apoyo al alto rendimiento?,Barras facetadas,MIDEREC,Muestra las disciplinas con más beneficiarios
+02_atletas_sexo_estipendios,¿Cómo se distribuye la nómina por sexo?,Barra apilada,MIDEREC,527 atletas con estipendio fijo
+03_costo_por_persona_programas_deportivos,¿El gasto por persona es uniforme entre programas?,Barras comparables,MIDEREC,Cociente descriptivo; no es spillover causal

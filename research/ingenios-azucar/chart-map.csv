@@ -1,0 +1,4 @@
+id,pregunta,familia,fuente,advertencia
+01_produccion_exportaciones_azucar_1940_1990,¿El auge azucarero fue una trayectoria continua?,Serie histórica con corte de fuentes,Hall/USDA/BCRD-FMI,Serie nacional ensamblada por tramos documentados; no se interpolan años
+02_produccion_cea_1970_1990,¿Qué pasó con la producción estatal después del auge?,Serie histórica estatal,INAZUCAR/IMF,No representa la producción nacional total
+03_control_trujillo_industria_1951_1957,¿La expansión también concentró propiedad?,Barras históricas,ONE/Hall,"Control de industria, no participación de empleo"

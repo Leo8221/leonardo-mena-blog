@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='612.00pt' height='396.00pt' viewBox='0 0 612.00 396.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2MTIuMDB8MC4wMHwzOTYuMDA='>
+    <rect x='0.00' y='0.00' width='612.00' height='396.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2MTIuMDB8MC4wMHwzOTYuMDA=)'>
+<rect x='0.00' y='0.000000000000057' width='612.00' height='396.00' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+</g>
+<defs>
+  <clipPath id='cpNDkuNDJ8NTg4LjA5fDkzLjA0fDM2OC4xOQ=='>
+    <rect x='49.42' y='93.04' width='538.67' height='275.15' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDkuNDJ8NTg4LjA5fDkzLjA0fDM2OC4xOQ==)'>
+<rect x='49.42' y='93.04' width='538.67' height='275.15' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<polyline points='49.42,368.19 588.09,368.19 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='49.42,315.98 588.09,315.98 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='49.42,263.77 588.09,263.77 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='49.42,211.56 588.09,211.56 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='49.42,159.35 588.09,159.35 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<polyline points='49.42,107.14 588.09,107.14 ' style='stroke-width: 0.75; stroke: #DED9D0; stroke-linecap: butt;' />
+<rect x='73.90' y='211.56' width='489.70' height='156.63' style='stroke-width: 1.16; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #4F789F;' />
+<rect x='73.90' y='93.04' width='489.70' height='118.52' style='stroke-width: 1.16; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #B65C43;' />
+<text x='318.75' y='293.95' text-anchor='middle' style='font-size: 11.38px; font-weight: bold;fill: #F7F1E7; font-family: "Arial";' textLength='51.84px' lengthAdjust='spacingAndGlyphs'>300 · 57%</text>
+<text x='318.75' y='156.37' text-anchor='middle' style='font-size: 11.38px; font-weight: bold;fill: #F7F1E7; font-family: "Arial";' textLength='51.84px' lengthAdjust='spacingAndGlyphs'>227 · 43%</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2MTIuMDB8MC4wMHwzOTYuMDA=)'>
+<text x='44.04' y='371.63' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='44.04' y='319.41' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.98px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='44.04' y='267.20' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.98px' lengthAdjust='spacingAndGlyphs'>200</text>
+<text x='44.04' y='214.99' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.98px' lengthAdjust='spacingAndGlyphs'>300</text>
+<text x='44.04' y='162.78' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.98px' lengthAdjust='spacingAndGlyphs'>400</text>
+<text x='44.04' y='110.57' text-anchor='end' style='font-size: 9.60px;fill: #252525; font-family: "Arial";' textLength='15.98px' lengthAdjust='spacingAndGlyphs'>500</text>
+<text transform='translate(22.54,230.62) rotate(-90)' text-anchor='middle' style='font-size: 12.00px;fill: #252525; font-family: "Arial";' textLength='36.67px' lengthAdjust='spacingAndGlyphs'>Atletas</text>
+<rect x='250.41' y='58.60' width='15.73' height='15.73' style='stroke-width: 1.16; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #B65C43;' />
+<rect x='322.25' y='58.60' width='15.73' height='15.73' style='stroke-width: 1.16; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #4F789F;' />
+<text x='272.89' y='69.90' style='font-size: 9.60px; font-family: "Arial";' textLength='42.61px' lengthAdjust='spacingAndGlyphs'>Femenino</text>
+<text x='344.73' y='69.90' style='font-size: 9.60px; font-family: "Arial";' textLength='43.14px' lengthAdjust='spacingAndGlyphs'>Masculino</text>
+<text x='49.42' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='203.78px' lengthAdjust='spacingAndGlyphs'>Atletas con estipendio fijo mensual · 2025</text>
+<text x='49.42' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='504.41px' lengthAdjust='spacingAndGlyphs'>La nómina de alto rendimiento es mayoritariamente masculina</text>
+<text x='49.42' y='380.26' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='178.67px' lengthAdjust='spacingAndGlyphs'>Fuente: MIDEREC, Memoria institucional 2025.</text>
+</g>
+</g>
+</svg>
