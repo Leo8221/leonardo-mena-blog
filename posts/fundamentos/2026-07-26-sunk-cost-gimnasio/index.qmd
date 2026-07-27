@@ -15,9 +15,15 @@ format:
 <!-- Borrador visual. La narrativa se añadirá después. -->
 
 <figure class="article-figure"><img src="../../../research/sunk-cost-gimnasio/figuras/01_costo_hundido_vs_costo_futuro.svg" alt="Comparación conceptual entre costo hundido y costo futuro de una membresía de gimnasio."><figcaption>Costo hundido frente a costos y beneficios que todavía pueden cambiar.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/sunk-cost-gimnasio/figuras/02_matriz_decision_futura.svg" alt="Matriz conceptual para decidir continuar, salir, comparar o ignorar la cuota ya pagada."><figcaption>La decisión correcta compara beneficios y costos futuros, no la cuota ya pagada.</figcaption></figure>
+
+## Metodología
+
+El primer gráfico es un ejemplo ilustrativo: muestra que la cuota ya pagada cambia el promedio contable por visita, pero no es recuperable. La decisión debe comparar beneficios y costos futuros con las alternativas disponibles. El segundo gráfico traduce esa regla a una matriz conceptual de cuatro escenarios.
+
+No son precios observados ni una estimación de comportamiento de usuarios de gimnasios. Para llevarlo a datos haría falta una encuesta o experimento con viñetas que varíe la cuota hundida, el costo futuro y la calidad de la alternativa.
 
 ## Fuentes y materiales
 
-- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Constructor de figuras](../../../research/build-requested-methodology-visuals.R)
 - [Mapa de figuras](../../../research/sunk-cost-gimnasio/chart-map.csv)
-

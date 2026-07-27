@@ -22,9 +22,20 @@ Visuales pendientes:
    remuneraciones o ingresos de los hogares, cuando la fuente permita una comparación válida.
 -->
 
+<figure class="article-figure"><img src="../../../research/crecimiento-6-4-hogares/figuras/01_incidencia_pib_2025.svg" alt="Incidencia oficial por actividad económica en el PIB acumulado de 2025."><figcaption>El crecimiento agregado tiene una composición sectorial.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/crecimiento-6-4-hogares/figuras/02_crecimiento_vs_incidencia_sectorial.svg" alt="Crecimiento acumulado de cada sector frente a su incidencia oficial en 2025."><figcaption>La tasa de crecimiento sectorial no cuenta toda la historia.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/crecimiento-6-4-hogares/figuras/03_imae_mensual.svg" alt="Variación interanual mensual del IMAE desde enero de 2024."><figcaption>El ritmo de actividad también cambia mes a mes.</figcaption></figure>
+
+## Metodología
+
+La descomposición usa la hoja `PIBK_Trim_Acum` del BCRD: el índice de volumen de 2024, el crecimiento acumulado de 2025 y la incidencia oficial de cada actividad. Se conservan cuatro actividades de primer nivel —Agropecuario, Industrias, Construcción y Servicios— para evitar mezclar subsectores con el total. La segunda figura compara crecimiento e incidencia sin llamar “peso” a un índice de volumen; la tercera usa la tasa interanual publicada en la serie mensual del IMAE.
+
+El corte es el disponible en la hoja local; 2025 aparece como preliminar cuando así lo marca el BCRD. Estas figuras explican la composición del PIB y del IMAE, no la distribución del crecimiento entre hogares. Para estudiar esa transmisión habría que enlazar otra fuente —por ejemplo ENCFT— con una unidad, periodo y definición de ingreso compatibles; no se infiere ese vínculo desde el PIB agregado.
+
 ## Fuentes y materiales
 
 - [IMAE del BCRD](../../../atlas/data/raw/bcrd-sector-real/imae_2018.xlsx)
 - [PIB por actividad económica del BCRD](../../../atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx)
 - [Serie general del PIB del BCRD](../../../atlas/data/raw/bcrd-sector-real/pib_2018.xlsx)
-- La fecha de corte, la contribución sectorial y el enlace con hogares se documentarán junto con las figuras.
+- [Constructor de figuras y datos procesados](../../../research/build-requested-methodology-visuals.R)
+- [Mapa de figuras](../../../research/crecimiento-6-4-hogares/chart-map.csv)

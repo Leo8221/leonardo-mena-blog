@@ -1,0 +1,27 @@
+periodo,zona,indice,ilustrativo
+-6,Zona tratada,100,TRUE
+-5,Zona tratada,101,TRUE
+-4,Zona tratada,99,TRUE
+-3,Zona tratada,100,TRUE
+-2,Zona tratada,102,TRUE
+-1,Zona tratada,101,TRUE
+0,Zona tratada,100.55,TRUE
+1,Zona tratada,102.1,TRUE
+2,Zona tratada,103.65,TRUE
+3,Zona tratada,103.2,TRUE
+4,Zona tratada,102.75,TRUE
+5,Zona tratada,104.3,TRUE
+6,Zona tratada,103.85,TRUE
+-6,Zona comparable,100,TRUE
+-5,Zona comparable,100,TRUE
+-4,Zona comparable,101,TRUE
+-3,Zona comparable,100,TRUE
+-2,Zona comparable,101,TRUE
+-1,Zona comparable,99,TRUE
+0,Zona comparable,100,TRUE
+1,Zona comparable,101,TRUE
+2,Zona comparable,100,TRUE
+3,Zona comparable,102,TRUE
+4,Zona comparable,101,TRUE
+5,Zona comparable,101,TRUE
+6,Zona comparable,102,TRUE

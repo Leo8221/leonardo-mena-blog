@@ -1,2 +1,3 @@
 id,pregunta,familia,fuente,advertencia
-01_trayectoria_ingreso_pc_ppp,¿La convergencia del ingreso es automática?,Líneas comparables,Banco Mundial WDI,Índice PPP; requiere complementar con productividad e instituciones
+01_trayectoria_ingreso_pc_ppp,¿La convergencia del ingreso es automatica?,Lineas comparables,Banco Mundial WDI,Indice PPP; requiere complementar con productividad e instituciones
+02_productividad_apertura,¿Que hay detras de la trayectoria del ingreso?,Panel de diagnostico,Banco Mundial WDI,No es prueba causal de una trampa

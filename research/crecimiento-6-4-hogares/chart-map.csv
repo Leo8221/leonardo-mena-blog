@@ -1,0 +1,4 @@
+id,pregunta,familia,fuente,advertencia
+01_incidencia_pib_2025,¿Que sectores explican el crecimiento agregado?,Incidencia sectorial,BCRD PIBK_Trim_Acum,2025 preliminar; no mide distribucion del ingreso
+02_crecimiento_vs_incidencia_sectorial,¿La tasa sectorial cuenta todo el aporte?,Dispersión sectorial,BCRD PIBK_Trim_Acum,"Comparacion descriptiva, no causal"
+03_imae_mensual,¿El crecimiento mantiene el mismo ritmo?,Serie mensual,BCRD IMAE,No equivale a ingreso de los hogares

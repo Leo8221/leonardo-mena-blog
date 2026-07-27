@@ -1,2 +1,3 @@
 id,pregunta,familia,fuente,advertencia
-01_respuesta_emergencia_ingreso,¿Cómo cubren una emergencia los hogares?,Barras agrupadas,BCRD ENIEF 2023,Primera respuesta declarada; no mide saldo de ahorro
+01_respuesta_emergencia_ingreso,¿Como cubren una emergencia los hogares?,Barras agrupadas,BCRD ENIEF 2023,Primera respuesta declarada; no mide saldo de ahorro
+02_diferencia_respuesta_emergencia,¿Que respuestas separan a los estratos?,Barras divergentes,BCRD ENIEF 2023,Diferencias descriptivas en puntos porcentuales
