@@ -1,0 +1,110 @@
+---
+title: "La canasta familiar no existe"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Por qué la inflación promedio puede ser correcta y aun así no contar la historia de tu bolsillo."
+categories:
+  - "Economía cotidiana"
+  - "Inflación"
+draft: true
+format:
+  html:
+    toc: true
+---
+
+> «La lógica dicta claramente que las necesidades de la mayoría superan las necesidades de unos pocos... o de uno solo».
+>
+> — *Star Trek II: La ira de Khan*
+
+En la conversación entre el capitán Kirk y Spock se esconde una de las mayores verdades estadísticas: los promedios se imponen sobre las realidades individuales. Más de una vez habrás visto una estadística en la televisión y dicho: «Eso no es verdad, en mi caso no pasa». Y honestamente, muy posiblemente tienes razón.
+
+Uno de los elementos que más confusión genera es justamente el de la canasta familiar. ¿Qué es exactamente una canasta familiar? ¿Por qué parece nunca representar la realidad de la población? Y, lo que menos se suele decir: ¿existe una canasta familiar?
+
+La respuesta corta a esa última pregunta es: no. No existe «una» canasta familiar. Al menos no una que encaje con tu vida real. Lo que existe es un promedio ponderado diseñado para capturar el comportamiento de millones de familias en un solo número. Es útil para medir tendencias nacionales, pero no el de tu bolsillo.
+
+Para entender por qué sientes que el Banco Central te miente —aunque en términos técnicos no esté mintiendo—, debemos diseccionar cómo se construye esa «verdad» estadística y por qué, tal como advirtió Spock, tú eres la víctima del promedio.
+
+## ¿Qué es exactamente una canasta familiar?
+
+Pedro y María tienen una familia. Para mantenerla pagan una renta porque necesitan un lugar donde vivir, tienen dos hijos, por lo que para su entretenimiento contratan un servicio de cable, ambos necesitan internet para sus trabajos o contactar con sus familiares y, por supuesto, compran comida en el supermercado. Pues bien, ¡voilà! Aquí tenemos la canasta familiar de la familia de Pedro y María. ¿El Banco Central usa esta canasta? No, no puede.
+
+Como Pedro y María hay millones de dominicanos. Si el Banco Central se detuviese a llevar la de cada una de esas familias, simplemente no habría ni dinero ni personal suficiente, por lo que se recurre a una herramienta estadística. El Banco Central usa dos herramientas. Primero, mediante la Encuesta Nacional de Ingresos y Gastos (ENIGH), determina en qué gastan las familias —cuánto va a comida, transporte, vivienda, etc.—. Esas proporciones se convierten en las ponderaciones de la canasta. Luego, mensualmente, encuestadores visitan establecimientos para registrar los precios actuales de esos productos.
+
+Piensa en la temperatura promedio de un hospital: la sala de emergencias está a 18 °C y la sala de maternidad a 26 °C. El promedio es 22 °C, pero nadie está cómodo a 22 °C porque ese número no describe ninguna sala real.
+
+Se identifican los bienes y servicios más representativos del consumo —aquellos en los que las familias gastan más— y de allí se saca la canasta familiar del país... o mejor dicho, las canastas.
+
+## Pero no todos los productos pesan igual
+
+Supongamos que tu canasta personal tiene tres productos:
+
+- **Arroz:** gastas RD$5,000 al mes → 50% de tu presupuesto.
+- **Gasolina:** gastas RD$3,000 al mes → 30%.
+- **Cable:** gastas RD$2,000 al mes → 20%.
+
+Este mes:
+
+- El arroz sube 10%.
+- La gasolina baja 5%.
+- El cable sube 2%.
+
+Tu inflación personal es:
+
+**(50% × 10%) + (30% × −5%) + (20% × 2%) = 5% − 1.5% + 0.4% = 3.9%.**
+
+Pero tu vecino no tiene carro. Su canasta es:
+
+- Arroz: 60%.
+- Cable: 40%.
+- Gasolina: 0%.
+
+Su inflación es: **(60% × 10%) + (40% × 2%) = 6% + 0.8% = 6.8%.**
+
+**Mismos precios, diferente impacto.** Esto es ponderación.
+
+## Quintiles y regiones: por qué tu inflación no es la del noticiero
+
+Supongamos que tenemos dos familias, una ubicada en el sector de Los Guandules y otra en Piantini. Recordemos que la canasta se calcula con base en la representación del consumo más frecuente de una familia. Dados los sectores, ¿cree que el consumo de estas familias es igual? Muy posiblemente es bastante diferente.
+
+Sería injusto colocarlos en un mismo renglón, por lo que los economistas acuden a una gran herramienta estadística: los quintiles. Dividimos a la población en cinco grupos iguales según sus ingresos. Luego, con los datos de la ENIGH, observamos cómo gasta cada grupo: los hogares de menores ingresos gastan más en comida y transporte público, mientras que los de mayores ingresos gastan más en restaurantes y educación privada. Cada quintil tiene su propia estructura de ponderaciones.
+
+Pero esto no es lo único. Ahora vamos a otro ejemplo: una persona que vive en el Cibao y una persona en la capital, ¿demandan los mismos bienes y servicios? En Santiago, una familia puede gastar más en transporte privado —distancias largas, menos Metro—. En Santo Domingo, puede gastar más en transporte público —Metro y OMSA—. En zonas rurales, puede gastar más en tanques de gas; en la capital, tiene acceso a gas por tubería. El Banco Central calcula índices separados para distintos dominios geográficos.
+
+Así que, a la hora de escuchar que «la canasta familiar aumenta en X%», es indispensable preguntar: ¿cuál canasta familiar?
+
+## El problema de la foto vieja
+
+La ENIGH se realiza aproximadamente cada diez años. La última fue en 2018, con base en datos de 2017-2018.
+
+Eso significa que las ponderaciones de hoy reflejan cómo gastaban las familias en 2018:
+
+- ¿Alguien gastaba en Uber Eats en 2018? Poco.
+- ¿Alguien gastaba en mascarillas? No.
+- ¿La gente trabajaba desde casa y gastaba menos en gasolina? No.
+
+La canasta se desactualiza. Para 2025, seguimos usando ponderaciones de hace siete años. Los nuevos hábitos de consumo —streaming, delivery y home office— no están completamente reflejados.
+
+## Spock tenía razón: las necesidades de la mayoría
+
+Al final, Spock tenía razón desde el principio. La canasta familiar sirve a las necesidades de la mayoría al darnos un termómetro de la economía nacional. Es útil para:
+
+- Política monetaria: el BCRD ajusta tasas.
+- Ajustes salariales: base para negociaciones.
+- Comparaciones internacionales.
+
+Pero como individuo, tú eres «uno solo». Tu inflación personal puede ser 8% mientras el promedio es 4%. O viceversa.
+
+La próxima vez que veas «la inflación subió a 5%», pregunta:
+
+- ¿Qué quintil?
+- ¿Urbano o rural?
+- ¿Y en mi canasta personal, cuánto subió?
+
+Porque el promedio no miente, pero tampoco cuenta tu historia individual.
+
+## Fuentes y materiales pendientes
+
+- BCRD: metodología y series del Índice de Precios al Consumidor.
+- ONE/BCRD: Encuesta Nacional de Ingresos y Gastos de los Hogares.
+- Visuales pendientes: ponderaciones por quintil y dominio geográfico, inflación personal y actualización de la canasta.
+
