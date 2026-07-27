@@ -1,0 +1,24 @@
+---
+title: "El efecto Baade: cuando el estadio no desarrolla la ciudad"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual sobre el impacto económico prometido por los estadios y los grandes eventos."
+categories:
+  - "Economía del deporte"
+  - "Desarrollo"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. La evidencia empírica y la narrativa se añadirán después. -->
+
+<figure class="article-figure"><img src="../../../research/efecto-baade/assets/ilustracion-spillover-estadio.png" alt="Ilustración editorial del flujo económico alrededor de un estadio."><figcaption>La actividad visible alrededor de un estadio no equivale por sí sola a desarrollo económico neto.</figcaption></figure>
+
+## Fuentes y materiales
+
+- [Mapa de figuras](../../../research/efecto-baade/chart-map.csv)
+- [Ilustración editorial](../../../research/efecto-baade/assets/ilustracion-spillover-estadio.png)
+- [Baade y Dye, The Impact of Stadiums and Professional Sports on Metropolitan Area Development](https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1468-2257.1990.tb00513.x)
+

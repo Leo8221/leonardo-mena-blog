@@ -1,0 +1,20 @@
+---
+title: "¿El crecimiento del 6,4% llega a los hogares?"
+date: "2026-07-26"
+author: "Leonardo Mena"
+description: "Borrador visual para contrastar el crecimiento agregado con la experiencia económica de los hogares."
+categories:
+  - "Crecimiento"
+  - "Economía cotidiana"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador visual. Faltan las bases, los cálculos y las figuras verificables. -->
+
+## Fuentes y materiales
+
+- El paquete de datos y las figuras se incorporarán después de definir el período, la medida de crecimiento y el vínculo con los hogares.
+
