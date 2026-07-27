@@ -11,13 +11,7 @@
     ]
   },
   {
-    "listing": "/fundamentos.html",
-    "items": [
-      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
-    ]
-  },
-  {
-    "listing": "/archivo.html",
+    "listing": "/index.html",
     "items": [
       "/posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
       "/posts/republica-habla-de/2026-03-04-transporte-masivo/index.html",
@@ -49,7 +43,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/archivo.html",
     "items": [
       "/posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html",
       "/posts/republica-habla-de/2026-03-04-transporte-masivo/index.html",
@@ -62,6 +56,12 @@
       "/posts/republica-habla-de/2025-12-19_deuda_publica/index.html",
       "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html",
       "/posts/republica-en-un-grafico/2025-12-16-grafico-0/index.html"
+    ]
+  },
+  {
+    "listing": "/fundamentos.html",
+    "items": [
+      "/posts/fundamentos/2025-12-18-PIB_Peras_manzanas/index.html"
     ]
   },
   {
