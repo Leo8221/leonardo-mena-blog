@@ -2,7 +2,7 @@
 title: "¿El crecimiento del 6,4% llega a los hogares?"
 date: "2026-07-26"
 author: "Leonardo Mena"
-description: "Borrador visual para contrastar el crecimiento agregado con la experiencia económica de los hogares."
+description: "Borrador visual para descomponer el crecimiento agregado del IMAE y el PIB por sectores."
 categories:
   - "Crecimiento"
   - "Economía cotidiana"
@@ -12,9 +12,19 @@ format:
     toc: false
 ---
 
-<!-- Borrador visual. Faltan las bases, los cálculos y las figuras verificables. -->
+<!-- Borrador visual. La narrativa se añadirá después de cerrar la descomposición sectorial. -->
+
+<!--
+Visuales pendientes:
+1. Descomposición del crecimiento del PIB por actividad económica.
+2. Evolución del IMAE y contribución de los sectores al crecimiento agregado.
+3. Comparación entre el peso de cada sector en el crecimiento y su vínculo con empleo,
+   remuneraciones o ingresos de los hogares, cuando la fuente permita una comparación válida.
+-->
 
 ## Fuentes y materiales
 
-- El paquete de datos y las figuras se incorporarán después de definir el período, la medida de crecimiento y el vínculo con los hogares.
-
+- [IMAE del BCRD](../../../atlas/data/raw/bcrd-sector-real/imae_2018.xlsx)
+- [PIB por actividad económica del BCRD](../../../atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx)
+- [Serie general del PIB del BCRD](../../../atlas/data/raw/bcrd-sector-real/pib_2018.xlsx)
+- La fecha de corte, la contribución sectorial y el enlace con hogares se documentarán junto con las figuras.
