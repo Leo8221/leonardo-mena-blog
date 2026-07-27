@@ -87,7 +87,7 @@ p_near_trade <- ggplot(trade_long, aes(anio, valor, colour = serie)) +
   scale_colour_manual(values = c("Exportaciones" = pal$terracota, "Importaciones" = pal$azul)) +
   scale_x_continuous(breaks = seq(2015, 2024, 2)) +
   scale_y_continuous(labels = label_number(big.mark = ",", decimal.mark = ".")) +
-  labs(title = "Las zonas francas exportan más, pero importan menos que antes",
+  labs(title = "Las exportaciones crecieron más que las importaciones en zonas francas",
        subtitle = "Exportaciones e importaciones de zonas francas · millones de US$ · 2015–2024",
        x = NULL, y = "Millones de US$",
        caption = "Fuente: CNZFE, Informe Estadístico 2024; exportaciones e importaciones reportadas por el BCRD.") +
@@ -100,7 +100,7 @@ p_near_jobs <- ggplot(jobs_long, aes(anio, valor, colour = serie)) +
   facet_wrap(~unidad, scales = "free_y", ncol = 1, labeller = labeller(unidad = c(Personas = "Empleos directos", Empresas = "Empresas en operación"))) +
   scale_x_continuous(breaks = seq(2015, 2024, 2)) +
   scale_y_continuous(labels = label_number(big.mark = ",", decimal.mark = ".")) +
-  labs(title = "La recuperación reciente elevó el número de empresas más rápido que el empleo",
+  labs(title = "Empresas y empleo directo crecieron a ritmos distintos",
        subtitle = "Zonas francas en operación y empleos directos · 2015–2024",
        x = NULL, y = NULL,
        caption = "Fuente: CNZFE, Informe Estadístico 2024; empleos directos sin incluir operadoras.") +
@@ -130,7 +130,7 @@ p_near_sector <- ggplot(sector_long, aes(valor, actividad, fill = metrica)) +
   facet_wrap(~metrica, scales = "free_x", ncol = 1) +
   scale_fill_manual(values = c("Empleos directos" = pal$terracota, "Exportaciones (millones US$)" = pal$azul)) +
   scale_x_continuous(expand = expansion(mult = c(0, .18))) +
-  labs(title = "La especialización exportadora no genera la misma cantidad de empleo",
+  labs(title = "Las actividades de zonas francas combinan empleo y exportaciones de forma distinta",
        subtitle = "Principales actividades de zonas francas · 2024",
        x = NULL, y = NULL,
        caption = "Fuente: CNZFE, Informe Estadístico 2024. Las exportaciones están expresadas en millones de US$.") +
@@ -148,7 +148,7 @@ p_near_region <- ggplot(region_invest, aes(inversion / 1e9, region)) +
   geom_col(fill = pal$oliva, width = .65) +
   geom_text(aes(label = sprintf("%.1f%%", participacion)), hjust = -.12, size = 3.4, fontface = "bold") +
   scale_x_continuous(labels = label_number(suffix = " mil M US$", accuracy = .1), expand = expansion(mult = c(0, .18))) +
-  labs(title = "La inversión acumulada de zonas francas se concentra en dos polos",
+  labs(title = "Inversión acumulada de zonas francas por región",
        subtitle = "Inversión acumulada por región · 2024",
        x = NULL, y = NULL,
        caption = "Fuente: CNZFE, Informe Estadístico 2024. Las etiquetas muestran la participación regional.") +
@@ -196,7 +196,7 @@ p_ath <- ggplot(ath_long, aes(valor, disciplina, fill = metrica)) +
   facet_wrap(~metrica, scales = "free_x", ncol = 1) +
   scale_fill_manual(values = c("Atletas con estipendio" = pal$terracota, "Estipendio mensual (RD$)" = pal$azul)) +
   scale_x_continuous(expand = expansion(mult = c(0, .18))) +
-  labs(title = "El apoyo al alto rendimiento se concentra en pocas disciplinas",
+  labs(title = "Beneficiarios de estipendios fijos por disciplina",
        subtitle = "Atletas incluidos en la nómina de estipendios fijos · disciplinas con mayor cantidad de beneficiarios",
        x = NULL, y = NULL,
        caption = "Fuente: MIDEREC, Memoria institucional 2025. La tabla completa reporta 527 atletas y RD$5.091 millones mensuales.") +
@@ -210,7 +210,7 @@ p_ath_sex <- ggplot(ath_sex, aes(1, atletas, fill = sexo)) +
   geom_text(aes(label = paste0(atletas, " · ", participacion, "%")), position = position_stack(vjust = .5), colour = pal$crema, fontface = "bold", size = 4) +
   scale_fill_manual(values = c("Masculino" = pal$azul, "Femenino" = pal$terracota)) +
   scale_x_continuous(breaks = NULL) + scale_y_continuous(labels = comma, expand = c(0, 0)) +
-  labs(title = "La nómina de alto rendimiento es mayoritariamente masculina",
+  labs(title = "Atletas con estipendio fijo por sexo",
        subtitle = "Atletas con estipendio fijo mensual · 2025",
        x = NULL, y = "Atletas", caption = "Fuente: MIDEREC, Memoria institucional 2025.") +
   theme_editorial() + theme(axis.text.x = element_blank(), legend.position = "top")
@@ -228,7 +228,7 @@ p_community <- ggplot(community, aes(costo_por_persona, reorder(programa, costo_
   geom_col(fill = pal$oliva, width = .65) +
   geom_text(aes(label = dollar(costo_por_persona, prefix = "RD$ ", accuracy = 1)), hjust = -.12, size = 3.2, fontface = "bold") +
   scale_x_continuous(labels = dollar_format(prefix = "RD$ ", accuracy = 1), expand = expansion(mult = c(0, .2))) +
-  labs(title = "El costo por persona cambia radicalmente según el programa",
+  labs(title = "Costo reportado por persona según el programa deportivo",
        subtitle = "Costo reportado dividido entre personas impactadas · 2025",
        x = NULL, y = NULL,
        caption = "Fuente: MIDEREC, Memoria institucional 2025. Razón descriptiva; no mide impacto causal.") +

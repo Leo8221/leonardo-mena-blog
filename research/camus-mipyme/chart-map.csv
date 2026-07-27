@@ -1,6 +1,6 @@
 id,pregunta,familia,fuente,advertencia
-01_ingreso_por_empleado_formalidad,¿Qué carga productiva soporta el emprendedor?,Barras comparables,ENMIPYMES 2023,Promedios ponderados; no es causalidad
-02_problemas_de_supervivencia_mipyme,¿Qué problemas sostienen la supervivencia?,Barras ordenadas,ENMIPYMES 2023,Respuesta declarada
-03_credito_formalidad_tamano,"¿Qué pesa más, formalidad o tamaño?",Barras agrupadas,ENMIPYMES 2023,No es efecto causal
+01_ingreso_por_empleado_formalidad,¿Cuál es el ingreso promedio por trabajador según la formalidad?,Barras comparables,ENMIPYMES 2023,Promedios ponderados; no es causalidad
+02_problemas_de_supervivencia_mipyme,¿Qué problemas declaran las MIPYMES?,Barras ordenadas,ENMIPYMES 2023,Respuesta declarada
+03_credito_formalidad_tamano,¿Cómo varía el acceso a crédito por tamaño y formalidad?,Barras agrupadas,ENMIPYMES 2023,No es efecto causal
 04_mapa_calor_problemas_tamano_formalidad,¿Qué problemas se concentran por grupo?,Mapa de calor,Tesis MIPYME/ENMIPYMES,Respuestas declaradas; no es efecto causal
 05_mapa_rd_formalidad_mipyme,¿Dónde se concentran las MIPYMES formales?,Mapa de RD,ENMIPYMES/Tesis MIPYME,Proporción ponderada; no es causalidad

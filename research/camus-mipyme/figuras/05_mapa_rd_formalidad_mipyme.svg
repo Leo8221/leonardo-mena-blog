@@ -216,8 +216,8 @@
 <text x='564.92' y='263.90' style='font-size: 9.60px; font-family: "Arial";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>40%</text>
 <text x='564.92' y='249.55' style='font-size: 9.60px; font-family: "Arial";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>50%</text>
 <text x='564.92' y='235.20' style='font-size: 9.60px; font-family: "Arial";' textLength='19.19px' lengthAdjust='spacingAndGlyphs'>60%</text>
-<text x='13.95' y='88.59' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='367.72px' lengthAdjust='spacingAndGlyphs'>Porcentaje ponderado de MIPYMES formales por provincia · escala 0–60%</text>
-<text x='13.95' y='71.16' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='378.75px' lengthAdjust='spacingAndGlyphs'>La formalidad MIPYME también tiene geografía</text>
+<text x='13.95' y='88.59' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='239.22px' lengthAdjust='spacingAndGlyphs'>Estimación ponderada · escala cromática 0–60%</text>
+<text x='13.95' y='71.16' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='382.58px' lengthAdjust='spacingAndGlyphs'>Porcentaje de MIPYMES formales por provincia</text>
 <text x='13.95' y='464.82' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='437.77px' lengthAdjust='spacingAndGlyphs'>Fuente: ENMIPYMES 2023 · archivo reproducible de tesis MIPYME · estimación ponderada por factor de expansión</text>
 </g>
 </g>

@@ -125,7 +125,7 @@ p_hist <- ggplot(hist_long, aes(year, tons_m, colour = serie)) +
   scale_colour_manual(values = c("Producción" = pal$terracota, "Exportaciones" = pal$azul)) +
   scale_x_continuous(breaks = seq(1940, 1990, 10), limits = c(1940, 1990)) +
   scale_y_continuous(labels = label_number(big.mark = " ")) +
-  labs(title = "El azúcar tuvo un auge, pero no una trayectoria lineal",
+  labs(title = "Producción y exportaciones de azúcar crudo, 1940–1990",
        subtitle = "Producción y exportaciones de azúcar crudo · miles de toneladas métricas",
        x = NULL, y = NULL,
        caption = "Fuentes: Hall (2000), USDA/Instituto del Azúcar, Banco Mundial (anexo 1984) y BCRD/FMI. Las definiciones se documentan por tramo en la base procesada.") +
@@ -146,7 +146,7 @@ p_cea <- ggplot(cea, aes(year, cea_production / 1000)) +
   geom_point(colour = pal$terracota, size = 1.7) +
   scale_x_continuous(breaks = seq(1970, 1990, 5), limits = c(1970, 1990)) +
   scale_y_continuous(labels = label_number(big.mark = " ")) +
-  labs(title = "El CEA creció hasta mediados de los setenta y luego retrocedió",
+  labs(title = "Producción de azúcar crudo del CEA, 1970–1990",
        subtitle = "Producción de azúcar crudo del Consejo Estatal del Azúcar · 1970–1990",
        x = NULL, y = NULL,
        caption = "Fuente: Instituto Dominicano del Azúcar, reproducido en IMF Staff Country Report 1996, tabla 25. Esta serie cubre al CEA, no toda la producción nacional.") +
@@ -163,7 +163,7 @@ p_control <- ggplot(control, aes(year, share)) +
   geom_text(aes(label = paste0(number(share, accuracy = .1), "%")), vjust = -.35, fontface = "bold", size = 3.4) +
   scale_x_continuous(breaks = 1951:1957) +
   scale_y_continuous(labels = label_percent(scale = 1), limits = c(0, 82), breaks = seq(0, 80, 20)) +
-  labs(title = "La expansión azucarera también concentró propiedad",
+  labs(title = "Participación controlada por Trujillo en la industria azucarera, 1951–1957",
        subtitle = "Porcentaje de la industria azucarera controlado por Trujillo · 1951–1957",
        x = NULL, y = NULL,
        caption = "Fuente: ONE, Estadística Industrial de la República Dominicana (1958), reproducida en Hall (2000), tabla 1.7.") +

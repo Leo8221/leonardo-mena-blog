@@ -169,7 +169,7 @@ p_decomp <- ggplot(decomp, aes(fecha, contribucion_pp, fill = componente)) +
   geom_hline(yintercept = 0, colour = pal$gris, linewidth = 0.45) +
   scale_fill_manual(values = c("Alimentos y bebidas" = pal$terracota, "Transporte" = pal$azul, "Vivienda" = pal$ocre, "Restaurantes y hoteles" = pal$oliva, "Bienes y servicios diversos" = "#8B6F8E", "Resto" = pal$gris)) +
   scale_x_date(date_breaks = "2 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
-  labs(title = "La inflación no tiene una sola causa", subtitle = "Contribución mensual de cada componente al IPC · la línea negra es el total", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · cálculo aproximado con ponderaciones oficiales · corte junio de 2026") +
+  labs(title = "Contribución de los grupos del IPC a la inflación mensual", subtitle = "Contribución mensual de cada componente al IPC · la línea negra es el total", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · cálculo aproximado con ponderaciones oficiales · corte junio de 2026") +
   theme_editorial()
 export_plot(p_decomp, fig_dir, "01_descomposicion_ipc", 11, 7)
 
@@ -179,7 +179,7 @@ p_heat <- ggplot(heat, aes(fecha, grupo, fill = contribucion_pp)) +
   geom_tile(colour = pal$crema, linewidth = 0.35) +
   scale_x_date(date_breaks = "2 months", date_labels = "%b\n%Y", expand = c(0, 0)) +
   scale_fill_gradient2(low = pal$azul, mid = pal$crema, high = pal$terracota, midpoint = 0, labels = label_number(accuracy = 0.01), name = "p.p.") +
-  labs(title = "Los motores de la inflación cambian mes a mes", subtitle = "Contribución de cada grupo al cambio mensual del IPC · azul resta, terracota suma", x = NULL, y = NULL, caption = "Fuente: BCRD, IPC por artículos · ponderaciones oficiales · corte junio de 2026") +
+  labs(title = "Contribuciones positivas y negativas al IPC mensual", subtitle = "Contribución de cada grupo al cambio mensual del IPC · azul resta, terracota suma", x = NULL, y = NULL, caption = "Fuente: BCRD, IPC por artículos · ponderaciones oficiales · corte junio de 2026") +
   theme_editorial("none") + theme(axis.text.y = element_text(size = 8.5), legend.position = "right")
 export_plot(p_heat, fig_dir, "02_heatmap_contribuciones_ipc", 11, 7.5)
 
@@ -196,7 +196,7 @@ p_case <- ggplot(pollo_case |> filter(producto == "Pollo fresco"), aes(fecha)) +
   geom_line(aes(y = inflacion_total), colour = pal$azul, linewidth = 1) +
   geom_hline(yintercept = 0, colour = pal$gris, linewidth = 0.45) +
   scale_x_date(date_breaks = "2 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
-  labs(title = "El pollo puede mover el IPC sin explicar toda la inflación", subtitle = "Barras: contribución del pollo fresco · línea azul: inflación mensual total · peso del pollo: 2.33%", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · la contribución combina variación del precio y ponderación en la canasta · corte junio de 2026") +
+  labs(title = "Contribución del pollo fresco frente a la inflación mensual total", subtitle = "Barras: contribución del pollo fresco · línea azul: inflación mensual total · peso del pollo: 2.33%", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · la contribución combina variación del precio y ponderación en la canasta · corte junio de 2026") +
   theme_editorial()
 export_plot(p_case, fig_dir, "03_caso_instrumental_pollo", 11, 6.6)
 
@@ -210,7 +210,7 @@ p_core <- ggplot(headline_core, aes(fecha)) +
   geom_line(data = headline_core |> filter(!is.na(subyacente_mensual)), aes(y = subyacente_mensual, colour = "IPC subyacente"), linewidth = 1) +
   scale_colour_manual(values = c("IPC general" = pal$terracota, "IPC subyacente" = pal$azul)) +
   scale_x_date(date_breaks = "3 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
-  labs(title = "La inflación general y la subyacente no siempre se mueven juntas", subtitle = "Inflación mensual: IPC general frente a inflación subyacente · junio de 2026 incorpora el dato oficial del BCRD", x = NULL, y = "Variación mensual (%)", caption = "Fuente: BCRD, IPC general y subyacente · la subyacente excluye artículos volátiles y regulados") +
+  labs(title = "Inflación mensual general y subyacente", subtitle = "IPC general frente a inflación subyacente · junio de 2026 incorpora el dato oficial del BCRD", x = NULL, y = "Variación mensual (%)", caption = "Fuente: BCRD, IPC general y subyacente · la subyacente excluye artículos volátiles y regulados") +
   theme_editorial()
 export_plot(p_core, fig_dir, "04_general_vs_subyacente", 11, 6.6)
 
@@ -225,7 +225,7 @@ p_bridge <- ggplot(latest_bridge, aes(contribucion_pp, grupo, fill = grupo == "A
   geom_text(aes(x = label_x, label = sprintf("%.2f", contribucion_pp), hjust = label_hjust), size = 3.1, fontface = "bold") +
   scale_fill_manual(values = c(`FALSE` = pal$terracota, `TRUE` = pal$gris), guide = "none") +
   scale_x_continuous(limits = c(0, max(latest_bridge$label_x) + 0.025), expand = c(0, 0)) +
-  labs(title = "Junio cerró con 0.51% de inflación mensual", subtitle = "Principales incidencias, resto de grupos y ajuste hasta el total oficial", x = "Puntos porcentuales", y = NULL, caption = "Fuente: BCRD, IPC de junio de 2026 e índices por grupo · el ajuste recoge redondeos y diferencias de enlace; no es un componente económico") +
+  labs(title = "Descomposición de la inflación mensual de junio de 2026", subtitle = "Principales incidencias, resto de grupos y ajuste hasta el total oficial de 0.51%", x = "Puntos porcentuales", y = NULL, caption = "Fuente: BCRD, IPC de junio de 2026 e índices por grupo · el ajuste recoge redondeos y diferencias de enlace; no es un componente económico") +
   theme_editorial("x")
 export_plot(p_bridge, fig_dir, "05_puente_junio_2026", 10.5, 7.2)
 
@@ -239,7 +239,7 @@ p_dollar <- ggplot(dollar_transables, aes(fecha)) +
   geom_line(aes(y = dolar_interanual, colour = "Dólar"), linewidth = 1, linetype = "dashed") +
   scale_colour_manual(values = c("Bienes transables" = pal$terracota, "Dólar" = pal$azul)) +
   scale_x_date(date_breaks = "3 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
-  labs(title = "El dólar transmite presión, pero no explica todo el IPC", subtitle = "Variación interanual de bienes transables frente al tipo de cambio de compra", x = NULL, y = "Variación interanual (%)", caption = "Fuente: BCRD, IPC de bienes transables y mercado cambiario · comparación descriptiva, no identificación causal") +
+  labs(title = "Bienes transables y tipo de cambio no se mueven uno a uno", subtitle = "Variación interanual de bienes transables frente al tipo de cambio de compra", x = NULL, y = "Variación interanual (%)", caption = "Fuente: BCRD, IPC de bienes transables y mercado cambiario · comparación descriptiva, no identificación causal") +
   theme_editorial()
 export_plot(p_dollar, fig_dir, "06_dolar_vs_transables", 11, 6.6)
 
