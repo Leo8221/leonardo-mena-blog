@@ -1,0 +1,5 @@
+id,pregunta,familia,fuente,advertencia
+01_costo_canasta_quintiles_2020_2026,¿La canasta cuesta lo mismo para todos los ingresos?,Serie temporal por quintil,BCRD/ENIGH,"Costo nominal; no es ingreso disponible"
+02_costo_canasta_regiones_2020_2026,¿La canasta cuesta lo mismo en todas las regiones?,Serie temporal regional,BCRD/ENIGH,"Ozama comprende Distrito Nacional y Santo Domingo"
+03_inflacion_grupos_ultimo_mes,¿Qué grupos movieron el IPC en el último mes?,Dumbbell de variaciones,BCRD IPC,"La contribución al IPC depende también de ponderaciones"
+04_inflacion_personal_ejemplo,¿Por qué dos hogares sienten distinta inflación?,Composición y comparación,Ejemplo didáctico,"No es una estimación oficial"

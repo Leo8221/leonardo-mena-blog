@@ -1,0 +1,7 @@
+"hogar","producto","peso","cambio_precio","contribucion"
+"Pedro y María","Arroz",50,10,5
+"Pedro y María","Gasolina",30,-5,-1.5
+"Pedro y María","Cable",20,2,0.4
+"Vecino sin carro","Arroz",60,10,6
+"Vecino sin carro","Gasolina",0,-5,0
+"Vecino sin carro","Cable",40,2,0.8

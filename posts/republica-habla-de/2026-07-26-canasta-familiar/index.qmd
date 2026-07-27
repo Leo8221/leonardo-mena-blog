@@ -34,6 +34,8 @@ Piensa en la temperatura promedio de un hospital: la sala de emergencias está a
 
 Se identifican los bienes y servicios más representativos del consumo —aquellos en los que las familias gastan más— y de allí se saca la canasta familiar del país... o mejor dicho, las canastas.
 
+<figure class="article-figure"><img src="../../../research/canasta-familiar/figuras/01_costo_canasta_quintiles_2020_2026.svg" alt="Evolución del costo mensual de la canasta familiar nacional y por quintil de ingreso entre octubre de 2020 y junio de 2026."><figcaption>La canasta oficial no es una sola: el BCRD publica costos distintos por quintil de ingreso.</figcaption></figure>
+
 ## Pero no todos los productos pesan igual
 
 Supongamos que tu canasta personal tiene tres productos:
@@ -62,6 +64,8 @@ Su inflación es: **(60% × 10%) + (40% × 2%) = 6% + 0.8% = 6.8%.**
 
 **Mismos precios, diferente impacto.** Esto es ponderación.
 
+<figure class="article-figure"><img src="../../../research/canasta-familiar/figuras/04_inflacion_personal_ejemplo.svg" alt="Ejemplo didáctico de dos hogares con distintas ponderaciones de gasto y diferente inflación personal ante los mismos cambios de precios."><figcaption>Con los mismos cambios de precios, una estructura de gasto distinta produce una inflación personal distinta.</figcaption></figure>
+
 ## Quintiles y regiones: por qué tu inflación no es la del noticiero
 
 Supongamos que tenemos dos familias, una ubicada en el sector de Los Guandules y otra en Piantini. Recordemos que la canasta se calcula con base en la representación del consumo más frecuente de una familia. Dados los sectores, ¿cree que el consumo de estas familias es igual? Muy posiblemente es bastante diferente.
@@ -71,6 +75,8 @@ Sería injusto colocarlos en un mismo renglón, por lo que los economistas acude
 Pero esto no es lo único. Ahora vamos a otro ejemplo: una persona que vive en el Cibao y una persona en la capital, ¿demandan los mismos bienes y servicios? En Santiago, una familia puede gastar más en transporte privado —distancias largas, menos Metro—. En Santo Domingo, puede gastar más en transporte público —Metro y OMSA—. En zonas rurales, puede gastar más en tanques de gas; en la capital, tiene acceso a gas por tubería. El Banco Central calcula índices separados para distintos dominios geográficos.
 
 Así que, a la hora de escuchar que «la canasta familiar aumenta en X%», es indispensable preguntar: ¿cuál canasta familiar?
+
+<figure class="article-figure"><img src="../../../research/canasta-familiar/figuras/02_costo_canasta_regiones_2020_2026.svg" alt="Evolución del costo mensual de la canasta familiar por región geográfica entre octubre de 2020 y junio de 2026."><figcaption>La geografía también importa: el costo publicado para Ozama se mantiene por encima del de las demás regiones.</figcaption></figure>
 
 ## El problema de la foto vieja
 
@@ -83,6 +89,8 @@ Eso significa que las ponderaciones de hoy reflejan cómo gastaban las familias 
 - ¿La gente trabajaba desde casa y gastaba menos en gasolina? No.
 
 La canasta se desactualiza. Para 2025, seguimos usando ponderaciones de hace siete años. Los nuevos hábitos de consumo —streaming, delivery y home office— no están completamente reflejados.
+
+<figure class="article-figure"><img src="../../../research/canasta-familiar/figuras/03_inflacion_grupos_ultimo_mes.svg" alt="Variación mensual del IPC nacional por grupo de bienes y servicios en mayo de 2026."><figcaption>En mayo de 2026, los grupos del IPC se movieron en direcciones y magnitudes diferentes; la experiencia de cada hogar depende de cuánto consume cada uno.</figcaption></figure>
 
 ## Spock tenía razón: las necesidades de la mayoría
 
@@ -102,9 +110,10 @@ La próxima vez que veas «la inflación subió a 5%», pregunta:
 
 Porque el promedio no miente, pero tampoco cuenta tu historia individual.
 
-## Fuentes y materiales pendientes
+## Fuentes y materiales
 
-- BCRD: metodología y series del Índice de Precios al Consumidor.
-- ONE/BCRD: Encuesta Nacional de Ingresos y Gastos de los Hogares.
-- Visuales pendientes: ponderaciones por quintil y dominio geográfico, inflación personal y actualización de la canasta.
-
+- [Constructor reproducible de las figuras](../../../research/canasta-familiar/build-graficos.R)
+- [BCRD: costo de la canasta por quintiles](../../../atlas/data/raw/bcrd-precios/Costo_Canasta_quintiles_base_2019-2020.xlsx)
+- [BCRD: costo de la canasta por regiones](../../../atlas/data/raw/bcrd-precios/Costo_Canasta_regiones_base_2019-2020.xls)
+- [BCRD: IPC nacional por grupos](../../../atlas/data/raw/bcrd-precios/ipc_grupos_base_2019-2020.xls)
+- BCRD/ONE: Encuesta Nacional de Ingresos y Gastos de los Hogares; las ponderaciones y la metodología deben documentarse con la fuente técnica antes de publicar.
