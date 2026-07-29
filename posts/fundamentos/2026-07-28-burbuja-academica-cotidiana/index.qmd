@@ -1,0 +1,92 @@
+---
+title: "Burbuja académica vs. burbuja cotidiana"
+date: "2026-07-28"
+author: "Leonardo Mena"
+description: "Borrador sobre el uso coloquial de burbuja, su definición económica y los límites de detectarla mientras ocurre."
+categories:
+  - "Economía"
+  - "Fundamentos"
+draft: true
+format:
+  html:
+    toc: false
+---
+
+<!-- Borrador de estructura. Los casos dominicanos se mantendrán como hipótesis hasta verificar series de precios, crédito, transacciones y fundamentos. -->
+
+## Tesis editorial
+
+“Burbuja” se usa en la conversación cotidiana para describir casi cualquier precio que parece absurdo. En economía, sin embargo, no basta con que un bien sea caro, suba mucho o termine cayendo: hay que discutir qué relación tiene su precio con un valor fundamental, qué expectativas lo sostienen y qué modelo permite medir ese valor.
+
+## Estructura propuesta
+
+### 1. La palabra que se estiró demasiado
+
+- Burbuja como sinónimo coloquial de caro, exagerado, temporal o condenado a caer.
+- Diferencia entre aumento de precios, sobrevaloración, exuberancia y burbuja.
+- Por qué una caída posterior no convierte automáticamente todo el aumento anterior en una burbuja.
+
+### 2. Qué es una burbuja económica
+
+- Precio de mercado frente a valor fundamental.
+- Expectativas, retroalimentación, crédito, liquidez y ventas basadas en la expectativa de vender más caro.
+- Distinción entre una burbuja de activos, una burbuja crediticia y un episodio de exuberancia.
+- Qué evidencia no basta: una subida rápida, una valoración alta o un crash aislado.
+
+### 3. De las manías históricas a los mercados modernos
+
+Recorrido histórico por episodios que suelen usarse como ejemplos —Tulipomanía, Mississippi y South Sea, 1929, las puntocom y la vivienda de 2008—, separando la descripción posterior de la evidencia disponible en tiempo real. La sección deberá evitar presentar la historia como una lista de burbujas indiscutibles.
+
+### 4. Qué podría estudiarse en República Dominicana
+
+Los casos se formularán como candidatos, no como burbujas ya demostradas:
+
+- vivienda y suelo urbano en Santo Domingo y Santiago;
+- oferta inmobiliaria turística y zonas de Punta Cana;
+- crédito hipotecario y construcción;
+- activos financieros o criptoactivos cuando existan series y volumen suficientes.
+
+Para cada caso habrá que separar precio, cantidad de transacciones, crédito, alquileres o ingresos, costos de construcción, expectativas y liquidez. El artículo no declarará “burbuja” solo porque el precio haya aumentado.
+
+### 5. ¿Se puede saber mientras ocurre?
+
+El debate académico tiene dos posiciones que no deben caricaturizarse:
+
+- una lectura escéptica: “valor fundamental” depende de un modelo de descuento, riesgo y expectativas que también puede estar mal especificado;
+- una lectura empírica: existen pruebas de comportamiento explosivo y detectores recursivos que intentan fechar el inicio y el colapso de episodios anómalos.
+
+La pregunta no es solamente si la burbuja existió, sino qué información estaba disponible en cada fecha y si el diagnóstico habría sido accionable entonces.
+
+### 6. El problema del valor objetivo
+
+El valor fundamental no es una etiqueta visible en el bien. Puede depender de:
+
+- flujo de ingresos esperado y tasa de descuento;
+- alquileres, salarios, productividad o utilidad de uso;
+- riesgo, liquidez, impuestos y costos de transacción;
+- escasez física, calidad y ubicación;
+- expectativas de otros compradores y cambios regulatorios.
+
+Dos modelos razonables pueden producir valores fundamentales distintos. Por eso una desviación estadística puede ser evidencia de exuberancia sin ser una prueba definitiva de sobrevaloración.
+
+## Visuales pendientes
+
+1. Un continuo entre “caro” en el lenguaje cotidiano y “burbuja” como hipótesis económica verificable.
+2. Una línea de tiempo de episodios históricos, separando diagnóstico contemporáneo y etiqueta posterior.
+3. Un esquema de valoración que muestre cómo cambian el valor fundamental y la señal de burbuja cuando cambian la tasa de descuento, el alquiler, el crédito o las expectativas.
+4. Para República Dominicana, un panel exploratorio de precio, crédito, construcción y alquileres; solo se convertirá en evidencia de burbuja si las series permiten una comparación válida.
+
+## Metodología prevista
+
+El artículo distinguirá tres niveles de afirmación: lenguaje coloquial, descripción estadística y diagnóstico económico. Para un caso dominicano, la unidad de análisis deberá ser mercado–periodo, con series de precios y cantidades, crédito y una aproximación explícita al fundamento económico. Se reportarán ventanas temporales, cambios de régimen y sensibilidad a la especificación del valor fundamental.
+
+Las pruebas de raíz unitaria explosiva o detectores recursivos pueden identificar episodios compatibles con exuberancia, pero no resuelven por sí solos el valor “correcto” del activo ni prueban una causalidad única. La etiqueta final tendrá que incorporar el contrafactual: qué habría ocurrido con precios, transacciones y crédito bajo expectativas y fundamentos distintos.
+
+## Fuentes y materiales
+
+- [Fama, “Two Pillars of Asset Pricing”](https://www.aeaweb.org/articles?id=10.1257%2Faer.104.6.1467)
+- [Phillips, Shi y Yu, “Testing for Multiple Bubbles”](https://econpapers.repec.org/article/wlyiecrev/v_3a56_3ay_3a2015_3ai_3a4_3ap_3a1079-1134.htm)
+- [ONE, Registro de Oferta de Edificaciones 2024](https://one.gob.do/media/0s1htait/informe-registro-de-oferta-de-edificaciones-2024.pdf)
+- [ONE, Índice de Costos Directos de la Construcción de Viviendas](https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-economicas/precios/icdv/)
+- [BCRD, Informe de Estabilidad Financiera, septiembre de 2024](https://cdn.bancentral.gov.do/documents/informe-de-estabilidad-financiera/documents/InformeEstabilidadFinancieraSeptiembre2024.pdf?v=1739577600131)
+- La evidencia dominicana y los visuales se añadirán después de validar disponibilidad, frecuencia, cobertura y comparabilidad de las series.
