@@ -48,6 +48,27 @@ Los casos se formularán como candidatos, no como burbujas ya demostradas:
 
 Para cada caso habrá que separar precio, cantidad de transacciones, crédito, alquileres o ingresos, costos de construcción, expectativas y liquidez. El artículo no declarará “burbuja” solo porque el precio haya aumentado.
 
+### Lo que sí podemos decir con datos dominicanos
+
+El hallazgo preliminar no es que la República Dominicana esté en una burbuja inmobiliaria nacional. Es más interesante y más defendible: el país tiene señales para estudiar mercados concretos, pero las fuentes disponibles no permiten convertir una subida de precios, una expansión del crédito o una oferta cara en un diagnóstico automático de burbuja.
+
+La pieza más útil es el índice de precios de vivienda construido por el BCRD. El estudio utiliza 92,934 registros de inmuebles financiados entre junio de 2018 y junio de 2021; 84% de los registros residenciales se concentran en el Distrito Nacional, Santo Domingo y Santiago. Por la baja cantidad de observaciones en la mayoría de las provincias, el indicador se concentra en la Región Metropolitana. Esto lo vuelve valioso para un estudio de mercado, pero no equivale a un índice nacional de todas las compraventas: es una muestra administrativa de inmuebles financiados y puede dejar fuera operaciones en efectivo, reventas no hipotecadas y zonas con poca cobertura.
+
+La ONE ofrece dos piezas que permiten contrastar esa señal. El Registro de Oferta de Edificaciones (ROE), que se levanta semestralmente en la zona urbana de la Región Metropolitana, registra obras, unidades, precios de oferta, expectativas de venta y financiamiento. Es una fuente de inventario y oferta, no un registro de precios efectivamente transados. El ICDV, disponible de enero de 2012 a junio de 2026, mide costos directos de construir cuatro tipos de vivienda en el Distrito Nacional y Santo Domingo; excluye terreno, diseño, permisos, costos financieros y beneficios del constructor. Por eso sirve como comparación de costos, pero no como sustituto del valor fundamental de una vivienda.
+
+La evidencia financiera también exige cuidado. En junio de 2025, la cartera hipotecaria del sistema alcanzó RD$414,632 millones, con un crecimiento interanual de 13.3%, y representó 18.3% de la cartera total; la tasa hipotecaria promedio ponderada fue 11.4%. Son variables necesarias para estudiar el canal crédito-precio, pero no prueban que el crédito esté financiando compras especulativas. De hecho, el Informe de Estabilidad Financiera del BCRD describió el mercado inmobiliario como ajustándose en 2024 y señaló que las tasas hipotecarias elevadas habían frenado la demanda de nuevas propiedades. El mismo informe presenta un deterioro inmobiliario más pronunciado —especialmente comercial— como un riesgo para los balances bancarios, no como una burbuja ya confirmada.
+
+El caso dominicano, entonces, debería formularse así: ¿cuánto de la evolución del precio por metro cuadrado en la Región Metropolitana puede explicarse por costos de construcción, alquileres, ingresos, ubicación y escasez, y cuánto queda como componente difícil de justificar por esos fundamentos? Punta Cana y otros mercados turísticos pueden aparecer como extensiones, pero no deben ocupar el centro del artículo hasta contar con precios transados, alquileres, inventario y crédito con cobertura comparable.
+
+| Fuente | Qué permite medir | Qué no permite afirmar por sí sola |
+|---|---|---|
+| IPVI del BCRD | Evolución del precio por metro cuadrado de inmuebles financiados en la Región Metropolitana | Que exista una sobrevaloración nacional o que el precio observado sea el valor fundamental |
+| ROE de la ONE | Inventario, etapa de obra, precio de oferta, destino y expectativas en la Región Metropolitana | Que el precio publicado sea el precio efectivamente pagado o que las unidades se absorban rápidamente |
+| ICDV de la ONE | Variación de costos directos de construcción | Que el costo de construir determine por sí solo el precio del suelo o de la vivienda |
+| Cartera hipotecaria de la SB/BCRD | Intensidad y composición del financiamiento inmobiliario | Que el crédito sea especulativo o que el sistema esté expuesto a un colapso |
+
+La conclusión editorial puede ser el contraste entre el lenguaje cotidiano y la investigación: en RD sí podemos mapear dónde suben los precios y el crédito; lo difícil es demostrar cuánto de esa subida no puede explicarse por fundamentos observables.
+
 ### 5. ¿Se puede saber mientras ocurre?
 
 El debate académico tiene dos posiciones que no deben caricaturizarse:
@@ -74,7 +95,8 @@ Dos modelos razonables pueden producir valores fundamentales distintos. Por eso 
 1. Un continuo entre “caro” en el lenguaje cotidiano y “burbuja” como hipótesis económica verificable.
 2. Una línea de tiempo de episodios históricos, separando diagnóstico contemporáneo y etiqueta posterior.
 3. Un esquema de valoración que muestre cómo cambian el valor fundamental y la señal de burbuja cuando cambian la tasa de descuento, el alquiler, el crédito o las expectativas.
-4. Para República Dominicana, un panel exploratorio de precio, crédito, construcción y alquileres; solo se convertirá en evidencia de burbuja si las series permiten una comparación válida.
+4. Para República Dominicana, un mapa de precio de oferta por metro cuadrado en la Región Metropolitana, acompañado de un panel de IPVI, ICDV, cartera hipotecaria, alquileres e ingresos. El mapa debe rotularse como oferta, no como transacciones.
+5. Una matriz visual de evidencia: qué observa cada fuente dominicana y qué inferencia queda fuera de su alcance.
 
 ## Metodología prevista
 
@@ -87,6 +109,10 @@ Las pruebas de raíz unitaria explosiva o detectores recursivos pueden identific
 - [Fama, “Two Pillars of Asset Pricing”](https://www.aeaweb.org/articles?id=10.1257%2Faer.104.6.1467)
 - [Phillips, Shi y Yu, “Testing for Multiple Bubbles”](https://econpapers.repec.org/article/wlyiecrev/v_3a56_3ay_3a2015_3ai_3a4_3ap_3a1079-1134.htm)
 - [ONE, Registro de Oferta de Edificaciones 2024](https://one.gob.do/media/0s1htait/informe-registro-de-oferta-de-edificaciones-2024.pdf)
+- [ONE, Registro de Oferta de Edificaciones 2025-1](https://www.one.gob.do/media/xjzdrr0p/informe-registro-de-oferta-de-edificaciones-roe-2025-1.pdf)
+- [ONE, Registro de Oferta de Edificaciones 2025-2](https://www.one.gob.do/media/jm0gv5g4/informe-registro-de-oferta-de-edificaciones-roe-2025-2.pdf)
 - [ONE, Índice de Costos Directos de la Construcción de Viviendas](https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-economicas/precios/icdv/)
+- [BCRD, Construcción de un índice de precios de vivienda para la República Dominicana](https://cdn.bancentral.gov.do/documents/trabajos-de-investigacion/documents/2021-02_DT.pdf?v=20220105%3Fv%3D1760486400165)
 - [BCRD, Informe de Estabilidad Financiera, septiembre de 2024](https://cdn.bancentral.gov.do/documents/informe-de-estabilidad-financiera/documents/InformeEstabilidadFinancieraSeptiembre2024.pdf?v=1739577600131)
+- [Superintendencia de Bancos, Informe trimestral de desempeño del sistema financiero, junio de 2025](https://www.sb.gob.do/media/g0rfkewa/itdsf-junio_2025_vf.pdf)
 - La evidencia dominicana y los visuales se añadirán después de validar disponibilidad, frecuencia, cobertura y comparabilidad de las series.
