@@ -285,25 +285,138 @@ labor_sectors <- function(path) {
 }
 
 tss_labor_trend <- function(jobs_path, employers_path) {
-  if (!file.exists(jobs_path) || !file.exists(employers_path)) return(NULL)
-  jobs <- read.csv(jobs_path, fileEncoding = "latin1", stringsAsFactors = FALSE, check.names = FALSE)
-  employers <- read.csv(employers_path, fileEncoding = "latin1", stringsAsFactors = FALSE, check.names = FALSE)
+  if (!file.exists(jobs_path) || !file.exists(employers_path)) {
+    return(NULL)
+  }
+
+  read_tss_csv <- function(path) {
+    data <- read.csv(
+      path,
+      fileEncoding = "latin1",
+      stringsAsFactors = FALSE,
+      check.names = FALSE,
+      fill = TRUE,
+      strip.white = TRUE
+    )
+
+    # La TSS puede publicar delimitadores sobrantes al final del encabezado,
+    # lo que crea columnas con nombres vacios.
+    valid_names <- nzchar(trimws(names(data)))
+    data <- data[, valid_names, drop = FALSE]
+
+    # Normaliza espacios y garantiza nombres unicos sin alterar los nombres
+    # sustantivos de las columnas.
+    names(data) <- make.unique(trimws(names(data)))
+
+    data
+  }
+
   pick_col <- function(data, pattern) {
     normalized <- normalize_text(names(data))
-    names(data)[grepl(pattern, normalized)][1]
+    matches <- which(grepl(pattern, normalized))
+
+    if (!length(matches)) {
+      return(NA_character_)
+    }
+
+    names(data)[matches[1]]
   }
-  jobs_year_col <- pick_col(jobs, "^ano$")
-  jobs_total_col <- pick_col(jobs, "^total$")
-  employers_year_col <- pick_col(employers, "^ano$")
-  employer_col <- pick_col(employers, "empleadores")
-  needed <- c(jobs_year_col, jobs_total_col, employers_year_col, employer_col)
-  if (any(is.na(needed))) return(NULL)
-  jobs_year <- aggregate(jobs[[jobs_total_col]] ~ jobs[[jobs_year_col]], jobs, mean, na.rm = TRUE)
-  names(jobs_year) <- c("year", "jobs")
-  emp_year <- aggregate(employers[[employer_col]] ~ employers[[employers_year_col]], employers, mean, na.rm = TRUE)
-  names(emp_year) <- c("year", "employers")
-  out <- merge(jobs_year, emp_year, by = "year", all = FALSE)
-  out <- tail(out[order(out$year), ], 7)
+
+  jobs <- read_tss_csv(jobs_path)
+  employers <- read_tss_csv(employers_path)
+
+  columns <- c(
+    jobs_year = pick_col(jobs, "^ano$"),
+    jobs_total = pick_col(jobs, "^total$"),
+    employers_year = pick_col(employers, "^ano$"),
+    employers_total = pick_col(employers, "empleadores")
+  )
+
+  if (anyNA(columns)) {
+    warning(
+      paste0(
+        "No se reconocieron todas las columnas requeridas de la TSS. ",
+        "Columnas de empleos: ",
+        paste(names(jobs), collapse = ", "),
+        ". Columnas de empleadores: ",
+        paste(names(employers), collapse = ", ")
+      ),
+      call. = FALSE
+    )
+
+    return(NULL)
+  }
+
+  jobs_data <- data.frame(
+    year = suppressWarnings(
+      as.integer(to_num(jobs[[columns[["jobs_year"]]]]))
+    ),
+    jobs = to_num(jobs[[columns[["jobs_total"]]]]),
+    stringsAsFactors = FALSE
+  )
+
+  employers_data <- data.frame(
+    year = suppressWarnings(
+      as.integer(to_num(employers[[columns[["employers_year"]]]]))
+    ),
+    employers = to_num(
+      employers[[columns[["employers_total"]]]]
+    ),
+    stringsAsFactors = FALSE
+  )
+
+  jobs_data <- jobs_data[
+    is.finite(jobs_data$year) & is.finite(jobs_data$jobs),
+    ,
+    drop = FALSE
+  ]
+
+  employers_data <- employers_data[
+    is.finite(employers_data$year) &
+      is.finite(employers_data$employers),
+    ,
+    drop = FALSE
+  ]
+
+  if (!nrow(jobs_data) || !nrow(employers_data)) {
+    warning(
+      "Los archivos de la TSS no contienen observaciones numericas utilizables.",
+      call. = FALSE
+    )
+
+    return(NULL)
+  }
+
+  # La interfaz por listas evita que aggregate() interprete nombres externos
+  # del CSV como terminos de una formula.
+  jobs_year <- aggregate(
+    x = list(jobs = jobs_data$jobs),
+    by = list(year = jobs_data$year),
+    FUN = mean,
+    na.rm = TRUE
+  )
+
+  employers_year <- aggregate(
+    x = list(employers = employers_data$employers),
+    by = list(year = employers_data$year),
+    FUN = mean,
+    na.rm = TRUE
+  )
+
+  out <- merge(
+    jobs_year,
+    employers_year,
+    by = "year",
+    all = FALSE
+  )
+
+  out <- out[order(out$year), , drop = FALSE]
+  out <- tail(out, 7)
+
+  if (!nrow(out)) {
+    return(NULL)
+  }
+
   data.frame(
     period = as.character(out$year),
     employment = round(out$jobs / 1000000, 2),
