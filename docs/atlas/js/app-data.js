@@ -199,6 +199,8 @@ function updateUrlState({ replace = false } = {}) {
 function applyStateFromUrl() {
   const url = new URL(window.location.href);
   const legacyHash = url.hash ? url.hash.replace(/^#/, "").split("?")[0] : "";
+  Object.assign(state, URL_STATE_DEFAULTS);
+  if (els.search) els.search.value = "";
   const view = url.searchParams.get("view") || legacyHash;
   if (view && (view === "overview" || findModule(view))) state.active = view;
   const filter = url.searchParams.get("filter");
@@ -212,9 +214,11 @@ function applyStateFromUrl() {
   const metric = url.searchParams.get("metric");
   if (metric) setActiveMetricForModule(module, metric);
   const region = url.searchParams.get("region");
-  if (region) state.territoryRegion = region;
+  if (state.data.series.territory.provinces.some((item) => item.region === region)) {
+    state.territoryRegion = region;
+  }
   const map = url.searchParams.get("map");
-  if (map) state.visualMap = map;
+  if (["business", "mipymes", "tourism"].includes(map)) state.visualMap = map;
 }
 
 function activeMetricForModule(module) {
@@ -228,12 +232,14 @@ function activeMetricForModule(module) {
 }
 
 function setActiveMetricForModule(module, metric) {
-  if (!module || !metric) return;
-  if (module.chart === "macro") state.macroMetric = metric;
-  if (module.chart === "trade") state.tradeMetric = metric;
-  if (module.chart === "labor") state.laborMetric = metric;
-  if (module.chart === "territory") state.territoryMapMetric = metric;
-  if (module.chart === "visualLab") state.visualMap = metric;
+  const options = {
+    macro: ["macroMetric", ["dolar", "inflacion", "imae", "tpm"]],
+    trade: ["tradeMetric", ["exports", "imports"]],
+    labor: ["laborMetric", ["employment", "informality", "wageIndex"]],
+    territory: ["territoryMapMetric", ["business_density", "opportunity"]],
+    visualLab: ["visualMap", ["business", "mipymes", "tourism"]]
+  }[module?.chart];
+  if (options && options[1].includes(metric)) state[options[0]] = metric;
 }
 
 function updateDocumentTitle() {
@@ -260,6 +266,7 @@ function resetAtlasFilters({ focusSearch = false } = {}) {
   state.query = "";
   state.family = "all";
   if (els.search) els.search.value = "";
+  updateUrlState({ replace: true });
   syncFilterState();
   syncSearchState();
   renderNavigation();

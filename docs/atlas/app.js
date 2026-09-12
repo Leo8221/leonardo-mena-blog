@@ -1,3 +1,15 @@
+const URL_STATE_DEFAULTS = Object.freeze({
+  active: "overview",
+  query: "",
+  family: "all",
+  macroMetric: "dolar",
+  tradeMetric: "exports",
+  laborMetric: "employment",
+  territoryMapMetric: "business_density",
+  territoryRegion: "all",
+  visualMap: "business"
+});
+
 const state = {
   data: null,
   geojson: null,
@@ -8,15 +20,7 @@ const state = {
   assetFailures: {},
   tooltip: null,
   tooltipPinned: false,
-  active: "overview",
-  query: "",
-  family: "all",
-  macroMetric: "dolar",
-  tradeMetric: "exports",
-  laborMetric: "employment",
-  territoryMapMetric: "business_density",
-  territoryRegion: "all",
-  visualMap: "business",
+  ...URL_STATE_DEFAULTS,
   mapPinned: {},
   booted: false,
   lastTrackedSearch: ""
@@ -36,7 +40,6 @@ const els = {
   sidebarBackdrop: document.getElementById("sidebar-backdrop"),
   main: document.getElementById("atlas-main"),
   status: document.getElementById("atlas-status"),
-  topbarShare: document.getElementById("atlas-share"),
   themeToggle: document.getElementById("atlas-theme-toggle")
 };
 
@@ -268,26 +271,14 @@ function bindEvents() {
     els.sidebarBackdrop.addEventListener("click", () => closeSidebar({ restoreFocus: true }));
   }
 
-  if (els.topbarShare) {
-    els.topbarShare.addEventListener("click", async () => {
-      const copied = await copyText(currentViewUrl());
-      flashButton(els.topbarShare, copied ? "Copiado" : "Copiar");
-      trackAtlasEvent("atlas_copy_link", { referrer_section: "topbar" });
-    });
-  }
-
   window.addEventListener("resize", debounce(() => {
     renderStage();
   }, 140));
 
   window.addEventListener("popstate", () => {
     applyStateFromUrl();
-    syncFilterState();
-    syncSearchState();
-    renderMetrics();
-    renderNavigation();
-    renderMobileNavigation();
-    renderStage();
+    render();
+    updateDocumentTitle();
   });
 
   window.addEventListener("hashchange", () => {
