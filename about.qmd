@@ -32,7 +32,7 @@ Aquí escribo sobre economía dominicana y comparto los datos y gráficos de mis
 ::: {.about-manifesto}
 ## Sobre el sitio
 
-Soy Leonardo Mena, estudiante de Economía en la UASD. Este blog nace de una incomodidad sencilla: muchas conversaciones económicas en República Dominicana se quedan atrapadas entre titulares, opiniones rápidas y datos sueltos. Escribir me obliga a detenerme, buscar la fuente, armar el gráfico y preguntarme si la conclusión realmente sale de los datos.
+Soy Leonardo Mena, egresado de Economía de la UASD. Este blog nace de una incomodidad sencilla: muchas conversaciones económicas en República Dominicana se quedan atrapadas entre titulares, opiniones rápidas y datos sueltos. Escribir me obliga a detenerme, buscar la fuente, armar el gráfico y preguntarme si la conclusión realmente sale de los datos.
 
 La economía que me interesa está en el transporte, en el carrito del supermercado, en el efectivo que todavía domina el colmado, en una MiPyME que no pide crédito y en una provincia donde casi no hay empresas formales. Ahí es donde los promedios nacionales empiezan a fallar: dicen algo del país, pero muchas veces esconden las diferencias territoriales, sociales y productivas que explican cómo vive la gente.
 

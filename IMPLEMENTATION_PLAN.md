@@ -253,3 +253,8 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 - Prueba de navegador del artículo mínimo: se corrigió body-class a la opción nativa body-classes. Los controles de compartir se crean solo si falta el bloque existente; las imágenes sencillas de Markdown también admiten ampliación. Chrome a 1440/320 px: autor e índice heredados, excepciones por artículo, una barra y un bloque de compartir, copia de enlace, progreso al desplazarse y ampliación/Escape correctos, sin errores JavaScript. Evidencia externa: editorial-inheritance-qa.json.
 - Verificación final en vivo: Gráfico #0 y MiPyMES a 1440/320 px, un bloque de compartir y una barra de lectura por página, copia al portapapeles, ampliación/Escape y cambio de tema sin desplazamiento correctos. Portada, Sobre mí, suscripción, menús móviles, búsqueda, filtro del archivo y nueve módulos del Atlas correctos, sin errores JavaScript ni recursos propios ausentes en los recorridos probados. SVG de MiPyMES revisados visualmente: cuatro regiones con porcentajes reales y acentos normales. Evidencia externa: editorial-live/ y landing-functions-live/.
 - Copia local sincronizada y 197 cambios previos conservados, verificados mediante SHA-256 o ausencia del archivo. La documentación y los controles de escritura están listos; no quedan tareas de esta mejora pendientes.
+
+## Presentación personal
+
+- about.qmd: presentación actualizada a «Soy Leonardo Mena, egresado de Economía de la UASD», según indicación del autor. Resto del texto conservado.
+- Render de about.qmd e integridad de texto correctos. Pendiente comprobar la frase publicada tras el despliegue.
