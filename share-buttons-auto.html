@@ -173,7 +173,20 @@
     container.dataset.shareUtilitiesReady = "true";
   }
 
+  function ensureShareContainer() {
+    const content = document.getElementById("quarto-document-content");
+    if (!document.body.classList.contains("editorial-post") || !content ||
+        document.querySelector(".share-minimal")) return;
+
+    const container = document.createElement("div");
+    container.className = "share-minimal";
+    container.innerHTML = '<p>Compartir en <a href="#" data-share="linkedin">LinkedIn</a>, ' +
+      '<a href="#" data-share="twitter">X</a> o <a href="#" data-share="whatsapp">WhatsApp</a>.</p>';
+    content.appendChild(container);
+  }
+
   function setupShareButtons() {
+    ensureShareContainer();
     const data = getShareData();
     const shareButtons = document.querySelectorAll("[data-share]");
 

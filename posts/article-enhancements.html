@@ -23,7 +23,7 @@
   }
 
   const figureTargets = Array.from(content.querySelectorAll(
-    ".quarto-float.quarto-figure, figure"
+    ".quarto-figure, figure"
   )).filter((node) => {
     if (node.closest(".article-figure-modal")) return false;
     if (node.dataset.figureEnhanced === "true") return false;
