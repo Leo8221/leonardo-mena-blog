@@ -197,4 +197,13 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 - Navegador: portada, Sobre mí, suscripción y Atlas a 320 y 1440 px; nueve módulos, CSV, ampliación/Escape, mapas y modo oscuro; sin errores JS ni recursos locales ausentes. El creador permite crear/buscar borradores en ambos tamaños, sin desbordamiento.
 - Advertencias: build-article-visuals conserva el aviso previo de st_simplify en coordenadas geográficas. El render parcial de prueba del borrador avisa de imágenes de otros borradores que no se renderizaron en esa previsualización.
 - Build y capturas de validación en ../leonardo-mena-blog-cleanup-check/. Se preservan los artículos, investigaciones y modificaciones locales de docs/ ajenos a esta limpieza; no se copia el churn de Quarto 1.9.37 al árbol principal. CI usa 1.9.38.
-- El usuario autoriza ahora commit, push y prueba en vivo. Pendiente en este punto: despliegue remoto y comprobación funcional del sitio publicado.
+- El usuario autorizó commit, push y prueba en vivo; sus resultados se registran debajo.
+
+### Publicación y prueba en vivo
+
+- Push de fuentes: 0e4b2111. GitHub Actions 34674401520 completó el render sin caché, las diez pruebas y los controles de texto/contrato; generó docs/ en dcb59088. Pages 34674574871 finalizó correctamente.
+- Chrome contra https://leo8221.github.io/leonardo-mena-blog/: portada, Sobre mí, suscripción y Atlas a 320/1440 px; nueve módulos; búsqueda nativa de Quarto; filtro del archivo (11 artículos, 2 al buscar MiPyMES); menús móviles; restablecer filtros; portapapeles; CSV y PNG; ampliación/Escape; tema y navegación Atrás. Sin errores JavaScript ni recursos propios ausentes.
+- SVG de MiPyMES inspeccionados en vivo: cuatro regiones con porcentajes y textos tamaño/crédito con acentos correctos.
+- Esta revisión detectó contraste insuficiente en enlaces del archivo y un pequeño desbordamiento a 320 px. Corrección en assets/css/site/listings.css y sincronización controlada del mismo recurso en docs/. Validación local en 320/1440 px, claro/oscuro: sin desbordamiento; contraste mínimo medido de 6.77:1 en títulos, descripciones, fechas y etiquetas. No se cambia el filtrado nativo.
+- Capturas e informes: ../leonardo-mena-blog-cleanup-check/.quarto-live-qa/ y ../leonardo-mena-blog-publish-check/.quarto-contrast-qa/.
+- Avisos del build remoto: st_simplify sobre coordenadas geográficas y deprecación de Node 20 en actions/checkout@v4; ambos no impidieron el render ni el despliegue. No se cambió el algoritmo de mapas ni se actualizaron dependencias como parte de esta corrección.

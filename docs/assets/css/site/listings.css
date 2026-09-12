@@ -239,3 +239,19 @@ body:has(.home-shell) #listing-home-latest .listing-date {
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+/* Los listados nativos deben conservar el contraste al cambiar de tema. */
+.quarto-listing .quarto-post a {
+  color: var(--lm-text-main);
+}
+
+.quarto-listing .quarto-post .metadata a,
+.quarto-listing .quarto-post .listing-description a,
+.quarto-listing .quarto-post .listing-categories .listing-category {
+  color: var(--lm-text-soft);
+}
+
+main.content:has(.quarto-listing-container-default) {
+  width: 100%;
+  min-width: 0;
+}
