@@ -1,0 +1,6 @@
+project:
+  output-dir: .preview
+website:
+  draft-mode: visible
+execute:
+  freeze: auto

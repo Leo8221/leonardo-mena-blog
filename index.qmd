@@ -44,9 +44,9 @@ listing:
 ::: {.home-lede}
 <span class="home-kicker">Economía aplicada RD</span>
 
-# Leer la economía sin ruido.
+# Economía dominicana, en datos.
 
-Análisis y datos para mirar la economía dominicana con más calma.
+Escribo sobre precios, empleo, empresas y otros temas de la economía dominicana.
 
 :::
 
@@ -58,12 +58,10 @@ Análisis y datos para mirar la economía dominicana con más calma.
 
 ::: {.home-pulse-section}
 ::: {.section-header}
-<span class="section-kicker">Pulso RD</span>
-
-## Tres señales para ubicarse
+## Indicadores de República Dominicana
 :::
 
-No son datos en vivo. El corte y las fuentes están en Atlas.
+Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
 
 ::: {.home-pulse-list data-home-pulse="" aria-live="polite"}
 <a class="home-pulse-card home-pulse-fallback" href="atlas/index.html">
@@ -86,8 +84,6 @@ No son datos en vivo. El corte y las fuentes están en Atlas.
 :::
 
 ::: {.home-latest-section}
-<span class="section-kicker">Archivo vivo</span>
-
 ## Últimas publicaciones
 
 [Ver archivo completo](archivo.qmd)
@@ -98,27 +94,25 @@ No son datos en vivo. El corte y las fuentes están en Atlas.
 
 ::: {.home-paths-section}
 ::: {.section-header}
-<span class="section-kicker">Caminos de exploración</span>
-
-## Tres formas de entrar
+## Análisis, datos y conceptos
 :::
 
 ::: {.home-paths}
 <a class="home-path" href="republica-habla-de.qmd">
   <span>Entender la coyuntura</span>
-  <strong>Para seguir debates económicos con más calma.</strong>
+  <strong>Precios, empleo y debates de actualidad.</strong>
   <em>Análisis con datos y contexto.</em>
 </a>
 
 <a class="home-path" href="atlas/index.html">
   <span>Explorar los datos</span>
-  <strong>Para mirar indicadores, mapas y sectores.</strong>
+  <strong>Indicadores, mapas y sectores.</strong>
   <em>Datos con fuentes y corte.</em>
 </a>
 
 <a class="home-path" href="fundamentos.qmd">
   <span>Aprender fundamentos</span>
-  <strong>Ideas base, sin prisa.</strong>
+  <strong>Conceptos económicos con ejemplos.</strong>
   <em>Conceptos y explicaciones cortas.</em>
 </a>
 :::
@@ -138,9 +132,9 @@ Escribo para aprender mejor y ordenar ideas. Me interesa separar dato, lectura y
 ::: {.home-newsletter}
 <span class="section-kicker">Boletín</span>
 
-## Una lectura cuando haya algo que decir
+## Nuevas publicaciones por correo
 
-Nuevos análisis, gráficos y cambios importantes del Atlas. Sin correos diarios.
+Recibe los nuevos artículos y gráficos del blog.
 
 [Suscribirme](suscribete.qmd)
 :::

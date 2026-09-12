@@ -1,0 +1,362 @@
+/* ==========================================================================
+   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO
+   ========================================================================== */
+
+/* Tarjetas Generales (Value Boxes y Gráficos) */
+.home-latest-section {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-latest-section .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.home-latest-section .section-header h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.65rem);
+    line-height: 1.02;
+    text-align: left;
+}
+
+.quarto-dashboard {
+    background: var(--lm-bg-body) !important;
+    color: var(--lm-text-main);
+    font-family: "Inter", sans-serif;
+}
+
+.quarto-dashboard .card,
+.quarto-dashboard .value-box {
+    background-color: var(--lm-bg-card) !important;
+    border: 1px solid var(--lm-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 12px 28px rgba(25, 27, 31, 0.07);
+    color: var(--lm-text-main);
+    overflow: hidden;
+}
+
+.quarto-dashboard .card {
+    min-height: 0;
+}
+
+.quarto-dashboard .card-header {
+    background: color-mix(in srgb, var(--lm-bg-card) 88%, var(--lm-bg-sec)) !important;
+    border-bottom: 1px solid var(--lm-border) !important;
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+    font-weight: 650;
+}
+
+.quarto-dashboard .card-body {
+    padding: 0.95rem 1rem;
+}
+
+.quarto-dashboard .value-box {
+    border-top: 3px solid color-mix(in srgb, var(--lm-terracota) 70%, transparent) !important;
+    min-height: 138px;
+}
+
+.quarto-dashboard .value-box:hover,
+.quarto-dashboard .card:hover {
+    box-shadow: 0 16px 34px rgba(25, 27, 31, 0.1);
+}
+
+/* Títulos de las cajas (DÓLAR SPOT, etc.) */
+.value-box-title, .card-title {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em;
+    color: var(--lm-text-muted) !important;
+    margin-bottom: 0.5rem;
+}
+
+/* El número grande (RD$) */
+.value-box-value {
+    color: var(--lm-primario) !important;
+    font-family: "Crimson Pro", serif;
+    font-weight: 700;
+    /* Clamp para que no se rompa en pantallas pequeñas */
+    font-size: 2.8rem !important;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+/* --- ICONOS DE FONDO (MARCA DE AGUA) --- */
+/* Esto crea el efecto detrás del número */
+.value-box-showcase .bi,
+.value-box-showcase i,
+.value-box-showcase svg {
+    color: var(--lm-text-main) !important;
+    opacity: 0.08 !important; /* Muy transparente (sutil) */
+    font-size: 4rem !important; /* Grande */
+    transform: translateY(5%); /* Ajuste de posición */
+    top: auto;
+    bottom: 10px;
+}
+
+/* --- COLORES SEMÁNTICOS (LÓGICA ECONÓMICA) --- */
+
+/* Verde (Bueno/Dentro de meta) */
+.text-success { color: #388e3c !important; }
+
+/* Rojo (Malo/Alerta) */
+.text-danger  { color: #d32f2f !important; }
+
+/* Amarillo/Naranja (Precaución) */
+.text-warning { color: #f57f17 !important; }
+
+/* Azul/Terracota (Neutro o informativo) */
+.text-primary { color: var(--lm-terracota) !important; }
+
+/* Texto secundario pequeño */
+.value-box .small {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.quarto-dashboard .nav-tabs .nav-link {
+    border-radius: 6px 6px 0 0;
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.quarto-dashboard .nav-tabs .nav-link.active {
+    color: var(--lm-terracota-dark);
+    border-color: var(--lm-border) var(--lm-border) var(--lm-bg-card);
+}
+
+.quarto-dashboard .highcharts-container,
+.quarto-dashboard .dataTables_wrapper {
+    font-family: "Inter", sans-serif !important;
+}
+
+.observatorio-method {
+    border-top: 3px solid var(--lm-olive) !important;
+}
+
+.observatorio-note {
+    max-width: 920px;
+    margin: 0 auto;
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.observatorio-note h2,
+.observatorio-note h3 {
+    color: var(--lm-text-main);
+    font-family: "Crimson Pro", Georgia, serif;
+    line-height: 1.15;
+}
+
+.observatorio-note h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.observatorio-note h3 {
+    font-size: 1.35rem;
+    margin: 1.45rem 0 0.4rem;
+}
+
+.observatorio-note p {
+    margin-bottom: 0.85rem;
+}
+
+.atlas-shell {
+    width: 100%;
+    min-height: 100%;
+}
+
+.atlas-hero {
+    max-width: 1120px;
+    margin: 0 auto 1.25rem;
+    padding: 0.35rem 0.15rem 1rem;
+    border-bottom: 1px solid var(--lm-border);
+}
+
+.atlas-kicker {
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    color: var(--lm-terracota);
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.atlas-hero h2 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--lm-text-main);
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 2.25rem;
+    line-height: 1.05;
+}
+
+.atlas-hero p {
+    max-width: 820px;
+    margin: 0.7rem 0 0;
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.atlas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.atlas-card {
+    appearance: none;
+    display: flex;
+    min-height: 16rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.05rem;
+    border: 1px solid var(--lm-border);
+    border-top: 3px solid var(--lm-border-dark);
+    border-radius: 8px;
+    background: var(--lm-bg-card);
+    color: var(--lm-text-main);
+    box-shadow: 0 10px 24px rgba(25, 27, 31, 0.06);
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.atlas-card:hover {
+    color: var(--lm-text-main);
+    border-color: var(--lm-border-dark);
+    box-shadow: 0 16px 34px rgba(25, 27, 31, 0.1);
+    transform: translateY(-2px);
+}
+
+.atlas-card.is-active {
+    border-top-color: var(--lm-terracota);
+}
+
+.atlas-card.is-next {
+    border-top-color: var(--lm-olive);
+}
+
+.atlas-card[aria-disabled="true"] {
+    cursor: default;
+}
+
+.atlas-card-top,
+.atlas-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.atlas-badge,
+.atlas-type {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.atlas-badge {
+    color: var(--lm-terracota-dark);
+}
+
+.atlas-card.is-next .atlas-badge {
+    color: var(--lm-olive);
+}
+
+.atlas-type {
+    color: var(--lm-text-muted);
+}
+
+.atlas-card h3 {
+    margin: 0;
+    color: var(--lm-text-main);
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.12;
+}
+
+.atlas-card p {
+    margin: 0;
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.48;
+}
+
+.atlas-card-meta {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--lm-border);
+    color: var(--lm-text-muted);
+    font-size: 0.72rem;
+    font-weight: 650;
+}
+
+.atlas-empty {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid var(--lm-border);
+    border-radius: 8px;
+    background: var(--lm-bg-card);
+    color: var(--lm-text-soft);
+    font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1180px) {
+    .atlas-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 860px) {
+    .atlas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .atlas-hero h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .atlas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atlas-card {
+        min-height: 13rem;
+    }
+}
+
+/* Footer del dashboard */
+footer, .nav-footer {
+    border-top: 1px solid var(--lm-border-dark);
+    background: var(--lm-bg-card);
+    color: var(--lm-text-muted);
+}

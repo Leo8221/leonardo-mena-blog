@@ -167,3 +167,34 @@ Plan de trabajo para modernizar el blog y Atlas sin migrar fuera de Quarto ni ro
 - `docs/` queda publicable y generado con un proceso reproducible.
 - No hay errores JS visibles ni logs temporales.
 - Documentacion de mantenimiento permite agregar graficos/secciones sin rehacer el sistema.
+
+## Limpieza del sitio — 2026-09-12
+
+- Base: pull fast-forward a 51bd9877, conservando el trabajo local previo. Se apartó un index.lock antiguo después de comprobar que no había procesos Git activos.
+- Retirados los dos recorridos guiados y sus recursos; eliminados CSS y manejadores sin consumidores.
+- Simplificados los textos de portada, Atlas, Sobre mí y suscripción; retirados el ejemplo de boletín y los encabezados duplicados. No se modificaron artículos ni definiciones de datos.
+- Atlas restaura los valores por defecto cuando desaparecen parámetros de la URL, valida métricas/mapas/regiones y sincroniza la URL al limpiar filtros. Atrás también actualiza el título.
+- Cinco pruebas de regresión: cuatro fallaban en la base y las cinco pasan después del cambio. Se ejecutan en CI junto con la comprobación de sintaxis JavaScript.
+- Validaciones realizadas en una copia Git aislada: R UTF-8, build-atlas-data, build-article-visuals, sintaxis de todos los JS de Atlas y assets, contrato del sitio e integridad de texto en fuentes y docs, render completo de 44 documentos y renders de las dos páginas ajustadas después.
+- build-article-visuals emite una advertencia previa de st_simplify sobre coordenadas geográficas. No se cambió su algoritmo como parte de esta limpieza.
+- El render usa Quarto 1.9.37 y CI usa 1.9.38. La salida de validación y las capturas quedan en ../leonardo-mena-blog-cleanup-check/; no se mezcla el churn del build con docs/ del árbol principal, que ya tenía archivos eliminados y cambios previos.
+- Revisión de navegador: portada, Sobre mí, suscripción y Atlas a 1440 y 320 px sin desbordamiento; nueve módulos cargados; CSV descargado; sin errores JavaScript ni recursos locales faltantes. Ampliación y Escape comprobados, modo oscuro revisado y SVG de MiPyMES inspeccionados: Norte, Sur, Este y Metropolitana con porcentajes, y tamaño/crédito con acentos correctos.
+- No se hizo commit ni push. El build de validación usa los artículos de origin/main; no incorpora los cambios editoriales locales ajenos a esta tarea.
+
+Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contrato y git diff --check pasan en el árbol principal. El control global de texto señala cinco coincidencias en dos librerías generadas previas y no versionadas de site_libs/ (cookie-consent.js y pdfmake.min.js). Esos archivos no se modificaron. En la copia limpia, el mismo control pasa para fuentes y docs.
+
+## Refactorización y edición con Quarto — 2026-09-12
+
+- Se conserva Quarto como motor editorial, sus borradores, perfiles y preview. La publicación sigue siendo el workflow existente y GitHub Pages desde docs/.
+- styles.css pasa de 3802 líneas a un índice de imports; los estilos se separan por responsabilidad en assets/css/site/, conservando su orden y reglas. README.md documenta la distribución.
+- Los renderers de Atlas se separan en series, barras, composición y dispersión. renderers.js conserva las filas compartidas; HTML y recursos de Quarto incluyen los nuevos módulos.
+- El creador existente crear-articulo.cmd separa servidor, plantillas, integración con Quarto y recursos de interfaz. Crea siempre draft: true, evita sobrescribir artículos y solo prepara R cuando se solicita.
+- Vista previa llama a quarto preview con el perfil editor; muestra borradores en .preview/ y no modifica docs/. El post-render respeta QUARTO_PROJECT_OUTPUT_DIR. No se añade un publicador ni otro ciclo de estados.
+- R y Quarto comparten tools/runtime.ps1; se mantienen las rutas fijas y la comprobación UTF-8 por sesión. GUIA-EDITORIAL.md explica crear, revisar y publicar con las herramientas existentes.
+- El control de texto excluye librerías y cachés generadas; ya no interpreta sus contenidos minificados como texto editorial.
+- Pruebas: 10/10 (cinco de URL y cinco de creación de artículos); sintaxis JavaScript; contrato y texto de fuentes y docs; generación de datos y visuales del Atlas; render completo de 44 documentos.
+- Runtime probado con Windows PowerShell 5 y PowerShell 7. Vista previa del borrador comprobada con el perfil nativo: contenido presente y snapshot de todos los archivos de docs/ intacto.
+- Navegador: portada, Sobre mí, suscripción y Atlas a 320 y 1440 px; nueve módulos, CSV, ampliación/Escape, mapas y modo oscuro; sin errores JS ni recursos locales ausentes. El creador permite crear/buscar borradores en ambos tamaños, sin desbordamiento.
+- Advertencias: build-article-visuals conserva el aviso previo de st_simplify en coordenadas geográficas. El render parcial de prueba del borrador avisa de imágenes de otros borradores que no se renderizaron en esa previsualización.
+- Build y capturas de validación en ../leonardo-mena-blog-cleanup-check/. Se preservan los artículos, investigaciones y modificaciones locales de docs/ ajenos a esta limpieza; no se copia el churn de Quarto 1.9.37 al árbol principal. CI usa 1.9.38.
+- El usuario autoriza ahora commit, push y prueba en vivo. Pendiente en este punto: despliegue remoto y comprobación funcional del sitio publicado.

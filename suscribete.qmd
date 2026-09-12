@@ -1,5 +1,4 @@
 ---
-title: "Suscríbete"
 pagetitle: "Suscríbete"
 description: "Recibe los nuevos análisis de economía aplicada, datos y visuales del blog."
 page-layout: custom
@@ -10,23 +9,9 @@ toc: false
 ::: {.subscribe-shell}
 ::: {.subscribe-panel}
 
-## Una lectura cuando haya algo que decir
+# Recibe las nuevas publicaciones
 
-Nuevos análisis, gráficos y cambios importantes del Atlas. Sin correos diarios.
-
-::: {.subscribe-notes}
-- Análisis nuevos cuando estén listos.
-- Visuales y mapas publicados en el blog o en Atlas.
-- Avisos puntuales, no una rutina diaria de correos.
-:::
-
-::: {.subscribe-preview}
-<span class="section-kicker">Ejemplo de envío</span>
-
-**Una lectura breve:** qué cambió y dónde ver el gráfico o la fuente.
-
-**Enlaces útiles:** el análisis nuevo, una vista del Atlas y una nota para seguir leyendo.
-:::
+Análisis y gráficos sobre economía dominicana en tu correo.
 
 <iframe class="subscribe-embed" title="Formulario de suscripción" src="https://leonardomena824.substack.com/embed" loading="lazy"></iframe>
 

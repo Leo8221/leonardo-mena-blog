@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artículos · Leonardo Mena</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+  <header><h1>Artículos</h1><p>Crea un borrador, escribe y revisa antes de publicar.</p></header>
+  <details id="new-article">
+    <summary>Crear artículo</summary>
+    <form id="post-form">
+      <label>Serie<select name="section" id="section"></select></label>
+      <label>Fecha<input name="date" id="date" type="date" required></label>
+      <label class="full">Título<input name="title" required maxlength="300"></label>
+      <label class="full">Descripción<textarea name="description" placeholder="Una frase para la portada del blog."></textarea></label>
+      <label>Categorías extra<input name="categories" placeholder="Precios, empleo"></label>
+      <label>Nombre de carpeta (opcional)<input name="slug" placeholder="Se genera a partir del título"></label>
+      <label class="checkbox full"><input type="checkbox" name="withR"> Incluir preparación para gráficos en R</label>
+      <button type="submit">Crear borrador</button>
+    </form>
+  </details>
+  <p id="result" class="result" role="status" aria-live="polite"></p>
+  <section aria-label="Tus artículos">
+    <label class="search">Buscar artículo<input type="search" id="search" placeholder="Título o serie"></label>
+    <div id="posts"></div>
+  </section>
+  <footer>Cuando el artículo esté listo, cambia <code>draft: true</code> a <code>draft: false</code> y envía las fuentes a GitHub como siempre. Quarto se encarga del render.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* ==========================================================================
+   7. ESTILOS DE POST INDIVIDUAL (EDITORIAL PREMIUM)
+   ========================================================================== */
+
+/* --- CONTENEDOR PRINCIPAL DEL POST --- */
+body.editorial-post #quarto-content.page-columns {
+  display: block;
+}
+
+body.editorial-post .quarto-margin-sidebar,
+body.editorial-post #TOC {
+  display: none !important;
+}
+
+body.editorial-post #quarto-document-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+body.editorial-post #title-block-header {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1rem;
+}
+
+/* --- HEADER DEL POST (Hero) --- */
+body.editorial-post .post-header {
+  margin-bottom: 3.5rem;
+  border-bottom: 3px solid var(--lm-terracota);
+  padding-bottom: 2rem;
+}
+
+/* Categorías/Tags encima del título */
+body.editorial-post .post-categories {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  margin-bottom: 1rem;
+}
+
+body.editorial-post .post-categories a {
+  border: none;
+  margin-right: 1rem;
+}
+
+/* Título del post */
+body.editorial-post #title-block-header h1.title {
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+/* Bajada/Descripción */
+body.editorial-post #title-block-header .description {
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: var(--lm-text-soft);
+  margin-bottom: 1.1rem;
+  font-style: normal;
+}
+
+/* Metadata (autor, fecha) */
+body.editorial-post #title-block-header .quarto-title-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: var(--lm-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  row-gap: 0.45rem;
+}
+
+body.editorial-post #title-block-header .quarto-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 0.8rem;
+}
+
+body.editorial-post #title-block-header .quarto-category:nth-of-type(n+4) {
+  display: none;
+}
+
+body.editorial-post .article-reading-time {
+  color: var(--lm-text-muted);
+  font-family: var(--lm-font-sans);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  margin-top: 0.55rem;
+  text-transform: uppercase;
+}
+
+/* --- DROP CAP (Letra Capital al inicio) --- */
+body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 2.7em;
+  line-height: 0.75;
+  margin: 0.05em 0.12em 0 0;
+  font-weight: 700;
+  color: var(--lm-terracota);
+  font-family: 'Crimson Pro', Georgia, serif;
+}
+
+/* --- PÁRRAFOS Y LECTURABILIDAD --- */
+body.editorial-post #quarto-document-content p {
+  margin-bottom: 1.5rem;
+  max-width: 70ch;
+  text-align: left;
+  text-wrap: pretty;
+  hyphens: none;
+  overflow-wrap: break-word;
+}
+
+body.editorial-post #quarto-document-content li {
+  max-width: 70ch;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+/* Primer párrafo más grande (lede) */
+body.editorial-post #quarto-document-content > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--lm-text-soft);
+}
+
+/* --- SUBHEADINGS EN EL POST --- */
+body.editorial-post #quarto-document-content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lm-border-dark);
+  font-size: 1.85rem;
+}
+
+body.editorial-post #quarto-document-content h3 {
+  font-size: 1.35rem;
+  color: var(--lm-terracota);
+  margin-top: 2.5rem;
+}
+
+/* --- NÚMEROS DESTACADOS (BIG NUMBERS) --- */
+body.editorial-post .big-number {
+  display: block;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--lm-primario);
+  margin: 2rem 0 0.5rem 0;
+}
+
+body.editorial-post .big-number-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Ejemplo de uso en Markdown:
+<span class="big-number">+28%</span>
+<span class="big-number-label">Aumento del dólar desde 2020</span>
+*/
+
+/* --- PULL QUOTES (Citas destacadas) --- */
+body.editorial-post .pullquote {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--lm-text-main);
+  margin: 3rem 0;
+  padding: 2rem 0 2rem 2rem;
+  border-left: 4px solid var(--lm-terracota);
+  font-style: italic;
+}
+
+/* --- DATA BOXES (Cajas de datos/estadísticas) --- */
+body.editorial-post .data-box {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .data-box-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+body.editorial-post .data-box-content {
+  font-size: 1rem;
+  color: var(--lm-text-main);
+}

@@ -133,8 +133,8 @@ requireText("skip-link.html", [
   ["clase skip-link", "skip-link"]
 ]);
 
-requireText("styles.css", [
-  ["estilos de skip link", ".skip-link"],
+requireText("assets/css/site/base.css", [["estilos de skip link", ".skip-link"]]);
+requireText("assets/css/site/navigation.css", [
   ["focus-visible global", ":focus-visible"],
   ["prefers-reduced-motion", "prefers-reduced-motion"]
 ]);

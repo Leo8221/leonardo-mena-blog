@@ -1,26 +1,23 @@
-# Lanzador de articulos
+# Lanzador de artículos
 
-Uso rapido:
+Abre `crear-articulo.cmd` desde la raíz.
+El flujo nativo de Quarto y GitHub Pages está en [GUIA-EDITORIAL.md](../../GUIA-EDITORIAL.md).
 
-1. Ejecuta `crear-articulo.cmd` desde la raiz del repo.
-2. Elige la serie.
-3. Escribe titulo, fecha, descripcion y categorias extra.
-4. Crea el articulo.
-5. Abre `index.qmd` y escribe.
+## Mantenimiento
 
-El articulo nuevo nace con `draft: true`. Quarto lo oculta en el render hasta
-que cambies esa linea a `draft: false`.
+- `server.mjs`: HTTP local y rutas de la interfaz.
+- `articles.mjs`: creación de archivos y lista de artículos.
+- `sections.mjs`: series disponibles.
+- `quarto.mjs`: abrir archivos o iniciar el preview nativo.
+- `web/`: HTML, CSS y JavaScript.
+- `../preview-article.ps1`: acceso a `quarto preview --profile editor`.
+- `../runtime.ps1`: entorno común de R/Quarto.
 
-Tambien puedes abrirlo desde terminal:
+El servidor escucha en 127.0.0.1:4318. Usa `POST_LAUNCHER_PORT` para cambiar
+el puerto y `--no-open` para iniciarlo sin abrir el navegador.
+
+Pruebas en carpetas temporales:
 
 ```powershell
-node tools/post-launcher/server.mjs
+node --test tools/post-launcher/articles.test.mjs
 ```
-
-Por defecto crea estas carpetas junto al `index.qmd`:
-
-- `data/`
-- `rds/`
-- `figures/`
-
-Si no las necesitas, desmarcalas en el formulario.

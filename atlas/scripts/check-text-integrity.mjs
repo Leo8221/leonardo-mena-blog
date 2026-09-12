@@ -23,6 +23,11 @@ const textExtensions = new Set([
 
 const ignoredDirs = new Set([
   ".git",
+  "site_libs",
+  "node_modules",
+  ".preview",
+  ".quarto-localappdata",
+  ".quarto-appdata",
   ".quarto",
   ".vscode",
   ".agents",

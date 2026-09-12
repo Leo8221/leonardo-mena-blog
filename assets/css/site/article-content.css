@@ -1,0 +1,276 @@
+/* --- LISTAS CON ESTILO --- */
+body.editorial-post #quarto-document-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body.editorial-post #quarto-document-content ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+body.editorial-post #quarto-document-content ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--lm-terracota);
+  font-weight: 700;
+}
+
+/* --- BLOQUES DE CÓDIGO EN POSTS --- */
+body.editorial-post #quarto-document-content pre {
+  background: var(--lm-bg-sec);
+  border: 1px solid var(--lm-border);
+  border-left: 4px solid var(--lm-olive);
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+/* --- CALLOUTS PERSONALIZADOS (Quarto) --- */
+body.editorial-post .callout {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+body.editorial-post .callout-note { border-left-color: var(--lm-olive); }
+body.editorial-post .callout-warning { border-left-color: #d97706; }
+body.editorial-post .callout-important { border-left-color: var(--lm-terracota); }
+
+/* --- SEPARADORES DE SECCIÓN --- */
+body.editorial-post .section-divider {
+  text-align: center;
+  margin: 4rem 0;
+  color: var(--lm-terracota);
+  font-size: 1.5rem;
+  letter-spacing: 0.5em;
+}
+
+/* Ejemplo de uso:
+<div class="section-divider">• • •</div>
+*/
+
+/* Key Takeaways */
+body.editorial-post .key-takeaways {
+  background: var(--lm-bg-card);
+  border: 1px solid var(--lm-border);
+  border-left: 3px solid var(--lm-terracota);
+  padding: 1.25rem 1.4rem;
+  margin: 2.5rem 0 3rem 0;
+  box-shadow: none;
+  border-radius: var(--lm-radius-sm);
+}
+
+body.editorial-post .key-takeaways-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lm-terracota);
+  margin-bottom: 1.25rem;
+}
+
+body.editorial-post .key-takeaways ol,
+body.editorial-post .key-takeaways ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+  counter-reset: takeaway-counter;
+}
+
+body.editorial-post .key-takeaways li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--lm-text-main);
+  counter-increment: takeaway-counter;
+}
+
+body.editorial-post .key-takeaways li:nth-child(n+4) {
+  display: none;
+}
+
+body.editorial-post .key-takeaways li::before {
+  content: counter(takeaway-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--lm-terracota);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .key-takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong dentro de takeaways */
+body.editorial-post .key-takeaways strong {
+  color: var(--lm-terracota);
+  font-weight: 700;
+}
+
+/* Variante compacta */
+body.editorial-post .key-takeaways.compact {
+  padding: 1.5rem 2rem;
+}
+
+body.editorial-post .key-takeaways.compact li {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+/* --- FOOTNOTES (Notas al pie) --- */
+body.editorial-post .footnotes {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--lm-border-dark);
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+}
+
+/* --- TABLA DE CONTENIDOS (TOC) --- */
+body.editorial-post #TOC {
+  background: var(--lm-bg-sec);
+  border-left: 4px solid var(--lm-terracota);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post #TOC ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+body.editorial-post #TOC a {
+  color: var(--lm-text-soft);
+  border: none;
+  font-size: 0.9rem;
+}
+
+body.editorial-post #TOC a:hover {
+  color: var(--lm-terracota);
+}
+
+/* --- IMÁGENES EN POSTS --- */
+body.editorial-post #quarto-document-content img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2.5rem auto;
+  border: 1px solid var(--lm-border);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Imágenes full-bleed (ancho completo) */
+body.editorial-post .full-width-image {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* --- NAVEGACIÓN ENTRE POSTS --- */
+body.editorial-post .post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--lm-border-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+body.editorial-post .post-nav-link {
+  flex: 1;
+  max-width: 45%;
+}
+
+body.editorial-post .post-nav-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* --- RESPONSIVE PARA MOBILE --- */
+@media (max-width: 768px) {
+  body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
+    font-size: 3.5em;
+  }
+
+  body.editorial-post .big-number {
+    font-size: 3rem;
+  }
+
+  body.editorial-post .pullquote {
+    font-size: 1.35rem;
+    padding-left: 1.5rem;
+  }
+
+  body.editorial-post #quarto-document-content p {
+    text-align: left; /* Quitar justificación en mobile */
+  }
+}
+
+
+/* Eliminar el subrayado (borde) específicamente del logo en la barra */
+.navbar .navbar-brand {
+    border-bottom: none !important;
+}
+
+/*  el logo crezca un poquito al pasar el mouse */
+.navbar .navbar-brand:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* =========================================
+   8 INTEGRACIÓN DE COMENTARIOS (GISCUS)
+   ========================================= */
+
+div.giscus {
+  /* 1. Centrado y Ancho Controlado */
+  max-width: 720px; /* Mismo ancho que tu texto para que no se desborde */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 2. Separación del Artículo */
+  margin-top: 4rem;      /* Mucho aire arriba */
+  padding-top: 2rem;     /* Espacio entre la línea y la caja */
+
+  /* 3. Línea Divisoria Editorial */
+  border-top: 1px solid var(--lm-border-dark);
+}
+
+/* Agregar un pequeno texto antes si la linea no es suficiente */
+div.giscus::before {
+  content: "Discusión";
+  display: block;
+  font-family: "Inter", sans-serif; /* O fuente sans */
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lm-terracota);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}

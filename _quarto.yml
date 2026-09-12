@@ -15,6 +15,7 @@ project:
     - robots.txt
     - tema_graficos.R
     - assets/css/tokens.css
+    - assets/css/site/**
     - assets/js/home-pulse.js
     - atlas/index.html
     - atlas/app.js
@@ -23,6 +24,10 @@ project:
     - atlas/js/chart-helpers.js
     - atlas/js/chart-tooltips.js
     - atlas/js/renderers.js
+    - atlas/js/chart-series.js
+    - atlas/js/chart-bars.js
+    - atlas/js/chart-composition.js
+    - atlas/js/chart-scatter.js
     - atlas/js/geo-utils.js
     - atlas/js/map-renderers.js
     - atlas/js/interactions.js
@@ -32,7 +37,6 @@ project:
     - atlas/js/app-data.js
     - atlas/js/app-ui.js
     - atlas/js/bootstrap.js
-    - atlas/js/tour.js
     - atlas/styles.css
     - atlas/css/base.css
     - atlas/css/layout.css
@@ -41,7 +45,6 @@ project:
     - atlas/css/tables.css
     - atlas/css/sources.css
     - atlas/css/responsive.css
-    - atlas/css/tour.css
     - atlas/data/atlas-data.json
     - atlas/data/article-visuals.json
     - atlas/data/rd-provinces.geojson
@@ -128,7 +131,6 @@ format:
       dark: slate
     css: styles.css
     include-before-body: skip-link.html
-    include-after-body: site-tour.html
     html-math-method: katex
     lazy-load: true
     toc: true            

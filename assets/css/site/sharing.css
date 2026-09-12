@@ -1,0 +1,205 @@
+/* ==========================================================================
+   15. SISTEMA DE COMPARTIR CONTENIDO (VERSIÓN MINIMALISTA)
+   ========================================================================== */
+
+/* ==========================================
+   BOTONES FLOTANTES LATERALES (DESKTOP ONLY)
+   ========================================== */
+
+/* Contenedor flotante - forzar posición fija */
+body .share-buttons-sticky,
+body.editorial-post .share-buttons-sticky {
+  position: fixed !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 20;
+  pointer-events: auto; /* Asegurar que sean clickeables */
+}
+
+/* Botones individuales */
+.share-buttons-sticky .share-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lm-bg-card);
+  border: 1px solid var(--lm-border);
+  color: var(--lm-text-soft);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-soft);
+  pointer-events: auto;
+}
+
+.share-buttons-sticky .share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid transparent;
+}
+
+.share-buttons-sticky .share-btn.twitter:hover {
+  background: #1DA1F2;
+  color: white;
+  border-color: #1DA1F2;
+}
+
+.share-buttons-sticky .share-btn.linkedin:hover {
+  background: #0A66C2;
+  color: white;
+  border-color: #0A66C2;
+}
+
+.share-buttons-sticky .share-btn.whatsapp:hover {
+  background: #25D366;
+  color: white;
+  border-color: #25D366;
+}
+
+
+
+/* ==========================================
+   SECCIÓN MINIMALISTA AL FINAL
+   ========================================== */
+
+.share-minimal {
+  margin: 4rem 0 3rem 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lm-border-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--lm-text-soft);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.share-minimal a {
+  color: var(--lm-terracota);
+  font-weight: 600;
+  border-bottom: 1px solid var(--lm-terracota);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.share-minimal a:hover {
+  color: var(--lm-terracota-dark);
+  border-bottom-width: 2px;
+}
+
+.share-extra-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.share-native-button,
+.share-copy-button {
+  appearance: none;
+  border: 1px solid var(--lm-border-dark);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--lm-text-main);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: 0.65rem 0.9rem;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.share-native-button:hover,
+.share-copy-button:hover {
+  background: var(--lm-bg-sec);
+  border-color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
+}
+
+.share-native-button:focus-visible,
+.share-copy-button:focus-visible {
+  outline: 2px solid var(--lm-terracota);
+  outline-offset: 3px;
+}
+
+.share-copy-feedback {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.7rem;
+  color: var(--lm-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.share-manual-copy {
+  display: block;
+  margin: 0.8rem auto 0 auto;
+  max-width: 34rem;
+}
+
+.share-manual-copy input {
+  width: 100%;
+  border: 1px solid var(--lm-border);
+  border-radius: 6px;
+  background: var(--lm-bg-card);
+  color: var(--lm-text-soft);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  padding: 0.65rem 0.75rem;
+}
+
+/* Separador entre enlaces */
+.share-minimal a:not(:last-child)::after {
+  content: " · ";
+  color: var(--lm-text-muted);
+  font-weight: 400;
+  margin: 0 0.3em;
+  border: none;
+}
+
+/* ==========================================
+   RESPONSIVE: MOBILE
+   ========================================== */
+
+@media (max-width: 1024px) {
+  /* OCULTAR botones flotantes en mobile */
+  body .share-buttons-sticky,
+  body.editorial-post .share-buttons-sticky {
+    display: none !important;
+  }
+
+  /* Ajustes para mobile */
+  .share-minimal {
+    margin: 3rem 0 2rem 0;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .share-extra-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .share-native-button,
+  .share-copy-button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* Modo Oscuro */
+body.quarto-dark .share-minimal {
+  border-top-color: var(--lm-border-dark);
+}
+
+body.quarto-dark .share-minimal a {
+  color: var(--lm-terracota);
+}

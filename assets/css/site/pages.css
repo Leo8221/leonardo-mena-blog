@@ -1,0 +1,265 @@
+/* ==========================================================================
+   🌙 MODO OSCURO: SOLO KEY TAKEAWAYS
+   ========================================================================== */
+
+body.quarto-dark.editorial-post .key-takeaways {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid var(--lm-terracota);
+}
+
+@media (max-width: 680px) {
+  body.editorial-post #title-block-header,
+  body.editorial-post #quarto-document-content {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  body.editorial-post #title-block-header h1.title {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 2.6rem);
+    line-height: 1.04;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  body.editorial-post #title-block-header .description {
+    font-size: 1rem;
+  }
+
+  body.editorial-post #title-block-header .quarto-title-meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  body.editorial-post #title-block-header .quarto-category:nth-of-type(n+3) {
+    display: none;
+  }
+
+  body.editorial-post #quarto-document-content figure,
+  body.editorial-post #quarto-document-content .quarto-figure,
+  body.editorial-post #quarto-document-content .cell-output-display:has(img),
+  body.editorial-post #quarto-document-content .cell-output-display:has(svg),
+  body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+/* Título de la caja ("HALLAZGOS PRINCIPALES") */
+body.quarto-dark.editorial-post .key-takeaways-title {
+  color: var(--lm-terracota); /* O un gris claro #ccc si prefieres */
+}
+
+/* El texto de la lista */
+body.quarto-dark.editorial-post .key-takeaways li {
+  color: #e0e0e0;
+}
+
+/* Las bolitas de los números (1, 2, 3...) */
+body.quarto-dark.editorial-post .key-takeaways li::before {
+  background: var(--lm-terracota);
+  color: #121212;
+}
+
+/* Las negritas dentro del texto */
+body.quarto-dark.editorial-post .key-takeaways strong {
+  color: #fff;
+}
+
+.about-shell {
+  width: min(100% - 2rem, 1100px);
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  border-bottom: 2px solid var(--lm-border-dark);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.about-mark {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--lm-border);
+  background: var(--lm-bg-card);
+  aspect-ratio: 1;
+  padding: 1.2rem;
+}
+
+.about-mark img {
+  width: min(100%, 16rem);
+  height: auto;
+}
+
+.about-intro h1 {
+  max-width: 8.6ch;
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.92;
+}
+
+.about-intro p,
+.about-manifesto p {
+  max-width: 42rem;
+  color: var(--lm-text-soft);
+  font-family: var(--lm-font-sans);
+  font-size: 1.04rem;
+  line-height: 1.68;
+}
+
+.about-links,
+.about-routes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.2rem;
+}
+
+.about-links a,
+.about-route {
+  min-height: var(--lm-control-min);
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--lm-border-dark);
+  border-radius: var(--lm-radius-xs);
+  color: var(--lm-text-main);
+  font-family: var(--lm-font-sans);
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0 0.9rem;
+  text-decoration: none;
+}
+
+.about-links a:hover,
+.about-route:hover {
+  border-color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
+}
+
+.about-manifesto,
+.about-routes {
+  margin-top: clamp(2.2rem, 5vw, 4rem);
+}
+
+.about-manifesto h2,
+.about-routes h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.subscribe-shell {
+  min-height: min(72vh, 46rem);
+  display: grid;
+  place-items: center;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
+}
+
+.subscribe-panel {
+  width: min(100%, 42rem);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subscribe-panel h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.35rem, 8vw, 4.6rem);
+}
+
+.subscribe-panel p {
+  max-width: 34rem;
+  margin: 0 auto 1.6rem;
+  color: var(--lm-text-soft);
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.subscribe-embed {
+  display: block;
+  width: min(100%, 480px);
+  max-width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid var(--lm-border);
+  border-radius: var(--lm-radius-sm);
+  background: #fff;
+}
+
+.subscribe-fallback,
+.subscribe-privacy {
+  max-width: 34rem;
+  margin: 0.9rem auto 0;
+  color: var(--lm-text-muted);
+  font-family: var(--lm-font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.subscribe-fallback a {
+  color: var(--lm-terracota-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.subscribe-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--lm-control-min);
+  margin-top: 1.35rem;
+  color: var(--lm-terracota-dark);
+  font-family: var(--lm-font-sans);
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+@media (max-width: 480px) {
+  .about-shell {
+    width: 100%;
+    padding: 2.4rem 1rem 3.5rem;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mark {
+    width: min(100%, 14rem);
+  }
+
+  .about-intro h1 {
+    max-width: 9ch;
+    font-size: 3rem;
+  }
+
+  .subscribe-shell {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .subscribe-panel {
+    text-align: left;
+  }
+
+  .subscribe-panel p,
+  .subscribe-fallback,
+  .subscribe-privacy,
+  .subscribe-embed {
+    margin-left: 0;
+  }
+}

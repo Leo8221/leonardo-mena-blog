@@ -18,7 +18,11 @@ algo no está listo, no se muestra.
 - `atlas/js/app-modules.js`: HTML de módulos, controles e hidratación de gráficos.
 - `atlas/js/app-data.js`: carga de datos, URL state, analítica y descargas.
 - `atlas/js/app-ui.js`: sincronización de filtros y utilidades de UI.
-- `atlas/js/renderers.js`: motores de gráficos y canvas.
+- `atlas/js/renderers.js`: filas de barras y contribuciones en HTML.
+- `atlas/js/chart-series.js`: series temporales y marcas de eventos.
+- `atlas/js/chart-bars.js`: barras simples y agrupadas.
+- `atlas/js/chart-composition.js`: treemaps, deuda y barras apiladas.
+- `atlas/js/chart-scatter.js`: dispersión y etiquetas de ejes.
 - `atlas/js/map-renderers.js`: mapas choropleth e inspector lateral.
 - `atlas/js/interactions.js`: enlace, PNG, modales y pantalla completa.
 - `atlas/styles.css`: entrada CSS modular. Cada bloque vive en `atlas/css/` y
@@ -53,6 +57,10 @@ node --check atlas/app.js
 node --check atlas/js/config.js
 node --check atlas/js/utils.js
 node --check atlas/js/renderers.js
+node --check atlas/js/chart-series.js
+node --check atlas/js/chart-bars.js
+node --check atlas/js/chart-composition.js
+node --check atlas/js/chart-scatter.js
 node --check atlas/js/map-renderers.js
 node --check atlas/js/interactions.js
 node --check atlas/js/app-navigation.js
@@ -61,6 +69,7 @@ node --check atlas/js/app-modules.js
 node --check atlas/js/app-data.js
 node --check atlas/js/app-ui.js
 node --check atlas/js/bootstrap.js
+node --test atlas/scripts/check-url-state.test.mjs
 ```
 
 Para revisar texto roto o problemas simples de acentos:

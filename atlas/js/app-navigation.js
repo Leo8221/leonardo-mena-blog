@@ -175,7 +175,7 @@ function renderOverview() {
       <div>
         <p class="eyebrow">${escapeHtml(state.data.brand.shortName)}</p>
         <h2>Atlas</h2>
-        <p>Explora los datos desde preguntas, no desde una lista plana de gráficos.</p>
+        <p>Indicadores económicos, mapas y datos de los artículos.</p>
       </div>
       ${renderStageActions(false)}
     </div>

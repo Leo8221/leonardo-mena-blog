@@ -1,5 +1,4 @@
 ---
-title: "Sobre mí"
 pagetitle: "Sobre mí"
 description: "Sobre el blog, sus criterios y rutas de entrada."
 page-layout: custom
@@ -19,7 +18,7 @@ toc: false
 
 # Escribir para entender mejor.
 
-Este blog ordena datos, argumentos y gráficos sobre República Dominicana. La idea es separar dato, lectura y opinión con calma.
+Aquí escribo sobre economía dominicana y comparto los datos y gráficos de mis análisis.
 
 ::: {.about-links}
 [X](https://x.com/leonardomena824)
@@ -38,23 +37,6 @@ Soy Leonardo Mena, estudiante de Economía en la UASD. Este blog nace de una inc
 La economía que me interesa está en el transporte, en el carrito del supermercado, en el efectivo que todavía domina el colmado, en una MiPyME que no pide crédito y en una provincia donde casi no hay empresas formales. Ahí es donde los promedios nacionales empiezan a fallar: dicen algo del país, pero muchas veces esconden las diferencias territoriales, sociales y productivas que explican cómo vive la gente.
 
 Uso el blog como una libreta pública. No pretende cerrar debates ni hablar desde una autoridad definitiva; pretende mostrar el camino entre una pregunta y una lectura razonable. Si algo intento aportar es mirar los temas dominicanos con más paciencia: separar el dato de la intuición, conectar la teoría con casos concretos y dejar suficiente rastro para que cualquiera pueda revisar, corregir o continuar el análisis.
-:::
-
-::: {.about-principles}
-::: {.about-principle}
-<span>01</span>
-**Distinguir dato, lectura y opinión.** No todo número habla solo, y no toda interpretación pesa igual.
-:::
-
-::: {.about-principle}
-<span>02</span>
-**Dejar rastro.** Si una conclusión depende de una fuente o una transformación, debe poder revisarse.
-:::
-
-::: {.about-principle}
-<span>03</span>
-**Escribir para pensar.** El texto no cierra conversaciones; intenta ordenarlas.
-:::
 :::
 
 ::: {.about-routes}

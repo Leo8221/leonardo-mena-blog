@@ -1,0 +1,363 @@
+/* ==========================================================================
+   RESPONSIVE HOME
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .home-shell {
+    width: min(100% - 2rem, 720px);
+    padding: 2.6rem 0 3.2rem;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    align-items: start;
+  }
+
+  .home-actions {
+    justify-content: stretch;
+    min-width: 0;
+  }
+
+  .home-actions > p {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .home-pulse-list,
+  .home-paths,
+  .home-about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .home-path {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  #quarto-search {
+    display: inline-flex !important;
+  }
+
+  body:has(.home-shell),
+  body:has(.home-shell) #quarto-content,
+  body:has(.home-shell) #quarto-document-content,
+  body:has(.home-shell) main {
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+
+  body:has(.home-shell) #quarto-content.page-columns {
+    display: block;
+  }
+
+  body:has(.home-shell) #quarto-document-content.content.column-page {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .home-shell {
+    position: relative;
+    width: calc(100vw - 4rem);
+    max-width: calc(100vw - 4rem);
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: clip;
+    padding: 2rem 0 3rem;
+  }
+
+  .home-lede h1 {
+    max-width: 9.8ch;
+    font-size: 3rem;
+    letter-spacing: 0;
+    line-height: 0.98;
+  }
+
+  .home-lede p {
+    max-width: 28ch;
+    font-size: 1rem;
+  }
+
+  .home-signature {
+    max-width: 27ch;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .section-header {
+    display: grid;
+    align-items: start;
+  }
+
+  .section-header h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.9rem;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .home-hero,
+  .home-lede,
+  .home-pulse-section,
+  .home-pulse-list,
+  .home-pulse-card,
+  .home-actions,
+  .home-actions > p,
+  .home-grid,
+  .home-main,
+  .home-side,
+  .home-side > p,
+  .home-side-note,
+  .home-paths-section,
+  .home-paths,
+  .home-path,
+  .home-about-section,
+  .home-about-copy,
+  .home-newsletter,
+  .home-latest-section,
+  #home-featured,
+  #home-featured .list,
+  #home-featured .g-col-1,
+  #home-featured .quarto-grid-link,
+  #home-featured .quarto-grid-item,
+  #home-featured .card,
+  #listing-home-featured,
+  #listing-home-featured .list,
+  #listing-home-featured .g-col-1,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .quarto-grid-item,
+  #listing-home-featured .card,
+  #listing-home-latest,
+  #listing-home-latest .list,
+  #listing-home-latest .g-col-1,
+  #listing-home-latest .quarto-grid-link,
+  #listing-home-latest .quarto-grid-item,
+  #listing-home-latest .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .home-actions {
+    margin-top: 0.25rem;
+  }
+
+  .home-action {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .home-actions > p,
+  .home-action {
+    width: 100%;
+  }
+
+  .home-actions > p,
+  .home-paths,
+  .home-about-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero { order: 1; }
+  .home-grid { order: 2; }
+  .home-pulse-section { order: 3; }
+  .home-latest-section { order: 4; }
+  .home-paths-section { order: 5; }
+  .home-about-section { order: 6; }
+
+  .home-pulse-section {
+    border-top: 1px solid var(--lm-border);
+    padding-top: 1rem;
+  }
+
+  .home-pulse-section > p {
+    display: none;
+  }
+
+  .home-pulse-list {
+    display: flex;
+    gap: 0.7rem;
+    margin: 0 -1rem;
+    overflow-x: auto;
+    padding: 0 2.3rem 0.25rem 1rem;
+    scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
+  }
+
+  .home-pulse-card {
+    flex: 0 0 min(74vw, 18rem);
+    scroll-snap-align: start;
+  }
+
+  .home-paths-section {
+    display: none !important;
+  }
+
+  .home-pulse-section,
+  .home-paths-section,
+  .home-about-section,
+  .home-latest-section {
+    margin-top: 2.4rem;
+  }
+
+  .home-pulse-card {
+    min-height: auto;
+  }
+
+  .home-side-note {
+    border-left: 0;
+    border-top: 1px solid var(--lm-border);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  #home-featured .card-img-top,
+  #listing-home-featured .card-img-top {
+    display: block !important;
+    height: auto !important;
+    max-height: 12rem;
+    object-fit: cover;
+  }
+
+  #home-featured .card-body,
+  #listing-home-featured .card-body {
+    padding-top: 0 !important;
+  }
+
+  #home-featured .card-title,
+  #listing-home-featured .card-title {
+    font-size: 1.22rem;
+    overflow-wrap: anywhere;
+  }
+
+  #home-featured .card-text,
+  #listing-home-featured .card-text {
+    font-size: 0.98rem;
+  }
+
+  .home-path strong,
+  .home-side-note h2 {
+    font-size: 1.22rem;
+  }
+
+  #home-latest .quarto-listing,
+  #listing-home-latest,
+  #listing-home-latest .list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  #home-latest .quarto-grid-item,
+  #listing-home-latest .quarto-grid-item {
+    border: none !important;
+    border-bottom: 1px solid var(--lm-border) !important;
+    margin: 0 !important;
+    padding: 1.1rem 0 !important;
+  }
+
+  #home-latest img,
+  #listing-home-latest img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    max-height: 10rem;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  .home-hero,
+  .home-shell > *,
+  .home-lede p,
+  .home-pulse-card,
+  .home-actions > p,
+  .home-action,
+  #home-featured,
+  #home-featured .list,
+  #home-featured .g-col-1,
+  #home-featured .quarto-grid-link,
+  #home-featured .quarto-grid-item,
+  #home-featured .card,
+  #home-featured .card-body,
+  #listing-home-featured,
+  #listing-home-featured .list,
+  #listing-home-featured .g-col-1,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .quarto-grid-item,
+  #listing-home-featured .card,
+  #listing-home-featured .card-body,
+  #listing-home-latest,
+  #listing-home-latest .list,
+  #listing-home-latest .g-col-1,
+  #listing-home-latest .quarto-grid-link,
+  #listing-home-latest .quarto-grid-item,
+  #listing-home-latest .card,
+  #listing-home-latest .card-body,
+  .home-side,
+  .home-side > p,
+  .home-side-note,
+  .home-path,
+  .home-about-copy,
+  .home-newsletter {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #home-featured .quarto-grid-link,
+  #home-featured .card,
+  #listing-home-featured .quarto-grid-link,
+  #listing-home-featured .card {
+    display: block !important;
+    overflow: hidden;
+  }
+
+  #home-featured img,
+  #listing-home-featured img,
+  #home-latest img,
+  #listing-home-latest img {
+    max-width: 100% !important;
+  }
+
+  .home-lede p,
+  #home-featured .card-title,
+  #home-featured .card-text,
+  #home-featured .card-text p,
+  #listing-home-featured .card-title,
+  #listing-home-featured .card-text,
+  #listing-home-featured .card-text p,
+  #listing-home-latest .card-title,
+  #listing-home-latest .card-text,
+  #listing-home-latest .card-text p,
+  .home-path strong,
+  .home-path em,
+  .home-pulse-card strong,
+  .home-pulse-card em,
+  .home-pulse-card small {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: break-word;
+  }
+
+  #listing-home-featured .card-title,
+  #listing-home-latest .card-title {
+    font-family: 'Crimson Pro', serif !important;
+    letter-spacing: 0 !important;
+    line-height: 1.08 !important;
+    text-transform: none !important;
+  }
+}

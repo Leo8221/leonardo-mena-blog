@@ -7,6 +7,7 @@ on:
     paths:
       - "**.qmd"
       - "_quarto.yml"
+      - "tools/**"
       - "styles.css"
       - "assets/**"
       - "atlas/**"
@@ -106,6 +107,13 @@ jobs:
           Rscript atlas/scripts/build-map-assets.R
           Rscript atlas/scripts/build-article-visuals.R
           node atlas/scripts/build-atlas-data.mjs
+
+      - name: Validar JavaScript del sitio
+        run: |
+          for file in atlas/app.js atlas/js/*.js assets/js/*.js tools/post-launcher/*.mjs tools/post-launcher/web/*.js; do
+            node --check "$file"
+          done
+          node --test atlas/scripts/check-url-state.test.mjs tools/post-launcher/*.test.mjs
 
       - name: Renderizar proyecto
         run: quarto render --no-cache

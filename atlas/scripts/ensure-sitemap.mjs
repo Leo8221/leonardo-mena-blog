@@ -2,6 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
+// La vista previa no debe modificar ni depurar la salida publicable.
+const outputDir = path.resolve(root, process.env.QUARTO_PROJECT_OUTPUT_DIR || "docs");
+if (outputDir !== path.resolve(root, "docs")) process.exit(0);
 const sitemapPath = path.join(root, "docs", "sitemap.xml");
 const homeUrl = "https://leo8221.github.io/leonardo-mena-blog/";
 const homeIndexUrl = "https://leo8221.github.io/leonardo-mena-blog/index.html";
