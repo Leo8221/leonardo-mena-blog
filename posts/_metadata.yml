@@ -1,5 +1,12 @@
+author: "Leonardo Mena"
+include-after-body:
+  - ../reading-progress.html
+  - ../share-buttons-auto.html
+
 format:
   html:
+    toc: true
+    toc-location: left
     body-class: editorial-post
     include-after-body: article-enhancements.html
 

@@ -25,10 +25,9 @@ export function articlePath(root, relative) {
 export function buildTemplate({ title, date, description, categories, relative, withR }) {
   const yaml = [
     "---", "title: " + JSON.stringify(title), "date: " + JSON.stringify(date),
-    'author: "Leonardo Mena"', "description: " + JSON.stringify(description),
+    "description: " + JSON.stringify(description),
     "categories:", ...categories.map(item => "  - " + JSON.stringify(item)), "draft: true",
-    "format:", "  html:", "    toc: true", "    toc-location: left",
-    "include-after-body:", "  - ../../../reading-progress.html", "  - ../../../share-buttons-auto.html", "---", ""
+    "---", ""
   ];
   if (withR) yaml.push(
     "```{r}", "#| label: setup", "#| include: false",

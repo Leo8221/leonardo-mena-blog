@@ -243,3 +243,10 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 - Validación: render real de index.qmd; diez pruebas existentes; texto, contrato y diff correctos. Proyecto temporal fuera del repositorio probado en 1440/320 px: borrador oculto, nuevo artículo publicado que desplaza al anterior y desempate por título entre dos artículos de igual fecha. En todos los casos hay un destacado y tres recientes visibles con cuatro títulos únicos. La portada real conserva los cuatro artículos visibles anteriores.
 - Evidencia: ../leonardo-mena-blog-audit-artifacts/home-auto-*.json. Los artículos ficticios solo existen en el proyecto temporal y no se publican.
 - Publicación: fuentes en 806aae2f; workflow 34680465301 correcto, docs/ generado en 492edf51 y Pages 34680645611 correcto. Comprobación en vivo a 1440/320 px: cuatro candidatos en el listado nativo, un destacado y tres recientes visibles, con cuatro títulos únicos. Se retiró el proyecto temporal de pruebas; los informes quedaron fuera del repositorio. Los 197 cambios locales previos se conservaron al sincronizar.
+
+## Escritura de artículos: encabezado y ejemplos
+
+- Autor, índice izquierdo y funciones de compartir/progreso centralizados con la herencia nativa de posts/_metadata.yml. El creador solo escribe los datos editoriales; mantiene draft: true y R opcional.
+- Guía ampliada con encabezado mínimo, enlaces externos e internos a .qmd, imágenes con pie y texto alternativo, fuentes, notas al pie y bibliografía opcional.
+- Validación previa: diez pruebas existentes, integridad de texto, contrato del sitio y git diff --check correctos. Render Quarto real de un proyecto temporal externo: encabezado nuevo, encabezado antiguo y excepciones de autor/índice. Cada script compartido aparece exactamente una vez; enlace interno convertido a HTML, imagen y nota al pie correctos. No se añaden artículos de prueba al repositorio.
+- Pendiente: build de producción y comprobación en vivo tras el push.
