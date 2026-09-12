@@ -13,6 +13,7 @@ on:
       - "atlas/**"
       - "datos/**"
       - "images/**"
+      - "image/**"
       - "posts/**"
       - "reading-progress.html"
       - "share-buttons-auto.html"

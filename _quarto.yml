@@ -12,6 +12,7 @@ project:
     - "!research/**/*.qmd"
   resources: 
     - .nojekyll
+    - image/logo_leonardo_mena_completo.png
     - robots.txt
     - tema_graficos.R
     - assets/css/tokens.css

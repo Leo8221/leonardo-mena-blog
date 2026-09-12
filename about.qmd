@@ -10,7 +10,7 @@ toc: false
 
 ::: {.about-hero}
 ::: {.about-mark}
-![](image/logo_leonardo_mena.svg){alt="LM Economía"}
+![](image/logo_leonardo_mena_completo.svg){alt="LM Economía"}
 :::
 
 ::: {.about-intro}

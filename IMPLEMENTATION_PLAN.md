@@ -258,3 +258,10 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 
 - about.qmd: presentación actualizada a «Soy Leonardo Mena, egresado de Economía de la UASD», según indicación del autor. Resto del texto conservado.
 - Render de about.qmd e integridad de texto correctos. Publicación verificada: workflow 34698963881 y Pages 34699153889 correctos; frase confirmada en el texto visible de about.html mediante Chrome.
+
+## Logo: variantes consistentes
+
+- Conservados los trazados originales de LM, círculo y colores. La marca compacta centra las iniciales y elimina texto/gráfico para cabecera y favicon. La versión completa separa ECONOMÍA del gráfico y se usa en Sobre mí.
+- SVG como fuente de cada variante; PNG de 1024 px exportado directamente con Sharp y verificado píxel a píxel contra su SVG. Se mantienen las rutas originales para la variante compacta; los archivos completos tienen sufijo _completo.
+- El workflow ahora detecta cambios en image/**, la carpeta real de las imágenes. Quarto incluye el PNG completo como recurso publicable.
+- Validación local: render de index.qmd/about.qmd, integridad de texto, contrato del sitio y diff correctos. Chrome a 1440/320 px, claro/oscuro: ambos logos cargan, sin desbordamiento y enlace de inicio correcto. Capturas revisadas en ../leonardo-mena-blog-audit-artifacts/logo-change-local/. Pendiente: comprobación de la versión desplegada.
