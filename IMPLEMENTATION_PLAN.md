@@ -257,4 +257,4 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 ## Presentación personal
 
 - about.qmd: presentación actualizada a «Soy Leonardo Mena, egresado de Economía de la UASD», según indicación del autor. Resto del texto conservado.
-- Render de about.qmd e integridad de texto correctos. Pendiente comprobar la frase publicada tras el despliegue.
+- Render de about.qmd e integridad de texto correctos. Publicación verificada: workflow 34698963881 y Pages 34699153889 correctos; frase confirmada en el texto visible de about.html mediante Chrome.
