@@ -1,7 +1,3 @@
-/* ==========================================================================
-   5. ESTILOS ESPECÍFICOS: DASHBOARD & OBSERVATORIO
-   ========================================================================== */
-
 /* Tarjetas Generales (Value Boxes y Gráficos) */
 .home-latest-section {
     max-width: 920px;
@@ -87,7 +83,7 @@
     overflow-wrap: anywhere;
 }
 
-/* --- ICONOS DE FONDO (MARCA DE AGUA) --- */
+
 /* Esto crea el efecto detrás del número */
 .value-box-showcase .bi,
 .value-box-showcase i,
@@ -100,7 +96,7 @@
     bottom: 10px;
 }
 
-/* --- COLORES SEMÁNTICOS (LÓGICA ECONÓMICA) --- */
+
 
 /* Verde (Bueno/Dentro de meta) */
 .text-success { color: #388e3c !important; }

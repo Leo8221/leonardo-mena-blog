@@ -1,7 +1,3 @@
-/* ==========================================================================
-   9. BARRA DE PROGRESO DE LECTURA
-   ========================================================================== */
-
 #reading-progress {
   position: fixed;
   top: 0;
@@ -26,9 +22,7 @@ body:not(.editorial-post) #reading-progress {
 
 
 
-/* ==========================================================================
-   10. REPRODUCTOR DE AUDIO PERSONALIZADO
-   ========================================================================== */
+
 
    /* Estilos para el reproductor de audio Editorial */
 .audio-player-container {
@@ -74,9 +68,7 @@ audio {
     filter: invert(90%) hue-rotate(180deg); /* Opcional: invierte colores si se ve muy blanco */
 }
 
-/* ==========================================================================
-   11. ARTÍCULOS RELACIONADOS (Related Posts)
-   ========================================================================== */
+
 
 /* Contenedor principal */
 body.editorial-post .related-posts {
@@ -155,9 +147,7 @@ body.editorial-post .related-post-card p {
   }
 }
 
-/* ===========================================
-   RESPONSIVE: MOBILE (Lista compacta + SOLO 2 artículos)
-   =========================================== */
+
 
 @media (max-width: 768px) {
   /* Menos espacio arriba */
@@ -227,9 +217,7 @@ body.editorial-post .related-post-card p {
   }
 }
 
-/* ==========================================================================
-   12. BIBLIOGRAFÍA / FUENTES (Adapted from Related Posts)
-   ========================================================================== */
+
 
 /* Contenedor principal */
 body.editorial-post .bibliography-section {
@@ -325,9 +313,7 @@ body.editorial-post .bib-link:hover {
   border-bottom-color: var(--lm-terracota);
 }
 
-/* ===========================================
-   RESPONSIVE: MOBILE (Lista compacta)
-   =========================================== */
+
 
 @media (max-width: 768px) {
   body.editorial-post .bibliography-section {

@@ -1,8 +1,3 @@
-/* ==========================================================================
-   7. ESTILOS DE POST INDIVIDUAL (EDITORIAL PREMIUM)
-   ========================================================================== */
-
-/* --- CONTENEDOR PRINCIPAL DEL POST --- */
 body.editorial-post #quarto-content.page-columns {
   display: block;
 }
@@ -24,7 +19,7 @@ body.editorial-post #title-block-header {
   padding: 3rem 2rem 1rem;
 }
 
-/* --- HEADER DEL POST (Hero) --- */
+
 body.editorial-post .post-header {
   margin-bottom: 3.5rem;
   border-bottom: 3px solid var(--lm-terracota);
@@ -99,7 +94,7 @@ body.editorial-post .article-reading-time {
   text-transform: uppercase;
 }
 
-/* --- DROP CAP (Letra Capital al inicio) --- */
+
 body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
   float: left;
   font-size: 2.7em;
@@ -110,7 +105,7 @@ body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
   font-family: 'Crimson Pro', Georgia, serif;
 }
 
-/* --- PÁRRAFOS Y LECTURABILIDAD --- */
+
 body.editorial-post #quarto-document-content p {
   margin-bottom: 1.5rem;
   max-width: 70ch;
@@ -133,7 +128,7 @@ body.editorial-post #quarto-document-content > p:first-of-type {
   color: var(--lm-text-soft);
 }
 
-/* --- SUBHEADINGS EN EL POST --- */
+
 body.editorial-post #quarto-document-content h2 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -148,7 +143,7 @@ body.editorial-post #quarto-document-content h3 {
   margin-top: 2.5rem;
 }
 
-/* --- NÚMEROS DESTACADOS (BIG NUMBERS) --- */
+
 body.editorial-post .big-number {
   display: block;
   font-family: 'Crimson Pro', Georgia, serif;
@@ -174,7 +169,7 @@ body.editorial-post .big-number-label {
 <span class="big-number-label">Aumento del dólar desde 2020</span>
 */
 
-/* --- PULL QUOTES (Citas destacadas) --- */
+
 body.editorial-post .pullquote {
   font-size: 1.65rem;
   line-height: 1.4;
@@ -186,7 +181,7 @@ body.editorial-post .pullquote {
   font-style: italic;
 }
 
-/* --- DATA BOXES (Cajas de datos/estadísticas) --- */
+
 body.editorial-post .data-box {
   background: var(--lm-bg-sec);
   border-left: 4px solid var(--lm-terracota);

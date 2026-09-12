@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Portada: listings editoriales robustos
-   ========================================================================== */
-
 body:has(.home-shell) #listing-home-featured,
 body:has(.home-shell) #listing-home-featured .list,
 body:has(.home-shell) #listing-home-latest,
@@ -206,9 +202,7 @@ body:has(.home-shell) #listing-home-latest .listing-date {
 .footer-brand {
     margin: 0;
 }
-/* ==========================================================================
-   6. RESPONSIVE & MOBILE FIXES
-   ========================================================================== */
+
 
 @media (max-width: 1024px) {
     .home .home-grid { grid-template-columns: 1fr; }

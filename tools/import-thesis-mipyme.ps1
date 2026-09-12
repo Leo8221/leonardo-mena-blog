@@ -1,5 +1,5 @@
 param(
-    [string]$ThesisRoot = 'C:\Users\leona\Archivo_Local\Documentos\tesis_monetaria_rd'
+    [string]$ThesisRoot = (Join-Path $env:USERPROFILE 'Archivo_Local\Documentos\tesis_monetaria_rd')
 )
 
 $ErrorActionPreference = 'Stop'
@@ -23,7 +23,7 @@ $rows = foreach ($relative in $files) {
     $target = Join-Path $targetDir $localName
     Copy-Item -LiteralPath $source -Destination $target -Force
     [pscustomobject]@{
-        source_path = $source
+        source_path = $relative
         local_file = $localName
         bytes = (Get-Item -LiteralPath $target).Length
         sha256 = (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash

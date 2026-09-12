@@ -1,7 +1,3 @@
-/* ==========================================================================
-   3. COMPONENTES COMPARTIDOS (NAVBAR & TOGGLE)
-   ========================================================================== */
-
 /* Navbar General y Dashboard Header */
 .navbar, #quarto-header, .quarto-dashboard-header {
   background: var(--lm-bg-card) !important;

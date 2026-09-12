@@ -207,3 +207,14 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 - Esta revisión detectó contraste insuficiente en enlaces del archivo y un pequeño desbordamiento a 320 px. Corrección en assets/css/site/listings.css y sincronización controlada del mismo recurso en docs/. Validación local en 320/1440 px, claro/oscuro: sin desbordamiento; contraste mínimo medido de 6.77:1 en títulos, descripciones, fechas y etiquetas. No se cambia el filtrado nativo.
 - Capturas e informes: ../leonardo-mena-blog-cleanup-check/.quarto-live-qa/ y ../leonardo-mena-blog-publish-check/.quarto-contrast-qa/.
 - Avisos del build remoto: st_simplify sobre coordenadas geográficas y deprecación de Node 20 en actions/checkout@v4; ambos no impidieron el render ni el despliegue. No se cambió el algoritmo de mapas ni se actualizaron dependencias como parte de esta corrección.
+
+## Revisión de material publicado — 2026-09-12
+
+- Retirados del seguimiento 175 archivos generados o locales: cachés de Quarto/R, historiales de R, desktop.ini y los intermedios del reporte de inclusión. Se conservan copias locales y se añaden exclusiones para impedir su incorporación accidental.
+- Retirada la copia del informe CNZFE 2024: su página 2 incluye una nota restrictiva. Se conserva localmente y se enlaza el archivo oficial de informes; ningún script depende de ese PDF.
+- El importador de tesis registra rutas relativas y resuelve el directorio personal mediante USERPROFILE. Los datos y sus hashes no cambian.
+- Eliminados 46 encabezados decorativos de CSS, incluido «EDITORIAL PREMIUM». Las reglas coinciden antes y después al excluir comentarios y espacios; los recursos en docs/ se sincronizan desde fuente.
+- Alcance documental: metadatos y primeras dos páginas de 352 PDF (cinco sin texto extraíble inicial), primeras 12 filas y hasta 80 celdas por hoja de 88 XLSX, y encabezados de 137 CSV. No es una lectura completa de cada documento o celda.
+- No se encontraron claves privadas ni tokens con los patrones de alta confianza aplicados al texto actual y a 20 416 líneas añadidas del historial de archivos de código y configuración. Esto no certifica ausencia absoluta de información sensible. Los microdatos ENHOGAR tienen procedencia oficial documentada; no se eliminaron borradores ni datos de investigación por su mera presencia.
+- Validación previa al push: diez pruebas de URL/creación de artículos, integridad de texto, contrato del sitio, sintaxis del importador y git diff --check correctos. Esta limpieza no cambia reglas CSS, gráficos ni ejecución editorial.
+- Las retiradas afectan a la versión actual. No se reescribe el historial de Git: las copias de commits anteriores siguen disponibles. Los informes detallados de revisión quedan fuera del repositorio en ../leonardo-mena-blog-audit-artifacts/.

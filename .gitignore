@@ -19,3 +19,24 @@ posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/
 
 # Vista previa editorial local
 /.preview/
+
+# Archivos de sesión y del sistema operativo
+.Rhistory
+.RData
+.Ruserdata
+desktop.ini
+Thumbs.db
+
+# Credenciales locales
+.env
+.env.*
+!.env.example
+.pgpass
+.pg_service.conf
+
+# Intermedios del reporte Quarto
+/research/reporte-inclusion.log
+/research/reporte-inclusion.tex
+
+# Copia local: consultar la fuente oficial enlazada en el README
+/research/nearshoring-limites/data/raw/cnzfe_informe_estadistico_2024.pdf

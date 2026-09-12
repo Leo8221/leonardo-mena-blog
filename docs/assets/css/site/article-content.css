@@ -1,4 +1,3 @@
-/* --- LISTAS CON ESTILO --- */
 body.editorial-post #quarto-document-content ul {
   list-style: none;
   padding-left: 0;
@@ -18,7 +17,7 @@ body.editorial-post #quarto-document-content ul li::before {
   font-weight: 700;
 }
 
-/* --- BLOQUES DE CÓDIGO EN POSTS --- */
+
 body.editorial-post #quarto-document-content pre {
   background: var(--lm-bg-sec);
   border: 1px solid var(--lm-border);
@@ -30,7 +29,7 @@ body.editorial-post #quarto-document-content pre {
   margin: 2rem 0;
 }
 
-/* --- CALLOUTS PERSONALIZADOS (Quarto) --- */
+
 body.editorial-post .callout {
   background: var(--lm-bg-sec);
   border-left: 4px solid var(--lm-terracota);
@@ -42,7 +41,7 @@ body.editorial-post .callout-note { border-left-color: var(--lm-olive); }
 body.editorial-post .callout-warning { border-left-color: #d97706; }
 body.editorial-post .callout-important { border-left-color: var(--lm-terracota); }
 
-/* --- SEPARADORES DE SECCIÓN --- */
+
 body.editorial-post .section-divider {
   text-align: center;
   margin: 4rem 0;
@@ -137,7 +136,7 @@ body.editorial-post .key-takeaways.compact li {
   margin-bottom: 0.75rem;
 }
 
-/* --- FOOTNOTES (Notas al pie) --- */
+
 body.editorial-post .footnotes {
   margin-top: 4rem;
   padding-top: 2rem;
@@ -146,7 +145,7 @@ body.editorial-post .footnotes {
   color: var(--lm-text-soft);
 }
 
-/* --- TABLA DE CONTENIDOS (TOC) --- */
+
 body.editorial-post #TOC {
   background: var(--lm-bg-sec);
   border-left: 4px solid var(--lm-terracota);
@@ -170,7 +169,7 @@ body.editorial-post #TOC a:hover {
   color: var(--lm-terracota);
 }
 
-/* --- IMÁGENES EN POSTS --- */
+
 body.editorial-post #quarto-document-content img {
   width: auto;
   max-width: 100%;
@@ -189,7 +188,7 @@ body.editorial-post .full-width-image {
   margin-right: calc(50% - 50vw);
 }
 
-/* --- NAVEGACIÓN ENTRE POSTS --- */
+
 body.editorial-post .post-navigation {
   display: flex;
   justify-content: space-between;
@@ -212,7 +211,7 @@ body.editorial-post .post-nav-label {
   margin-bottom: 0.5rem;
 }
 
-/* --- RESPONSIVE PARA MOBILE --- */
+
 @media (max-width: 768px) {
   body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
     font-size: 3.5em;
@@ -244,9 +243,7 @@ body.editorial-post .post-nav-label {
     transition: transform 0.2s ease;
 }
 
-/* =========================================
-   8 INTEGRACIÓN DE COMENTARIOS (GISCUS)
-   ========================================= */
+
 
 div.giscus {
   /* 1. Centrado y Ancho Controlado */
