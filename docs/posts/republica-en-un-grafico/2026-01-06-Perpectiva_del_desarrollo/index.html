@@ -103,7 +103,7 @@ gtag('config', 'G-W3JC0G3RJ1', { 'anonymize_ip': true});
 <meta property="og:url" content="https://leo8221.github.io/leonardo-mena-blog/posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">
 </head>
 
-<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="floating nav-fixed editorial-post quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -783,7 +783,20 @@ Figura&nbsp;1: Densidad empresarial por provincia (2024). El mapa ilustra el nú
     container.dataset.shareUtilitiesReady = "true";
   }
 
+  function ensureShareContainer() {
+    const content = document.getElementById("quarto-document-content");
+    if (!document.body.classList.contains("editorial-post") || !content ||
+        document.querySelector(".share-minimal")) return;
+
+    const container = document.createElement("div");
+    container.className = "share-minimal";
+    container.innerHTML = '<p>Compartir en <a href="#" data-share="linkedin">LinkedIn</a>, ' +
+      '<a href="#" data-share="twitter">X</a> o <a href="#" data-share="whatsapp">WhatsApp</a>.</p>';
+    content.appendChild(container);
+  }
+
   function setupShareButtons() {
+    ensureShareContainer();
     const data = getShareData();
     const shareButtons = document.querySelectorAll("[data-share]");
 
@@ -840,7 +853,7 @@ Figura&nbsp;1: Densidad empresarial por provincia (2024). El mapa ilustra el nú
   }
 
   const figureTargets = Array.from(content.querySelectorAll(
-    ".quarto-float.quarto-figure, figure"
+    ".quarto-figure, figure"
   )).filter((node) => {
     if (node.closest(".article-figure-modal")) return false;
     if (node.dataset.figureEnhanced === "true") return false;
