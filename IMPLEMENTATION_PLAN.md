@@ -210,8 +210,8 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 
 ## Revisión de material publicado — 2026-09-12
 
-- Retirados del seguimiento 175 archivos generados o locales: cachés de Quarto/R, historiales de R, desktop.ini y los intermedios del reporte de inclusión. Se conservan copias locales y se añaden exclusiones para impedir su incorporación accidental.
-- Retirada la copia del informe CNZFE 2024: su página 2 incluye una nota restrictiva. Se conserva localmente y se enlaza el archivo oficial de informes; ningún script depende de ese PDF.
+- Retirados del seguimiento 175 archivos generados o locales: cachés de Quarto/R, historiales de R, desktop.ini y los intermedios del reporte de inclusión. Se añaden exclusiones para impedir su incorporación accidental. A petición del usuario, también se eliminan las copias físicas del árbol principal, las copias de validación y el respaldo temporal de esta revisión.
+- Retirada la copia del informe CNZFE 2024: su página 2 incluye una nota restrictiva. Se enlaza el archivo oficial de informes; ningún script depende de ese PDF. También se elimina la copia local.
 - El importador de tesis registra rutas relativas y resuelve el directorio personal mediante USERPROFILE. Los datos y sus hashes no cambian.
 - Eliminados 46 encabezados decorativos de CSS, incluido «EDITORIAL PREMIUM». Las reglas coinciden antes y después al excluir comentarios y espacios; los recursos en docs/ se sincronizan desde fuente.
 - Alcance documental: metadatos y primeras dos páginas de 352 PDF (cinco sin texto extraíble inicial), primeras 12 filas y hasta 80 celdas por hoja de 88 XLSX, y encabezados de 137 CSV. No es una lectura completa de cada documento o celda.
