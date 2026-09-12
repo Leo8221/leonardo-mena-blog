@@ -1,14 +1,14 @@
 .home-shell {
     width: min(100% - 2rem, 1180px);
     margin: 0 auto;
-    padding: 4rem 0 4rem;
+    padding: 2rem 0 3rem;
 }
 
 .home-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(10rem, auto);
-    gap: 2rem;
-    align-items: end;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
     border-bottom: 2px solid var(--lm-border-dark);
     padding-bottom: 1.6rem;
 }
@@ -31,8 +31,8 @@
 .home-lede h1 {
     max-width: 760px;
     margin: 0.45rem 0 0.8rem;
-    font-size: 5.4rem;
-    line-height: 0.94;
+    font-size: clamp(3rem, 5vw, 4.2rem);
+    line-height: 1;
 }
 
 .home-lede p {
@@ -54,12 +54,13 @@
 
 .home-actions {
     display: flex;
-    justify-content: flex-end;
-    min-width: 12rem;
+    justify-content: flex-start;
+    min-width: 0;
 }
 
 .home-actions > p {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.65rem;
     margin: 0;
 }
@@ -117,7 +118,7 @@
 }
 
 .home-pulse-section {
-    margin: 1.35rem 0 3rem;
+    margin: 2.5rem 0 0;
     border-bottom: 1px solid var(--lm-border);
     padding-bottom: 1.4rem;
 }
@@ -205,7 +206,8 @@
 .home-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    max-width: 900px;
+    max-width: 100%;
+    margin-top: 1.6rem;
     gap: 1.4rem;
     align-items: start;
 }
@@ -247,7 +249,7 @@
 .home-paths-section,
 .home-about-section,
 .home-latest-section {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     border-top: 1px solid var(--lm-border);
     padding-top: 1.2rem;
 }

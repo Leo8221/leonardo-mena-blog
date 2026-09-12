@@ -20,7 +20,8 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [image, date, title, description]
-    image-height: "320px"
+    image-height: "240px"
+    max-description-length: 140
 
   - id: home-latest
     contents:
@@ -31,7 +32,8 @@ listing:
     sort: "date desc"
     max-items: 3
     type: grid
-    grid-columns: 3
+    grid-columns: 1
+    max-description-length: 110
     categories: true
     sort-ui: false
     filter-ui: false
@@ -42,7 +44,7 @@ listing:
 
 ::: {.home-hero}
 ::: {.home-lede}
-<span class="home-kicker">Economía aplicada RD</span>
+<span class="home-kicker">Leonardo Mena · Economía aplicada RD</span>
 
 # Economía dominicana, en datos.
 
@@ -51,9 +53,20 @@ Escribo sobre precios, empleo, empresas y otros temas de la economía dominicana
 :::
 
 ::: {.home-actions}
-[Abrir Atlas](atlas/index.html){.home-action .home-action-primary}
-[Leer análisis](republica-habla-de.qmd){.home-action}
+[Leer artículos](archivo.qmd){.home-action .home-action-primary}
+[Explorar Atlas](atlas/index.html){.home-action}
 :::
+:::
+
+::: {.home-grid}
+
+::: {.home-main}
+<span class="section-kicker">Último análisis</span>
+
+::: {#home-featured}
+:::
+:::
+
 :::
 
 ::: {.home-pulse-section}
@@ -70,17 +83,6 @@ Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
   <em>Ver fuentes y corte.</em>
 </a>
 :::
-:::
-
-::: {.home-grid}
-
-::: {.home-main}
-<span class="section-kicker">Último análisis</span>
-
-::: {#home-featured}
-:::
-:::
-
 :::
 
 ::: {.home-latest-section}
@@ -101,19 +103,16 @@ Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
 <a class="home-path" href="republica-habla-de.qmd">
   <span>Entender la coyuntura</span>
   <strong>Precios, empleo y debates de actualidad.</strong>
-  <em>Análisis con datos y contexto.</em>
 </a>
 
 <a class="home-path" href="atlas/index.html">
   <span>Explorar los datos</span>
   <strong>Indicadores, mapas y sectores.</strong>
-  <em>Datos con fuentes y corte.</em>
 </a>
 
 <a class="home-path" href="fundamentos.qmd">
   <span>Aprender fundamentos</span>
   <strong>Conceptos económicos con ejemplos.</strong>
-  <em>Conceptos y explicaciones cortas.</em>
 </a>
 :::
 :::

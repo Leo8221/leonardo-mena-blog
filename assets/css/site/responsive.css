@@ -1,7 +1,7 @@
 @media (max-width: 900px) {
   .home-shell {
     width: min(100% - 2rem, 720px);
-    padding: 2.6rem 0 3.2rem;
+    padding: 1.5rem 0 2.5rem;
   }
 
   .home-hero {
@@ -62,19 +62,19 @@
 
   .home-shell {
     position: relative;
-    width: calc(100vw - 4rem);
-    max-width: calc(100vw - 4rem);
+    width: calc(100vw - 2.5rem);
+    max-width: calc(100vw - 2.5rem);
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     overflow-x: clip;
-    padding: 2rem 0 3rem;
+    padding: 1.5rem 0 2rem;
   }
 
   .home-lede h1 {
-    max-width: 9.8ch;
-    font-size: 3rem;
+    max-width: 100%;
+    font-size: clamp(2.4rem, 10vw, 3rem);
     letter-spacing: 0;
     line-height: 0.98;
   }
@@ -159,19 +159,21 @@
     width: 100%;
   }
 
-  .home-actions > p,
+  .home-actions > p {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-action {
+    padding-inline: 0.5rem;
+    font-size: 0.8rem;
+  }
+
   .home-paths,
   .home-about-section {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .home-hero { order: 1; }
-  .home-grid { order: 2; }
-  .home-pulse-section { order: 3; }
-  .home-latest-section { order: 4; }
-  .home-paths-section { order: 5; }
-  .home-about-section { order: 6; }
 
   .home-pulse-section {
     border-top: 1px solid var(--lm-border);
@@ -183,19 +185,18 @@
   }
 
   .home-pulse-list {
-    display: flex;
-    gap: 0.7rem;
-    margin: 0 -1rem;
-    overflow-x: auto;
-    padding: 0 2.3rem 0.25rem 1rem;
-    scroll-snap-type: x proximity;
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
-    mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
   }
 
   .home-pulse-card {
-    flex: 0 0 min(74vw, 18rem);
-    scroll-snap-align: start;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 0.75rem;
+  }
+
+  .home-pulse-card small {
+    grid-column: 1 / -1;
   }
 
   .home-paths-section {
@@ -206,7 +207,7 @@
   .home-paths-section,
   .home-about-section,
   .home-latest-section {
-    margin-top: 2.4rem;
+    margin-top: 1.75rem;
   }
 
   .home-pulse-card {
