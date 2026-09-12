@@ -121,6 +121,11 @@ body:has(.home-shell) #listing-home-latest .g-col-1 {
   padding: 1.35rem 0;
 }
 
+/* Quarto ordena ambos listados igual; el primero ya aparece destacado. */
+body:has(.home-shell) #listing-home-latest .g-col-1:first-child {
+  display: none !important;
+}
+
 body.quarto-dark:has(.home-shell) #listing-home-latest .g-col-1 {
   border-bottom-color: rgba(255, 255, 255, 0.11);
 }
