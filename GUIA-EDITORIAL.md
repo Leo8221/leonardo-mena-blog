@@ -10,7 +10,10 @@ editor habitual. También puedes seguir creando los `.qmd` manualmente.
 
 El artículo nace con `draft: true`. La plantilla es texto simple; solo añade
 un bloque de R y carpetas de datos y figuras si marcas esa opción.
-No hace falta registrar el artículo en la portada ni en los listados.
+No hace falta registrar el artículo en la portada ni en los listados. El más
+reciente por fecha aparece destacado y los tres siguientes en «Últimas
+publicaciones». Si coinciden las fechas, se ordenan por título. No cambies
+exclusiones en `index.qmd` al publicar un artículo.
 
 ## Ver cómo queda
 

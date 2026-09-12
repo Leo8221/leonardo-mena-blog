@@ -234,3 +234,11 @@ Verificación al incorporar: las cinco pruebas, la sintaxis JavaScript, el contr
 - Producción: fuentes publicadas en 3f35ca4e; workflow 34679454069 completado correctamente, con docs/ generado en c0e3a0fa. Pages 34679618760 finalizó correctamente.
 - Prueba en vivo: mismo resultado de 0 px de movimiento durante 45 fotogramas del cambio de tema y al finalizarlo, en cinco anchuras de portada y en Sobre mí, archivo y MiPyMES. Búsqueda, filtro del archivo, menús, nueve módulos del Atlas, CSV/PNG, enlace compartible, ampliación/Escape y navegación Atrás correctos; sin errores JavaScript ni recursos propios ausentes. SVG de MiPyMES revisados visualmente.
 - Main sincronizado con el build, conservando las 197 modificaciones previas, incluida la eliminación local de docs/search.json. Capturas e informes finales fuera del repositorio: ../leonardo-mena-blog-audit-artifacts/landing-change-live/ y landing-functions-live/.
+
+## Selección automática de artículos en portada — 2026-09-12
+
+- Eliminada la exclusión por nombre del destacado actual. Ambos listados de Quarto comparten contenidos y orden: fecha descendente y título ascendente como desempate.
+- Quarto genera un destacado y cuatro candidatos para recientes; CSS oculta el primero de recientes porque ya se muestra destacado. Quedan tres tarjetas visibles sin repetición. Se conserva la disposición de la portada y no se añaden scripts, plantillas ni pasos editoriales.
+- GUIA-EDITORIAL.md documenta que publicar un artículo no requiere editar exclusiones en index.qmd. Las dos exclusiones previas de contenido fuera del render del proyecto se conservan.
+- Validación: render real de index.qmd; diez pruebas existentes; texto, contrato y diff correctos. Proyecto temporal fuera del repositorio probado en 1440/320 px: borrador oculto, nuevo artículo publicado que desplaza al anterior y desempate por título entre dos artículos de igual fecha. En todos los casos hay un destacado y tres recientes visibles con cuatro títulos únicos. La portada real conserva los cuatro artículos visibles anteriores.
+- Evidencia: ../leonardo-mena-blog-audit-artifacts/home-auto-*.json. Los artículos ficticios solo existen en el proyecto temporal y no se publican.

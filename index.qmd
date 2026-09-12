@@ -12,7 +12,7 @@ listing:
       - posts/**/*.qmd
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
       - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
-    sort: "date desc"
+    sort: ["date desc", "title asc"]
     max-items: 1
     type: grid
     grid-columns: 1
@@ -26,11 +26,10 @@ listing:
   - id: home-latest
     contents:
       - posts/**/*.qmd
-      - "!posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.qmd"
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
       - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
-    sort: "date desc"
-    max-items: 3
+    sort: ["date desc", "title asc"]
+    max-items: 4
     type: grid
     grid-columns: 1
     max-description-length: 110
