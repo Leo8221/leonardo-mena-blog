@@ -289,15 +289,60 @@ tss_labor_trend <- function(jobs_path, employers_path) {
     return(NULL)
   }
 
-  read_tss_csv <- function(path) {
-    data <- read.csv(
-      path,
-      fileEncoding = "latin1",
-      stringsAsFactors = FALSE,
-      check.names = FALSE,
-      fill = TRUE,
-      strip.white = TRUE
-    )
+  read_tss_source <- function(path) {
+    con <- file(path, open = "rb")
+    signature <- readBin(con, what = "raw", n = 4L)
+    close(con)
+
+    is_zip <- identical(as.integer(signature), c(80L, 75L, 3L, 4L))
+
+    if (is_zip) {
+      archive_files <- utils::unzip(path, list = TRUE)$Name
+
+      if ("content.xml" %in% archive_files) {
+        # La TSS puede servir una hoja ODS aunque el enlace termine en .csv.
+        temp_dir <- tempfile("tss-ods-")
+        dir.create(temp_dir)
+        on.exit(unlink(temp_dir, recursive = TRUE), add = TRUE)
+        utils::unzip(path, files = "content.xml", exdir = temp_dir, junkpaths = TRUE)
+        document <- xml2::read_xml(file.path(temp_dir, "content.xml"))
+        rows <- xml2::xml_find_all(document, ".//*[local-name()='table-row']")
+
+        values <- lapply(rows, function(row) {
+          cells <- xml2::xml_find_all(
+            row,
+            "./*[local-name()='table-cell' or local-name()='covered-table-cell']"
+          )
+          cell_values <- trimws(xml2::xml_text(cells))
+          cell_values[seq_len(min(length(cell_values), 3L))]
+        })
+        column_count <- max(lengths(values), 0L)
+        if (!length(values) || column_count == 0L) {
+          stop("La hoja ODS de la TSS no contiene filas tabulares: ", basename(path), call. = FALSE)
+        }
+        values <- lapply(values, function(row) {
+          length(row) <- column_count
+          row
+        })
+        data <- as.data.frame(do.call(rbind, values), stringsAsFactors = FALSE, check.names = FALSE)
+        names(data) <- as.character(unlist(data[1, , drop = TRUE], use.names = FALSE))
+        data <- data[-1, , drop = FALSE]
+      } else if ("xl/workbook.xml" %in% archive_files) {
+        # También acepta un XLSX servido bajo una extensión .csv.
+        data <- as.data.frame(readxl::read_excel(path), check.names = FALSE)
+      } else {
+        stop("La descarga de la TSS es un archivo ZIP, pero no es una hoja ODS/XLSX: ", basename(path), call. = FALSE)
+      }
+    } else {
+      data <- read.csv(
+        path,
+        fileEncoding = "latin1",
+        stringsAsFactors = FALSE,
+        check.names = FALSE,
+        fill = TRUE,
+        strip.white = TRUE
+      )
+    }
 
     # La TSS puede publicar delimitadores sobrantes al final del encabezado,
     # lo que crea columnas con nombres vacios.
@@ -322,8 +367,8 @@ tss_labor_trend <- function(jobs_path, employers_path) {
     names(data)[matches[1]]
   }
 
-  jobs <- read_tss_csv(jobs_path)
-  employers <- read_tss_csv(employers_path)
+  jobs <- read_tss_source(jobs_path)
+  employers <- read_tss_source(employers_path)
 
   columns <- c(
     jobs_year = pick_col(jobs, "^ano$"),
