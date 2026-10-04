@@ -36,8 +36,8 @@ required_files <- c(
   ipc_core = file.path(raw_dir, "bcrd-precios", "ipc_subyacente_base_2019-2020.xlsx"),
   dollar = file.path(raw_dir, "bcrd-mercado-cambiario", "TASA_DOLAR_REFERENCIA_MC.xlsx"),
   tpm = file.path(raw_dir, "bcrd-monetario", "Serie_TPM.xlsx"),
-  exports = file.path(raw_dir, "bcrd-sector-externo", "Exportaciones_Trimestrales_6.xls"),
-  imports = file.path(raw_dir, "bcrd-sector-externo", "Importaciones_Trimestrales_6.xls"),
+  exports = file.path(raw_dir, "bcrd-sector-externo", "Exportaciones_Trimestrales_6.xlsx"),
+  imports = file.path(raw_dir, "bcrd-sector-externo", "Importaciones_Trimestrales_6.xlsx"),
   labor_indicators = file.path(raw_dir, "bcrd-encft", "00_Indicadores.xlsx"),
   labor_sectors = file.path(raw_dir, "bcrd-encft", "1_1_Ocupados_Rama.xlsx")
 )
