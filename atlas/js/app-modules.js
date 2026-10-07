@@ -60,6 +60,7 @@ function renderTrade() {
       <div class="card-head">
         <div>
           <h3>Flujos comerciales BCRD</h3>
+          <p>Acumulados comparables hasta el mismo trimestre de cada año.</p>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("trade", "exports", "Exporta")}

@@ -59,11 +59,19 @@ to_num <- function(x) {
   suppressWarnings(as.numeric(gsub(",", ".", as.character(x), fixed = TRUE)))
 }
 
+year_number <- function(values) {
+  suppressWarnings(as.integer(sub("^\\s*([0-9]{4}).*$", "\\1", as.character(values))))
+}
+
+quarter_number <- function(values) {
+  match(trimws(as.character(values)), c("E-M", "A-J", "J-S", "O-D"))
+}
+
 fill_down_year <- function(values) {
   out <- rep(NA_integer_, length(values))
   current <- NA_integer_
   for (i in seq_along(values)) {
-    candidate <- suppressWarnings(as.integer(as.character(values[[i]])))
+    candidate <- year_number(values[[i]])
     if (!is.na(candidate) && candidate >= 1900 && candidate <= 2100) current <- candidate
     out[[i]] <- current
   }
@@ -171,22 +179,37 @@ quarterly_totals <- function(path, total_row, year_row, quarter_row) {
   raw <- read_excel(path, sheet = excel_sheets(path)[1], col_names = FALSE, .name_repair = "minimal")
   years <- to_num(unlist(raw[year_row, ], use.names = FALSE))
   values <- to_num(unlist(raw[total_row, ], use.names = FALSE))
-  quarters <- as.character(unlist(raw[quarter_row, ], use.names = FALSE))
-  keep <- !is.na(years) & !is.na(values) & nzchar(trimws(quarters))
-  data.frame(year = as.integer(years[keep]), value = values[keep], stringsAsFactors = FALSE)
+  quarters <- quarter_number(unlist(raw[quarter_row, ], use.names = FALSE))
+  keep <- !is.na(years) & !is.na(values) & !is.na(quarters)
+  data.frame(year = as.integer(years[keep]), quarter = quarters[keep], value = values[keep], stringsAsFactors = FALSE)
 }
 
 exports_q <- quarterly_totals(required_files[["exports"]], total_row = 70, year_row = 6, quarter_row = 7)
 imports_q <- quarterly_totals(required_files[["imports"]], total_row = 63, year_row = 8, quarter_row = 9)
-annual <- merge(
-  aggregate(value ~ year, exports_q, sum, na.rm = TRUE),
-  aggregate(value ~ year, imports_q, sum, na.rm = TRUE),
-  by = "year",
-  suffixes = c("_exports", "_imports")
-)
-annual <- tail(annual[order(annual$year), ], 5)
+if (anyDuplicated(exports_q[c("year", "quarter")]) || anyDuplicated(imports_q[c("year", "quarter")])) {
+  stop("Hay trimestres duplicados en los archivos de comercio BCRD.", call. = FALSE)
+}
+latest_exports <- tail(exports_q[order(exports_q$year, exports_q$quarter), c("year", "quarter")], 1)
+latest_imports <- tail(imports_q[order(imports_q$year, imports_q$quarter), c("year", "quarter")], 1)
+if (!all(latest_exports$year == latest_imports$year, latest_exports$quarter == latest_imports$quarter)) {
+  stop("Exportaciones e importaciones BCRD tienen cortes trimestrales distintos.", call. = FALSE)
+}
+trade_quarters <- merge(exports_q, imports_q, by = c("year", "quarter"), suffixes = c("_exports", "_imports"))
+if (!nrow(trade_quarters)) stop("No hay trimestres comunes de comercio BCRD.", call. = FALSE)
+latest_trade_year <- max(trade_quarters$year)
+latest_trade_quarter <- max(trade_quarters$quarter[trade_quarters$year == latest_trade_year])
+comparable <- trade_quarters[trade_quarters$quarter <= latest_trade_quarter, ]
+complete_years <- as.integer(names(Filter(function(rows) {
+  identical(sort(unique(rows$quarter)), seq_len(latest_trade_quarter))
+}, split(comparable, comparable$year))))
+if (!latest_trade_year %in% complete_years || length(complete_years) < 5) {
+  stop("No hay cinco anos con los mismos trimestres de comercio BCRD.", call. = FALSE)
+}
+comparable <- comparable[comparable$year %in% tail(sort(complete_years), 5), ]
+annual <- aggregate(cbind(value_exports, value_imports) ~ year, comparable, sum)
+annual <- annual[order(annual$year), ]
 trade_flows <- data.frame(
-  period = as.character(annual$year),
+  period = if (latest_trade_quarter == 4) as.character(annual$year) else paste0(annual$year, " T1-T", latest_trade_quarter),
   exports = round(annual$value_exports, 1),
   imports = round(annual$value_imports, 1),
   stringsAsFactors = FALSE
@@ -260,15 +283,18 @@ dga_export_categories <- function(exports_path, imports_path) {
 labor_indicators <- function(path) {
   raw <- read_excel(path, sheet = "Indicadores", col_names = FALSE, .name_repair = "minimal")
   years <- fill_down_year(unlist(raw[31, ], use.names = FALSE))
-  quarters <- as.character(unlist(raw[32, ], use.names = FALSE))
-  cols <- which(!is.na(years) & nzchar(trimws(quarters)))
+  quarters <- sub("\\s.*$", "", trimws(as.character(unlist(raw[32, ], use.names = FALSE))))
+  quarter_ids <- match(quarters, c("I", "II", "III", "IV"))
+  cols <- which(!is.na(years) & !is.na(quarter_ids))
   latest_col <- tail(cols, 1)
   rows <- c(33, 34, 39, 40, 46)
-  data.frame(
+  out <- data.frame(
     group = as.character(raw[[1]][rows]),
     value = round(to_num(unlist(raw[rows, latest_col], use.names = FALSE)), 1),
     stringsAsFactors = FALSE
   )
+  attr(out, "cutoff") <- paste0(years[latest_col], " T", quarter_ids[latest_col])
+  out
 }
 
 labor_sectors <- function(path) {
@@ -499,14 +525,16 @@ external_services <- function(path) {
   drivers <- do.call(rbind, drivers)
   drivers <- drivers[is.finite(drivers$raw), ]
   drivers$value <- norm01(drivers$raw)
-  list(timeline = timeline, drivers = drivers[, c("driver", "value")])
+  list(timeline = timeline, drivers = drivers[, c("driver", "value")], cutoff = as.character(years[latest_col]))
 }
 
 sector_model <- function(path) {
   raw <- read_excel(path, sheet = "PIB$_Trim", col_names = FALSE, .name_repair = "minimal")
-  years <- suppressWarnings(as.integer(unlist(raw[7, ], use.names = FALSE)))
-  latest_year <- max(years, na.rm = TRUE)
-  latest_cols <- which(years == latest_year)
+  years <- fill_down_year(unlist(raw[7, ], use.names = FALSE))
+  quarters <- quarter_number(unlist(raw[8, ], use.names = FALSE))
+  latest_year <- max(years[!is.na(quarters)], na.rm = TRUE)
+  latest_cols <- which(years == latest_year & !is.na(quarters))
+  latest_quarter <- max(quarters[latest_cols])
   labels <- normalize_text(raw[[1]])
   sector_specs <- list(
     list(sector = "Turismo", pattern = "hoteles.*restaurantes", driver = "Viajes", direction = "Servicios"),
@@ -526,7 +554,9 @@ sector_model <- function(path) {
   out <- out[is.finite(out$raw) & out$raw > 0, ]
   out$pressure <- norm01(out$raw)
   out <- out[order(-out$pressure), ]
-  out[, c("sector", "pressure", "driver", "direction")]
+  out <- out[, c("sector", "pressure", "driver", "direction")]
+  attr(out, "cutoff") <- paste0(latest_year, " T", latest_quarter)
+  out
 }
 
 latest <- tail(macro, 1)
@@ -549,7 +579,10 @@ payload <- list(
   dataCutoff = list(
     macro = paste(latest$period),
     prices = paste(inflation_latest$period),
-    trade = max(as.integer(trade_flows$period))
+    trade = paste0(latest_trade_year, " T", latest_trade_quarter),
+    labor = attr(labor_indicators_data, "cutoff"),
+    sectors = attr(sector_data, "cutoff"),
+    external = if (!is.null(external_data)) external_data$cutoff else NULL
   ),
   series = list(
     macro = macro,
@@ -578,10 +611,10 @@ payload <- list(
       tone = if (latest$inflacion >= 5) "warn" else "good"
     ),
     trade = list(
-      label = "Exportaciones totales",
+      label = "Exportaciones acumuladas",
       value = sprintf("US$ %.1f MM", latest_trade$exports),
       delta = paste("Exportaciones", latest_trade$period),
-      meta = "BCRD sector externo",
+      meta = paste("BCRD sector externo, acumulado hasta", latest_trade_year, paste0("T", latest_trade_quarter)),
       tone = "neutral"
     ),
     labor = list(
