@@ -4,18 +4,18 @@
     {
       "id": "usd",
       "label": "Dólar spot",
-      "value": "RD$ 58.68",
-      "delta": "-0.19 vs. mes anterior",
-      "meta": "Venta promedio mensual BCRD, Ago 2026",
-      "tone": "good",
+      "value": "RD$ 59.33",
+      "delta": "+0.65 vs. mes anterior",
+      "meta": "Venta promedio mensual BCRD, Sep 2026",
+      "tone": "warn",
       "module": "pulso-macro"
     },
     {
       "id": "inflation",
       "label": "Inflación interanual",
-      "value": "5.13%",
+      "value": "5.12%",
       "delta": "Fuera de meta",
-      "meta": "IPC interanual BCRD, Ago 2026",
+      "meta": "IPC interanual BCRD, Sep 2026",
       "tone": "warn",
       "module": "pulso-macro"
     },
@@ -67,13 +67,6 @@
     },
     "macro": [
       {
-        "period": "Nov 2025",
-        "dolar": 63.8935,
-        "inflacion": 4.8111,
-        "imae": 3.1567,
-        "tpm": 5.25
-      },
-      {
         "period": "Dic 2025",
         "dolar": 63.6423,
         "inflacion": 4.9521,
@@ -84,56 +77,63 @@
         "period": "Ene 2026",
         "dolar": 63.5063,
         "inflacion": 4.984,
-        "imae": 3.4844,
+        "imae": 3.4799,
         "tpm": 5.25
       },
       {
         "period": "Feb 2026",
         "dolar": 62.1964,
         "inflacion": 4.6724,
-        "imae": 3.881,
+        "imae": 3.8577,
         "tpm": 5.25
       },
       {
         "period": "Mar 2026",
         "dolar": 60.6703,
         "inflacion": 4.6291,
-        "imae": 5.0563,
+        "imae": 5.0849,
         "tpm": 5.25
       },
       {
         "period": "Abr 2026",
         "dolar": 60.3846,
         "inflacion": 5.1143,
-        "imae": 3.7526,
+        "imae": 3.7794,
         "tpm": 5.25
       },
       {
         "period": "May 2026",
         "dolar": 59.463,
         "inflacion": 5.3461,
-        "imae": 4.7113,
+        "imae": 4.7146,
         "tpm": 5.25
       },
       {
         "period": "Jun 2026",
         "dolar": 59.2435,
         "inflacion": 5.6669,
-        "imae": 6.4226,
+        "imae": 6.3927,
         "tpm": 5.25
       },
       {
         "period": "Jul 2026",
         "dolar": 58.8755,
         "inflacion": 5.467,
-        "imae": 4.5725,
+        "imae": 4.612,
         "tpm": 5.25
       },
       {
         "period": "Ago 2026",
         "dolar": 58.682,
         "inflacion": 5.1258,
-        "imae": 3.7978,
+        "imae": 3.8105,
+        "tpm": 5.25
+      },
+      {
+        "period": "Sep 2026",
+        "dolar": 59.3339,
+        "inflacion": 5.1161,
+        "imae": 5.611,
         "tpm": 5.25
       }
     ],
@@ -711,7 +711,7 @@
     }
   },
   "liveDataCutoff": {
-    "macro": "Ago 2026",
+    "macro": "Sep 2026",
     "prices": "Sep 2026",
     "trade": "2026 T2",
     "labor": "2026 T2",
@@ -722,9 +722,9 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-10-25T23:51:03.541Z",
+  "generatedAt": "2026-10-27T01:09:14.115Z",
   "sourceRun": {
-    "generatedAt": "2026-10-25T23:50:56Z",
+    "generatedAt": "2026-10-27T01:09:09Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -746,7 +746,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:48:16Z",
+        "modifiedAt": "2026-10-27T01:07:09Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -764,7 +764,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "d322c449484d8abc89587f4f804545d4",
         "usedBy": [
           "build-map-assets.R"
@@ -782,7 +782,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -800,7 +800,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:48:16Z",
+        "modifiedAt": "2026-10-27T01:07:09Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -818,7 +818,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -836,7 +836,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "226b4db570fb0e107cf1d166450be3c1",
         "usedBy": [
           "build-article-visuals.R"
@@ -854,7 +854,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "d5b5f62dcb3b7295db679eda8ac64185",
         "usedBy": [
           "build-article-visuals.R"
@@ -872,7 +872,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "1978ad56bb09c68b463d86890fd87abc",
         "usedBy": [
           "build-article-visuals.R"
@@ -890,7 +890,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:40Z",
+        "modifiedAt": "2026-10-27T01:09:02Z",
         "md5": "e14445e6783730b92d7ae21c37a029a2",
         "usedBy": [
           "build-article-visuals.R"
@@ -904,7 +904,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 283448,
+        "bytes": 283508,
         "discovered": 37,
         "selected": 3,
         "downloaded": 3,
@@ -994,7 +994,7 @@
         "kind": "dataset",
         "status": "downloaded",
         "required": false,
-        "bytes": 455828,
+        "bytes": 455854,
         "discovered": 44,
         "selected": 5,
         "downloaded": 5,
@@ -1034,7 +1034,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:54Z",
+        "modifiedAt": "2026-10-27T01:09:08Z",
         "md5": "594818f556913cf1a3be37d007ffe67e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1052,7 +1052,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:54Z",
+        "modifiedAt": "2026-10-27T01:09:08Z",
         "md5": "bf5afc7be764d4e0906308c18ab5cbe1",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1070,7 +1070,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:55Z",
+        "modifiedAt": "2026-10-27T01:09:09Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1088,7 +1088,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-10-25T23:50:56Z",
+        "modifiedAt": "2026-10-27T01:09:09Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1098,9 +1098,9 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-10-25T23:50:57Z",
+    "generatedAt": "2026-10-27T01:09:10Z",
     "dataCutoff": {
-      "macro": "Ago 2026",
+      "macro": "Sep 2026",
       "prices": "Sep 2026",
       "trade": "2026 T2",
       "labor": "2026 T2",
@@ -1128,7 +1128,7 @@
         "label": "BCRD",
         "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
         "dataMode": "Automático",
-        "updated": "Ago 2026",
+        "updated": "Sep 2026",
         "methodology": [
           "Tipo de cambio: tasa de venta spot.",
           "Inflación: variación interanual del IPC.",
