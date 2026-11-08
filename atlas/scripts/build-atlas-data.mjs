@@ -114,6 +114,14 @@ if (errors.length > 0) {
 }
 
 const { system, modules, brand, ...publicSource } = hydratedSource;
+const liveCutoffs = {
+  "pulso-macro": hydratedSource.liveDataCutoff?.macro,
+  sectores: hydratedSource.liveDataCutoff?.sectors,
+  "contexto-externo": hydratedSource.liveDataCutoff?.external,
+  "comercio-exterior": hydratedSource.liveDataCutoff?.trade,
+  "mercado-laboral": hydratedSource.liveDataCutoff?.labor,
+  "costo-vida": hydratedSource.liveDataCutoff?.prices
+};
 
 const publicModules = visibleModules.map((module) => {
   const {
@@ -128,7 +136,7 @@ const publicModules = visibleModules.map((module) => {
       label: module.source,
       detail: sourceDetail || "",
       dataMode: module.dataMode || "",
-      updated: module.updated || hydratedSource.updated || "",
+      updated: module.updated || liveCutoffs[module.id] || "",
       methodology: Array.isArray(methodology) ? methodology.filter(Boolean) : [],
       related: Array.isArray(related) ? related.filter(Boolean) : []
     }
@@ -155,7 +163,6 @@ function applyLiveBcrdData(baseSource, live) {
   const copy = JSON.parse(JSON.stringify(baseSource));
   if (!live || !live.series) return copy;
 
-  copy.updated = new Date().toISOString().slice(0, 10);
   copy.series = copy.series || {};
 
   if (Array.isArray(live.series.macro) && live.series.macro.length >= 6) {
@@ -299,7 +306,7 @@ function applyLiveBcrdData(baseSource, live) {
         insight: "Exportaciones, importaciones y canasta exportadora en una sola vista.",
         methodology: [
           "Se descargan los Excel oficiales del CustomView de sector externo del BCRD.",
-          "Los flujos anuales suman los trimestres disponibles de exportaciones e importaciones.",
+          "Los flujos comparan el mismo número de trimestres en cada año; el año en curso es acumulado.",
           "La canasta exportadora usa capítulos publicados por la DGA cuando están disponibles."
         ]
       };
