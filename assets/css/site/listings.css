@@ -235,30 +235,6 @@ body:has(.home-shell) #listing-home-latest .listing-date {
     .home .home-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
-
-    .bslib-full-screen-enter {
-        opacity: 1 !important;
-        display: block !important;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 4px;
-    }
-
-    .value-box .bslib-full-screen-enter { display: none !important; }
-}
-
-.value-box .bslib-full-screen-enter,
-.bslib-value-box .bslib-full-screen-enter {
-    display: none !important;
-}
-
-#quarto-dashboard-header .quarto-color-scheme-toggle {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-}
-
 .quarto-listing .quarto-post a {
   color: var(--lm-text-main);
 }

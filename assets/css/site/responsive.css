@@ -84,12 +84,6 @@
     font-size: 1rem;
   }
 
-  .home-signature {
-    max-width: 27ch;
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
   .section-header {
     display: grid;
     align-items: start;
@@ -112,9 +106,6 @@
   .home-actions > p,
   .home-grid,
   .home-main,
-  .home-side,
-  .home-side > p,
-  .home-side-note,
   .home-paths-section,
   .home-paths,
   .home-path,
@@ -214,13 +205,6 @@
     min-height: auto;
   }
 
-  .home-side-note {
-    border-left: 0;
-    border-top: 1px solid var(--lm-border);
-    padding-left: 0;
-    padding-top: 1rem;
-  }
-
   #home-featured .card-img-top,
   #listing-home-featured .card-img-top {
     display: block !important;
@@ -245,8 +229,7 @@
     font-size: 0.98rem;
   }
 
-  .home-path strong,
-  .home-side-note h2 {
+  .home-path strong {
     font-size: 1.22rem;
   }
 
@@ -303,9 +286,6 @@
   #listing-home-latest .quarto-grid-item,
   #listing-home-latest .card,
   #listing-home-latest .card-body,
-  .home-side,
-  .home-side > p,
-  .home-side-note,
   .home-path,
   .home-about-copy,
   .home-newsletter {

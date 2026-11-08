@@ -19,27 +19,6 @@ body.editorial-post #title-block-header {
   padding: 3rem 2rem 1rem;
 }
 
-body.editorial-post .post-header {
-  margin-bottom: 3.5rem;
-  border-bottom: 3px solid var(--lm-terracota);
-  padding-bottom: 2rem;
-}
-
-body.editorial-post .post-categories {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--lm-terracota);
-  margin-bottom: 1rem;
-}
-
-body.editorial-post .post-categories a {
-  border: none;
-  margin-right: 1rem;
-}
-
 body.editorial-post #title-block-header h1.title {
   font-size: clamp(2.15rem, 4.2vw, 3.25rem);
   line-height: 1.1;

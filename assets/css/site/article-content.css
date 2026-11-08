@@ -167,35 +167,6 @@ body.editorial-post #quarto-document-content img {
   box-shadow: var(--shadow-soft);
 }
 
-body.editorial-post .full-width-image {
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
-body.editorial-post .post-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 2px solid var(--lm-border-dark);
-  font-family: 'Inter', sans-serif;
-}
-
-body.editorial-post .post-nav-link {
-  flex: 1;
-  max-width: 45%;
-}
-
-body.editorial-post .post-nav-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--lm-text-muted);
-  margin-bottom: 0.5rem;
-}
-
 @media (max-width: 768px) {
   body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
     font-size: 3.5em;
