@@ -10,10 +10,8 @@ body.quarto-dark.editorial-post .key-takeaways {
   body.editorial-post #quarto-document-content {
     width: 100%;
     max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-inline: 0;
+    padding-inline: 1rem;
   }
 
   body.editorial-post #title-block-header h1.title {
@@ -40,9 +38,7 @@ body.quarto-dark.editorial-post .key-takeaways {
 
   body.editorial-post #quarto-document-content figure,
   body.editorial-post #quarto-document-content .quarto-figure,
-  body.editorial-post #quarto-document-content .cell-output-display:has(img),
-  body.editorial-post #quarto-document-content .cell-output-display:has(svg),
-  body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
+  body.editorial-post #quarto-document-content .cell-output-display:has(img, svg, canvas) {
     width: 100%;
     margin-left: 0;
     transform: none;

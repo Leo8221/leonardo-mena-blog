@@ -1,4 +1,5 @@
-.navbar, #quarto-header {
+.navbar,
+#quarto-header {
   background: var(--lm-bg-card) !important;
   border-bottom: 2px solid var(--lm-border-dark);
   font-family: 'Inter', sans-serif;
@@ -16,7 +17,8 @@
   border: 0 !important;
 }
 
-.navbar-brand, .navbar-title {
+.navbar-brand,
+.navbar-title {
   font-family: 'Inter', sans-serif !important;
   font-weight: 700;
   text-transform: uppercase;
@@ -49,6 +51,7 @@
 }
 
 /* Quarto incluye ambos logos en el HTML; mostramos solo el del tema activo. */
+
 body:not(.quarto-dark) .navbar .navbar-logo.dark-content,
 body.quarto-light .navbar .navbar-logo.dark-content,
 body.quarto-dark .navbar .navbar-logo.light-content {
@@ -95,7 +98,8 @@ body.quarto-dark .navbar .navbar-logo.dark-content {
   }
 }
 
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: var(--lm-terracota) !important;
 }
 
@@ -139,14 +143,12 @@ summary:focus-visible,
   align-items: center;
   justify-content: center;
   vertical-align: middle !important;
-
   background-color: var(--lm-bg-sec) !important;
   border: 2px solid var(--lm-border-dark) !important;
   border-radius: 50% !important;
   width: 40px !important;
   height: 40px !important;
   margin-left: 15px;
-
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 18px !important;
@@ -154,17 +156,17 @@ summary:focus-visible,
 }
 
 .navbar .quarto-color-scheme-toggle i {
-    display: none !important;
+  display: none !important;
 }
 
 body:not(.quarto-dark) .navbar .quarto-color-scheme-toggle {
-    background-image: var(--icon-sun) !important;
+  background-image: var(--icon-sun) !important;
 }
 
 body.quarto-dark .navbar .quarto-color-scheme-toggle {
-    background-image: var(--icon-moon) !important;
-    background-color: #252b30 !important;
-    border-color: rgba(243, 240, 234, 0.55) !important;
+  background-image: var(--icon-moon) !important;
+  background-color: #252b30 !important;
+  border-color: rgba(243, 240, 234, 0.55) !important;
 }
 
 body.quarto-dark .navbar,
@@ -203,7 +205,7 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
 }
 
 .quarto-color-scheme-toggle:hover {
-    border-color: var(--lm-terracota) !important;
+  border-color: var(--lm-terracota) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -215,7 +217,6 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
-
 }
 
 @media (max-width: 991.98px) {
@@ -244,16 +245,14 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
     width: 100%;
     max-width: 100%;
     min-height: 50px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
     overflow: visible;
   }
 
   #quarto-header .navbar-brand-container {
     order: 2;
     flex: 0 0 42px;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-inline: 0 !important;
   }
 
   #quarto-header .navbar .navbar-brand-logo,
@@ -429,8 +428,9 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
   }
 }
 
-footer, .nav-footer {
-    border-top: 1px solid var(--lm-border-dark);
-    background: var(--lm-bg-card);
-    color: var(--lm-text-muted);
+footer,
+.nav-footer {
+  border-top: 1px solid var(--lm-border-dark);
+  background: var(--lm-bg-card);
+  color: var(--lm-text-muted);
 }

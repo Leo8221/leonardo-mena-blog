@@ -1,37 +1,35 @@
-body.editorial-post figure {
-  margin: 3rem auto;
-  padding: 0;
-}
+body.editorial-post {
+  figure {
+    margin: 3rem auto;
+    padding: 0;
+  }
 
-body.editorial-post #quarto-document-content figure,
-body.editorial-post #quarto-document-content .quarto-figure,
-body.editorial-post #quarto-document-content .cell-output-display:has(img),
-body.editorial-post #quarto-document-content .cell-output-display:has(svg),
-body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
-  position: relative;
-  width: min(100%, 920px);
-  max-width: 100%;
-  margin: 2.5rem auto;
-  transform: none;
-}
+  #quarto-document-content figure,
+  #quarto-document-content .quarto-figure,
+  #quarto-document-content .cell-output-display:has(img, svg, canvas) {
+    position: relative;
+    width: min(100%, 920px);
+    max-width: 100%;
+    margin: 2.5rem auto;
+    transform: none;
+  }
 
-body.editorial-post #quarto-document-content .cell-output-display:has(img),
-body.editorial-post #quarto-document-content .cell-output-display:has(svg),
-body.editorial-post #quarto-document-content .cell-output-display:has(canvas) {
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-}
+  #quarto-document-content .cell-output-display:has(img, svg, canvas) {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
 
-body.editorial-post #quarto-document-content figure img,
-body.editorial-post #quarto-document-content figure svg,
-body.editorial-post #quarto-document-content .quarto-figure img,
-body.editorial-post #quarto-document-content .quarto-figure svg,
-body.editorial-post #quarto-document-content .cell-output-display img,
-body.editorial-post #quarto-document-content .cell-output-display svg,
-body.editorial-post #quarto-document-content .cell-output-display canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  #quarto-document-content figure img,
+  #quarto-document-content figure svg,
+  #quarto-document-content .quarto-figure img,
+  #quarto-document-content .quarto-figure svg,
+  #quarto-document-content .cell-output-display img,
+  #quarto-document-content .cell-output-display svg,
+  #quarto-document-content .cell-output-display canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .article-figure-tools {

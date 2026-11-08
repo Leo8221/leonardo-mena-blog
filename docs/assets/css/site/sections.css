@@ -193,8 +193,7 @@
   }
 
   main.content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-inline: 1rem;
   }
 
   .hub-header {
@@ -207,8 +206,7 @@
   .archive-header,
   .section-listing-wrap {
     grid-template-columns: 1fr;
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
   }
 
   .product-card,

@@ -2,7 +2,7 @@
 @import url('assets/css/tokens.css');
 
 /* Cada import añade reglas al anterior. Si dos reglas tienen igual prioridad,
-   gana la última: por eso los ajustes de pantalla y página van al final. */
+   gana la última. Cada componente incluye sus propios ajustes para móvil. */
 @import url('assets/css/site/base.css');
 @import url('assets/css/site/navigation.css');
 @import url('assets/css/site/home.css');
@@ -14,5 +14,4 @@
 @import url('assets/css/site/search.css');
 @import url('assets/css/site/sharing.css');
 @import url('assets/css/site/sections.css');
-@import url('assets/css/site/responsive.css');
 @import url('assets/css/site/pages.css');
