@@ -10,6 +10,7 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $python = $null
 $registryCandidates = @(
+  # Preferir el Python instalado, no los que vienen dentro de otras aplicaciones.
   'HKCU:\Software\Python\PythonCore\3.12\InstallPath',
   'HKLM:\Software\Python\PythonCore\3.14\InstallPath'
 )
@@ -38,6 +39,8 @@ if (-not (Test-Path -LiteralPath $scriptPath)) {
 $pythonDir = Split-Path -Parent $python
 $env:Path = "$pythonDir;$env:Path"
 Push-Location $repoRoot
+# Los scripts usan rutas relativas al repositorio. finally devuelve la terminal
+# a la carpeta desde la que los llamaste, incluso si Python falla.
 try {
   & $python $scriptPath @ScriptArgs
   if ($LASTEXITCODE -ne 0) {

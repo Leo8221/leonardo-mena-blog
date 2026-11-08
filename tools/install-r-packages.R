@@ -13,6 +13,7 @@ cat("R_LIBS_USER=", library_path, "\n", sep = "")
 cat("LIB_PATHS=", paste(.libPaths(), collapse = "|"), "\n", sep = "")
 
 installed <- rownames(installed.packages(lib.loc = library_path))
+# Instala solo lo que falta en la biblioteca del blog; no actualiza todo R.
 missing <- setdiff(packages, installed)
 if (length(missing)) {
   install.packages(missing, lib = library_path, dependencies = TRUE)

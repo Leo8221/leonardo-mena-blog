@@ -10,6 +10,7 @@ $runtime = Initialize-BlogRuntime
 $scriptPath = if ([IO.Path]::IsPathRooted($Script)) { $Script } else { Join-Path $runtime.Root $Script }
 if (-not (Test-Path -LiteralPath $scriptPath)) { throw "No existe el script R: $scriptPath" }
 Push-Location $runtime.Root
+# Ejecutar desde la raíz mantiene válidas las rutas a datos y al tema común.
 try {
   & $runtime.RScript $scriptPath @ScriptArgs
   if ($LASTEXITCODE -ne 0) { throw "Rscript fallo con codigo $LASTEXITCODE." }

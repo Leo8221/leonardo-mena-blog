@@ -15,47 +15,53 @@ OUT.mkdir(parents=True, exist_ok=True)
 ICON_DIR = OUT / "icons"
 ICON_DIR.mkdir(parents=True, exist_ok=True)
 
+# Dibujamos a cuatro veces el tamaño final y reducimos al guardar.
+# Así los bordes y las letras quedan suaves sin cambiar las medidas del diseño.
 S = 4
 W, H = 1800, 900
 FONT = Path("C:/Windows/Fonts/segoeui.ttf")
 FONT_BOLD = Path("C:/Windows/Fonts/segoeuib.ttf")
+ICON_COLORS = {
+    "plex": "#d2a95e", "isk": "#d2a95e", "fleet": "#d58b67", "prices": "#8eb8c8",
+    "supply_down": "#d2a95e", "tech_up": "#d58b67", "split": "#8eb8c8",
+}
 
 
-def f(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
+def font_for(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_BOLD if bold else FONT), size * S)
 
 
-def q(value: float) -> int:
+def scaled_px(value: float) -> int:
     return int(round(value * S))
 
 
-def bb(values: tuple[float, float, float, float]) -> tuple[int, int, int, int]:
-    return tuple(q(v) for v in values)  # type: ignore[return-value]
+def scaled_box(values: tuple[float, float, float, float]) -> tuple[int, int, int, int]:
+    return tuple(scaled_px(v) for v in values)  # type: ignore[return-value]
 
 
 def rect(draw: ImageDraw.ImageDraw, values: tuple[float, float, float, float], **kwargs: object) -> None:
-    draw.rectangle(bb(values), **kwargs)
+    draw.rectangle(scaled_box(values), **kwargs)
 
 
 def rounded(draw: ImageDraw.ImageDraw, values: tuple[float, float, float, float], radius: float, **kwargs: object) -> None:
-    draw.rounded_rectangle(bb(values), radius=q(radius), **kwargs)
+    draw.rounded_rectangle(scaled_box(values), radius=scaled_px(radius), **kwargs)
 
 
 def ellipse(draw: ImageDraw.ImageDraw, values: tuple[float, float, float, float], **kwargs: object) -> None:
-    draw.ellipse(bb(values), **kwargs)
+    draw.ellipse(scaled_box(values), **kwargs)
 
 
 def polygon(draw: ImageDraw.ImageDraw, points: list[tuple[float, float]], **kwargs: object) -> None:
-    draw.polygon([(q(x), q(y)) for x, y in points], **kwargs)
+    draw.polygon([(scaled_px(x), scaled_px(y)) for x, y in points], **kwargs)
 
 
 def line(draw: ImageDraw.ImageDraw, points: list[tuple[float, float]], **kwargs: object) -> None:
-    kwargs["width"] = q(float(kwargs.get("width", 1)))
-    draw.line([(q(x), q(y)) for x, y in points], **kwargs)
+    kwargs["width"] = scaled_px(float(kwargs.get("width", 1)))
+    draw.line([(scaled_px(x), scaled_px(y)) for x, y in points], **kwargs)
 
 
 def text(draw: ImageDraw.ImageDraw, pos: tuple[float, float], value: str, color: str, size: int, bold: bool = False, anchor: str = "la") -> None:
-    draw.text((q(pos[0]), q(pos[1])), value, fill=color, font=f(size, bold), anchor=anchor)
+    draw.text((scaled_px(pos[0]), scaled_px(pos[1])), value, fill=color, font=font_for(size, bold), anchor=anchor)
 
 
 def badge(draw: ImageDraw.ImageDraw, accent: str) -> None:
@@ -126,8 +132,8 @@ def make_icon(kind: str, accent: str) -> Image.Image:
 
 
 def paste_icon(canvas: Image.Image, icon: Image.Image, x: int, y: int, size: int) -> None:
-    scaled = icon.resize((q(size), q(size)), Image.Resampling.LANCZOS)
-    canvas.alpha_composite(scaled, (q(x - size / 2), q(y - size / 2)))
+    scaled = icon.resize((scaled_px(size), scaled_px(size)), Image.Resampling.LANCZOS)
+    canvas.alpha_composite(scaled, (scaled_px(x - size / 2), scaled_px(y - size / 2)))
 
 
 def build_graph() -> Image.Image:
@@ -138,6 +144,7 @@ def build_graph() -> Image.Image:
         color = tuple(int(a * (1 - t) + b * t) for a, b in zip((22, 39, 54), (8, 14, 24)))
         draw.line((0, y, W * S, y), fill=(*color, 255))
 
+    # La semilla fija deja las estrellas en el mismo sitio en cada ejecución.
     random.seed(27)
     for _ in range(48):
         x, y = random.randint(42, W - 42), random.randint(48, H - 50)
@@ -155,10 +162,7 @@ def build_graph() -> Image.Image:
         (625, "NOV", "combustible y rigs ↑", "insumos más escasos", "#d2a95e", "tech_up"),
         (1178, "14 DIC", "regresan veteranos", "más demanda de bienes", "#d58b67", "fleet"),
     ]
-    icon_map = {name: make_icon(name, color) for name, color in (
-        ("plex", "#d2a95e"), ("isk", "#d2a95e"), ("fleet", "#d58b67"), ("prices", "#8eb8c8"),
-        ("supply_down", "#d2a95e"), ("tech_up", "#d58b67"), ("split", "#8eb8c8"),
-    )}
+    icon_map = {name: make_icon(name, color) for name, color in ICON_COLORS.items()}
     for x, date, title, detail, color, icon in events:
         rounded(draw, (x, 140, x + 500, 222), 5, fill="#172733", outline=color, width=2)
         paste_icon(canvas, icon_map[icon], x + 46, 181, 62)
@@ -171,7 +175,6 @@ def build_graph() -> Image.Image:
         (625, "DEMANDA", "más ISK gastado", "jugadores que vuelven", "#d58b67", "fleet", "reconstruyen su flota"),
         (1178, "ÍNDICE DE PRECIOS", "CPI +4,7%", "inflación general · trimestre", "#8eb8c8", "prices", "bienes y servicios"),
     ]
-    centers = [322, 875, 1428]
     for i, (x, label, value, detail, color, icon, sub) in enumerate(modules):
         rounded(draw, (x, 280, x + 500, 592), 7, fill="#142330", outline=color, width=2)
         paste_icon(canvas, icon_map[icon], x + 82, 363, 116)
@@ -206,8 +209,7 @@ def build_graph() -> Image.Image:
 
 
 def main() -> None:
-    icon_specs = {"plex": "#d2a95e", "isk": "#d2a95e", "fleet": "#d58b67", "prices": "#8eb8c8", "supply_down": "#d2a95e", "tech_up": "#d58b67", "split": "#8eb8c8"}
-    for name, color in icon_specs.items():
+    for name, color in ICON_COLORS.items():
         make_icon(name, color).save(ICON_DIR / f"{name}.png")
     build_graph().save(OUT / "eve-inflacion.png")
 

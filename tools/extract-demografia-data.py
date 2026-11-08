@@ -1,4 +1,4 @@
-"""Extract reproducible demographic inputs from the local ONE workbooks/CSVs."""
+"""Prepara los CSV demográficos a partir de los Excel y microdatos locales de la ONE."""
 
 import csv
 from collections import defaultdict
@@ -21,6 +21,7 @@ def as_number(value):
 
 
 def extract_projection():
+    """Lee los totales por año; el Excel agrupa total, hombres y mujeres."""
     source = ROOT / "posts" / "republica-en-un-grafico" / "2026-01-06-Perpectiva_del_desarrollo" / (
         "cuadro-estimaciones-proyecciones-población-total-por-año-según-región-provincia-2000-2030.xlsx"
     )
@@ -31,8 +32,7 @@ def extract_projection():
     for col in range(1, len(rows[5])):
         value = rows[5][col]
         if isinstance(value, int) and 2000 <= value <= 2030:
-            # The workbook places the year above the sex columns; the total
-            # for that year is the preceding column.
+            # El año está sobre las columnas por sexo; su total va una columna antes.
             years.append((value, col - 1))
 
     output = []
@@ -59,15 +59,11 @@ def extract_projection():
                 "female": female,
             })
 
-    path = DATA / "demografia_proyecciones_2000_2030.csv"
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=output[0].keys())
-        writer.writeheader()
-        writer.writerows(output)
-    return path
+    return write_rows("demografia_proyecciones_2000_2030.csv", output)
 
 
 def extract_age(source, year, age_column, weight_column):
+    """Suma factores de expansión por edad, no el número de encuestados."""
     bins = [(0, 4), (5, 9), (10, 14), (15, 19), (20, 24), (25, 29), (30, 34),
             (35, 39), (40, 44), (45, 49), (50, 54), (55, 59), (60, 64),
             (65, 69), (70, 74), (75, 79), (80, 84), (85, 89), (90, 97)]
@@ -77,7 +73,7 @@ def extract_age(source, year, age_column, weight_column):
         for row in reader:
             age = as_number(row.get(age_column))
             weight = as_number(row.get(weight_column))
-            if age is None or weight is None or age < 0 or age > 97 or age == 99:
+            if age is None or weight is None or not 0 <= age <= 97:
                 continue
             bucket = next((f"{lo}-{hi}" for lo, hi in bins if lo <= age <= hi), None)
             if bucket:
@@ -93,11 +89,15 @@ def extract_age_distributions():
     output = []
     for source, year, age_column, weight_column in sources:
         output.extend(extract_age(source, year, age_column, weight_column))
-    path = DATA / "demografia_edad_enhogar_2022_2024.csv"
+    return write_rows("demografia_edad_enhogar_2022_2024.csv", output)
+
+
+def write_rows(filename, rows):
+    path = DATA / filename
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=output[0].keys())
+        writer = csv.DictWriter(handle, fieldnames=rows[0].keys())
         writer.writeheader()
-        writer.writerows(output)
+        writer.writerows(rows)
     return path
 
 

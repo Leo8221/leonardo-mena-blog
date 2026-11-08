@@ -1,4 +1,6 @@
 param([string[]]$QuartoArgs = @('render'))
+# Sin argumentos publica en docs/. Para revisar borradores, pasa preview y
+# --profile editor; Quarto usa entonces la salida temporal de ese perfil.
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'runtime.ps1')
 $runtime = Initialize-BlogRuntime -WithQuarto

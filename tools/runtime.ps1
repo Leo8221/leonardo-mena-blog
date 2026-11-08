@@ -1,4 +1,6 @@
 function Initialize-BlogRuntime {
+  # Estas rutas fijan las versiones del proyecto, aunque otra aplicación añada
+  # su propio R o Quarto al PATH. Se aplican solo a esta sesión de PowerShell.
   param([switch]$WithQuarto)
   $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
   $rHome = 'C:\Program Files\R\R-4.5.3'
@@ -15,6 +17,8 @@ function Initialize-BlogRuntime {
   $env:R_HOME = $rHome
   $env:R_LIBS_USER = $library
   $env:Path = "$rBin;$rHome\bin;$env:Path"
+  # Un locale heredado de Linux puede romper los acentos de R en Windows.
+  # Quitamos esa herencia y comprobamos UTF-8 antes de generar ningún gráfico.
   foreach ($name in @('LC_ALL', 'LC_CTYPE', 'LC_COLLATE', 'LC_MONETARY', 'LC_TIME', 'LANG')) {
     Remove-Item -Path "Env:$name" -ErrorAction SilentlyContinue
   }
