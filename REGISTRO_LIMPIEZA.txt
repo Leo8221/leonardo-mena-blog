@@ -1,0 +1,14 @@
+LIMPIEZA LOCAL 20261107_233523
+Solicitud: eliminar residuos y mejorar el registro Git conservando proyectos Codex.
+Eliminados HTML generados no versionados y site_libs fuera de docs. No se modificaron fuentes, datos ni docs/.
+Fuera del blog: caches antiguas NVIDIA/pip/npm e intermedios de compilacion de CodeKeys archivado.
+No se movieron proyectos. Los 66 archivos fuente de CodeKeys archivado coinciden con Desktop y siguen intactos.
+DLL, EXE e instaladores preservados mediante comparacion SHA-256.
+Registro completo: C:\Users\leona\Documents\Codex\2026-11-07\en-mi-pc-hay-un-desorden\registro_ssd\limpieza_20261107_233523
+Punto de recuperacion de cambios previos versionados: codex/respaldo-antes-limpieza-20261107_233523
+Commit de recuperacion: ad3e1167fd772979c56ff93b544546f5c9e011e9
+Este punto no incluye no versionados. Las fuentes y datos no versionados permanecen en su lugar.
+Verificacion: 480 fuentes y ejecutables con hash igual; estado Git previo versionado sin cambios.
+No se ejecutaron renders, builds ni cambios visuales; no se publico el sitio.
+Eliminados: 14426 archivos; 17838674510 bytes logicos. Omitidos por bloqueo o cambio: 8.
+Este commit documenta la limpieza, sin validar ni mezclar cambios anteriores pendientes.

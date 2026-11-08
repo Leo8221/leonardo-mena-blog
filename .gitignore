@@ -40,3 +40,14 @@ Thumbs.db
 
 # Copia local: consultar la fuente oficial enlazada en el README
 /research/nearshoring-limites/data/raw/cnzfe_informe_estadistico_2024.pdf
+
+# Renders locales fuera de la salida publicable docs/
+/site_libs/
+/about.html
+/archivo.html
+/categorias.html
+/fundamentos.html
+/index.html
+/observatorio.html
+/*-listing.json
+/posts/**/index.html

@@ -79,3 +79,10 @@ Reglas persistentes para trabajar en este repositorio.
 - No revertir cambios de usuario.
 - No hacer push sin validar y sin que el usuario lo pida o lo autorice.
 - Si un build local genera churn de version en `docs/`, no mezclarlo con cambios fuente sin revisar.
+
+## Registro y limpieza de trabajo local
+- Conservar las rutas de proyectos y worktrees de Codex.
+- Al cerrar una tarea, registrar cambios, verificaciones y pendientes; crear un commit local acotado a los cambios propios validados. No incluir trabajo previo ajeno solo para dejar Git limpio.
+- Mantener fuentes y datos separados de renders y caches; la salida publicable de Quarto es docs/.
+- Antes de eliminar residuos, verificar que son regenerables o copias comprobadas. No usar git clean, reset ni borrados globales para ocultar pendientes.
+- No crear clones ni respaldos completos para tareas rutinarias. Usar Git para archivos versionados y un registro pequeno de operaciones.
