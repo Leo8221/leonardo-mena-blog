@@ -133,7 +133,7 @@
       "mode": "bcrd_custom_view",
       "kind": "dataset",
       "url": "https://www.bancentral.gov.do/a/CustomView/2532-sector-externo",
-      "includePatterns": ["^Exportaciones_Trimestrales_6[.]xls", "^Importaciones_Trimestrales_6[.]xls", "^Exportaciones_Anuales_6[.]xls", "^Importaciones_Anuales_6[.]xls", "^Remesas_6[.]xlsx", "^reservas_internacionales[.]xlsx", "^Balanza-de-Servicios-anual[.]xlsx", "^Deuda_Consolidada_Por_Sector[.]xls"],
+      "includePatterns": ["^Exportaciones_Trimestrales_6[.]xlsx$", "^Importaciones_Trimestrales_6[.]xlsx$", "^Exportaciones_Anuales_6[.]xls", "^Importaciones_Anuales_6[.]xls", "^Remesas_6[.]xlsx", "^reservas_internacionales[.]xlsx", "^Balanza-de-Servicios-anual[.]xlsx", "^Deuda_Consolidada_Por_Sector[.]xls"],
       "cache": true,
       "required": false,
       "usedBy": ["build-atlas-data.mjs"],

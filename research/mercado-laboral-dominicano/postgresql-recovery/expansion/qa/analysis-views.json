@@ -1,0 +1,95 @@
+[
+  {
+    "table_name": "canasta_familiar"
+  },
+  {
+    "table_name": "catalogo_presupuesto"
+  },
+  {
+    "table_name": "catalogo_series"
+  },
+  {
+    "table_name": "comercio_capitulo"
+  },
+  {
+    "table_name": "compras_contratos"
+  },
+  {
+    "table_name": "compras_mensuales"
+  },
+  {
+    "table_name": "compras_procesos"
+  },
+  {
+    "table_name": "compras_proveedores_adjudicados"
+  },
+  {
+    "table_name": "educacion_centros_2024_2025"
+  },
+  {
+    "table_name": "educacion_centros_historicos"
+  },
+  {
+    "table_name": "educacion_internacional"
+  },
+  {
+    "table_name": "educacion_matricula_anual"
+  },
+  {
+    "table_name": "educacion_matricula_detalle"
+  },
+  {
+    "table_name": "educacion_matricula_nivel"
+  },
+  {
+    "table_name": "educacion_matricula_sector"
+  },
+  {
+    "table_name": "educacion_matricula_sexo"
+  },
+  {
+    "table_name": "educacion_oferta_2024_2025"
+  },
+  {
+    "table_name": "educacion_pruebas"
+  },
+  {
+    "table_name": "educacion_pruebas_anuales"
+  },
+  {
+    "table_name": "empleo_formal"
+  },
+  {
+    "table_name": "enae"
+  },
+  {
+    "table_name": "enhogar_2022_personas"
+  },
+  {
+    "table_name": "enief"
+  },
+  {
+    "table_name": "indicadores_internacionales"
+  },
+  {
+    "table_name": "indicadores_rd"
+  },
+  {
+    "table_name": "macro_mensual"
+  },
+  {
+    "table_name": "mipymes"
+  },
+  {
+    "table_name": "mipymes_resumen"
+  },
+  {
+    "table_name": "presupuesto_mensual"
+  },
+  {
+    "table_name": "series_economicas"
+  },
+  {
+    "table_name": "tipo_cambio"
+  }
+]

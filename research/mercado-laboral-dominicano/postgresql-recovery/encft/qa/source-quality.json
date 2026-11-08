@@ -1,0 +1,23 @@
+{
+  "miembros_persona_mes": [],
+  "miembros_persona_trimestre": [],
+  "hogares_hogar_mes": [],
+  "hogares_hogar_trimestre": [],
+  "viviendas_clave": [],
+  "miembros_sin_hogar": 73840,
+  "miembros_sin_hogar_clave_estructural": 0,
+  "hogares_clave_estructural": [],
+  "miembros_clave_estructural": [],
+  "hogares_sin_vivienda": 0,
+  "miembros_fecha_inconsistente": 0,
+  "miembros_peso_invalido": 0,
+  "hogares_peso_invalido": 0,
+  "viviendas_peso_invalido": 1,
+  "pet_distinto_edad15": 0,
+  "pet10_distinto_edad10": 0,
+  "pea_menos_ocupado_desocupado": 0,
+  "pea_menos_ocupado_desocupado_ini": 791,
+  "pet_menos_pea_inactivo": 72336,
+  "pet10_menos_pea_inactivo": 150,
+  "pet_menos_pea_inactivo_solo15": 0
+}

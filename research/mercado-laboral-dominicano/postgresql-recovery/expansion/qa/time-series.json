@@ -1,0 +1,128 @@
+[
+  {
+    "dataset": "canasta_quintiles",
+    "observaciones": 618,
+    "series": 6,
+    "desde": "2018-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "canasta_regiones",
+    "observaciones": 280,
+    "series": 4,
+    "desde": "2020-10-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "credito_destino",
+    "observaciones": 56853,
+    "series": 155,
+    "desde": "1996-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "depositos_provincias",
+    "observaciones": 1750,
+    "series": 35,
+    "desde": "2014-01-01",
+    "hasta": "2026-04-01"
+  },
+  {
+    "dataset": "imae_2018",
+    "observaciones": 3122,
+    "series": 14,
+    "desde": "2007-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_grupos",
+    "observaciones": 7932,
+    "series": 24,
+    "desde": "1999-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_nacional",
+    "observaciones": 2555,
+    "series": 5,
+    "desde": "1984-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_quintiles",
+    "observaciones": 700,
+    "series": 10,
+    "desde": "2020-10-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_regiones",
+    "observaciones": 1496,
+    "series": 8,
+    "desde": "2011-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_subyacente",
+    "observaciones": 1276,
+    "series": 4,
+    "desde": "2000-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "ipc_subyacente_cierre_anual",
+    "observaciones": 52,
+    "series": 2,
+    "desde": "2000-12-01",
+    "hasta": "2025-12-01"
+  },
+  {
+    "dataset": "pib_origen_2018_acumulado",
+    "observaciones": 11687,
+    "series": 155,
+    "desde": "2007-01-01",
+    "hasta": "2026-01-01"
+  },
+  {
+    "dataset": "pib_origen_2018_trimestral",
+    "observaciones": 11687,
+    "series": 155,
+    "desde": "2007-01-01",
+    "hasta": "2026-01-01"
+  },
+  {
+    "dataset": "politica_monetaria",
+    "observaciones": 816,
+    "series": 4,
+    "desde": "2004-01-01",
+    "hasta": "2026-08-01"
+  },
+  {
+    "dataset": "prestamos_provincias",
+    "observaciones": 1750,
+    "series": 35,
+    "desde": "2014-01-01",
+    "hasta": "2026-04-01"
+  },
+  {
+    "dataset": "remesas",
+    "observaciones": 199,
+    "series": 1,
+    "desde": "2010-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "reservas",
+    "observaciones": 1281,
+    "series": 5,
+    "desde": "1985-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "dataset": "tasas_activas_mn",
+    "observaciones": 1241,
+    "series": 5,
+    "desde": "2001-12-01",
+    "hasta": "2026-07-01"
+  }
+]

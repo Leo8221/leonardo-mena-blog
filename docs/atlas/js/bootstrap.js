@@ -1,2 +1,0 @@
-initAtlasTheme();
-boot();

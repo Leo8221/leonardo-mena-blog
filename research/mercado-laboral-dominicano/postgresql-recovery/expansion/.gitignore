@@ -1,0 +1,6 @@
+raw/
+prepared/
+qa/workbook-previews.json
+qa/column-profiles.json
+qa/download-previews.json
+__pycache__/

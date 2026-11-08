@@ -1,0 +1,25 @@
+control,observado,estado,nota
+series_sin_claves_duplicadas,0,ok,""
+series_sin_valores_no_finitos,0,ok,""
+series_sin_fechas_futuras,0,ok,""
+tss_componentes,0,ok,""
+tss_meses_sin_huecos,0,ok,""
+matricula_regional_vs_distrital,0,ok,""
+matricula_codigo_periodo_fuente,140,advertencia,Código original con un dígito de más: normalizado explícitamente a 2021-2022 en la vista.
+pruebas_componentes_sexo,185,advertencia,Desacuerdo presente en la fuente. No recomponer el total a partir de componentes sin revisar.
+pruebas_componentes_resultado,638,advertencia,No imputar el componente para forzar coincidencia.
+pruebas_duplicados_exactos_fuente,2765,advertencia,Duplicados idénticos colapsados solamente en la vista analítica; originales intactos.
+pruebas_vista_unica_por_contenido,0,ok,""
+pruebas_clave_repetida,494,advertencia,Claves con contenidos distintos después de quitar duplicados exactos; se conservan y señalan con clave_ambigua.
+fiscal_unidad_pendiente,948,advertencia,Se conserva el original; estas celdas no aparecen en presupuesto_mensual.
+fiscal_filas_no_conciliadas,45,advertencia,Suma mensual y total publicado difieren. Se excluye la fila de la vista predeterminada.
+fiscal_vista_sin_filas_cuestionadas,0,ok,""
+dgcp_proceso_unico,0,ok,""
+dgcp_contratos_sin_proceso,0,ok,""
+dgcp_contrato_clave_repetida,0,ok,""
+dgcp_union_contratos_sin_multiplicar,0,ok,""
+dgcp_periodo_contractual_invertido,33,advertencia,Anomalía de fechas publicada por la fuente; no interpretarla como duración válida.
+dgcp_monto_negativo,0,ok,Conservar revisiones/errores fuente; revisar antes de estimar totales.
+enhogar_elegidos_sin_persona,1,advertencia,Universo de elegidos distinto: factor y no respuesta propios.
+wdi_sin_diccionario,0,ok,""
+wdi_valores_futuros,0,ok,""

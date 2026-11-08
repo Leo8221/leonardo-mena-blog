@@ -1,0 +1,301 @@
+{
+  "loaded": {
+    "centros_2021": {
+      "table": "minerd.centros_2021",
+      "rows": 7604,
+      "columns": 13
+    },
+    "centros_2022_2024": {
+      "table": "minerd.centros_2022_2024",
+      "rows": 18350,
+      "columns": 13
+    },
+    "centros_2024_2025": {
+      "table": "minerd.centros_2024_2025",
+      "rows": 24070,
+      "columns": 10
+    },
+    "matricula_nivel": {
+      "table": "minerd.matricula_nivel",
+      "rows": 1226,
+      "columns": 7
+    },
+    "matricula_sexo": {
+      "table": "minerd.matricula_sexo",
+      "rows": 806,
+      "columns": 5
+    },
+    "matricula_sector": {
+      "table": "minerd.matricula_sector",
+      "rows": 528,
+      "columns": 6
+    },
+    "matricula_edad_2015_2021": {
+      "table": "minerd.matricula_edad_2015_2021",
+      "rows": 176,
+      "columns": 9
+    },
+    "matricula_edad_2021_2024": {
+      "table": "minerd.matricula_edad_2021_2024",
+      "rows": 239,
+      "columns": 9
+    },
+    "matricula_nacionalidad": {
+      "table": "minerd.matricula_nacionalidad",
+      "rows": 283,
+      "columns": 6
+    },
+    "matricula_detalle_2022_2023": {
+      "table": "minerd.matricula_detalle_2022_2023",
+      "rows": 1816,
+      "columns": 7
+    },
+    "matricula_detalle_2023_2024": {
+      "table": "minerd.matricula_detalle_2023_2024",
+      "rows": 1776,
+      "columns": 7
+    },
+    "pruebas_nacionales": {
+      "table": "minerd.pruebas_nacionales",
+      "rows": 57586,
+      "columns": 17
+    }
+  },
+  "checks": {
+    "centros_2021": {
+      "rows": 7604,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "distrito", "centros", "sector", "niveles", "cordenadas_latitud", "cordenadas_longitud", "matricula_total", "personal_docente", "planta_fisica", "provincia", "municipio", "fila_origen"]
+    },
+    "centros_2022_2024": {
+      "rows": 18350,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "distrito", "centros", "sector", "nivel", "coordenadas_latitud", "coordenadas_longitud", "matricula", "planta_fisica", "provincia", "municipio", "ano", "fila_origen"]
+    },
+    "centros_2024_2025": {
+      "rows": 24070,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "distrito", "sector", "planta_fisica", "centro_educativo", "tanda", "nivel", "modalidad", "matricula", "fila_origen"]
+    },
+    "matricula_nivel": {
+      "rows": 1226,
+      "excluded_nonobservations": 0,
+      "columns": ["regional_distrito", "nivel_inicial", "nivel_primario", "nivel_secundario", "educacion_de_adultos", "periodo", "fila_origen"]
+    },
+    "matricula_sexo": {
+      "rows": 806,
+      "excluded_nonobservations": 0,
+      "columns": ["regional_distrito", "masculino", "femenino", "periodo", "fila_origen"]
+    },
+    "matricula_sector": {
+      "rows": 528,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "sector_publico", "sector_privado", "sector_semioficial", "periodo", "fila_origen"]
+    },
+    "matricula_edad_2015_2021": {
+      "rows": 176,
+      "excluded_nonobservations": 0,
+      "columns": ["edad", "sector_publico_masculino", "sector_publico_femenino", "sector_privado_masculino", "sector_privado_femenino", "sector_semioficial_masculino", "sector_semioficial_femenino", "periodo", "fila_origen"]
+    },
+    "matricula_edad_2021_2024": {
+      "rows": 239,
+      "excluded_nonobservations": 0,
+      "columns": ["edad", "sector_publico_masculino", "sector_publico_femenino", "sector_privado_masculino", "sector_privado_femenino", "sector_semioficial_masculino", "sector_semioficial_femenino", "ano_escolar", "fila_origen"]
+    },
+    "matricula_nacionalidad": {
+      "rows": 283,
+      "excluded_nonobservations": 0,
+      "columns": ["nacionalidad", "sector_publico", "sector_privado", "sector_semioficial", "periodo", "fila_origen"]
+    },
+    "matricula_detalle_2022_2023": {
+      "rows": 1816,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "distrito", "sector", "nivel", "sexo", "matricula", "fila_origen"]
+    },
+    "matricula_detalle_2023_2024": {
+      "rows": 1776,
+      "excluded_nonobservations": 0,
+      "columns": ["regional", "distrito", "sector", "nivel", "sexo", "matricula", "fila_origen"]
+    },
+    "pruebas_nacionales": {
+      "rows": 57586,
+      "excluded_nonobservations": 0,
+      "columns": ["periodo", "convocatoria", "regional", "distrito", "nivel_modalidad", "codigo_de_centro", "nombre_de_centro", "espanol", "matematicas", "sociales", "naturales", "cantidad_de_estudiantes", "cantidad_femenino", "cantidad_masculino", "cantidad_promovidos", "cantidad_aplazados", "fila_origen"]
+    },
+    "pruebas": [
+      {
+        "anio": 2016,
+        "registros": 16437,
+        "participaciones": 419989,
+        "diferencia_sexo": 91,
+        "diferencia_estado": 540
+      },
+      {
+        "anio": 2017,
+        "registros": 8120,
+        "participaciones": 232950,
+        "diferencia_sexo": 51,
+        "diferencia_estado": 55
+      },
+      {
+        "anio": 2018,
+        "registros": 6136,
+        "participaciones": 205923,
+        "diferencia_sexo": 43,
+        "diferencia_estado": 43
+      },
+      {
+        "anio": 2019,
+        "registros": 7891,
+        "participaciones": 215164,
+        "diferencia_sexo": 0,
+        "diferencia_estado": 0
+      },
+      {
+        "anio": 2020,
+        "registros": 4935,
+        "participaciones": 190064,
+        "diferencia_sexo": 0,
+        "diferencia_estado": null
+      },
+      {
+        "anio": 2022,
+        "registros": 3481,
+        "participaciones": 119728,
+        "diferencia_sexo": 0,
+        "diferencia_estado": 0
+      },
+      {
+        "anio": 2023,
+        "registros": 4347,
+        "participaciones": 131229,
+        "diferencia_sexo": 0,
+        "diferencia_estado": 0
+      },
+      {
+        "anio": 2024,
+        "registros": 3474,
+        "participaciones": 368032,
+        "diferencia_sexo": 0,
+        "diferencia_estado": 0
+      }
+    ],
+    "matricula": [
+      {
+        "periodo_escolar": "2015-2016",
+        "nivel_geografico": "distrito",
+        "registros": 420,
+        "estudiantes": 2773255
+      },
+      {
+        "periodo_escolar": "2015-2016",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2773255
+      },
+      {
+        "periodo_escolar": "2016-2017",
+        "nivel_geografico": "distrito",
+        "registros": 420,
+        "estudiantes": 2749144
+      },
+      {
+        "periodo_escolar": "2016-2017",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2749144
+      },
+      {
+        "periodo_escolar": "2017-2018",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2736697
+      },
+      {
+        "periodo_escolar": "2017-2018",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2736697
+      },
+      {
+        "periodo_escolar": "2018-2019",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2807279
+      },
+      {
+        "periodo_escolar": "2018-2019",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2807279
+      },
+      {
+        "periodo_escolar": "2019-2020",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2761118
+      },
+      {
+        "periodo_escolar": "2019-2020",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2761118
+      },
+      {
+        "periodo_escolar": "2020-2021",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2388553
+      },
+      {
+        "periodo_escolar": "2020-2021",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2388553
+      },
+      {
+        "periodo_escolar": "2021-2022",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2525855
+      },
+      {
+        "periodo_escolar": "2021-2022",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2525855
+      },
+      {
+        "periodo_escolar": "2022-2023",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2587965
+      },
+      {
+        "periodo_escolar": "2022-2023",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2587965
+      },
+      {
+        "periodo_escolar": "2023-2024",
+        "nivel_geografico": "distrito",
+        "registros": 488,
+        "estudiantes": 2617801
+      },
+      {
+        "periodo_escolar": "2023-2024",
+        "nivel_geografico": "regional",
+        "registros": 72,
+        "estudiantes": 2617801
+      }
+    ],
+    "oferta": [
+      {
+        "registros": 24070,
+        "centros": 10648,
+        "matricula": 2612882
+      }
+    ]
+  }
+}

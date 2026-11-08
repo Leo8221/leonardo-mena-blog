@@ -1,2 +1,3 @@
 id,pregunta,familia,fuente,advertencia
-01_arbol_decision_compromiso,¿Qué se pierde al decidir?,Árbol conceptual,Esquema editorial,No es una estimación empírica
+00_ilustracion_decision_costo_oportunidad,¿Qué representa visualmente una bifurcación?,Ilustración editorial,Activo editorial del módulo,No es evidencia empírica
+01_arbol_decision_compromiso,¿Qué cambia entre decidir ahora y esperar?,Rutas comparables,Esquema editorial,No es una estimación empírica

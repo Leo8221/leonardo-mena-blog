@@ -143,6 +143,7 @@ p_enief <- enief |> mutate(respuesta = factor(respuesta, levels = enief_order)) 
   theme_editorial("x") + theme(axis.text.y = element_text(size = 9))
 export_plot(p_enief, file.path(repo_root, "research", "epicteto-fondo-emergencia", "figuras"), "01_respuesta_emergencia_ingreso", 11, 7.2)
 write_map(file.path(repo_root, "research", "epicteto-fondo-emergencia"), list(tibble(id = "01_respuesta_emergencia_ingreso", pregunta = "¿Cómo cubren una emergencia los hogares?", familia = "Barras agrupadas", fuente = "BCRD ENIEF 2023", advertencia = "Primera respuesta declarada; no mide saldo de ahorro")))
+source(file.path(repo_root, "research", "build-epicteto-fondo-emergencia.R"), local = new.env(parent = globalenv()))
 
 # 3. Visuales conceptuales: no son estimaciones y se etiquetan como tales.
 decision_dir <- file.path(repo_root, "research", "kierkegaard-decision")
@@ -154,21 +155,14 @@ p_decision <- ggplot() + geom_segment(data = decision, aes(x, y, xend = xend, ye
   labs(title = "Decidir también es renunciar a caminos", subtitle = "Esquema conceptual inspirado en Kierkegaard · no representa una estimación", x = NULL, y = NULL, caption = "El valor económico de una opción depende de la incertidumbre, el tiempo y la posibilidad de revertir la decisión.") + theme_editorial("none") + theme(axis.title = element_blank(), axis.text = element_blank(), panel.grid = element_blank(), legend.position = "none")
 export_plot(p_decision, file.path(decision_dir, "figuras"), "01_arbol_decision_compromiso", 10, 6.4)
 write_map(decision_dir, list(tibble(id = "01_arbol_decision_compromiso", pregunta = "¿Qué se pierde al decidir?", familia = "Árbol conceptual", fuente = "Esquema editorial", advertencia = "No es una estimación empírica")))
-
-gym_dir <- file.path(repo_root, "research", "sunk-cost-gimnasio")
-gym <- tibble(visitas_futuras = 0:20, costo_promedio = 2500 / pmax(1, 2 + visitas_futuras), costo_futuro_relevante = 80 + 0 * visitas_futuras)
-p_gym <- ggplot(gym, aes(visitas_futuras, costo_promedio)) + geom_line(colour = pal$terracota, linewidth = 1.15) + geom_point(data = gym |> filter(visitas_futuras %in% c(2, 10, 20)), size = 2.8, colour = pal$terracota) +
-  geom_hline(yintercept = 80, colour = pal$azul, linetype = "dashed", linewidth = .8) + geom_text(data = tibble(x = 14, y = 87, label = "costo futuro relevante"), aes(x, y, label = label), colour = pal$azul, size = 3.3, hjust = 0) +
-  scale_y_continuous(labels = label_number(prefix = "RD$ ", accuracy = 1), expand = expansion(mult = c(0, .12))) +
-  labs(title = "La cuota pagada cambia el promedio, no la decisión futura", subtitle = "Ejemplo ilustrativo: membresía de RD$2,500 y costo por visita futura de RD$80", x = "Visitas futuras", y = "Costo promedio por visita", caption = "El costo hundido ya ocurrió; la decisión racional mira beneficios y costos que todavía pueden cambiar.") + theme_editorial()
-export_plot(p_gym, file.path(gym_dir, "figuras"), "01_costo_hundido_vs_costo_futuro", 10, 6.2)
-write_map(gym_dir, list(tibble(id = "01_costo_hundido_vs_costo_futuro", pregunta = "¿Qué parte del costo debe afectar la decisión?", familia = "Línea conceptual", fuente = "Ejemplo ilustrativo", advertencia = "No representa precios promedio de gimnasios")))
+source(file.path(repo_root, "research", "build-kierkegaard-decision.R"), local = new.env(parent = globalenv()))
 
 info_dir <- file.path(repo_root, "research", "gracian-economia-informacion")
 info_cells <- tribble(~x, ~y, ~titulo, ~descripcion, ~color, 1, 1, "Mercado sano", "calidad observable", "azul", 2, 1, "Selección adversa", "el comprador no distingue", "terracota", 1, 2, "Riesgo moral", "la conducta cambia después", "ocre", 2, 2, "Señalización", "reputación o señal costosa", "oliva")
 p_info <- ggplot(info_cells, aes(x, y, fill = color)) + geom_tile(colour = pal$crema, linewidth = 1.1) + geom_text(aes(label = paste0(titulo, "\n", descripcion)), size = 4, fontface = "bold", lineheight = .92) + scale_fill_manual(values = c(azul = pal$azul, terracota = pal$terracota, ocre = pal$ocre, oliva = pal$oliva), guide = "none") + scale_x_continuous(breaks = c(1, 2), labels = c("La información se observa", "La información se oculta"), expand = c(0, 0)) + scale_y_continuous(breaks = c(1, 2), labels = c("Antes del intercambio", "Después del intercambio"), expand = c(0, 0)) + labs(title = "La prudencia empieza donde la información no está repartida", subtitle = "Mapa conceptual de problemas de información asimétrica", x = NULL, y = NULL, caption = "Esquema de teoría económica; Gracián funciona aquí como lente literario, no como autor de la teoría moderna.") + theme_editorial("none") + theme(panel.grid = element_blank(), axis.text = element_text(size = 9))
 export_plot(p_info, file.path(info_dir, "figuras"), "01_matriz_informacion_asimetrica", 10, 7)
 write_map(info_dir, list(tibble(id = "01_matriz_informacion_asimetrica", pregunta = "¿Qué ocurre cuando una parte sabe más que la otra?", familia = "Matriz conceptual", fuente = "Teoría económica", advertencia = "No es evidencia estadística")))
+source(file.path(repo_root, "research", "build-gracian-economia-informacion.R"), local = new.env(parent = globalenv()))
 
 price_dir <- file.path(repo_root, "research", "precio-justo-pricing-dinamico")
 dynamic <- tibble(hora = 1:12, demanda = c(35, 40, 44, 49, 55, 64, 77, 92, 88, 70, 52, 41), precio = 25 + demanda * .55)
@@ -178,6 +172,7 @@ fair <- tribble(~x, ~y, ~label, ~fill, 1, 1, "Baja eficiencia\nBaja percepción 
 p_fair <- ggplot(fair, aes(x, y, fill = fill)) + geom_tile(colour = pal$crema, linewidth = 1.1) + geom_text(aes(label = label), size = 4, fontface = "bold", lineheight = .92) + scale_fill_manual(values = c(terracota = pal$terracota, ocre = pal$ocre, gris = pal$gris_claro, azul = pal$azul), guide = "none") + scale_x_continuous(breaks = c(1, 2), labels = c("Menor eficiencia", "Mayor eficiencia"), expand = c(0, 0)) + scale_y_continuous(breaks = c(1, 2), labels = c("Menor justicia percibida", "Mayor justicia percibida"), expand = c(0, 0)) + labs(title = "Eficiencia y justicia pueden moverse por separado", subtitle = "Matriz conceptual para discutir el precio justo", x = NULL, y = NULL, caption = "Esquema editorial; no asigna una medida objetiva de justicia.") + theme_editorial("none") + theme(panel.grid = element_blank(), axis.text = element_text(size = 9))
 export_plot(p_fair, file.path(price_dir, "figuras"), "02_matriz_eficiencia_justicia", 9.5, 6.8)
 write_map(price_dir, list(tibble(id = "01_demanda_precio_dinamico", pregunta = "¿Cómo cambia el precio cuando cambia la demanda?", familia = "Serie conceptual", fuente = "Ejemplo ilustrativo", advertencia = "No son precios observados"), tibble(id = "02_matriz_eficiencia_justicia", pregunta = "¿Eficiencia y justicia son la misma cosa?", familia = "Matriz conceptual", fuente = "Esquema editorial", advertencia = "Justicia percibida no observada")))
+source(file.path(repo_root, "research", "build-precio-justo-pricing-dinamico.R"), local = new.env(parent = globalenv()))
 
 # 4. Trampa de ingresos medios: primer gráfico comparativo con WDI descargado.
 dir.create(file.path(repo_root, "research", "trampa-ingresos-medios", "data", "procesados"), recursive = TRUE, showWarnings = FALSE)

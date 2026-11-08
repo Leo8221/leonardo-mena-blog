@@ -1,0 +1,110 @@
+﻿[
+    {
+        "year":  2015,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2015.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2015.csv.tar.gz",
+        "sha256":  "bc33ffbc8a1a797f226430787ebbfaa3aceba0bdad3994915ab0f0a6587462ab",
+        "bytes":  545164,
+        "downloaded_at":  "2026-08-30T10:33:49.0655075-04:00"
+    },
+    {
+        "year":  2016,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2016.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2016.csv.tar.gz",
+        "sha256":  "8df4dcb8c0e5190ca6e790966705ece82c338c15bc90b376bba94b892194a05c",
+        "bytes":  10063009,
+        "downloaded_at":  "2026-08-30T10:33:59.9024655-04:00"
+    },
+    {
+        "year":  2017,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2017.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2017.csv.tar.gz",
+        "sha256":  "350ab40e584efffab963e5d47bcedf2105498656fe2904796eabcffc9353723c",
+        "bytes":  25443458,
+        "downloaded_at":  "2026-08-30T10:34:20.8813987-04:00"
+    },
+    {
+        "year":  2018,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2018.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2018.csv.tar.gz",
+        "sha256":  "c56bdf2ceb1ea3cce9ef0403f48d16fb4797d389555ff3f20f25269787343f00",
+        "bytes":  49136463,
+        "downloaded_at":  "2026-08-30T10:35:00.7047596-04:00"
+    },
+    {
+        "year":  2019,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2019.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2019.csv.tar.gz",
+        "sha256":  "739cd2ec55441ed61b7365942dd9e08237be0a3430ec91ea2f68101e31421978",
+        "bytes":  66116097,
+        "downloaded_at":  "2026-08-30T10:35:52.7059260-04:00"
+    },
+    {
+        "year":  2020,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2020.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2020.csv.tar.gz",
+        "sha256":  "e13b19c09322c2208d306ce809d4dc9053a1e64713fadf261283eb4f68ed5fd5",
+        "bytes":  48894347,
+        "downloaded_at":  "2026-08-30T10:36:30.0805190-04:00"
+    },
+    {
+        "year":  2021,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2021.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2021.csv.tar.gz",
+        "sha256":  "acdc90bdc706e04b374f5e64442dd05e47f690f893b39e8cc4c1cc2d98b5cc5b",
+        "bytes":  63835777,
+        "downloaded_at":  "2026-08-30T10:37:18.5879637-04:00"
+    },
+    {
+        "year":  2022,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2022.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2022.csv.tar.gz",
+        "sha256":  "92ea8384d44292d316e3c81b8233e3193a40a776947f1efb5243aca5d62c53f8",
+        "bytes":  72894998,
+        "downloaded_at":  "2026-08-30T10:38:13.7471537-04:00"
+    },
+    {
+        "year":  2023,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2023.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2023.csv.tar.gz",
+        "sha256":  "24c0821d95f1607250cc67e913d033d71683d7acf177cfa84a724ea55545e0b3",
+        "bytes":  68212889,
+        "downloaded_at":  "2026-08-30T10:39:08.9924229-04:00"
+    },
+    {
+        "year":  2024,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2024.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2024.csv.tar.gz",
+        "sha256":  "ecf7b9fb2334233e5aae5cc56ef3b4afa24581bd217533e0f6b9ad16a6f50f71",
+        "bytes":  66574683,
+        "downloaded_at":  "2026-08-30T10:40:01.7786487-04:00"
+    },
+    {
+        "year":  2025,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2025.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2025.csv.tar.gz",
+        "sha256":  "764558bc253389c4abb26a42b50a8c16764d1af9f4b4cf4fae15e9747080374f",
+        "bytes":  71850185,
+        "downloaded_at":  "2026-08-30T10:40:56.5961218-04:00"
+    },
+    {
+        "year":  2026,
+        "url":  "https://data.open-contracting.org/es/publication/22/download?name=2026.csv.tar.gz",
+        "catalog_url":  "https://data.open-contracting.org/es/publication/22",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\dgcp\\2026.csv.tar.gz",
+        "sha256":  "5dc7c86bdccfd75037cb260b3e388908a8d2482c7bab80661f3ffb062bc229d2",
+        "bytes":  37408121,
+        "downloaded_at":  "2026-08-30T10:41:29.1487231-04:00"
+    }
+]

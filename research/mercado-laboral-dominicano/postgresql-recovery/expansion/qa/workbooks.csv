@@ -1,0 +1,90 @@
+path,sheet,preview_rows,columns
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Indicadores,20,48
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Precisión Estadística Condición,20,9
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Precisión Estadística Indicador,20,9
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Promedio 4 Trimestres,20,45
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Masculino,20,48
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Femenino,20,48
+atlas/data/raw/bcrd-encft/00_Indicadores.xlsx,Regiones,20,6
+atlas/data/raw/bcrd-encft/01_PET.xlsx,PET Total,20,7
+atlas/data/raw/bcrd-encft/01_PET.xlsx,Masculino,20,7
+atlas/data/raw/bcrd-encft/01_PET.xlsx,Femenino,20,7
+atlas/data/raw/bcrd-encft/1_1_Ocupados_Rama.xlsx,Total,20,15
+atlas/data/raw/bcrd-encft/1_1_Ocupados_Rama.xlsx,Masculina,20,15
+atlas/data/raw/bcrd-encft/1_1_Ocupados_Rama.xlsx,Femenina,20,15
+atlas/data/raw/bcrd-encft/1_2_Ocupados_Ocupacion.xlsx,Grupo Ocupacional,20,12
+atlas/data/raw/bcrd-encft/1_2_Ocupados_Ocupacion.xlsx,Población Masculina,20,12
+atlas/data/raw/bcrd-encft/1_2_Ocupados_Ocupacion.xlsx,Población Femenina,20,12
+atlas/data/raw/bcrd-encft/1_3_Ocupados_Categoria.xlsx,Categoría Ocupacional,20,9
+atlas/data/raw/bcrd-encft/1_3_Ocupados_Categoria.xlsx,Población Masculina,20,9
+atlas/data/raw/bcrd-encft/1_3_Ocupados_Categoria.xlsx,Población Femenina,20,9
+atlas/data/raw/bcrd-encft/1_4_Ocupados_Edad.xlsx,Tramos de Edad,20,7
+atlas/data/raw/bcrd-encft/1_4_Ocupados_Edad.xlsx,Población Masculina,20,7
+atlas/data/raw/bcrd-encft/1_4_Ocupados_Edad.xlsx,Población Femenina,20,7
+atlas/data/raw/bcrd-encft/1_5_Ocupados_Educacion.xlsx,Nivel Educativo,20,7
+atlas/data/raw/bcrd-encft/1_5_Ocupados_Educacion.xlsx,Población Masculina,20,7
+atlas/data/raw/bcrd-encft/1_5_Ocupados_Educacion.xlsx,Población Femenina,20,7
+atlas/data/raw/bcrd-encft/2_1_Sectores_Rama.xlsx,Rama de Actividad,20,28
+atlas/data/raw/bcrd-encft/2_2_Sectores_Ocupacion.xlsx,Grupo Ocupacional,20,22
+atlas/data/raw/bcrd-encft/2_3_Sectores_Categoria.xlsx,Categoria Ocupacional,20,14
+atlas/data/raw/bcrd-encft/2_4_Sectores_Edad.xlsx,Tramos de Edad,20,12
+atlas/data/raw/bcrd-encft/2_5_Sectores_Educacion.xlsx,Nivel Educativo,20,12
+atlas/data/raw/bcrd-encft/3_1_Deciles_Rama.xlsx,Rama Actividad,20,12
+atlas/data/raw/bcrd-encft/3_2_Deciles_Ocupacion.xlsx,Grupo Ocupacional,20,12
+atlas/data/raw/bcrd-encft/3_3_Deciles_Categoria.xlsx,Categoría Ocupacional,19,12
+atlas/data/raw/bcrd-encft/3_4_Deciles_Edad.xlsx,Tramo de Edad,20,12
+atlas/data/raw/bcrd-encft/3_5_Deciles_Educacion.xlsx,Nivel Educativo,20,12
+atlas/data/raw/bcrd-encft/Informalidad_total.xlsx,Informalidad Total,20,23
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,Diaria,20,5
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,PromMensual,20,5
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,PromTrimestral,20,5
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,PromAnual,20,4
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,FPMensual,20,5
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,FPTrimestral,20,5
+atlas/data/raw/bcrd-mercado-cambiario/TASA_DOLAR_REFERENCIA_MC.xlsx,FPAnual,20,4
+atlas/data/raw/bcrd-monetario/Canalizacion_por_Provincias.xlsx,Préstamos,20,51
+atlas/data/raw/bcrd-monetario/Captacion_por_Provincias.xlsx,Depósitos y Valores,20,51
+atlas/data/raw/bcrd-monetario/prestamos_por_destino_armonizados.xlsx,Préstamos por Destino,20,15
+atlas/data/raw/bcrd-monetario/Serie_TPM.xlsx,Tasas,20,6
+atlas/data/raw/bcrd-monetario/tasas_activas_mn.xlsx,V.4TIbancactMN,20,15
+atlas/data/raw/bcrd-precios/Costo_Canasta_quintiles_base_2019-2020.xlsx,Costo_Canasta,20,8
+atlas/data/raw/bcrd-precios/Costo_Canasta_regiones_base_2019-2020.xls,IPC REGIONES BASE 2019-2020,19,6
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2020-2026,20,75
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2020-2021,20,21
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2022,20,18
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2023,20,18
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2024,20,18
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2025,20,18
+atlas/data/raw/bcrd-precios/ipc_articulos_base_2019-2020.xlsx,2026,20,12
+atlas/data/raw/bcrd-precios/ipc_base_2019-2020.xls,IPC base 2019-2020,20,7
+atlas/data/raw/bcrd-precios/ipc_base_2019-2020_serie_referencial.xlsx,IPC base oct 2019-sept 2020 ,20,5
+atlas/data/raw/bcrd-precios/ipc_grupos_base_2019-2020.xls, Grupos Base 2019-2020,19,25
+atlas/data/raw/bcrd-precios/ipc_quintiles_base_2019-2020.xls,IPC QUINTILES DE INGRESO,20,12
+atlas/data/raw/bcrd-precios/ipc_regiones_base_2019-2020.xls,IPC REGIONES BASE 2019-2020,20,10
+atlas/data/raw/bcrd-precios/ipc_subyacente_base_2019-2020.xlsx,ipc subyacente base 2019-2020,20,6
+atlas/data/raw/bcrd-precios/ipc_tnt_base_2019-2020.xls,IPC TNT,20,11
+atlas/data/raw/bcrd-sector-externo/Balanza-de-Servicios-anual.xlsx,Anual,20,17
+atlas/data/raw/bcrd-sector-externo/Deuda_Consolidada_Por_Sector.xls,Por Sector (US$),20,27
+atlas/data/raw/bcrd-sector-externo/Deuda_Consolidada_Por_Sector.xls,Por Sector (% PIB),20,27
+atlas/data/raw/bcrd-sector-externo/Exportaciones_Anuales_6.xls,Exportaciones Anuales,20,18
+atlas/data/raw/bcrd-sector-externo/Exportaciones_Trimestrales_6.xls,Exportaciones_Trimestrales,20,66
+atlas/data/raw/bcrd-sector-externo/Exportaciones_Trimestrales_6.xls,Trim-Acum,20,66
+atlas/data/raw/bcrd-sector-externo/Importaciones_Anuales_6.xls,Importaciones Anuales,20,18
+atlas/data/raw/bcrd-sector-externo/Importaciones_Trimestrales_6.xls,Importaciones Trimestrales,20,66
+atlas/data/raw/bcrd-sector-externo/Importaciones_Trimestrales_6.xls,Trim-Acum,20,66
+atlas/data/raw/bcrd-sector-externo/Remesas_6.xlsx,Total,20,18
+atlas/data/raw/bcrd-sector-externo/Remesas_PE.xlsx,Pais,20,18
+atlas/data/raw/bcrd-sector-externo/Remesas_PR.xlsx,Provincia,20,18
+atlas/data/raw/bcrd-sector-externo/reservas_internacionales.xlsx,Reservas Mensuales,20,109
+atlas/data/raw/bcrd-sector-fiscal/Serie_historica_SPNF_2000-2013.xlsx,Flujos Mensuales,20,170
+atlas/data/raw/bcrd-sector-real/imae_2018.xlsx,IMAE,20,16
+atlas/data/raw/bcrd-sector-real/pib_2018.xlsx,PIB_Trimestral,20,5
+atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx,PIB$_Trim,20,33
+atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx,PIB$_Trim_Acum,20,33
+atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx,PIBK_Trim,20,33
+atlas/data/raw/bcrd-sector-real/pib_origen_2018.xlsx,PIBK_Trim_Acum,20,33
+atlas/data/raw/mipymes-enmipymes-2023/Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx,Base ENMIPYMES 23,20,126
+atlas/data/raw/territory-population-one/cuadro-estimaciones-proyecciones-población-total-por-año-según-región-provincia-2000-2030.xlsx,2.20-15,20,94
+posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/ENIEF_Consolidado.xlsx,ENIEF 2023-2019,20,896
+research/mercado-laboral-dominicano/data/raw/enae_2024/base_de_datos_general_ENAE_2024.xlsx,ENAE2024,20,746
+research/mercado-laboral-dominicano/data/raw/enae_2024/base_de_datos_general_ENAE_2024.xlsx,Diccionario,20,5

@@ -1,0 +1,30 @@
+control,observado,esperado,estado,nota
+filas_miembros,790993,790993,ok,""
+filas_hogares,258764,258764,ok,""
+filas_viviendas,258607,258607,ok,""
+filas_diccionario,115178,115178,ok,""
+filas_tasas_monedas,399,399,ok,""
+trimestres_completos,41,41,ok,""
+periodos_mensuales,123,123,ok,""
+sin_duplicados_persona_trimestre,0,0,ok,""
+miembros_sin_hogar_clave_estructural,0,0,ok,""
+hogares_sin_vivienda,0,0,ok,""
+miembros_peso_invalido,0,0,ok,""
+hogares_peso_invalido,0,0,ok,""
+peso_miembro_hogar_distinto,2627,0,advertencia,2627 registros de 2023-T4 presentan pesos distintos entre modulos en los propios archivos fuente. Una muestra de claves/pesos se contrasto con el Excel original. Conservar y usar el factor del modulo correspondiente; no sustituirlo al unir.
+geografia_enlace_distinta,0,0,ok,""
+tamano_hogar_distinto,7,0,advertencia,7 registros de miembros de noviembre de 2023 difieren del tamano declarado en Hogar. No corregir ni inferir composicion del hogar sin revisar estos casos.
+periodo_trimestre_coherente,0,0,ok,""
+pet_equivale_15_mas,0,0,ok,""
+pea_identidad_15_mas,0,0,ok,""
+dominio_flags_laborales,0,0,ok,""
+informalidad_clasificada,0,0,ok,""
+2026_sin_promedio_anual_incompleto,1,1,ok,""
+viviendas_factor_nulo_conservado,1,0,advertencia,Una observacion original conservada; no imputar factor ni usarla en sumas ponderadas sin tratamiento explicito.
+id_hogar_original_no_enlaza,73840,0,advertencia,"73840 registros de 2023; usar las claves estructurales verificadas, no ID_HOGAR solo."
+iniciadores_no_equivalen_desocupados,791,0,advertencia,Conservar ambas variables; la tasa abierta usa DESOCUPADO/PEA en personas de 15 anos y mas.
+ruptura_ids_panel_2023_2024,1,0,advertencia,No hay IDs_PERSONA comunes entre 2023-T4 y 2024-T1. No inferir transiciones ni una sustitucion total real del panel sin validar los identificadores.
+bcrd_ocupados_2025t4_redondeado,5168878,5168878,ok,"BCRD, Panorama Economico Region Norte 2026-I, pagina 23; referencia independiente publicada."
+bcrd_desocupacion_2025t4_decima,5,5,ok,"BCRD, PERN 2026-I, pagina 23. Esta comprobacion no certifica toda la serie como publicacion oficial."
+bcrd_ocupados_2016t4_redondeado,4310845,4310845,ok,"BCRD, Cronica Central mayo 2018, pagina 6: ocupados de 15 anos y mas, oct-dic 2016."
+bcrd_ocupados_2017t4_redondeado,4431912,4431912,ok,"BCRD, Cronica Central mayo 2018, pagina 6: ocupados de 15 anos y mas, oct-dic 2017."

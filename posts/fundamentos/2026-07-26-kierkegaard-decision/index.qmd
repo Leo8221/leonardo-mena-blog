@@ -14,10 +14,10 @@ format:
 
 <!-- Borrador visual. La narrativa se añadirá después. -->
 
-<figure class="article-figure"><img src="../../../research/kierkegaard-decision/figuras/01_arbol_decision_compromiso.svg" alt="Árbol conceptual de decisión y compromiso económico."><figcaption>Decisión, compromiso y caminos que dejan de estar disponibles.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/kierkegaard-decision/assets/ilustracion-decision-costo-oportunidad.png" alt="Ilustración editorial de una persona frente a dos caminos posibles."><figcaption>Bifurcación, tiempo y elección.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/kierkegaard-decision/figuras/01_arbol_decision_compromiso.svg" alt="Esquema comparativo de las consecuencias de decidir ahora o esperar."><figcaption>Decidir ahora y esperar tienen costos diferentes.</figcaption></figure>
 
 ## Fuentes y materiales
 
-- [Constructor de figuras](../../../research/build-pending-post-graphics.R)
+- [Constructor de figuras](../../../research/build-kierkegaard-decision.R)
 - [Mapa de figuras](../../../research/kierkegaard-decision/chart-map.csv)
-

@@ -1,0 +1,30 @@
+{
+  "database": "censos_linea_tiempo",
+  "server": "encft_server",
+  "schema": "fdw_encft",
+  "counts_verified_locally": {
+    "miembros": 790993,
+    "hogares": 258764,
+    "viviendas": 258607,
+    "diccionario": 115178,
+    "tasas_monedas": 399
+  },
+  "routed_sample_counts": [
+    {
+      "trimestre": 20161,
+      "personas": 21697
+    },
+    {
+      "trimestre": 20261,
+      "personas": 16988
+    }
+  ],
+  "last_quarter": [
+    {
+      "trimestre": 20261,
+      "muestra_personas_total": 16988,
+      "ocupados": 5236178.4703
+    }
+  ],
+  "registered_at": "2026-08-30T02:30:40-0400"
+}

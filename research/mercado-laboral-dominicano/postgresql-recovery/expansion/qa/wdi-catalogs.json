@@ -1,0 +1,12 @@
+[
+  {
+    "filename": "indicators.json",
+    "url": "https://api.worldbank.org/v2/indicator?source=2&format=json&per_page=20000",
+    "sha256": "7367bbeef554110f3098017151a7c93bea7e2e641c399675eb4ef458c5c6f132"
+  },
+  {
+    "filename": "indicators-es.json",
+    "url": "https://api.worldbank.org/v2/es/indicator?source=2&format=json&per_page=20000",
+    "sha256": "7b83ad241a0b33229f3e7e14f4c9331d2f56f93f8ceb4c2d0073168781578cc1"
+  }
+]

@@ -171,7 +171,7 @@ p_decomp <- ggplot(decomp, aes(fecha, contribucion_pp, fill = componente)) +
   scale_x_date(date_breaks = "2 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
   labs(title = "Contribución de los grupos del IPC a la inflación mensual", subtitle = "Contribución mensual de cada componente al IPC · la línea negra es el total", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · cálculo aproximado con ponderaciones oficiales · corte junio de 2026") +
   theme_editorial()
-export_plot(p_decomp, fig_dir, "01_descomposicion_ipc", 11, 7)
+# La descomposición apilada se conserva como cálculo auxiliar, no como figura publicada.
 
 heat <- groups |> filter(fecha >= recent, !is.na(contribucion_pp)) |> mutate(grupo = reorder(grupo, ponderacion))
 write_csv(heat |> select(fecha, grupo, ponderacion, variacion_mensual, contribucion_pp), file.path(data_dir, "02_heatmap_contribuciones_ipc.csv"))
@@ -183,22 +183,12 @@ p_heat <- ggplot(heat, aes(fecha, grupo, fill = contribucion_pp)) +
   theme_editorial("none") + theme(axis.text.y = element_text(size = 8.5), legend.position = "right")
 export_plot(p_heat, fig_dir, "02_heatmap_contribuciones_ipc", 11, 7.5)
 
-pollo <- parse_ipc_items(ipc_path, c("0112201", "0112203")) |>
-  mutate(producto = recode(codigo, `0112201` = "Pollo fresco", `0112203` = "Pechuga de pollo"), peso_item = case_when(codigo == "0112201" ~ 2.32990649, codigo == "0112203" ~ 0.066972124, TRUE ~ NA_real_)) |>
-  group_by(codigo) |>
-  arrange(fecha, .by_group = TRUE) |>
-  mutate(variacion_mensual = 100 * (indice / lag(indice) - 1), contribucion_pp = peso_item / 100 * variacion_mensual) |>
-  ungroup()
-pollo_case <- pollo |> filter(fecha >= recent) |> left_join(total_monthly, by = "fecha")
-write_csv(pollo_case, file.path(data_dir, "03_caso_instrumental_pollo.csv"))
-p_case <- ggplot(pollo_case |> filter(producto == "Pollo fresco"), aes(fecha)) +
-  geom_col(aes(y = contribucion_pp), fill = pal$terracota, width = 25) +
-  geom_line(aes(y = inflacion_total), colour = pal$azul, linewidth = 1) +
-  geom_hline(yintercept = 0, colour = pal$gris, linewidth = 0.45) +
-  scale_x_date(date_breaks = "2 months", date_labels = "%b\n%Y", expand = expansion(mult = c(0.01, 0.03))) +
-  labs(title = "Contribución del pollo fresco frente a la inflación mensual total", subtitle = "Barras: contribución del pollo fresco · línea azul: inflación mensual total · peso del pollo: 2.33%", x = NULL, y = "Puntos porcentuales", caption = "Fuente: BCRD, IPC por artículos · la contribución combina variación del precio y ponderación en la canasta · corte junio de 2026") +
-  theme_editorial()
-export_plot(p_case, fig_dir, "03_caso_instrumental_pollo", 11, 6.6)
+alimentos_case <- groups |>
+  filter(fecha >= recent, str_detect(norm_text(grupo), "alimentos"), !is.na(contribucion_pp)) |>
+  select(fecha, grupo, ponderacion, variacion_mensual, contribucion_pp) |>
+  left_join(total_monthly, by = "fecha")
+assert_true(nrow(alimentos_case) == 18, "La serie representativa de alimentos no contiene 18 meses.")
+write_csv(alimentos_case, file.path(data_dir, "03_caso_representativo_alimentos.csv"))
 
 subyacente <- parse_subyacente(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_subyacente_base_2019-2020.xlsx")) |> filter(fecha >= as.Date("2024-01-01"))
 general <- parse_transables(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_tnt_base_2019-2020.xls")) |> transmute(fecha, inflacion_general = ipc_mensual) |> filter(fecha >= as.Date("2024-01-01"))
@@ -249,10 +239,13 @@ p_dollar <- ggplot(dollar_transables, aes(fecha)) +
 export_plot(p_dollar, fig_dir, "06_dolar_vs_transables", 11, 6.6)
 
 write_csv(tibble(
-  id = c("01_descomposicion_ipc", "02_heatmap_contribuciones_ipc", "03_caso_instrumental_pollo", "04_general_vs_subyacente", "05_puente_junio_2026", "06_dolar_vs_transables"),
-  pregunta = c("¿De dónde sale la inflación mensual?", "¿Qué grupos suman o restan cada mes?", "¿Por qué el pollo es un buen ejemplo, pero no toda la explicación?", "¿Qué parte de la inflación es más persistente?", "¿Cómo se cierra el dato oficial de junio?", "¿Hasta dónde llega el dólar?"),
-  familia = c("Descomposición apilada", "Mapa de calor", "Contribución vs total", "General vs subyacente", "Puente de incidencias", "Comparación interanual"), fuente = "BCRD IPC",
-  advertencia = c("Contribuciones aproximadas a partir de ponderaciones oficiales", "Azul resta; terracota suma", "El pollo fresco pesa 2.33% de la canasta", "Junio 2026: dato subyacente oficial", "El residuo no es un componente económico", "Comparación descriptiva, no causal")
+  id = c("01_descomposicion_ipc", "02_heatmap_contribuciones_ipc", "03_caso_representativo_alimentos", "04_general_vs_subyacente", "05_puente_junio_2026", "06_dolar_vs_transables"),
+  pregunta = c("¿De dónde sale la inflación mensual?", "¿Qué grupos suman o restan cada mes?", "¿Cuál es el grupo más representativo?", "¿Qué parte de la inflación es más persistente?", "¿Cómo se cierra el dato oficial de junio?", "¿Hasta dónde llega el dólar?"),
+  familia = c("Descomposición apilada", "Mapa de calor", "Fórmula del grupo líder", "General vs subyacente", "Puente de incidencias", "Comparación interanual"), fuente = "BCRD IPC",
+  advertencia = c("Contribuciones aproximadas a partir de ponderaciones oficiales", "Azul resta; terracota suma", "Alimentos lidera por incidencia absoluta media y frecuencia", "Junio 2026: dato subyacente oficial", "El residuo no es un componente económico", "Comparación descriptiva, no causal")
 ), file.path(out_dir, "chart-map.csv"))
 
 message("Graficos de descomposicion de inflacion generados hasta junio de 2026.")
+
+# La revisión editorial final se mantiene en un script acotado y reutilizable.
+source(file.path(repo_root, "research", "build-pollo-inflacion-redesign.R"), local = TRUE)

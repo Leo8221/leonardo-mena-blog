@@ -1,0 +1,23 @@
+{
+  "tss_total": 0,
+  "empleos": {
+    "rows": 277,
+    "from": "2003-06-01",
+    "to": "2026-06-01"
+  },
+  "empleadores": {
+    "rows": 277,
+    "from": "2003-06-01",
+    "to": "2026-06-01"
+  },
+  "importaciones_capitulo": {
+    "rows": 10553,
+    "from": "2017-01-01",
+    "to": "2026-03-01"
+  },
+  "exportaciones_capitulo": {
+    "rows": 9966,
+    "from": "2017-01-01",
+    "to": "2026-03-01"
+  }
+}

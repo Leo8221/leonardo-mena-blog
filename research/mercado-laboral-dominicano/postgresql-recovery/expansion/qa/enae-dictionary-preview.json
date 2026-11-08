@@ -1,0 +1,17 @@
+[
+  [null, "Diccionario de variables de la base de datos general de la Encuesta Nacional de Actividad Económica (ENAE) 2024", null, null, null],
+  [null, null, null, null, null],
+  [null, null, null, null, null],
+  [null, null, null, null, null],
+  [null, null, null, null, null],
+  [null, null, null, null, null],
+  [null, null, null, null, null],
+  ["Variable", "Etiqueta de variable", "Tipo de variable", "Valor", "Etiqueta de valor"],
+  ["FormunlarioNo", "Número de formulario", "Variable identificadora", "Ninguna", "Ninguna"],
+  ["seccion_CNAE", "Sección de actividad económica", "Nominal", "1", "Agricultura, ganadería, silvicultura y pesca"],
+  [null, null, null, "2", "Explotación de minas y canteras"],
+  [null, null, null, "3", "Industrias manufactureras"],
+  [null, null, null, "4", "Suministro de electricidad"],
+  [null, null, null, "5", "Suministro de agua"],
+  [null, null, null, "6", "Construcción"]
+]

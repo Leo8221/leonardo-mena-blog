@@ -1,0 +1,14 @@
+{
+  "database": "censos_linea_tiempo",
+  "server": "economia_rd_server",
+  "schema": "fdw_economia",
+  "views": ["calidad_datos", "canasta_familiar", "catalogo_fuentes", "catalogo_indicadores", "catalogo_presupuesto", "catalogo_series", "comercio_capitulo", "compras_contratos", "compras_mensuales", "compras_procesos", "compras_proveedores_adjudicados", "diccionario_variables", "educacion_centros_2024_2025", "educacion_centros_historicos", "educacion_internacional", "educacion_matricula_anual", "educacion_matricula_detalle", "educacion_matricula_nivel", "educacion_matricula_sector", "educacion_matricula_sexo", "educacion_oferta_2024_2025", "educacion_pruebas", "educacion_pruebas_anuales", "empleo_formal", "enae", "enhogar_2022_personas", "enief", "indicadores_internacionales", "indicadores_rd", "macro_mensual", "mipymes", "mipymes_resumen", "presupuesto_mensual", "series_economicas", "tipo_cambio"],
+  "read_checks": {
+    "macro_mensual": 7,
+    "educacion_matricula_anual": 6,
+    "compras_contratos": 16,
+    "indicadores_rd": 11,
+    "tipo_cambio": 5
+  },
+  "registered_at": "2026-08-30T11:24:42-0400"
+}

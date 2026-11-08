@@ -26,15 +26,6 @@
 - Cuidado conceptual: verificar primero que haya un patrón estadístico; no importar automáticamente la idea de la «cuesta de enero».
 - Visuales posibles: calendario de gastos, índice estacional por rubro y presupuesto mensual de un hogar.
 
-## El «sunk cost» de la membresía del gimnasio
-
-- Estado: idea
-- Serie posible: Fundamentos / economía conductual
-- Lente: una cuota ya pagada no debería determinar la decisión de volver mañana, pero puede producir culpa, perseverancia irracional o abandono justificado.
-- Pregunta: ¿cuándo conviene seguir asistiendo y cuándo conviene cancelar, aunque la membresía ya esté pagada?
-- Conceptos relacionados: costo hundido, costo de oportunidad, compromiso, sesgo de inversión y valor de la opción.
-- Visuales posibles: árbol de decisión mensual, calendario de asistencia y comparación entre costo pagado, costo futuro y beneficio esperado.
-
 ## El «precio justo» de Aristóteles contra el pricing dinámico
 
 - Estado: idea
@@ -74,15 +65,15 @@
 - Cuidado conceptual: no convertir una restricción material en una falla moral ni usar el estoicismo como sustituto de política social.
 - Visuales posibles: presupuesto mensual con shock inesperado, árbol de decisiones bajo incertidumbre y meses de cobertura por quintil.
 
-## Por qué el pollo explica más la inflación que el dólar
+## Qué componentes explican realmente la inflación dominicana
 
 - Estado: idea
 - Serie posible: La República habla de / Economía cotidiana
-- Lente: el tipo de cambio es un canal macroeconómico; el pollo es un precio frecuente que puede explicar mejor la inflación que sienten los hogares.
-- Pregunta: ¿qué explica más la inflación observada y la inflación percibida: el dólar, los alimentos o la combinación de ambos?
-- Canales a separar: peso del pollo en la canasta, frecuencia de compra, alimento animal importado, energía, transporte, clima, márgenes, concentración y traspaso cambiario.
-- Cuidado conceptual: no afirmar que el pollo determina el IPC total; distinguir contribución estadística, exposición del hogar y visibilidad del precio.
-- Visuales posibles: contribución al IPC, dólar–alimento animal–pollo y presupuesto semanal de un hogar.
+- Lente: separar los componentes que aportan directamente al IPC de canales macroeconómicos como el tipo de cambio.
+- Pregunta: ¿qué grupos explican más la inflación observada y con qué regularidad?
+- Canales a separar: peso en la canasta, variación mensual, energía, transporte, clima, márgenes y traspaso cambiario.
+- Cuidado conceptual: distinguir incidencia estadística, exposición del hogar y causalidad; el dólar no es un componente directo del IPC.
+- Visuales posibles: mapa de incidencias mensuales, componente líder, puente del dato oficial y comparación descriptiva con el dólar.
 
 ## Camus, Sísifo y el emprendedor MIPYME
 

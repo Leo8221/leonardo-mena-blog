@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='684.00pt' height='489.60pt' viewBox='0 0 684.00 489.60'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='676.80pt' height='511.20pt' viewBox='0 0 676.80 511.20'>
 <g class='svglite'>
 <defs>
   <style type='text/css'><![CDATA[
@@ -21,41 +21,44 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #F7F1E7;'/>
 <defs>
-  <clipPath id='cpMC4wMHw2ODQuMDB8MC4wMHw0ODkuNjA='>
-    <rect x='0.00' y='0.00' width='684.00' height='489.60' />
+  <clipPath id='cpMC4wMHw2NzYuODB8MC4wMHw1MTEuMjA='>
+    <rect x='0.00' y='0.00' width='676.80' height='511.20' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw0ODkuNjA=)'>
-<rect x='0.00' y='0.00' width='684.00' height='489.60' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
+<g clip-path='url(#cpMC4wMHw2NzYuODB8MC4wMHw1MTEuMjA=)'>
+<rect x='0.00' y='0.00' width='676.80' height='511.20' style='stroke-width: 0.00; stroke: none; fill: #F7F1E7;' />
 </g>
 <defs>
-  <clipPath id='cpMTEzLjgzfDY2MC4wOXw1MS44NXw0NDguMDg='>
-    <rect x='113.83' y='51.85' width='546.26' height='396.23' />
+  <clipPath id='cpMTcuOTN8NjU2Ljg3fDY2LjczfDQ3My40Mw=='>
+    <rect x='17.93' y='66.73' width='638.94' height='406.70' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTEzLjgzfDY2MC4wOXw1MS44NXw0NDguMDg=)'>
-<rect x='113.83' y='51.85' width='546.26' height='396.23' style='stroke-width: 1.16; stroke: none; fill: #F7F1E7;' />
-<rect x='113.83' y='249.97' width='273.13' height='198.11' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #B65C43;' />
-<rect x='386.96' y='249.97' width='273.13' height='198.11' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #C79B53;' />
-<rect x='113.83' y='51.85' width='273.13' height='198.11' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #DED9D0;' />
-<rect x='386.96' y='51.85' width='273.13' height='198.11' style='stroke-width: 2.35; stroke: #F7F1E7; stroke-linecap: butt; stroke-linejoin: miter; fill: #4F789F;' />
-<text x='250.39' y='346.81' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='79.03px' lengthAdjust='spacingAndGlyphs'>Baja eficiencia</text>
-<text x='250.39' y='359.38' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='146.67px' lengthAdjust='spacingAndGlyphs'>Baja percepción de justicia</text>
-<text x='523.52' y='346.81' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='76.48px' lengthAdjust='spacingAndGlyphs'>Alta eficiencia</text>
-<text x='523.52' y='359.38' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='146.67px' lengthAdjust='spacingAndGlyphs'>Baja percepción de justicia</text>
-<text x='250.39' y='148.70' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='79.03px' lengthAdjust='spacingAndGlyphs'>Baja eficiencia</text>
-<text x='250.39' y='161.26' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='144.12px' lengthAdjust='spacingAndGlyphs'>Alta percepción de justicia</text>
-<text x='523.52' y='148.70' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='76.48px' lengthAdjust='spacingAndGlyphs'>Alta eficiencia</text>
-<text x='523.52' y='161.26' text-anchor='middle' style='font-size: 11.38px; font-weight: bold; font-family: "Arial";' textLength='144.12px' lengthAdjust='spacingAndGlyphs'>Alta percepción de justicia</text>
+<g clip-path='url(#cpMTcuOTN8NjU2Ljg3fDY2LjczfDQ3My40Mw==)'>
+<rect x='17.93' y='66.73' width='638.94' height='406.70' style='stroke-width: 0.00; stroke: none; fill: #F7F1E7;' />
+<rect x='37.10' y='96.85' width='600.61' height='341.43' style='stroke-width: 1.49; stroke: #DED9D0; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFDFC;' />
+<rect x='171.28' y='227.40' width='357.81' height='80.34' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #ECE7DE;' />
+<line x1='69.05' y1='267.57' x2='605.76' y2='267.57' style='stroke-width: 1.71; stroke: #252525; stroke-linecap: butt;' />
+<line x1='171.28' y1='342.88' x2='171.28' y2='177.19' style='stroke-width: 3.20; stroke: #B65C43; stroke-linecap: butt;' />
+<line x1='529.09' y1='342.88' x2='529.09' y2='177.19' style='stroke-width: 3.20; stroke: #4F789F; stroke-linecap: butt;' />
+<text x='171.28' y='140.27' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #B65C43; font-family: "Arial";' textLength='56.09px' lengthAdjust='spacingAndGlyphs'>MÍNIMO QUE</text>
+<text x='171.28' y='150.32' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #B65C43; font-family: "Arial";' textLength='104.39px' lengthAdjust='spacingAndGlyphs'>ACEPTA EL VENDEDOR</text>
+<text x='529.09' y='140.27' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #4F789F; font-family: "Arial";' textLength='59.62px' lengthAdjust='spacingAndGlyphs'>MÁXIMO QUE</text>
+<text x='529.09' y='150.32' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #4F789F; font-family: "Arial";' textLength='113.48px' lengthAdjust='spacingAndGlyphs'>ACEPTA EL COMPRADOR</text>
+<text x='350.18' y='203.04' text-anchor='middle' style='font-size: 9.10px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='169.58px' lengthAdjust='spacingAndGlyphs'>INTERVALO DE ACUERDOS POSIBLES</text>
+<circle cx='260.73' cy='267.57' r='6.26' style='stroke-width: 1.42; stroke: #252525; fill: #FFFDFC;' />
+<circle cx='350.18' cy='267.57' r='6.26' style='stroke-width: 1.42; stroke: #252525; fill: #FFFDFC;' />
+<circle cx='452.41' cy='267.57' r='6.26' style='stroke-width: 1.42; stroke: #252525; fill: #FFFDFC;' />
+<text x='260.73' y='338.41' text-anchor='middle' style='font-size: 8.54px; font-weight: bold;fill: #5A5A55; font-family: "Arial";' textLength='33.84px' lengthAdjust='spacingAndGlyphs'>precio A</text>
+<text x='350.18' y='338.41' text-anchor='middle' style='font-size: 8.54px; font-weight: bold;fill: #5A5A55; font-family: "Arial";' textLength='34.16px' lengthAdjust='spacingAndGlyphs'>precio B</text>
+<text x='452.41' y='338.41' text-anchor='middle' style='font-size: 8.54px; font-weight: bold;fill: #5A5A55; font-family: "Arial";' textLength='34.16px' lengthAdjust='spacingAndGlyphs'>precio C</text>
+<text x='120.16' y='385.85' text-anchor='middle' style='font-size: 7.82px; font-weight: bold;fill: #B65C43; font-family: "Arial";' textLength='70.88px' lengthAdjust='spacingAndGlyphs'>NO HAY ACUERDO</text>
+<text x='580.20' y='385.85' text-anchor='middle' style='font-size: 7.82px; font-weight: bold;fill: #4F789F; font-family: "Arial";' textLength='70.88px' lengthAdjust='spacingAndGlyphs'>NO HAY ACUERDO</text>
+<text x='350.18' y='406.34' text-anchor='middle' style='font-size: 8.96px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='331.86px' lengthAdjust='spacingAndGlyphs'>El intervalo admite más de un precio; ninguno viene marcado como «el justo»</text>
 </g>
-<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw0ODkuNjA=)'>
-<text x='108.45' y='352.25' text-anchor='end' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='94.50px' lengthAdjust='spacingAndGlyphs'>Menor justicia percibida</text>
-<text x='108.45' y='154.13' text-anchor='end' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='94.00px' lengthAdjust='spacingAndGlyphs'>Mayor justicia percibida</text>
-<text x='250.39' y='459.90' text-anchor='middle' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='65.50px' lengthAdjust='spacingAndGlyphs'>Menor eficiencia</text>
-<text x='523.52' y='459.90' text-anchor='middle' style='font-size: 9.00px;fill: #252525; font-family: "Arial";' textLength='65.00px' lengthAdjust='spacingAndGlyphs'>Mayor eficiencia</text>
-<text x='113.83' y='43.56' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='220.22px' lengthAdjust='spacingAndGlyphs'>Matriz conceptual para discutir el precio justo</text>
-<text x='113.83' y='26.12' style='font-size: 17.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='409.06px' lengthAdjust='spacingAndGlyphs'>Eficiencia y justicia pueden moverse por separado</text>
-<text x='113.83' y='473.86' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='230.78px' lengthAdjust='spacingAndGlyphs'>Esquema editorial; no asigna una medida objetiva de justicia.</text>
+<g clip-path='url(#cpMC4wMHw2NzYuODB8MC4wMHw1MTEuMjA=)'>
+<text x='17.93' y='48.47' style='font-size: 11.00px;fill: #5A5A55; font-family: "Arial";' textLength='475.34px' lengthAdjust='spacingAndGlyphs'>El intercambio puede delimitar precios posibles, pero no identifica uno como moralmente correcto</text>
+<text x='17.93' y='30.82' style='font-size: 18.00px; font-weight: bold;fill: #252525; font-family: "Arial";' textLength='395.16px' lengthAdjust='spacingAndGlyphs'>No hay un punto único llamado «precio justo»</text>
+<text x='17.93' y='493.47' style='font-size: 8.50px;fill: #65655F; font-family: "Arial";' textLength='390.56px' lengthAdjust='spacingAndGlyphs'>Esquema conceptual de intercambio bilateral; no representa precios observados ni todos los mercados.</text>
 </g>
 </g>
 </svg>

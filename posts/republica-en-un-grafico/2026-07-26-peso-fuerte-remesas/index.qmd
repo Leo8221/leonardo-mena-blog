@@ -19,16 +19,15 @@ include-after-body:
 <script>document.body.classList.add('editorial-post');</script>
 
 ```{=html}
-<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/01_remesas_tipo_cambio_poder_compra.svg" alt="Índices de remesas en dólares, pesos por cien dólares y poder de compra real desde 2010."><figcaption>Remesas, tipo de cambio y poder de compra real.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/02_poder_compra_remesas.svg" alt="Poder de compra real de los pesos recibidos por cada cien dólares."><figcaption>Poder de compra real de US$100 recibidos.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/03_mapa_calor_poder_compra.svg" alt="Mapa de calor mensual del poder de compra relativo de cien dólares por año."><figcaption>Poder de compra por mes y año.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/01_remesas_tipo_cambio_poder_compra.svg" alt="Índices del tipo de cambio y de los precios al consumidor desde enero de 2010, con interrupciones cuando faltan datos."><figcaption>Tipo de cambio e inflación como fuerzas que determinan el poder de compra de US$100.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/02_poder_compra_remesas.svg" alt="Índice del poder de compra de los pesos recibidos por cada cien dólares, con un valor de 82 en mayo de 2026."><figcaption>Poder de compra relativo de US$100 recibidos.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/03_mapa_calor_poder_compra.svg" alt="Comparación entre los pesos recibidos por cien dólares y los pesos necesarios para conservar el poder de compra de enero de 2010."><figcaption>Brecha entre los pesos recibidos y el monto necesario para conservar el poder de compra base.</figcaption></figure>
 ```
 
 ## Fuentes y materiales reproducibles
 
-- [Constructor de figuras](../../../research/build-five-post-graphics.R)
+- [Constructor de figuras](../../../research/build-peso-fuerte-remesas.R)
 - [Datos procesados](../../../research/peso-fuerte-remesas/data/procesados/)
 - [Mapa de figuras](../../../research/peso-fuerte-remesas/chart-map.csv)
 - [Estadísticas tradicionales del BCRD](https://www.bancentral.gov.do/a/d/3866-estadisticas-tradicionales)
 - [Mercado cambiario del BCRD](https://bancentral.gov.do/a/CustomView/2538-mercado-cambiario)
-

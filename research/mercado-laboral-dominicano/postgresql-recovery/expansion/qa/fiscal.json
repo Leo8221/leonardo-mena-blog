@@ -1,0 +1,2837 @@
+{
+  "rows": 318595,
+  "sources": 25,
+  "unknown_unit": 948,
+  "units": [
+    {
+      "unidad_fuente": "DOP",
+      "N": 292856
+    },
+    {
+      "unidad_fuente": "millones_DOP",
+      "N": 24791
+    },
+    {
+      "unidad_fuente": "por_verificar",
+      "N": 948
+    }
+  ],
+  "coverage": [
+    {
+      "fuente_id": "a1156fb8cacb",
+      "archivo": "a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx",
+      "desde": "2004-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 18766
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "archivo": "5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx",
+      "desde": "2005-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 24542
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "archivo": "a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx",
+      "desde": "2004-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 27456
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "archivo": "cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx",
+      "desde": "2004-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 58139
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "archivo": "57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 7357
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "archivo": "6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 12818
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "archivo": "1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 35284
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "archivo": "42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-01-01",
+      "observaciones": 32642
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "archivo": "c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 6325
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "archivo": "92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 2993
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "archivo": "9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 1555
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "archivo": "0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 27046
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "archivo": "3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx",
+      "desde": "2009-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 27566
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "archivo": "c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx",
+      "desde": "2009-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 5227
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "archivo": "034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx",
+      "desde": "2009-01-01",
+      "hasta": "2026-01-01",
+      "observaciones": 4742
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "archivo": "2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx",
+      "desde": "2009-01-01",
+      "hasta": "2021-12-01",
+      "observaciones": 609
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "archivo": "a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx",
+      "desde": "2009-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 1236
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "archivo": "f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 11896
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "archivo": "6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 1001
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "archivo": "40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 2248
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "archivo": "119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 5078
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "archivo": "803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 1564
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "archivo": "7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 845
+    },
+    {
+      "fuente_id": "68a319964776",
+      "archivo": "68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-04-01",
+      "observaciones": 839
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "archivo": "0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx",
+      "desde": "2014-01-01",
+      "hasta": "2026-06-01",
+      "observaciones": 821
+    }
+  ],
+  "reconciliation": [
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2004",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2005",
+      "filas_comparadas": 34,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2006",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2007",
+      "filas_comparadas": 37,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2008",
+      "filas_comparadas": 34,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2009",
+      "filas_comparadas": 34,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2010",
+      "filas_comparadas": 33,
+      "diferencias": 1,
+      "max_diferencia": 709462790536.5
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2011",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2012",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2013",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2015",
+      "filas_comparadas": 68,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2016",
+      "filas_comparadas": 65,
+      "diferencias": 1,
+      "max_diferencia": 4290203834.95
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2018",
+      "filas_comparadas": 69,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2019",
+      "filas_comparadas": 74,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2020",
+      "filas_comparadas": 70,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2021",
+      "filas_comparadas": 131,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2022",
+      "filas_comparadas": 127,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2023",
+      "filas_comparadas": 125,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2024",
+      "filas_comparadas": 116,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2025",
+      "filas_comparadas": 104,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a1156fb8cacb",
+      "hoja": "2026",
+      "filas_comparadas": 97,
+      "diferencias": 1,
+      "max_diferencia": 8443200000.06
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2005",
+      "filas_comparadas": 46,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2006",
+      "filas_comparadas": 37,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2007",
+      "filas_comparadas": 50,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2008",
+      "filas_comparadas": 40,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2009",
+      "filas_comparadas": 39,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2010",
+      "filas_comparadas": 39,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2011",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2012",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2013",
+      "filas_comparadas": 43,
+      "diferencias": 7,
+      "max_diferencia": 29839542.95
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2014",
+      "filas_comparadas": 112,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2015",
+      "filas_comparadas": 112,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2016",
+      "filas_comparadas": 102,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2018",
+      "filas_comparadas": 112,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2019",
+      "filas_comparadas": 111,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2020",
+      "filas_comparadas": 108,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2021",
+      "filas_comparadas": 107,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2022",
+      "filas_comparadas": 106,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2023",
+      "filas_comparadas": 134,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2024",
+      "filas_comparadas": 148,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2025",
+      "filas_comparadas": 145,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "5a16a9b6777c",
+      "hoja": "2026",
+      "filas_comparadas": 141,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2004",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2005",
+      "filas_comparadas": 36,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2006",
+      "filas_comparadas": 33,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2007 ",
+      "filas_comparadas": 36,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2008",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2009",
+      "filas_comparadas": 37,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2010",
+      "filas_comparadas": 34,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2011",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2012",
+      "filas_comparadas": 36,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2013",
+      "filas_comparadas": 36,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2014",
+      "filas_comparadas": 41,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2015",
+      "filas_comparadas": 48,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2020",
+      "filas_comparadas": 54,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2016",
+      "filas_comparadas": 50,
+      "diferencias": 0,
+      "max_diferencia": 0.0005
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2018",
+      "filas_comparadas": 57,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2019",
+      "filas_comparadas": 56,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2021",
+      "filas_comparadas": 265,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2022",
+      "filas_comparadas": 265,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2023",
+      "filas_comparadas": 264,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2024",
+      "filas_comparadas": 278,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2025",
+      "filas_comparadas": 262,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a92c1a72ad5d",
+      "hoja": "2026",
+      "filas_comparadas": 245,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2004",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2005",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2006",
+      "filas_comparadas": 60,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2007",
+      "filas_comparadas": 59,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2008",
+      "filas_comparadas": 57,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2009",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2010",
+      "filas_comparadas": 56,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2011",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2012",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2013",
+      "filas_comparadas": 57,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2014",
+      "filas_comparadas": 67,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2015",
+      "filas_comparadas": 85,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2016",
+      "filas_comparadas": 81,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2018",
+      "filas_comparadas": 84,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2019",
+      "filas_comparadas": 89,
+      "diferencias": 1,
+      "max_diferencia": 64999935000000
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2020 ",
+      "filas_comparadas": 86,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2021",
+      "filas_comparadas": 674,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2022",
+      "filas_comparadas": 677,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2023",
+      "filas_comparadas": 668,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2024",
+      "filas_comparadas": 671,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2025",
+      "filas_comparadas": 658,
+      "diferencias": 6,
+      "max_diferencia": 1477682.14
+    },
+    {
+      "fuente_id": "cc659ced142f",
+      "hoja": "2026",
+      "filas_comparadas": 641,
+      "diferencias": 5,
+      "max_diferencia": 28408281.5
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2014",
+      "filas_comparadas": 20,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2015",
+      "filas_comparadas": 35,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2016",
+      "filas_comparadas": 40,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2017",
+      "filas_comparadas": 42,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2018",
+      "filas_comparadas": 45,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2019",
+      "filas_comparadas": 45,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2020",
+      "filas_comparadas": 45,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2021",
+      "filas_comparadas": 72,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2022",
+      "filas_comparadas": 68,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2023",
+      "filas_comparadas": 68,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2024",
+      "filas_comparadas": 78,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2025",
+      "filas_comparadas": 63,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "57bfd07b89ad",
+      "hoja": "2026",
+      "filas_comparadas": 62,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2014",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2015",
+      "filas_comparadas": 46,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2016",
+      "filas_comparadas": 60,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2018",
+      "filas_comparadas": 85,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2019",
+      "filas_comparadas": 79,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2020",
+      "filas_comparadas": 80,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2021",
+      "filas_comparadas": 84,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2022",
+      "filas_comparadas": 81,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2023",
+      "filas_comparadas": 80,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2024",
+      "filas_comparadas": 82,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2025",
+      "filas_comparadas": 85,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6bd4593b81cc",
+      "hoja": "2026",
+      "filas_comparadas": 83,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2014",
+      "filas_comparadas": 63,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2015",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2016",
+      "filas_comparadas": 81,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2018",
+      "filas_comparadas": 89,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2019",
+      "filas_comparadas": 85,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2020",
+      "filas_comparadas": 83,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2021",
+      "filas_comparadas": 545,
+      "diferencias": 4,
+      "max_diferencia": 7610851044.59
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2022",
+      "filas_comparadas": 0,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2023",
+      "filas_comparadas": 568,
+      "diferencias": 1,
+      "max_diferencia": 702778145.76
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2024",
+      "filas_comparadas": 584,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2025",
+      "filas_comparadas": 561,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "1be708fce631",
+      "hoja": "2026",
+      "filas_comparadas": 546,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2014",
+      "filas_comparadas": 63,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2015",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2016",
+      "filas_comparadas": 81,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2018",
+      "filas_comparadas": 89,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2019",
+      "filas_comparadas": 85,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2020",
+      "filas_comparadas": 83,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2021",
+      "filas_comparadas": 545,
+      "diferencias": 4,
+      "max_diferencia": 7610851044.59
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2022",
+      "filas_comparadas": 0,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2023",
+      "filas_comparadas": 568,
+      "diferencias": 1,
+      "max_diferencia": 702778145.76
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2024",
+      "filas_comparadas": 584,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2025",
+      "filas_comparadas": 558,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "42c1992a3529",
+      "hoja": "2026",
+      "filas_comparadas": 537,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2014",
+      "filas_comparadas": 34,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2015",
+      "filas_comparadas": 32,
+      "diferencias": 0,
+      "max_diferencia": 2.9802e-08
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2016",
+      "filas_comparadas": 39,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2017",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2018",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2019",
+      "filas_comparadas": 42,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2020",
+      "filas_comparadas": 41,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2021",
+      "filas_comparadas": 63,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2022",
+      "filas_comparadas": 50,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2023",
+      "filas_comparadas": 59,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2024",
+      "filas_comparadas": 57,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2025",
+      "filas_comparadas": 56,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "c51c104b4b57",
+      "hoja": "2026",
+      "filas_comparadas": 51,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2014",
+      "filas_comparadas": 28,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2015",
+      "filas_comparadas": 21,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2016",
+      "filas_comparadas": 19,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2017",
+      "filas_comparadas": 22,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2018 ",
+      "filas_comparadas": 24,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2019 ",
+      "filas_comparadas": 21,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2020",
+      "filas_comparadas": 25,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2021",
+      "filas_comparadas": 25,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2022",
+      "filas_comparadas": 15,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2023",
+      "filas_comparadas": 18,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2024",
+      "filas_comparadas": 14,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2025",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "92df3adea4d4",
+      "hoja": "2026",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2014",
+      "filas_comparadas": 10,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2015 ",
+      "filas_comparadas": 9,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2016 ",
+      "filas_comparadas": 9,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2017",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2018",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2019",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2020",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2021",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2022",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2023",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2024",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2025",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "9f23ab0e9a2e",
+      "hoja": "2026",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2014",
+      "filas_comparadas": 50,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2015",
+      "filas_comparadas": 47,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2016",
+      "filas_comparadas": 50,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2017",
+      "filas_comparadas": 51,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2018",
+      "filas_comparadas": 52,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2019 ",
+      "filas_comparadas": 54,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2020",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2021",
+      "filas_comparadas": 393,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2022",
+      "filas_comparadas": 380,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2023",
+      "filas_comparadas": 411,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2024",
+      "filas_comparadas": 380,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2025",
+      "filas_comparadas": 389,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "0c3729465c1f",
+      "hoja": "2026",
+      "filas_comparadas": 356,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2009",
+      "filas_comparadas": 57,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2010",
+      "filas_comparadas": 56,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2011",
+      "filas_comparadas": 56,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2012",
+      "filas_comparadas": 46,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2013",
+      "filas_comparadas": 56,
+      "diferencias": 1,
+      "max_diferencia": 3253.8667
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2014 ",
+      "filas_comparadas": 46,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2015",
+      "filas_comparadas": 105,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2016",
+      "filas_comparadas": 93,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2017",
+      "filas_comparadas": 86,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2018",
+      "filas_comparadas": 150,
+      "diferencias": 4,
+      "max_diferencia": 21352092.88
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2019",
+      "filas_comparadas": 146,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2020",
+      "filas_comparadas": 158,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2021",
+      "filas_comparadas": 256,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2022",
+      "filas_comparadas": 245,
+      "diferencias": 2,
+      "max_diferencia": 1132390000
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2023",
+      "filas_comparadas": 247,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2024",
+      "filas_comparadas": 242,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2025",
+      "filas_comparadas": 248,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "3b1b3d6ad162",
+      "hoja": "2026",
+      "filas_comparadas": 226,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2009",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2010",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2011",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2012",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2013",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2014",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2015",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2016",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2017",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2018",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2019",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2020",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2021",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2022",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2023",
+      "filas_comparadas": 99,
+      "diferencias": 0,
+      "max_diferencia": 0.0004
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2024",
+      "filas_comparadas": 140,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2025",
+      "filas_comparadas": 136,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "c641cdcf6d12",
+      "hoja": "2026",
+      "filas_comparadas": 119,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2009",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2010",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2011",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2012",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2013",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2014",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2015",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2016",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2017",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2018",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2019",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2020",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2021",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2022",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2023",
+      "filas_comparadas": 99,
+      "diferencias": 0,
+      "max_diferencia": 0.0004
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2024",
+      "filas_comparadas": 140,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2025",
+      "filas_comparadas": 136,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "034ee0a07833",
+      "hoja": "2026",
+      "filas_comparadas": 119,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2009",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2010",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2011",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2012",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2013",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2014",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2015",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2016",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2017",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2018",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2019",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2020",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "2466026504cd",
+      "hoja": "2021",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2009",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2010",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2011",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2012",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2013",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2014",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2015",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2016",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2017",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2018",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2019",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2020",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2021",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2022",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0.0002
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2023",
+      "filas_comparadas": 6,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2024",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2025",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0.0001
+    },
+    {
+      "fuente_id": "a4cfd16d938d",
+      "hoja": "2026",
+      "filas_comparadas": 7,
+      "diferencias": 6,
+      "max_diferencia": 511387363874.46
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2014",
+      "filas_comparadas": 38,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2015",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2016",
+      "filas_comparadas": 79,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2017",
+      "filas_comparadas": 75,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2018",
+      "filas_comparadas": 88,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2019",
+      "filas_comparadas": 90,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2020",
+      "filas_comparadas": 95,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2021",
+      "filas_comparadas": 98,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2022",
+      "filas_comparadas": 102,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2023",
+      "filas_comparadas": 104,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2024",
+      "filas_comparadas": 103,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2025",
+      "filas_comparadas": 63,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "f9fa595fcbd2",
+      "hoja": "2026",
+      "filas_comparadas": 64,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2014",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2015",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2016",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2017",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2018",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2019",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2020",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2021",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2022",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2023",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2024",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2025",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "6b790fe35921",
+      "hoja": "2026",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2014",
+      "filas_comparadas": 10,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2015",
+      "filas_comparadas": 11,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2016",
+      "filas_comparadas": 14,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2017",
+      "filas_comparadas": 17,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2018",
+      "filas_comparadas": 16,
+      "diferencias": 0,
+      "max_diferencia": 7.6294e-06
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2019",
+      "filas_comparadas": 14,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2020",
+      "filas_comparadas": 15,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2021",
+      "filas_comparadas": 19,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2022",
+      "filas_comparadas": 18,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2023",
+      "filas_comparadas": 16,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2024",
+      "filas_comparadas": 23,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2025",
+      "filas_comparadas": 24,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "40fd2d5704f2",
+      "hoja": "2026",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2014",
+      "filas_comparadas": 15,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2015",
+      "filas_comparadas": 24,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2016",
+      "filas_comparadas": 24,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2017",
+      "filas_comparadas": 25,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2018",
+      "filas_comparadas": 27,
+      "diferencias": 0,
+      "max_diferencia": 7.4506e-09
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2019",
+      "filas_comparadas": 27,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2020",
+      "filas_comparadas": 27,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2021",
+      "filas_comparadas": 52,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2022",
+      "filas_comparadas": 51,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2023",
+      "filas_comparadas": 55,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2024",
+      "filas_comparadas": 43,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2025",
+      "filas_comparadas": 58,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "119a1286f16f",
+      "hoja": "2026",
+      "filas_comparadas": 52,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2014",
+      "filas_comparadas": 10,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2015 ",
+      "filas_comparadas": 9,
+      "diferencias": 0,
+      "max_diferencia": 9.5367e-07
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2016 ",
+      "filas_comparadas": 9,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2017",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2018",
+      "filas_comparadas": 8,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2019",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2020",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2021",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2022",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2023",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2024",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2025",
+      "filas_comparadas": 13,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "803f7ddeee23",
+      "hoja": "2026",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2014",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 7.4506e-09
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2015",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2016",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2017",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2018",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2019",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2020",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2021",
+      "filas_comparadas": 3,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2022",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2023",
+      "filas_comparadas": 3,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2024",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2025",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "7f719247f676",
+      "hoja": "2026",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2014",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 7.4506e-09
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2015",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2016",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2017",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2018",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2019",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2020",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2021",
+      "filas_comparadas": 3,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2022",
+      "filas_comparadas": 7,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2023",
+      "filas_comparadas": 3,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2024",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2025",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "68a319964776",
+      "hoja": "2026",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2014",
+      "filas_comparadas": 4,
+      "diferencias": 0,
+      "max_diferencia": 2.3842e-07
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2015",
+      "filas_comparadas": 6,
+      "diferencias": 0,
+      "max_diferencia": 1.1921e-07
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2016",
+      "filas_comparadas": 6,
+      "diferencias": 0,
+      "max_diferencia": 1.9073e-06
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2017",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2018",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 7.4506e-09
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2019",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 5.9605e-08
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2020",
+      "filas_comparadas": 12,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2021",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2022",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 1.8626e-09
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2023",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 3.8147e-06
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2024",
+      "filas_comparadas": 6,
+      "diferencias": 0,
+      "max_diferencia": 0
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2025",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 4.7684e-07
+    },
+    {
+      "fuente_id": "0bfed126f360",
+      "hoja": "2026",
+      "filas_comparadas": 5,
+      "diferencias": 0,
+      "max_diferencia": 0
+    }
+  ],
+  "skipped": [
+    {
+      "file": "5a16a9b6777c",
+      "sheet": "2004",
+      "reason": "No monthly header"
+    }
+  ]
+}

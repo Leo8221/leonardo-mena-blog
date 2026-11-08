@@ -1,0 +1,8 @@
+qa/*.parquet
+qa/*Diccionario*.csv
+qa/*Tasa_Monedas*.csv
+qa/*.png
+qa/source-spotcheck-cells.json
+qa/Diseno_muestral.txt
+qa/Variables de remesas ENCFT.txt
+__pycache__/

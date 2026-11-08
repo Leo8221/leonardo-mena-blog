@@ -1,0 +1,10 @@
+module,kind,path,sheet,rows,bytes,sha256,source_modified
+miembros,parquet_procesado,C:/Users/leona/Desktop/encuesta_trabajo_rd/procesado/ENCFT_Miembros_2016_2026.parquet,,790993,64574500,e82697a3d9957b31e7b286d44d138594bcf2dfd2d4596327feaf0aa4ccb4107b,2026-08-21T18:09:35-0400
+hogares,parquet_procesado,C:/Users/leona/Desktop/encuesta_trabajo_rd/procesado/ENCFT_Hogar_2016_2026.parquet,,258764,2494361,a33afe3046316b21212f749dd3c8bf12c4650297f852f12e0d295cbd6f6312cc,2026-08-20T19:26:08-0400
+viviendas,parquet_procesado,C:/Users/leona/Desktop/encuesta_trabajo_rd/procesado/ENCFT_Vivienda_2016_2026.parquet,,258607,2267505,f39e66af81e93e0a5ccbf05a6420add21bf2b5d08a3a3da386c643d91276782c,2026-08-20T19:26:09-0400
+diccionario,parquet_procesado,C:/Users/leona/Desktop/encuesta_trabajo_rd/procesado/ENCFT_Diccionario_2016_2026.parquet,,115178,78092,0cdad91673741a1c92232e2354ad267659259b1089d4e955b2eff90b1eeaca39,2026-08-20T19:26:09-0400
+tasas_monedas,parquet_procesado,C:/Users/leona/Desktop/encuesta_trabajo_rd/procesado/ENCFT_Tasa_Monedas_2016_2026.parquet,,273,13853,d6d12e72ce9ebd6d7d79146a6c130721c5e01bdd069c433439592d355dbfc23a,2026-08-20T19:26:09-0400
+tasas_monedas,excel_recuperado,C:/Users/leona/Desktop/encuesta_trabajo_rd/2023/Base ENCFT 20231 - 20234.xlsx,Tasa monedas,37,146102294,1f03e7a6b1e0c470acd2382a500fbf55baac123c9e051a68d311987eb175a299,2025-06-05T16:03:03-0400
+tasas_monedas,excel_recuperado,C:/Users/leona/Desktop/encuesta_trabajo_rd/2024/Base ENCFT 20241 - 20244.xlsx,Tasa monedas,39,87814032,4cd964faf4ae143038d9b5d8f23ef29e7552dfc0e5fd63d3f93c848d722f3ed6,2025-05-23T09:35:39-0400
+tasas_monedas,excel_recuperado,C:/Users/leona/Desktop/encuesta_trabajo_rd/2025/Base ENCFT 2025.xlsx,Tasa monedas,40,90314653,c1bf2e58c899418a06b9604f03e78d1918b06f68d93c84825a7a5c3bfa3faf56,2026-06-03T10:16:23-0400
+tasas_monedas,excel_recuperado,C:/Users/leona/Desktop/encuesta_trabajo_rd/2026/Base ENCFT 20261.xlsx,Tasa monedas,10,21527785,8c6c11ac2aeca661823f53afdf491e8f13e1705e18fb218031725e39a09de699,2026-06-03T11:06:46-0400

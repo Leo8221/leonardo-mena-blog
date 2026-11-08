@@ -1,0 +1,10 @@
+{
+  "year": 2023,
+  "cells_checked": 30,
+  "sheets": [
+    "Miembros",
+    "Hogar"
+  ],
+  "status": "all_match",
+  "conclusion": "The selected keys and unequal expansion factors are present in the original Excel, including the largest observed difference."
+}

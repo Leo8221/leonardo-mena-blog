@@ -1,0 +1,1352 @@
+﻿[
+    {
+        "batch":  0,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/AG.CON.FERT.PT.ZS;AG.CON.FERT.ZS;AG.LND.AGRI.K2;AG.LND.AGRI.ZS;AG.LND.ARBL.HA;AG.LND.ARBL.HA.PC;AG.LND.ARBL.ZS;AG.LND.CREL.HA;AG.LND.CROP.ZS;AG.LND.EL5M.RU.K2?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0000.json",
+        "sha256":  "a3fec925717fcc09c4d1264bb1f63312701b023cb66308fa500a9d4e4917cb8e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  10,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/AG.LND.EL5M.RU.ZS;AG.LND.EL5M.UR.K2;AG.LND.EL5M.UR.ZS;AG.LND.EL5M.ZS;AG.LND.FRST.K2;AG.LND.FRST.ZS;AG.LND.IRIG.AG.ZS;AG.LND.PRCP.MM;AG.LND.TOTL.K2;AG.LND.TOTL.RU.K2?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0010.json",
+        "sha256":  "a72df7ae3ff156f5715456198750979a17bd8edea7544492c0c869eeaeff9940",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  20,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/AG.LND.TOTL.UR.K2;AG.PRD.CREL.MT;AG.PRD.CROP.XD;AG.PRD.FOOD.XD;AG.PRD.LVSK.XD;AG.SRF.TOTL.K2;AG.YLD.CREL.KG;BG.GSR.NFSV.GD.ZS;BM.GSR.CMCP.ZS;BM.GSR.FCTY.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0020.json",
+        "sha256":  "053ec95413b890b1e5977fd8dfedcd898f47c134a77507417cd64e0b680ee651",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  30,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/BM.GSR.GNFS.CD;BM.GSR.INSF.ZS;BM.GSR.MRCH.CD;BM.GSR.NFSV.CD;BM.GSR.ROYL.CD;BM.GSR.TOTL.CD;BM.GSR.TRAN.ZS;BM.GSR.TRVL.ZS;BM.KLT.DINV.CD.WD;BM.KLT.DINV.WD.GD.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0030.json",
+        "sha256":  "5e9298efedc6455d05c4135b3a99751e4c8b227f5cc49ba09cd3ff150c9b2565",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  40,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/BM.TRF.PRVT.CD;BM.TRF.PWKR.CD.DT;BN.CAB.XOKA.CD;BN.CAB.XOKA.GD.ZS;BN.FIN.TOTL.CD;BN.GSR.FCTY.CD;BN.GSR.GNFS.CD;BN.GSR.MRCH.CD;BN.KAC.EOMS.CD;BN.KLT.DINV.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0040.json",
+        "sha256":  "7219b0fe48a65ca1a7920b35f395a77a3c04c5cd0f94a50f10e3bc95a44cfa76",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  50,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/BN.KLT.PTXL.CD;BN.RES.INCL.CD;BN.TRF.CURR.CD;BN.TRF.KOGT.CD;BX.GRT.EXTA.CD.WD;BX.GRT.TECH.CD.WD;BX.GSR.CCIS.CD;BX.GSR.CCIS.ZS;BX.GSR.CMCP.ZS;BX.GSR.FCTY.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0050.json",
+        "sha256":  "e8d8a376225349e50fb8657ba4be720d89cfa4d07c378c1c13e17166460f0f53",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  60,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/BX.GSR.GNFS.CD;BX.GSR.INSF.ZS;BX.GSR.MRCH.CD;BX.GSR.NFSV.CD;BX.GSR.ROYL.CD;BX.GSR.TOTL.CD;BX.GSR.TRAN.ZS;BX.GSR.TRVL.ZS;BX.KLT.DINV.CD.WD;BX.KLT.DINV.WD.GD.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0060.json",
+        "sha256":  "979d1f7bcaf68e6bbbbab01bb35ede503e3bff36a7675c34e25e8da7e5d1c1b8",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  70,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/BX.PEF.TOTL.CD.WD;BX.TRF.CURR.CD;BX.TRF.PWKR.CD;BX.TRF.PWKR.CD.DT;BX.TRF.PWKR.DT.GD.ZS;CM.MKT.INDX.ZG;CM.MKT.LCAP.CD;CM.MKT.LCAP.GD.ZS;CM.MKT.LDOM.NO;CM.MKT.TRAD.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0070.json",
+        "sha256":  "8b74838bded3fbebfe72741b26e00e47082cb2a0eded2c8cf6156d631cd07abf",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  80,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/CM.MKT.TRAD.GD.ZS;CM.MKT.TRNR;DC.DAC.AUSL.CD;DC.DAC.AUTL.CD;DC.DAC.BELL.CD;DC.DAC.CANL.CD;DC.DAC.CECL.CD;DC.DAC.CHEL.CD;DC.DAC.CZEL.CD;DC.DAC.DEUL.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0080.json",
+        "sha256":  "1127082d0df8f0dd54b941db24a048f2144e8eaa8f6577c4bfa5f1746455ada1",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  90,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DC.DAC.DNKL.CD;DC.DAC.ESPL.CD;DC.DAC.ESTL.CD;DC.DAC.FINL.CD;DC.DAC.FRAL.CD;DC.DAC.GBRL.CD;DC.DAC.GRCL.CD;DC.DAC.HUNL.CD;DC.DAC.IRLL.CD;DC.DAC.ISLL.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0090.json",
+        "sha256":  "6327aafee6306d4cb79828cac36868bc347ff23fe00b5489a308a2e027ee8aff",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  100,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DC.DAC.ITAL.CD;DC.DAC.JPNL.CD;DC.DAC.KORL.CD;DC.DAC.LTUL.CD;DC.DAC.LUXL.CD;DC.DAC.NLDL.CD;DC.DAC.NORL.CD;DC.DAC.NZLL.CD;DC.DAC.POLL.CD;DC.DAC.PRTL.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0100.json",
+        "sha256":  "1fdd2e1300247079d0187bea6859ad4363be3a9e3971f0e76bc4c6bd6411747a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  110,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DC.DAC.SVKL.CD;DC.DAC.SVNL.CD;DC.DAC.SWEL.CD;DC.DAC.TOTL.CD;DC.DAC.USAL.CD;DC.ODA.TLDC.CD;DC.ODA.TLDC.GN.ZS;DC.ODA.TOTL.CD;DC.ODA.TOTL.GN.ZS;DC.ODA.TOTL.KD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0110.json",
+        "sha256":  "2c0ed9f0131870cbd4e1ba3aa49db533beed51b66c1d5ed398fb5a29906771c7",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  120,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.DOD.DECT.CD;DT.DOD.DECT.GN.ZS;DT.DOD.DIMF.CD;DT.DOD.DLXF.CD;DT.DOD.DPNG.CD;DT.DOD.DPPG.CD;DT.DOD.DSTC.CD;DT.DOD.DSTC.IR.ZS;DT.DOD.DSTC.XP.ZS;DT.DOD.DSTC.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0120.json",
+        "sha256":  "17114d3bac22b41ebfcf51f98a0c43f5727c470769f3f58bafd02bb4736f8cae",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  130,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.DOD.MIBR.CD;DT.DOD.MIDA.CD;DT.DOD.MWBG.CD;DT.DOD.PVLX.CD;DT.DOD.PVLX.EX.ZS;DT.DOD.PVLX.GN.ZS;DT.NFL.BLAT.CD;DT.NFL.BOND.CD;DT.NFL.CERF.CD;DT.NFL.DPNG.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0130.json",
+        "sha256":  "0be6ee809be4e86959951d7015a67ee54ebcc780f6a6284416501ea059b46a7b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  140,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.NFL.FAOG.CD;DT.NFL.IAEA.CD;DT.NFL.IFAD.CD;DT.NFL.ILOG.CD;DT.NFL.IMFC.CD;DT.NFL.IMFN.CD;DT.NFL.MIBR.CD;DT.NFL.MIDA.CD;DT.NFL.MLAT.CD;DT.NFL.MOTH.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0140.json",
+        "sha256":  "0bf83dd5834815ca0bba7b3efa2e9f20d911dfd6c3b5779f9177698a695606a8",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  150,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.NFL.NIFC.CD;DT.NFL.OFFT.CD;DT.NFL.PBND.CD;DT.NFL.PCBK.CD;DT.NFL.PCBO.CD;DT.NFL.PNGB.CD;DT.NFL.PNGC.CD;DT.NFL.PROP.CD;DT.NFL.PRVT.CD;DT.NFL.RDBC.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0150.json",
+        "sha256":  "66098fe7a5ba12ced9bfecb4258d1969155ca17f97f51708bae1bc27d5c4a28d",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  160,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.NFL.RDBN.CD;DT.NFL.SDGF.CD;DT.NFL.SPRP.CD;DT.NFL.UNAI.CD;DT.NFL.UNCD.CD;DT.NFL.UNCF.CD;DT.NFL.UNCR.CD;DT.NFL.UNCTAD.CD;DT.NFL.UNCV.CD;DT.NFL.UNDP.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0160.json",
+        "sha256":  "08c15fa85bb72215246de6d63f91b5a6f106609aa65adfbd170b23e2405d2817",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  170,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.NFL.UNEC.CD;DT.NFL.UNEP.CD;DT.NFL.UNFP.CD;DT.NFL.UNID.CD;DT.NFL.UNIDO.CD;DT.NFL.UNPB.CD;DT.NFL.UNRW.CD;DT.NFL.UNTA.CD;DT.NFL.UNWN.CD;DT.NFL.UNWT.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0170.json",
+        "sha256":  "06590556108b00b4029fb8aa50362c71747e51b8509574c2b29b5651dd46e260",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  180,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.NFL.WFPG.CD;DT.NFL.WHOL.CD;DT.NFL.WITC.CD;DT.ODA.ALLD.CD;DT.ODA.ALLD.KD;DT.ODA.OATL.CD;DT.ODA.OATL.KD;DT.ODA.ODAT.CD;DT.ODA.ODAT.GI.ZS;DT.ODA.ODAT.GN.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0180.json",
+        "sha256":  "a0082e517e130ff648392d8e762c295f5d3b85394f89a2e637b01a8c3f874f49",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  190,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.ODA.ODAT.KD;DT.ODA.ODAT.MP.ZS;DT.ODA.ODAT.PC.ZS;DT.ODA.ODAT.XP.ZS;DT.TDS.DECT.CD;DT.TDS.DECT.EX.ZS;DT.TDS.DECT.GN.ZS;DT.TDS.DIMF.CD;DT.TDS.DPPF.XP.ZS;DT.TDS.DPPG.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0190.json",
+        "sha256":  "5fe43ceb2569cd0e9075bbd2c2eabf150f6e975c6ebfcd9942d5432c3169d01e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  200,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/DT.TDS.DPPG.GN.ZS;DT.TDS.DPPG.XP.ZS;DT.TDS.MLAT.CD;DT.TDS.MLAT.PG.ZS;EG.CFT.ACCS.RU.ZS;EG.CFT.ACCS.UR.ZS;EG.CFT.ACCS.ZS;EG.EGY.PRIM.PP.KD;EG.ELC.ACCS.RU.ZS;EG.ELC.ACCS.UR.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0200.json",
+        "sha256":  "1e8c7112bd3a09713cd628cf82ca6a52b1d8242c6ba3eb4e8740fcc78353caee",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  210,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EG.ELC.ACCS.ZS;EG.ELC.COAL.ZS;EG.ELC.FOSL.ZS;EG.ELC.HYRO.ZS;EG.ELC.LOSS.ZS;EG.ELC.NGAS.ZS;EG.ELC.NUCL.ZS;EG.ELC.PETR.ZS;EG.ELC.RNEW.ZS;EG.ELC.RNWX.KH?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0210.json",
+        "sha256":  "6ca24511e729c17ee5a862fb609664c7f1c7713e3e7f8e5fd2f087dd2ac28783",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  220,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EG.ELC.RNWX.ZS;EG.FEC.RNEW.ZS;EG.GDP.PUSE.KO.PP;EG.GDP.PUSE.KO.PP.KD;EG.IMP.CONS.ZS;EG.USE.COMM.CL.ZS;EG.USE.COMM.FO.ZS;EG.USE.COMM.GD.PP.KD;EG.USE.CRNW.ZS;EG.USE.ELEC.KH.PC?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0220.json",
+        "sha256":  "2ca1b64f4651050b63aca563a9d53b6b8f411aeb0049074545e5cc466a8dd489",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  230,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EG.USE.PCAP.KG.OE;EN.ATM.PM25.MC.M3;EN.ATM.PM25.MC.T1.ZS;EN.ATM.PM25.MC.T2.ZS;EN.ATM.PM25.MC.T3.ZS;EN.ATM.PM25.MC.ZS;EN.BIR.THRD.NO;EN.CLC.DRSK.XQ;EN.CLC.MDAT.ZS;EN.FSH.THRD.NO?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0230.json",
+        "sha256":  "34ef2f0d91f6e017ece5572d2e70f5d2f2206999b6e424b71987fa4e465c712a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  240,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.GHG.ALL.LU.MT.CE.AR5;EN.GHG.ALL.MT.CE.AR5;EN.GHG.ALL.PC.CE.AR5;EN.GHG.CH4.AG.MT.CE.AR5;EN.GHG.CH4.BU.MT.CE.AR5;EN.GHG.CH4.FE.MT.CE.AR5;EN.GHG.CH4.IC.MT.CE.AR5;EN.GHG.CH4.IP.MT.CE.AR5;EN.GHG.CH4.MT.CE.AR5;EN.GHG.CH4.PI.MT.CE.AR5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0240.json",
+        "sha256":  "797efdf8c84574e37dbb9198ff41ff16bf8d1a79f94a4d598d026ab19825ca67",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  250,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.GHG.CH4.TR.MT.CE.AR5;EN.GHG.CH4.WA.MT.CE.AR5;EN.GHG.CH4.ZG.AR5;EN.GHG.CO2.AG.MT.CE.AR5;EN.GHG.CO2.BU.MT.CE.AR5;EN.GHG.CO2.FE.MT.CE.AR5;EN.GHG.CO2.IC.MT.CE.AR5;EN.GHG.CO2.IP.MT.CE.AR5;EN.GHG.CO2.LU.DF.MT.CE.AR5;EN.GHG.CO2.LU.FL.MT.CE.AR5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0250.json",
+        "sha256":  "2efbf43b5995e3db2110bea5a180353a02ac87a74c8532fbbc642b9c764eb749",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  260,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.GHG.CO2.LU.MT.CE.AR5;EN.GHG.CO2.LU.OL.MT.CE.AR5;EN.GHG.CO2.LU.OS.MT.CE.AR5;EN.GHG.CO2.MT.CE.AR5;EN.GHG.CO2.PC.CE.AR5;EN.GHG.CO2.PI.MT.CE.AR5;EN.GHG.CO2.RT.GDP.KD;EN.GHG.CO2.RT.GDP.PP.KD;EN.GHG.CO2.TR.MT.CE.AR5;EN.GHG.CO2.WA.MT.CE.AR5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0260.json",
+        "sha256":  "864e323edcc6612155456bba3b953bb850a51d64d8578aca7aa7c316d888f592",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  270,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.GHG.CO2.ZG.AR5;EN.GHG.FGAS.IP.MT.CE.AR5;EN.GHG.N2O.AG.MT.CE.AR5;EN.GHG.N2O.BU.MT.CE.AR5;EN.GHG.N2O.FE.MT.CE.AR5;EN.GHG.N2O.IC.MT.CE.AR5;EN.GHG.N2O.IP.MT.CE.AR5;EN.GHG.N2O.MT.CE.AR5;EN.GHG.N2O.PI.MT.CE.AR5;EN.GHG.N2O.TR.MT.CE.AR5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0270.json",
+        "sha256":  "6096f766b6ad864903cee3210788ec7733474f22fcffcdfabe4a54ae7a17384a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  280,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.GHG.N2O.WA.MT.CE.AR5;EN.GHG.N2O.ZG.AR5;EN.GHG.TOT.ZG.AR5;EN.HPT.THRD.NO;EN.MAM.THRD.NO;EN.POP.DNST;EN.POP.EL5M.RU.ZS;EN.POP.EL5M.UR.ZS;EN.POP.EL5M.ZS;EN.POP.SLUM.UR.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0280.json",
+        "sha256":  "fd390a6ccc601f1642205f1c91d3231bba0e4a44de59911180d7ee2e8135f89a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  290,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/EN.URB.LCTY;EN.URB.LCTY.UR.ZS;EN.URB.MCTY;EN.URB.MCTY.TL.ZS;ER.FSH.AQUA.MT;ER.FSH.CAPT.MT;ER.FSH.PROD.MT;ER.GDP.FWTL.M3.KD;ER.H2O.FWAG.ZS;ER.H2O.FWDM.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0290.json",
+        "sha256":  "21d8fed5ac4983f69e46cdebeaacf74a45f84eb0a61918e7876e0af4e206c186",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  300,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/ER.H2O.FWIN.ZS;ER.H2O.FWST.ZS;ER.H2O.FWTL.K3;ER.H2O.FWTL.ZS;ER.H2O.INTR.K3;ER.H2O.INTR.PC;ER.LND.PTLD.ZS;ER.MRN.PTMR.ZS;ER.PTD.TOTL.ZS;FB.AST.NPER.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0300.json",
+        "sha256":  "e2e07f204896bd2abd6f80d500693329836f88178cc7569149cfce10f9b162c9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  310,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/FB.ATM.TOTL.P5;FB.BNK.CAPA.ZS;FB.CBK.BRCH.P5;FB.CBK.BRWR.P3;FB.CBK.DPTR.P3;FD.AST.PRVT.GD.ZS;FD.RES.LIQU.AS.ZS;FI.RES.TOTL.CD;FI.RES.TOTL.DT.ZS;FI.RES.TOTL.MO?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0310.json",
+        "sha256":  "5d18ab4b60e211b2d8b0694a19c2aafb2f10528a4c247720bb215e309aad5023",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  320,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/FI.RES.XGLD.CD;FM.AST.CGOV.ZG.M3;FM.AST.DOMO.ZG.M3;FM.AST.DOMS.CN;FM.AST.NFRG.CN;FM.AST.PRVT.GD.ZS;FM.AST.PRVT.ZG.M3;FM.LBL.BMNY.CN;FM.LBL.BMNY.GD.ZS;FM.LBL.BMNY.IR.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0320.json",
+        "sha256":  "7d8ebf0862e315f1adddf320e1f2f167a2143220f693139376d4949fc925b1aa",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  330,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/FM.LBL.BMNY.ZG;FP.CPI.TOTL;FP.CPI.TOTL.ZG;FP.WPI.TOTL;FR.INR.DPST;FR.INR.LEND;FR.INR.LNDP;FR.INR.RINR;FR.INR.RISK;FS.AST.CGOV.GD.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0330.json",
+        "sha256":  "1858ea1128f2f60e281a102698a9d8ea87a196bade776cfe855edc1439e2dc3b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  340,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/FS.AST.DOMO.GD.ZS;FS.AST.DOMS.GD.ZS;FS.AST.PRVT.GD.ZS;FX.OWN.TOTL.40.ZS;FX.OWN.TOTL.60.ZS;FX.OWN.TOTL.FE.ZS;FX.OWN.TOTL.MA.ZS;FX.OWN.TOTL.OL.ZS;FX.OWN.TOTL.PL.ZS;FX.OWN.TOTL.SO.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0340.json",
+        "sha256":  "9eec19f8083ebfa709bbb357c60e5e3cc621b15841a46be07b143875f093d867",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  350,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/FX.OWN.TOTL.YG.ZS;FX.OWN.TOTL.ZS;GB.XPD.RSDV.GD.ZS;GC.AST.TOTL.CN;GC.AST.TOTL.GD.ZS;GC.DOD.TOTL.CN;GC.DOD.TOTL.GD.ZS;GC.LBL.TOTL.CN;GC.LBL.TOTL.GD.ZS;GC.NFN.TOTL.CN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0350.json",
+        "sha256":  "84f0d9c0fe099cf379a66ce77722bb9af9459eec2933676c692e8756407f08ad",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  360,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GC.NFN.TOTL.GD.ZS;GC.NLD.TOTL.CN;GC.NLD.TOTL.GD.ZS;GC.REV.GOTR.CN;GC.REV.GOTR.ZS;GC.REV.SOCL.CN;GC.REV.SOCL.ZS;GC.REV.XGRT.CN;GC.REV.XGRT.GD.ZS;GC.TAX.EXPT.CN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0360.json",
+        "sha256":  "b89b778aac3f77aa4c7d2a47213cb8ffb23974c60abd51d301582159e4e2eaa5",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  370,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GC.TAX.EXPT.ZS;GC.TAX.GSRV.CN;GC.TAX.GSRV.RV.ZS;GC.TAX.GSRV.VA.ZS;GC.TAX.IMPT.CN;GC.TAX.IMPT.ZS;GC.TAX.INTT.CN;GC.TAX.INTT.RV.ZS;GC.TAX.OTHR.CN;GC.TAX.OTHR.RV.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0370.json",
+        "sha256":  "a3c3e8e5931f378de1d792147ca621090314d610788faf74bac612bb369173e9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  380,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GC.TAX.TOTL.CN;GC.TAX.TOTL.GD.ZS;GC.TAX.YPKG.CN;GC.TAX.YPKG.RV.ZS;GC.TAX.YPKG.ZS;GC.XPN.COMP.CN;GC.XPN.COMP.ZS;GC.XPN.GSRV.CN;GC.XPN.GSRV.ZS;GC.XPN.INTP.CN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0380.json",
+        "sha256":  "39e5c218e72e7aad990d328163c4e84434c0df4d4ee321a808efc3df29a63dfa",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  390,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GC.XPN.INTP.RV.ZS;GC.XPN.INTP.ZS;GC.XPN.OTHR.CN;GC.XPN.OTHR.ZS;GC.XPN.TOTL.CN;GC.XPN.TOTL.GD.ZS;GC.XPN.TRFT.CN;GC.XPN.TRFT.ZS;GD_WBL_OVL_ENF;GD_WBL_OVL_LAW?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0390.json",
+        "sha256":  "477b6bf0048926ebfd87ff4a609a0fefc8ca32b069750d9a816fd02fdd803581",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  400,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GD_WBL_OVL_SFR;GF.XPD.BUDG.ZS;GOV_WGI_CC_EST;GOV_WGI_CC_SC;GOV_WGI_GE_EST;GOV_WGI_GE_SC;GOV_WGI_PV_EST;GOV_WGI_PV_SC;GOV_WGI_RL_EST;GOV_WGI_RL_SC?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0400.json",
+        "sha256":  "72477891aad84a078c15bbd9b8a2d2f4799d2f5b0cb20717f408c417453a008b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  410,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/GOV_WGI_RQ_EST;GOV_WGI_RQ_SC;GOV_WGI_VA_EST;GOV_WGI_VA_SC;HD_HCIP_EDUC_FE;HD_HCIP_EDUC_MA;HD_HCIP_EDUC_TO;HD_HCIP_HLTH_FE;HD_HCIP_HLTH_MA;HD_HCIP_HLTH_TO?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0410.json",
+        "sha256":  "c1d4638a7e50df080f664dae3dfbcade0796a89206802f2aac58ca7a55ac8f74",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  420,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/HD_HCIP_OTJL_FE;HD_HCIP_OTJL_MA;HD_HCIP_OTJL_TO;HD_HCIP_OVRL_FE;HD_HCIP_OVRL_MA;HD_HCIP_OVRL_TO;IC.BRE.BE.OS;IC.BRE.BE.P1;IC.BRE.BE.P2;IC.BRE.BE.P3?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0420.json",
+        "sha256":  "a6d06848a059a193259e5525ce28c59006d873202ff4c3157d47a1d6222e20ef",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  430,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.BRE.BI.OS;IC.BRE.BI.P1;IC.BRE.BI.P2;IC.BRE.BI.P3;IC.BRE.BL.OS;IC.BRE.BL.P1;IC.BRE.BL.P2;IC.BRE.BL.P3;IC.BRE.DR.OS;IC.BRE.DR.P1?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0430.json",
+        "sha256":  "d8f90b5daba802fe9901b85b5c5948659a7ceba366e56de2a89f85cce285f9e0",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  440,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.BRE.DR.P2;IC.BRE.DR.P3;IC.BRE.FS.OS;IC.BRE.FS.P1;IC.BRE.FS.P2;IC.BRE.FS.P3;IC.BRE.IT.OS;IC.BRE.IT.P1;IC.BRE.IT.P2;IC.BRE.IT.P3?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0440.json",
+        "sha256":  "9ae735bf03dab3b49db9006d93826c8c59ff67786747dace21251b8fb34cbd2e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  450,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.BRE.LB.OS;IC.BRE.LB.P1;IC.BRE.LB.P2;IC.BRE.LB.P3;IC.BRE.MC.OS;IC.BRE.MC.P1;IC.BRE.MC.P2;IC.BRE.MC.P3;IC.BRE.P1.RF;IC.BRE.P2.PS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0450.json",
+        "sha256":  "1817826bf5592adc7580c857b0cef898c17c936527d95ba198741dd2d71283d3",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  460,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.BRE.P3.OE;IC.BRE.TX.OS;IC.BRE.TX.P1;IC.BRE.TX.P2;IC.BRE.TX.P3;IC.BRE.US.OS;IC.BRE.US.P1;IC.BRE.US.P2;IC.BRE.US.P3;IC.BUS.NDNS.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0460.json",
+        "sha256":  "25729d98e3b866eb0ca96b986cde5e1190a0355d85118a1a079d1d3280e3fc64",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  470,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.BUS.NREG;IC.CUS.DURS.EX;IC.CUS.DURS.IM;IC.ELC.DURS;IC.ELC.OUTG.ZS;IC.FRM.BKWC.ZS;IC.FRM.BNKL.ZS;IC.FRM.BNKS.ZS;IC.FRM.BRIB.ZS;IC.FRM.CDP.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0470.json",
+        "sha256":  "a5fcbac17ebb1fae90eb333434d18ad127c80175cef28eb5aafd3eb89ac98798",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  480,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.FRM.CMPU.ZS;IC.FRM.CO2.ZS;IC.FRM.CORR.ZS;IC.FRM.CRDC.FL.ZS;IC.FRM.CRDC.PT.ZS;IC.FRM.DURS;IC.FRM.ENGM.ZS;IC.FRM.EXS.ZS;IC.FRM.FEMM.ZS;IC.FRM.FEMO.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0480.json",
+        "sha256":  "f070d5e539e27464eb190af058c9e53f77f092ec733c65a05e22647939f84b74",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  490,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.FRM.FO.ZS;IC.FRM.FREG.ZS;IC.FRM.LOTM.ZS;IC.FRM.METG.ZS;IC.FRM.NPRD.ZS;IC.FRM.OUTG.ZS;IC.FRM.TAXE.ZS;IC.FRM.TRNG.ZS;IC.GOV.DURS.ZS;IC.MNG.IND?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0490.json",
+        "sha256":  "b21688c949aead00a19e548720dd6e924988f4ef093cf61b9b097bd784877a8d",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  500,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IC.TAX.GIFT.ZS;IC.TAX.METG;IE.PPI.ENGY.CD;IE.PPI.ICTI.CD;IE.PPI.TRAN.CD;IE.PPI.WATR.CD;IE.PPN.ENGY.CD;IE.PPN.ICTI.CD;IE.PPN.TRAN.CD;IE.PPN.WATR.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0500.json",
+        "sha256":  "d9d3632ef0a02bcd2478759c0f5e28a8dca1f261dd3fea87494880feebef4c5e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  510,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IP.IDS.NRCT;IP.IDS.RSCT;IP.JRN.ARTC.SC;IP.PAT.NRES;IP.PAT.RESD;IP.TMK.NRCT;IP.TMK.RSCT;IQ.CPA.BREG.XQ;IQ.CPA.DEBT.XQ;IQ.CPA.ECON.XQ?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0510.json",
+        "sha256":  "c3574faac901201e34cf5c07cbeccff275c1e9d80f3c0d77fe6e60abccc6b4b9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  520,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IQ.CPA.ENVR.XQ;IQ.CPA.FINQ.XQ;IQ.CPA.FINS.XQ;IQ.CPA.FISP.XQ;IQ.CPA.GNDR.XQ;IQ.CPA.HRES.XQ;IQ.CPA.IRAI.XQ;IQ.CPA.MACR.XQ;IQ.CPA.PADM.XQ;IQ.CPA.PRES.XQ?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0520.json",
+        "sha256":  "aab4b234493edd83acdee0d594b14e6a9c63a8fbb85ba257b0b0f754319ede2a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  530,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IQ.CPA.PROP.XQ;IQ.CPA.PROT.XQ;IQ.CPA.PUBS.XQ;IQ.CPA.REVN.XQ;IQ.CPA.SOCI.XQ;IQ.CPA.STRC.XQ;IQ.CPA.TRAD.XQ;IQ.CPA.TRAN.XQ;IQ.SPI.OVRL;IQ.SPI.PIL1?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0530.json",
+        "sha256":  "c254a8bddf6bbcb8ab42e149fd8aacdecc0502e71ae174641837ff6db38dda29",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  540,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IQ.SPI.PIL2;IQ.SPI.PIL3;IQ.SPI.PIL4;IQ.SPI.PIL5;IS.AIR.DPRT;IS.AIR.GOOD.MT.K1;IS.AIR.PSGR;IS.RRS.GOOD.MT.K6;IS.RRS.PASG.KM;IS.RRS.TOTL.KM?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0540.json",
+        "sha256":  "8cec4d3a05477adcaa33b623915be3cd4c761d89e21f702ca4d2e9ae3fb3ec77",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  550,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IS.SHP.GCNW.XQ;IS.SHP.GOOD.TU;IT.CEL.SETS;IT.CEL.SETS.P2;IT.MLT.MAIN;IT.MLT.MAIN.P2;IT.NET.BBND;IT.NET.BBND.P2;IT.NET.SECR;IT.NET.SECR.P6?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0550.json",
+        "sha256":  "feaa643f2b4b50e5299dc3242a01c5fee366b1cc471a19d46759a19bca396014",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  560,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/IT.NET.USER.FE.ZS;IT.NET.USER.MA.ZS;IT.NET.USER.ZS;LP.EXP.DURS.MD;LP.IMP.DURS.MD;LP.LPI.CUST.XQ;LP.LPI.INFR.XQ;LP.LPI.ITRN.XQ;LP.LPI.LOGS.XQ;LP.LPI.OVRL.XQ?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0560.json",
+        "sha256":  "3e44e7eb60c5da1aed3524b58b250a4c1e2cf81b585ade3d95446f41a73ae484",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  570,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/LP.LPI.TIME.XQ;LP.LPI.TRAC.XQ;MS.MIL.MPRT.KD;MS.MIL.TOTL.P1;MS.MIL.TOTL.TF.ZS;MS.MIL.XPND.CD;MS.MIL.XPND.CN;MS.MIL.XPND.GD.ZS;MS.MIL.XPND.ZS;MS.MIL.XPRT.KD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0570.json",
+        "sha256":  "58d3ea1d6150464311d813d13bd30c15aa83df6ec3bcaa8a54325a4e69cce361",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  580,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.CON.GOVT.CD;NE.CON.GOVT.CN;NE.CON.GOVT.KD;NE.CON.GOVT.KD.ZG;NE.CON.GOVT.KN;NE.CON.GOVT.ZS;NE.CON.PCAP.PP.CD;NE.CON.PCAP.PP.KD;NE.CON.PRVT.CD;NE.CON.PRVT.CN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0580.json",
+        "sha256":  "e880de1783f9efe926be7d1718462de17ed12e335f4d9d890b60732879e7e14e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  590,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.CON.PRVT.CN.AD;NE.CON.PRVT.KD;NE.CON.PRVT.KD.ZG;NE.CON.PRVT.KN;NE.CON.PRVT.PC.KD;NE.CON.PRVT.PC.KD.ZG;NE.CON.PRVT.PP.CD;NE.CON.PRVT.PP.KD;NE.CON.PRVT.ZS;NE.CON.TOTL.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0590.json",
+        "sha256":  "e1428aa902732100db4f4c34650248438f43d53ecea8362c2cb698380f2ea045",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  600,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.CON.TOTL.CN;NE.CON.TOTL.KD;NE.CON.TOTL.KD.ZG;NE.CON.TOTL.KN;NE.CON.TOTL.ZS;NE.DAB.DEFL.ZS;NE.DAB.TOTL.CD;NE.DAB.TOTL.CN;NE.DAB.TOTL.KD;NE.DAB.TOTL.KN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0600.json",
+        "sha256":  "4a88cdb416edd14080413f235f7bf4feef328e69fbef0d0f7135eec7554b68fe",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  610,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.DAB.TOTL.ZS;NE.EXP.GNFS.CD;NE.EXP.GNFS.CN;NE.EXP.GNFS.KD;NE.EXP.GNFS.KD.ZG;NE.EXP.GNFS.KN;NE.EXP.GNFS.ZS;NE.GDI.FPRV.CN;NE.GDI.FPRV.ZS;NE.GDI.FTOT.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0610.json",
+        "sha256":  "6ae90a7070868989fb29f0d9ee35a22f452483fe3191a9bfbaaf7b6f34257641",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  620,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.GDI.FTOT.CN;NE.GDI.FTOT.KD;NE.GDI.FTOT.KD.ZG;NE.GDI.FTOT.KN;NE.GDI.FTOT.ZS;NE.GDI.STKB.CD;NE.GDI.STKB.CN;NE.GDI.STKB.KN;NE.GDI.TOTL.CD;NE.GDI.TOTL.CN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0620.json",
+        "sha256":  "4af074c014c790f36ba6798286fe70c5f276446e1533fd5b7c67d2c242413232",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  630,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.GDI.TOTL.KD;NE.GDI.TOTL.KD.ZG;NE.GDI.TOTL.KN;NE.GDI.TOTL.ZS;NE.IMP.GNFS.CD;NE.IMP.GNFS.CN;NE.IMP.GNFS.KD;NE.IMP.GNFS.KD.ZG;NE.IMP.GNFS.KN;NE.IMP.GNFS.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0630.json",
+        "sha256":  "5ce858a65ac307d589faac1aa4f92ed9d83acc8c3c800014440db86608795fa0",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  640,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NE.RSB.GNFS.CD;NE.RSB.GNFS.CN;NE.RSB.GNFS.KN;NE.RSB.GNFS.ZS;NE.TRD.GNFS.ZS;NV.AGR.EMPL.KD;NV.AGR.TOTL.CD;NV.AGR.TOTL.CN;NV.AGR.TOTL.KD;NV.AGR.TOTL.KD.ZG?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0640.json",
+        "sha256":  "4d68a0b13d27b966468edecc353b9e0b40ed61d7e5b11b05f92f0400fa1b920b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  650,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NV.AGR.TOTL.KN;NV.AGR.TOTL.ZS;NV.FSM.TOTL.CN;NV.FSM.TOTL.KN;NV.IND.EMPL.KD;NV.IND.MANF.CD;NV.IND.MANF.CN;NV.IND.MANF.KD;NV.IND.MANF.KD.ZG;NV.IND.MANF.KN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0650.json",
+        "sha256":  "2e9f6fec20683ea6445fde21a1da5e55a26d551c2dde7d531c37239a5d2f2783",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  660,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NV.IND.MANF.ZS;NV.IND.TOTL.CD;NV.IND.TOTL.CN;NV.IND.TOTL.KD;NV.IND.TOTL.KD.ZG;NV.IND.TOTL.KN;NV.IND.TOTL.ZS;NV.MNF.CHEM.ZS.UN;NV.MNF.FBTO.ZS.UN;NV.MNF.MTRN.ZS.UN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0660.json",
+        "sha256":  "b0a87626764deca7fa89a6756f2e516114f4b5806ca669b4690bbf13d0128be3",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  670,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NV.MNF.OTHR.ZS.UN;NV.MNF.TECH.ZS.UN;NV.MNF.TXTL.ZS.UN;NV.SRV.EMPL.KD;NV.SRV.TOTL.CD;NV.SRV.TOTL.CN;NV.SRV.TOTL.KD;NV.SRV.TOTL.KD.ZG;NV.SRV.TOTL.KN;NV.SRV.TOTL.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0670.json",
+        "sha256":  "7597fd6a1414b4a6c3c784c1409484e6d182d4a8fed5dcf1ae6797c60a0d5231",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  680,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.ADJ.AEDU.CD;NY.ADJ.AEDU.GN.ZS;NY.ADJ.DCO2.CD;NY.ADJ.DCO2.GN.ZS;NY.ADJ.DFOR.CD;NY.ADJ.DFOR.GN.ZS;NY.ADJ.DKAP.CD;NY.ADJ.DKAP.GN.ZS;NY.ADJ.DMIN.CD;NY.ADJ.DMIN.GN.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0680.json",
+        "sha256":  "6e6b68fa61e4f4bd3ae6fddd2f31b8fa523b3d598c854a5e2d1b26755f02cb9e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  690,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.ADJ.DNGY.CD;NY.ADJ.DNGY.GN.ZS;NY.ADJ.DPEM.CD;NY.ADJ.DPEM.GN.ZS;NY.ADJ.DRES.GN.ZS;NY.ADJ.ICTR.GN.ZS;NY.ADJ.NNAT.CD;NY.ADJ.NNAT.GN.ZS;NY.ADJ.NNTY.CD;NY.ADJ.NNTY.KD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0690.json",
+        "sha256":  "180e82ee7e198c3b57ed78172feb25d889c95029d5fdab0dade1f7bf1a8900b4",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  700,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.ADJ.NNTY.KD.ZG;NY.ADJ.NNTY.PC.CD;NY.ADJ.NNTY.PC.KD;NY.ADJ.NNTY.PC.KD.ZG;NY.ADJ.SVNG.CD;NY.ADJ.SVNG.GN.ZS;NY.ADJ.SVNX.CD;NY.ADJ.SVNX.GN.ZS;NY.EXP.CAPM.KN;NY.GDP.COAL.RT.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0700.json",
+        "sha256":  "af6ef1c3d4759313868aa4f2f25582d6b35d62d263469db5d10be37246cbbe92",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  710,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GDP.DEFL.KD.ZG;NY.GDP.DEFL.KD.ZG.AD;NY.GDP.DEFL.ZS;NY.GDP.DEFL.ZS.AD;NY.GDP.DISC.CN;NY.GDP.DISC.KN;NY.GDP.FCST.CD;NY.GDP.FCST.CN;NY.GDP.FCST.KD;NY.GDP.FCST.KN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0710.json",
+        "sha256":  "e7b1c5fdd9ea9800565e2d67e67eca3ccb3dd77d9ca4a94ade38fd4cc3c540e3",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  720,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GDP.FRST.RT.ZS;NY.GDP.MINR.RT.ZS;NY.GDP.MKTP.CD;NY.GDP.MKTP.CN;NY.GDP.MKTP.CN.AD;NY.GDP.MKTP.KD;NY.GDP.MKTP.KD.ZG;NY.GDP.MKTP.KN;NY.GDP.MKTP.PP.CD;NY.GDP.MKTP.PP.KD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0720.json",
+        "sha256":  "08d9aa75d1b726ae5346667f9593749ca262589cc63ae25ed7765983daa3d826",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  730,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GDP.NGAS.RT.ZS;NY.GDP.PCAP.CD;NY.GDP.PCAP.CN;NY.GDP.PCAP.KD;NY.GDP.PCAP.KD.ZG;NY.GDP.PCAP.KN;NY.GDP.PCAP.PP.CD;NY.GDP.PCAP.PP.KD;NY.GDP.PETR.RT.ZS;NY.GDP.TOTL.RT.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0730.json",
+        "sha256":  "4f913235974a15cd5e3ab89cce8737cf2a8c54eabd0d62e6ca06ee15b6501ac9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  740,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GDS.TOTL.CD;NY.GDS.TOTL.CN;NY.GDS.TOTL.ZS;NY.GDY.TOTL.KN;NY.GNP.ATLS.CD;NY.GNP.MKTP.CD;NY.GNP.MKTP.CN;NY.GNP.MKTP.CN.AD;NY.GNP.MKTP.KD;NY.GNP.MKTP.KD.ZG?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0740.json",
+        "sha256":  "b0966d31a6c981dc427962f1a66930b4436ab8b5c3ab423da1b6544c719d27b6",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  750,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GNP.MKTP.KN;NY.GNP.MKTP.PP.CD;NY.GNP.MKTP.PP.KD;NY.GNP.PCAP.CD;NY.GNP.PCAP.CN;NY.GNP.PCAP.KD;NY.GNP.PCAP.KD.ZG;NY.GNP.PCAP.KN;NY.GNP.PCAP.PP.CD;NY.GNP.PCAP.PP.KD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0750.json",
+        "sha256":  "43507ed1c016a51cdf6196c4cdd117b8bb6e57d5a2935f00914824035580142f",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  760,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.GNS.ICTR.CD;NY.GNS.ICTR.CN;NY.GNS.ICTR.GN.ZS;NY.GNS.ICTR.ZS;NY.GSR.NFCY.CD;NY.GSR.NFCY.CN;NY.GSR.NFCY.KN;NY.TAX.NIND.CD;NY.TAX.NIND.CN;NY.TAX.NIND.KN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0760.json",
+        "sha256":  "b5cc2fcd70f5a633bb5f323c66e17ae7924544f028cc13b0476942747e9539c5",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  770,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/NY.TRF.NCTR.CD;NY.TRF.NCTR.CN;NY.TRF.NCTR.KN;NY.TTF.GNFS.KN;PA.NUS.ATLS;PA.NUS.FCRF;PA.NUS.GDP.PLI;PA.NUS.PPP;PA.NUS.PRVT.PLI;PA.NUS.PRVT.PP?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0770.json",
+        "sha256":  "ca3aa3283b6e3fc3b3b228ecd254823cd2115f63cab9ca93f651a3b4b91f2dbd",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  780,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/per_allsp.adq_pop_tot;per_allsp.ben_q1_tot;per_allsp.cov_pop_tot;per_lm_alllm.adq_pop_tot;per_lm_alllm.ben_q1_tot;per_lm_alllm.cov_pop_tot;per_lm_alllm.cov_q1_tot;per_lm_alllm.cov_q2_tot;per_lm_alllm.cov_q3_tot;per_lm_alllm.cov_q4_tot?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0780.json",
+        "sha256":  "4a3645fa2c836ad0824a0a11b1691f0b0e69f29f47d95914a0de840bd77c883e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  790,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/per_lm_alllm.cov_q5_tot;per_sa_allsa.adq_pop_tot;per_sa_allsa.ben_q1_tot;per_sa_allsa.cov_pop_tot;per_sa_allsa.cov_q1_tot;per_sa_allsa.cov_q2_tot;per_sa_allsa.cov_q3_tot;per_sa_allsa.cov_q4_tot;per_sa_allsa.cov_q5_tot;per_si_allsi.adq_pop_tot?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0790.json",
+        "sha256":  "98584cadfa7f293fd33c6eb0a10dee0e8ea8a83398a001c086d886505dc03dd8",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  800,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/per_si_allsi.ben_q1_tot;per_si_allsi.cov_pop_tot;per_si_allsi.cov_q1_tot;per_si_allsi.cov_q2_tot;per_si_allsi.cov_q3_tot;per_si_allsi.cov_q4_tot;per_si_allsi.cov_q5_tot;PX.REX.REER;SE.ADT.1524.LT.FE.ZS;SE.ADT.1524.LT.FM.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0800.json",
+        "sha256":  "f8acf419bedd91b21906571bd0c38019866774a0db70b410b7415e83dfdbb8d1",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  810,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.ADT.1524.LT.MA.ZS;SE.ADT.1524.LT.ZS;SE.ADT.LITR.FE.ZS;SE.ADT.LITR.MA.ZS;SE.ADT.LITR.ZS;SE.COM.DURS;SE.ENR.PRIM.FM.ZS;SE.ENR.PRSC.FM.ZS;SE.ENR.SECO.FM.ZS;SE.ENR.TERT.FM.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0810.json",
+        "sha256":  "2e0e568686f8bb9e2bb706c85223492d6000e1323faeda2ddf809de21eaef917",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  820,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.LPV.PRIM;SE.LPV.PRIM.FE;SE.LPV.PRIM.LD;SE.LPV.PRIM.LD.FE;SE.LPV.PRIM.LD.MA;SE.LPV.PRIM.MA;SE.LPV.PRIM.SD;SE.LPV.PRIM.SD.FE;SE.LPV.PRIM.SD.MA;SE.PRE.DURS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0820.json",
+        "sha256":  "a0325e7814a4f131d01c1a3258ed1dd2a33d88bbbd7ad09f35478595d4e3b449",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  830,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRE.ENRL.TC.ZS;SE.PRE.ENRR;SE.PRE.ENRR.FE;SE.PRE.ENRR.MA;SE.PRE.TCAQ.FE.ZS;SE.PRE.TCAQ.MA.ZS;SE.PRE.TCAQ.ZS;SE.PRM.AGES;SE.PRM.CMPT.FE.ZS;SE.PRM.CMPT.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0830.json",
+        "sha256":  "685623506c5774475832c1a42e65098b1713adea6c5d195f5a0c8163b4ed5a5d",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  840,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRM.CMPT.ZS;SE.PRM.CUAT.FE.ZS;SE.PRM.CUAT.MA.ZS;SE.PRM.CUAT.ZS;SE.PRM.DURS;SE.PRM.ENRL;SE.PRM.ENRL.FE.ZS;SE.PRM.ENRL.TC.ZS;SE.PRM.ENRR;SE.PRM.ENRR.FE?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0840.json",
+        "sha256":  "2c715c95c0940e9ce812d82d085e2c0cc0136293488f752d9b5ac6b70461d616",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  850,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRM.ENRR.MA;SE.PRM.GINT.FE.ZS;SE.PRM.GINT.MA.ZS;SE.PRM.GINT.ZS;SE.PRM.NENR;SE.PRM.NENR.FE;SE.PRM.NENR.MA;SE.PRM.NINT.FE.ZS;SE.PRM.NINT.MA.ZS;SE.PRM.NINT.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0850.json",
+        "sha256":  "5f8cff3a21dcd1faa72ceed59f8d968b3a2b56459781ef4f61747172b35ae9d5",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  860,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRM.OENR.FE.ZS;SE.PRM.OENR.MA.ZS;SE.PRM.OENR.ZS;SE.PRM.PRIV.ZS;SE.PRM.PRS5.FE.ZS;SE.PRM.PRS5.MA.ZS;SE.PRM.PRS5.ZS;SE.PRM.PRSL.FE.ZS;SE.PRM.PRSL.MA.ZS;SE.PRM.PRSL.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0860.json",
+        "sha256":  "b179dc390b25a9b51e5b56a3d2d222b871b81ed6eaf05b7752bc0f492e30d865",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  870,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRM.REPT.FE.ZS;SE.PRM.REPT.MA.ZS;SE.PRM.REPT.ZS;SE.PRM.TCAQ.FE.ZS;SE.PRM.TCAQ.MA.ZS;SE.PRM.TCAQ.ZS;SE.PRM.TCHR;SE.PRM.TCHR.FE.ZS;SE.PRM.TENR;SE.PRM.TENR.FE?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0870.json",
+        "sha256":  "201ecefda16989985f00c748d5d8613dc1ea7a59f7ff46525f48c50718d874a9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  880,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.PRM.TENR.MA;SE.PRM.UNER;SE.PRM.UNER.FE;SE.PRM.UNER.FE.ZS;SE.PRM.UNER.MA;SE.PRM.UNER.MA.ZS;SE.PRM.UNER.ZS;SE.SEC.AGES;SE.SEC.CMPT.LO.FE.ZS;SE.SEC.CMPT.LO.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0880.json",
+        "sha256":  "b90635e22537b5241a2b82af8192595ffc5d17fe04cddc954ad4efdffdad239f",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  890,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.SEC.CMPT.LO.ZS;SE.SEC.CUAT.LO.FE.ZS;SE.SEC.CUAT.LO.MA.ZS;SE.SEC.CUAT.LO.ZS;SE.SEC.CUAT.PO.FE.ZS;SE.SEC.CUAT.PO.MA.ZS;SE.SEC.CUAT.PO.ZS;SE.SEC.CUAT.UP.FE.ZS;SE.SEC.CUAT.UP.MA.ZS;SE.SEC.CUAT.UP.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0890.json",
+        "sha256":  "ee14179e5d7a6de2c712cfb9a970ddccb1d2ca449a379b087e7089ae3bcb89b2",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  900,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.SEC.DURS;SE.SEC.ENRL;SE.SEC.ENRL.FE.ZS;SE.SEC.ENRL.GC;SE.SEC.ENRL.GC.FE.ZS;SE.SEC.ENRL.LO.TC.ZS;SE.SEC.ENRL.TC.ZS;SE.SEC.ENRL.UP.TC.ZS;SE.SEC.ENRL.VO;SE.SEC.ENRL.VO.FE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0900.json",
+        "sha256":  "91f4b7b57531c795a9f10a919ee219dd41056bddeea30301c14a113775314700",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  910,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.SEC.ENRR;SE.SEC.ENRR.FE;SE.SEC.ENRR.MA;SE.SEC.NENR;SE.SEC.NENR.FE;SE.SEC.NENR.MA;SE.SEC.PRIV.ZS;SE.SEC.PROG.FE.ZS;SE.SEC.PROG.MA.ZS;SE.SEC.PROG.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0910.json",
+        "sha256":  "6842594d5734191af3fe46ecf4c0aca637356d833e2484b691fb1f480428eaeb",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  920,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.SEC.TCAQ.FE.ZS;SE.SEC.TCAQ.LO.FE.ZS;SE.SEC.TCAQ.LO.MA.ZS;SE.SEC.TCAQ.LO.ZS;SE.SEC.TCAQ.MA.ZS;SE.SEC.TCAQ.UP.FE.ZS;SE.SEC.TCAQ.UP.MA.ZS;SE.SEC.TCAQ.UP.ZS;SE.SEC.TCAQ.ZS;SE.SEC.TCHR?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0920.json",
+        "sha256":  "cccb73be28dbeb833580dd3e87eee42263b5e838ca01cec3b08b45577d9c8120",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  930,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.SEC.TCHR.FE;SE.SEC.TCHR.FE.ZS;SE.SEC.UNER.LO.FE.ZS;SE.SEC.UNER.LO.MA.ZS;SE.SEC.UNER.LO.ZS;SE.TER.CUAT.BA.FE.ZS;SE.TER.CUAT.BA.MA.ZS;SE.TER.CUAT.BA.ZS;SE.TER.CUAT.DO.FE.ZS;SE.TER.CUAT.DO.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0930.json",
+        "sha256":  "a47b8b453a265fb4d76558de7f896ab37db70c55c4e9cae9260712e21079e6d1",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  940,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.TER.CUAT.DO.ZS;SE.TER.CUAT.MS.FE.ZS;SE.TER.CUAT.MS.MA.ZS;SE.TER.CUAT.MS.ZS;SE.TER.CUAT.ST.FE.ZS;SE.TER.CUAT.ST.MA.ZS;SE.TER.CUAT.ST.ZS;SE.TER.ENRL.TC.ZS;SE.TER.ENRR;SE.TER.ENRR.FE?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0940.json",
+        "sha256":  "dac043344d63a0d86d27ee51c1bcfbd37a176ebf18ca2c26e9d51a77c56354b9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  950,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.TER.ENRR.MA;SE.TER.TCHR.FE.ZS;SE.XPD.CPRM.ZS;SE.XPD.CSEC.ZS;SE.XPD.CTER.ZS;SE.XPD.CTOT.ZS;SE.XPD.PRIM.PC.ZS;SE.XPD.PRIM.ZS;SE.XPD.SECO.PC.ZS;SE.XPD.SECO.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0950.json",
+        "sha256":  "16b85f2faeb1c0156095ec8254fb7695ee008f3b9e9a926837c33b9da9c6f80a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  960,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SE.XPD.TERT.PC.ZS;SE.XPD.TERT.ZS;SE.XPD.TOTL.GB.ZS;SE.XPD.TOTL.GD.ZS;SG.DMK.ALLD.FN.ZS;SG.DMK.SRCR.FN.ZS;SG.GEN.PARL.ZS;SG.TIM.UWRK.FE;SG.TIM.UWRK.MA;SG.VAW.1549.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0960.json",
+        "sha256":  "55ff2eb28d2cb3a8a03eebafdcaa1448bab75ff8be98edeb1fafe89cb3a3322a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  970,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SG.VAW.ARGU.ZS;SG.VAW.BURN.ZS;SG.VAW.GOES.ZS;SG.VAW.NEGL.ZS;SG.VAW.REAS.ZS;SG.VAW.REFU.ZS;SH.ALC.PCAP.FE.LI;SH.ALC.PCAP.LI;SH.ALC.PCAP.MA.LI;SH.ANM.ALLW.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0970.json",
+        "sha256":  "1a55f5512908c8be23e30390a36b945c7dddce7638cc98a3a1d81743cef05962",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  980,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.ANM.CHLD.ZS;SH.ANM.NPRG.ZS;SH.CON.1524.FE.ZS;SH.CON.1524.MA.ZS;SH.DTH.0509;SH.DTH.1014;SH.DTH.1519;SH.DTH.2024;SH.DTH.COMM.ZS;SH.DTH.IMRT?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0980.json",
+        "sha256":  "06c209710f4b1afbf0bd5af88b8d3a99107c1dde791d1d34df53282b019482dc",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  990,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.DTH.INJR.ZS;SH.DTH.MORT;SH.DTH.NCOM.ZS;SH.DTH.NMRT;SH.DTH.OCVD.ZS;SH.DYN.0509;SH.DYN.1014;SH.DYN.1519;SH.DYN.2024;SH.DYN.AIDS.FE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_0990.json",
+        "sha256":  "8b494c5e8da6bd4c827253bd97d8384b2e03264d2b1b28a0c6b06341651c90ab",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1000,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.DYN.AIDS.ZS;SH.DYN.MORT;SH.DYN.MORT.FE;SH.DYN.MORT.MA;SH.DYN.NCOM.FE.ZS;SH.DYN.NCOM.MA.ZS;SH.DYN.NCOM.ZS;SH.DYN.NMRT;SH.FPL.SATM.ZS;SH.H2O.BASW.RU.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1000.json",
+        "sha256":  "83eac547588ed2518743346ccd1d71a98e8affc75ba43cdded21cc14aaa3ca80",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1010,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.H2O.BASW.UR.ZS;SH.H2O.BASW.ZS;SH.H2O.SMDW.RU.ZS;SH.H2O.SMDW.UR.ZS;SH.H2O.SMDW.ZS;SH.HIV.0014;SH.HIV.1524.FE.ZS;SH.HIV.1524.MA.ZS;SH.HIV.ARTC.ZS;SH.HIV.INCD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1010.json",
+        "sha256":  "0400c9a1341993453f8220826d6cfe56c067b3b61118dfa03ef4858cec37b4e9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1020,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.HIV.INCD.14;SH.HIV.INCD.TL;SH.HIV.INCD.TL.P3;SH.HIV.INCD.YG;SH.HIV.INCD.YG.P3;SH.HIV.INCD.ZS;SH.HIV.PMTC.ZS;SH.IMM.HEPB;SH.IMM.IDPT;SH.IMM.MEAS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1020.json",
+        "sha256":  "39dec3fd39f5d3d6f64a5d123b6d2a05b74aebaa965d90f12195b8f85449af9b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1030,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.MED.BEDS.ZS;SH.MED.CMHW.P3;SH.MED.NUMW.P3;SH.MED.PHYS.ZS;SH.MED.SAOP.P5;SH.MLR.INCD.P3;SH.MLR.NETS.ZS;SH.MLR.TRET.ZS;SH.MMR.DTHS;SH.MMR.RISK?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1030.json",
+        "sha256":  "15745794af33745f0e9a29949941ddf9241bbf8c5b60bcce9fecb65786dd8038",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1040,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.MMR.RISK.ZS;SH.PRG.ANEM;SH.PRV.SMOK;SH.PRV.SMOK.FE;SH.PRV.SMOK.MA;SH.SGR.CRSK.ZS;SH.SGR.IRSK.ZS;SH.SGR.PROC.P5;SH.STA.AIRP.FE.P5;SH.STA.AIRP.MA.P5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1040.json",
+        "sha256":  "35ac2a7c8c3cec8d05fae6fb475286dcf91257363135ad01ba834f18a2e4a6e7",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1050,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.STA.AIRP.P5;SH.STA.ANVC.ZS;SH.STA.ARIC.ZS;SH.STA.BASS.RU.ZS;SH.STA.BASS.UR.ZS;SH.STA.BASS.ZS;SH.STA.BFED.ZS;SH.STA.BRTC.ZS;SH.STA.BRTW.ZS;SH.STA.DIAB.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1050.json",
+        "sha256":  "d8a057279432603e5c5c51f1418cfdce050d73125a0ad78250b722553c1e0bb3",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1060,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.STA.FGMS.ZS;SH.STA.HYGN.RU.ZS;SH.STA.HYGN.UR.ZS;SH.STA.HYGN.ZS;SH.STA.MALN.FE.ZS;SH.STA.MALN.MA.ZS;SH.STA.MALN.ZS;SH.STA.MMRT;SH.STA.MMRT.NE;SH.STA.ODFC.RU.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1060.json",
+        "sha256":  "f56fe44661b9b13b9f82205381a5b5679c24c065a048463a05fad24fc804c1bb",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1070,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.STA.ODFC.UR.ZS;SH.STA.ODFC.ZS;SH.STA.ORCF.ZS;SH.STA.ORTH;SH.STA.OWGH.FE.ZS;SH.STA.OWGH.MA.ZS;SH.STA.OWGH.ME.FE.ZS;SH.STA.OWGH.ME.MA.ZS;SH.STA.OWGH.ME.ZS;SH.STA.OWGH.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1070.json",
+        "sha256":  "1e548b47e6034a9ca7ebe44c514400cd2b361d4ab1e6fa5dd16672d34403f01b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1080,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.STA.POIS.P5;SH.STA.POIS.P5.FE;SH.STA.POIS.P5.MA;SH.STA.SMSS.RU.ZS;SH.STA.SMSS.UR.ZS;SH.STA.SMSS.ZS;SH.STA.STNT.FE.ZS;SH.STA.STNT.MA.ZS;SH.STA.STNT.ME.FE.ZS;SH.STA.STNT.ME.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1080.json",
+        "sha256":  "81410ffae4777b76bfbfc4f9f356e9d354f88317fdefe700799531a084c204cf",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1090,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.STA.STNT.ME.ZS;SH.STA.STNT.ZS;SH.STA.SUIC.FE.P5;SH.STA.SUIC.MA.P5;SH.STA.SUIC.P5;SH.STA.TRAF.P5;SH.STA.WASH.P5;SH.STA.WAST.FE.ZS;SH.STA.WAST.MA.ZS;SH.STA.WAST.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1090.json",
+        "sha256":  "3591f3a6f1fc20eaae6e6853f6809f35770fc79c7ac8e07d00b56407fc9518ee",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1100,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.SVR.WAST.FE.ZS;SH.SVR.WAST.MA.ZS;SH.SVR.WAST.ZS;SH.TBS.CURE.ZS;SH.TBS.DTEC.ZS;SH.TBS.INCD;SH.VAC.TTNS.ZS;SH.XPD.CHEX.GD.ZS;SH.XPD.CHEX.PC.CD;SH.XPD.CHEX.PP.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1100.json",
+        "sha256":  "6669876bd780316afbac438f0eca0cc1f715d35d784134b73e070b17a92f8e4e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1110,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.XPD.EHEX.CH.ZS;SH.XPD.EHEX.PC.CD;SH.XPD.EHEX.PP.CD;SH.XPD.GHED.CH.ZS;SH.XPD.GHED.GD.ZS;SH.XPD.GHED.GE.ZS;SH.XPD.GHED.PC.CD;SH.XPD.GHED.PP.CD;SH.XPD.OOPC.CH.ZS;SH.XPD.OOPC.PC.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1110.json",
+        "sha256":  "79fc8d19f79b6cf3474aec4e3aca9a519e11d8144598203af6305a6a79990741",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1120,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH.XPD.OOPC.PP.CD;SH.XPD.PVTD.CH.ZS;SH.XPD.PVTD.PC.CD;SH.XPD.PVTD.PP.CD;SH_UHC_FH40;SH_UHC_FH40_FURTHER;SH_UHC_FH40_IMPOV;SH_UHC_FH40_LARGE;SH_UHC_FH40_PUSHED;SH_UHC_SCI?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1120.json",
+        "sha256":  "396ea1afe3b1e04a36ac540f79c54b6218e9c0c7e14a708504a8fb0218629d98",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1130,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SH_UHC_SCI_CAPACITY;SH_UHC_SCI_ID;SH_UHC_SCI_NCD;SH_UHC_SCI_RMNCH;SI.DST.02ND.20;SI.DST.03RD.20;SI.DST.04TH.20;SI.DST.05TH.20;SI.DST.10TH.10;SI.DST.50MD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1130.json",
+        "sha256":  "b50b47404c9b5f0312e7c7ab82716a15dc5df776fe81a44ed4bb62b2a54b4bbc",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1140,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SI.DST.FRST.10;SI.DST.FRST.20;SI.POV.DDAY;SI.POV.GAPS;SI.POV.GINI;SI.POV.LMIC;SI.POV.LMIC.GP;SI.POV.MPUN;SI.POV.MPWB;SI.POV.NAHC?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1140.json",
+        "sha256":  "d32d6a6f035987a025de924b33579fb122f018f665dd93445a4e264d949f2268",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1150,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SI.POV.SOPO;SI.POV.UMIC;SI.POV.UMIC.GP;SI.RMT.COST.IB.ZS;SI.RMT.COST.OB.ZS;SI.SPR.PC40;SI.SPR.PC40.ZG;SI.SPR.PCAP;SI.SPR.PCAP.ZG;SI.SPR.PGAP?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1150.json",
+        "sha256":  "75fc3eb74382a11791ca96b64413d781a0f77f510d71a5978f2d0aabda6649d6",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1160,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.AGR.0714.FE.ZS;SL.AGR.0714.MA.ZS;SL.AGR.0714.ZS;SL.AGR.EMPL.FE.ZS;SL.AGR.EMPL.MA.ZS;SL.AGR.EMPL.ZS;SL.EMP.1524.SP.FE.NE.ZS;SL.EMP.1524.SP.FE.ZS;SL.EMP.1524.SP.MA.NE.ZS;SL.EMP.1524.SP.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1160.json",
+        "sha256":  "80d327ebf89c96652f0a4e5863438fb1bb932e3f3243b22559423873aaea2f6e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1170,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.EMP.1524.SP.NE.ZS;SL.EMP.1524.SP.ZS;SL.EMP.MPYR.FE.ZS;SL.EMP.MPYR.MA.ZS;SL.EMP.MPYR.ZS;SL.EMP.SELF.FE.ZS;SL.EMP.SELF.MA.ZS;SL.EMP.SELF.ZS;SL.EMP.SMGT.FE.ZS;SL.EMP.TOTL.SP.FE.NE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1170.json",
+        "sha256":  "e993fe17c5ed834064ec2e1d230e52f7ede80f8671edb8f92f391b8031f26ab4",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1180,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.EMP.TOTL.SP.FE.ZS;SL.EMP.TOTL.SP.MA.NE.ZS;SL.EMP.TOTL.SP.MA.ZS;SL.EMP.TOTL.SP.NE.ZS;SL.EMP.TOTL.SP.ZS;SL.EMP.VULN.FE.ZS;SL.EMP.VULN.MA.ZS;SL.EMP.VULN.ZS;SL.EMP.WORK.FE.ZS;SL.EMP.WORK.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1180.json",
+        "sha256":  "9ef3be56bfb22e578bae9336269bbb132a939add1023f2f032f4f0f17c0bfbaa",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1190,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.EMP.WORK.ZS;SL.FAM.0714.FE.ZS;SL.FAM.0714.MA.ZS;SL.FAM.0714.ZS;SL.FAM.WORK.FE.ZS;SL.FAM.WORK.MA.ZS;SL.FAM.WORK.ZS;SL.GDP.PCAP.EM.KD;SL.IND.EMPL.FE.ZS;SL.IND.EMPL.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1190.json",
+        "sha256":  "eac8ab73363b5892e2eba4a32954b988524cf25b9ef9119bf14a30fa07c37d12",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1200,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.IND.EMPL.ZS;SL.MNF.0714.FE.ZS;SL.MNF.0714.MA.ZS;SL.MNF.0714.ZS;SL.SLF.0714.FE.ZS;SL.SLF.0714.MA.ZS;SL.SLF.0714.ZS;SL.SRV.0714.FE.ZS;SL.SRV.0714.MA.ZS;SL.SRV.0714.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1200.json",
+        "sha256":  "68923ee1a771cdd66526949169a62963c229038fb7ab5692fdf715c17daf94a0",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1210,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.SRV.EMPL.FE.ZS;SL.SRV.EMPL.MA.ZS;SL.SRV.EMPL.ZS;SL.TLF.0714.FE.ZS;SL.TLF.0714.MA.ZS;SL.TLF.0714.SW.FE.TM;SL.TLF.0714.SW.FE.ZS;SL.TLF.0714.SW.MA.TM;SL.TLF.0714.SW.MA.ZS;SL.TLF.0714.SW.TM?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1210.json",
+        "sha256":  "61ba8c257c3ed2471e7dbb42c8167a56ecb90c96396c1b70199687b7df396b1a",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1220,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.TLF.0714.SW.ZS;SL.TLF.0714.WK.FE.TM;SL.TLF.0714.WK.FE.ZS;SL.TLF.0714.WK.MA.TM;SL.TLF.0714.WK.MA.ZS;SL.TLF.0714.WK.TM;SL.TLF.0714.WK.ZS;SL.TLF.0714.ZS;SL.TLF.ACTI.1524.FE.NE.ZS;SL.TLF.ACTI.1524.FE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1220.json",
+        "sha256":  "9acce4c25eddf3d68b8b970deea0adc0e3f71ae6b21ddbab0633a48cc75a6b51",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1230,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.TLF.ACTI.1524.MA.NE.ZS;SL.TLF.ACTI.1524.MA.ZS;SL.TLF.ACTI.1524.NE.ZS;SL.TLF.ACTI.1524.ZS;SL.TLF.ACTI.FE.ZS;SL.TLF.ACTI.MA.ZS;SL.TLF.ACTI.ZS;SL.TLF.ADVN.FE.ZS;SL.TLF.ADVN.MA.ZS;SL.TLF.ADVN.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1230.json",
+        "sha256":  "b1ff58b2ff9b22895b6c5fd312832f408c1a10ce97ff120de3f94611c0627b0f",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1240,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.TLF.BASC.FE.ZS;SL.TLF.BASC.MA.ZS;SL.TLF.BASC.ZS;SL.TLF.CACT.FE.NE.ZS;SL.TLF.CACT.FE.ZS;SL.TLF.CACT.FM.NE.ZS;SL.TLF.CACT.FM.ZS;SL.TLF.CACT.MA.NE.ZS;SL.TLF.CACT.MA.ZS;SL.TLF.CACT.NE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1240.json",
+        "sha256":  "dd14387735ab417f6fc76f079ba0a1ba43c4149ea85ae60b3317e00915590cc0",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1250,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.TLF.CACT.ZS;SL.TLF.INTM.FE.ZS;SL.TLF.INTM.MA.ZS;SL.TLF.INTM.ZS;SL.TLF.PART.FE.ZS;SL.TLF.PART.MA.ZS;SL.TLF.PART.ZS;SL.TLF.TOTL.FE.ZS;SL.TLF.TOTL.IN;SL.UEM.1524.FE.NE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1250.json",
+        "sha256":  "c2b52a1d82be7d33ec16349fab9a32c252f7f422ae1b9e8243fee7bdad129961",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1260,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.UEM.1524.FE.ZS;SL.UEM.1524.MA.NE.ZS;SL.UEM.1524.MA.ZS;SL.UEM.1524.NE.ZS;SL.UEM.1524.ZS;SL.UEM.ADVN.FE.ZS;SL.UEM.ADVN.MA.ZS;SL.UEM.ADVN.ZS;SL.UEM.BASC.FE.ZS;SL.UEM.BASC.MA.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1260.json",
+        "sha256":  "554ce0fc89b7df52f467bc216c9465ee04fe3fb6ddd345d4e3981f0f990c6e7b",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1270,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.UEM.BASC.ZS;SL.UEM.INTM.FE.ZS;SL.UEM.INTM.MA.ZS;SL.UEM.INTM.ZS;SL.UEM.NEET.FE.ME.ZS;SL.UEM.NEET.FE.ZS;SL.UEM.NEET.MA.ME.ZS;SL.UEM.NEET.MA.ZS;SL.UEM.NEET.ME.ZS;SL.UEM.NEET.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1270.json",
+        "sha256":  "0e5b205e19052c5f5ba832b21b1a5ea5ca77bca710f68fa4dbbf37bf3177f5fc",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1280,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SL.UEM.TOTL.FE.NE.ZS;SL.UEM.TOTL.FE.ZS;SL.UEM.TOTL.MA.NE.ZS;SL.UEM.TOTL.MA.ZS;SL.UEM.TOTL.NE.ZS;SL.UEM.TOTL.ZS;SL.WAG.0714.FE.ZS;SL.WAG.0714.MA.ZS;SL.WAG.0714.ZS;SM.POP.ASYS.EA?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1280.json",
+        "sha256":  "321d0f26d9d516618b2ba7a0fc9ebffe3e07dfe07c10e313f5cf125921d60a11",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1290,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SM.POP.ASYS.EO;SM.POP.FDIP;SM.POP.IDPC;SM.POP.NETM;SM.POP.OPIP.EA;SM.POP.OPIP.EO;SM.POP.RHCR.EA;SM.POP.RHCR.EO;SM.POP.RRWA.EA;SM.POP.RRWA.EO?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1290.json",
+        "sha256":  "4dec992450a9f3b40958f67274a012a7d24e2a4e579e760869d4b7efc568499f",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1300,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SM.POP.TOTL;SM.POP.TOTL.ZS;SN.ITK.DEFC.ZS;SN.ITK.MSFI.ZS;SN.ITK.SALT.ZS;SN.ITK.SVFI.ZS;SN.ITK.VITA.ZS;SP.ADO.TFRT;SP.DYN.AMRT.FE;SP.DYN.AMRT.MA?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1300.json",
+        "sha256":  "ba661cfe0a8bd16ab41bd9d81e4e7b13563fc37b5fd390a453a7b80602221cd9",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1310,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.DYN.CBRT.IN;SP.DYN.CDRT.IN;SP.DYN.CONM.ZS;SP.DYN.CONU.ZS;SP.DYN.IMRT.FE.IN;SP.DYN.IMRT.IN;SP.DYN.IMRT.MA.IN;SP.DYN.LE00.FE.IN;SP.DYN.LE00.IN;SP.DYN.LE00.MA.IN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1310.json",
+        "sha256":  "0dd1d2ee2084c46c26010f8e189cde5cccb11237f7132fd68c86a41d0bc621cc",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1320,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.DYN.TFRT.IN;SP.DYN.TO65.FE.ZS;SP.DYN.TO65.MA.ZS;SP.DYN.WFRT;SP.HOU.FEMA.ZS;SP.M15.2024.FE.ZS;SP.M18.2024.FE.ZS;SP.MTR.1519.ZS;SP.POP.0004.FE.5Y;SP.POP.0004.MA.5Y?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1320.json",
+        "sha256":  "83476b7fc64bb42aaef40f66778336f9952a630fbaab6bfb0a8b0f76a3d26f51",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1330,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.0014.FE.IN;SP.POP.0014.FE.ZS;SP.POP.0014.MA.IN;SP.POP.0014.MA.ZS;SP.POP.0014.TO;SP.POP.0014.TO.ZS;SP.POP.0509.FE.5Y;SP.POP.0509.MA.5Y;SP.POP.1014.FE.5Y;SP.POP.1014.MA.5Y?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1330.json",
+        "sha256":  "7bd8b5736c64f6fe8144cc0b1f659323faa28a81803e040c27730c0c7973e311",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1340,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.1519.FE.5Y;SP.POP.1519.MA.5Y;SP.POP.1564.FE.IN;SP.POP.1564.FE.ZS;SP.POP.1564.MA.IN;SP.POP.1564.MA.ZS;SP.POP.1564.TO;SP.POP.1564.TO.ZS;SP.POP.2024.FE.5Y;SP.POP.2024.MA.5Y?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1340.json",
+        "sha256":  "8d675e9f722429accce2ac93751467a4d397578fa2c3d730b1bf7e0f95157484",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1350,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.2529.FE.5Y;SP.POP.2529.MA.5Y;SP.POP.3034.FE.5Y;SP.POP.3034.MA.5Y;SP.POP.3539.FE.5Y;SP.POP.3539.MA.5Y;SP.POP.4044.FE.5Y;SP.POP.4044.MA.5Y;SP.POP.4549.FE.5Y;SP.POP.4549.MA.5Y?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1350.json",
+        "sha256":  "5b20104829981aa71ebdedd719fa6c89f81da1d56a3f327fc07eb14a490fbce8",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1360,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.5054.FE.5Y;SP.POP.5054.MA.5Y;SP.POP.5559.FE.5Y;SP.POP.5559.MA.5Y;SP.POP.6064.FE.5Y;SP.POP.6064.MA.5Y;SP.POP.6569.FE.5Y;SP.POP.6569.MA.5Y;SP.POP.65UP.FE.IN;SP.POP.65UP.FE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1360.json",
+        "sha256":  "b1d02aba0e0ef6b134546de330a70cd2a60ceea5c521d1cc48461845b2842e31",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1370,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.65UP.MA.IN;SP.POP.65UP.MA.ZS;SP.POP.65UP.TO;SP.POP.65UP.TO.ZS;SP.POP.7074.FE.5Y;SP.POP.7074.MA.5Y;SP.POP.7579.FE.5Y;SP.POP.7579.MA.5Y;SP.POP.80UP.FE.5Y;SP.POP.80UP.MA.5Y?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1370.json",
+        "sha256":  "f2c1b460de474d3d47bbdbede204d20f196d1b18dc2cb9932b2d290fc7c4af90",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1380,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.BRTH.MF;SP.POP.DPND;SP.POP.DPND.OL;SP.POP.DPND.YG;SP.POP.GROW;SP.POP.SCIE.RD.P6;SP.POP.TECH.RD.P6;SP.POP.TOTL;SP.POP.TOTL.FE.IN;SP.POP.TOTL.FE.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1380.json",
+        "sha256":  "961c284f25a0a7aba8d3877dea004ca20c7cc82c9816f254629db9d74b9b6f2c",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1390,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.POP.TOTL.MA.IN;SP.POP.TOTL.MA.ZS;SP.REG.BRTH.FE.ZS;SP.REG.BRTH.MA.ZS;SP.REG.BRTH.RU.ZS;SP.REG.BRTH.UR.ZS;SP.REG.BRTH.ZS;SP.REG.DTHS.ZS;SP.RUR.TOTL;SP.RUR.TOTL.ZG?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1390.json",
+        "sha256":  "19236886ec9fae7d3f0fb41fc52936ed493186f6c95ab6fee9f4d06c41472bd2",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1400,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/SP.RUR.TOTL.ZS;SP.URB.GROW;SP.URB.TOTL;SP.URB.TOTL.IN.ZS;SP.UWT.TFRT;ST.INT.ARVL;ST.INT.DPRT;ST.INT.RCPT.CD;ST.INT.RCPT.XP.ZS;ST.INT.TRNR.CD?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1400.json",
+        "sha256":  "1cd2b00070ad76acfb620a7505b78cd6ad690167510f311d2a4226952530b00d",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1410,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/ST.INT.TRNX.CD;ST.INT.TVLR.CD;ST.INT.TVLX.CD;ST.INT.XPND.CD;ST.INT.XPND.MP.ZS;TG.VAL.TOTL.GD.ZS;TM.QTY.MRCH.XD.WD;TM.TAX.MANF.BC.ZS;TM.TAX.MANF.BR.ZS;TM.TAX.MANF.SM.AR.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1410.json",
+        "sha256":  "0561915019011666aec79af1ad23ebc910e798f59942903721c02a3d93be0bdd",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1420,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TM.TAX.MANF.SM.FN.ZS;TM.TAX.MANF.WM.AR.ZS;TM.TAX.MANF.WM.FN.ZS;TM.TAX.MRCH.BC.ZS;TM.TAX.MRCH.BR.ZS;TM.TAX.MRCH.SM.AR.ZS;TM.TAX.MRCH.SM.FN.ZS;TM.TAX.MRCH.WM.AR.ZS;TM.TAX.MRCH.WM.FN.ZS;TM.TAX.TCOM.BC.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1420.json",
+        "sha256":  "df740adb5e30c0df95740800ee83d125b62e1a8cfb601f1ab58ee395784bb16d",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1430,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TM.TAX.TCOM.BR.ZS;TM.TAX.TCOM.SM.AR.ZS;TM.TAX.TCOM.SM.FN.ZS;TM.TAX.TCOM.WM.AR.ZS;TM.TAX.TCOM.WM.FN.ZS;TM.UVI.MRCH.XD.WD;TM.VAL.AGRI.ZS.UN;TM.VAL.FOOD.ZS.UN;TM.VAL.FUEL.ZS.UN;TM.VAL.ICTG.ZS.UN?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1430.json",
+        "sha256":  "498635e935b1b22ffa834c713a836e3ce2d87000adf2145358354c7841a27727",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1440,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TM.VAL.INSF.ZS.WT;TM.VAL.MANF.ZS.UN;TM.VAL.MMTL.ZS.UN;TM.VAL.MRCH.AL.ZS;TM.VAL.MRCH.CD.WT;TM.VAL.MRCH.HI.ZS;TM.VAL.MRCH.OR.ZS;TM.VAL.MRCH.R1.ZS;TM.VAL.MRCH.R2.ZS;TM.VAL.MRCH.R3.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1440.json",
+        "sha256":  "6617bc0548fd835729c7192acf6b666e89f0d58a9a3b3ad01a3f07ad7428c8c6",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1450,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TM.VAL.MRCH.R4.ZS;TM.VAL.MRCH.R5.ZS;TM.VAL.MRCH.R6.ZS;TM.VAL.MRCH.RS.ZS;TM.VAL.MRCH.WL.CD;TM.VAL.MRCH.WR.ZS;TM.VAL.MRCH.XD.WD;TM.VAL.OTHR.ZS.WT;TM.VAL.SERV.CD.WT;TM.VAL.TRAN.ZS.WT?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1450.json",
+        "sha256":  "4590930f58879ecc4da252e8eb380d2f2cf0ddb9b31dfe04b6c71d3a1a8deef0",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1460,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TM.VAL.TRVL.ZS.WT;TT.PRI.MRCH.XD.WD;TX.MNF.TECH.ZS.UN;TX.QTY.MRCH.XD.WD;TX.UVI.MRCH.XD.WD;TX.VAL.AGRI.ZS.UN;TX.VAL.FOOD.ZS.UN;TX.VAL.FUEL.ZS.UN;TX.VAL.ICTG.ZS.UN;TX.VAL.INSF.ZS.WT?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1460.json",
+        "sha256":  "bfe46572dad2cc170cf056bf3240c342184a8221c575d5700f51ed8c4330dbb6",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1470,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TX.VAL.MANF.ZS.UN;TX.VAL.MMTL.ZS.UN;TX.VAL.MRCH.AL.ZS;TX.VAL.MRCH.CD.WT;TX.VAL.MRCH.HI.ZS;TX.VAL.MRCH.OR.ZS;TX.VAL.MRCH.R1.ZS;TX.VAL.MRCH.R2.ZS;TX.VAL.MRCH.R3.ZS;TX.VAL.MRCH.R4.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1470.json",
+        "sha256":  "0b7a50ee6550712b1032826df77fbbd9ecbc602bfce4b82e19454207a2e56e57",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1480,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TX.VAL.MRCH.R5.ZS;TX.VAL.MRCH.R6.ZS;TX.VAL.MRCH.RS.ZS;TX.VAL.MRCH.WL.CD;TX.VAL.MRCH.WR.ZS;TX.VAL.MRCH.XD.WD;TX.VAL.OTHR.ZS.WT;TX.VAL.SERV.CD.WT;TX.VAL.TECH.CD;TX.VAL.TECH.MF.ZS?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1480.json",
+        "sha256":  "8935078d9bd16a12dae8f513bed376d7b550d636b2c03153cfa06c3f7dc2302e",
+        "rows":  16500,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    },
+    {
+        "batch":  1490,
+        "url":  "https://api.worldbank.org/v2/country/DOM;HTI;CRI;PAN;GTM;HND;SLV;NIC;CUB;JAM;MEX;COL;PER;BRA;CHL;URY;ARG;ECU;BOL;PRY;TTO;USA;ESP;LAC;WLD/indicator/TX.VAL.TRAN.ZS.WT;TX.VAL.TRVL.ZS.WT;VC.BTL.DETH;VC.IDP.NWCV;VC.IDP.NWDS;VC.IHR.PSRC.FE.P5;VC.IHR.PSRC.MA.P5;VC.IHR.PSRC.P5?source=2\u0026format=json\u0026per_page=20000\u0026date=1960:2026",
+        "path":  "C:\\Users\\leona\\leonardo-mena-blog\\research\\mercado-laboral-dominicano\\postgresql-recovery\\expansion\\raw\\wdi\\batch_1490.json",
+        "sha256":  "d4de07b3bd111620ac1f859ab386c92cc6a5610bc7ba0616781761b0f3c3565a",
+        "rows":  13200,
+        "updated":  "2026-07-13",
+        "status":  "downloaded"
+    }
+]

@@ -1,0 +1,18 @@
+{
+  "comparison": [
+    {
+      "anio": 2017,
+      "millones_usd": 18016.0763
+    },
+    {
+      "anio": 2018,
+      "millones_usd": 20590.9424
+    }
+  ],
+  "official_millions": [18016.12, 20591.22],
+  "exports2017_millions": 8831.2216,
+  "exports2017_official": 8831.18,
+  "tolerance_millions": 0.5,
+  "source": "https://www.aduanas.gob.do/media/meapdim1/revista-de-comercio-enero-diciembre-2018-v1.pdf",
+  "interpretation": "USD FOB en el CSV; el rótulo millones del catálogo no describe la escala física. Comparaciones de importaciones 2017-2018 y exportaciones 2017. Exportaciones 2018 no concilia exactamente con esa publicación: no se imputa ni se certifica equivalencia de versiones."
+}

@@ -22,6 +22,12 @@ La contraseña se recibe mediante `PG_RECOVERY_PASSWORD`; no se guarda en el rep
 | `censos_linea_tiempo` | Vistas federadas y catálogo de métricas | Punto de entrada para análisis entre fuentes |
 | `enhogar_2024` | Personas y hogares con factores de expansión | Estimaciones muestrales de hogares |
 | `one_datos` | Clima, fenómenos naturales e ingresos/gastos de gobiernos locales | Análisis territorial, ambiental y fiscal; cada dominio conserva su grano |
+| `encft` | ENCFT 2016-T1 a 2026-T1: miembros, hogares, viviendas y diccionarios | Mercado laboral con factores trimestrales y universo de 15 años y más |
+| `economia_rd` | Series históricas BCRD, TSS, DGA, DIGEPRES, DGCP, MINERD, WDI y encuestas complementarias | 35 vistas analíticas, unidades, diccionarios y calidad; series mensuales, trimestrales, anuales y centros educativos repetidos |
+
+La incorporación de la ENCFT, sus scripts reproducibles, controles de calidad y límites están documentados en [`encft/README.md`](encft/README.md). Se consulta desde `encft.analitica` o mediante `censos_linea_tiempo.fdw_encft`, sin duplicar microdatos ni mezclarlos con las personas censales.
+
+La ampliación histórica y educativa está documentada en [`expansion/README.md`](expansion/README.md), con consultas ejecutadas y advertencias de comparabilidad. Conectar a `economia_rd` y consultar `analitica`, o usar `fdw_economia` desde `censos_linea_tiempo`. Incluye series WDI desde 1960, empleo formal desde 2003 y matrícula escolar desde 2015-2016. Las encuestas repetidas no se presentan como un panel de las mismas personas.
 
 ## Bases adicionales de ONE
 

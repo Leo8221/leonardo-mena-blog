@@ -292,6 +292,7 @@ write_chart_map(remesas_dir, list(tibble(id = "01_remesas_tipo_cambio_poder_comp
 
 # 3. Trampa estructural del sector eléctrico
 remesas_map <- read_csv(file.path(remesas_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_poder_compra", pregunta = "Mapa mensual del poder de compra", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice relativo, no canasta individual")); write_csv(remesas_map, file.path(remesas_dir, "chart-map.csv"))
+source(file.path(repo_root, "research", "build-peso-fuerte-remesas.R"), local = new.env(parent = globalenv()))
 
 electric_dir <- file.path(repo_root, "research", "sector-electrico-dominicano"); electric_fig <- file.path(electric_dir, "figuras"); electric_raw <- file.path(electric_dir, "data", "raw", "mem"); electric_proc <- file.path(electric_dir, "data", "procesados"); dir.create(electric_proc, recursive = TRUE, showWarnings = FALSE)
 gen_pdf <- file.path(electric_raw, "boletin-generacion-2024.pdf"); dist_pdf <- file.path(electric_raw, "boletin-distribucion-diciembre-2024.pdf"); gen_text <- paste(pdf_text(gen_pdf), collapse = "\n"); dist_text <- paste(pdf_text(dist_pdf), collapse = "\n"); assert_true(str_detect(gen_text, "23,056"), "No se pudo validar el total de generación del PDF MEM."); assert_true(str_detect(dist_text, "37.6%"), "No se pudo validar la pérdida de energía del PDF MEM.")
@@ -342,9 +343,12 @@ p_electric_map <- p_electric_map + inset_element(electric_inset, left = .70, bot
 export_plot(p_electric_map, electric_fig, "06_mapa_rd_perdidas_electricas_provincia", 8.5, 7.3)
 write_chart_map(electric_dir, list(tibble(id = "01_matriz_generacion_2024", pregunta = "¿De dónde sale la energía?", familia = "Barras ordenadas", fuente = "MEM", advertencia = "Cifras acumuladas 2024"), tibble(id = "02_perdidas_recuperacion_cobranza", pregunta = "¿Qué parte de la energía se pierde o recupera?", familia = "Barras comparables", fuente = "MEM", advertencia = "Indicadores no son partes aditivas"), tibble(id = "03_deficit_y_subsidio_electricidad", pregunta = "¿Cómo llega la ineficiencia al fisco?", familia = "Barras monetarias", fuente = "MEM", advertencia = "Valores acumulados 2024")))
 
-# 4. Pollo y dólar
+# 4. Componentes de la inflación
 electric_map <- read_csv(file.path(electric_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "05_mapa_calor_indicadores_gestion", pregunta = "¿Cómo cambiaron los indicadores de gestión?", familia = "Mapa de calor", fuente = "MEM", advertencia = "Solo indicadores con comparación explícita en el boletín"), tibble(id = "06_mapa_rd_perdidas_electricas_provincia", pregunta = "¿Dónde se concentra la energía perdida?", familia = "Mapa de RD", fuente = "MEM", advertencia = "Corte móvil; EDE superpuestas agregadas por GWh")); write_csv(electric_map, file.path(electric_dir, "chart-map.csv"))
 
+# Este bloque histórico queda desactivado: el constructor vigente usa grupos del IPC
+# y se ejecuta al terminar el archivo para evitar regenerar visuales del pollo.
+if (FALSE) {
 pollo_dir <- file.path(repo_root, "research", "pollo-inflacion"); pollo_fig <- file.path(pollo_dir, "figuras"); dir.create(file.path(pollo_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
 pollo <- parse_ipc_items(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_articulos_base_2019-2020.xlsx")) |> mutate(producto = recode(codigo, `0112201` = "Pollo fresco", `0112203` = "Pechuga de pollo"))
 carnes <- read_excel(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_articulos_base_2019-2020.xlsx"), sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal"); years <- fill_year(unlist(carnes[1, ], use.names = FALSE)); months <- month_num(unlist(carnes[3, ], use.names = FALSE)); cols <- which(!is.na(years) & !is.na(months)); row_carnes <- which(as.character(carnes[[3]]) == "0112 Carnes")[1]
@@ -367,6 +371,7 @@ write_chart_map(pollo_dir, list(tibble(id = "01_pollo_carnes_y_dolar", pregunta 
 
 # 5. Camus, Sísifo y el emprendedor MIPYME
 pollo_map <- read_csv(file.path(pollo_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_indice_pollo", pregunta = "¿Cómo se distribuye el índice del pollo por mes?", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice de precios, no precio en RD$")); write_csv(pollo_map, file.path(pollo_dir, "chart-map.csv"))
+}
 
 mipyme_dir <- file.path(repo_root, "research", "camus-mipyme"); mipyme_fig <- file.path(mipyme_dir, "figuras"); dir.create(file.path(mipyme_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
 mipyme_path <- file.path(repo_root, "posts", "republica-en-un-grafico", "2026-02-14-mipymes-rd", "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx"); mip <- read_excel(mipyme_path, sheet = 1, .name_repair = "unique")
@@ -411,3 +416,6 @@ write_chart_map(mipyme_dir, list(tibble(id = "01_ingreso_por_empleado_formalidad
 problem_data <- problem_data |> mutate(problema = case_when(str_detect(norm_text(problema), "servicios y combustibles") ~ "Servicios y combustibles", str_detect(norm_text(problema), "materias primas") ~ "Materias primas e insumos", str_detect(norm_text(problema), "inseguridad publica") ~ "Inseguridad pública", TRUE ~ problema)); p_mip_prob <- p_mip_prob %+% problem_data; write_csv(problem_data, file.path(mipyme_dir, "data", "procesados", "02_problemas_mipyme.csv")); export_plot(p_mip_prob, mipyme_fig, "02_problemas_de_supervivencia_mipyme", 10, 6.2)
 mipyme_map <- read_csv(file.path(mipyme_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "04_mapa_calor_problemas_tamano_formalidad", pregunta = "¿Qué problemas se concentran por grupo?", familia = "Mapa de calor", fuente = "Tesis MIPYME/ENMIPYMES", advertencia = "Respuestas declaradas; no es efecto causal"), tibble(id = "05_mapa_rd_formalidad_mipyme", pregunta = "¿Dónde se concentran las MIPYMES formales?", familia = "Mapa de RD", fuente = "ENMIPYMES/Tesis MIPYME", advertencia = "Proporción ponderada; no es causalidad")); write_csv(mipyme_map, file.path(mipyme_dir, "chart-map.csv"))
 message("Gráficos generados en cinco módulos de research.")
+
+# Mantener el módulo de inflación en su versión editorial vigente.
+source(file.path(repo_root, "research", "build-inflation-graphics.R"), local = TRUE)

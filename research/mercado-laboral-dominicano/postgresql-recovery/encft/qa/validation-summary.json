@@ -1,0 +1,148 @@
+{
+  "database": "encft",
+  "validated_at": "2026-08-30T02:27:52-0400",
+  "data_start": "2016-01-01",
+  "data_end": "2026-03-31",
+  "quarters": 41,
+  "rows": {
+    "miembros": 790993,
+    "hogares": 258764,
+    "viviendas": 258607,
+    "diccionario": 115178,
+    "tasas_monedas": 399
+  },
+  "size": [
+    {
+      "bytes": 3260323519,
+      "pretty": "3109 MB"
+    }
+  ],
+  "checks": 29,
+  "warnings": [
+    {
+      "control": "peso_miembro_hogar_distinto",
+      "observado": 2627,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "2627 registros de 2023-T4 presentan pesos distintos entre modulos en los propios archivos fuente. Una muestra de claves/pesos se contrasto con el Excel original. Conservar y usar el factor del modulo correspondiente; no sustituirlo al unir."
+    },
+    {
+      "control": "tamano_hogar_distinto",
+      "observado": 7,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "7 registros de miembros de noviembre de 2023 difieren del tamano declarado en Hogar. No corregir ni inferir composicion del hogar sin revisar estos casos."
+    },
+    {
+      "control": "viviendas_factor_nulo_conservado",
+      "observado": 1,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "Una observacion original conservada; no imputar factor ni usarla en sumas ponderadas sin tratamiento explicito."
+    },
+    {
+      "control": "id_hogar_original_no_enlaza",
+      "observado": 73840,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "73840 registros de 2023; usar las claves estructurales verificadas, no ID_HOGAR solo."
+    },
+    {
+      "control": "iniciadores_no_equivalen_desocupados",
+      "observado": 791,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "Conservar ambas variables; la tasa abierta usa DESOCUPADO/PEA en personas de 15 anos y mas."
+    },
+    {
+      "control": "ruptura_ids_panel_2023_2024",
+      "observado": 1,
+      "esperado": 0,
+      "estado": "advertencia",
+      "nota": "No hay IDs_PERSONA comunes entre 2023-T4 y 2024-T1. No inferir transiciones ni una sustitucion total real del panel sin validar los identificadores."
+    }
+  ],
+  "official_reference": "https://cdn.bancentral.gov.do/documents/publicaciones-economicas/panorama-economico-de-la-region-norte/documents/PERN_2026-I.pdf",
+  "sql_vs_r": [
+    {
+      "metrica": "poblacion_15_mas",
+      "diferencia_maxima": 6.659e-07,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "ocupados",
+      "diferencia_maxima": 2.17e-07,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "fuerza_trabajo",
+      "diferencia_maxima": 2.17e-07,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "desocupados",
+      "diferencia_maxima": 1.4552e-09,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "fuera_fuerza_trabajo",
+      "diferencia_maxima": 7.8231e-08,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "tasa_desocupacion_abierta",
+      "diferencia_maxima": 3.2685e-13,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "tasa_ocupacion",
+      "diferencia_maxima": 4.5048e-12,
+      "trimestres": 41,
+      "estado": "ok"
+    },
+    {
+      "metrica": "tasa_participacion",
+      "diferencia_maxima": 4.4125e-12,
+      "trimestres": 41,
+      "estado": "ok"
+    }
+  ],
+  "roundtrip": [
+    {
+      "modulo": "miembros",
+      "filas_comparadas": 4,
+      "columnas_comparadas": 617,
+      "estado": "ok"
+    },
+    {
+      "modulo": "hogares",
+      "filas_comparadas": 4,
+      "columnas_comparadas": 82,
+      "estado": "ok"
+    },
+    {
+      "modulo": "viviendas",
+      "filas_comparadas": 4,
+      "columnas_comparadas": 59,
+      "estado": "ok"
+    },
+    {
+      "modulo": "diccionario",
+      "filas_comparadas": 4,
+      "columnas_comparadas": 10,
+      "estado": "ok"
+    },
+    {
+      "modulo": "tasas_monedas",
+      "filas_comparadas": 4,
+      "columnas_comparadas": 19,
+      "estado": "ok"
+    }
+  ]
+}

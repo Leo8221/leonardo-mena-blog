@@ -1,0 +1,28 @@
+{
+  "views": 35,
+  "wdi_rd": [
+    {
+      "observaciones": 47009,
+      "indicadores": 1363
+    }
+  ],
+  "wdi_education": [
+    {
+      "observaciones": 79000,
+      "indicadores": 156,
+      "observaciones_rd": 2969
+    }
+  ],
+  "pruebas": [
+    {
+      "registros": 54821,
+      "registros_ambiguos": 988,
+      "duplicados_exactos_excluidos": 2765
+    }
+  ],
+  "dgcp": [
+    {
+      "filas_relacionales": 15326217
+    }
+  ]
+}

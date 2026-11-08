@@ -1,8 +1,8 @@
 ---
-title: "Por qué el pollo explica más la inflación que el dólar"
+title: "Qué componentes explican realmente la inflación dominicana"
 date: "2026-07-26"
 author: "Leonardo Mena"
-description: "Descomposición visual de la inflación dominicana, usando el pollo como caso instrumental."
+description: "Descomposición visual de la inflación dominicana, con alimentos y bebidas como el componente más representativo del período."
 categories:
   - "Inflación"
   - "Precios"
@@ -19,17 +19,17 @@ include-after-body:
 <script>document.body.classList.add('editorial-post');</script>
 
 ```{=html}
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/01_descomposicion_ipc.svg" alt="Descomposición mensual de la inflación dominicana por componentes del IPC desde enero de 2025 hasta junio de 2026."><figcaption>La inflación mensual es la suma ponderada de muchos componentes.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/02_heatmap_contribuciones_ipc.svg" alt="Mapa de calor de las contribuciones mensuales de los doce grupos del IPC dominicano."><figcaption>Los motores de la inflación cambian de un mes a otro.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/03_caso_instrumental_pollo.svg" alt="Contribución mensual del pollo fresco al IPC comparada con la inflación mensual total."><figcaption>El pollo muestra la diferencia entre variar mucho y tener una gran incidencia.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/04_general_vs_subyacente.svg" alt="Inflación mensual general frente a inflación subyacente en República Dominicana."><figcaption>La inflación general y la subyacente no siempre se mueven juntas.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/05_puente_junio_2026.svg" alt="Puente de incidencias aproximadas por grupo que cierra en la inflación oficial de junio de 2026."><figcaption>El dato oficial de junio se puede leer como una suma de incidencias.</figcaption></figure>
-<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/06_dolar_vs_transables.svg" alt="Variación interanual de bienes transables frente al tipo de cambio del dólar."><figcaption>El dólar transmite presión a los bienes transables, pero no explica todo el IPC.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/02_heatmap_contribuciones_ipc.svg" alt="Mapa de calor de seis familias de componentes que sumaron o restaron a la inflación mensual dominicana entre enero de 2025 y junio de 2026."><figcaption>Los motores del IPC cambian de un mes a otro.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/03_caso_representativo_alimentos.svg" alt="Fórmula visual de junio de 2026 para alimentos y bebidas, el grupo con mayor incidencia absoluta media y que lideró nueve de dieciocho meses."><figcaption>Alimentos y bebidas es el grupo más representativo del período analizado.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/04_general_vs_subyacente.svg" alt="Inflación mensual general y subyacente con el área de divergencia entre ambas medidas y sus valores directos de junio de 2026."><figcaption>La distancia entre la inflación general y su núcleo varía con los choques mensuales.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/05_puente_junio_2026.svg" alt="Puente acumulativo de incidencias por grupo que cierra exactamente en la inflación oficial de 0.51 por ciento de junio de 2026."><figcaption>Las incidencias de junio cierran en el total oficial.</figcaption></figure>
+<figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/06_dolar_vs_transables.svg" alt="Carriles sincronizados de la variación interanual de bienes transables y del tipo de cambio de compra entre enero de 2024 y mayo de 2026."><figcaption>Dólar y transables se comparan en la misma escala sin presuponer causalidad.</figcaption></figure>
 ```
 
 ## Fuentes y materiales reproducibles
 
-- [Constructor de figuras](../../../research/build-inflation-graphics.R)
+- [Constructor de figuras revisadas](../../../research/build-pollo-inflacion-redesign.R)
+- [Constructor general y datos fuente](../../../research/build-inflation-graphics.R)
 - [Datos procesados](../../../research/pollo-inflacion/data/procesados/)
 - [Mapa de figuras](../../../research/pollo-inflacion/chart-map.csv)
 - [Informe IPC de junio de 2026 del BCRD](https://www.bancentral.gov.do/a/d/6611)

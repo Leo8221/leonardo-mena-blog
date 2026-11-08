@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "checked_at": "2026-08-30T11:30:45-0400",
+  "macro_observaciones": [
+    {
+      "ipc": 511,
+      "inflacion": 511,
+      "imae": 223,
+      "tpm": 272,
+      "remesas": 199,
+      "canasta": 103
+    }
+  ],
+  "wdi": [
+    {
+      "lotes": 150,
+      "observaciones": 1083106
+    }
+  ],
+  "dgcp": [
+    {
+      "cargas": 156,
+      "filas": 15326217
+    }
+  ],
+  "views": 35,
+  "central_catalog_entries": 13,
+  "quality": [
+    {
+      "controles": 24,
+      "errores": 0
+    }
+  ],
+  "dates": [
+    {
+      "concepto": "presupuesto_vista",
+      "desde": "2004-01-01",
+      "hasta": "2026-07-01"
+    },
+    {
+      "concepto": "compras_fecha_version",
+      "desde": "2015-03-27",
+      "hasta": "2026-07-27"
+    }
+  ]
+}

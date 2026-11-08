@@ -1,0 +1,17 @@
+{
+  "mipymes_2023": {
+    "table": "mipymes_2023.microdatos",
+    "rows": 13130,
+    "columns": 127
+  },
+  "enief": {
+    "table": "enief.microdatos",
+    "rows": 6676,
+    "columns": 897
+  },
+  "enae_2024": {
+    "table": "enae_2024.microdatos",
+    "rows": 1225,
+    "columns": 747
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "frecuencia": "anual",
+    "estadistica": "fin_periodo",
+    "observaciones": 70,
+    "desde": "1991-01-01",
+    "hasta": "2025-01-01"
+  },
+  {
+    "frecuencia": "anual",
+    "estadistica": "promedio_periodo",
+    "observaciones": 82,
+    "desde": "1985-01-01",
+    "hasta": "2025-01-01"
+  },
+  {
+    "frecuencia": "diaria",
+    "estadistica": "observacion_diaria",
+    "observaciones": 17902,
+    "desde": "1991-01-02",
+    "hasta": "2026-08-28"
+  },
+  {
+    "frecuencia": "mensual",
+    "estadistica": "fin_periodo",
+    "observaciones": 854,
+    "desde": "1991-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "frecuencia": "mensual",
+    "estadistica": "promedio_periodo",
+    "observaciones": 996,
+    "desde": "1985-01-01",
+    "hasta": "2026-07-01"
+  },
+  {
+    "frecuencia": "trimestral",
+    "estadistica": "fin_periodo",
+    "observaciones": 284,
+    "desde": "1991-01-01",
+    "hasta": "2026-04-01"
+  },
+  {
+    "frecuencia": "trimestral",
+    "estadistica": "promedio_periodo",
+    "observaciones": 332,
+    "desde": "1985-01-01",
+    "hasta": "2026-04-01"
+  }
+]

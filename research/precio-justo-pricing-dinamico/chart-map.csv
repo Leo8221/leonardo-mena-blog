@@ -1,3 +1,4 @@
 id,pregunta,familia,fuente,advertencia
-01_demanda_precio_dinamico,¿Cómo cambia el precio cuando cambia la demanda?,Serie conceptual,Ejemplo ilustrativo,No son precios observados
-02_matriz_eficiencia_justicia,¿Eficiencia y justicia son la misma cosa?,Matriz conceptual,Esquema editorial,Justicia percibida no observada
+00_ilustracion_precio_justo_dinamico,¿Qué tensión visual existe entre precio justo y precio dinámico?,Ilustración editorial,Activo editorial del módulo,No es evidencia empírica
+01_demanda_precio_dinamico,¿Cómo cambia el precio cuando cambia la demanda?,Pistas sincronizadas,Ejemplo ilustrativo,No son precios observados
+02_matriz_eficiencia_justicia,¿El intercambio identifica un precio moralmente justo?,Intervalo de negociación,Esquema editorial,Intercambio bilateral conceptual; no representa todos los mercados

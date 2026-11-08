@@ -51,3 +51,9 @@ Thumbs.db
 /observatorio.html
 /*-listing.json
 /posts/**/index.html
+
+# Evidencias temporales de render; conservar fuentes, datos y entregables
+/tmp/pdfs/
+/trabajo-siuben/**/tmp/pdfs/
+/trabajo-siuben/**/tmp/qa*/
+/trabajo-siuben/**/output/*.tex

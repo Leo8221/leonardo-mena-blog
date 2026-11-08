@@ -12,3 +12,16 @@ Verificacion: 480 fuentes y ejecutables con hash igual; estado Git previo versio
 No se ejecutaron renders, builds ni cambios visuales; no se publico el sitio.
 Eliminados: 14426 archivos; 17838674510 bytes logicos. Omitidos por bloqueo o cambio: 8.
 Este commit documenta la limpieza, sin validar ni mezclar cambios anteriores pendientes.
+
+CONFIRMACION DEL ESTADO LOCAL SOLICITADA POR EL USUARIO - 2026-11-07
+Se incorpora el trabajo acumulado de articulos, graficos, scripts, investigaciones e informes.
+Se registran tambien las eliminaciones preexistentes de la salida local docs/, sin revertirlas ni regenerar el sitio.
+Se incluyen fuentes y entregables sin versionar; las reglas existentes mantienen fuera los microdatos raw/prepared y las nuevas reglas excluyen capturas temporales de revision.
+Verificacion: integridad textual correcta; 79 scripts R parseados; sintaxis de Python/JavaScript/PowerShell comprobada.
+Estas comprobaciones no ejecutan analisis contra bases de datos ni certifican un render completo. No se ejecuta render, porque este cierre registra el estado existente y no reconstruye la publicacion.
+No se hace push ni se modifica el sitio publicado.
+La rama de recuperacion de la limpieza se retira tras comprobar que todos sus blobs siguen accesibles desde el historial de main.
+Las ramas antiguas logo-cleanup y publish-cleanup-check se retiran solo por estar integradas.
+La rama tss-ods-hotfix y su worktree preexistente se conservan porque no estan integrados.
+Registro tecnico de esta confirmacion: C:\Users\leona\Documents\Codex\2026-11-07\en-mi-pc-hay-un-desorden\registro_ssd\confirmacion_git
+git diff --check detecto avisos de espacios/formato preexistentes; se conservan para no reescribir los contenidos al confirmar. Detalle en diff_check.log.

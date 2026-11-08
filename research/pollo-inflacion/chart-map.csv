@@ -1,7 +1,6 @@
 id,pregunta,familia,fuente,advertencia
-01_descomposicion_ipc,¿De dónde sale la inflación mensual?,Descomposición apilada,BCRD IPC,Contribuciones aproximadas a partir de ponderaciones oficiales
-02_heatmap_contribuciones_ipc,¿Qué grupos suman o restan cada mes?,Mapa de calor,BCRD IPC,Azul resta; terracota suma
-03_caso_instrumental_pollo,"¿Por qué el pollo es un buen ejemplo, pero no toda la explicación?",Contribución vs total,BCRD IPC,El pollo fresco pesa 2.33% de la canasta
-04_general_vs_subyacente,¿Qué parte de la inflación es más persistente?,General vs subyacente,BCRD IPC,Junio 2026: dato subyacente oficial
-05_puente_junio_2026,¿Cómo se cierra el dato oficial de junio?,Puente de incidencias,BCRD IPC,El residuo no es un componente económico
-06_dolar_vs_transables,¿Hasta dónde llega el dólar?,Comparación interanual,BCRD IPC,"Comparación descriptiva, no causal"
+02_heatmap_contribuciones_ipc,¿Qué grupos suman o restan cada mes?,Mapa de calor agrupado,BCRD IPC,Contribuciones aproximadas a partir de ponderaciones oficiales
+03_caso_representativo_alimentos,¿Cuál es el grupo más representativo y cómo entra al IPC?,Fórmula visual con historial,BCRD IPC,Alimentos lidera por incidencia absoluta media y frecuencia mensual
+04_general_vs_subyacente,¿Cuándo se separan la inflación general y la subyacente?,Líneas con brecha,BCRD IPC,La subyacente excluye artículos volátiles y regulados
+05_puente_junio_2026,¿Cómo cierran las incidencias en el 0.51% oficial de junio?,Puente acumulativo,BCRD IPC,El ajuste técnico no es un componente económico
+06_dolar_vs_transables,¿El dólar y los bienes transables se mueven uno a uno?,Carriles sincronizados,BCRD IPC,"Comparación descriptiva, no causal"

@@ -1,0 +1,36 @@
+vista,descripcion
+calidad_datos,Resultados de la última validación guardada. Advertencia describe anomalías conservadas o excluidas de vistas; no equivale a error de carga. Consultar README y fechas de corte.
+canasta_familiar,
+catalogo_fuentes,
+catalogo_indicadores,
+catalogo_presupuesto,
+catalogo_series,
+comercio_capitulo,
+compras_contratos,Una fila de contrato OCDS. El monto contractual no equivale a pago. Fecha_inicio no es fecha de firma. No sumar monedas ni multiplicar contratos al unir proveedores o artículos.
+compras_mensuales,"Contratos agrupados por mes de inicio contractual, entidad, modalidad y moneda. No son desembolsos y pueden contener períodos contractuales inconsistentes en origen."
+compras_procesos,
+compras_proveedores_adjudicados,
+diccionario_variables,
+educacion_centros_2024_2025,
+educacion_centros_historicos,
+educacion_internacional,
+educacion_matricula_anual,Serie por regional y nivel. 2015-2016 a 2023-2024: tabulado oficial; 2024-2025: agregación del directorio de oferta. Revisar comparabilidad de cobertura del último curso. El código fuente 202120222 se interpreta como 2021-2022.
+educacion_matricula_detalle,
+educacion_matricula_nivel,
+educacion_matricula_sector,
+educacion_matricula_sexo,
+educacion_oferta_2024_2025,
+educacion_pruebas,"Una fila por contenido fuente distinto. Repeticiones exactamente idénticas colapsadas, sin borrar originales. Otras claves repetidas se conservan y se marcan clave_ambigua. Son participaciones, no personas únicas. Los códigos no enlazan directamente con los de matrícula."
+educacion_pruebas_anuales,"Participaciones por convocatoria, no alumnos únicos. Excluye duplicados exactamente idénticos; conserva y cuenta claves ambiguas. La fuente no contiene 2021. Revisar rupturas en 2020 y 2024 y los desacuerdos entre componentes antes de interpretar tendencias."
+empleo_formal,
+enae,
+enhogar_2022_personas,
+enief,
+indicadores_internacionales,
+indicadores_rd,
+macro_mensual,
+mipymes,
+mipymes_resumen,
+presupuesto_mensual,
+series_economicas,
+tipo_cambio,

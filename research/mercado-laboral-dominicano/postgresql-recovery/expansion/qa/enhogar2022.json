@@ -1,0 +1,12 @@
+{
+  "personas": {
+    "table": "enhogar_2022.personas",
+    "rows": 105611,
+    "columns": 58
+  },
+  "elegidos": {
+    "table": "enhogar_2022.elegidos",
+    "rows": 35678,
+    "columns": 508
+  }
+}

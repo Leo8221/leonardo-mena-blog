@@ -1,0 +1,277 @@
+[
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2016\\Base ENCFT 20161 - 20164.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD26242"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2016\\Base ENCFT 20161 - 20164.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA26276"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2016\\Base ENCFT 20161 - 20164.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL86629"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2016\\Base ENCFT 20161 - 20164.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P39"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2016\\Base ENCFT 20161 - 20164.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G10218"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2017\\Base ENCFT 20171 - 20174.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD25545"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2017\\Base ENCFT 20171 - 20174.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA25574"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2017\\Base ENCFT 20171 - 20174.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL82844"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2017\\Base ENCFT 20171 - 20174.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P38"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2017\\Base ENCFT 20171 - 20174.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G10543"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2018\\Base ENCFT 20181 - 20184.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD25855"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2018\\Base ENCFT 20181 - 20184.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA25867"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2018\\Base ENCFT 20181 - 20184.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WI81707"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2018\\Base ENCFT 20181 - 20184.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P41"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2018\\Base ENCFT 20181 - 20184.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G10935"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2019\\Base ENCFT 20191 - 20194.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD26694"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2019\\Base ENCFT 20191 - 20194.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA26698"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2019\\Base ENCFT 20191 - 20194.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL83032"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2019\\Base ENCFT 20191 - 20194.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P42"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2019\\Base ENCFT 20191 - 20194.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G10945"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2020\\Base ENCFT 20201 - 20204.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD23339"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2020\\Base ENCFT 20201 - 20204.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA23340"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2020\\Base ENCFT 20201 - 20204.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL71379"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2020\\Base ENCFT 20201 - 20204.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P39"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2020\\Base ENCFT 20201 - 20204.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11116"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2021\\Base ENCFT 20211 - 20214.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD24850"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2021\\Base ENCFT 20211 - 20214.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA24854"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2021\\Base ENCFT 20211 - 20214.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL76072"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2021\\Base ENCFT 20211 - 20214.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P39"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2021\\Base ENCFT 20211 - 20214.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11173"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2022\\Base ENCFT 20221 - 20224.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD25162"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2022\\Base ENCFT 20221 - 20224.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA25173"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2022\\Base ENCFT 20221 - 20224.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL76850"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2022\\Base ENCFT 20221 - 20224.xlsx",
+    "sheet": "Tasa Monedas",
+    "dimension": "A1:P42"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2022\\Base ENCFT 20221 - 20224.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11794"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2023\\Base ENCFT 20231 - 20234.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD25142"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2023\\Base ENCFT 20231 - 20234.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA25159"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2023\\Base ENCFT 20231 - 20234.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL73841"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2023\\Base ENCFT 20231 - 20234.xlsx",
+    "sheet": "Tasa monedas",
+    "dimension": "A1:P38"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2023\\Base ENCFT 20231 - 20234.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11813"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2024\\Base ENCFT 20241 - 20244.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD24415"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2024\\Base ENCFT 20241 - 20244.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA24442"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2024\\Base ENCFT 20241 - 20244.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL69863"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2024\\Base ENCFT 20241 - 20244.xlsx",
+    "sheet": "Tasa monedas",
+    "dimension": "A1:P40"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2024\\Base ENCFT 20241 - 20244.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11845"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2025\\Base ENCFT 2025.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD25310"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2025\\Base ENCFT 2025.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA25325"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2025\\Base ENCFT 2025.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL71798"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2025\\Base ENCFT 2025.xlsx",
+    "sheet": "Tasa monedas",
+    "dimension": "A1:P41"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2025\\Base ENCFT 2025.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G11845"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2026\\Base ENCFT 20261.xlsx",
+    "sheet": "Vivienda",
+    "dimension": "A1:BD6064"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2026\\Base ENCFT 20261.xlsx",
+    "sheet": "Hogar",
+    "dimension": "A1:CA6067"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2026\\Base ENCFT 20261.xlsx",
+    "sheet": "Miembros",
+    "dimension": "A1:WL16989"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2026\\Base ENCFT 20261.xlsx",
+    "sheet": "Tasa monedas",
+    "dimension": "A1:P11"
+  },
+  {
+    "file": "C:\\Users\\leona\\Desktop\\encuesta_trabajo_rd\\2026\\Base ENCFT 20261.xlsx",
+    "sheet": "Diccionario",
+    "dimension": "A1:G2962"
+  }
+]

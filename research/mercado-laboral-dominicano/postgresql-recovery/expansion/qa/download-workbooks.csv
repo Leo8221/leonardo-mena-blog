@@ -1,0 +1,998 @@
+id,group,file,sheet,rows,columns
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2007,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2008,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2009,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2010,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2011,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2012,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2013,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2014,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2015,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2016,351,7
+e19762d57567,bcrd-sector-real,e19762d57567_ccis_2007_2017.xlsx,2017,351,7
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2007,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2008,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2009,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2010,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2011,72,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2012,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2013,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2014,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2015,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2016,71,15
+7e0cf44fe779,bcrd-sector-real,7e0cf44fe779_cei_2007_2017.xlsx,2017,71,15
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2007,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2008,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2009,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2010,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2011,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2012,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2013,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2014,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2015,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2016,249,69
+0caa34ea32ca,bcrd-sector-real,0caa34ea32ca_cou_2007_2017.xlsx,2017,249,69
+3a7cf084d742,bcrd-sector-real,3a7cf084d742_cou_2018_2020.xlsx,2018,292,101
+3a7cf084d742,bcrd-sector-real,3a7cf084d742_cou_2018_2020.xlsx,2019,292,101
+3a7cf084d742,bcrd-sector-real,3a7cf084d742_cou_2018_2020.xlsx,2020,292,101
+5fb8ab112fbd,bcrd-sector-real,5fb8ab112fbd_fbkf.xlsx,fbkf,45,18
+54ef64ee3832,bcrd-sector-real,54ef64ee3832_imae.xlsx,imae,241,16
+0d521ff39a46,bcrd-sector-real,0d521ff39a46_imae_2018.xlsx,IMAE,263,16
+607130fe198b,bcrd-sector-real,607130fe198b_oferta_demanda_constantes.xls,A,194,27
+32136e7d3a80,bcrd-sector-real,32136e7d3a80_oferta_demanda_corrientes.xls,A,194,27
+5e15f90a275d,bcrd-sector-real,5e15f90a275d_pib.xls,PIB Corriente Anual 1991-2013,81,46
+5e15f90a275d,bcrd-sector-real,5e15f90a275d_pib.xls,PIB Encadenado Anual 1991-2013,82,46
+8048077f93e6,bcrd-sector-real,8048077f93e6_pib_2007.xlsx,PIB_Trimestral,98,5
+b8e8cc7f3b28,bcrd-sector-real,b8e8cc7f3b28_pib_2018.xlsx,PIB_Trimestral,106,5
+dbd608944630,bcrd-sector-real,dbd608944630_pib_deflactor_2007.xls,PIB_Trimestral1,0,0
+dbd608944630,bcrd-sector-real,dbd608944630_pib_deflactor_2007.xls,PIB_Trimestral,178,7
+1692b407bbf5,bcrd-sector-real,1692b407bbf5_pib_deflactor_2018.xlsx,PIB_Trimestral_deflactor,51,7
+02e0b921401c,bcrd-sector-real,02e0b921401c_pib_dolares.xls,PIB per Cápita,82,7
+9015d44d3dd2,bcrd-sector-real,9015d44d3dd2_pib_dolares_2018.xls,PIB per Cápita,86,7
+ad93eadcf7f3,bcrd-sector-real,ad93eadcf7f3_pib_gasto.xls,Valores Corrientes,47,46
+ad93eadcf7f3,bcrd-sector-real,ad93eadcf7f3_pib_gasto.xls,Valores Encadenados,47,46
+e0c795c0c6c4,bcrd-sector-real,e0c795c0c6c4_pib_gasto_2007.xls,PIB$_Trim,44,72
+e0c795c0c6c4,bcrd-sector-real,e0c795c0c6c4_pib_gasto_2007.xls,PIB$_Trim_Acum,44,72
+e0c795c0c6c4,bcrd-sector-real,e0c795c0c6c4_pib_gasto_2007.xls,PIBK_Trim,64,72
+e0c795c0c6c4,bcrd-sector-real,e0c795c0c6c4_pib_gasto_2007.xls,PIBK_Trim_Acum,64,72
+33c56b0097a9,bcrd-sector-real,33c56b0097a9_pib_gasto_2018.xlsx,PIB$_Trim,34,34
+33c56b0097a9,bcrd-sector-real,33c56b0097a9_pib_gasto_2018.xlsx,PIB$_Trim_Acum,34,34
+33c56b0097a9,bcrd-sector-real,33c56b0097a9_pib_gasto_2018.xlsx,PIBK_Trim,49,34
+33c56b0097a9,bcrd-sector-real,33c56b0097a9_pib_gasto_2018.xlsx,PIBK_Trim_Acum,49,34
+35978ce9ea17,bcrd-sector-real,35978ce9ea17_pib_gasto_retro.xlsx,PIB$_Trim,44,136
+35978ce9ea17,bcrd-sector-real,35978ce9ea17_pib_gasto_retro.xlsx,PIB$_Trim_Acum,44,136
+35978ce9ea17,bcrd-sector-real,35978ce9ea17_pib_gasto_retro.xlsx,PIBK_Trim,64,136
+35978ce9ea17,bcrd-sector-real,35978ce9ea17_pib_gasto_retro.xlsx,PIBK_Trim_Acum,64,136
+6a53c8f254c7,bcrd-sector-real,6a53c8f254c7_pib_gasto_retro_2018.xlsx,PIB$_Trim,34,142
+6a53c8f254c7,bcrd-sector-real,6a53c8f254c7_pib_gasto_retro_2018.xlsx,PIB$_Trim_Acum,34,142
+6a53c8f254c7,bcrd-sector-real,6a53c8f254c7_pib_gasto_retro_2018.xlsx,PIBK_Trim,49,142
+6a53c8f254c7,bcrd-sector-real,6a53c8f254c7_pib_gasto_retro_2018.xlsx,PIBK_Trim_Acum,49,142
+f955cabc5b60,bcrd-sector-real,f955cabc5b60_pib_gasto_trimestral.xls,Valores Corrientes Trim Acum,47,178
+f955cabc5b60,bcrd-sector-real,f955cabc5b60_pib_gasto_trimestral.xls,Valores Encadenados Trim Acum,47,178
+43d2b97a81a0,bcrd-sector-real,43d2b97a81a0_pib_origen_2007.xlsx,PIB$_Trim,77,72
+43d2b97a81a0,bcrd-sector-real,43d2b97a81a0_pib_origen_2007.xlsx,PIB$_Trim_Acum,77,72
+43d2b97a81a0,bcrd-sector-real,43d2b97a81a0_pib_origen_2007.xlsx,PIBK_Trim,113,72
+43d2b97a81a0,bcrd-sector-real,43d2b97a81a0_pib_origen_2007.xlsx,PIBK_Trim_Acum,113,72
+8c95415797f7,bcrd-sector-real,8c95415797f7_pib_origen_2018.xlsx,PIB$_Trim,78,34
+8c95415797f7,bcrd-sector-real,8c95415797f7_pib_origen_2018.xlsx,PIB$_Trim_Acum,78,34
+8c95415797f7,bcrd-sector-real,8c95415797f7_pib_origen_2018.xlsx,PIBK_Trim,116,34
+8c95415797f7,bcrd-sector-real,8c95415797f7_pib_origen_2018.xlsx,PIBK_Trim_Acum,116,34
+a980008b50a0,bcrd-sector-real,a980008b50a0_pib_origen_anual.xls,PIB Sect. Origen70-05 (K)-T.C,87,21
+ef28b0a36a55,bcrd-sector-real,ef28b0a36a55_pib_origen_retro.xlsx,PIB$_Trim,58,136
+ef28b0a36a55,bcrd-sector-real,ef28b0a36a55_pib_origen_retro.xlsx,PIB$_Trim Acum,58,136
+ef28b0a36a55,bcrd-sector-real,ef28b0a36a55_pib_origen_retro.xlsx,PIBK_Trim,85,136
+ef28b0a36a55,bcrd-sector-real,ef28b0a36a55_pib_origen_retro.xlsx,PIBK_Trim Acum,85,136
+4be75583fa6c,bcrd-sector-real,4be75583fa6c_pib_origen_retro_2018.xlsx,PIB$_Trim,58,142
+4be75583fa6c,bcrd-sector-real,4be75583fa6c_pib_origen_retro_2018.xlsx,PIB$_Trim Acum,58,142
+4be75583fa6c,bcrd-sector-real,4be75583fa6c_pib_origen_retro_2018.xlsx,PIBK_Trim,85,142
+4be75583fa6c,bcrd-sector-real,4be75583fa6c_pib_origen_retro_2018.xlsx,PIBK_Trim Acum,85,142
+e1d15befa0ba,bcrd-sector-real,e1d15befa0ba_pib_origen_retro_2018_2007.xlsx,PIB$_Trim,77,78
+e1d15befa0ba,bcrd-sector-real,e1d15befa0ba_pib_origen_retro_2018_2007.xlsx,PIB$_Trim Acum,77,78
+e1d15befa0ba,bcrd-sector-real,e1d15befa0ba_pib_origen_retro_2018_2007.xlsx,PIBK_Trim,113,78
+e1d15befa0ba,bcrd-sector-real,e1d15befa0ba_pib_origen_retro_2018_2007.xlsx,PIBK_Trim Acum,113,78
+503c40a75801,bcrd-sector-real,503c40a75801_pib_origen_trim.xls,A,318,21
+b5221fa77800,bcrd-sector-real,b5221fa77800_pib_percapita_anual.xls,PIB per Cápita,61,8
+0a420871cdf0,bcrd-sector-real,0a420871cdf0_Pib_percapita_anual_base_70.xls,PIB per capita,45,8
+42b90a9a8c04,bcrd-sector-real,42b90a9a8c04_pib_precios_corrientes.xls,PIB 1991-2013,32,5
+3d841a56c285,bcrd-sector-real,3d841a56c285_PIB_sectores_origen.xls,PIB Corriente Trim Acum 91-14,81,178
+3d841a56c285,bcrd-sector-real,3d841a56c285_PIB_sectores_origen.xls,PIB Encadenado Trim Acum 91-14,81,178
+afcf24a80a55,bcrd-sector-real,afcf24a80a55_prod_agricola_corrientes.xls,E.II.2,71,32
+e6b4bbb61cf8,bcrd-sector-real,e6b4bbb61cf8_prod_industria_anual.xls,1991-2005,28,26
+cd19d2d2f065,bcrd-sector-real,cd19d2d2f065_prod_industria_trim.xls,1991-2005,100,18
+b3a886ad9acc,bcrd-sector-real,b3a886ad9acc_prod_pecuaria_corrientes.xls,E.II.4,29,31
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Portada,0,0
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Índice,13,2
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Distritos Municipales ,100,4
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Bienes y servicios,402,3
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Ponderadores por componentes,615,9
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Ponderaciones regiones geog.,616,10
+ac01f00fc079,bcrd-precios,ac01f00fc079_Anexos_documento_metodologico_IPC_base_anual_oct_2019-sep_2020.xlsx,Ponderaciones por quintiles,616,11
+ccf12eb9c121,bcrd-precios,ccf12eb9c121_Costo_Canasta_quintiles_base_2019-2020.xlsx,Costo_Canasta,120,9
+4b17eb9473e7,bcrd-precios,4b17eb9473e7_Costo_Canasta_regiones_base_2019-2020.xls,IPC REGIONES BASE 2019-2020,82,6
+063ee4afd9f5,bcrd-precios,063ee4afd9f5_ipc_anual_1947_2019-2020.xls,IPC,87,6
+9202f180b74d,bcrd-precios,9202f180b74d_ipc_anual_base_2019-2020.xls,IPC,52,5
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2020-2026,615,76
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2020-2021,615,21
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2022,615,18
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2023,615,18
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2024,615,18
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2025,615,18
+32fca465ece6,bcrd-precios,32fca465ece6_ipc_articulos_base_2019-2020.xlsx,2026,615,13
+bc4fa06686d7,bcrd-precios,bc4fa06686d7_ipc_base_2019-2020.xls,IPC base 2019-2020,562,11
+82157e202e5a,bcrd-precios,82157e202e5a_ipc_base_2019-2020_serie_referencial.xlsx,IPC base oct 2019-sept 2020 ,32,5
+4e4e30dfe511,bcrd-precios,4e4e30dfe511_ipc_grupos_base_2019-2020.xls, Grupos Base 2019-2020,392,34
+e444fec4cfeb,bcrd-precios,e444fec4cfeb_ipc_quintiles_base_2019-2020.xls,IPC QUINTILES DE INGRESO,80,12
+7e64a3000508,bcrd-precios,7e64a3000508_ipc_regiones_base_2019-2020.xls,IPC REGIONES BASE 2019-2020,211,10
+a8b898c70528,bcrd-precios,a8b898c70528_ipc_subyacente_base_2019-2020.xlsx,ipc subyacente base 2019-2020,381,15
+73da2a6faadd,bcrd-precios,73da2a6faadd_ipc_tnt_base_2019-2020.xls,IPC TNT,394,11
+97c8703ac160,bcrd-sector-externo,97c8703ac160_Balanza-de-Servicios-anual.xlsx,Anual,43,17
+e43b16f6b58c,bcrd-sector-externo,e43b16f6b58c_Balanza-de-Servicios-trimestral.xlsx,Trim,43,66
+e43b16f6b58c,bcrd-sector-externo,e43b16f6b58c_Balanza-de-Servicios-trimestral.xlsx,Trim_Acum,43,66
+b20f964d436c,bcrd-sector-externo,b20f964d436c_bpagos.xls,balanza de pagos,88,23
+a8a9d7b2257a,bcrd-sector-externo,a8a9d7b2257a_bpagos_6.xlsx,BOP,83,17
+a3f7d718563a,bcrd-sector-externo,a3f7d718563a_bpagos_trim.xls,balanza de pagos,91,72
+5e8ed5ceb8db,bcrd-sector-externo,5e8ed5ceb8db_bpagos_trim_6.xlsx,BOP_TRIM,84,66
+5e8ed5ceb8db,bcrd-sector-externo,5e8ed5ceb8db_bpagos_trim_6.xlsx,BOP_TRIM_ACUM,84,67
+16ecdc7e20f7,bcrd-sector-externo,16ecdc7e20f7_Deuda_Consolidada_Por_Fuente.xls,Por Fuente (US$),34,27
+16ecdc7e20f7,bcrd-sector-externo,16ecdc7e20f7_Deuda_Consolidada_Por_Fuente.xls,Por Fuente (% PIB),36,27
+0c827fc6eb2b,bcrd-sector-externo,0c827fc6eb2b_Deuda_Consolidada_Por_Fuente_Trimestral.xlsx,Fuente (US$),34,57
+0c827fc6eb2b,bcrd-sector-externo,0c827fc6eb2b_Deuda_Consolidada_Por_Fuente_Trimestral.xlsx,Fuente (%PIB),37,57
+ec252490a4e3,bcrd-sector-externo,ec252490a4e3_Deuda_Consolidada_Por_Sector.xls,Por Sector (US$),40,27
+ec252490a4e3,bcrd-sector-externo,ec252490a4e3_Deuda_Consolidada_Por_Sector.xls,Por Sector (% PIB),43,27
+d986b8a53ff1,bcrd-sector-externo,d986b8a53ff1_Deuda_Consolidada_Por_Sector_Trimestral.xlsx,Sector (US$),41,57
+d986b8a53ff1,bcrd-sector-externo,d986b8a53ff1_Deuda_Consolidada_Por_Sector_Trimestral.xlsx,Sector (%PIB),43,57
+c04cd51a0588,bcrd-sector-externo,c04cd51a0588_Deuda1961-2004.xls,Deuda Púb. Ext.Global 1961-2004,61,3
+85e778622d30,bcrd-sector-externo,85e778622d30_DeudaBC.xlsx,Deuda Externa BC 2004-2025,31,3
+85e778622d30,bcrd-sector-externo,85e778622d30_DeudaBC.xlsx,Deuda Externa BC 2004-2026 trim,93,3
+e26fe7d22ea7,bcrd-sector-externo,e26fe7d22ea7_exportaciones_anuales.xls,Exportaciones_Anuales,55,54
+32e9ebe41594,bcrd-sector-externo,32e9ebe41594_Exportaciones_Anuales_6.xls,Exportaciones Anuales,83,18
+5b3f255a32dc,bcrd-sector-externo,5b3f255a32dc_exportaciones_mensuales.xls,Exportaciones_Mensuales,207,67
+684a501036bc,bcrd-sector-externo,684a501036bc_Exportaciones_Trimestrales_6.xls,Exportaciones_Trimestrales,82,67
+684a501036bc,bcrd-sector-externo,684a501036bc_Exportaciones_Trimestrales_6.xls,Trim-Acum,82,67
+3558c101ef0e,bcrd-sector-externo,3558c101ef0e_exportaciones_zonas_francas.xls,Exportaciones_Zonas_Francas,251,11
+362939d2000f,bcrd-sector-externo,362939d2000f_Exportaciones_Zonas_Francas_6.xls,Exportaciones_Zonas_Francas,252,12
+8e98b4454090,bcrd-sector-externo,8e98b4454090_importaciones_anuales.xls,Importaciones_Anuales,61,20
+e0a9bfef6e4a,bcrd-sector-externo,e0a9bfef6e4a_Importaciones_Anuales_6.xls,Importaciones Anuales,74,18
+b8f7b9660212,bcrd-sector-externo,b8f7b9660212_importaciones_crudo.xls,Importaciones_Crudo_y_Derivados,289,33
+45b31c6d76ef,bcrd-sector-externo,45b31c6d76ef_Importaciones_Crudo_6.xls,Importaciones_Crudo_y_Derivados,248,31
+566cb4b9671a,bcrd-sector-externo,566cb4b9671a_importaciones_trimestrales.xls,Importaciones_Trimestrales,62,88
+7931946fc0f8,bcrd-sector-externo,7931946fc0f8_Importaciones_Trimestrales_6.xls,Importaciones Trimestrales,74,67
+7931946fc0f8,bcrd-sector-externo,7931946fc0f8_Importaciones_Trimestrales_6.xls,Trim-Acum,74,67
+80e352d5a635,bcrd-sector-externo,80e352d5a635_inversion_ext_pais.xls,IED x país 1993-2013,35,24
+2ceced6ac9ce,bcrd-sector-externo,2ceced6ac9ce_inversion_ext_pais_6.xls,IED por país trim,34,66
+2ceced6ac9ce,bcrd-sector-externo,2ceced6ac9ce_inversion_ext_pais_6.xls,IED por país acum,34,66
+2ceced6ac9ce,bcrd-sector-externo,2ceced6ac9ce_inversion_ext_pais_6.xls,IED por país anual,40,17
+bd4ffeaa7e11,bcrd-sector-externo,bd4ffeaa7e11_inversion_ext_sector.xls,IED x sector 1993 - 2013,29,24
+926c22d35f71,bcrd-sector-externo,926c22d35f71_inversion_ext_sector_6.xls,IED por actividad trim,24,66
+926c22d35f71,bcrd-sector-externo,926c22d35f71_inversion_ext_sector_6.xls,IED por actividad acum,24,66
+926c22d35f71,bcrd-sector-externo,926c22d35f71_inversion_ext_sector_6.xls,IED por actividad anual,23,17
+2d3c9ed4a03b,bcrd-sector-externo,2d3c9ed4a03b_piianual.xls,PII 2005-2013,127,53
+3faaceee767a,bcrd-sector-externo,3faaceee767a_piianual_6.xlsx,PII 2009-2025,185,86
+aee8240fd964,bcrd-sector-externo,aee8240fd964_piitrim.xls,PII TRIMESTRAL 2011,127,28
+aee8240fd964,bcrd-sector-externo,aee8240fd964_piitrim.xls,PII TRIMESTRAL 2012,127,28
+aee8240fd964,bcrd-sector-externo,aee8240fd964_piitrim.xls,PII TRIMESTRAL 2013,127,28
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2011,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2012,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2013,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2014,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2015,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2016,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2017,185,29
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2018,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2019,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2020,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2021,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2022,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2023,185,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2024,184,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2025,184,26
+1e502adcaefb,bcrd-sector-externo,1e502adcaefb_piitrim_6.xlsx,PII TRIMESTRAL 2026,184,26
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2010,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2011,207,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2012,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2013,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2014,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2015,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2016,207,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2017,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2018,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2019,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2020,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2021,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2022,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2023,208,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2024,207,12
+1ca12cd688fc,bcrd-sector-externo,1ca12cd688fc_planillar_anual.xlsx,2025,208,12
+31f8bc50c9de,bcrd-sector-externo,31f8bc50c9de_Remesas_6.xlsx,Total,25,18
+6ca304d74989,bcrd-sector-externo,6ca304d74989_Remesas_GR.xlsx,Genero,13,13
+763ff196b56a,bcrd-sector-externo,763ff196b56a_Remesas_MP.xlsx,Pago,14,18
+1e8f8512dd78,bcrd-sector-externo,1e8f8512dd78_Remesas_PE.xlsx,Pais,23,18
+5afc5c9147a8,bcrd-sector-externo,5afc5c9147a8_Remesas_PP.xlsx,Participacion en el Pago,14,18
+08045a4401d9,bcrd-sector-externo,08045a4401d9_Remesas_PR.xlsx,Provincia,27,18
+900f472eee99,bcrd-sector-externo,900f472eee99_Remesas_PT.xlsx,Promedio,23,18
+60fd1b3952de,bcrd-sector-externo,60fd1b3952de_Remesas_TR.xlsx,#Transacciones,23,18
+0be52ba4d903,bcrd-sector-externo,0be52ba4d903_reservas_internacionales.xlsx,Reservas Mensuales,26,109
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Indicadores,55,48
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Precisión Estadística Condición,720,9
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Precisión Estadística Indicador,714,9
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Promedio 4 Trimestres,72,45
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Masculino,55,48
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Femenino,55,48
+0d80190c46a7,bcrd-encft,0d80190c46a7_00_Indicadores.xlsx,Regiones,239,6
+e4b604e1d2ca,bcrd-encft,e4b604e1d2ca_01_PET.xlsx,PET Total,57,7
+e4b604e1d2ca,bcrd-encft,e4b604e1d2ca_01_PET.xlsx,Masculino,57,7
+e4b604e1d2ca,bcrd-encft,e4b604e1d2ca_01_PET.xlsx,Femenino,57,7
+d370d3caab80,bcrd-encft,d370d3caab80_1_1_Ocupados_Rama.xlsx,Total,59,15
+d370d3caab80,bcrd-encft,d370d3caab80_1_1_Ocupados_Rama.xlsx,Masculina,59,15
+d370d3caab80,bcrd-encft,d370d3caab80_1_1_Ocupados_Rama.xlsx,Femenina,59,15
+db14edfb6986,bcrd-encft,db14edfb6986_1_2_Ocupados_Ocupacion.xlsx,Grupo Ocupacional,58,12
+db14edfb6986,bcrd-encft,db14edfb6986_1_2_Ocupados_Ocupacion.xlsx,Población Masculina,58,12
+db14edfb6986,bcrd-encft,db14edfb6986_1_2_Ocupados_Ocupacion.xlsx,Población Femenina,58,12
+a2b033714023,bcrd-encft,a2b033714023_1_3_Ocupados_Categoria.xlsx,Categoría Ocupacional,58,9
+a2b033714023,bcrd-encft,a2b033714023_1_3_Ocupados_Categoria.xlsx,Población Masculina,58,9
+a2b033714023,bcrd-encft,a2b033714023_1_3_Ocupados_Categoria.xlsx,Población Femenina,58,9
+33acffec469a,bcrd-encft,33acffec469a_1_4_Ocupados_Edad.xlsx,Tramos de Edad,58,7
+33acffec469a,bcrd-encft,33acffec469a_1_4_Ocupados_Edad.xlsx,Población Masculina,58,7
+33acffec469a,bcrd-encft,33acffec469a_1_4_Ocupados_Edad.xlsx,Población Femenina,58,7
+7af2e9625d6f,bcrd-encft,7af2e9625d6f_1_5_Ocupados_Educacion.xlsx,Nivel Educativo,59,7
+7af2e9625d6f,bcrd-encft,7af2e9625d6f_1_5_Ocupados_Educacion.xlsx,Población Masculina,59,7
+7af2e9625d6f,bcrd-encft,7af2e9625d6f_1_5_Ocupados_Educacion.xlsx,Población Femenina,59,7
+e28fe70390e1,bcrd-encft,e28fe70390e1_2_1_Sectores_Rama.xlsx,Rama de Actividad,60,28
+1d37a4e0fa8e,bcrd-encft,1d37a4e0fa8e_2_2_Sectores_Ocupacion.xlsx,Grupo Ocupacional,59,22
+032257f91d57,bcrd-encft,032257f91d57_2_3_Sectores_Categoria.xlsx,Categoria Ocupacional,59,14
+d0199352a73b,bcrd-encft,d0199352a73b_2_4_Sectores_Edad.xlsx,Tramos de Edad,59,12
+993acde6e93a,bcrd-encft,993acde6e93a_2_5_Sectores_Educacion.xlsx,Nivel Educativo,61,12
+5d7bf3dcac87,bcrd-encft,5d7bf3dcac87_3_1_Deciles_Rama.xlsx,Rama Actividad,2505,12
+02e32defd60a,bcrd-encft,02e32defd60a_3_2_Deciles_Ocupacion.xlsx,Grupo Ocupacional,2035,12
+7b165e893b1e,bcrd-encft,7b165e893b1e_3_3_Deciles_Categoria.xlsx,Categoría Ocupacional,1490,12
+545b7e8de71c,bcrd-encft,545b7e8de71c_3_4_Deciles_Edad.xlsx,Tramo de Edad,1347,12
+7e26073a19fb,bcrd-encft,7e26073a19fb_3_5_Deciles_Educacion.xlsx,Nivel Educativo,1505,12
+97e25515de18,bcrd-encft,97e25515de18_Informalidad_total.xlsx,Informalidad Total,58,23
+b32f316c121f,bcrd-sector-fiscal,b32f316c121f_Serie_historica_SPNF_2000-2013.xlsx,Flujos Mensuales,136,170
+e55c3c0f76e7,bcrd-monetario,e55c3c0f76e7_VOLATILIDAD_DOLAR.xls,Vol-TC Bancario US$,271,7
+0f3c765877ab,bcrd-monetario,0f3c765877ab_VOLATILIDAD_EURO.xls,Vol-TC Bancario EUR,271,7
+395d2963ef06,bcrd-monetario,395d2963ef06_activos_bc_osd_me.xlsx,VI.3.Activos Externos Netos,309,21
+e07cba36843f,bcrd-monetario,e07cba36843f_agregados_monetarios.xlsx,III.2.Agregados Monetarios,309,14
+070e4f791206,bcrd-monetario,070e4f791206_agregados_monetarios_sectores.xlsx,III.3Agreg. Mon. por Sector,47,300
+0c6e213ec887,bcrd-monetario,0c6e213ec887_balance_osd_activos.xlsx,II.2.Balance OSD-Activos,303,21
+28761e823957,bcrd-monetario,28761e823957_balance_osd_activos_me.xlsx,II.2.b.OSD-Activos ME,305,21
+0030b537ee2e,bcrd-monetario,0030b537ee2e_balance_osd_activos_mn.xlsx,II.2.a.OSD-Activos MN,304,21
+44d7a78ac811,bcrd-monetario,44d7a78ac811_balance_osd_pasivos.xlsx,II.3.Balance OSD-Pasivos,303,18
+4e86a1cf1a34,bcrd-monetario,4e86a1cf1a34_balance_osd_pasivos_me.xlsx,II.3.b.OSD-Pasivos ME,304,18
+2898161e08af,bcrd-monetario,2898161e08af_balance_osd_pasivos_mn.xlsx,II.3.a.OSD-Pasivos MN,303,18
+0ecada301e1c,bcrd-monetario,0ecada301e1c_balance_osd_resumen.xlsx,II.1.Balance OSD-Resumen,305,17
+667235ac4736,bcrd-monetario,667235ac4736_base_monetaria.xlsx,III.1.Base Monetaria ,305,16
+13c480a95c52,bcrd-monetario,13c480a95c52_bm_costo_margenes.xls,Web,45,6
+13c480a95c52,bcrd-monetario,13c480a95c52_bm_costo_margenes.xls,Web1,44,4
+ba8081747640,bcrd-monetario,ba8081747640_Canalizacion_por_Provincias.xlsx,Préstamos,48,52
+8ccdfd0126ec,bcrd-monetario,8ccdfd0126ec_Captacion_por_Provincias.xlsx,Depósitos y Valores,49,52
+a58ae23968cf,bcrd-monetario,a58ae23968cf_composicion_capital_bc_me.xlsx,VI.1.BC Composición Capital,304,18
+b6039d5c3dfd,bcrd-monetario,b6039d5c3dfd_composicion_capital_osd_me.xlsx,VI.2.OSD Composición Capital ,307,18
+e41393f96ca5,bcrd-monetario,e41393f96ca5_credito_nofinanciero_bc.xlsx,IV.3.BC Crédito Sector Público,305,20
+140ef26d470a,bcrd-monetario,140ef26d470a_credito_nofinanciero_osd.xlsx,IV.4OSD Crédito Sector Público,305,20
+cfdc341dc82b,bcrd-monetario,cfdc341dc82b_encaje_bancario.xlsx,III.5Encaje BM,360,16
+66b6ffc04609,bcrd-monetario,66b6ffc04609_indicadores_armonizados_bcrd.xlsx,Indicadores Armonizados BCRD,167,15
+27c957810f98,bcrd-monetario,27c957810f98_indicadores_armonizados_osd.xlsx,Indicadores Armonizados OSD,192,15
+bd062ce540a4,bcrd-monetario,bd062ce540a4_Interbancarios_Plazos_1_a_7_dias.xlsx,Diario 1 a 7 días,2369,5
+bd062ce540a4,bcrd-monetario,bd062ce540a4_Interbancarios_Plazos_1_a_7_dias.xlsx,Mensual 1 a 7 días,117,5
+a1852a67ad5b,bcrd-monetario,a1852a67ad5b_operaciones_interb.xls,Interbancarios,432,5
+a1852a67ad5b,bcrd-monetario,a1852a67ad5b_operaciones_interb.xls,Grafica,27,2
+793ab7a365ad,bcrd-monetario,793ab7a365ad_operaciones_monetarias.xlsx,Operaciones Monetarias,4222,15
+6c4ea93fd0c6,bcrd-monetario,6c4ea93fd0c6_panorama_osf.xlsx,I.4.Panorama OSF,305,19
+5c68a26d18a3,bcrd-monetario,5c68a26d18a3_panorama_pbc.xlsx,I.1.Panorama BC,307,19
+1750013a3b89,bcrd-monetario,1750013a3b89_panorama_pbm.xlsx,I.2.a.Panorama Bancos Múltiples,304,19
+3be08411f01d,bcrd-monetario,3be08411f01d_panorama_posd.xlsx,I.2.Panorama OSD,306,19
+41d9eae27dbc,bcrd-monetario,41d9eae27dbc_panorama_psd.xlsx,I.3.Panorama SD,306,21
+09f7add3e1d3,bcrd-monetario,09f7add3e1d3_panorama_sf.xlsx,I.5.Panorama SF,304,20
+68ce30151e5d,bcrd-monetario,68ce30151e5d_prestamos_por_destino_armonizados.xlsx,Préstamos por Destino,436,15
+0085e0217c46,bcrd-monetario,0085e0217c46_serie_indicadores_bcrd.xlsx,BCRD - Serie,75,369
+ed4f8f4d6ac3,bcrd-monetario,ed4f8f4d6ac3_serie_indicadores_osd.xlsx,OSD - Serie,91,369
+c23160200995,bcrd-monetario,c23160200995_serie_prestamos_por_destino_armonizados.xlsx,Serie Préstamos por Destino,221,369
+613d318a6a55,bcrd-monetario,613d318a6a55_Serie_TPM.xlsx,Tasas,280,6
+21abd0bbeac5,bcrd-monetario,21abd0bbeac5_tasa_remunerada_lombarda.xls,Tasas Lomb. y R.,48,4
+21abd0bbeac5,bcrd-monetario,21abd0bbeac5_tasa_remunerada_lombarda.xls,Sheet1,37,3
+d6ca2d7f8c87,bcrd-monetario,d6ca2d7f8c87_tasas_activas_me.xlsx,V.5TIbancactME,333,15
+3f00431056f1,bcrd-monetario,3f00431056f1_tasas_activas_mn.xlsx,V.4TIbancactMN,334,15
+9625bc26b3da,bcrd-monetario,9625bc26b3da_tasas_pasivas_me.xlsx,V.7TIbancpasME,308,13
+a0dc09545329,bcrd-monetario,a0dc09545329_tasas_pasivas_mn.xlsx,V.6TIbancpasMN,307,13
+8fd3378d6797,bcrd-monetario,8fd3378d6797_valores_bc_mn.xlsx,V.1Tasa intBC,312,17
+31adf7af751b,bcrd-monetario,31adf7af751b_volatilidades.xls,Vol-Tasas RD$,280,8
+31adf7af751b,bcrd-monetario,31adf7af751b_volatilidades.xls,Vol-Tasa Interés US$,282,8
+686b48984dd8,bcrd-mercado-cambiario,686b48984dd8_DOLAR_CHEQUE_SONDEO.xlsx,"Tasa Sondeo, Cheque, Dólar",5918,7
+0ef160dafa8f,bcrd-mercado-cambiario,0ef160dafa8f_DOLAR_TRANSFERENCIA_SONDEO.xlsx,"Tasa Sondeo, Transf., Dólar",5919,7
+59c550820e6f,bcrd-mercado-cambiario,59c550820e6f_DOLAR_VENTANILLA_SONDEO.xlsx,"Tasa Sondeo, Ventanilla, Dólar",5919,7
+58000602e52e,bcrd-mercado-cambiario,58000602e52e_EURO_CHEQUE_SONDEO.xlsx,"Tasa Sondeo, Cheque, Euro",5440,7
+31a6888a136e,bcrd-mercado-cambiario,31a6888a136e_EURO_TRANSFERENCIA_SONDEO.xlsx,"Tasa Sondeo, Transf., Euro ",5442,7
+186398635e73,bcrd-mercado-cambiario,186398635e73_EURO_VENTANILLA_SONDEO.xlsx,"Tasa Sondeo, Ventanilla, Euro",5442,7
+628751c7d938,bcrd-mercado-cambiario,628751c7d938_Operaciones_us.xls,OPERACIONES MENSUALES,285,14
+628751c7d938,bcrd-mercado-cambiario,628751c7d938_Operaciones_us.xls,OPERACIONES ANUALES,53,13
+25eda076a9ab,bcrd-mercado-cambiario,25eda076a9ab_TASA_DOLAR_MERCADO_DERIVADOS.xls,Diaria,382,5
+5babcd146ede,bcrd-mercado-cambiario,5babcd146ede_TASA_ENTIDADES_FINANCIERAS.xls,Diaria,8692,5
+5babcd146ede,bcrd-mercado-cambiario,5babcd146ede_TASA_ENTIDADES_FINANCIERAS.xls,Mensual,418,5
+5babcd146ede,bcrd-mercado-cambiario,5babcd146ede_TASA_ENTIDADES_FINANCIERAS.xls,Trimestral,141,5
+5babcd146ede,bcrd-mercado-cambiario,5babcd146ede_TASA_ENTIDADES_FINANCIERAS.xls,Anual,37,4
+ffc5bc26e1fd,bcrd-mercado-cambiario,ffc5bc26e1fd_TASAS_AGENTES_CAMBIO.xls,Diaria,6926,5
+ffc5bc26e1fd,bcrd-mercado-cambiario,ffc5bc26e1fd_TASAS_AGENTES_CAMBIO.xls,Mensual,334,5
+ffc5bc26e1fd,bcrd-mercado-cambiario,ffc5bc26e1fd_TASAS_AGENTES_CAMBIO.xls,Trimestral,113,5
+ffc5bc26e1fd,bcrd-mercado-cambiario,ffc5bc26e1fd_TASAS_AGENTES_CAMBIO.xls,Anual,30,4
+c2497057a89b,digepres,c2497057a89b_EJECUCION-PRESUPUESTARIA-2014-2019-1.xlsx,2014-2016,376,4
+c2497057a89b,digepres,c2497057a89b_EJECUCION-PRESUPUESTARIA-2014-2019-1.xlsx,2017-2019,384,4
+3245894c878d,digepres,3245894c878d_Ejecucion-Presupuestaria_2008-2013-1.xlsxf_.xlsx,Presentación,9,1
+3245894c878d,digepres,3245894c878d_Ejecucion-Presupuestaria_2008-2013-1.xlsxf_.xlsx,Pivote,42,9
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2004,51,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2005,50,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2006,53,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2007,53,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2008,51,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2009,51,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2010,50,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2011,52,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2012,52,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2013,46,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2014,67,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2015,81,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2016,81,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2017,83,42
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2018,82,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2019,87,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2020,85,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2021,145,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2022,143,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2023,139,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2024,130,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2025,131,16
+a1156fb8cacb,digepres,a1156fb8cacb_Estadistica-Gasto-Adm.-Central-Clasificacion-Economica-Mensual-2004-2026-10.xlsx,2026,118,16
+a677a47b8a8d,digepres,a677a47b8a8d_Economica-Anual_1990-2025-1.xlsx,1990-2002,48,14
+a677a47b8a8d,digepres,a677a47b8a8d_Economica-Anual_1990-2025-1.xlsx,2003-2013,53,12
+a677a47b8a8d,digepres,a677a47b8a8d_Economica-Anual_1990-2025-1.xlsx,2014-2025,84,13
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2004,64,4
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2005,62,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2006,53,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2007,63,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2008,56,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2009,55,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2010,55,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2011,54,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2012,54,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2013,59,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2014,126,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2015,125,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2016,115,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2017,122,42
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2018,125,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2019,124,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2020,122,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2021,122,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2022,120,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2023,150,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2024,165,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2025,160,16
+5a16a9b6777c,digepres,5a16a9b6777c_Estadistica-Gasto-Adm.-Central-Clasificacion-Funcional-Mensual-2004-2026-8.xlsx,2026,156,16
+252babd272c9,digepres,252babd272c9_Desc-Funcional-Anual-2004-2025.xlsx,2014-2025,126,13
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2004,53,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2005,51,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2006,48,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2007 ,51,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2008,53,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2009,52,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2010,49,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2011,50,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2012,51,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2013,51,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2014,55,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2015,61,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2020,69,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2016,62,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2017,68,42
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2018,69,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2019,68,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2021,279,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2022,279,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2023,279,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2024,292,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2025,278,16
+a92c1a72ad5d,digepres,a92c1a72ad5d_Estadistica-Gasto-Adm.-Central-Clasificacion-Institucional-Mensual-2004-2026-9.xlsx,2026,261,16
+8a8d24a2a216,digepres,8a8d24a2a216_Institucional-Anual-1990-2025-1.xlsx,1990-2002,38,14
+8a8d24a2a216,digepres,8a8d24a2a216_Institucional-Anual-1990-2025-1.xlsx,2003-2013,61,12
+8a8d24a2a216,digepres,8a8d24a2a216_Institucional-Anual-1990-2025-1.xlsx,2014-2025,76,13
+27d11053c074,digepres,27d11053c074_Institucional-Gastos-Corrientes-y-Capital-Anual_2004-2020.xlsxf_.xlsx,2004 - 2013,102,11
+27d11053c074,digepres,27d11053c074_Institucional-Gastos-Corrientes-y-Capital-Anual_2004-2020.xlsxf_.xlsx,2014 - 2020,106,8
+529a16257a09,digepres,529a16257a09_Institucional-por-Funciones_2004-2020-1.xlsx,2004 - 2013,263,11
+529a16257a09,digepres,529a16257a09_Institucional-por-Funciones_2004-2020-1.xlsx,2014 - 2020,246,9
+39d3be09d57b,digepres,39d3be09d57b_Institucional-por-Objeto_2004-2020.xlsx,2004 - 2013,216,11
+39d3be09d57b,digepres,39d3be09d57b_Institucional-por-Objeto_2004-2020.xlsx,2014-2020,252,8
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2004,72,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2005,72,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2006,77,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2007,76,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2008,74,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2009,75,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2010,73,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2011,75,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2012,76,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2013,68,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2014,80,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2015,97,17
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2016,96,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2017,103,42
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2018,98,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2019,103,17
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2020 ,100,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2021,687,17
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2022,701,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2023,685,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2024,691,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2025,674,16
+cc659ced142f,digepres,cc659ced142f_Estadistica-Gasto-Adm.-Central-Clasificacion-Objetal-Mensual-2004-2026-8.xlsx,2026,656,16
+90fdbf0531fc,digepres,90fdbf0531fc_Objetal-Anual_1990-2025-1.xlsx,1990-2002,23,14
+90fdbf0531fc,digepres,90fdbf0531fc_Objetal-Anual_1990-2025-1.xlsx,2003,20,2
+90fdbf0531fc,digepres,90fdbf0531fc_Objetal-Anual_1990-2025-1.xlsx,2004-2013,76,11
+90fdbf0531fc,digepres,90fdbf0531fc_Objetal-Anual_1990-2025-1.xlsx,2014 - 2025,127,13
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2017,188,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2018,174,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2019,194,17
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2020 ,169,17
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2021,162,17
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2022,150,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2023,177,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2024,220,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2025,223,16
+986746952676,digepres,986746952676_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Fuente-Especifica-2004-2026-10.xlsx,2026,177,16
+02b83f1ff720,digepres,02b83f1ff720_Fuente-Financiamiento-y-Organismo-Financiador-Anual_2004-2025-1.xlsx,Fuente Financ y Org Financ,325,23
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2017,88,42
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2018,77,16
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2019,82,21
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2020,84,21
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2021,76,17
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2022,79,17
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2023,75,17
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2024,82,17
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2025,89,16
+05635d643a59,digepres,05635d643a59_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-1.xlsx,2026,67,16
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2017,88,42
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2018,77,16
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2019,82,21
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2020,84,21
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2021,76,17
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2022,79,17
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2023,75,17
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2024,82,17
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2025,89,16
+cb31cde6c327,digepres,cb31cde6c327_Estadistica-Gasto-Adm.-Central-Fuente-Financiamiento-Organismo-Financiador-2004-2026-10.xlsx,2026,74,16
+301fced15703,digepres,301fced15703_Fuente-Financiamiento-Anual_2004-2020.xlsxf_.xlsx,Fuente Financiamiento 2004-2020,29,18
+321d302d924a,digepres,321d302d924a_Organismo-Financiador-Anual_2004-2020.xlsx,Org Financiador 2004-2020,163,18
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1966-67,27,4
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1968-69,26,4
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1970,26,3
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1971-74,27,6
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1975-1977,28,5
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1978-1981,28,6
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1982-1983,28,4
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1984-1989,28,8
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,1990-2002,23,14
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,2003-2004,20,4
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,2004-13,71,11
+57918bc85a37,digepres,57918bc85a37_Clasificacion-Objetal_1966-2016.xlsxf_.xlsx,2014-16,100,4
+09831d06762e,digepres,09831d06762e_Clasificacion-Institucional.xlsxf_.xlsx,Institucional,189,52
+9973eab92528,digepres,9973eab92528_Clasificacion-por-Fuente-de-Financiamiento_1966-2016.xlsxf_.xlsx,Fuente de Financiamiento,31,53
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1966-1967,67,4
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1968-,42,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1969,39,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1970,41,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1971-73,39,5
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1974,44,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1975-76,42,4
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1977-,41,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1978,47,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1979,47,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1980,46,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1981-,46,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1982-,44,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1983,46,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1984,47,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1985,48,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1986,46,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1987,46,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1988-89,50,4
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1990,45,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1991,39,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1992,41,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1993,44,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1994,41,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1995-1996,36,4
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,1997-2001,44,7
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2002,45,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2003,54,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2004-,59,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2005,59,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2006,62,2
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2007,66,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2008-09,59,4
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2010,58,3
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2011-13,60,5
+eac50cdd96a3,digepres,eac50cdd96a3_Clasificacion-Economica-de-Gastos_1966-2016.xlsxf_.xlsx,2014-16,72,5
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1930,13,2
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1931,13,6
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1932,15,2
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1933,13,2
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1934-1966,15,34
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1967,12,2
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,1968-2002,18,36
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,2003-2013,26,12
+6815b5407302,digepres,6815b5407302_Clasificacion-Fuente-del-Gasto-1930-2019.xlsxf_.xlsx,2014-2019,22,7
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1930,33,7
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1931,13,6
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1932-1933,35,3
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1934,43,7
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1935,35,7
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1936-1937,43,6
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1938-1940,40,7
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1941-1951,58,12
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1952,47,2
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1953,50,2
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1954,47,2
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1955-1962,64,9
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1963,46,2
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1964-1965,51,3
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1966-1967,34,3
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1968,48,2
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1969-1970,28,3
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,1971-2013,56,44
+3d07ab2456f8,digepres,3d07ab2456f8_Clasificacion-Institucional-del-Gasto-1930-2019.xlsxf_.xlsx,2014-2019,57,7
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1967,47,2
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1968,41,2
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1969,41,2
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1970-1971,35,3
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1972-1976,40,6
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1977-1978,37,3
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1979-1982,55,5
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1983,50,2
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1984-1987,60,5
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1988,57,7
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1989-1993,58,6
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1994-1998,61,6
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,1999-2002,61,5
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,2003-2013,51,12
+6c4d7dc51a6b,digepres,6c4d7dc51a6b_Clasificacion-Economica-del-Gasto-1967-2019.xlsxf_.xlsx,2015-2019,94,7
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,1967-1968,33,3
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,1969,32,2
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,1970-1971,35,3
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,1972-1974,38,4
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,1975-2002,49,29
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,2003-2013,47,12
+fe705cc9f03a,digepres,fe705cc9f03a_Clasificacion-Funcional-del-Gasto-1967-2019.xlsxf_.xlsx,2014-2019,60,7
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2014,31,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2015,47,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2016,52,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2017,54,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2018,57,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2019,57,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2020,58,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2021,86,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2022,85,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2023,86,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2024,95,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2025,83,16
+57bfd07b89ad,digepres,57bfd07b89ad_ESTADISTICA-INGRESOS-DESC-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2026,78,16
+c065eb531895,digepres,c065eb531895_Desc-Economica-Anual-2004-2024-1.xlsx,2014-2024,74,12
+96dd82cf6ba9,digepres,96dd82cf6ba9_Desc-Funcional-Anual-2004-2024-1.xlsx,2014-2024,126,12
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2014,68,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2015,58,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2016,72,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2017,92,42
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2018,97,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2019,91,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2020,95,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2021,98,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2022,97,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2023,100,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2024,97,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2025,102,16
+6bd4593b81cc,digepres,6bd4593b81cc_Estadistica-Gasto-Desc.-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-9.xlsx,2026,101,16
+deb0815694e3,digepres,deb0815694e3_Desc-Institucional-Anual-2004-2025.xlsx,2014-2025,106,13
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2014,75,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2015,69,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2016,93,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2017,99,42
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2018,101,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2019,97,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2020,97,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2021,588,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2022,583,34
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2023,598,34
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2024,614,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2025,575,16
+1be708fce631,digepres,1be708fce631_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2026,568,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2014,75,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2015,69,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2016,93,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2017,99,42
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2018,101,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2019,97,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2020,97,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2021,588,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2022,583,34
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2023,598,34
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2024,614,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2025,575,16
+42c1992a3529,digepres,42c1992a3529_Estadistica-Gasto-Desc.-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-1.xlsx,2026,552,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2014,45,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2015,41,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2016,44,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2017,53,42
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2018 ,52,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2019,50,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2020 ,49,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2021,50,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2022,53,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2023,56,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2024,60,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2025,64,16
+e628904721ac,digepres,e628904721ac_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2026,54,16
+a7bba355155f,digepres,a7bba355155f_Desc-Fuente-Financiamiento-y-Especifica-2014-2025.xlsx,2014-2025,63,13
+0aeb3c1cca59,digepres,0aeb3c1cca59_Desc-Fuente-Financiamiento-y-Organismo-F-Anual-2014-2025.xlsx,2014-2025,71,13
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2014,44,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2015,40,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2016,46,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2017,53,42
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2018,51,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2019,50,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2020,52,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2021,51,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2022,49,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2023,50,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2024,56,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2025,63,16
+452a748fe62a,digepres,452a748fe62a_Estadistica-Gasto-Desc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-9.xlsx,2026,54,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2014,46,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2015,44,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2016,52,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2017,53,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2018,51,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2019,55,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2020,56,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2021,77,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2022,64,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2023,74,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2024,72,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2025,72,16
+c51c104b4b57,digepres,c51c104b4b57_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Economica-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2026,68,16
+773302cefcb7,digepres,773302cefcb7_Economica-Anual_1990-2024-1.xlsxf_.xlsx,1990-2002,48,14
+773302cefcb7,digepres,773302cefcb7_Economica-Anual_1990-2024-1.xlsxf_.xlsx,2003-2013,53,12
+773302cefcb7,digepres,773302cefcb7_Economica-Anual_1990-2024-1.xlsxf_.xlsx,2014-2024,82,12
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2014,41,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2015,32,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2016,30,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2017,36,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2018 ,36,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2019 ,32,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2020,38,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2021,37,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2022,27,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2023,30,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2024,26,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2025,26,16
+92df3adea4d4,digepres,92df3adea4d4_Estadistica-Gasto-Seg.-Soc.-Clasificacion-Funcional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2026,27,16
+3c593b030fd1,digepres,3c593b030fd1_SS-Funcional-Anual-2004-2025.xlsx,Funcional 2014-2025,48,13
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2014,23,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2015 ,21,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2016 ,21,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2017,23,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2018,26,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2019,24,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2020,27,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2021,27,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2022,26,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2023,27,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2024,27,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2025,28,16
+9f23ab0e9a2e,digepres,9f23ab0e9a2e_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-6.xlsx,2026,28,16
+9ad8317c5719,digepres,9ad8317c5719_SS-Institucional-Anual-2004-2024-1-1-1.xlsx,Institucional 2014-2024,24,12
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2014,62,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2015,58,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2016,62,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2017,65,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2018,65,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2019 ,66,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2020,69,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2021,406,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2022,393,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2023,425,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2024,399,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2025,403,16
+0c3729465c1f,digepres,0c3729465c1f_Estadistica-Gasto-Seg.-Soc-Clasificacion-Objetal-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2026,371,16
+528bcfd2f159,digepres,528bcfd2f159_SS-Objetal-Anual-2004-2025.xlsx,Objetal 2014-2025,69,13
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2014,29,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2015,26,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2016,27,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2017,28,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2018,27,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2019,27,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2020,27,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2021,24,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2022,25,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2023,25,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2024,27,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2025,28,16
+4deda510b30c,digepres,4deda510b30c_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Fuente-Especifica-2004-2026-DIGEPRESRD-9.xlsx,2026,29,16
+c53f98d61548,digepres,c53f98d61548_SS-Fuente-de-Financiamiento-y-Fuente-Especifica-Anual-2025.xlsx,Fuen. Finac. y Espec. 2014-2025,29,13
+6c88f539eddb,digepres,6c88f539eddb_SS-Fuente-de-Financiamiento-y-Organismo-Financiador-Anual-2025.xlsx,Fuente y Org. Financ 2014-2025,38,13
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2014,29,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2015,27,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2016,30,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2017,48,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2018,30,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2019,27,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2020,27,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2021,25,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2022,25,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2023,25,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2024,29,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2025,28,16
+46b244039a86,digepres,46b244039a86_Estadistica-Gasto-Seg.-Soc.-Fuente-Financiamiento-Organismo-Financiador-2004-2026-DIGEPRESRD-10.xlsx,2026,30,16
+1c8f8ea05f2b,digepres,1c8f8ea05f2b_Copia-de-Recursos-Aerodom-cierre-2024-1.xlsx,Aerodom,287,5
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2009,77,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2010,76,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2011,76,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2012,80,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2013,74,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2014 ,56,15
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2015,117,15
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2016,104,15
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2017,98,15
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2018,162,15
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2019,157,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2020,171,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2021,270,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2022,266,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2023,260,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2024,258,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2025,266,16
+3b1b3d6ad162,digepres,3b1b3d6ad162_ESTADISTICA-INGRESOS-AC-CLASIFICACION-ECONOMICA-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2026,249,16
+2ffa2bc242f5,digepres,2ffa2bc242f5_Administracion-Central-Clasificacion-Economica-Anual_2003-2025-1.xlsx,2003-2013 ,83,13
+2ffa2bc242f5,digepres,2ffa2bc242f5_Administracion-Central-Clasificacion-Economica-Anual_2003-2025-1.xlsx,2014 -2025,189,13
+2ffa2bc242f5,digepres,2ffa2bc242f5_Administracion-Central-Clasificacion-Economica-Anual_2003-2025-1.xlsx,2014-2015,59,9
+3017001466cf,digepres,3017001466cf_Clasificacion-Economica-Anual_1990-2002.xlsx,Economica 1990-2002 ,48,15
+7d3d7acaa556,digepres,7d3d7acaa556_Clasificacion-de-Ingresos-Mensual_2009-2013-F-1-1.xlsx,Ingreso,334,67
+4e5661e9867b,digepres,4e5661e9867b_Clasificacion-de-Ingresos_2003-2013-2.xlsx,Ingreso 2003-2012,329,13
+c47130531b14,digepres,c47130531b14_Clasificacion-de-Ingresos_1990-2002-1.xlsx,Ingreso 1990-2002 ,540,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2009,18,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2010,18,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2011,18,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2012,26,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2013,18,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2014,14,15
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2015,17,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2016,18,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2017,16,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2018,16,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2019,16,17
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2020,16,17
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2021,11,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2022,17,17
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2023,117,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2024,155,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2025,157,16
+c641cdcf6d12,digepres,c641cdcf6d12_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-7.xlsx,2026,134,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2009,18,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2010,18,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2011,18,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2012,26,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2013,18,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2014,14,15
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2015,17,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2016,18,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2017,16,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2018,16,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2019,16,17
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2020,16,17
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2021,11,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2022,17,17
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2023,117,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2024,155,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2025,157,16
+034ee0a07833,digepres,034ee0a07833_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUALl-2009-2026-DIGEPRESRD-1.xlsx,2026,134,16
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2009,18,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2010,18,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2011,18,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2012,26,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2013,18,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2014,15,15
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2015,17,16
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2016,19,16
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2017,17,16
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2018,17,16
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2019,17,17
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2020,16,17
+2466026504cd,digepres,2466026504cd_ESTADISTICA-INGRESOS-AC-RECAUDADORA-MENSUAL-2009-2021-DIGEPRESRD-1.xlsx,2021,17,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2009,22,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2010,19,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2011,19,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2012,25,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2013,19,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2014,15,15
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2015,17,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2016,23,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2017,20,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2018,19,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2019,19,19
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2020,21,17
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2021,20,16
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2022,21,17
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2023,19,17
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2024,20,17
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2025,22,17
+a4cfd16d938d,digepres,a4cfd16d938d_ESTADISTICA-INGRESOS-AC-FUENTE-FINANCIAMIENTO-MENSUAL-2009-2026-DIGEPRESRD-7.xlsx,2026,22,17
+2d8d3b514145,digepres,2d8d3b514145_Administracion-Central-Clasificacion-Fuente-de-Financiamiento-Anual_2003-2025-1.xlsx,2004-2013,24,12
+2d8d3b514145,digepres,2d8d3b514145_Administracion-Central-Clasificacion-Fuente-de-Financiamiento-Anual_2003-2025-1.xlsx,2014-2025,27,15
+85ad2d89bf61,digepres,85ad2d89bf61_Clasificacion-por-Fuente-de-Financiamiento-Anual_1990-2013-1.xlsx,Fuente de Financiamiento,27,26
+b36abe3229d3,digepres,b36abe3229d3_Administracion-Central-Clasificacion-Organismo-Financiador-2003-2025-anual-1.xlsx,2009-2013,93,7
+b36abe3229d3,digepres,b36abe3229d3_Administracion-Central-Clasificacion-Organismo-Financiador-2003-2025-anual-1.xlsx,2014-2025,87,15
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1966,45,3
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx,1966-1970,46,7
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1971-1974,46,6
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1975-1978 ,38,6
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx,1979-1982  ,44,6
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1983-1986  ,42,6
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1987-1989   ,41,5
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx, 1990-2002 ,48,15
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx,2003-2013,83,13
+40e7491b357b,digepres,40e7491b357b_Clasificacion-Economica-de-Ingresos_1966-2016-2.xlsx,2014 -2016,120,4
+dfe4ec8e7c6d,digepres,dfe4ec8e7c6d_Clasificacion-por-Fuente-de-Financiamiento_1966-2016-2.xlsx,Fuente de Financiamiento,31,53
+5618cced33c6,digepres,5618cced33c6_Clasificacion-Institucional_1966-2016-2.xlsx,Institucional2,27,52
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1966,20,3
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1966-1970,18,7
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1971-1974,25,6
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1979-1982,109,6
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1983-1986 ,68,6
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1987-1989,81,5
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,1990-2002,104,16
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,2003-2008 ,150,9
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,2009-2013,93,7
+4f95bfec7d93,digepres,4f95bfec7d93_Clasificacion-por-Organismo-Financiador_1966-2016-2.xlsx,2014-2016,63,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1930-1933,63,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1934 ,156,8
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1935 ,118,10
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1936-1940,227,6
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1941-1946,296,7
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1947 ,256,6
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1948-1951,245,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1952-1962,344,12
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1963-1966,263,6
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1967 ,246,2
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1968 ,306,2
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1969-1972,302,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1973 ,53,3
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1974 ,304,3
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1975 ,55,2
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1976-1979,583,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1980-1989,601,16
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1990-1997,839,17
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1998 ,381,5
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,1999-2002,587,17
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,2003 ,173,4
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,2004-2006,258,17
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,2007-2013,74,21
+5bf7afe6828f,digepres,5bf7afe6828f_Clasificacion-Economica-de-Ingresos-1930-2019-1-1.xlsx,2014-2019,99,19
+cb8ca36c1f1a,digepres,cb8ca36c1f1a_Clasificacion-por-Oficina-Recaudadora-1948-2019-1-1.xlsx,1948-1965,18,19
+cb8ca36c1f1a,digepres,cb8ca36c1f1a_Clasificacion-por-Oficina-Recaudadora-1948-2019-1-1.xlsx,1966-2013,20,49
+cb8ca36c1f1a,digepres,cb8ca36c1f1a_Clasificacion-por-Oficina-Recaudadora-1948-2019-1-1.xlsx,2014-2019,18,7
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2014,50,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2015,68,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2016,92,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2017,88,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2018,101,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2019,103,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2020,109,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2021,114,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2022,120,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2023,121,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2024,127,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2025,85,16
+f9fa595fcbd2,digepres,f9fa595fcbd2_ESTADISTICA-INGRESOS-DESC-INSTITUCIONAL-MENSUAL-2014-2026-DIGEPRESRD-8.xlsx,2026,86,16
+1c52af6bc699,digepres,1c52af6bc699_Ingresos-Desc-Institucional-2014-2025-1.xlsx,2014-2025,115,13
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2014,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2015,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2016,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2017,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2018,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2019,18,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2020,19,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2021,19,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2022,20,16
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2023,25,17
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2024,26,17
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2025,27,17
+6b790fe35921,digepres,6b790fe35921_ESTADISTICAS-INGRESOS-DESC-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2026,28,17
+072698c7482c,digepres,072698c7482c_Ingresos-Desc-Fuente-de-financiamiento-2014-2025-1.xlsx,2014-2025,17,13
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2014,22,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2015,23,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2016,26,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2017,29,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2018,28,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2019,26,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2020,28,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2021,32,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2022,31,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2023,31,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2024,36,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2025,39,16
+40fd2d5704f2,digepres,40fd2d5704f2_ESTADISTICAS-INGRESOS-DESC-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-10.xlsx,2026,25,16
+bfb7d6def537,digepres,bfb7d6def537_Ingresos-Desc-Organismos-financiadores-2014-2025-1.xlsx,2014-2025,35,13
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2014,26,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2015,36,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2016,36,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2017,37,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2018,39,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2019,39,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2020,40,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2021,65,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2022,67,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2023,71,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2024,56,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2025,72,16
+119a1286f16f,digepres,119a1286f16f_ESTADISTICAS-INGRESOS-SS-CLASIFICACION-ECONOMICA-MENSUAL-2014-2026-DIGEPRESRD-12.xlsx,2026,66,16
+e3690d898dfc,digepres,e3690d898dfc_Ingresos-SS-Economica-Anual-2014-2025-1.xlsx,Económica 2014-2025,37,13
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2014,23,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2015 ,21,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2016 ,21,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2017,23,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2018,26,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2019,24,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2020,27,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2021,27,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2022,26,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2023,27,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2024,27,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2025,28,16
+803f7ddeee23,digepres,803f7ddeee23_Estadistica-Gasto-Seg.-Soc-Clasificacion-Institucional-Mensual-2004-2026-DIGEPRESRD-8.xlsx,2026,28,16
+00c6cee5d0bc,digepres,00c6cee5d0bc_Ingresos-SS-Institucional-Anual-2014-2025-1.xlsx,Institucional 2014-2025,25,13
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2014,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2015,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2016,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2017,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2018,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2019,19,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2020,20,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2021,16,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2022,18,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2023,15,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2024,16,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2025,17,16
+7f719247f676,digepres,7f719247f676_ESTADISTICAS-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2026,17,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2014,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2015,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2016,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2017,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2018,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2019,19,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2020,20,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2021,16,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2022,18,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2023,15,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2024,16,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2025,17,16
+68a319964776,digepres,68a319964776_ESTADISTICA-INGRESOS-SS-FUENTE-FINANCIAMIENTO-MENSUAL-2014-2026-DIGEPRESRD-7.xlsx,2026,17,16
+d985f320bef9,digepres,d985f320bef9_Ingresos-SS-Fuente-de-financiamiento-Anual-2014-2025-1.xlsx,Fuente de Financ. 2014-2025,16,13
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2014,17,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2015,18,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2016,18,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2017,17,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2018,17,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2019,17,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2020,27,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2021,18,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2022,18,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2023,17,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2024,19,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2025,19,16
+0bfed126f360,digepres,0bfed126f360_ESTADISTICAS-INGRESOS-SS-ORGANISMO-FINANCIADOR-MENSUAL-2014-2026-DIGEPRESRD-11.xlsx,2026,18,16
+6a92e800948b,digepres,6a92e800948b_Ingresos-SS-Organismo-financiador-Anual-2014-2025-1.xlsx,Org. Financiador 2014-2025,18,13
+e9f2e8149cb1,minerd,e9f2e8149cb1_Centros_Educativos_de_Rep_blica_Dominicana__2021.xls.xlsx,Hoja1,7605,12
+dd211798d526,minerd,dd211798d526_Centros_Educativos_de_Rep_blica_Dominicana__Per_odo_escolar_2022-2023.xlsx,Sheet1,7736,11
+45e2d34289a9,minerd,45e2d34289a9_8sq-centros-educativos-de-republica-dominicana-periodo-escolar-2023-2024.xlsx,2022-2023,18351,12
+563f7ac6727d,minerd,563f7ac6727d_RELACI_N_DE_CENTROS_EDUCATIVOS_2024-2025.xlsx,Hoja1,24072,9
+351bbf736926,minerd,351bbf736926_Estudiantes_Matriculados_por_Nivel__seg_n_Regional._2015-2021..xlsx,MATRÍCULA-NIVEL,231,6
+ea022cfb3daf,minerd,ea022cfb3daf_Estudiantes_Matriculados_por_Nivel__seg_n_Regional_y_Distrito._2015-2021..xlsx,Matric Reg y Dist,807,6
+7033ed20a71b,minerd,7033ed20a71b_Estudiantes_Matriculados_por_Sexo__seg_n_Regional_y_Distrito._2015-2021..xlsx,MATRICULA - SEXO,807,4
+4dd1319047ce,minerd,4dd1319047ce_Estudiantes_Matriculados_por_Sector__seg_n_Regional._2015-2021..xlsx,Matrícula Sector-Regional,109,5

@@ -1,0 +1,67 @@
+[
+  {
+    "tabla": "awards",
+    "filas": 584322,
+    "archivos": 12
+  },
+  {
+    "tabla": "awards_items",
+    "filas": 2666752,
+    "archivos": 12
+  },
+  {
+    "tabla": "awards_suppliers",
+    "filas": 673931,
+    "archivos": 12
+  },
+  {
+    "tabla": "bids_details",
+    "filas": 1318826,
+    "archivos": 12
+  },
+  {
+    "tabla": "bids_details_tenderers",
+    "filas": 1318826,
+    "archivos": 12
+  },
+  {
+    "tabla": "contracts",
+    "filas": 678198,
+    "archivos": 12
+  },
+  {
+    "tabla": "main",
+    "filas": 600314,
+    "archivos": 12
+  },
+  {
+    "tabla": "parties",
+    "filas": 1883130,
+    "archivos": 12
+  },
+  {
+    "tabla": "planning_documents",
+    "filas": 338256,
+    "archivos": 12
+  },
+  {
+    "tabla": "tender_documents",
+    "filas": 600314,
+    "archivos": 12
+  },
+  {
+    "tabla": "tender_items",
+    "filas": 3310838,
+    "archivos": 12
+  },
+  {
+    "tabla": "tender_sustainability",
+    "filas": 69591,
+    "archivos": 12
+  },
+  {
+    "tabla": "tender_tenderers",
+    "filas": 1282919,
+    "archivos": 12
+  }
+]

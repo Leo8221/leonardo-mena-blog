@@ -1,0 +1,46 @@
+tabla,filas,columnas,fuente,periodo
+banco_mundial.indicadores,1498,7,Banco Mundial WDI,""
+banco_mundial.observaciones,1083106,10,Banco Mundial WDI,1960-2026 según indicador
+bcrd.series,105295,13,BCRD,1984-01-01 / 2026-08-01
+bcrd.tipo_cambio,20520,9,BCRD,1985-01-01 / 2026-08-28
+dga.exportaciones_capitulo,9966,8,DGA,2017-01-01 / 2026-03-01
+dga.importaciones_capitulo,10553,8,DGA,2017-01-01 / 2026-03-01
+dgcp.awards,584322,7,DGCP / OCP,2015-2026
+dgcp.awards_items,2666752,15,DGCP / OCP,2015-2026
+dgcp.awards_suppliers,673931,7,DGCP / OCP,2015-2026
+dgcp.bids_details,1318826,9,DGCP / OCP,2015-2026
+dgcp.bids_details_tenderers,1318826,7,DGCP / OCP,2015-2026
+dgcp.contracts,678198,12,DGCP / OCP,2015-2026
+dgcp.main,600314,28,DGCP / OCP,2015-2026
+dgcp.parties,1883130,15,DGCP / OCP,2015-2026
+dgcp.planning_documents,338256,11,DGCP / OCP,2015-2026
+dgcp.tender_documents,600314,11,DGCP / OCP,2015-2026
+dgcp.tender_items,3310838,15,DGCP / OCP,2015-2026
+dgcp.tender_sustainability,69591,7,DGCP / OCP,2015-2026
+dgcp.tender_tenderers,1282919,7,DGCP / OCP,2015-2026
+digepres.conciliacion_filas,28237,8,DIGEPRES,""
+digepres.ejecucion_mensual,318595,15,DIGEPRES,2004-01-01 / 2026-07-01
+enae_2024.diccionario,2274,6,enae_2024,2024
+enae_2024.microdatos,1225,747,enae_2024,Levantamiento 2024; revisar periodo fiscal de cada variable
+enhogar_2022.diccionario_elegidos,1585,5,ONE,2022
+enhogar_2022.diccionario_personas,836,5,ONE,2022
+enhogar_2022.elegidos,35678,508,ONE,2022
+enhogar_2022.personas,105611,58,ONE,2022
+enief.microdatos,6676,897,enief,2019;2023
+meta.archivos_bcrd,16,12,BCRD,""
+meta.archivos_digepres,25,12,DIGEPRES,""
+minerd.centros_2021,7604,13,MINERD,2021; ciclo escolar no precisado
+minerd.centros_2022_2024,18350,13,MINERD,2022-2023 y 2023-2024
+minerd.centros_2024_2025,24070,10,MINERD,2024-2025
+minerd.matricula_detalle_2022_2023,1816,7,MINERD,2022-2023
+minerd.matricula_detalle_2023_2024,1776,7,MINERD,2023-2024
+minerd.matricula_edad_2015_2021,176,9,MINERD,2015-2016 a 2020-2021
+minerd.matricula_edad_2021_2024,239,9,MINERD,2021-2022 a 2023-2024
+minerd.matricula_nacionalidad,283,6,MINERD,2015-2016 a 2020-2021
+minerd.matricula_nivel,1226,7,MINERD,2015-2016 a 2023-2024
+minerd.matricula_sector,528,6,MINERD,2015-2016 a 2023-2024
+minerd.matricula_sexo,806,5,MINERD,2015-2016 a 2020-2021
+minerd.pruebas_nacionales,57586,17,MINERD,2016-2024
+mipymes_2023.microdatos,13130,127,mipymes_2023,Levantamiento 2023; variables economicas y credito referidas a 2022
+tss.empleadores,277,5,TSS,2003-06-01 / 2026-06-01
+tss.empleos,277,8,TSS,2003-06-01 / 2026-06-01

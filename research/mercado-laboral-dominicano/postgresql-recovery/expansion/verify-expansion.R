@@ -1,0 +1,57 @@
+source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
+con<-connect_pg();checks<-list()
+check<-function(id,sql,severity='error',note=''){
+ n<-as.numeric(dbGetQuery(con,sql)[[1]][1]);checks[[length(checks)+1L]]<<-data.table(control=id,observado=n,estado=if(n==0)'ok'else severity,nota=note);cat(id,n,'\n');n
+}
+check('series_sin_claves_duplicadas',"SELECT count(*) FROM(SELECT dataset,serie,unidad,periodo FROM bcrd.series GROUP BY 1,2,3,4 HAVING count(*)>1) q")
+check('series_sin_valores_no_finitos',"SELECT count(*) FROM bcrd.series WHERE valor IN('Infinity'::float8,'-Infinity'::float8,'NaN'::float8)")
+check('series_sin_fechas_futuras',"SELECT count(*) FROM bcrd.series WHERE periodo>current_date")
+check('tss_componentes',"SELECT count(*) FROM tss.empleos WHERE total<>empresa_privada+publica_centralizada+publica_descentralizada")
+check('tss_meses_sin_huecos',"SELECT count(*) FROM(SELECT periodo,lag(periodo) OVER(ORDER BY periodo) anterior FROM tss.empleos) x WHERE periodo<>anterior+interval '1 month'")
+check('matricula_regional_vs_distrital',"SELECT count(*) FROM(SELECT periodo_escolar,nivel,sum(estudiantes) FILTER(WHERE nivel_geografico='regional') a,sum(estudiantes) FILTER(WHERE nivel_geografico='distrito') b FROM analitica.educacion_matricula_nivel GROUP BY 1,2) x WHERE a<>b")
+check('matricula_codigo_periodo_fuente',"SELECT count(*) FROM minerd.matricula_nivel WHERE periodo='202120222'",'advertencia','Código original con un dígito de más: normalizado explícitamente a 2021-2022 en la vista.')
+check('pruebas_componentes_sexo',"SELECT count(*) FROM analitica.educacion_pruebas WHERE estudiantes<>mujeres+hombres",'advertencia','Desacuerdo presente en la fuente. No recomponer el total a partir de componentes sin revisar.')
+check('pruebas_componentes_resultado',"SELECT count(*) FROM analitica.educacion_pruebas WHERE estudiantes<>promovidos+aplazados",'advertencia','No imputar el componente para forzar coincidencia.')
+check('pruebas_duplicados_exactos_fuente',"SELECT count(*)-count(distinct to_jsonb(p)-'fila_origen') FROM minerd.pruebas_nacionales p",'advertencia','Duplicados idénticos colapsados solamente en la vista analítica; originales intactos.')
+check('pruebas_vista_unica_por_contenido',"SELECT abs((SELECT count(*) FROM analitica.educacion_pruebas)-(SELECT count(distinct to_jsonb(p)-'fila_origen') FROM minerd.pruebas_nacionales p))")
+check('pruebas_clave_repetida',"SELECT count(*) FROM(SELECT anio,convocatoria,codigo_regional,codigo_distrito,codigo_centro_pruebas,nivel_modalidad FROM analitica.educacion_pruebas GROUP BY 1,2,3,4,5,6 HAVING count(*)>1) x",'advertencia','Claves con contenidos distintos después de quitar duplicados exactos; se conservan y señalan con clave_ambigua.')
+check('fiscal_unidad_pendiente',"SELECT count(*) FROM digepres.ejecucion_mensual WHERE valor_dop IS NULL",'advertencia','Se conserva el original; estas celdas no aparecen en presupuesto_mensual.')
+check('fiscal_filas_no_conciliadas',"SELECT count(*) FROM digepres.conciliacion_filas WHERE estado='diferencia'",'advertencia','Suma mensual y total publicado difieren. Se excluye la fila de la vista predeterminada.')
+check('fiscal_vista_sin_filas_cuestionadas',"SELECT count(*) FROM analitica.presupuesto_mensual e JOIN digepres.conciliacion_filas c USING(fuente_id,hoja,fila_excel) WHERE c.estado='diferencia'")
+check('dgcp_proceso_unico',"SELECT count(*)-count(distinct ocid) FROM dgcp.main")
+check('dgcp_contratos_sin_proceso',"SELECT count(*) FROM dgcp.contracts c WHERE NOT EXISTS(SELECT 1 FROM dgcp.main m WHERE m.ocid=c.main_ocid AND m.id=c.main_id)")
+check('dgcp_contrato_clave_repetida',"SELECT count(*) FROM(SELECT main_ocid,main_id,id FROM dgcp.contracts GROUP BY 1,2,3 HAVING count(*)>1) x")
+check('dgcp_union_contratos_sin_multiplicar',"SELECT abs((SELECT count(*) FROM dgcp.contracts)-(SELECT count(*) FROM analitica.compras_contratos))")
+check('dgcp_periodo_contractual_invertido',"SELECT count(*) FROM dgcp.contracts WHERE period_startdate>period_enddate",'advertencia','Anomalía de fechas publicada por la fuente; no interpretarla como duración válida.')
+check('dgcp_monto_negativo',"SELECT count(*) FROM dgcp.contracts WHERE value_amount<0",'advertencia','Conservar revisiones/errores fuente; revisar antes de estimar totales.')
+check('enhogar_elegidos_sin_persona',"SELECT count(*) FROM enhogar_2022.elegidos e WHERE NOT EXISTS(SELECT 1 FROM enhogar_2022.personas p WHERE p.upm=e.upm AND p.hvivien=e.hvivien AND p.hhogar=e.hhogar AND p.hlinea=e.hlinea)",'advertencia','Universo de elegidos distinto: factor y no respuesta propios.')
+check('wdi_sin_diccionario',"SELECT count(*) FROM banco_mundial.observaciones o WHERE NOT EXISTS(SELECT 1 FROM banco_mundial.indicadores i WHERE i.indicador=o.indicador)")
+check('wdi_valores_futuros',"SELECT count(*) FROM banco_mundial.observaciones WHERE anio>extract(year from current_date)")
+# Resolve CSV scale using an independent official DGA publication for two years.
+trade<-dbGetQuery(con,"SELECT extract(year FROM periodo)::int AS anio,sum(importaciones)/1e6 AS millones_usd FROM dga.importaciones_capitulo WHERE periodo<DATE '2019-01-01' GROUP BY 1 ORDER BY 1")
+stopifnot(identical(trade$anio,c(2017L,2018L)),all(abs(trade$millones_usd-c(18016.12,20591.22))<0.5))
+exports2017<-dbGetQuery(con,"SELECT sum(exportaciones)/1e6 n FROM dga.exportaciones_capitulo WHERE periodo>=DATE '2017-01-01' AND periodo<DATE '2018-01-01'")$n
+stopifnot(abs(exports2017-8831.18)<0.5)
+write_json(list(comparison=trade,official_millions=c(18016.12,20591.22),exports2017_millions=exports2017,exports2017_official=8831.18,tolerance_millions=0.5,source='https://www.aduanas.gob.do/media/meapdim1/revista-de-comercio-enero-diciembre-2018-v1.pdf',interpretation='USD FOB en el CSV; el rótulo millones del catálogo no describe la escala física. Comparaciones de importaciones 2017-2018 y exportaciones 2017. Exportaciones 2018 no concilia exactamente con esa publicación: no se imputa ni se certifica equivalencia de versiones.'),file.path(base,'qa/dga-scale.json'),pretty=TRUE,auto_unbox=TRUE)
+dbExecute(con,"CREATE OR REPLACE VIEW analitica.comercio_capitulo AS SELECT periodo,'importaciones'::text AS flujo,codigo_capitulo::text,capitulo_descripcion AS capitulo,importaciones AS valor_original,'USD FOB; escala contrastada'::text AS unidad,importaciones AS valor_usd,importaciones/1e6 AS millones_usd FROM dga.importaciones_capitulo UNION ALL SELECT periodo,'exportaciones'::text,codigo_capitulo::text,capitulo_descripcion,exportaciones,'USD FOB; escala contrastada'::text,exportaciones,exportaciones/1e6 FROM dga.exportaciones_capitulo")
+dbExecute(con,"UPDATE meta.tablas SET notas='Importes originales en USD FOB. Escala contrastada con publicación DGA 2018 para importaciones 2017-2018 y exportaciones 2017; ver qa/dga-scale.json. La serie exportadora 2018 no coincide exactamente con aquella edición. No multiplicar importes por un millón por el título del catálogo.' WHERE tabla IN ('dga.importaciones_capitulo','dga.exportaciones_capitulo')")
+# Refresh exact counts and null profiles in a single pass per physical table.
+inventory<-dbGetQuery(con,'SELECT * FROM meta.tablas ORDER BY tabla');counts<-list()
+for(i in seq_len(nrow(inventory))){
+ target<-inventory$tabla[i];parts<-strsplit(target,'.',fixed=TRUE)[[1]];id<-Id(schema=parts[1],table=parts[2]);cols<-dbListFields(con,id)
+ terms<-paste0('count(*) FILTER(WHERE ',dbQuoteIdentifier(con,cols),' IS NULL) AS ',dbQuoteIdentifier(con,cols))
+ query<-paste('SELECT count(*) AS _rows,',paste(terms,collapse=','),'FROM',dbQuoteIdentifier(con,id));stats<-dbGetQuery(con,query)
+ stopifnot(as.numeric(stats$`_rows`)==as.numeric(inventory$filas[i]))
+ actualtypes<-dbGetQuery(con,'SELECT column_name,data_type FROM information_schema.columns WHERE table_schema=$1 AND table_name=$2 ORDER BY ordinal_position',params=list(parts[1],parts[2]))
+ for(j in seq_along(cols)){
+  dbExecute(con,'INSERT INTO meta.columnas(tabla,posicion,nombre_sql,nombre_original,tipo_sql,nulos) VALUES($1,$2,$3,$3,$4,$5) ON CONFLICT(tabla,posicion) DO UPDATE SET nulos=EXCLUDED.nulos,tipo_sql=EXCLUDED.tipo_sql',params=list(target,j,cols[j],actualtypes$data_type[j],as.numeric(stats[[cols[j]]])))
+ }
+ counts[[target]]<-data.table(tabla=target,filas=as.numeric(stats$`_rows`),columnas=length(cols),fuente=inventory$fuente[i],periodo=inventory$periodo[i])
+ cat('Verified counts and nulls',target,as.numeric(stats$`_rows`),'\n')
+}
+allchecks<-rbindlist(checks);fwrite(allchecks,file.path(base,'qa/database-checks.csv'));fwrite(rbindlist(counts),file.path(base,'qa/table-inventory.csv'))
+dbExecute(con,'CREATE UNIQUE INDEX IF NOT EXISTS bcrd_series_clave ON bcrd.series(dataset,serie,unidad,periodo)')
+dbExecute(con,'CREATE INDEX IF NOT EXISTS fiscal_conciliacion_clave ON digepres.conciliacion_filas(fuente_id,hoja,fila_excel,estado)')
+summary<-list(database='economia_rd',validated_at=format(Sys.time(),'%Y-%m-%dT%H:%M:%S%z'),status=if(any(allchecks$estado=='error'))'error'else'validada_con_advertencias',tables=length(counts),rows=sum(vapply(counts,function(z)z$filas,numeric(1))),checks=nrow(allchecks),warnings=sum(allchecks$estado=='advertencia'),errors=sum(allchecks$estado=='error'),database_bytes=as.numeric(dbGetQuery(con,"SELECT pg_database_size(current_database()) n")$n),coverage=dbGetQuery(con,'SELECT dataset,frecuencia,min(periodo) AS desde,max(periodo) AS hasta,count(*) AS observaciones FROM bcrd.series GROUP BY 1,2 ORDER BY 1'),wdi=dbGetQuery(con,"SELECT count(*) AS observaciones,count(distinct indicador) AS indicadores,count(distinct pais_iso3) AS paises_y_agregados,min(anio) AS desde,max(anio) AS hasta,count(*) FILTER(WHERE indicador LIKE 'SE.%') AS educacion FROM banco_mundial.observaciones"))
+write_json(summary,file.path(base,'qa/validation-summary.json'),pretty=TRUE,auto_unbox=TRUE,na='null')
+stopifnot(!any(allchecks$estado=='error'));print(allchecks);dbDisconnect(con)

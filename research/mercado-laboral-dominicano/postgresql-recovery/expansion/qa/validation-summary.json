@@ -1,0 +1,149 @@
+{
+  "database": "economia_rd",
+  "validated_at": "2026-08-30T11:19:46-0400",
+  "status": "validada_con_advertencias",
+  "tables": 45,
+  "rows": 17186057,
+  "checks": 24,
+  "warnings": 9,
+  "errors": 0,
+  "database_bytes": 5810575039,
+  "coverage": [
+    {
+      "dataset": "canasta_quintiles",
+      "frecuencia": "mensual",
+      "desde": "2018-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 618
+    },
+    {
+      "dataset": "canasta_regiones",
+      "frecuencia": "mensual",
+      "desde": "2020-10-01",
+      "hasta": "2026-07-01",
+      "observaciones": 280
+    },
+    {
+      "dataset": "credito_destino",
+      "frecuencia": "mensual",
+      "desde": "1996-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 56853
+    },
+    {
+      "dataset": "depositos_provincias",
+      "frecuencia": "trimestral",
+      "desde": "2014-01-01",
+      "hasta": "2026-04-01",
+      "observaciones": 1750
+    },
+    {
+      "dataset": "imae_2018",
+      "frecuencia": "mensual",
+      "desde": "2007-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 3122
+    },
+    {
+      "dataset": "ipc_grupos",
+      "frecuencia": "mensual",
+      "desde": "1999-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 7932
+    },
+    {
+      "dataset": "ipc_nacional",
+      "frecuencia": "mensual",
+      "desde": "1984-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 2555
+    },
+    {
+      "dataset": "ipc_quintiles",
+      "frecuencia": "mensual",
+      "desde": "2020-10-01",
+      "hasta": "2026-07-01",
+      "observaciones": 700
+    },
+    {
+      "dataset": "ipc_regiones",
+      "frecuencia": "mensual",
+      "desde": "2011-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 1496
+    },
+    {
+      "dataset": "ipc_subyacente",
+      "frecuencia": "mensual",
+      "desde": "2000-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 1276
+    },
+    {
+      "dataset": "ipc_subyacente_cierre_anual",
+      "frecuencia": "anual",
+      "desde": "2000-12-01",
+      "hasta": "2025-12-01",
+      "observaciones": 52
+    },
+    {
+      "dataset": "pib_origen_2018_acumulado",
+      "frecuencia": "trimestral_acumulada",
+      "desde": "2007-01-01",
+      "hasta": "2026-01-01",
+      "observaciones": 11687
+    },
+    {
+      "dataset": "pib_origen_2018_trimestral",
+      "frecuencia": "trimestral",
+      "desde": "2007-01-01",
+      "hasta": "2026-01-01",
+      "observaciones": 11687
+    },
+    {
+      "dataset": "politica_monetaria",
+      "frecuencia": "mensual",
+      "desde": "2004-01-01",
+      "hasta": "2026-08-01",
+      "observaciones": 816
+    },
+    {
+      "dataset": "prestamos_provincias",
+      "frecuencia": "trimestral",
+      "desde": "2014-01-01",
+      "hasta": "2026-04-01",
+      "observaciones": 1750
+    },
+    {
+      "dataset": "remesas",
+      "frecuencia": "mensual",
+      "desde": "2010-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 199
+    },
+    {
+      "dataset": "reservas",
+      "frecuencia": "mensual",
+      "desde": "1985-01-01",
+      "hasta": "2026-07-01",
+      "observaciones": 1281
+    },
+    {
+      "dataset": "tasas_activas_mn",
+      "frecuencia": "mensual",
+      "desde": "2001-12-01",
+      "hasta": "2026-07-01",
+      "observaciones": 1241
+    }
+  ],
+  "wdi": [
+    {
+      "observaciones": 1083106,
+      "indicadores": 1497,
+      "paises_y_agregados": 25,
+      "desde": 1960,
+      "hasta": 2025,
+      "educacion": 79000
+    }
+  ]
+}

@@ -25,6 +25,6 @@ Son porcentajes descriptivos de primera respuesta, no una medida del saldo de ah
 
 ## Fuentes y materiales
 
-- [Constructor de figuras](../../../research/build-requested-methodology-visuals.R)
+- [Constructor de figuras](../../../research/build-epicteto-fondo-emergencia.R)
 - [Datos procesados](../../../research/epicteto-fondo-emergencia/data/procesados/)
 - [Mapa de figuras](../../../research/epicteto-fondo-emergencia/chart-map.csv)
