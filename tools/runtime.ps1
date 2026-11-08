@@ -17,17 +17,12 @@ function Initialize-BlogRuntime {
   $env:R_HOME = $rHome
   $env:R_LIBS_USER = $library
   $env:Path = "$rBin;$rHome\bin;$env:Path"
-  # Un locale heredado de Linux puede romper los acentos de R en Windows.
-  # Quitamos esa herencia y comprobamos UTF-8 antes de generar ningún gráfico.
-  foreach ($name in @('LC_ALL', 'LC_CTYPE', 'LC_COLLATE', 'LC_MONETARY', 'LC_TIME', 'LANG')) {
+  # Esta sesión puede heredar C.UTF-8, que R en Windows rechaza y convierte en C.
+  # Sin esas tres variables, R usa el locale UTF-8 de Windows. No tocamos el sistema.
+  foreach ($name in @('LC_ALL', 'LC_CTYPE', 'LANG')) {
     Remove-Item -Path "Env:$name" -ErrorAction SilentlyContinue
   }
   & $rScript -e "if (!isTRUE(l10n_info()[['UTF-8']])) stop('R no esta leyendo UTF-8. Render cancelado.')"
   if ($LASTEXITCODE -ne 0) { throw 'La comprobacion UTF-8 de R fallo.' }
-  if ($WithQuarto) {
-    $env:LOCALAPPDATA = Join-Path $root '.quarto-localappdata'
-    $env:APPDATA = Join-Path $root '.quarto-appdata'
-    New-Item -ItemType Directory -Force -Path $env:LOCALAPPDATA, $env:APPDATA | Out-Null
-  }
   return [pscustomobject]@{ Root = $root; RScript = $rScript; Quarto = $quarto }
 }

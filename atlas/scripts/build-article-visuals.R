@@ -12,11 +12,11 @@ suppressPackageStartupMessages({
   library(rnaturalearth)
 })
 
-options(encoding = "UTF-8")
-suppressWarnings({
-  locale_ok <- Sys.setlocale("LC_CTYPE", "Spanish_Dominican Republic.utf8")
-  if (is.na(locale_ok)) Sys.setlocale("LC_CTYPE", "Spanish_Dominican Republic.1252")
-})
+# El wrapper prepara el locale antes de arrancar R. Cambiarlo aquí puede romper
+# los textos ya leídos; si se ejecuta directamente, comprobamos el entorno.
+if (!isTRUE(l10n_info()[["UTF-8"]])) {
+  stop("R no está leyendo UTF-8. Usa tools/run-r.ps1.", call. = FALSE)
+}
 
 sf_use_s2(FALSE)
 
@@ -133,7 +133,7 @@ tourism_country <- read_csv_utf8(source_cache_path("tourism-reasons", file.path(
       country_key == "MEXICO" ~ "Mexico",
       country_key == "HAITI" ~ "Haiti",
       country_key == "REPUBLICA DOMINICANA" ~ "Dominican Republic",
-      country_key == "CURAZAO" ~ "Cura\u00e7ao",
+      country_key == "CURAZAO" ~ "Curaçao",
       str_detect(country_key, "CAICOS Y TURCAS") ~ "Turks and Caicos Islands",
       str_detect(country_key, "VIRGENES AMERICANAS") ~ "United States Virgin Islands",
       country_key == "SAN MARTIN" ~ "Saint Martin",
@@ -204,13 +204,13 @@ employment <- read_csv_utf8(source_cache_path("transport-tss-workers-2021", file
     province_key = normalize_key(provincia),
     province = case_when(
       province_key == "SANTIAGO DE LOS CABALLEROS" ~ "Santiago",
-      province_key == "MONSENOR NOUEL" ~ "Monse\u00f1or Nouel",
-      province_key == "MARIA TRINIDAD SANCHEZ" ~ "M. Trinidad S\u00e1nchez",
+      province_key == "MONSENOR NOUEL" ~ "Monseñor Nouel",
+      province_key == "MARIA TRINIDAD SANCHEZ" ~ "M. Trinidad Sánchez",
       province_key == "SAN JUAN DE LA MAGUANA" ~ "San Juan",
-      province_key == "SAN CRISTOBAL" ~ "San Crist\u00f3bal",
-      province_key == "SAN JOSE DE OCOA" ~ "San Jos\u00e9 de Ocoa",
-      province_key == "SANCHEZ RAMIREZ" ~ "S\u00e1nchez Ram\u00edrez",
-      province_key == "DAJABON" ~ "Dajab\u00f3n",
+      province_key == "SAN CRISTOBAL" ~ "San Cristóbal",
+      province_key == "SAN JOSE DE OCOA" ~ "San José de Ocoa",
+      province_key == "SANCHEZ RAMIREZ" ~ "Sánchez Ramírez",
+      province_key == "DAJABON" ~ "Dajabón",
       TRUE ~ clean_label(stri_trans_general(provincia, "Latin-ASCII"))
     )
   )
@@ -231,7 +231,7 @@ transport_space <- employment |>
     median_rent_thousand = median_rent_rd / 1000,
     category = case_when(
       province == "Distrito Nacional" ~ "DN",
-      province %in% c("Santo Domingo", "San Crist\u00f3bal") ~ "Periurbana GSD",
+      province %in% c("Santo Domingo", "San Cristóbal") ~ "Periurbana GSD",
       TRUE ~ "Resto"
     )
   ) |>
@@ -261,10 +261,10 @@ debt <- read_csv_utf8(source_cache_path("debt-service-rd", file.path(root, "post
 payload <- list(
   sources = list(
     list(title = "Densidad empresarial por provincia", article = "2026-01-06-Perpectiva_del_desarrollo", href = "../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/index.html", files = c("PROVCenso2010.shp", "empresas registradas 2015-2024", "poblacion ONE")),
-    list(title = "MiPyMES por regi\u00f3n", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),
-    list(title = "Turismo por pa\u00eds y motivo", article = "2026-01-20-Turismo_expansion", href = "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html", files = c("razones_turismo.csv", "rnaturalearth")),
+    list(title = "MiPyMES por región", article = "2026-02-14-mipymes-rd", href = "../posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html", files = c("REGCenso2010.shp", basename(mipyme_path))),
+    list(title = "Turismo por país y motivo", article = "2026-01-20-Turismo_expansion", href = "../posts/republica-habla-de/2026-01-20-Turismo_expansion/index.html", files = c("razones_turismo.csv", "rnaturalearth")),
     list(title = "Transporte masivo y empleo formal", article = "2026-03-04-transporte-masivo", href = "../posts/republica-habla-de/2026-03-04-transporte-masivo/index.html", files = c("tss_trabajadores_provincia_2021.csv", "mipymes_alquiler_prov_expandido.csv")),
-    list(title = "Deuda p\u00fablica", article = "2025-12-19_deuda_publica", href = "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html", files = c("deuda_rd.csv"))
+    list(title = "Deuda pública", article = "2025-12-19_deuda_publica", href = "../posts/republica-habla-de/2025-12-19_deuda_publica/index.html", files = c("deuda_rd.csv"))
   ),
   tourism = list(
     treemap = tourism_treemap,
