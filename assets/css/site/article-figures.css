@@ -1,14 +1,17 @@
 body.editorial-post {
   #quarto-document-content :is(.cell-output-display, .quarto-figure, figure):has(img, svg, canvas) {
-    position: relative;
     width: 100%;
     margin: 2rem auto;
   }
 
-  /* Quarto envuelve una figura hasta tres veces. Solo el contenedor exterior
-     necesita espacio; sumar los márgenes deja huecos alrededor del gráfico. */
+  /* Quarto anida varios contenedores; el espacio pertenece al exterior. */
   #quarto-document-content :is(.cell-output-display, .quarto-figure) :is(.quarto-figure, figure) {
     margin: 0;
+  }
+
+  #quarto-document-content .cell-output-display:has(.article-figure) {
+    /* El scroll del gráfico vive dentro de la figura, no en la celda de R. */
+    overflow: visible;
   }
 
   #quarto-document-content :is(figure, .cell-output-display) :is(img, svg, canvas) {
@@ -20,122 +23,108 @@ body.editorial-post {
 
   figcaption {
     font-family: var(--lm-font-sans);
-    font-size: 0.85rem;
-    color: var(--lm-text-muted);
-    margin-top: 1rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--lm-border-dark);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--lm-text-soft);
+    margin: 0;
+    padding-top: 0.65rem;
+    text-align: left;
   }
-}
 
-.article-figure-tools,
-.article-figure-modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
+  .article-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1rem;
+    align-items: start;
+    scroll-margin-block: 5rem 1rem;
+
+    > :not(figcaption, .article-figure-tools) {
+      grid-column: 1 / -1;
+    }
+
+    figcaption {
+      grid-column: 1;
+    }
+  }
+
+  .article-figure-viewport {
+    overflow: auto;
+    /* Los colores de los datos se conservan también en el tema oscuro. */
+    background: var(--lm-color-cream);
+
+    > :is(img, svg, canvas) {
+      cursor: zoom-in;
+    }
+  }
+
+  #quarto-document-content .is-expanded .article-figure-viewport {
+    max-height: 70dvh;
+    overscroll-behavior-x: contain;
+
+    > :is(img, svg, canvas) {
+      /* out-width de Quarto puede fijar width en el propio elemento. */
+      min-width: 760px;
+      width: 100%;
+      max-width: none;
+      cursor: auto;
+    }
+  }
 }
 
 .article-figure-tools {
-  margin-bottom: 0.65rem;
+  grid-column: 2;
+  justify-self: end;
 }
 
-.article-figure-expand,
-.article-figure-modal button {
+.article-figure-expand {
   min-height: var(--lm-control-min);
-  border: 1px solid var(--lm-border-dark);
-  border-radius: var(--lm-radius-xs);
-  background: var(--lm-bg-card);
-  color: var(--lm-text-main);
+  padding: 0.25rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--lm-terracota-dark);
   cursor: pointer;
-  font-family: var(--lm-font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 0 0.85rem;
+  font: 600 0.8rem var(--lm-font-sans);
+  white-space: nowrap;
+  text-underline-offset: 0.25em;
 
   &:is(:hover, :focus-visible) {
-    border-color: var(--lm-terracota);
-    color: var(--lm-terracota-dark);
+    text-decoration: underline;
   }
 }
 
-/* El dialog nativo mantiene el foco dentro y permite cerrar con Escape. */
-.article-figure-modal {
-  width: min(1180px, calc(100% - 1rem));
-  max-width: none;
-  max-height: calc(100dvh - 2rem);
-  margin: auto;
-  padding: 0;
-  border: 1px solid var(--lm-border-dark);
-  border-radius: var(--lm-radius-xs);
-  background: var(--lm-bg-card);
-  color: var(--lm-text-main);
-  overflow: hidden;
+.article-figure-hint {
+  padding-top: 0.4rem;
+  color: var(--lm-text-muted);
+  font: 0.75rem/1.5 var(--lm-font-sans);
+}
 
-  &[open] {
-    display: grid;
-    grid-template-rows: auto auto minmax(0, 1fr) auto;
+/* En escritorio el gráfico puede usar el aire de los lados sin ensanchar
+   los párrafos. En móvil se recorre dentro de su propio espacio. */
+@media (min-width: 1100px) {
+  body.editorial-post #quarto-document-content figure.article-figure.is-expanded {
+    width: min(1060px, calc(100vw - 8rem));
+    margin-inline: calc((100% - min(1060px, calc(100vw - 8rem))) / 2);
   }
 
-  &::backdrop {
-    background: rgb(25 27 31 / 74%);
+  body.editorial-post #quarto-document-content .is-expanded .article-figure-viewport {
+    max-height: none;
   }
 }
 
-.article-figure-modal-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--lm-border);
-  padding: 0.7rem;
-}
+@media print {
+  .article-figure-tools,
+  .article-figure-hint {
+    display: none;
+  }
 
-.article-figure-modal-title {
-  margin: 0;
-  font-family: var(--lm-font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
+  body.editorial-post #quarto-document-content .is-expanded .article-figure-viewport {
+    max-height: none;
+    overflow: visible;
 
-.article-figure-hint,
-.article-figure-caption {
-  margin: 0;
-  padding: 0.65rem 0.9rem;
-  font-family: var(--lm-font-sans);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: var(--lm-text-soft);
-}
-
-.article-figure-caption {
-  max-height: 20dvh;
-  overflow: auto;
-}
-
-.article-figure-viewport {
-  overflow: auto;
-  overscroll-behavior: contain;
-  max-height: 65dvh;
-  padding: 0.75rem;
-}
-
-.article-figure-viewport.is-zoomed .article-figure-media {
-  /* Las imágenes de R pueden tener miles de píxeles por su resolución de
-     impresión. El zoom depende del espacio de lectura, no de esos píxeles. */
-  width: max(960px, 150%);
-}
-
-.article-figure-media > :is(img, svg, canvas) {
-  display: block;
-  margin: 0;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  max-height: calc(65dvh - 1.5rem);
-  object-fit: contain;
-}
-
-.article-figure-viewport.is-zoomed .article-figure-media > :is(img, svg, canvas) {
-  max-height: none;
+    > :is(img, svg, canvas) {
+      min-width: 0;
+      width: 100%;
+    }
+  }
 }

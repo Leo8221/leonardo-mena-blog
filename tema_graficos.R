@@ -20,7 +20,7 @@ pal <- list(
   texto_soft = "#4a443e",
   texto_muted= "#73695f",
 
-  crema      = "#faf8f3",
+  crema      = "#f7f7f4",
   blanco     = "#ffffff",
   gris_claro = "#f5f1e8",
 
@@ -70,12 +70,9 @@ theme_lm <- function(grid = "y") {
 
       panel.grid.minor = element_blank(),
 
+      # Una sola superficie, como la página: los datos no necesitan otro marco.
       plot.background = element_rect(fill = pal$crema, color = NA),
-      panel.background = element_rect(
-        fill = pal$blanco,
-        color = pal$border_dark,
-        linewidth = 0.4
-      ),
+      panel.background = element_blank(),
 
       legend.position = "top",
       legend.justification = "left",
@@ -87,7 +84,7 @@ theme_lm <- function(grid = "y") {
       strip.background = element_rect(fill = pal$gris_claro, color = pal$border_dark),
       strip.text = element_text(size = 11, face = "bold", color = pal$texto),
 
-      plot.margin = margin(15, 15, 15, 15)
+      plot.margin = margin(12, 8, 12, 8)
     )
 }
 

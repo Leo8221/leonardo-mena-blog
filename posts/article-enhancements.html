@@ -23,90 +23,60 @@
     titleBlock.appendChild(meta);
   }
 
-  const figureTargets = Array.from(content.querySelectorAll(
-    ".quarto-figure, figure"
-  )).filter((node) => {
-    if (node.closest(".article-figure-modal")) return false;
-    if (node.dataset.figureEnhanced === "true") return false;
-    // Quarto envuelve figure en otro contenedor: añadimos un solo botón por gráfico.
-    if (node.closest(".quarto-figure") && !node.classList.contains("quarto-figure")) return false;
-    return node.querySelector("img, svg, canvas");
-  });
+  content.querySelectorAll("figure").forEach((figure, index) => {
+    const media = figure.querySelector("img, svg, canvas");
+    // Un enlace o un gráfico interactivo ya tiene su propia acción.
+    if (!media || media.closest("a, .html-widget") || figure.parentElement.closest("figure")) return;
+    figure.classList.add("article-figure");
 
-  if (!figureTargets.length) return;
+    const viewport = document.createElement("div");
+    viewport.className = "article-figure-viewport";
+    viewport.id = `article-figure-${index + 1}`;
+    viewport.setAttribute("role", "region");
+    viewport.setAttribute("aria-label", `Gráfico ${index + 1} ampliado; usa las flechas para recorrerlo`);
+    media.before(viewport);
+    viewport.appendChild(media);
 
-  const modal = document.createElement("dialog");
-  modal.className = "article-figure-modal";
-  modal.setAttribute("aria-labelledby", "article-figure-modal-title");
-  modal.innerHTML = `
-    <div class="article-figure-modal-head">
-      <p class="article-figure-modal-title" id="article-figure-modal-title">Gráfico ampliado</p>
-      <div class="article-figure-modal-actions">
-        <button class="article-figure-zoom" type="button">Ampliar</button>
-        <button class="article-figure-close" type="button" autofocus>Cerrar</button>
-      </div>
-    </div>
-    <p class="article-figure-hint">Desliza el gráfico o usa las flechas para recorrerlo.</p>
-    <div class="article-figure-viewport" tabindex="0" role="region" aria-label="Gráfico ampliado">
-      <div class="article-figure-media"></div>
-    </div>
-    <p class="article-figure-caption"></p>
-  `;
-  document.body.appendChild(modal);
-
-  const viewport = modal.querySelector(".article-figure-viewport");
-  const mediaBox = modal.querySelector(".article-figure-media");
-  const caption = modal.querySelector(".article-figure-caption");
-  const hint = modal.querySelector(".article-figure-hint");
-  const zoomButton = modal.querySelector(".article-figure-zoom");
-  const closeButton = modal.querySelector(".article-figure-close");
-
-  function setZoom(zoomed) {
-    viewport.classList.toggle("is-zoomed", zoomed);
-    zoomButton.textContent = zoomed ? "Ajustar" : "Ampliar";
-    hint.hidden = !zoomed;
-    viewport.scrollTo(0, 0);
-  }
-
-  function openModal(target) {
-    const original = target.querySelector("img, svg, canvas");
-    const clone = original.cloneNode(true);
-    clone.removeAttribute("id");
-    clone.removeAttribute("loading");
-    // Un canvas clonado conserva sus dimensiones, pero no los píxeles dibujados.
-    if (original instanceof HTMLCanvasElement) clone.getContext("2d").drawImage(original, 0, 0);
-    mediaBox.replaceChildren(clone);
-    caption.textContent = target.querySelector("figcaption")?.textContent.trim() || "";
-    caption.hidden = !caption.textContent;
-    // En móvil, ampliar debe aumentar el tamaño, no encoger otra vez la imagen.
-    // El área se desplaza; el pie de figura y los botones permanecen a la vista.
-    document.body.classList.add("no-scroll");
-    modal.showModal();
-    setZoom(window.matchMedia("(max-width: 680px)").matches);
-  }
-
-  zoomButton.addEventListener("click", () => setZoom(!viewport.classList.contains("is-zoomed")));
-  closeButton.addEventListener("click", () => modal.close());
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) modal.close();
-  });
-  modal.addEventListener("close", () => {
-    document.body.classList.remove("no-scroll");
-    mediaBox.replaceChildren();
-  });
-
-  figureTargets.forEach((target) => {
-    target.dataset.figureEnhanced = "true";
     const tools = document.createElement("div");
     tools.className = "article-figure-tools";
     const button = document.createElement("button");
     button.className = "article-figure-expand";
     button.type = "button";
-    button.textContent = "Ampliar";
-    button.setAttribute("aria-label", "Ampliar gráfico");
+    button.textContent = "Ampliar ↗";
+    button.setAttribute("aria-controls", viewport.id);
+    button.setAttribute("aria-expanded", "false");
     tools.appendChild(button);
-    target.insertBefore(tools, target.firstChild);
-    button.addEventListener("click", () => openModal(target));
+    figure.appendChild(tools);
+
+    const hint = document.createElement("span");
+    hint.className = "article-figure-hint";
+    hint.textContent = "Desliza o usa las flechas para recorrer el gráfico. Esc para volver.";
+    hint.hidden = true;
+    figure.appendChild(hint);
+
+    function setExpanded(expanded) {
+      figure.classList.toggle("is-expanded", expanded);
+      button.textContent = expanded ? "Reducir ↙" : "Ampliar ↗";
+      button.setAttribute("aria-expanded", String(expanded));
+      hint.hidden = !expanded || (viewport.scrollWidth <= viewport.clientWidth && viewport.scrollHeight <= viewport.clientHeight);
+      // Solo el gráfico ampliado necesita otra parada de teclado.
+      viewport.tabIndex = expanded ? 0 : -1;
+      viewport.scrollTo(0, 0);
+      if (expanded) viewport.focus({ preventScroll: true });
+      else button.focus({ preventScroll: true });
+      figure.scrollIntoView({ block: "nearest", behavior: "instant" });
+    }
+
+    button.addEventListener("click", () => setExpanded(!figure.classList.contains("is-expanded")));
+    media.addEventListener("click", () => {
+      if (!figure.classList.contains("is-expanded")) setExpanded(true);
+    });
+    figure.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && figure.classList.contains("is-expanded")) {
+        event.preventDefault();
+        setExpanded(false);
+      }
+    });
   });
 })();
 </script>

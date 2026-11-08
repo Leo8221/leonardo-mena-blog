@@ -9,6 +9,7 @@ on:
       - "_quarto.yml"
       - "tools/**"
       - "styles.css"
+      - "tema_graficos.R"
       - "assets/**"
       - "atlas/**"
       - "datos/**"
@@ -82,6 +83,7 @@ jobs:
             any::bsicons
             any::rmarkdown
             any::knitr
+            any::svglite
             any::here
             any::showtext
             any::scales

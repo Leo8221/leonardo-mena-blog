@@ -125,8 +125,10 @@ execute:
   warning: false
   message: false
 
-# Calidad de gráficos
+# SVG conserva líneas y texto nítidos al ampliar, sin imágenes de impresión enormes.
 knitr:
   opts_chunk:
-    dev: "ragg_png"
+    dev: "svglite"
+    dev.args:
+      bg: "transparent"
     collapse: true
