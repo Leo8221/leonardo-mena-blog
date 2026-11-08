@@ -1,6 +1,4 @@
-# ==============================================================================
 # GRAFICOS STORYTELLING - LEONARDO MENA
-# ==============================================================================
 #
 # Este archivo extiende tema_graficos.R con graficos editoriales reutilizables.
 # Usa ggplot2 y estructuras simples para que cada grafico sea facil de adaptar.
@@ -53,6 +51,7 @@ lm_caption <- function(source, cut = NULL, note = NULL) {
   paste(parts, collapse = " - ")
 }
 
+# width y height se expresan en pulgadas; la extensión de path determina el formato.
 lm_export_plot <- function(plot, path, width = 9, height = 5.4, dpi = 320, bg = pal$crema) {
   ggplot2::ggsave(
     filename = path,
@@ -65,10 +64,10 @@ lm_export_plot <- function(plot, path, width = 9, height = 5.4, dpi = 320, bg = 
   invisible(path)
 }
 
-# ------------------------------------------------------------------------------
 # 1. Waffle / pictograma
-# ------------------------------------------------------------------------------
 
+# category y value son nombres de columnas. total reparte las proporciones en celdas.
+# Ejemplo: lm_waffle(datos, category = "sector", value = "empleos")
 lm_waffle <- function(data,
                       category,
                       value,
@@ -118,9 +117,7 @@ lm_waffle <- function(data,
     )
 }
 
-# ------------------------------------------------------------------------------
 # 2. Marimekko / mosaico proporcional
-# ------------------------------------------------------------------------------
 
 lm_marimekko <- function(data,
                          x,
@@ -169,9 +166,7 @@ lm_marimekko <- function(data,
     ggplot2::theme(panel.background = ggplot2::element_rect(fill = pal$blanco, color = pal$border_dark))
 }
 
-# ------------------------------------------------------------------------------
 # 3. Slopegraph
-# ------------------------------------------------------------------------------
 
 lm_slopegraph <- function(data,
                           entity,
@@ -221,9 +216,7 @@ lm_slopegraph <- function(data,
     )
 }
 
-# ------------------------------------------------------------------------------
 # 4. Ridgeline / densidades apiladas sin dependencia externa
-# ------------------------------------------------------------------------------
 
 lm_ridgeline <- function(data,
                          group,
@@ -276,9 +269,7 @@ lm_ridgeline <- function(data,
     )
 }
 
-# ------------------------------------------------------------------------------
 # 5. Sankey / alluvial
-# ------------------------------------------------------------------------------
 
 lm_sankey <- function(data,
                       axis1,
@@ -339,9 +330,7 @@ lm_sankey <- function(data,
     )
 }
 
-# ------------------------------------------------------------------------------
 # 6. Dumbbell / comparacion entre dos puntos
-# ------------------------------------------------------------------------------
 
 lm_dumbbell <- function(data,
                         entity,
@@ -403,9 +392,7 @@ lm_dumbbell <- function(data,
     ggplot2::theme(plot.margin = ggplot2::margin(18, 18, 18, 18))
 }
 
-# ------------------------------------------------------------------------------
 # 7. Layout de ficha: grafico + nota corta
-# ------------------------------------------------------------------------------
 
 lm_story_note <- function(title, body, fill = pal$gris_claro, border = pal$terracota) {
   ggplot2::ggplot() +

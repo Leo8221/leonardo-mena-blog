@@ -19,14 +19,12 @@ body.editorial-post #title-block-header {
   padding: 3rem 2rem 1rem;
 }
 
-
 body.editorial-post .post-header {
   margin-bottom: 3.5rem;
   border-bottom: 3px solid var(--lm-terracota);
   padding-bottom: 2rem;
 }
 
-/* Categorías/Tags encima del título */
 body.editorial-post .post-categories {
   font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
@@ -42,7 +40,6 @@ body.editorial-post .post-categories a {
   margin-right: 1rem;
 }
 
-/* Título del post */
 body.editorial-post #title-block-header h1.title {
   font-size: clamp(2.15rem, 4.2vw, 3.25rem);
   line-height: 1.1;
@@ -51,7 +48,6 @@ body.editorial-post #title-block-header h1.title {
   font-weight: 700;
 }
 
-/* Bajada/Descripción */
 body.editorial-post #title-block-header .description {
   font-size: 1.12rem;
   line-height: 1.5;
@@ -60,7 +56,6 @@ body.editorial-post #title-block-header .description {
   font-style: normal;
 }
 
-/* Metadata (autor, fecha) */
 body.editorial-post #title-block-header .quarto-title-meta {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
@@ -94,7 +89,6 @@ body.editorial-post .article-reading-time {
   text-transform: uppercase;
 }
 
-
 body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
   float: left;
   font-size: 2.7em;
@@ -104,7 +98,6 @@ body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
   color: var(--lm-terracota);
   font-family: 'Crimson Pro', Georgia, serif;
 }
-
 
 body.editorial-post #quarto-document-content p {
   margin-bottom: 1.5rem;
@@ -121,13 +114,11 @@ body.editorial-post #quarto-document-content li {
   overflow-wrap: break-word;
 }
 
-/* Primer párrafo más grande (lede) */
 body.editorial-post #quarto-document-content > p:first-of-type {
   font-size: 1.25rem;
   line-height: 1.6;
   color: var(--lm-text-soft);
 }
-
 
 body.editorial-post #quarto-document-content h2 {
   margin-top: 3rem;
@@ -142,7 +133,6 @@ body.editorial-post #quarto-document-content h3 {
   color: var(--lm-terracota);
   margin-top: 2.5rem;
 }
-
 
 body.editorial-post .big-number {
   display: block;
@@ -164,12 +154,6 @@ body.editorial-post .big-number-label {
   margin-bottom: 1.5rem;
 }
 
-/* Ejemplo de uso en Markdown:
-<span class="big-number">+28%</span>
-<span class="big-number-label">Aumento del dólar desde 2020</span>
-*/
-
-
 body.editorial-post .pullquote {
   font-size: 1.65rem;
   line-height: 1.4;
@@ -180,7 +164,6 @@ body.editorial-post .pullquote {
   border-left: 4px solid var(--lm-terracota);
   font-style: italic;
 }
-
 
 body.editorial-post .data-box {
   background: var(--lm-bg-sec);

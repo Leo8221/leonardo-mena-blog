@@ -1,11 +1,9 @@
-/* Navbar General y Dashboard Header */
 .navbar, #quarto-header, .quarto-dashboard-header {
   background: var(--lm-bg-card) !important;
   border-bottom: 2px solid var(--lm-border-dark);
   font-family: 'Inter', sans-serif;
 }
 
-/* Ambos temas comparten la geometría de la navegación. */
 #quarto-header .navbar {
   padding: 0.5rem 19px;
   border: 0;
@@ -135,7 +133,6 @@ summary:focus-visible,
   color: #fff !important;
 }
 
-/* Aplica tanto al navbar del blog como al header del dashboard */
 .navbar .quarto-color-scheme-toggle,
 .quarto-dashboard-header .quarto-color-scheme-toggle {
   display: inline-flex !important;
@@ -143,7 +140,6 @@ summary:focus-visible,
   justify-content: center;
   vertical-align: middle !important;
 
-  /* Caja */
   background-color: var(--lm-bg-sec) !important;
   border: 2px solid var(--lm-border-dark) !important;
   border-radius: 50% !important;
@@ -151,20 +147,17 @@ summary:focus-visible,
   height: 40px !important;
   margin-left: 15px;
 
-  /* Icono */
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 18px !important;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Limpieza de iconos por defecto */
 .navbar .quarto-color-scheme-toggle i,
 .quarto-dashboard-header .quarto-color-scheme-toggle i {
     display: none !important;
 }
 
-/* Asignación de iconos según modo */
 body:not(.quarto-dark) .navbar .quarto-color-scheme-toggle,
 body:not(.quarto-dark) .quarto-dashboard-header .quarto-color-scheme-toggle {
     background-image: var(--icon-sun) !important;
@@ -212,7 +205,6 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
   color: #fff !important;
 }
 
-/* Hover Effect */
 .quarto-color-scheme-toggle:hover {
     border-color: var(--lm-terracota) !important;
 }
@@ -438,4 +430,10 @@ body.quarto-dark #quarto-header .navbar-nav .nav-link[href$="suscribete.html"]:f
       #f3f0ea 12px 14px
     ) !important;
   }
+}
+
+footer, .nav-footer {
+    border-top: 1px solid var(--lm-border-dark);
+    background: var(--lm-bg-card);
+    color: var(--lm-text-muted);
 }

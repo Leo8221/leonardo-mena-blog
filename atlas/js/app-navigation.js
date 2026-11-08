@@ -7,10 +7,6 @@ function renderMetrics() {
       <em>${escapeHtml(metric.meta || "")}</em>
     </button>
   `).join("");
-
-  els.metricStrip.querySelectorAll(".metric-card").forEach((card) => {
-    card.addEventListener("click", () => setActive(card.dataset.module, { source: "metric-strip" }));
-  });
 }
 
 function navigationModules() {
@@ -56,10 +52,6 @@ function renderNavigation() {
   const empty = nav.filtered.length === 0 ? renderNavEmpty() : "";
 
   els.nav.innerHTML = buttons.join("") + empty;
-  els.nav.querySelectorAll(".module-button").forEach((button) => {
-    button.addEventListener("click", () => setActive(button.dataset.module, { source: "sidebar" }));
-  });
-  bindResetFilterButtons(els.nav);
 }
 
 function renderMobileNavigation() {
@@ -88,12 +80,6 @@ function renderMobileNavigation() {
   ];
 
   els.mobileNav.innerHTML = buttons.join("");
-  els.mobileNav.querySelectorAll(".mobile-module-card").forEach((button) => {
-    if (button.dataset.module) {
-      button.addEventListener("click", () => setActive(button.dataset.module, { source: "mobile-nav" }));
-    }
-  });
-  bindResetFilterButtons(els.mobileNav);
   const activeButton = els.mobileNav.querySelector(".mobile-module-card.is-active");
   if (activeButton && window.matchMedia("(max-width: 640px)").matches) {
     window.requestAnimationFrame(() => {
@@ -146,7 +132,7 @@ function renderStage() {
     ${renderModuleBody(module)}
   `;
 
-  hydrateModuleActions();
+  ensureCanvasDownloadActions();
   hydrateCharts(module);
   announceModule(module);
   updateDocumentTitle();
@@ -186,10 +172,7 @@ function renderOverview() {
     ` : renderEmptyOverview()}
   `;
 
-  els.stage.querySelectorAll(".module-card").forEach((button) => {
-    button.addEventListener("click", () => setActive(button.dataset.module, { source: "overview" }));
-  });
-  hydrateModuleActions();
+  ensureCanvasDownloadActions();
   announceModule(null);
   updateDocumentTitle();
 }
@@ -242,7 +225,7 @@ function renderAssetsLoading(module) {
       <span>Los mapas cargan cuando hacen falta.</span>
     </div>
   `;
-  hydrateModuleActions();
+  ensureCanvasDownloadActions();
 }
 
 function renderEmptyOverview() {

@@ -1,36 +1,66 @@
 # Blog de Leonardo Mena
 
-Para volver a escribir, abre **[crear-articulo.cmd](crear-articulo.cmd)** con doble
-clic: permite crear, buscar, editar y previsualizar artículos.
+Crea una carpeta en `posts/` y escribe su `index.qmd`. No hay generador.
+Si usas VS Code, [escribir.code-workspace](escribir.code-workspace) muestra
+solo los artículos y las ideas.
 
-Si usas VS Code, abre **[escribir.code-workspace](escribir.code-workspace)**:
-verás solo **Artículos** y **Editorial**. Para trabajar en el sitio completo,
-abre la carpeta del repositorio como siempre.
+## Escribir
 
-## Lo que necesitas para publicar
+Cada artículo vive en `posts/serie/fecha-tema/index.qmd`. Sus imágenes y datos
+van en esa misma carpeta, en `figures/` y `data/` cuando hagan falta.
+Los borradores se quedan allí; no hay que moverlos para publicar.
 
-1. **Elegir un tema:** consulta [las ideas](editorial/ideas-posts.md).
-2. **Escribir:** crea o abre un artículo con el lanzador. Todo lo propio del
-   artículo va en su carpeta: `index.qmd`, `data/` y `figures/` cuando hagan falta.
-3. **Revisar y publicar:** usa la vista previa; cuando esté listo, cambia
-   `draft: true` a `draft: false`, confirma sus fuentes en Git y envíalas a `main`.
-   [GitHub Actions](https://github.com/Leo8221/leonardo-mena-blog/actions)
-   genera `docs/` para GitHub Pages.
+```yaml
+---
+title: "Título"
+date: "2026-11-08"
+description: "Resumen para los listados."
+categories: ["Fundamentos"]
+draft: true
+---
+```
 
-La [guía editorial](editorial/GUIA-EDITORIAL.md) explica imágenes, fuentes,
-enlaces y publicación. Los artículos aparecen automáticamente en los listados.
+El autor y las opciones de lectura vienen de `posts/_metadata.yml`.
+Los listados se actualizan solos. Las [ideas](editorial/ideas-posts.md) están
+separadas del texto; los análisis compartidos, en `research/`.
 
-## Dónde va cada cosa
+```markdown
+![Título. Fuente: informe o tabla.](figures/grafico.png){fig-alt="Descripción del gráfico"}
 
-| Lugar | Para qué sirve |
-| --- | --- |
-| `posts/` | Artículos, tanto borradores como publicados, agrupados por serie. |
-| `editorial/` | Guía de escritura, ideas y referencia de estilo. |
-| `research/` | Investigaciones y datos compartidos por varios artículos. |
-| `mantenimiento/` | Mapa técnico, diseño e historial de trabajo. |
-| `docs/` | Sitio generado. Se produce con Quarto; no se escribe aquí. |
+[Otro artículo](/posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.qmd)
+```
 
-Las páginas `.qmd` de la raíz son la portada y las secciones del sitio.
-`atlas/`, `assets/`, `tools/` y `R/` mantienen los visuales y las herramientas.
-Consulta el [mapa técnico](mantenimiento/README.md) solo cuando necesites
-trabajar en esas partes.
+## Revisar y publicar
+
+Desde una terminal PowerShell en la raíz:
+
+```powershell
+.\tools\render-quarto.ps1 -QuartoArgs @('preview', '--profile', 'editor')
+```
+
+La vista previa muestra borradores en `.preview/`. Cuando el artículo esté
+revisado, cambia `draft` a `false` y confirma el texto y sus recursos en Git.
+No renombres carpetas publicadas: forman parte de sus enlaces.
+GitHub Actions renderiza `main` y actualiza `docs/` para GitHub Pages.
+
+**Antes del próximo push:** hay que separar el historial local que todavía
+contiene informes SIUBEN. Los archivos ya están en `proyecto_v13`, pero su
+commit antiguo no debe enviarse al repositorio público del blog.
+
+## Código y comprobaciones
+
+`_quarto.yml` configura el sitio. `styles.css` carga los estilos de `assets/`.
+Atlas vive en `atlas/`; sus datos se declaran en `atlas/data/atlas-source.json`.
+`tema_graficos.R` carga el tema y las funciones de `R/`.
+Las decisiones y los parámetros se explican junto a las funciones que los usan.
+
+```powershell
+node --test atlas/scripts/*.test.mjs
+node atlas/scripts/check-text-integrity.mjs
+node atlas/scripts/check-site-contract.mjs
+.\tools\render-quarto.ps1
+```
+
+El último comando genera `docs/`. Los wrappers de `tools/` fijan R, Python y
+Quarto y comprueban UTF-8 en Windows. Sus rutas están en `tools/runtime.ps1`.
+No edites el HTML generado para corregir el sitio.

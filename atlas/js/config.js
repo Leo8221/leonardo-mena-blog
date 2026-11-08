@@ -33,3 +33,13 @@ const VISUAL_ARTICLES = {
   transport: "2026-03-04-transporte-masivo",
   debt: "2025-12-19_deuda_publica"
 };
+
+// Claves del estado que modifica cada grupo de botones.
+const CHART_CONTROLS = {
+  macro: "macroMetric",
+  trade: "tradeMetric",
+  labor: "laborMetric",
+  territoryMap: "territoryMapMetric",
+  territory: "territoryRegion",
+  visual: "visualMap"
+};

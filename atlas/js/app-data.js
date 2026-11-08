@@ -32,6 +32,7 @@ function ensureModuleAssets(module) {
   });
 }
 
+// Reutiliza la petición al cambiar de vista; un fallo permite mostrar el estado sin datos.
 function loadAtlasAsset(key) {
   if (state[key]) return Promise.resolve(state[key]);
   if (state.assetPromises[key]) return state.assetPromises[key];
@@ -256,12 +257,6 @@ function announceModule(module) {
   els.status.textContent = module ? `${module.title} cargado.` : "Atlas cargado.";
 }
 
-function bindResetFilterButtons(root) {
-  root.querySelectorAll('[data-action="reset-filters"]').forEach((button) => {
-    button.addEventListener("click", () => resetAtlasFilters({ focusSearch: true }));
-  });
-}
-
 function resetAtlasFilters({ focusSearch = false } = {}) {
   state.query = "";
   state.family = "all";
@@ -275,67 +270,64 @@ function resetAtlasFilters({ focusSearch = false } = {}) {
   if (focusSearch && els.search) els.search.focus();
 }
 
-function hydrateModuleActions() {
-  ensureCanvasDownloadActions();
-  bindResetFilterButtons(els.stage);
+// Un solo listener sobre el contenedor: las vistas reemplazan su HTML al navegar.
+async function handleAtlasClick(event) {
+  const button = event.target.closest("[data-module], [data-action], .chart-toggle, .article-link");
+  if (!button) return;
 
-  els.stage.querySelectorAll('[data-action="copy-link"]').forEach((button) => {
-    button.addEventListener("click", async () => {
-      const copied = await copyText(currentViewUrl());
-      flashButton(button, copied ? "Copiado" : "Copiar");
+  if (button.dataset.module) {
+    const source = button.matches(".metric-card") ? "metric-strip"
+      : button.matches(".module-button") ? "sidebar"
+      : button.matches(".mobile-module-card") ? "mobile-nav" : "overview";
+    setActive(button.dataset.module, { source });
+    return;
+  }
+  if (button.matches(".chart-toggle")) {
+    const { scope, metric } = button.dataset;
+    const property = CHART_CONTROLS[scope];
+    if (!property) return;
+    state[property] = metric;
+    updateUrlState({ replace: true });
+    trackAtlasEvent(["visual", "territoryMap"].includes(scope) ? "atlas_map_selection" : "atlas_chart_toggle", {
+      chart_id: scope, metric
     });
-  });
-
-  els.stage.querySelectorAll('[data-action="export-csv"]').forEach((button) => {
-    button.addEventListener("click", () => {
-      const module = findModule(state.active);
-      if (!module) {
-        flashButton(button, "Sin datos");
-        return;
-      }
-      const datasets = moduleDatasets(module).filter((dataset) => dataset.rows.length > 0);
-      if (!datasets.length) {
-        flashButton(button, "Sin datos");
-        return;
-      }
-      downloadDatasetsCsv(module, datasets);
-      trackAtlasEvent("atlas_csv_download", { chart_id: "module", metric: activeMetricForModule(module) });
-      flashButton(button, "Descargado");
+    renderStage();
+    return;
+  }
+  if (button.matches(".article-link")) {
+    trackAtlasEvent("atlas_related_article_open", {
+      chart_id: button.closest(".chart-card")?.querySelector("canvas")?.id || "module"
     });
-  });
+    return;
+  }
 
-  els.stage.querySelectorAll('[data-action="download-dataset"]').forEach((button) => {
-    button.addEventListener("click", (event) => {
+  switch (button.dataset.action) {
+    case "reset-filters":
+      resetAtlasFilters({ focusSearch: true });
+      break;
+    case "copy-link":
+      flashButton(button, await copyText(currentViewUrl()) ? "Copiado" : "Copiar");
+      break;
+    case "expand-chart":
+      openChartFullscreen(button.dataset.canvas);
+      break;
+    case "download-chart":
+      downloadCanvasPng(button.dataset.canvas, button);
+      break;
+    case "export-csv":
+    case "download-dataset": {
       event.preventDefault();
-      event.stopPropagation();
       const module = findModule(state.active);
       const datasetId = button.dataset.dataset;
-      const dataset = module ? moduleDatasets(module).find((item) => item.id === datasetId) : null;
-      if (!module || !dataset) {
-        flashButton(button, "Sin datos");
-        return;
-      }
-      downloadDatasetsCsv(module, [dataset]);
-      trackAtlasEvent("atlas_csv_download", { chart_id: dataset.id, metric: activeMetricForModule(module) });
-      flashButton(button, "OK");
-    });
-  });
-
-  els.stage.querySelectorAll('[data-action="expand-chart"]').forEach((button) => {
-    button.addEventListener("click", () => openChartFullscreen(button.dataset.canvas));
-  });
-
-  els.stage.querySelectorAll('[data-action="download-chart"]').forEach((button) => {
-    button.addEventListener("click", () => downloadCanvasPng(button.dataset.canvas, button));
-  });
-
-  els.stage.querySelectorAll(".article-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      trackAtlasEvent("atlas_related_article_open", {
-        chart_id: link.closest(".chart-card")?.querySelector("canvas")?.id || "module"
-      });
-    });
-  });
+      const datasets = module ? moduleDatasets(module).filter(item =>
+        item.rows.length && (!datasetId || item.id === datasetId)) : [];
+      if (!datasets.length) { flashButton(button, "Sin datos"); return; }
+      downloadDatasetsCsv(module, datasets);
+      trackAtlasEvent("atlas_csv_download", { chart_id: datasetId || "module", metric: activeMetricForModule(module) });
+      flashButton(button, datasetId ? "OK" : "Descargado");
+      break;
+    }
+  }
 }
 
 function ensureCanvasDownloadActions() {
@@ -364,6 +356,7 @@ function downloadDatasetsCsv(module, datasets) {
   downloadTextFile(csv, `atlas-${module.id}-${suffix}-${generated}.csv`, "text/csv;charset=utf-8");
 }
 
+// Une las columnas de las tablas e incluye fuente y corte en cada fila del CSV.
 function datasetsToCsv(module, datasets) {
   const info = module.sourceInfo || {};
   const metaColumns = [

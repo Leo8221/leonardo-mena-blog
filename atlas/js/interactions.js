@@ -104,7 +104,7 @@ function openChartFullscreen(canvasId) {
 
   window.requestAnimationFrame(() => {
     const expandedCanvas = modal.querySelector("canvas");
-    redrawExpandedChart(canvasId, expandedCanvas, sourceCanvas);
+    drawVisualChart(canvasId, expandedCanvas, true);
   });
 }
 
@@ -126,62 +126,4 @@ function downloadCanvasPng(canvasId, button = null) {
     trackAtlasEvent("atlas_png_download", { chart_id: canvasId, metric });
   }
   if (button) flashButton(button, "PNG");
-}
-
-function redrawExpandedChart(canvasId, canvas, sourceCanvas) {
-  if (!canvas) return;
-  if (canvasId === "visual-map") {
-    const mapConfig = visualMapConfig();
-    drawChoroplethMap(canvas, mapConfig.features, {
-      ...mapConfig,
-      inspectorId: null,
-      mapId: `${mapConfig.mapId}-fullscreen`
-    });
-    return;
-  }
-
-  if (canvasId === "tourism-treemap") {
-    drawTreemapChart(canvas, state.articleVisuals.tourism.treemap, {
-      title: "Estructura de motivaciones turísticas",
-      labelField: "motivo",
-      valueField: "porcentaje",
-      categoryField: "categoria"
-    });
-    return;
-  }
-
-  if (canvasId === "transport-space") {
-    drawComplexScatterChart(canvas, state.articleVisuals.transport.rentEmployment, transportScatterOptions());
-    return;
-  }
-
-  if (canvasId === "debt-burden") {
-    drawDebtBurdenChart(canvas, state.articleVisuals.debt.service, {
-      title: "Servicio total e intereses",
-      labelField: "anio",
-      serviceField: "service",
-      shareField: "interest_share"
-    });
-    return;
-  }
-
-  if (canvasId === "debt-service") {
-    drawStackedBarChart(canvas, state.articleVisuals.debt.service, {
-      title: "Servicio de deuda por componente",
-      labelField: "anio",
-      fields: [
-        { field: "principal", label: "Principal", color: "#466a8f" },
-        { field: "interest", label: "Intereses", color: "#c86448" },
-        { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
-      ],
-      unit: "US$ MM"
-    });
-    return;
-  }
-
-  if (!sourceCanvas) return;
-  const ctx = setupCanvas(canvas);
-  const { width, height } = canvas.getBoundingClientRect();
-  clearCanvas(ctx, width, height);
-  ctx.drawImage(sourceCanvas, 0, 0, width, height);
 }

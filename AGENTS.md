@@ -1,111 +1,55 @@
-# AGENTS.md
+# Reglas del repositorio
 
-Reglas persistentes para trabajar en este repositorio.
+- Quarto genera el sitio en `docs/`; los artículos se escriben en `.qmd` y los
+  gráficos reproducibles, en R. Atlas usa HTML, CSS y JavaScript nativo.
+- Editar las fuentes. Actualizar `docs/` mediante render o sincronización
+  controlada de recursos estáticos. No cambiar rutas públicas sin migración.
+- Borradores y publicados comparten `posts/`; el encabezado `draft` determina
+  su estado. No publicar borradores, placeholders ni datos o credenciales inventados.
+- `README.md` explica cómo escribir, revisar y publicar. Documentar parámetros,
+  contratos y decisiones no evidentes en las funciones. No crear manuales que
+  repitan el código ni diarios de tareas; registrar cambios y pruebas en el commit.
+- Mantener los documentos de procedencia y metodología que acompañan datos reales.
 
-## Organización y fuentes de verdad
+## Datos y gráficos
 
-- `README.md` es la entrada al flujo cotidiano de escritura.
-- `editorial/GUIA-EDITORIAL.md` define el flujo editorial y de publicación.
-- `editorial/ideas-posts.md` conserva las ideas; no certifica el estado de los artículos.
-- `mantenimiento/README.md` documenta la organización técnica actual.
-- `mantenimiento/DESIGN-SYSTEM.md` define el sistema visual compartido.
-- `mantenimiento/historial/` conserva planes y registros anteriores como historia,
-  no como instrucciones pendientes ni como mapa de rutas actual.
-- Mantener artículos y borradores juntos en `posts/`; el estado se expresa con
-  `draft` en el encabezado. No mover artículos publicados para clasificarlos.
-- `escribir.code-workspace` ofrece una vista editorial de las mismas carpetas,
-  sin duplicar archivos ni mover investigaciones o proyectos de Codex.
-- Excluir `trabajo-siuben/`, `editorial/` y `mantenimiento/` del render del blog
-  en `_quarto.yml`; los informes independientes se renderizan desde su proyecto.
-- Los informes SIUBEN y `research/rsuh-validacion/` pertenecen a
-  `proyecto_v13/estudios/antecedentes-rsuh-202608/`, fuera de este repositorio.
-  No volver a incorporar trabajo institucional al blog.
-- Antes del próximo push, separar el historial local anterior que aún contiene
-  esos informes (commit `6bb98e31`), conservando el trabajo del usuario.
-  Borrarlos del árbol actual no los elimina de los commits anteriores; no
-  publicar ese historial institucional en el repositorio público del blog.
+- Distinguir el corte de los datos de la fecha de generación.
+- Los módulos del Atlas se registran en `atlas/data/atlas-source.json`.
+  Solo mostrar módulos activos con datos, fuente y fechas verificables.
+- Para mapas, unir por códigos o claves ASCII estables. Fallar antes del render
+  si faltan regiones, métricas o aparecen geometrías agrupadas como `NA`.
+- Conservar la paleta crema, terracota, oliva y azul de `assets/css/tokens.css`.
+  Mantener móvil desde 320 px, contraste, foco visible y movimiento reducido.
+- Los activos destinados a LinkedIn deben exportarse sin metadatos C2PA.
 
-## Alcance
+## Ejecución y comprobaciones
 
-- Mantener Quarto como motor editorial.
-- Mantener articulos en `.qmd`.
-- Mantener R para graficos y procesamiento reproducible.
-- Mantener Atlas con HTML, CSS y JavaScript nativo.
-- Publicar por GitHub Pages desde `docs/`.
-- No cambiar rutas publicas existentes sin una migracion explicita.
+- En Windows, usar `tools/render-quarto.ps1`, `tools/run-r.ps1` y
+  `tools/run-python.ps1`. R debe devolver `l10n_info()[["UTF-8"]] == TRUE`.
+  Corregir el entorno de la sesión si falla; no añadir `.Rprofile`/`.Renviron`,
+  cambiar locales globales ni reparar textos o SVG generados para ocultarlo.
+- Ejecutar las pruebas afectadas, `node --check` en JavaScript modificado y
+  `node atlas/scripts/check-text-integrity.mjs`.
+- Al cambiar datos del Atlas, ejecutar `node atlas/scripts/build-atlas-data.mjs`
+  y, si cambian sus visuales, `atlas/scripts/build-article-visuals.R` con el wrapper R.
+- Comprobar el render con `tools/render-quarto.ps1` cuando cambien sus fuentes.
+  Revisar el diff generado: no mezclar cambios de versión de Quarto sin examinarlos.
+- Si cambia UI, comprobar escritorio y móvil. Para dashboards, PDF y Power BI,
+  usar la skill visual correspondiente, abrir capturas y distinguir revisión
+  visual de pruebas automáticas. Declarar avisos y comprobaciones no ejecutadas.
+- Si se regeneran SVG, abrir las figuras afectadas. En MiPyMES, revisar
+  `fig-mapa-mipymes-regiones-1.svg` y `fig-acceso-credito-formal-tamano-1.svg`:
+  Norte, Sur, Este y Metropolitana deben tener porcentajes reales, sin `NA`,
+  y los acentos deben verse bien, sin literales como `<U+00F1>`.
 
-## Fuente vs generado
+## Git y trabajo local
 
-- Cambiar primero los archivos fuente: `.qmd`, `_quarto.yml`, `styles.css`, `atlas/`, `tema_graficos.R` y scripts.
-- `docs/` es salida publicable. Actualizarlo solo como resultado de build o sincronizacion controlada de recursos estaticos.
-- No editar exclusivamente `docs/` para corregir problemas permanentes.
-- No publicar posts con `draft: true` ni contenido placeholder como investigacion real.
-
-## Contenido y datos
-
-- No inventar datos, fuentes, credenciales, cargos, premios ni conclusiones.
-- Si una seccion no esta lista, ocultarla.
-- Distinguir fecha de corte de datos y fecha tecnica de generacion.
-- Los graficos del Atlas deben partir de datos reproducibles o archivos reales de articulos.
-
-## Quarto, R y encoding
-
-- No agregar `.Rprofile`, `.Renviron` ni cambios globales de locale/encoding al repo para "arreglar" renders locales. Si R arranca con `LC_CTYPE=C` o muestra avisos como `Setting LC_CTYPE=C.UTF-8 failed` en Windows, detenerse: ese entorno puede convertir acentos en literales `<U+00E9>` dentro de graficos SVG.
-- En Windows, antes de renderizar desde una sesion automatizada, verificar que R lea UTF-8 correctamente con `l10n_info()[["UTF-8"]] == TRUE`. Si falla por variables `LC_ALL`, `LC_CTYPE` o `LANG` heredadas del shell, corregir la sesion de ejecucion, no el contenido generado ni los textos del articulo.
-- Para renders y scripts R reproducibles en este repositorio, usar `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\render-quarto.ps1 -QuartoArgs @('render')` y `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\run-r.ps1`. Para Python, usar `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\run-python.ps1`; el wrapper resuelve el Python instalado desde el registro y evita intérpretes embebidos de otras aplicaciones. Estos wrappers fijan las runtimes sin depender de cuál aparezca primero en el `PATH`.
-- No corregir regresiones de encoding editando solo `docs/`, sustituyendo strings, cambiando SVG a PNG o restaurando outputs antiguos. La correccion permanente debe quedar en el archivo fuente o en el entorno real de render.
-
-## Mapas y joins geograficos
-
-- No hacer `left_join()` de mapas contra nombres con acentos, mayusculas o textos dependientes del encoding del shapefile. Crear claves estables y ASCII, por ejemplo con `janitor::make_clean_names()`, codigos oficiales o IDs reproducibles.
-- Todo mapa que agregue regiones debe validar despues del join: si faltan regiones, si una geometria queda agrupada como `NA`, o si las metricas quedan incompletas, el chunk debe fallar con `stop()` antes de publicar.
-- Caso de referencia: el mapa de MiPyMES se rompio cuando `TOPONIMIA` no coincidio con strings acentuados y se publico una sola geometria gris con `NA`. Esa clase de fallo debe detectarse en fuente y en revision visual, nunca resolverse restaurando `docs/`.
-
-## Diseno
-
-- Mantener identidad editorial: fondo crema, terracota, oliva, azul de datos, negro editorial y superficies blancas.
-- Evitar apariencia de dashboard corporativo, portal gubernamental o plantilla tecnologica generica.
-- No abusar de sombras, gradientes, bordes redondos ni animaciones.
-- Priorizar movil desde 320 px.
-- Usar estados `:focus-visible`, contraste suficiente y `prefers-reduced-motion`.
-
-## Atlas
-
-- Registrar modulos en `atlas/data/atlas-source.json`.
-- Generar `atlas/data/atlas-data.json` con `node atlas/scripts/build-atlas-data.mjs`.
-- Generar visuales de articulos con `Rscript atlas/scripts/build-article-visuals.R`.
-- Mantener `atlas/js/` modular: configuracion, utilidades, renderers e interacciones.
-- Si un modulo no esta listo: `visible: false` o `status` distinto de `Activo`.
-
-## Validacion
-
-- Antes de cerrar cambios relevantes, ejecutar lo que aplique:
-  - `node atlas/scripts/build-atlas-data.mjs`
-  - `Rscript atlas/scripts/build-article-visuals.R`
-  - `node --check atlas/app.js`
-  - `node --check atlas/js/config.js`
-  - `node --check atlas/js/utils.js`
-  - `node --check atlas/js/renderers.js`
-  - `node --check atlas/js/interactions.js`
-  - `node atlas/scripts/check-text-integrity.mjs`
-  - `quarto render`
-  - revision visual en desktop y movil cuando cambie UI.
-- Despues de `quarto render`, si se regeneran SVGs con texto o mapas, revisar visualmente al menos las figuras afectadas. Para MiPyMES, confirmar especificamente:
-  - el mapa muestra Norte, Sur, Este y Metropolitana con porcentajes reales, no `NA`;
-  - las figuras SVG muestran acentos normales (`tamano` no debe aparecer como `<U+00F1>` ni texto equivalente roto);
-  - `docs/posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg` y `fig-acceso-credito-formal-tamano-1.svg` se ven correctos en navegador.
-- Si una validacion no se ejecuta o solo pasa con advertencias, decirlo claramente.
-
-## Git
-
-- Revisar `git status` antes de editar y antes de cerrar.
-- No revertir cambios de usuario.
-- No hacer push sin validar y sin que el usuario lo pida o lo autorice.
-- Si un build local genera churn de version en `docs/`, no mezclarlo con cambios fuente sin revisar.
-
-## Registro y limpieza de trabajo local
-- Conservar las rutas de proyectos y worktrees de Codex.
-- Al cerrar una tarea, registrar cambios, verificaciones y pendientes; crear un commit local acotado a los cambios propios validados. No incluir trabajo previo ajeno solo para dejar Git limpio.
-- Mantener fuentes y datos separados de renders y caches; la salida publicable de Quarto es docs/.
-- Antes de eliminar residuos, verificar que son regenerables o copias comprobadas. No usar git clean, reset ni borrados globales para ocultar pendientes.
-- No crear clones ni respaldos completos para tareas rutinarias. Usar Git para archivos versionados y un registro pequeno de operaciones.
+- Revisar el estado antes de editar y al cerrar. No revertir cambios del usuario.
+  Crear un commit local limitado al trabajo propio verificado. No hacer push
+  sin autorización. Conservar las rutas de proyectos y worktrees de Codex.
+- Antes de retirar residuos, verificar que sean regenerables o copias comprobadas.
+  No usar `git clean`, `reset`, borrados globales ni clones de respaldo rutinarios.
+- SIUBEN pertenece a `proyecto_v13/estudios/antecedentes-rsuh-202608/`, no al blog.
+  Antes de cualquier push, separar el historial local que aún contiene esos
+  informes (`6bb98e31`), conservando el trabajo del usuario. Borrarlos del árbol
+  actual no los elimina de los commits antiguos. No publicar ese historial.

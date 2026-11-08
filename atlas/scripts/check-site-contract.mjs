@@ -23,13 +23,6 @@ function requireText(relativePath, checks) {
   }
 }
 
-function requireMatch(relativePath, checks) {
-  const content = read(relativePath);
-  for (const [label, pattern] of checks) {
-    if (!pattern.test(content)) failures.push(`${relativePath}: falta ${label}`);
-  }
-}
-
 function forbidText(relativePath, checks) {
   const content = read(relativePath);
   for (const [label, pattern] of checks) {
@@ -146,12 +139,14 @@ requireText("atlas/index.html", [
   ["nav Archivo hacia archivo general", '<a href="../archivo.html">Archivo</a>']
 ]);
 
-requireMatch("atlas/index.html", [
+requireText("atlas/index.html", [
   ["cache busting de estilos", /styles\.css\?v=\d{8}/],
   ["cache busting de app", /app\.js\?v=\d{8}/],
   ["renderer de mapas modular", /js\/map-renderers\.js\?v=\d{8}/],
-  ["bootstrap modular", /js\/bootstrap\.js\?v=\d{8}/]
+  ["arranque de la interfaz", /js\/app-ui\.js\?v=\d{8}/]
 ]);
+
+requireText("atlas/js/app-ui.js", [["arranque del tema", "initAtlasTheme();"], ["arranque del Atlas", "boot();"]]);
 
 requireText("atlas/styles.css", [
   ["imports del CSS modular", "@import url(\"css/base.css"],
@@ -179,7 +174,7 @@ if (includeDocs) {
     ["nav Blog publicado hacia raíz canonical", '<a href="../">Blog</a>'],
     ["nav Archivo publicado", '<a href="../archivo.html">Archivo</a>']
   ]);
-  requireMatch("docs/index.html", [
+  requireText("docs/index.html", [
     ["canonical raíz", /<link rel="canonical" href="https:\/\/leo8221\.github\.io\/leonardo-mena-blog\/">/],
     ["titulo SEO sin duplicar nombre", /<title>Economía aplicada RD\s+[–-]\s+Leonardo Mena<\/title>/]
   ]);
@@ -191,11 +186,11 @@ if (includeDocs) {
     ["portada no canonical en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/index.html</loc>"],
     ["observatorio heredado en sitemap", "<loc>https://leo8221.github.io/leonardo-mena-blog/observatorio.html</loc>"]
   ]);
-  requireMatch("docs/atlas/index.html", [
+  requireText("docs/atlas/index.html", [
     ["cache busting de estilos Atlas publicado", /styles\.css\?v=\d{8}/],
     ["cache busting de app Atlas publicado", /app\.js\?v=\d{8}/],
     ["renderer de mapas modular Atlas publicado", /js\/map-renderers\.js\?v=\d{8}/],
-    ["bootstrap modular Atlas publicado", /js\/bootstrap\.js\?v=\d{8}/]
+    ["arranque del Atlas publicado", /js\/app-ui\.js\?v=\d{8}/]
   ]);
 }
 

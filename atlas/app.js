@@ -212,6 +212,7 @@ async function boot() {
 }
 
 function bindEvents() {
+  els.app.addEventListener("click", handleAtlasClick);
   els.search.addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
     syncSearchState();

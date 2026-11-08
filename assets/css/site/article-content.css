@@ -17,7 +17,6 @@ body.editorial-post #quarto-document-content ul li::before {
   font-weight: 700;
 }
 
-
 body.editorial-post #quarto-document-content pre {
   background: var(--lm-bg-sec);
   border: 1px solid var(--lm-border);
@@ -28,7 +27,6 @@ body.editorial-post #quarto-document-content pre {
   line-height: 1.5;
   margin: 2rem 0;
 }
-
 
 body.editorial-post .callout {
   background: var(--lm-bg-sec);
@@ -41,7 +39,6 @@ body.editorial-post .callout-note { border-left-color: var(--lm-olive); }
 body.editorial-post .callout-warning { border-left-color: #d97706; }
 body.editorial-post .callout-important { border-left-color: var(--lm-terracota); }
 
-
 body.editorial-post .section-divider {
   text-align: center;
   margin: 4rem 0;
@@ -50,11 +47,6 @@ body.editorial-post .section-divider {
   letter-spacing: 0.5em;
 }
 
-/* Ejemplo de uso:
-<div class="section-divider">• • •</div>
-*/
-
-/* Key Takeaways */
 body.editorial-post .key-takeaways {
   background: var(--lm-bg-card);
   border: 1px solid var(--lm-border);
@@ -120,13 +112,11 @@ body.editorial-post .key-takeaways li:last-child {
   margin-bottom: 0;
 }
 
-/* Strong dentro de takeaways */
 body.editorial-post .key-takeaways strong {
   color: var(--lm-terracota);
   font-weight: 700;
 }
 
-/* Variante compacta */
 body.editorial-post .key-takeaways.compact {
   padding: 1.5rem 2rem;
 }
@@ -136,7 +126,6 @@ body.editorial-post .key-takeaways.compact li {
   margin-bottom: 0.75rem;
 }
 
-
 body.editorial-post .footnotes {
   margin-top: 4rem;
   padding-top: 2rem;
@@ -144,7 +133,6 @@ body.editorial-post .footnotes {
   font-size: 0.9rem;
   color: var(--lm-text-soft);
 }
-
 
 body.editorial-post #TOC {
   background: var(--lm-bg-sec);
@@ -169,7 +157,6 @@ body.editorial-post #TOC a:hover {
   color: var(--lm-terracota);
 }
 
-
 body.editorial-post #quarto-document-content img {
   width: auto;
   max-width: 100%;
@@ -180,14 +167,12 @@ body.editorial-post #quarto-document-content img {
   box-shadow: var(--shadow-soft);
 }
 
-/* Imágenes full-bleed (ancho completo) */
 body.editorial-post .full-width-image {
   width: 100vw;
   max-width: none;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
-
 
 body.editorial-post .post-navigation {
   display: flex;
@@ -211,7 +196,6 @@ body.editorial-post .post-nav-label {
   margin-bottom: 0.5rem;
 }
 
-
 @media (max-width: 768px) {
   body.editorial-post #quarto-document-content > p:first-of-type::first-letter {
     font-size: 3.5em;
@@ -227,43 +211,35 @@ body.editorial-post .post-nav-label {
   }
 
   body.editorial-post #quarto-document-content p {
-    text-align: left; /* Quitar justificación en mobile */
+    text-align: left;
   }
 }
 
-
-/* Eliminar el subrayado (borde) específicamente del logo en la barra */
 .navbar .navbar-brand {
     border-bottom: none !important;
 }
 
-/*  el logo crezca un poquito al pasar el mouse */
 .navbar .navbar-brand:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease;
 }
 
-
-
 div.giscus {
-  /* 1. Centrado y Ancho Controlado */
-  max-width: 720px; /* Mismo ancho que tu texto para que no se desborde */
+
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 
-  /* 2. Separación del Artículo */
-  margin-top: 4rem;      /* Mucho aire arriba */
-  padding-top: 2rem;     /* Espacio entre la línea y la caja */
+  margin-top: 4rem;
+  padding-top: 2rem;
 
-  /* 3. Línea Divisoria Editorial */
   border-top: 1px solid var(--lm-border-dark);
 }
 
-/* Agregar un pequeno texto antes si la linea no es suficiente */
 div.giscus::before {
   content: "Discusión";
   display: block;
-  font-family: "Inter", sans-serif; /* O fuente sans */
+  font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
