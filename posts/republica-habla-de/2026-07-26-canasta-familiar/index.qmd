@@ -1,7 +1,6 @@
 ---
 title: "La canasta familiar no existe"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Por qué la inflación promedio puede ser correcta y aun así no contar la historia de tu bolsillo."
 categories:
   - "Economía cotidiana"

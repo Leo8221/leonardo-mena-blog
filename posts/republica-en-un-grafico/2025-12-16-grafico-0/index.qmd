@@ -1,7 +1,6 @@
 ---
 title: "Gráfico #0: Cómo leo la economía dominicana"
 date: "2025-12-11"
-author: "Leonardo Mena"
 description: "Un primer mapa visual de cómo organizo mentalmente los datos de la economía dominicana."
 categories: 
   - "La República en un gráfico"

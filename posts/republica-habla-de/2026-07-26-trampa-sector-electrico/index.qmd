@@ -1,7 +1,6 @@
 ---
 title: "La trampa estructural del sector eléctrico"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Figuras sobre generación, pérdidas, recuperación, cobranza y déficit de las distribuidoras eléctricas."
 categories:
   - "Electricidad"
@@ -11,9 +10,7 @@ draft: true
 format:
   html:
     toc: false
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <script>document.body.classList.add('editorial-post');</script>

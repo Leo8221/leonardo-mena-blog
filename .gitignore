@@ -34,10 +34,6 @@ Thumbs.db
 .pgpass
 .pg_service.conf
 
-# Intermedios del reporte Quarto
-/research/reporte-inclusion.log
-/research/reporte-inclusion.tex
-
 # Copia local: consultar la fuente oficial enlazada en el README
 /research/nearshoring-limites/data/raw/cnzfe_informe_estadistico_2024.pdf
 

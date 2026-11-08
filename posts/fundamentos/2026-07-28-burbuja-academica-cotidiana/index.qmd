@@ -1,7 +1,6 @@
 ---
 title: "Burbuja académica vs. burbuja cotidiana"
 date: "2026-07-28"
-author: "Leonardo Mena"
 description: "Borrador sobre el uso coloquial de burbuja, su definición económica y los límites de detectarla mientras ocurre."
 categories:
   - "Economía"

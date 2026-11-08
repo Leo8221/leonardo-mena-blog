@@ -4,8 +4,6 @@ project:
   post-render: node atlas/scripts/ensure-sitemap.mjs
   render:
     - "*.qmd"
-    - "!investigacion.qmd"
-    - "!mitos-economicos.qmd"
     - "posts/**/*.qmd"
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"

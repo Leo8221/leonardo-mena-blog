@@ -1,7 +1,6 @@
 ---
 title: "El mito del 'Banco Malo': Por qué las MiPyMES realmente no tienen crédito"
 date: "2026-02-15"
-author: "Leonardo Mena"
 description: "El 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de la subsistencia."
 categories: 
   - "MiPyMES"
@@ -13,9 +12,7 @@ format:
   html:
     toc: true
     toc-location: left
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <script>document.body.classList.add('editorial-post');</script>

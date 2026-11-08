@@ -1,7 +1,0 @@
----
-title: "Investigación"
-description: "Working papers, policy briefs y reportes técnicos con metodología revisable."
-page-layout: full
-toc: false
-draft: true
----

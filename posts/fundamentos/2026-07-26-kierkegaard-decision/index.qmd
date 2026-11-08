@@ -1,7 +1,6 @@
 ---
 title: "Kierkegaard y la decisión económica"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre decisión, incertidumbre y costo de oportunidad."
 categories:
   - "Economía"

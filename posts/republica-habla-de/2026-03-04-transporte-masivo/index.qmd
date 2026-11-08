@@ -1,7 +1,6 @@
 ---
 title: "Transporte masivo: Qué es, qué no es y qué trae a la mesa"
 date: "2026-03-05"
-author: "Leonardo Mena"
 description: "El Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede hacer el transporte masivo por la economía dominicana."
 categories: 
   - "Transporte"
@@ -13,9 +12,7 @@ format:
   html:
     toc: true
     toc-location: left
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 ```{r}

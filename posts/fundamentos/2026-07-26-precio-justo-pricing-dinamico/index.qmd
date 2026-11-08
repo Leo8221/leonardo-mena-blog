@@ -1,7 +1,6 @@
 ---
 title: "El precio justo de Aristóteles frente al pricing dinámico"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre demanda, eficiencia y justicia percibida."
 categories:
   - "Economía"

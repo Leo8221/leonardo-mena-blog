@@ -1,7 +1,6 @@
 ---
 title: "Peso fuerte, remesas que rinden menos"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Figuras sobre remesas, tipo de cambio y poder de compra real en República Dominicana."
 categories:
   - "Remesas"
@@ -11,9 +10,7 @@ draft: true
 format:
   html:
     toc: false
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <script>document.body.classList.add('editorial-post');</script>

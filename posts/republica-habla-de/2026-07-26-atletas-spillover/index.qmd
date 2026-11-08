@@ -1,7 +1,6 @@
 ---
 title: "El mito del spillover de los atletas"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre estipendios, disciplinas y costo por persona en programas deportivos."
 categories:
   - "República Dominicana"

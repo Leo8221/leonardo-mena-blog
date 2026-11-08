@@ -1,7 +1,6 @@
 ---
 title: "Ingenios azucareros y el mito del desarrollo temprano"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual histórico sobre producción, exportaciones, CEA y control de la industria azucarera dominicana entre 1940 y 1990."
 categories:
   - "República Dominicana"

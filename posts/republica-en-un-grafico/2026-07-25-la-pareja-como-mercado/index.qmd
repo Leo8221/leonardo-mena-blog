@@ -1,7 +1,6 @@
 ---
 title: "La pareja como mercado: educación, selección y homogamia en República Dominicana"
 date: "2026-07-25"
-author: "Leonardo Mena"
 description: "Un borrador sobre cómo se parecen las parejas dominicanas en educación, trabajo y otros rasgos, y qué permanece cuando comparamos perfiles similares."
 categories:
   - "Economía de las relaciones"
@@ -13,9 +12,7 @@ format:
   html:
     toc: true
     toc-location: left
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <style>

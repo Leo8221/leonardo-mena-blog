@@ -1,7 +1,6 @@
 ---
 title: "Qué componentes explican realmente la inflación dominicana"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Descomposición visual de la inflación dominicana, con alimentos y bebidas como el componente más representativo del período."
 categories:
   - "Inflación"
@@ -11,9 +10,7 @@ draft: true
 format:
   html:
     toc: false
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <script>document.body.classList.add('editorial-post');</script>

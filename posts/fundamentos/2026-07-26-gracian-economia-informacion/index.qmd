@@ -1,7 +1,6 @@
 ---
 title: "Baltasar Gracián y la economía de la información"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre prudencia y asimetría de información."
 categories:
   - "Economía"

@@ -1,7 +1,6 @@
 ---
 title: "El Rey Efectivo: La resistencia del billete en la era digital"
 date: "2026-02-04"
-author: "Leonardo Mena"
 description: "Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo. ¿Por qué ni la edad ni el ingreso logran romper esta barrera?"
 image: "img/Hegemonia_Survey.png" 
 twitter-card:

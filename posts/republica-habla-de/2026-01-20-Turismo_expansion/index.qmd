@@ -1,7 +1,6 @@
 ---
 title: "El modelo turístico dominicano: ¿Agotamiento o especialización extrema?"
 date: "2026-01-22"
-author: "Leonardo Mena"
 description: "Los datos revelan una concentración extrema en el modelo 'Sol y Playa'. Analizamos por qué la productividad laboral está estancada frente a otros sectores y dónde están las oportunidades reales de expansión más allá del volumen."
 image: "turismo-cover.jpg" 
 twitter-card:
@@ -14,9 +13,7 @@ draft: false
 body-class: editorial-post
 toc: true
 toc-location: left
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <style>

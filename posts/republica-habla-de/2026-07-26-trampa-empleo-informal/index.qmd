@@ -1,7 +1,6 @@
 ---
 title: "La trampa del empleo informal"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Figuras sobre informalidad, estructura laboral y costo legal de formalizar un empleo en República Dominicana."
 categories:
   - "Trabajo"
@@ -11,9 +10,7 @@ draft: true
 format:
   html:
     toc: false
-include-after-body:
-  - ../../../reading-progress.html
-  - ../../../share-buttons-auto.html
+
 ---
 
 <script>document.body.classList.add('editorial-post');</script>

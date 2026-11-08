@@ -1,7 +1,6 @@
 ---
 title: "La trampa de los ingresos medios"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre convergencia del ingreso y el límite del desarrollo."
 categories:
   - "República Dominicana"

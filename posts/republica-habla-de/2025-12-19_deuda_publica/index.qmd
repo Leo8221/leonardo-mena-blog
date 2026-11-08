@@ -1,7 +1,6 @@
 ---
 title: "La aritmética desagradable de la deuda dominicana: Intereses vs. Recaudación"
 date: "2025-12-20"
-author: "Leonardo Mena"
 description: "La deuda dominicana no luce extrema frente al PIB, pero sus intereses ya rondan el umbral de alerta: cerca de una cuarta parte de los ingresos fiscales se va en costo financiero."
 image: "portada.jpg"
 twitter-card:

@@ -1,7 +1,6 @@
 ---
 title: "Epicteto y por qué nadie tiene fondo de emergencia"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre restricciones materiales y respuesta ante emergencias financieras."
 categories:
   - "Economía"

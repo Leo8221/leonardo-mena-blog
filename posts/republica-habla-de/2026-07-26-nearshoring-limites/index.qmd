@@ -1,7 +1,6 @@
 ---
 title: "Nearshoring y sus límites naturales"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre exportaciones, empleo, actividades e inversión de las zonas francas dominicanas."
 categories:
   - "República Dominicana"

@@ -1,7 +1,6 @@
 ---
 title: "El PIB y la trampa del bienestar: ¿Cómo sumamos peras con manzanas?"
 date: "2025-12-18"
-author: "Leonardo Mena"
 description: "Explicacion tecnica del PIB."
 image: "portada-pib.png"
 twitter-card:

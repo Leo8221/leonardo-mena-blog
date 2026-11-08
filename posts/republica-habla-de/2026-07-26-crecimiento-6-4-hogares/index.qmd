@@ -1,7 +1,6 @@
 ---
 title: "¿El crecimiento del 6,4% llega a los hogares?"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual para descomponer el crecimiento agregado del IMAE y el PIB por sectores."
 categories:
   - "Crecimiento"

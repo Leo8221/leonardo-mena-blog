@@ -1,7 +1,6 @@
 ---
 title: "Perspectiva del desarrollo: Densidad empresarial"
 date: "2026-01-06"
-author: "Leonardo Mena"
 description: "El Distrito Nacional concentra 36 empresas formales por cada 1,000 habitantes; Elías Piña apenas 1.5. La desigualdad territorial empieza en la densidad de oportunidades."
 image: "mapa_densidad_2024.png"
 twitter-card:

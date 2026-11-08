@@ -1,7 +1,6 @@
 ---
 title: "El efecto Baade: cuando el estadio no desarrolla la ciudad"
 date: "2026-07-26"
-author: "Leonardo Mena"
 description: "Borrador visual sobre el impacto económico prometido por los estadios y los grandes eventos."
 categories:
   - "Economía del deporte"
