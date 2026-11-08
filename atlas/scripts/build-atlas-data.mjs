@@ -18,23 +18,13 @@ const bcrdLive = fs.existsSync(bcrdLivePath)
   : null;
 const hydratedSource = applyLiveBcrdData(source, bcrdLive);
 
-const hiddenStatusLabels = ["Borrador", "Backlog", "Pendiente", "Proximo", "Próximo"];
-const hidden = new Set(hiddenStatusLabels.map((status) => normalize(status)));
-const visibleModules = hydratedSource.modules.filter((module) => {
-  return module.visible === true && normalize(module.status) === "activo" && !hidden.has(normalize(module.status));
-});
-
-const requiredSeries = {
-  macro: "macro",
-  sectors: "sectors",
-  external: "external",
-  trade: "trade",
-  labor: "labor",
-  prices: "prices",
-  territory: "territory",
-  mipymes: "mipymes",
-  visualLab: "visualLab"
-};
+// Solo se publican módulos marcados explícitamente como activos y visibles.
+const visibleModules = hydratedSource.modules.filter(module =>
+  module.visible === true && normalize(module.status) === "activo");
+const chartTypes = new Set([
+  "macro", "sectors", "external", "trade", "labor", "prices",
+  "territory", "mipymes", "visualLab"
+]);
 
 const errors = [];
 const allModuleIds = new Set();
@@ -93,8 +83,7 @@ for (const module of visibleModules) {
     errors.push(`${module.id || "(sin id)"}: faltan campos base`);
   }
 
-  const seriesKey = requiredSeries[module.chart];
-  if (!seriesKey || !hydratedSource.series[seriesKey]) {
+  if (!chartTypes.has(module.chart) || !hydratedSource.series[module.chart]) {
     errors.push(`${module.id}: no hay datos para chart=${module.chart}`);
   }
 

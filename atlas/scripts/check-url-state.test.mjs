@@ -11,7 +11,7 @@ function atlas(url = 'https://example.test/atlas/') {
     document: { querySelector: () => null, getElementById: id => id === 'atlas-search' ? search : null },
     history: { replaceState: (_state, _title, next) => { context.window.location.href = String(next); } }
   });
-  for (const file of ['atlas/js/utils.js', 'atlas/app.js', 'atlas/js/app-data.js']) {
+  for (const file of ['atlas/js/utils.js', 'atlas/app.js', 'atlas/js/app-data.js', 'atlas/js/app-panels.js']) {
     vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
   }
   vm.runInContext(`state.data = ${fs.readFileSync('atlas/data/atlas-data.json', 'utf8')}`, context);
@@ -22,6 +22,15 @@ function atlas(url = 'https://example.test/atlas/') {
     url: () => new URL(context.window.location.href)
   };
 }
+
+test('los módulos publicados conservan sus notas de lectura predeterminadas', () => {
+  const app = atlas();
+  for (const module of app.run('visibleModules()')) {
+    const html = app.run(`renderModuleGuide(findModule(${JSON.stringify(module.id)}))`);
+    assert.match(html, /<summary>Notas<\/summary>/, module.id);
+    assert.match(html, /<dt>Límite<\/dt>/, module.id);
+  }
+});
 
 test('volver a la portada borra vista, consulta, familia y métrica anteriores', () => {
   const app = atlas('https://example.test/atlas/?view=pulso-macro&metric=inflacion&q=precios&filter=Macro');

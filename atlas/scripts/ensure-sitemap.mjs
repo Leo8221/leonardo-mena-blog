@@ -6,11 +6,10 @@ const root = process.cwd();
 const outputDir = path.resolve(root, process.env.QUARTO_PROJECT_OUTPUT_DIR || "docs");
 if (outputDir !== path.resolve(root, "docs")) process.exit(0);
 const sitemapPath = path.join(root, "docs", "sitemap.xml");
-const homeUrl = "https://leo8221.github.io/leonardo-mena-blog/";
-const homeIndexUrl = "https://leo8221.github.io/leonardo-mena-blog/index.html";
-const atlasUrl = "https://leo8221.github.io/leonardo-mena-blog/atlas/";
-const legacyObservatorioUrl = "https://leo8221.github.io/leonardo-mena-blog/observatorio.html";
 const siteUrl = "https://leo8221.github.io/leonardo-mena-blog/";
+const homeUrl = siteUrl;
+const atlasUrl = new URL("atlas/", siteUrl).href;
+const legacyObservatorioUrl = new URL("observatorio.html", siteUrl).href;
 
 if (!fs.existsSync(sitemapPath)) {
   throw new Error("docs/sitemap.xml no existe. Ejecuta quarto render antes de actualizar el sitemap.");
@@ -20,25 +19,22 @@ injectCanonicalLinks();
 
 const sitemap = fs.readFileSync(sitemapPath, "utf8");
 
-const withoutLegacy = removeUrlEntry(sitemap, legacyObservatorioUrl);
-const withoutIndexHome = removeUrlEntry(withoutLegacy, homeIndexUrl);
-const withoutDuplicateHome = removeUrlEntry(withoutIndexHome, homeUrl);
-const withoutDuplicateAtlas = removeUrlEntry(withoutDuplicateHome, atlasUrl);
-
 const closingTag = "</urlset>";
-if (!withoutDuplicateAtlas.includes(closingTag)) {
+if (!sitemap.includes(closingTag)) {
   throw new Error("docs/sitemap.xml no contiene </urlset>.");
 }
 
-const withCanonicalUrls = normalizeSitemapUrls(withoutDuplicateAtlas);
-const withoutCanonicalHome = removeUrlEntry(withCanonicalUrls, homeUrl);
-const withoutCanonicalAtlas = removeUrlEntry(withoutCanonicalHome, atlasUrl);
-
-const canonicalEntries = [
-  `  <url>\n    <loc>${homeUrl}</loc>\n  </url>\n`,
-  `  <url>\n    <loc>${atlasUrl}</loc>\n  </url>\n`
-].join("");
-const updated = dedupeSitemapUrls(withoutCanonicalAtlas.replace(closingTag, `${canonicalEntries}</urlset>`));
+// Inicio y Atlas se añaden una sola vez al final, tras normalizar las rutas.
+const seen = new Set([homeUrl, atlasUrl, legacyObservatorioUrl]);
+const normalized = sitemap.replace(/\s*<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>\s*/g, (entry, url) => {
+  const canonical = canonicalizeUrl(url);
+  if (seen.has(canonical)) return "\n";
+  seen.add(canonical);
+  return entry.replace(`<loc>${url}</loc>`, `<loc>${canonical}</loc>`);
+});
+const canonicalEntries = [homeUrl, atlasUrl]
+  .map(url => `  <url>\n    <loc>${url}</loc>\n  </url>\n`).join("");
+const updated = normalized.replace(closingTag, canonicalEntries + closingTag);
 
 if (updated !== sitemap) {
   fs.writeFileSync(sitemapPath, updated, "utf8");
@@ -48,29 +44,8 @@ pruneUnreferencedFigureFiles();
 pruneUnreferencedSiteLibs();
 normalizeGeneratedWhitespace();
 
-function removeUrlEntry(xml, url) {
-  const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const entryPattern = new RegExp(`\\s*<url>\\s*<loc>${escapedUrl}<\\/loc>[\\s\\S]*?<\\/url>\\s*`, "g");
-  return xml.replace(entryPattern, "\n");
-}
-
-function normalizeSitemapUrls(xml) {
-  return xml.replace(/<loc>([^<]+)<\/loc>/g, (_, url) => `<loc>${canonicalizeUrl(url)}</loc>`);
-}
-
-function dedupeSitemapUrls(xml) {
-  const seen = new Set();
-  return xml.replace(/\s*<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>\s*/g, (entry, url) => {
-    if (seen.has(url)) return "\n";
-    seen.add(url);
-    return entry;
-  });
-}
-
 function canonicalizeUrl(url) {
-  if (url === homeIndexUrl) return homeUrl;
-  if (url.endsWith("/index.html")) return url.slice(0, -("index.html".length));
-  return url;
+  return url.replace(/\/index\.html$/, "/");
 }
 
 function injectCanonicalLinks() {
@@ -127,7 +102,7 @@ function pruneUnreferencedFigureFiles() {
   const postsDir = path.join(root, "docs", "posts");
   if (!fs.existsSync(postsDir)) return;
 
-  for (const htmlPath of findPostIndexes(postsDir)) {
+  for (const htmlPath of findHtmlFiles(postsDir).filter(file => path.basename(file) === "index.html")) {
     const postDir = path.dirname(htmlPath);
     const figureDir = path.join(postDir, "index_files", "figure-html");
     if (!fs.existsSync(figureDir)) continue;
@@ -143,15 +118,6 @@ function pruneUnreferencedFigureFiles() {
       }
     }
   }
-}
-
-function findPostIndexes(directory) {
-  const entries = fs.readdirSync(directory, { withFileTypes: true });
-  return entries.flatMap((entry) => {
-    const child = path.join(directory, entry.name);
-    if (entry.isDirectory()) return findPostIndexes(child);
-    return entry.isFile() && entry.name === "index.html" ? [child] : [];
-  });
 }
 
 function pruneUnreferencedSiteLibs() {

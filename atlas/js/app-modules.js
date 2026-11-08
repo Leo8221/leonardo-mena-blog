@@ -227,41 +227,23 @@ function renderVisualLab() {
         <aside class="map-inspector" id="visual-map-inspector" aria-label="Detalle del mapa"></aside>
       </div>
     </section>
-    <section class="chart-card">
+    ${renderVisualCard("tourism-treemap", "Demanda turística por motivo", "Treemap de motivos turísticos", VISUAL_ARTICLES.tourism)}
+    ${renderVisualCard("transport-space", "Empleo formal y alquiler", "Scatter de empleo formal y alquiler", VISUAL_ARTICLES.transport)}
+    ${renderVisualCard("debt-burden", "Deuda pública", "Rigidez fiscal e intereses", VISUAL_ARTICLES.debt, 360, true)}
+    ${renderVisualCard("debt-service", "Servicio de deuda", "Servicio de deuda por componente", VISUAL_ARTICLES.debt, 360, true)}
+  `;
+}
+
+// Las cuatro tarjetas comparten acciones; el mapa conserva su inspector propio.
+function renderVisualCard(id, title, label, article, height = 340, wide = false) {
+  const actions = articleLink(article) + chartExpandButton(id) + chartDownloadButton(id);
+  return `
+    <section class="chart-card${wide ? " chart-card-wide" : ""}">
       <div class="card-head">
-        <div>
-          <h3>Demanda turística por motivo</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}${chartDownloadButton("tourism-treemap")}`)}
+        <div><h3>${escapeHtml(title)}</h3></div>
+        ${chartControls("", actions)}
       </div>
-      <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turísticos"></canvas>
-    </section>
-    <section class="chart-card">
-      <div class="card-head">
-        <div>
-          <h3>Empleo formal y alquiler</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.transport)}${chartExpandButton("transport-space")}${chartDownloadButton("transport-space")}`)}
-      </div>
-      <canvas id="transport-space" height="340" aria-label="Scatter de empleo formal y alquiler"></canvas>
-    </section>
-    <section class="chart-card chart-card-wide">
-      <div class="card-head">
-        <div>
-          <h3>Deuda pública</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-burden")}${chartDownloadButton("debt-burden")}`)}
-      </div>
-      <canvas id="debt-burden" height="360" aria-label="Rigidez fiscal e intereses"></canvas>
-    </section>
-    <section class="chart-card chart-card-wide">
-      <div class="card-head">
-        <div>
-          <h3>Servicio de deuda</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-service")}${chartDownloadButton("debt-service")}`)}
-      </div>
-      <canvas id="debt-service" height="360" aria-label="Servicio de deuda por componente"></canvas>
+      <canvas id="${id}" height="${height}" aria-label="${escapeHtml(label)}"></canvas>
     </section>
   `;
 }

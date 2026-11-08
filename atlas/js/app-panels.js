@@ -314,9 +314,10 @@ function moduleDatasets(module) {
     visualLab: () => {
       if (!state.articleVisuals) return [];
       const mapConfig = visualMapConfig();
-      const mapRows = geoRows(mapConfig.features, visualMapFields());
+      const columns = visualMapColumns();
+      const mapRows = geoRows(mapConfig.features, columns.map(column => column.field));
       return [
-        dataset("mapa-articulo", `Mapa: ${mapConfig.label}`, mapRows, visualMapColumns(), `Vista activa: ${visualMapLabel()}`),
+        dataset("mapa-articulo", `Mapa: ${mapConfig.label}`, mapRows, columns, `Vista activa: ${visualMapLabel()}`),
         dataset("turismo-motivos", "Turismo por motivo", state.articleVisuals.tourism.treemap, [
           col("motivo", "Motivo"),
           col("porcentaje", "%"),
@@ -417,14 +418,6 @@ function visualMapLabel() {
     mipymes: "MiPyMES",
     tourism: "Turismo"
   }[state.visualMap] || state.visualMap;
-}
-
-function visualMapFields() {
-  return {
-    business: ["province", "business_density", "opportunity", "businesses", "population"],
-    mipymes: ["region", "pct_micro", "pct_informal"],
-    tourism: ["country", "beach_pct"]
-  }[state.visualMap];
 }
 
 function visualMapColumns() {

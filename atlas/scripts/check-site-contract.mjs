@@ -59,6 +59,7 @@ function checkNoConsoleLogs() {
 }
 
 requireText("_quarto.yml", [
+  ["sitemap post-render", "post-render: node atlas/scripts/ensure-sitemap.mjs"],
   ["include-before-body: skip-link.html", "include-before-body: skip-link.html"],
   ["tokens como recurso", "assets/css/tokens.css"],
   ["pulso de portada como recurso", "assets/js/home-pulse.js"]
@@ -85,7 +86,7 @@ requireText(".github/workflows/actualizar_observatorio.yml", [
   ["mapa provincial Atlas", "Rscript atlas/scripts/build-map-assets.R"],
   ["visuales de articulos Atlas", "Rscript atlas/scripts/build-article-visuals.R"],
   ["datos publicos Atlas", "node atlas/scripts/build-atlas-data.mjs"],
-  ["sitemap post-render", "node atlas/scripts/ensure-sitemap.mjs"]
+  ["render con el hook de Quarto", "quarto render"]
 ]);
 
 requireText("atlas/data/source-manifest.json", [
