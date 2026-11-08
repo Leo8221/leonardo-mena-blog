@@ -1,0 +1,116 @@
+.source-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.9fr) auto;
+  align-items: start;
+  gap: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  padding: 0.85rem;
+}
+
+.source-card-main span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--terracotta);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.source-card-main strong {
+  display: block;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.12rem;
+}
+
+.source-card-main p {
+  max-width: 72ch;
+  margin: 0.28rem 0 0;
+  color: var(--soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.source-card dl {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.source-card dt {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.source-card dd {
+  margin: 0.12rem 0 0;
+  color: var(--soft);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.source-method {
+  border-top: 1px solid var(--border);
+  padding-top: 0.65rem;
+}
+
+.source-method summary {
+  color: var(--terracotta-dark);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.source-method ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.55rem 0 0;
+  padding-left: 1rem;
+  color: var(--soft);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.source-links a {
+  min-height: 30px;
+  align-content: center;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--terracotta-dark);
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 0 0.7rem;
+  text-decoration: none;
+}
+
+.empty-state {
+  border: 1px dashed var(--border-strong);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 1rem;
+}

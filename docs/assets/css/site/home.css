@@ -43,15 +43,6 @@
     line-height: 1.55;
 }
 
-.home-signature {
-    display: inline-block;
-    margin-top: 0.2rem;
-    color: var(--lm-text-muted);
-    font-family: var(--lm-font-sans);
-    font-size: 0.86rem;
-    font-weight: 650;
-}
-
 .home-actions {
     display: flex;
     justify-content: flex-start;
@@ -216,29 +207,6 @@
     min-width: 0;
 }
 
-.home-side {
-    min-width: 0;
-}
-
-.home-side-note {
-    border-left: 3px solid var(--lm-border-dark);
-    padding-left: 1rem;
-}
-
-.home-side-note h2 {
-    margin: 0.3rem 0 0.6rem;
-    font-size: 1.65rem;
-    line-height: 1;
-}
-
-.home-side-note p {
-    color: var(--lm-text-soft);
-    font-family: var(--lm-font-sans);
-    font-size: 0.92rem;
-    line-height: 1.5;
-}
-
-.home-side-note a,
 .home-about-section a {
     color: var(--lm-terracota);
     font-family: var(--lm-font-sans);
@@ -319,7 +287,6 @@
     font-size: 1.35rem;
 }
 
-
 .quarto-listing .quarto-listing-item {
     background: transparent !important;
     border: none !important;
@@ -332,13 +299,9 @@
     background: transparent !important;
     border-left: none !important;
     box-shadow: none !important;
-    border-left-color: var(--lm-terracota); /* Solo línea de color */
+    border-left-color: var(--lm-terracota);
 }
 
-
-/* Elimina bordes y sombras para integrarlo como cabecera */
-
-#grafico-destacado .quarto-grid-item,
 #home-featured .quarto-grid-item,
 #listing-home-featured .quarto-grid-item {
     border: none !important;
@@ -348,15 +311,13 @@
     max-width: 100%;
 }
 
-#grafico-destacado .card-body,
 #home-featured .card-body,
 #listing-home-featured .card-body {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    padding-top: 1.2rem !important; /* Espacio limpio entre imagen y título */
+    padding-top: 1.2rem !important;
 }
 
-#grafico-destacado img,
 #home-featured img,
 #listing-home-featured img {
     border-radius: 6px;
@@ -406,31 +367,48 @@
     padding: 0 !important;
 }
 
-/* Tipografía Específica del Destacado (Estilo Editorial) */
-#grafico-destacado .card-title,
 #home-featured .card-title,
 #listing-home-featured .card-title {
     font-family: 'Crimson Pro', serif;
-    font-size: 1.5rem;         /* Título más grande y elegante */
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 0.5rem;
     color: var(--lm-text-main);
 }
 
-#grafico-destacado .card-text,
 #home-featured .card-text,
 #listing-home-featured .card-text {
-    font-size: 1.1rem;         /* Descripción más legible */
+    font-size: 1.1rem;
     color: var(--lm-text-soft);
     line-height: 1.5;
 }
 
-#grafico-destacado .card-attribution,
 #home-featured .card-attribution,
 #listing-home-featured .card-attribution {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     color: var(--lm-text-muted);
     margin-top: 1rem;
+}
+
+.home-latest-section {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-latest-section .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.home-latest-section .section-header h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.65rem);
+    line-height: 1.02;
+    text-align: left;
 }

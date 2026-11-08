@@ -61,8 +61,9 @@ function checkNoConsoleLogs() {
 requireText("_quarto.yml", [
   ["sitemap post-render", "post-render: node atlas/scripts/ensure-sitemap.mjs"],
   ["include-before-body: skip-link.html", "include-before-body: skip-link.html"],
-  ["tokens como recurso", "assets/css/tokens.css"],
-  ["pulso de portada como recurso", "assets/js/home-pulse.js"]
+  ["tokens desde la raíz", "- /assets/css/tokens.css"],
+  ["pulso de portada desde la raíz", "- /assets/js/home-pulse.js"],
+  ["scripts Atlas desde la raíz", "- /atlas/js/**"]
 ]);
 
 requireText("index.qmd", [
@@ -164,6 +165,10 @@ requireText("atlas/css/base.css", [
 checkNoConsoleLogs();
 
 if (includeDocs) {
+  // Un patrón de recursos sin barra inicial puede copiar builds locales anidados.
+  if (fs.existsSync(path.join(ROOT, "docs", ".preview"))) {
+    failures.push("docs/.preview: contiene vistas previas locales");
+  }
   for (const file of ["docs/index.html", "docs/about.html", "docs/suscribete.html"]) {
     requireText(file, [
       ["skip link renderizado", "skip-link"],

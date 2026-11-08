@@ -227,41 +227,23 @@ function renderVisualLab() {
         <aside class="map-inspector" id="visual-map-inspector" aria-label="Detalle del mapa"></aside>
       </div>
     </section>
-    <section class="chart-card">
+    ${renderVisualCard("tourism-treemap", "Demanda turística por motivo", "Treemap de motivos turísticos", VISUAL_ARTICLES.tourism)}
+    ${renderVisualCard("transport-space", "Empleo formal y alquiler", "Scatter de empleo formal y alquiler", VISUAL_ARTICLES.transport)}
+    ${renderVisualCard("debt-burden", "Deuda pública", "Rigidez fiscal e intereses", VISUAL_ARTICLES.debt, 360, true)}
+    ${renderVisualCard("debt-service", "Servicio de deuda", "Servicio de deuda por componente", VISUAL_ARTICLES.debt, 360, true)}
+  `;
+}
+
+// Las cuatro tarjetas comparten acciones; el mapa conserva su inspector propio.
+function renderVisualCard(id, title, label, article, height = 340, wide = false) {
+  const actions = articleLink(article) + chartExpandButton(id) + chartDownloadButton(id);
+  return `
+    <section class="chart-card${wide ? " chart-card-wide" : ""}">
       <div class="card-head">
-        <div>
-          <h3>Demanda turística por motivo</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.tourism)}${chartExpandButton("tourism-treemap")}${chartDownloadButton("tourism-treemap")}`)}
+        <div><h3>${escapeHtml(title)}</h3></div>
+        ${chartControls("", actions)}
       </div>
-      <canvas id="tourism-treemap" height="340" aria-label="Treemap de motivos turísticos"></canvas>
-    </section>
-    <section class="chart-card">
-      <div class="card-head">
-        <div>
-          <h3>Empleo formal y alquiler</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.transport)}${chartExpandButton("transport-space")}${chartDownloadButton("transport-space")}`)}
-      </div>
-      <canvas id="transport-space" height="340" aria-label="Scatter de empleo formal y alquiler"></canvas>
-    </section>
-    <section class="chart-card chart-card-wide">
-      <div class="card-head">
-        <div>
-          <h3>Deuda pública</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-burden")}${chartDownloadButton("debt-burden")}`)}
-      </div>
-      <canvas id="debt-burden" height="360" aria-label="Rigidez fiscal e intereses"></canvas>
-    </section>
-    <section class="chart-card chart-card-wide">
-      <div class="card-head">
-        <div>
-          <h3>Servicio de deuda</h3>
-        </div>
-        ${chartControls("", `${articleLink(VISUAL_ARTICLES.debt)}${chartExpandButton("debt-service")}${chartDownloadButton("debt-service")}`)}
-      </div>
-      <canvas id="debt-service" height="360" aria-label="Servicio de deuda por componente"></canvas>
+      <canvas id="${id}" height="${height}" aria-label="${escapeHtml(label)}"></canvas>
     </section>
   `;
 }
@@ -276,14 +258,7 @@ function renderUnsupported(module) {
 }
 
 function chartToggle(scope, id, label) {
-  const active = {
-    macro: state.macroMetric,
-    trade: state.tradeMetric,
-    labor: state.laborMetric,
-    territoryMap: state.territoryMapMetric,
-    territory: state.territoryRegion,
-    visual: state.visualMap
-  }[scope];
+  const active = state[CHART_CONTROLS[scope]];
   return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
 }
 
@@ -317,25 +292,8 @@ function chartEvents(scope, metric = null) {
 }
 
 function hydrateCharts(module) {
-  els.stage.querySelectorAll(".chart-toggle").forEach((button) => {
-    button.addEventListener("click", () => {
-      const scope = button.dataset.scope;
-      const metric = button.dataset.metric;
-      if (scope === "macro") state.macroMetric = metric;
-      if (scope === "trade") state.tradeMetric = metric;
-      if (scope === "labor") state.laborMetric = metric;
-      if (scope === "territoryMap") state.territoryMapMetric = metric;
-      if (scope === "territory") state.territoryRegion = metric;
-      if (scope === "visual") state.visualMap = metric;
-      updateUrlState({ replace: true });
-      trackAtlasEvent(scope === "visual" || scope === "territoryMap" ? "atlas_map_selection" : "atlas_chart_toggle", {
-        chart_id: scope,
-        metric
-      });
-      renderStage();
-    });
-  });
-
+  // Primero renderModuleBody crea los canvas vacíos; después esta función
+  // elige las columnas de datos y llama al dibujo de cada gráfico.
   if (module.chart === "macro") {
     const labels = state.data.series.macro.map((item) => item.period);
     const values = state.data.series.macro.map((item) => item[state.macroMetric]);
@@ -445,36 +403,51 @@ function hydrateCharts(module) {
 }
 
 function hydrateVisualLab() {
-  const mapConfig = visualMapConfig();
+  els.stage.querySelectorAll("canvas").forEach(canvas => drawVisualChart(canvas.id, canvas));
+}
 
-  drawChoroplethMap(document.getElementById("visual-map"), mapConfig.features, mapConfig);
-
-  drawTreemapChart(document.getElementById("tourism-treemap"), state.articleVisuals.tourism.treemap, {
-    title: "Estructura de motivaciones turísticas",
-    labelField: "motivo",
-    valueField: "porcentaje",
-    categoryField: "categoria"
-  });
-
-  drawComplexScatterChart(document.getElementById("transport-space"), state.articleVisuals.transport.rentEmployment, transportScatterOptions());
-
-  drawDebtBurdenChart(document.getElementById("debt-burden"), state.articleVisuals.debt.service, {
-    title: "Servicio total e intereses",
-    labelField: "anio",
-    serviceField: "service",
-    shareField: "interest_share"
-  });
-
-  drawStackedBarChart(document.getElementById("debt-service"), state.articleVisuals.debt.service, {
-    title: "Servicio de deuda por componente",
-    labelField: "anio",
-    fields: [
-      { field: "principal", label: "Principal", color: "#466a8f" },
-      { field: "interest", label: "Intereses", color: "#c86448" },
-      { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
-    ],
-    unit: "US$ MM"
-  });
+// El mismo dibujo sirve en la tarjeta y en el modal, con su tamaño real.
+// El mapa ampliado no debe actualizar el inspector de la tarjeta original.
+function drawVisualChart(id, canvas, fullscreen = false) {
+  // La tarjeta y su ventana ampliada comparten el dibujo y los datos.
+  // fullscreen solo ajusta el espacio disponible para etiquetas.
+  const visuals = state.articleVisuals;
+  switch (id) {
+    case "visual-map": {
+      const config = visualMapConfig();
+      if (fullscreen) {
+        config.inspectorId = null;
+        config.mapId += "-fullscreen";
+      }
+      drawChoroplethMap(canvas, config.features, config);
+      break;
+    }
+    case "tourism-treemap":
+      drawTreemapChart(canvas, visuals.tourism.treemap, {
+        title: "Estructura de motivaciones turísticas",
+        labelField: "motivo", valueField: "porcentaje", categoryField: "categoria"
+      });
+      break;
+    case "transport-space":
+      drawComplexScatterChart(canvas, visuals.transport.rentEmployment, transportScatterOptions());
+      break;
+    case "debt-burden":
+      drawDebtBurdenChart(canvas, visuals.debt.service, {
+        title: "Servicio total e intereses",
+        labelField: "anio", serviceField: "service", shareField: "interest_share"
+      });
+      break;
+    case "debt-service":
+      drawStackedBarChart(canvas, visuals.debt.service, {
+        title: "Servicio de deuda por componente", labelField: "anio", unit: "US$ MM",
+        fields: [
+          { field: "principal", label: "Principal", color: "#466a8f" },
+          { field: "interest", label: "Intereses", color: "#c86448" },
+          { field: "commissions", label: "Comisiones", color: "#d4ac0d" }
+        ]
+      });
+      break;
+  }
 }
 
 function visualMapConfig() {

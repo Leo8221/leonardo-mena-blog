@@ -1,0 +1,272 @@
+.metric-card,
+.module-stage,
+.chart-card,
+.module-card,
+.mobile-module-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: 0 10px 30px rgba(25, 27, 31, 0.06);
+}
+
+.mobile-atlas-nav {
+  display: none;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.metric-card {
+  min-width: 0;
+  min-height: 62px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-color: color-mix(in srgb, var(--border) 72%, transparent);
+  box-shadow: none;
+  padding: 0.55rem 0.65rem;
+}
+
+.metric-card:hover,
+.metric-card.is-active {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 24px rgba(25, 27, 31, 0.08);
+}
+
+.metric-card.is-active {
+  background: color-mix(in srgb, var(--terracotta) 7%, var(--card));
+}
+
+.metric-card small {
+  color: var(--muted);
+  font-size: var(--ui-caption);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.metric-card strong {
+  margin-top: 0.18rem;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.08rem, 1.25vw, 1.42rem);
+  line-height: 1;
+}
+
+.metric-card span {
+  color: var(--soft);
+  font-size: var(--ui-caption);
+  font-weight: 700;
+}
+
+.metric-card em {
+  display: none;
+}
+
+.metric-card small,
+.metric-card strong,
+.metric-card span,
+.metric-card em {
+  overflow-wrap: anywhere;
+}
+
+.metric-card[data-tone="good"] span {
+  color: #1f7f45;
+}
+
+.metric-card[data-tone="warn"] span {
+  color: #b25b11;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.module-stage {
+  min-width: 0;
+  min-height: 480px;
+  padding: 0.85rem;
+}
+
+.stage-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.stage-header h2 {
+  margin: 0.3rem 0 0;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 1;
+}
+
+.stage-header p {
+  max-width: 760px;
+  margin: 0.45rem 0 0;
+  color: var(--soft);
+  font-size: 0.92rem;
+}
+
+.stage-actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.stage-action {
+  min-height: var(--lm-control-min);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--soft);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0 0.65rem;
+}
+
+.stage-action[data-action="copy-link"] {
+  border-color: color-mix(in srgb, var(--terracotta) 42%, var(--border));
+  color: var(--terracotta-dark);
+}
+
+.stage-action:hover {
+  border-color: var(--terracotta);
+  color: var(--terracotta-dark);
+}
+
+.overview-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.overview-group {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.overview-group + .overview-group {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.overview-group-head {
+  display: grid;
+  gap: 0.18rem;
+  max-width: 820px;
+}
+
+.overview-group-head h3 {
+  margin: 0;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.45rem, 2.3vw, 2rem);
+  line-height: 1.05;
+}
+
+.overview-group-head p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.module-card {
+  min-height: 190px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.58rem;
+  border-top: 3px solid var(--olive);
+  cursor: pointer;
+  padding: 0.88rem;
+  text-align: left;
+  white-space: normal;
+}
+
+.module-card.is-active {
+  border-top-color: var(--terracotta);
+}
+
+.module-card h3 {
+  margin: 0;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.08;
+}
+
+.module-card p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.module-card-meta,
+.module-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.module-card-meta {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.module-question {
+  color: var(--ink) !important;
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 1.05rem !important;
+  line-height: 1.18;
+}
+
+.module-reading {
+  display: grid;
+  gap: 0.18rem;
+  border-left: 2px solid var(--terracotta);
+  padding-left: 0.6rem;
+  color: var(--soft);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.module-reading strong {
+  color: var(--terracotta-dark);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.module-card-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 0.7rem;
+}
+
+.module-card-footer strong {
+  color: var(--terracotta-dark);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}

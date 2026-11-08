@@ -49,23 +49,19 @@ body.quarto-dark.editorial-post .key-takeaways {
   }
 }
 
-/* Título de la caja ("HALLAZGOS PRINCIPALES") */
 body.quarto-dark.editorial-post .key-takeaways-title {
-  color: var(--lm-terracota); /* O un gris claro #ccc si prefieres */
+  color: var(--lm-terracota);
 }
 
-/* El texto de la lista */
 body.quarto-dark.editorial-post .key-takeaways li {
   color: #e0e0e0;
 }
 
-/* Las bolitas de los números (1, 2, 3...) */
 body.quarto-dark.editorial-post .key-takeaways li::before {
   background: var(--lm-terracota);
   color: #121212;
 }
 
-/* Las negritas dentro del texto */
 body.quarto-dark.editorial-post .key-takeaways strong {
   color: #fff;
 }

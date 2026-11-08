@@ -1,48 +1,15 @@
 {
-  "generatedAt": "2026-06-27T21:37:07Z",
+  "generatedAt": "2026-11-08T05:30:08Z",
   "dataCutoff": {
-    "macro": "May 2026",
-    "prices": "May 2026",
-    "trade": 2025
+    "macro": "Sep 2026",
+    "prices": "Sep 2026",
+    "trade": "2026 T2",
+    "labor": "2026 T2",
+    "sectors": "2026 T2",
+    "external": "2025"
   },
   "series": {
     "macro": [
-      {
-        "period": "Ago 2025",
-        "year": 2025,
-        "month": 8,
-        "dolar": 62.2947,
-        "inflacion": 3.7136,
-        "imae": 1.5046,
-        "tpm": 5.75
-      },
-      {
-        "period": "Sep 2025",
-        "year": 2025,
-        "month": 9,
-        "dolar": 62.9986,
-        "inflacion": 3.7556,
-        "imae": 1.1136,
-        "tpm": 5.75
-      },
-      {
-        "period": "Oct 2025",
-        "year": 2025,
-        "month": 10,
-        "dolar": 63.7691,
-        "inflacion": 4.2315,
-        "imae": 0.1832,
-        "tpm": 5.5
-      },
-      {
-        "period": "Nov 2025",
-        "year": 2025,
-        "month": 11,
-        "dolar": 63.8935,
-        "inflacion": 4.8111,
-        "imae": 3.1567,
-        "tpm": 5.25
-      },
       {
         "period": "Dic 2025",
         "year": 2025,
@@ -58,7 +25,7 @@
         "month": 1,
         "dolar": 63.5063,
         "inflacion": 4.984,
-        "imae": 3.4869,
+        "imae": 3.4799,
         "tpm": 5.25
       },
       {
@@ -67,7 +34,7 @@
         "month": 2,
         "dolar": 62.1964,
         "inflacion": 4.6724,
-        "imae": 3.8646,
+        "imae": 3.8577,
         "tpm": 5.25
       },
       {
@@ -76,7 +43,7 @@
         "month": 3,
         "dolar": 60.6703,
         "inflacion": 4.6291,
-        "imae": 5.0708,
+        "imae": 5.0849,
         "tpm": 5.25
       },
       {
@@ -85,7 +52,7 @@
         "month": 4,
         "dolar": 60.3846,
         "inflacion": 5.1143,
-        "imae": 3.7724,
+        "imae": 3.7794,
         "tpm": 5.25
       },
       {
@@ -94,7 +61,43 @@
         "month": 5,
         "dolar": 59.463,
         "inflacion": 5.3461,
-        "imae": 4.7274,
+        "imae": 4.7146,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun 2026",
+        "year": 2026,
+        "month": 6,
+        "dolar": 59.2435,
+        "inflacion": 5.6669,
+        "imae": 6.3927,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jul 2026",
+        "year": 2026,
+        "month": 7,
+        "dolar": 58.8755,
+        "inflacion": 5.467,
+        "imae": 4.612,
+        "tpm": 5.25
+      },
+      {
+        "period": "Ago 2026",
+        "year": 2026,
+        "month": 8,
+        "dolar": 58.682,
+        "inflacion": 5.1258,
+        "imae": 3.8105,
+        "tpm": 5.25
+      },
+      {
+        "period": "Sep 2026",
+        "year": 2026,
+        "month": 9,
+        "dolar": 59.3339,
+        "inflacion": 5.1161,
+        "imae": 5.611,
         "tpm": 5.25
       }
     ],
@@ -150,72 +153,44 @@
         "direction": "PIB"
       },
       {
-        "sector": "Comercio",
-        "pressure": 49.2,
-        "driver": "Demanda interna",
-        "direction": "PIB"
-      },
-      {
         "sector": "Construccion",
-        "pressure": 42.4,
+        "pressure": 46.7,
         "driver": "Financiamiento",
         "direction": "Credito"
       },
       {
-        "sector": "Transporte",
-        "pressure": 29.8,
-        "driver": "Servicios",
+        "sector": "Comercio",
+        "pressure": 43.9,
+        "driver": "Demanda interna",
         "direction": "PIB"
       },
       {
         "sector": "Turismo",
-        "pressure": 26.4,
+        "pressure": 35.6,
         "driver": "Viajes",
         "direction": "Servicios"
       },
       {
+        "sector": "Transporte",
+        "pressure": 27.5,
+        "driver": "Servicios",
+        "direction": "PIB"
+      },
+      {
         "sector": "Agropecuaria",
-        "pressure": 19.5,
+        "pressure": 17.4,
         "driver": "Produccion",
         "direction": "PIB"
       },
       {
         "sector": "Servicios financieros",
-        "pressure": 18.7,
+        "pressure": 16.9,
         "driver": "Financiamiento",
         "direction": "Credito"
       }
     ],
     "prices": {
       "timeline": [
-        {
-          "period": "Ago 2025",
-          "year": 2025,
-          "month": 8,
-          "headline": 3.7136,
-          "core": 4.3196
-        },
-        {
-          "period": "Sep 2025",
-          "year": 2025,
-          "month": 9,
-          "headline": 3.7556,
-          "core": 4.3514
-        },
-        {
-          "period": "Oct 2025",
-          "year": 2025,
-          "month": 10,
-          "headline": 4.2315,
-          "core": 4.6659
-        },
-        {
-          "period": "Nov 2025",
-          "year": 2025,
-          "month": 11,
-          "headline": 4.8111,
-          "core": 4.7419
-        },
         {
           "period": "Dic 2025",
           "year": 2025,
@@ -257,72 +232,100 @@
           "month": 5,
           "headline": 5.3461,
           "core": 4.8614
+        },
+        {
+          "period": "Jun 2026",
+          "year": 2026,
+          "month": 6,
+          "headline": 5.6669,
+          "core": 4.9594
+        },
+        {
+          "period": "Jul 2026",
+          "year": 2026,
+          "month": 7,
+          "headline": 5.467,
+          "core": 4.9564
+        },
+        {
+          "period": "Ago 2026",
+          "year": 2026,
+          "month": 8,
+          "headline": 5.1258,
+          "core": 4.7634
+        },
+        {
+          "period": "Sep 2026",
+          "year": 2026,
+          "month": 9,
+          "headline": 5.1161,
+          "core": 4.6082
         }
       ],
       "components": [
         {
-          "component": "Transporte",
-          "contribution": 2.16,
+          "component": "Educación",
+          "contribution": 1.85,
           "pressure": 100
         },
         {
-          "component": "Recreación y Cultura",
-          "contribution": -0.98,
-          "pressure": 45.3
+          "component": "Comunicaciones",
+          "contribution": -1.06,
+          "pressure": 57.2
+        },
+        {
+          "component": "Transporte",
+          "contribution": 0.64,
+          "pressure": 34.6
         },
         {
           "component": "Alimentos y Bebidas no Alcohólicas",
-          "contribution": -0.58,
-          "pressure": 26.9
-        },
-        {
-          "component": "Bienes y Servicios Diversos",
-          "contribution": 0.42,
-          "pressure": 19.2
+          "contribution": 0.43,
+          "pressure": 23.1
         },
         {
           "component": "Restaurantes y Hoteles",
-          "contribution": 0.41,
-          "pressure": 18.9
+          "contribution": 0.34,
+          "pressure": 18.2
+        },
+        {
+          "component": "Muebles",
+          "contribution": 0.32,
+          "pressure": 17.1
         },
         {
           "component": "Salud",
-          "contribution": 0.36,
-          "pressure": 16.9
-        },
-        {
-          "component": "Bebidas Alcohólicas y Tabaco",
-          "contribution": 0.18,
-          "pressure": 8.3
+          "contribution": 0.28,
+          "pressure": 15
         }
       ]
     },
     "trade": {
       "flows": [
         {
-          "period": "2021",
-          "exports": 12486.4,
-          "imports": 24282
+          "period": "2022 T1-T2",
+          "exports": 6987.5,
+          "imports": 15001
         },
         {
-          "period": "2022",
-          "exports": 13750.2,
-          "imports": 30912.6
+          "period": "2023 T1-T2",
+          "exports": 6676.5,
+          "imports": 14207.7
         },
         {
-          "period": "2023",
-          "exports": 12949.8,
-          "imports": 28813.1
+          "period": "2024 T1-T2",
+          "exports": 6811.6,
+          "imports": 14449.7
         },
         {
-          "period": "2024",
-          "exports": 13928.8,
-          "imports": 29803
+          "period": "2025 T1-T2",
+          "exports": 7469.4,
+          "imports": 14659.2
         },
         {
-          "period": "2025",
-          "exports": 15957.6,
-          "imports": 29792.9
+          "period": "2026 T1-T2",
+          "exports": 8720.1,
+          "imports": 15745
         }
       ],
       "products": [
@@ -380,49 +383,49 @@
       "indicators": [
         {
           "group": "Total Global de Participación",
-          "value": 66.3
+          "value": 66.8
         },
         {
           "group": "Tasa de Ocupación",
-          "value": 63
+          "value": 63.2
         },
         {
           "group": "Ocupación Informal",
-          "value": 54.1
+          "value": 53.8
         },
         {
           "group": "SU1: Tasa de Desocupación 4/",
-          "value": 5
+          "value": 5.3
         },
         {
           "group": "Tasa de Inactividad",
-          "value": 33.7
+          "value": 33.2
         }
       ],
       "sectors": [
-        {
-          "name": "Otros Servicios",
-          "jobs": 20.6
-        },
         {
           "name": "Comercio",
           "jobs": 20
         },
         {
+          "name": "Otros Servicios",
+          "jobs": 20
+        },
+        {
           "name": "Industrias 2/",
-          "jobs": 10.3
+          "jobs": 9.8
         },
         {
           "name": "Hoteles, Bares y Restaurantes",
-          "jobs": 8.6
+          "jobs": 9
         },
         {
           "name": "Construcción",
-          "jobs": 8.1
+          "jobs": 8.5
         },
         {
           "name": "Transporte y Comunicaciones",
-          "jobs": 6.9
+          "jobs": 7.1
         },
         {
           "name": "Enseñanza",
@@ -458,39 +461,39 @@
         {
           "period": "2025",
           "employment": 2.5,
-          "employers": 109.4
+          "employers": 109.5
         },
         {
           "period": "2026",
-          "employment": 2.55,
-          "employers": 111.4
+          "employment": 2.56,
+          "employers": 113.2
         }
       ]
     }
   },
   "metrics": {
     "usd": {
-      "value": "RD$ 59.46",
-      "delta": "-0.92 vs. mes anterior",
-      "meta": "Venta promedio mensual BCRD, May 2026",
-      "tone": "good"
+      "value": "RD$ 59.33",
+      "delta": "+0.65 vs. mes anterior",
+      "meta": "Venta promedio mensual BCRD, Sep 2026",
+      "tone": "warn"
     },
     "inflation": {
-      "value": "5.35%",
+      "value": "5.12%",
       "delta": "Fuera de meta",
-      "meta": "IPC interanual BCRD, May 2026",
+      "meta": "IPC interanual BCRD, Sep 2026",
       "tone": "warn"
     },
     "trade": {
-      "label": "Exportaciones totales",
-      "value": "US$ 15957.6 MM",
-      "delta": "Exportaciones 2025",
-      "meta": "BCRD sector externo",
+      "label": "Exportaciones acumuladas",
+      "value": "US$ 8720.1 MM",
+      "delta": "Exportaciones 2026 T1-T2",
+      "meta": "BCRD sector externo, acumulado hasta 2026 T2",
       "tone": "neutral"
     },
     "labor": {
       "label": "Ocupación informal",
-      "value": "54.1%",
+      "value": "53.8%",
       "delta": "Ocupación informal",
       "meta": "ENCFT, ultimo trimestre disponible",
       "tone": "warn"

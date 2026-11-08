@@ -11,24 +11,26 @@ project:
     - "!trabajo-siuben/**"
     - "!editorial/**"
     - "!mantenimiento/**"
+  # La barra inicial limita los recursos a la raíz; sin ella Quarto busca también
+  # dentro de vistas previas y puede copiar builds anteriores.
   resources: 
-    - .nojekyll
-    - image/logo_leonardo_mena_completo.png
-    - robots.txt
-    - tema_graficos.R
-    - assets/css/tokens.css
-    - assets/css/site/**
-    - assets/js/home-pulse.js
-    - atlas/index.html
-    - atlas/app.js
-    - atlas/js/**
-    - atlas/styles.css
-    - atlas/css/**
-    - atlas/data/atlas-data.json
-    - atlas/data/article-visuals.json
-    - atlas/data/rd-provinces.geojson
-    - atlas/data/rd-regions-mipymes.geojson
-    - atlas/data/world-tourism.geojson
+    - /.nojekyll
+    - /image/logo_leonardo_mena_completo.png
+    - /robots.txt
+    - /tema_graficos.R
+    - /assets/css/tokens.css
+    - /assets/css/site/**
+    - /assets/js/home-pulse.js
+    - /atlas/index.html
+    - /atlas/app.js
+    - /atlas/js/**
+    - /atlas/styles.css
+    - /atlas/css/**
+    - /atlas/data/atlas-data.json
+    - /atlas/data/article-visuals.json
+    - /atlas/data/rd-provinces.geojson
+    - /atlas/data/rd-regions-mipymes.geojson
+    - /atlas/data/world-tourism.geojson
 
 lang: es 
 

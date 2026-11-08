@@ -5,7 +5,6 @@ function drawTreemapChart(canvas, rows, options) {
   const padding = { top: 44, right: 18, bottom: 18, left: 18 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
-  const total = rows.reduce((sum, item) => sum + Number(item[options.valueField]), 0) || 1;
   const colors = {
     Masivo: CHART_SYSTEM.colors.terracotta,
     Vinculado: CHART_SYSTEM.colors.olive,
@@ -18,7 +17,7 @@ function drawTreemapChart(canvas, rows, options) {
 
   layoutTreemap(
     rows
-    .slice()
+      .slice()
       .sort((a, b) => Number(b[options.valueField]) - Number(a[options.valueField])),
     padding.left,
     padding.top,
@@ -53,6 +52,8 @@ function drawTreemapChart(canvas, rows, options) {
 }
 
 function drawDebtBurdenChart(canvas, rows, options) {
+  // Las barras usan montos en US$ MM; la línea usa porcentajes.
+  // Cada una tiene su escala: no se comparan sus alturas como si fueran iguales.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
@@ -126,11 +127,7 @@ function drawDebtBurdenChart(canvas, rows, options) {
 
   bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
-    const point = points.find((candidate) => {
-      const dx = cursor.x - candidate.x;
-      const dy = cursor.y - candidate.y;
-      return Math.sqrt(dx * dx + dy * dy) <= candidate.radius + 2;
-    });
+    const point = findPointAt(points, cursor, 2);
     if (point) {
       return `
         <strong>${escapeHtml(point.item[options.labelField])}</strong>
@@ -138,12 +135,7 @@ function drawDebtBurdenChart(canvas, rows, options) {
         <span>Servicio: ${formatNumber(point.item[options.serviceField])} US$ MM</span>
       `;
     }
-    const box = boxes.find((candidate) => (
-      cursor.x >= candidate.x &&
-      cursor.x <= candidate.x + candidate.width &&
-      cursor.y >= candidate.y &&
-      cursor.y <= candidate.y + candidate.height
-    ));
+    const box = findBoxAt(boxes, cursor);
     if (!box) return null;
     return `
       <strong>${escapeHtml(box.item[options.labelField])}</strong>
