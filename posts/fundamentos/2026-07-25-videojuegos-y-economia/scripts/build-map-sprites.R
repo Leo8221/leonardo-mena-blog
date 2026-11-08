@@ -19,6 +19,7 @@ draw_hex <- function(fill, border = "#16252b") {
 }
 
 draw_sprite <- function(kind, file) {
+  # Dibuja en un cuadro de 0 a 1; el PNG final mide 192 px y conserva transparencia.
   png(file, width = 192, height = 192, res = 144, bg = "transparent")
   par(mar = rep(0, 4), xaxs = "i", yaxs = "i", bg = "transparent")
   plot.new()

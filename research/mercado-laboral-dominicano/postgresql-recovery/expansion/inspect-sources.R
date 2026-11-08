@@ -5,7 +5,9 @@ dir.create(file.path(base,"qa"),recursive=TRUE,showWarnings=FALSE)
 paths <- c(list.files("atlas/data/raw",pattern="[.]xlsx?$",recursive=TRUE,full.names=TRUE),
  "posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/ENIEF_Consolidado.xlsx",
  "research/mercado-laboral-dominicano/data/raw/enae_2024/base_de_datos_general_ENAE_2024.xlsx")
-profiles <- list(); preview <- list(); problems <- list()
+profiles <- list()
+preview <- list()
+problems <- list()
 for(path in paths) {
   sheets <- excel_sheets(path)
   for(sheet in sheets) {

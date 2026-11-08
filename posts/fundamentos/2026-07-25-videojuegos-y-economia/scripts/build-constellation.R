@@ -50,6 +50,8 @@ diamond <- function(x, y, radius, fill, border = NA, lwd = 1) {
 }
 
 star_polygon <- function(x, y, outer, inner, points = 8L, rotation = -pi / 2) {
+  # Alternar radios largos y cortos crea las puntas; seno y coseno las sitúan
+  # alrededor del centro (x, y).
   angle <- rotation + seq(0, 2 * pi, length.out = points * 2L + 1L)[-(points * 2L + 1L)]
   radius <- rep(c(outer, inner), points)
   cbind(x + cos(angle) * radius, y + sin(angle) * radius)

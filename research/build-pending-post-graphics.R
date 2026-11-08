@@ -59,7 +59,8 @@ month_num <- function(x) {
   unname(c(enero = 1, ene = 1, febrero = 2, feb = 2, marzo = 3, mar = 3, abril = 4, abr = 4, mayo = 5, may = 5, junio = 6, jun = 6, julio = 7, jul = 7, agosto = 8, ago = 8, septiembre = 9, sep = 9, sept = 9, octubre = 10, oct = 10, noviembre = 11, nov = 11, diciembre = 12, dic = 12)[key])
 }
 fill_year <- function(x) {
-  out <- rep(NA_integer_, length(x)); current <- NA_integer_
+  out <- rep(NA_integer_, length(x))
+  current <- NA_integer_
   for (i in seq_along(x)) {
     candidate <- suppressWarnings(as.integer(as.character(x[[i]])))
     if (!is.na(candidate) && candidate >= 1900 && candidate <= 2100) current <- candidate
@@ -75,8 +76,10 @@ ipc_path <- file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_ar
 raw_ipc <- read_excel(ipc_path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
 year_scores <- vapply(seq_len(nrow(raw_ipc)), function(i) sum(str_detect(as.character(unlist(raw_ipc[i, ], use.names = FALSE)), "^20[0-9]{2}$"), na.rm = TRUE), numeric(1))
 month_scores <- vapply(seq_len(nrow(raw_ipc)), function(i) sum(!is.na(month_num(unlist(raw_ipc[i, ], use.names = FALSE)))), numeric(1))
-year_row <- which.max(year_scores); month_row <- which.max(month_scores)
-years <- fill_year(unlist(raw_ipc[year_row, ], use.names = FALSE)); months <- month_num(unlist(raw_ipc[month_row, ], use.names = FALSE))
+year_row <- which.max(year_scores)
+month_row <- which.max(month_scores)
+years <- fill_year(unlist(raw_ipc[year_row, ], use.names = FALSE))
+months <- month_num(unlist(raw_ipc[month_row, ], use.names = FALSE))
 cols <- which(!is.na(years) & !is.na(months))
 group_rows <- which(str_detect(str_squish(as.character(raw_ipc[[1]])), "^[0-9]{2} "))
 assert_true(length(group_rows) == 12, "El IPC por grupos no contiene 12 grupos.")

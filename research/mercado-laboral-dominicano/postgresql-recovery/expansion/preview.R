@@ -1,8 +1,10 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
-args<-commandArgs(TRUE);m<-fromJSON(file.path(base,'qa/download-manifest.json'))
+args<-commandArgs(TRUE)
+m<-fromJSON(file.path(base,'qa/download-manifest.json'))
 m<-m[grepl(args[1],m$path,ignore.case=TRUE),]
 for(i in seq_len(nrow(m))){
- ss<-excel_sheets(m$path[i]);if(length(args)>1)ss<-ss[grepl(args[2],ss,ignore.case=TRUE)]
+ ss<-excel_sheets(m$path[i])
+ if(length(args)>1)ss<-ss[grepl(args[2],ss,ignore.case=TRUE)]
  for(s in ss){
   x<-suppressMessages(read_excel(m$path[i],sheet=s,col_names=FALSE,col_types='text',.name_repair='minimal'))
   cat('\nFILE',basename(m$path[i]),'SHEET',s,'DIM',nrow(x),ncol(x),'\n')

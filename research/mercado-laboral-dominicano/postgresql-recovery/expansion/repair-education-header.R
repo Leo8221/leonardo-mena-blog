@@ -4,7 +4,8 @@ con<-connect_pg()
 # Raw downloaded files remain unchanged; no pre-existing user table is touched.
 dbWithTransaction(con,{
  for(t in c('centros_2024_2025','matricula_detalle_2023_2024')){
-  full<-paste0('minerd.',t);id<-Id(schema='minerd',table=t)
+  full<-paste0('minerd.',t)
+  id<-Id(schema='minerd',table=t)
   stopifnot(dbExistsTable(con,id))
   stopifnot(nrow(dbGetQuery(con,"SELECT 1 FROM meta.tablas WHERE tabla=$1 AND fuente='MINERD'",params=list(full)))==1)
   stopifnot(!'regional' %in% dbListFields(con,id))

@@ -1,7 +1,11 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
-m<-fromJSON(file.path(base,'qa/download-manifest.json'));f<-m[m$id=='30f99ffda639',]
-x<-as.data.frame(read_excel(f$path,col_types='text'));names(x)<-clean_names(names(x));x$fila_origen<-seq_len(nrow(x))+1L
-x<-typed_text(x[x$periodo=='202120222',],keep_text='periodo');stopifnot(nrow(x)==140)
+m<-fromJSON(file.path(base,'qa/download-manifest.json'))
+f<-m[m$id=='30f99ffda639',]
+x<-as.data.frame(read_excel(f$path,col_types='text'))
+names(x)<-clean_names(names(x))
+x$fila_origen<-seq_len(nrow(x))+1L
+x<-typed_text(x[x$periodo=='202120222',],keep_text='periodo')
+stopifnot(nrow(x)==140)
 con<-connect_pg()
 stopifnot(nrow(dbGetQuery(con,"SELECT 1 FROM meta.tablas WHERE tabla='minerd.matricula_nivel' AND sha256=$1",params=list(digest(file=f$path,algo='sha256'))))==1)
 dbWithTransaction(con,{

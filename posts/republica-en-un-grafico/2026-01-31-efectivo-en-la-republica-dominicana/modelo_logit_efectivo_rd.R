@@ -27,13 +27,14 @@ df_raw <- read_excel("ENIEF_Consolidado.xlsx", sheet = "ENIEF 2023-2019", guess_
 
 if(!"FACTOR_EXP" %in% names(df_raw)) stop("Error: Falta variable FACTOR_EXP")
 
-# Funciones de limpieza
+# Los códigos distintos de sí/no quedan como NA: no cuentan como respuestas negativas.
 clean_binary <- function(x) {
   val <- suppressWarnings(as.numeric(as.character(x)))
   case_when(val == 1 ~ 1, val == 2 ~ 0, TRUE ~ NA_real_)
 }
 
 clean_payment <- function(x) {
+  # 1 representa efectivo; 10 queda sin respuesta utilizable en esta recodificación.
   val <- suppressWarnings(as.numeric(as.character(x)))
   case_when(val == 1 ~ 1, val == 10 ~ NA_real_, !is.na(val) ~ 0, TRUE ~ NA_real_)
 }
@@ -121,6 +122,8 @@ gastos_analizar <- list(
 )
 
 correr_modelo_survey <- function(design, y_var, nombre) {
+  # Repite el modelo para cada tipo de gasto, conservando los pesos de la encuesta.
+  # y_var es el nombre de la columna; .data[[y_var]] permite seleccionarla por texto.
   sub_design <- design |> 
     filter(!is.na(.data[[y_var]]), !is.na(Ingreso_Log), !is.na(Educacion))
   
@@ -131,7 +134,7 @@ correr_modelo_survey <- function(design, y_var, nombre) {
   f <- as.formula(paste(y_var, "~ Ingreso_Log + Educacion + Edad + Zona + Tiene_Cuenta_Bin"))
   mod <- svyglm(f, design = sub_design, family = quasibinomial())
   
-  # Efectos marginales
+  # margins traduce los coeficientes del logit a cambios en probabilidad.
   m <- margins(mod, design = sub_design) 
   
   summary(m) |> 

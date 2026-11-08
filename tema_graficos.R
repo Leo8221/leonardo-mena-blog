@@ -1,4 +1,4 @@
-# TEMA GRÁFICOS UNIVERSAL - LEONARDO MENA
+# Se carga con source("tema_graficos.R"). Añade el tema a un ggplot con + theme_lm().
 
 library(ggplot2)
 library(scales)
@@ -7,7 +7,7 @@ library(scales)
   if (is.null(x)) y else x
 }
 
-# PALETA DE COLORES
+# Colores compartidos: cambiar uno aquí afecta a los gráficos que lo usan.
 
 pal <- list(
 
@@ -31,7 +31,8 @@ pal <- list(
   rojo       = "#c62828"
 )
 
-# grid: "x", "y", "both" o "n"; no modifica los datos del gráfico.
+# grid elige las líneas de fondo: "x", "y", "both" o "n" (ninguna).
+# Las capas de datos siguen siendo las del ggplot al que añadas este tema.
 
 theme_lm <- function(grid = "y") {
   theme_minimal(base_size = 13) +
@@ -59,11 +60,11 @@ theme_lm <- function(grid = "y") {
       axis.line = element_line(color = pal$border_dark, linewidth = 0.4),
       axis.ticks = element_line(color = pal$border, linewidth = 0.3),
 
-      panel.grid.major.y = if(grid %in% c("y", "both")) {
+      panel.grid.major.y = if (grid %in% c("y", "both")) {
         element_line(color = pal$border, linewidth = 0.3, linetype = "dotted")
       } else element_blank(),
 
-      panel.grid.major.x = if(grid %in% c("x", "both")) {
+      panel.grid.major.x = if (grid %in% c("x", "both")) {
         element_line(color = pal$border, linewidth = 0.3, linetype = "dotted")
       } else element_blank(),
 
@@ -90,16 +91,15 @@ theme_lm <- function(grid = "y") {
     )
 }
 
-# Anotaciones
-
-# Línea de referencia (ej: promedio, meta puntual)
+# Devuelve dos capas que ggplot puede sumar juntas: la línea y su etiqueta.
+# Por ejemplo, + linea_ref(5, "Meta") marca y = 5 en el gráfico.
 linea_ref <- function(y, label = NULL, color = NULL) {
   color <- color %||% pal$terracota
 
   list(
     geom_hline(yintercept = y, linetype = "dashed",
                color = color, linewidth = 0.5, alpha = 0.7),
-    if(!is.null(label)) {
+    if (!is.null(label)) {
       annotate("text",
         x = -Inf, y = y, label = label,
         hjust = -0.1, vjust = -0.4, size = 3, color = color, fontface = "bold"
@@ -108,7 +108,7 @@ linea_ref <- function(y, label = NULL, color = NULL) {
   )
 }
 
-# Evento vertical (ej: COVID-19, elecciones)
+# x usa la misma unidad del eje: si el eje es una fecha, pasa una fecha.
 evento <- function(x, label, color = NULL) {
   color <- color %||% pal$terracota
 
@@ -122,13 +122,11 @@ evento <- function(x, label, color = NULL) {
   )
 }
 
-# FORMATEADORES
-
+# x ya está en porcentaje: fmt_pct(12.3) da "12.3%", no multiplica por cien.
 fmt_pct <- function(x, d = 1) paste0(format(round(x, d), nsmall = d), "%")
 
-# Escala y tema para mapas
-
-# 1. Escala Continua Personalizada (Gradiente Flexible)
+# reverse invierte los colores. values indica dónde se sitúan en la escala;
+# los argumentos adicionales (...) pasan a scale_fill_gradientn de ggplot2.
 
 scale_fill_lm_cont <- function(reverse = FALSE, values = NULL, ...) {  mis_colores <- c(pal$oliva, pal$gris_claro, pal$ocre, pal$terracota)
 
@@ -150,9 +148,7 @@ scale_fill_lm_cont <- function(reverse = FALSE, values = NULL, ...) {  mis_colo
   )
 }
 
-# 2. Tema Específico para Mapas
-# Hereda theme_lm() pero limpia ejes, coordenadas y bordes innecesarios.
-# Uso: + theme_lm_map()
+# En un mapa interesan las regiones: ocultamos los ejes del tema común.
 
 theme_lm_map <- function() {
   theme_lm(grid = "n") +

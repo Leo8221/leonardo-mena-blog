@@ -1,7 +1,11 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
-con<-connect_pg();checks<-list()
+con<-connect_pg()
+checks<-list()
 check<-function(id,sql,severity='error',note=''){
- n<-as.numeric(dbGetQuery(con,sql)[[1]][1]);checks[[length(checks)+1L]]<<-data.table(control=id,observado=n,estado=if(n==0)'ok'else severity,nota=note);cat(id,n,'\n');n
+ n<-as.numeric(dbGetQuery(con,sql)[[1]][1])
+ checks[[length(checks)+1L]]<<-data.table(control=id,observado=n,estado=if(n==0)'ok'else severity,nota=note)
+ cat(id,n,'\n')
+ n
 }
 check('series_sin_claves_duplicadas',"SELECT count(*) FROM(SELECT dataset,serie,unidad,periodo FROM bcrd.series GROUP BY 1,2,3,4 HAVING count(*)>1) q")
 check('series_sin_valores_no_finitos',"SELECT count(*) FROM bcrd.series WHERE valor IN('Infinity'::float8,'-Infinity'::float8,'NaN'::float8)")
@@ -36,11 +40,16 @@ write_json(list(comparison=trade,official_millions=c(18016.12,20591.22),exports2
 dbExecute(con,"CREATE OR REPLACE VIEW analitica.comercio_capitulo AS SELECT periodo,'importaciones'::text AS flujo,codigo_capitulo::text,capitulo_descripcion AS capitulo,importaciones AS valor_original,'USD FOB; escala contrastada'::text AS unidad,importaciones AS valor_usd,importaciones/1e6 AS millones_usd FROM dga.importaciones_capitulo UNION ALL SELECT periodo,'exportaciones'::text,codigo_capitulo::text,capitulo_descripcion,exportaciones,'USD FOB; escala contrastada'::text,exportaciones,exportaciones/1e6 FROM dga.exportaciones_capitulo")
 dbExecute(con,"UPDATE meta.tablas SET notas='Importes originales en USD FOB. Escala contrastada con publicación DGA 2018 para importaciones 2017-2018 y exportaciones 2017; ver qa/dga-scale.json. La serie exportadora 2018 no coincide exactamente con aquella edición. No multiplicar importes por un millón por el título del catálogo.' WHERE tabla IN ('dga.importaciones_capitulo','dga.exportaciones_capitulo')")
 # Refresh exact counts and null profiles in a single pass per physical table.
-inventory<-dbGetQuery(con,'SELECT * FROM meta.tablas ORDER BY tabla');counts<-list()
+inventory<-dbGetQuery(con,'SELECT * FROM meta.tablas ORDER BY tabla')
+counts<-list()
 for(i in seq_len(nrow(inventory))){
- target<-inventory$tabla[i];parts<-strsplit(target,'.',fixed=TRUE)[[1]];id<-Id(schema=parts[1],table=parts[2]);cols<-dbListFields(con,id)
+ target<-inventory$tabla[i]
+ parts<-strsplit(target,'.',fixed=TRUE)[[1]]
+ id<-Id(schema=parts[1],table=parts[2])
+ cols<-dbListFields(con,id)
  terms<-paste0('count(*) FILTER(WHERE ',dbQuoteIdentifier(con,cols),' IS NULL) AS ',dbQuoteIdentifier(con,cols))
- query<-paste('SELECT count(*) AS _rows,',paste(terms,collapse=','),'FROM',dbQuoteIdentifier(con,id));stats<-dbGetQuery(con,query)
+ query<-paste('SELECT count(*) AS _rows,',paste(terms,collapse=','),'FROM',dbQuoteIdentifier(con,id))
+ stats<-dbGetQuery(con,query)
  stopifnot(as.numeric(stats$`_rows`)==as.numeric(inventory$filas[i]))
  actualtypes<-dbGetQuery(con,'SELECT column_name,data_type FROM information_schema.columns WHERE table_schema=$1 AND table_name=$2 ORDER BY ordinal_position',params=list(parts[1],parts[2]))
  for(j in seq_along(cols)){
@@ -49,9 +58,13 @@ for(i in seq_len(nrow(inventory))){
  counts[[target]]<-data.table(tabla=target,filas=as.numeric(stats$`_rows`),columnas=length(cols),fuente=inventory$fuente[i],periodo=inventory$periodo[i])
  cat('Verified counts and nulls',target,as.numeric(stats$`_rows`),'\n')
 }
-allchecks<-rbindlist(checks);fwrite(allchecks,file.path(base,'qa/database-checks.csv'));fwrite(rbindlist(counts),file.path(base,'qa/table-inventory.csv'))
+allchecks<-rbindlist(checks)
+fwrite(allchecks,file.path(base,'qa/database-checks.csv'))
+fwrite(rbindlist(counts),file.path(base,'qa/table-inventory.csv'))
 dbExecute(con,'CREATE UNIQUE INDEX IF NOT EXISTS bcrd_series_clave ON bcrd.series(dataset,serie,unidad,periodo)')
 dbExecute(con,'CREATE INDEX IF NOT EXISTS fiscal_conciliacion_clave ON digepres.conciliacion_filas(fuente_id,hoja,fila_excel,estado)')
 summary<-list(database='economia_rd',validated_at=format(Sys.time(),'%Y-%m-%dT%H:%M:%S%z'),status=if(any(allchecks$estado=='error'))'error'else'validada_con_advertencias',tables=length(counts),rows=sum(vapply(counts,function(z)z$filas,numeric(1))),checks=nrow(allchecks),warnings=sum(allchecks$estado=='advertencia'),errors=sum(allchecks$estado=='error'),database_bytes=as.numeric(dbGetQuery(con,"SELECT pg_database_size(current_database()) n")$n),coverage=dbGetQuery(con,'SELECT dataset,frecuencia,min(periodo) AS desde,max(periodo) AS hasta,count(*) AS observaciones FROM bcrd.series GROUP BY 1,2 ORDER BY 1'),wdi=dbGetQuery(con,"SELECT count(*) AS observaciones,count(distinct indicador) AS indicadores,count(distinct pais_iso3) AS paises_y_agregados,min(anio) AS desde,max(anio) AS hasta,count(*) FILTER(WHERE indicador LIKE 'SE.%') AS educacion FROM banco_mundial.observaciones"))
 write_json(summary,file.path(base,'qa/validation-summary.json'),pretty=TRUE,auto_unbox=TRUE,na='null')
-stopifnot(!any(allchecks$estado=='error'));print(allchecks);dbDisconnect(con)
+stopifnot(!any(allchecks$estado=='error'))
+print(allchecks)
+dbDisconnect(con)

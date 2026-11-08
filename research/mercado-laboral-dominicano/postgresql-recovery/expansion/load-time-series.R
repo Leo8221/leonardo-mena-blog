@@ -1,18 +1,30 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
 source(file.path(base,'time-helpers.R'))
-m<-fromJSON(file.path(base,'qa/download-manifest.json'));out<-list();used<-list()
+m<-fromJSON(file.path(base,'qa/download-manifest.json'))
+out<-list()
+used<-list()
 getfile<-function(id){f<-m[m$id==id,];stopifnot(nrow(f)==1,f$status!='failed');f}
 add<-function(f,s,ds,label,date,value,unit,r,c,scale=1,frequency='mensual',note=''){
- ok<-!is.na(date)&!is.na(value);if(!any(ok))return(invisible(NULL))
- n<-length(date);label<-rep(label,length.out=n);unit<-rep(unit,length.out=n);r<-rep(r,length.out=n);c<-rep(c,length.out=n);note<-rep(note,length.out=n)
+ ok<-!is.na(date)&!is.na(value)
+ if(!any(ok))return(invisible(NULL))
+ n<-length(date)
+ label<-rep(label,length.out=n)
+ unit<-rep(unit,length.out=n)
+ r<-rep(r,length.out=n)
+ c<-rep(c,length.out=n)
+ note<-rep(note,length.out=n)
  out[[length(out)+1L]]<<-data.table(dataset=ds,serie=label[ok],periodo=date[ok],frecuencia=frequency,valor=value[ok]*scale,unidad=unit[ok],valor_fuente=value[ok],fuente_id=f$id,hoja=s,fila_excel=r[ok],columna_excel=c[ok],nota_periodo=note[ok])
  used[[f$id]]<<-f
 }
 vertical<-function(id,ds,cols,labels,units,y=1,mo=2,start=1L,scales=1){
- f<-getfile(id);s<-excel_sheets(f$path)[1];x<-grid_read(f$path,s);dt<-vertical_dates(x,y,mo,start)
+ f<-getfile(id)
+ s<-excel_sheets(f$path)[1]
+ x<-grid_read(f$path,s)
+ dt<-vertical_dates(x,y,mo,start)
  summary_rows<-if(id=='a8b898c70528')which(grepl('^Dic[.] ',x[,1]))else integer()
  for(j in seq_along(cols)){
-  monthly<-dt;if(length(summary_rows))monthly[summary_rows]<-as.Date(NA)
+  monthly<-dt
+  if(length(summary_rows))monthly[summary_rows]<-as.Date(NA)
   add(f,s,ds,labels[j],monthly,number(x[,cols[j]]),rep(units,length.out=length(cols))[j],seq_len(nrow(x)),cols[j],rep(scales,length.out=length(cols))[j])
   if(length(summary_rows))add(f,s,paste0(ds,'_cierre_anual'),labels[j],dt[summary_rows],number(x[summary_rows,cols[j]]),rep(units,length.out=length(cols))[j],summary_rows,cols[j],frequency='anual',note='Resumen de diciembre publicado aparte de la serie mensual; no concatenar ambos.')
  }
@@ -25,7 +37,11 @@ vertical('4b17eb9473e7','canasta_regiones',3:6,c('Ozama','Norte o Cibao','Este',
 vertical('613d318a6a55','politica_monetaria',3:6,c('Tasa de política monetaria','Facilidad de depósito','Facilidad de préstamo','Lombarda'),'porcentaje_anual',start=7L,scales=100)
 vertical('3f00431056f1','tasas_activas_mn',3:15,c('Agricultura ganadería silvicultura y pesca','Minas y canteras','Manufacturas','Construcción','Tarjeta de crédito','Otros consumos','Comercio','Transporte almacenamiento información y comunicaciones','Alojamiento y comidas','Vivienda','Otras actividades inmobiliarias','Otros sectores','Interbancaria ponderada'),'porcentaje_anual',start=7L,scales=100)
 for(id in c('e444fec4cfeb','7e64a3000508','4e4e30dfe511')){
- f<-getfile(id);s<-excel_sheets(f$path)[1];x<-grid_read(f$path,s);single<-id=='4e4e30dfe511';dt<-vertical_dates(x,1,if(single)1 else 2,if(single)8L else 5L)
+ f<-getfile(id)
+ s<-excel_sheets(f$path)[1]
+ x<-grid_read(f$path,s)
+ single<-id=='4e4e30dfe511'
+ dt<-vertical_dates(x,1,if(single)1 else 2,if(single)8L else 5L)
  cc<-if(single)which(!is.na(x[3,])&seq_len(ncol(x))>1)else seq(3,ncol(x),2)
  cc<-cc[cc<ncol(x)]
  for(c in cc){
@@ -35,8 +51,14 @@ for(id in c('e444fec4cfeb','7e64a3000508','4e4e30dfe511')){
 }
 # Months on rows and years on columns; complete histories, never annual totals plus months.
 for(id in c('31f8bc50c9de','0be52ba4d903','60fd1b3952de','900f472eee99')){
- f<-getfile(id);s<-excel_sheets(f$path)[1];x<-grid_read(f$path,s);yrrow<-if(id=='0be52ba4d903')6L else 8L
- yr<-fill_down(year_num(x[yrrow,]));mo<-month_num(x[,1]);rr<-which(!is.na(mo));rr<-rr[rr>yrrow]
+ f<-getfile(id)
+ s<-excel_sheets(f$path)[1]
+ x<-grid_read(f$path,s)
+ yrrow<-if(id=='0be52ba4d903')6L else 8L
+ yr<-fill_down(year_num(x[yrrow,]))
+ mo<-month_num(x[,1])
+ rr<-which(!is.na(mo))
+ rr<-rr[rr>yrrow]
  for(c in which(!is.na(yr)&seq_along(yr)>1)){
   ds<-switch(id,'31f8bc50c9de'='remesas','0be52ba4d903'='reservas','60fd1b3952de'='remesas_transacciones','900f472eee99'='remesas_promedio')
   lab<-if(id=='0be52ba4d903')x[8,c]else ds
@@ -46,39 +68,55 @@ for(id in c('31f8bc50c9de','0be52ba4d903','60fd1b3952de','900f472eee99')){
 }
 # Territorial banking stocks by quarter. Source columns identify quarter-end month.
 for(id in c('ba8081747640','8ccdfd0126ec')){
- f<-getfile(id);s<-excel_sheets(f$path)[1];x<-grid_read(f$path,s)
+ f<-getfile(id)
+ s<-excel_sheets(f$path)[1]
+ x<-grid_read(f$path,s)
  for(c in 3:ncol(x)){
-  label<-x[4,c];mo<-month_num(label);yr<-suppressWarnings(as.integer(sub('^.*-','',label)))+2000L
+  label<-x[4,c]
+  mo<-month_num(label)
+  yr<-suppressWarnings(as.integer(sub('^.*-','',label)))+2000L
   if(is.na(mo)||is.na(yr))next
   rr<-which(!is.na(x[,2])&seq_len(nrow(x))>4)
-  labels<-x[rr,2];regions<-fill_down(x[,1]);is_subtotal<-grepl('SUB-TOTAL',labels,fixed=TRUE);labels[is_subtotal]<-paste(regions[rr[is_subtotal]],labels[is_subtotal],sep=' / ')
+  labels<-x[rr,2]
+  regions<-fill_down(x[,1])
+  is_subtotal<-grepl('SUB-TOTAL',labels,fixed=TRUE)
+  labels[is_subtotal]<-paste(regions[rr[is_subtotal]],labels[is_subtotal],sep=' / ')
   add(f,s,if(id=='ba8081747640')'prestamos_provincias' else 'depositos_provincias',labels,rep(as.Date(sprintf('%04d-%02d-01',yr,((mo-1L)%/%3L)*3L+1L)),length(rr)),number(x[rr,c]),'millones_DOP',rr,c,frequency='trimestral',note='Saldo al cierre del trimestre; fecha normalizada al inicio del trimestre. No sumar entre períodos ni subtotales con provincias.')
  }
 }
 # Full historical credit by destination (Excel serial dates on header).
-f<-getfile('c23160200995');s<-excel_sheets(f$path)[1];x<-grid_read(f$path,s)
+f<-getfile('c23160200995')
+s<-excel_sheets(f$path)[1]
+x<-grid_read(f$path,s)
 for(c in 2:ncol(x)){
- dt<-header_date(x[6,c]);if(is.na(dt))next
+ dt<-header_date(x[6,c])
+ if(is.na(dt))next
  rr<-which(!is.na(x[,1])&seq_len(nrow(x))>8)
  add(f,s,'credito_destino',paste0(x[rr,1],' [fila ',rr,']'),rep(as.Date(format(dt,'%Y-%m-01')),length(rr)),number(x[rr,c]),'millones_DOP',rr,c,note='Saldos; conservar moneda y jerarquía del rótulo. No sumar totales con componentes.')
 }
 # GDP retrospective with a consistent 2018 reference, preserving cumulative quarters separately.
 f<-getfile('e1d15befa0ba')
 for(s in excel_sheets(f$path)){
- x<-grid_read(f$path,s);yr<-fill_down(year_num(x[7,]));q<-match(x[8,],c('E-M','A-J','J-S','O-D'));acum<-grepl('Acum',s)
+ x<-grid_read(f$path,s)
+ yr<-fill_down(year_num(x[7,]))
+ q<-match(x[8,],c('E-M','A-J','J-S','O-D'))
+ acum<-grepl('Acum',s)
  if(acum)q<-match(x[8,],c('E-M','E-J','E-S','E-D'))
  section<-x[7,1]
  for(r in 9:nrow(x)){
-  lab<-x[r,1];if(is.na(lab))next
+  lab<-x[r,1]
+  if(is.na(lab))next
   if(grepl('^(INDICE|VALOR AGREGADO POR|TASAS DE CRECIMIENTO|INCIDENCIA|PARTICIPACI|PONDERACION)',toupper(lab))){section<-lab;next}
-  val<-number(x[r,]);cc<-which(!is.na(yr)&!is.na(q)&!is.na(val))
+  val<-number(x[r,])
+  cc<-which(!is.na(yr)&!is.na(q)&!is.na(val))
   if(!length(cc)){section<-lab;next}
   is_share<-grepl('PONDERACION',toupper(section))
   unit<-if(grepl('INCIDENCIA',toupper(section)))'puntos_porcentuales' else if(grepl('CRECIMIENTO|VARIACI|VAR[.]|PARTICIPACI|PONDERACION',toupper(section)))'porcentaje' else if(grepl('PIBK',s))'indice_volumen_2018_100' else 'millones_DOP'
   add(f,s,paste0('pib_origen_2018_',if(acum)'acumulado'else'trimestral'),paste(section,lab,sep=' / '),as.Date(sprintf('%04d-%02d-01',yr[cc],(q[cc]-1L)*3L+1L)),val[cc],unit,r,cc,scale=if(is_share)100 else 1,frequency=if(acum)'trimestral_acumulada'else'trimestral',note='Serie retrospectiva oficial. Conservar unidad, sección y frecuencia; los índices encadenados no son aditivos. Ponderación convertida de fracción a porcentaje.')
  }
 }
-z<-rbindlist(out,fill=TRUE);stopifnot(nrow(z)>10000,!anyDuplicated(z[,.(fuente_id,hoja,fila_excel,columna_excel)]),all(is.finite(z$valor)),max(z$periodo)<=Sys.Date())
+z<-rbindlist(out,fill=TRUE)
+stopifnot(nrow(z)>10000,!anyDuplicated(z[,.(fuente_id,hoja,fila_excel,columna_excel)]),all(is.finite(z$valor)),max(z$periodo)<=Sys.Date())
 z[,fila_origen:=.I]
 con<-init_database()
 if(dbExistsTable(con,Id(schema='bcrd',table='series'))){
@@ -94,7 +132,8 @@ if(dbExistsTable(con,Id(schema='bcrd',table='series'))){
  })
 }
 load_table(con,z,'bcrd','series','BCRD','Series económicas históricas normalizadas',file.path(base,'qa/download-manifest.json'),period=paste(min(z$periodo),max(z$periodo),sep=' / '),grain='fuente, hoja, serie y período; cada celda de datos se representa una vez',notes='Fecha=primer día del mes o trimestre representado; stocks y flujos separados por dataset; nunca sumar series o bases alternativas. Remesas en USD físicos: el Excel solo muestra millones mediante formato. TPM y tasas convertidas de fracción a porcentaje.')
-sources<-rbindlist(used,fill=TRUE);sources[,fila_origen:=.I]
+sources<-rbindlist(used,fill=TRUE)
+sources[,fila_origen:=.I]
 load_table(con,sources,'meta','archivos_bcrd','BCRD','Archivos fuente de las series BCRD',file.path(base,'qa/download-manifest.json'),grain='archivo público descargado')
 dbExecute(con,'CREATE INDEX IF NOT EXISTS bcrd_series_dataset_periodo ON bcrd.series(dataset,periodo)')
 dbExecute(con,'CREATE INDEX IF NOT EXISTS bcrd_series_serie ON bcrd.series(dataset,serie,periodo)')
@@ -102,5 +141,6 @@ dbExecute(con,"CREATE OR REPLACE VIEW analitica.series_economicas AS SELECT data
 dbExecute(con,"CREATE OR REPLACE VIEW analitica.catalogo_series AS SELECT dataset,serie,frecuencia,unidad,min(periodo) AS desde,max(periodo) AS hasta,count(*) AS observaciones FROM bcrd.series GROUP BY 1,2,3,4")
 dbExecute(con,"CREATE OR REPLACE VIEW analitica.macro_mensual AS SELECT periodo,max(valor) FILTER(WHERE dataset='ipc_nacional' AND serie='Índice general') AS ipc,max(valor) FILTER(WHERE dataset='ipc_nacional' AND serie='Inflación interanual') AS inflacion_interanual,max(valor) FILTER(WHERE dataset='imae_2018' AND serie='Variación interanual original') AS imae_interanual,max(valor) FILTER(WHERE dataset='politica_monetaria' AND serie='Tasa de política monetaria') AS tpm_porcentaje,max(valor) FILTER(WHERE dataset='remesas') AS remesas_usd,max(valor) FILTER(WHERE dataset='canasta_quintiles' AND serie='Nacional') AS canasta_nacional_dop FROM bcrd.series WHERE frecuencia='mensual' GROUP BY periodo")
 coverage<-dbGetQuery(con,'SELECT dataset,count(*) AS observaciones,count(distinct serie) AS series,min(periodo) AS desde,max(periodo) AS hasta FROM bcrd.series GROUP BY dataset ORDER BY dataset')
-write_json(coverage,file.path(base,'qa/time-series.json'),pretty=TRUE,auto_unbox=TRUE);print(coverage)
+write_json(coverage,file.path(base,'qa/time-series.json'),pretty=TRUE,auto_unbox=TRUE)
+print(coverage)
 dbDisconnect(con)

@@ -1,8 +1,11 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
 manifest<-fromJSON(file.path(base,'qa/download-manifest.json'))
-inventory<-list(); previews<-list(); errors<-list()
+inventory<-list()
+previews<-list()
+errors<-list()
 for(i in seq_len(nrow(manifest))){
- f<-manifest[i,];if(f$status=='failed'||!grepl('[.]xlsx?$',f$path))next
+ f<-manifest[i,]
+ if(f$status=='failed'||!grepl('[.]xlsx?$',f$path))next
  sheets<-tryCatch(excel_sheets(f$path),error=function(e){errors[[length(errors)+1L]]<<-list(id=f$id,path=f$path,error=conditionMessage(e));character()})
  for(s in sheets){
   x<-tryCatch(suppressMessages(read_excel(f$path,sheet=s,col_names=FALSE,col_types='text',.name_repair='minimal')),error=function(e){errors[[length(errors)+1L]]<<-list(id=f$id,sheet=s,error=conditionMessage(e));NULL})

@@ -9,10 +9,6 @@ if (-not $UseCache -and [string]::IsNullOrWhiteSpace($Password)) {
   throw 'Defina PG_RECOVERY_PASSWORD o use -Password. La clave no se guarda en el repositorio.'
 }
 
-Remove-Item Env:LC_ALL -ErrorAction SilentlyContinue
-Remove-Item Env:LC_CTYPE -ErrorAction SilentlyContinue
-Remove-Item Env:LANG -ErrorAction SilentlyContinue
-
 if ($UseCache) {
   $env:HOMOGAMIA_RIGOR_USE_CACHE = '1'
 } else {
@@ -23,14 +19,10 @@ if ($UseCache) {
 $repo = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $script = Join-Path $PSScriptRoot 'build-grafico-homogamia-condicionada.R'
 
-Push-Location $repo
 try {
-  Rscript $script
-  if ($LASTEXITCODE -ne 0) {
-    throw "Rscript falló con código $LASTEXITCODE."
-  }
+  # El wrapper común fija R, comprueba UTF-8 y trabaja desde la raíz.
+  & (Join-Path $repo 'tools\run-r.ps1') $script
 } finally {
-  Pop-Location
   Remove-Item Env:PG_RECOVERY_PASSWORD -ErrorAction SilentlyContinue
   Remove-Item Env:HOMOGAMIA_RIGOR_USE_CACHE -ErrorAction SilentlyContinue
 }

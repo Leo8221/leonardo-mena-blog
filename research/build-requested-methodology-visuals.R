@@ -54,7 +54,8 @@ export_plot <- function(plot, dir, slug, width = 10, height = 6.5) {
 assert_true <- function(x, msg) if (!isTRUE(x)) stop(msg, call. = FALSE)
 write_map <- function(dir, rows) write_csv(bind_rows(rows), file.path(dir, "chart-map.csv"))
 fill_year <- function(x) {
-  out <- rep(NA_integer_, length(x)); current <- NA_integer_
+  out <- rep(NA_integer_, length(x))
+  current <- NA_integer_
   for (i in seq_along(x)) {
     candidate <- suppressWarnings(as.integer(as.character(x[[i]])))
     if (!is.na(candidate) && candidate >= 1900 && candidate <= 2100) current <- candidate
@@ -78,8 +79,10 @@ ipc_path <- file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_ar
 raw_ipc <- read_excel(ipc_path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
 year_scores <- vapply(seq_len(nrow(raw_ipc)), function(i) sum(str_detect(as.character(unlist(raw_ipc[i, ], use.names = FALSE)), "^20[0-9]{2}$"), na.rm = TRUE), numeric(1))
 month_scores <- vapply(seq_len(nrow(raw_ipc)), function(i) sum(!is.na(month_num(unlist(raw_ipc[i, ], use.names = FALSE)))), numeric(1))
-year_row <- which.max(year_scores); month_row <- which.max(month_scores)
-years <- fill_year(unlist(raw_ipc[year_row, ], use.names = FALSE)); months <- month_num(unlist(raw_ipc[month_row, ], use.names = FALSE))
+year_row <- which.max(year_scores)
+month_row <- which.max(month_scores)
+years <- fill_year(unlist(raw_ipc[year_row, ], use.names = FALSE))
+months <- month_num(unlist(raw_ipc[month_row, ], use.names = FALSE))
 cols <- which(!is.na(years) & !is.na(months))
 group_rows <- which(str_detect(str_squish(as.character(raw_ipc[[1]])), "^[0-9]{2} "))
 ipc_groups <- bind_rows(lapply(group_rows, function(row) tibble(
@@ -122,7 +125,8 @@ write_map(middle_dir, list(tibble(id = "01_trayectoria_ingreso_pc_ppp", pregunta
 # 16. Fondo de emergencia: diferencia entre estratos, manteniendo la encuesta como unidad.
 emergency_dir <- file.path(repo_root, "research", "epicteto-fondo-emergencia")
 enief <- read_csv(file.path(emergency_dir, "data", "procesados", "01_enief_emergencia_2023.csv"), show_col_types = FALSE)
-low_name <- "Ingresos RD$0–31,200"; high_name <- "Ingresos RD$31,201 o más"
+low_name <- "Ingresos RD$0–31,200"
+high_name <- "Ingresos RD$31,201 o más"
 emergency_diff <- enief |> select(respuesta, estrato, porcentaje) |> pivot_wider(names_from = estrato, values_from = porcentaje) |> mutate(diferencia_pp = .data[[high_name]] - .data[[low_name]])
 write_csv(emergency_diff, file.path(emergency_dir, "data", "procesados", "02_diferencia_estratos.csv"))
 diff_order <- emergency_diff |> arrange(diferencia_pp) |> pull(respuesta)
@@ -145,20 +149,26 @@ growth_dir <- file.path(repo_root, "research", "crecimiento-6-4-hogares")
 dir.create(file.path(growth_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(growth_dir, "figuras"), recursive = TRUE, showWarnings = FALSE)
 pib <- read_excel(file.path(repo_root, "atlas", "data", "raw", "bcrd-sector-real", "pib_origen_2018.xlsx"), sheet = "PIBK_Trim_Acum", col_names = FALSE, .name_repair = "minimal")
-labels <- str_squish(as.character(pib[[1]])); top <- c("Agropecuario", "Industrias", "Construccion", "Servicios")
+labels <- str_squish(as.character(pib[[1]]))
+top <- c("Agropecuario", "Industrias", "Construccion", "Servicios")
 labels_norm <- str_replace_all(iconv(labels, from = "UTF-8", to = "ASCII//TRANSLIT"), "[^A-Za-z ]", "") |> str_squish()
 find_label <- function(value) which(labels_norm == value)
 blocks <- find_label("Agropecuario")
 assert_true(length(blocks) >= 3, "No se encontraron los tres bloques del PIBK acumulado.")
 block_rows <- function(start, end) which(seq_along(labels) >= start & seq_along(labels) < end & labels_norm %in% top)
 ends <- c(blocks[2], blocks[3], length(labels) + 1)
-level_rows <- block_rows(blocks[1], ends[1]); growth_rows <- block_rows(blocks[2], ends[2]); incidence_rows <- block_rows(blocks[3], ends[3])
+level_rows <- block_rows(blocks[1], ends[1])
+growth_rows <- block_rows(blocks[2], ends[2])
+incidence_rows <- block_rows(blocks[3], ends[3])
 assert_true(length(level_rows) == 4 && length(growth_rows) == 4 && length(incidence_rows) == 4, "La estructura sectorial del PIBK cambio; revisar antes de publicar.")
-years_pib <- suppressWarnings(as.integer(str_extract(as.character(unlist(pib[7, ], use.names = FALSE)), "20[0-9]{2}"))); years_pib <- fill_year(years_pib); periods <- str_squish(as.character(unlist(pib[8, ], use.names = FALSE)))
+years_pib <- suppressWarnings(as.integer(str_extract(as.character(unlist(pib[7, ], use.names = FALSE)), "20[0-9]{2}")))
+years_pib <- fill_year(years_pib)
+periods <- str_squish(as.character(unlist(pib[8, ], use.names = FALSE)))
 full_cols <- which(periods %in% c("E-D", "Ene-Dic", "Enero-Diciembre") & years_pib %in% c(2024, 2025))
 if (length(full_cols) < 2) full_cols <- which(years_pib %in% c(2024, 2025) & periods == periods[which(years_pib == 2025)[1]])
 assert_true(sum(years_pib[full_cols] == 2024) >= 1 && sum(years_pib[full_cols] == 2025) >= 1, "No se encontraron columnas anuales 2024 y 2025 en PIBK_Trim_Acum.")
-col24 <- full_cols[which(years_pib[full_cols] == 2024)[1]]; col25 <- full_cols[which(years_pib[full_cols] == 2025)[1]]
+col24 <- full_cols[which(years_pib[full_cols] == 2024)[1]]
+col25 <- full_cols[which(years_pib[full_cols] == 2025)[1]]
 to_num <- function(x) suppressWarnings(as.numeric(as.character(x)))
 sector_data <- tibble(actividad = labels_norm[level_rows], indice_volumen_2024 = to_num(unlist(pib[level_rows, col24], use.names = FALSE)), crecimiento_2025 = to_num(unlist(pib[growth_rows, col25], use.names = FALSE)), incidencia_2025 = to_num(unlist(pib[incidence_rows, col25], use.names = FALSE)))
 assert_true(all(is.finite(sector_data$incidencia_2025)), "La incidencia sectorial contiene valores no numericos.")

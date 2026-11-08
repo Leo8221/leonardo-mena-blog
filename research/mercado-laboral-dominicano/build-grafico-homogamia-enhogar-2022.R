@@ -95,6 +95,8 @@ pares <- pares[
 assert_true(nrow(pares) > 2000, "La muestra educativa de parejas es demasiado pequeña.")
 
 weighted_expected <- function(j, c, w) {
+  # Probabilidad de coincidir en educación si ambos grupos se emparejaran
+  # independientemente: suma de proporción_j * proporción_c por categoría.
   pj <- tapply(w, j, sum) / sum(w)
   pc <- tapply(w, c, sum) / sum(w)
   categories <- intersect(names(pj), names(pc))
@@ -102,6 +104,8 @@ weighted_expected <- function(j, c, w) {
 }
 
 weighted_conditioned_expected <- function(data) {
+  # Repite ese cálculo dentro de grupos de sexo, unión y edad; después pondera
+  # cada grupo por su peso. Esto separa parte del efecto de la composición.
   strata <- interaction(data$composition_sex, data$union_par, data$j_age, data$c_age, drop = TRUE, sep = "|")
   total_weight <- sum(data$weight)
   groups <- split(seq_len(nrow(data)), strata)

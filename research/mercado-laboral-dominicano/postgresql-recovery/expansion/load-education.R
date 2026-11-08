@@ -1,5 +1,8 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
-m<-fromJSON(file.path(base,'qa/download-manifest.json')); con<-init_database(); results<-list(); checks<-list()
+m<-fromJSON(file.path(base,'qa/download-manifest.json'))
+con<-init_database()
+results<-list()
+checks<-list()
 spec<-list(
  list('e9f2e8149cb1','centros_2021',0L,'2021; ciclo escolar no precisado'),
  list('45e2d34289a9','centros_2022_2024',0L,'2022-2023 y 2023-2024'),
@@ -15,11 +18,14 @@ spec<-list(
  list('efa0f2e71687','pruebas_nacionales',0L,'2016-2024')
 )
 for(s in spec){
- f<-m[m$id==s[[1]],];stopifnot(nrow(f)==1,f$status!='failed')
+ f<-m[m$id==s[[1]],]
+ stopifnot(nrow(f)==1,f$status!='failed')
  grid<-suppressMessages(read_excel(f$path,sheet=1,col_names=FALSE,col_types='text',.name_repair='minimal'))
  header<-s[[3]]+1L
- x<-as.data.frame(grid[(header+1L):nrow(grid),,drop=FALSE]);names(x)<-unlist(grid[header,],use.names=FALSE)
- labels<-names(x);names(x)<-clean_names(labels)
+ x<-as.data.frame(grid[(header+1L):nrow(grid),,drop=FALSE])
+ names(x)<-unlist(grid[header,],use.names=FALSE)
+ labels<-names(x)
+ names(x)<-clean_names(labels)
  x$fila_origen<-seq_len(nrow(x))+s[[3]]+1L
  keep<-rowSums(!is.na(x[,setdiff(names(x),'fila_origen'),drop=FALSE]))>0
  # Repeated table headings/notes and blank formatted rows are not observations.
@@ -43,5 +49,7 @@ checks$pruebas<-dbGetQuery(con,"SELECT anio,count(*) AS registros,sum(estudiante
 checks$matricula<-dbGetQuery(con,"SELECT periodo_escolar,nivel_geografico,count(*) registros,sum(estudiantes) AS estudiantes FROM analitica.educacion_matricula_nivel GROUP BY 1,2 ORDER BY 1,2")
 checks$oferta<-dbGetQuery(con,"SELECT count(*) AS registros,count(distinct codigo_centro) AS centros,sum(matricula) AS matricula FROM analitica.educacion_oferta_2024_2025")
 write_json(list(loaded=results,checks=checks),file.path(base,'qa/education.json'),auto_unbox=TRUE,pretty=TRUE,na='null')
-print(checks$pruebas);print(checks$matricula);print(checks$oferta)
+print(checks$pruebas)
+print(checks$matricula)
+print(checks$oferta)
 dbDisconnect(con)

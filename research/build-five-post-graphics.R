@@ -50,7 +50,9 @@ norm_text <- function(x) {
 }
 to_num <- function(x) suppressWarnings(as.numeric(as.character(x)))
 fill_year <- function(x) {
-  out <- rep(NA_integer_, length(x)); current <- NA_integer_
+  # Los encabezados combinados del Excel dejan huecos: repetimos el último año.
+  out <- rep(NA_integer_, length(x))
+  current <- NA_integer_
   for (i in seq_along(x)) {
     candidate <- suppressWarnings(as.integer(as.character(x[[i]])))
     if (!is.na(candidate) && candidate >= 1900 && candidate <= 2100) current <- candidate
@@ -76,32 +78,46 @@ export_plot <- function(plot, dir, slug, width = 10, height = 6.5) {
 
 read_encft_indicators <- function(path, sheet = "Indicadores") {
   raw <- read_excel(path, sheet = sheet, col_names = FALSE, .name_repair = "minimal")
-  labels <- norm_text(raw[[1]]); header <- which(labels == "indicador")[1]
+  labels <- norm_text(raw[[1]])
+  header <- which(labels == "indicador")[1]
   assert_true(!is.na(header), paste("No se encontró encabezado ENCFT en", sheet))
-  years <- fill_year(unlist(raw[header, ], use.names = FALSE)); quarters <- vapply(unlist(raw[header + 1, ], use.names = FALSE), quarter_num, numeric(1)); cols <- which(!is.na(years) & !is.na(quarters))
+  years <- fill_year(unlist(raw[header, ], use.names = FALSE))
+  quarters <- vapply(unlist(raw[header + 1, ], use.names = FALSE), quarter_num, numeric(1))
+  cols <- which(!is.na(years) & !is.na(quarters))
   wanted <- c(participacion = "participacion", ocupacion = "tasa de ocupacion", informalidad = "ocupacion informal", desempleo = "tasa de desocupacion 4")
   out <- lapply(names(wanted), function(name) {
-    row <- which(str_detect(labels, fixed(wanted[[name]])))[1]; assert_true(!is.na(row), paste("No se encontró indicador", name))
+    row <- which(str_detect(labels, fixed(wanted[[name]])))[1]
+    assert_true(!is.na(row), paste("No se encontró indicador", name))
     tibble(indicador = name, anio = years[cols], trimestre = quarters[cols], fecha = as.Date(sprintf("%04d-%02d-01", years[cols], (quarters[cols] - 1) * 3 + 1)), periodo = quarter_label(years[cols], quarters[cols]), valor = to_num(unlist(raw[row, cols], use.names = FALSE)))
   }) |> bind_rows()
-  assert_true(n_distinct(out$fecha) == 47, "La ENCFT no contiene los 47 trimestres esperados."); out
+  assert_true(n_distinct(out$fecha) == 47, "La ENCFT no contiene los 47 trimestres esperados.")
+  out
 }
 
 read_formal_informal_rama <- function(path) {
-  raw <- read_excel(path, sheet = "Rama de Actividad", col_names = FALSE, .name_repair = "minimal"); numeric_rows <- which(!is.na(to_num(raw[[3]]))); latest <- max(numeric_rows)
-  formal_cols <- 4:15; informal_cols <- 17:28
+  raw <- read_excel(path, sheet = "Rama de Actividad", col_names = FALSE, .name_repair = "minimal")
+  numeric_rows <- which(!is.na(to_num(raw[[3]])))
+  latest <- max(numeric_rows)
+  formal_cols <- 4:15
+  informal_cols <- 17:28
   formal <- tibble(rama = as.character(unlist(raw[9, formal_cols])), formal = to_num(unlist(raw[latest, formal_cols])))
   informal <- tibble(rama = as.character(unlist(raw[9, informal_cols])), informal = to_num(unlist(raw[latest, informal_cols])))
   out <- inner_join(formal, informal, by = "rama") |> mutate(rama = str_squish(rama), ocupados = formal + informal, pct_informal = 100 * informal / ocupados) |> filter(!is.na(rama), nzchar(rama), !is.na(pct_informal))
-  total_formal <- to_num(raw[[3]][latest]); total_informal <- to_num(raw[[16]][latest])
-  assert_true(abs(sum(out$formal) - total_formal) < 0.5, "Las ramas formales ENCFT no reconcilian."); assert_true(abs(sum(out$informal) - total_informal) < 0.5, "Las ramas informales ENCFT no reconcilian."); out
+  total_formal <- to_num(raw[[3]][latest])
+  total_informal <- to_num(raw[[16]][latest])
+  assert_true(abs(sum(out$formal) - total_formal) < 0.5, "Las ramas formales ENCFT no reconcilian.")
+  assert_true(abs(sum(out$informal) - total_informal) < 0.5, "Las ramas informales ENCFT no reconcilian.")
+  out
 }
 
 read_sector_dimension <- function(path, formal_cols, informal_cols, label_cols) {
-  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal"); numeric_rows <- which(!is.na(to_num(raw[[3]]))); latest <- max(numeric_rows)
+  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal")
+  numeric_rows <- which(!is.na(to_num(raw[[3]])))
+  latest <- max(numeric_rows)
   labels <- as.character(unlist(raw[9, label_cols]))
   out <- tibble(dimension = labels, formal = to_num(unlist(raw[latest, formal_cols])), informal = to_num(unlist(raw[latest, informal_cols]))) |> mutate(dimension = str_squish(dimension), total = formal + informal, pct_informal = 100 * informal / total) |> filter(!is.na(dimension), nzchar(dimension), !is.na(pct_informal))
-  assert_true(nrow(out) == length(label_cols), paste("Dimensión ENCFT inesperada en", basename(path))); out
+  assert_true(nrow(out) == length(label_cols), paste("Dimensión ENCFT inesperada en", basename(path)))
+  out
 }
 
 read_encft_regions <- function(path) {
@@ -112,7 +128,8 @@ read_encft_regions <- function(path) {
   year_row <- year_rows[[length(year_rows)]]
   su4_rows <- which(str_detect(norm_text(labels), "^su4:"))
   su4_row <- su4_rows[which(su4_rows > year_row)[1]]
-  header_row <- which(str_detect(norm_text(labels), "^indicador$"))[which(which(str_detect(norm_text(labels), "^indicador$")) > year_row)[1]]
+  header_rows <- which(str_detect(norm_text(labels), "^indicador$"))
+  header_row <- header_rows[which(header_rows > year_row)[1]]
   assert_true(!is.na(su4_row) && !is.na(header_row), "No se pudo ubicar SU4 en la hoja regional ENCFT.")
   region_names <- norm_text(unlist(raw[header_row, 2:6], use.names = FALSE))
   values <- to_num(unlist(raw[su4_row, 2:6], use.names = FALSE))
@@ -125,22 +142,33 @@ read_encft_regions <- function(path) {
 
 parse_ipc_items <- function(path, item_codes = c("0112201", "0112203")) {
   raw <- read_excel(path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
-  periods <- detect_ipc_periods(raw); years <- periods$years; months <- periods$months; cols <- which(!is.na(years) & !is.na(months))
-  codes <- str_extract(as.character(raw[[5]]), "^[0-9]+"); rows <- match(item_codes, codes); assert_true(!anyNA(rows), "No se encontraron todas las series solicitadas en IPC.")
+  periods <- detect_ipc_periods(raw)
+  years <- periods$years
+  months <- periods$months
+  cols <- which(!is.na(years) & !is.na(months))
+  codes <- str_extract(as.character(raw[[5]]), "^[0-9]+")
+  rows <- match(item_codes, codes)
+  assert_true(!anyNA(rows), "No se encontraron todas las series solicitadas en IPC.")
   bind_rows(lapply(seq_along(rows), function(i) tibble(codigo = item_codes[[i]], producto = as.character(raw[[5]][rows[[i]]]), anio = years[cols], mes = months[cols], fecha = as.Date(sprintf("%04d-%02d-01", years[cols], months[cols])), indice = to_num(unlist(raw[rows[[i]], cols], use.names = FALSE)))))
 }
 
 detect_ipc_periods <- function(raw) {
+  # Busca las filas con más años y meses reconocibles. No presupone que el
+  # encabezado siga en la misma fila después de una actualización del Excel.
   year_scores <- vapply(seq_len(nrow(raw)), function(i) sum(str_detect(as.character(unlist(raw[i, ], use.names = FALSE)), "^20[0-9]{2}$"), na.rm = TRUE), numeric(1))
   month_scores <- vapply(seq_len(nrow(raw)), function(i) sum(!is.na(month_num(unlist(raw[i, ], use.names = FALSE)))), numeric(1))
-  year_row <- which.max(year_scores); month_row <- which.max(month_scores)
+  year_row <- which.max(year_scores)
+  month_row <- which.max(month_scores)
   assert_true(year_scores[[year_row]] > 0 && month_scores[[month_row]] > 0, "No se pudieron detectar los encabezados temporales del IPC.")
   list(years = fill_year(unlist(raw[year_row, ], use.names = FALSE)), months = month_num(unlist(raw[month_row, ], use.names = FALSE)))
 }
 
 parse_ipc_groups <- function(path) {
   raw <- read_excel(path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
-  periods <- detect_ipc_periods(raw); years <- periods$years; months <- periods$months; cols <- which(!is.na(years) & !is.na(months))
+  periods <- detect_ipc_periods(raw)
+  years <- periods$years
+  months <- periods$months
+  cols <- which(!is.na(years) & !is.na(months))
   group_rows <- which(str_detect(str_squish(as.character(raw[[1]])), "^[0-9]{2} "))
   assert_true(length(group_rows) == 12, "El IPC no contiene los 12 grupos esperados.")
   out <- bind_rows(lapply(group_rows, function(row) tibble(codigo = str_extract(as.character(raw[[1]][row]), "^[0-9]{2}"), grupo = str_remove(str_squish(as.character(raw[[1]][row])), "^[0-9]{2} "), ponderacion = to_num(raw[[6]][row]), anio = years[cols], mes = months[cols], fecha = as.Date(sprintf("%04d-%02d-01", years[cols], months[cols])), indice = to_num(unlist(raw[row, cols], use.names = FALSE)))))
@@ -149,21 +177,38 @@ parse_ipc_groups <- function(path) {
 }
 
 parse_ipc_general <- function(path) {
-  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal"); years <- fill_year(unlist(raw[, 1], use.names = FALSE)); months <- month_num(unlist(raw[, 2], use.names = FALSE))
-  fecha <- as.Date(rep(NA_character_, length(years))); ok <- !is.na(years) & !is.na(months); fecha[ok] <- as.Date(sprintf("%04d-%02d-01", years[ok], months[ok]))
-  out <- tibble(anio = years, mes = months, fecha = fecha, ipc = to_num(unlist(raw[, 3], use.names = FALSE))) |> filter(!is.na(fecha), !is.na(ipc)); assert_true(max(out$fecha) >= as.Date("2026-01-01"), "La serie IPC general no llega al corte esperado."); out
+  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal")
+  years <- fill_year(unlist(raw[, 1], use.names = FALSE))
+  months <- month_num(unlist(raw[, 2], use.names = FALSE))
+  fecha <- as.Date(rep(NA_character_, length(years)))
+  ok <- !is.na(years) & !is.na(months)
+  fecha[ok] <- as.Date(sprintf("%04d-%02d-01", years[ok], months[ok]))
+  out <- tibble(anio = years, mes = months, fecha = fecha, ipc = to_num(unlist(raw[, 3], use.names = FALSE))) |> filter(!is.na(fecha), !is.na(ipc))
+  assert_true(max(out$fecha) >= as.Date("2026-01-01"), "La serie IPC general no llega al corte esperado.")
+  out
 }
 
 parse_exchange_monthly <- function(path) {
   raw <- read_excel(path, sheet = "PromMensual", col_names = FALSE, .name_repair = "minimal")
-  anio <- to_num(unlist(raw[-(1:3), 1])); mes <- month_num(unlist(raw[-(1:3), 2])); fecha <- as.Date(rep(NA_character_, length(anio))); ok <- !is.na(anio) & !is.na(mes); fecha[ok] <- as.Date(sprintf("%04d-%02d-01", anio[ok], mes[ok]))
-  out <- tibble(anio = anio, mes = mes, compra = to_num(unlist(raw[-(1:3), 3])), venta = to_num(unlist(raw[-(1:3), 4])), fecha = fecha) |> filter(!is.na(fecha), !is.na(compra)); assert_true(max(out$fecha) >= as.Date("2026-01-01"), "La serie cambiaria no llega al corte esperado."); out
+  anio <- to_num(unlist(raw[-(1:3), 1]))
+  mes <- month_num(unlist(raw[-(1:3), 2]))
+  fecha <- as.Date(rep(NA_character_, length(anio)))
+  ok <- !is.na(anio) & !is.na(mes)
+  fecha[ok] <- as.Date(sprintf("%04d-%02d-01", anio[ok], mes[ok]))
+  out <- tibble(anio = anio, mes = mes, compra = to_num(unlist(raw[-(1:3), 3])), venta = to_num(unlist(raw[-(1:3), 4])), fecha = fecha) |> filter(!is.na(fecha), !is.na(compra))
+  assert_true(max(out$fecha) >= as.Date("2026-01-01"), "La serie cambiaria no llega al corte esperado.")
+  out
 }
 
 parse_remittances <- function(path) {
-  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal"); years <- to_num(unlist(raw[8, -1], use.names = FALSE)); months <- month_num(unlist(raw[9:20, 1], use.names = FALSE))
+  raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal")
+  years <- to_num(unlist(raw[8, -1], use.names = FALSE))
+  months <- month_num(unlist(raw[9:20, 1], use.names = FALSE))
   out <- bind_rows(lapply(seq_along(years), function(j) tibble(anio = years[[j]], mes = months, remesas_usd = to_num(unlist(raw[9:20, j + 1], use.names = FALSE)))))
-  fecha <- as.Date(rep(NA_character_, nrow(out))); ok <- !is.na(out$anio) & !is.na(out$mes); fecha[ok] <- as.Date(sprintf("%04d-%02d-01", out$anio[ok], out$mes[ok])); mutate(out, fecha = fecha) |> filter(!is.na(fecha), !is.na(remesas_usd))
+  fecha <- as.Date(rep(NA_character_, nrow(out)))
+  ok <- !is.na(out$anio) & !is.na(out$mes)
+  fecha[ok] <- as.Date(sprintf("%04d-%02d-01", out$anio[ok], out$mes[ok]))
+  mutate(out, fecha = fecha) |> filter(!is.na(fecha), !is.na(remesas_usd))
 }
 
 write_chart_map <- function(dir, rows) write_csv(bind_rows(rows), file.path(dir, "chart-map.csv"))
@@ -268,17 +313,24 @@ write_chart_map(informal_dir, list(
   tibble(id = "08_costo_formalizacion_escenarios", pregunta = "¿Cuánto cuesta formalizar distintos salarios?", familia = "Escenarios comparables", fuente = "TSS/INFOTEP", advertencia = "Supuestos ilustrativos; no incluye ISR ni cesantía")
 ))
 
-informal_map <- read_csv(file.path(informal_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "05_matriz_formal_informal_rama", pregunta = "Composición del empleo por rama", familia = "Mapa de calor", fuente = "BCRD ENCFT", advertencia = "Intensidad: millones de ocupados")); write_csv(informal_map, file.path(informal_dir, "chart-map.csv"))
+informal_map <- read_csv(file.path(informal_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "05_matriz_formal_informal_rama", pregunta = "Composición del empleo por rama", familia = "Mapa de calor", fuente = "BCRD ENCFT", advertencia = "Intensidad: millones de ocupados"))
+write_csv(informal_map, file.path(informal_dir, "chart-map.csv"))
 
 # 2. Peso fuerte, remesas que rinden menos
-remesas_dir <- file.path(repo_root, "research", "peso-fuerte-remesas"); remesas_fig <- file.path(remesas_dir, "figuras"); dir.create(file.path(remesas_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
-ipc <- parse_ipc_general(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_base_2019-2020.xls")); fx <- parse_exchange_monthly(file.path(repo_root, "atlas", "data", "raw", "bcrd-mercado-cambiario", "TASA_DOLAR_REFERENCIA_MC.xlsx")); rem <- parse_remittances(file.path(repo_root, "atlas", "data", "raw", "bcrd-sector-externo", "Remesas_6.xlsx"))
+remesas_dir <- file.path(repo_root, "research", "peso-fuerte-remesas")
+remesas_fig <- file.path(remesas_dir, "figuras")
+dir.create(file.path(remesas_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
+ipc <- parse_ipc_general(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_base_2019-2020.xls"))
+fx <- parse_exchange_monthly(file.path(repo_root, "atlas", "data", "raw", "bcrd-mercado-cambiario", "TASA_DOLAR_REFERENCIA_MC.xlsx"))
+rem <- parse_remittances(file.path(repo_root, "atlas", "data", "raw", "bcrd-sector-externo", "Remesas_6.xlsx"))
 rem_data <- rem |> inner_join(fx |> select(fecha, compra), by = "fecha") |> inner_join(ipc |> select(fecha, ipc), by = "fecha") |> mutate(remesas_millones_usd = remesas_usd / 1e6, dops_por_100usd = 100 * compra, dops_reales_por_100usd = dops_por_100usd / ipc * 100, remesas_reales_millones_dop = remesas_usd * compra / ipc * 100 / 1e6)
-assert_true(nrow(rem_data) >= 150, "La serie de remesas no tiene cobertura mensual suficiente."); write_csv(rem_data, file.path(remesas_dir, "data", "procesados", "01_remesas_tipo_cambio_ipc.csv"))
+assert_true(nrow(rem_data) >= 150, "La serie de remesas no tiene cobertura mensual suficiente.")
+write_csv(rem_data, file.path(remesas_dir, "data", "procesados", "01_remesas_tipo_cambio_ipc.csv"))
 indexed <- rem_data |> filter(fecha >= as.Date("2010-01-01")) |> mutate(across(c(remesas_millones_usd, dops_por_100usd, dops_reales_por_100usd), ~ 100 * .x / .x[which.min(fecha)])) |> select(fecha, remesas_millones_usd, dops_por_100usd, dops_reales_por_100usd) |> pivot_longer(-fecha, names_to = "serie", values_to = "indice")
 p_rem <- ggplot(indexed, aes(fecha, indice, colour = serie)) + geom_line(linewidth = 1) + scale_colour_manual(values = c(remesas_millones_usd = pal$oliva, dops_por_100usd = pal$azul, dops_reales_por_100usd = pal$terracota), labels = c(remesas_millones_usd = "Remesas en USD", dops_por_100usd = "RD$ por US$100", dops_reales_por_100usd = "Poder de compra de US$100")) + scale_x_date(date_breaks = "2 years", date_labels = "%Y") + labs(title = "Remesas en dólares, pesos recibidos y poder de compra", subtitle = "Índice: enero de 2010 = 100 · remesas nominales, tipo de cambio y poder de compra", x = NULL, y = "Índice", caption = "Fuentes: BCRD, remesas, tipo de cambio e IPC nacional · Elaboración: Leonardo Mena") + theme_editorial()
 export_plot(p_rem, remesas_fig, "01_remesas_tipo_cambio_poder_compra", 10.5, 6.4)
-power <- rem_data |> filter(fecha >= as.Date("2010-01-01")) |> mutate(real_vs_nominal = 100 * dops_reales_por_100usd / dops_por_100usd); write_csv(power, file.path(remesas_dir, "data", "procesados", "02_poder_compra_remesa.csv"))
+power <- rem_data |> filter(fecha >= as.Date("2010-01-01")) |> mutate(real_vs_nominal = 100 * dops_reales_por_100usd / dops_por_100usd)
+write_csv(power, file.path(remesas_dir, "data", "procesados", "02_poder_compra_remesa.csv"))
 p_power <- ggplot(power, aes(fecha, real_vs_nominal)) + geom_hline(yintercept = 100, linetype = "dashed", colour = pal$gris) + geom_line(colour = pal$terracota, linewidth = 1.1) + scale_x_date(date_breaks = "2 years", date_labels = "%Y") + scale_y_continuous(labels = label_percent(scale = 1), breaks = seq(70, 110, 10)) + labs(title = "Poder de compra real de US$100 enviados", subtitle = "Pesos recibidos deflactados por IPC nacional · enero de 2010 = 100", x = NULL, y = "Poder de compra relativo", caption = "Cálculo: tipo de cambio de compra deflactado por IPC nacional · Fuente: BCRD") + theme_editorial()
 power <- power |> mutate(real_vs_nominal = 100 * dops_reales_por_100usd / dops_reales_por_100usd[which.min(fecha)])
 p_power <- p_power %+% power
@@ -291,22 +343,38 @@ export_plot(p_power_heat, remesas_fig, "03_mapa_calor_poder_compra", 10.5, 7.2)
 write_chart_map(remesas_dir, list(tibble(id = "01_remesas_tipo_cambio_poder_compra", pregunta = "¿Qué ocurre con una remesa cuando cambia el peso?", familia = "Índice temporal", fuente = "BCRD", advertencia = "Deflactor: IPC nacional"), tibble(id = "02_poder_compra_remesas", pregunta = "¿Cuánto poder de compra queda?", familia = "Línea con referencia", fuente = "BCRD", advertencia = "No estima la canasta de cada hogar")))
 
 # 3. Trampa estructural del sector eléctrico
-remesas_map <- read_csv(file.path(remesas_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_poder_compra", pregunta = "Mapa mensual del poder de compra", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice relativo, no canasta individual")); write_csv(remesas_map, file.path(remesas_dir, "chart-map.csv"))
+remesas_map <- read_csv(file.path(remesas_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_poder_compra", pregunta = "Mapa mensual del poder de compra", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice relativo, no canasta individual"))
+write_csv(remesas_map, file.path(remesas_dir, "chart-map.csv"))
 source(file.path(repo_root, "research", "build-peso-fuerte-remesas.R"), local = new.env(parent = globalenv()))
 
-electric_dir <- file.path(repo_root, "research", "sector-electrico-dominicano"); electric_fig <- file.path(electric_dir, "figuras"); electric_raw <- file.path(electric_dir, "data", "raw", "mem"); electric_proc <- file.path(electric_dir, "data", "procesados"); dir.create(electric_proc, recursive = TRUE, showWarnings = FALSE)
-gen_pdf <- file.path(electric_raw, "boletin-generacion-2024.pdf"); dist_pdf <- file.path(electric_raw, "boletin-distribucion-diciembre-2024.pdf"); gen_text <- paste(pdf_text(gen_pdf), collapse = "\n"); dist_text <- paste(pdf_text(dist_pdf), collapse = "\n"); assert_true(str_detect(gen_text, "23,056"), "No se pudo validar el total de generación del PDF MEM."); assert_true(str_detect(dist_text, "37.6%"), "No se pudo validar la pérdida de energía del PDF MEM.")
-generation <- tibble(fuente = c("Gas natural", "Carbón mineral", "Fuel Oil No. 6", "Solar", "Hidro", "Eólica", "Biomasa", "Fuel Oil No. 2"), gwh = c(9554, 6851, 2480, 1470, 1422, 1061, 207, 11), pagina = 3) |> mutate(pct = 100 * gwh / sum(gwh), fuente = factor(fuente, levels = fuente[order(gwh)])); assert_true(sum(generation$gwh) == 23056, "La matriz de generación no suma el total del boletín MEM."); write_csv(generation, file.path(electric_proc, "01_generacion_2024.csv"))
+electric_dir <- file.path(repo_root, "research", "sector-electrico-dominicano")
+electric_fig <- file.path(electric_dir, "figuras")
+electric_raw <- file.path(electric_dir, "data", "raw", "mem")
+electric_proc <- file.path(electric_dir, "data", "procesados")
+dir.create(electric_proc, recursive = TRUE, showWarnings = FALSE)
+gen_pdf <- file.path(electric_raw, "boletin-generacion-2024.pdf")
+dist_pdf <- file.path(electric_raw, "boletin-distribucion-diciembre-2024.pdf")
+gen_text <- paste(pdf_text(gen_pdf), collapse = "\n")
+dist_text <- paste(pdf_text(dist_pdf), collapse = "\n")
+assert_true(str_detect(gen_text, "23,056"), "No se pudo validar el total de generación del PDF MEM.")
+assert_true(str_detect(dist_text, "37.6%"), "No se pudo validar la pérdida de energía del PDF MEM.")
+generation <- tibble(fuente = c("Gas natural", "Carbón mineral", "Fuel Oil No. 6", "Solar", "Hidro", "Eólica", "Biomasa", "Fuel Oil No. 2"), gwh = c(9554, 6851, 2480, 1470, 1422, 1061, 207, 11), pagina = 3) |> mutate(pct = 100 * gwh / sum(gwh), fuente = factor(fuente, levels = fuente[order(gwh)]))
+assert_true(sum(generation$gwh) == 23056, "La matriz de generación no suma el total del boletín MEM.")
+write_csv(generation, file.path(electric_proc, "01_generacion_2024.csv"))
 p_gen <- ggplot(generation, aes(gwh, fuente)) + geom_col(fill = pal$azul, colour = pal$tinta, linewidth = .25, width = .68) + geom_text(aes(label = sprintf("%.0f GWh · %.0f%%", gwh, pct)), hjust = -.08, size = 3.2, fontface = "bold") + scale_x_continuous(labels = label_number(big.mark = "."), limits = c(0, 11000), expand = expansion(mult = c(0, .05))) + labs(title = "Generación eléctrica del SENI por combustible", subtitle = "Generación acumulada · 2024", x = "GWh", y = NULL, caption = "Fuente: MEM, Boletín anual de Generación y Gestión de Energía 2024, p. 3 · Elaboración: Leonardo Mena") + theme_editorial("x")
 export_plot(p_gen, electric_fig, "01_matriz_generacion_2024", 10.5, 6.8)
-losses <- tibble(indicador = c("Energía comprada", "Energía facturada", "Energía cobrada"), gwh = c(1596.7, 990.4, 1035.2), pagina = 3) |> mutate(indicador = factor(indicador, levels = indicador)); ratios <- tibble(indicador = c("Pérdida de energía", "Recuperación de energía", "Recuperación de efectivo", "Cobranza"), porcentaje = c(37.6, 59.5, 60.9, 95.3), pagina = 5); write_csv(losses, file.path(electric_proc, "02_energia_distribucion_diciembre_2024.csv")); write_csv(ratios, file.path(electric_proc, "03_indicadores_distribucion_diciembre_2024.csv"))
+losses <- tibble(indicador = c("Energía comprada", "Energía facturada", "Energía cobrada"), gwh = c(1596.7, 990.4, 1035.2), pagina = 3) |> mutate(indicador = factor(indicador, levels = indicador))
+ratios <- tibble(indicador = c("Pérdida de energía", "Recuperación de energía", "Recuperación de efectivo", "Cobranza"), porcentaje = c(37.6, 59.5, 60.9, 95.3), pagina = 5)
+write_csv(losses, file.path(electric_proc, "02_energia_distribucion_diciembre_2024.csv"))
+write_csv(ratios, file.path(electric_proc, "03_indicadores_distribucion_diciembre_2024.csv"))
 p_loss <- ggplot(ratios, aes(porcentaje, reorder(indicador, porcentaje))) + geom_col(fill = pal$terracota, colour = pal$tinta, width = .62) + geom_text(aes(label = sprintf("%.1f%%", porcentaje)), hjust = -.12, size = 3.4, fontface = "bold") + scale_x_continuous(labels = label_percent(scale = 1), limits = c(0, 108), breaks = seq(0, 100, 20)) + labs(title = "Indicadores agregados de pérdidas y cobros de las EDE", subtitle = "Indicadores agregados · diciembre de 2024", x = NULL, y = NULL, caption = "Fuente: MEM, Boletín de Distribución y Comercialización, pp. 4–5 · Elaboración: Leonardo Mena") + theme_editorial("x")
 export_plot(p_loss, electric_fig, "02_perdidas_recuperacion_cobranza", 10, 5.8)
 gestion_heat <- tibble(indicador = rep(c("Cobranza", "Recuperación de energía", "Recuperación de efectivo"), each = 2), periodo = rep(c("Dic 2023", "Dic 2024"), 3), porcentaje = c(95.1, 95.3, 61.0, 59.5, 59.4, 60.9))
 write_csv(gestion_heat, file.path(electric_proc, "05_mapa_calor_indicadores_gestion.csv"))
 p_gestion_heat <- ggplot(gestion_heat, aes(periodo, indicador, fill = porcentaje)) + geom_tile(colour = pal$crema, linewidth = .8) + geom_text(aes(label = sprintf("%.1f%%", porcentaje)), fontface = "bold", size = 3.5) + scale_fill_gradient(low = pal$crema, high = pal$terracota, limits = c(0, 100), labels = label_percent(scale = 1), name = "Porcentaje") + labs(title = "Indicadores de gestión de las EDE", subtitle = "Comparación de diciembre de 2023 y diciembre de 2024", x = NULL, y = NULL, caption = "Fuente: MEM, Boletín de Distribución y Comercialización · Elaboración: Leonardo Mena") + theme_editorial("none")
 export_plot(p_gestion_heat, electric_fig, "05_mapa_calor_indicadores_gestion", 8.5, 5.8)
-deficit <- tibble(concepto = c("Balance comercial", "Balance corriente", "Balance global", "Subsidio del Gobierno Central"), valor = c(1025.3, 1518.7, 1735.4, 1554.6), pagina = 7) |> mutate(concepto = factor(concepto, levels = concepto[order(valor)])); write_csv(deficit, file.path(electric_proc, "04_deficit_distribuidoras_2024.csv"))
+deficit <- tibble(concepto = c("Balance comercial", "Balance corriente", "Balance global", "Subsidio del Gobierno Central"), valor = c(1025.3, 1518.7, 1735.4, 1554.6), pagina = 7) |> mutate(concepto = factor(concepto, levels = concepto[order(valor)]))
+write_csv(deficit, file.path(electric_proc, "04_deficit_distribuidoras_2024.csv"))
 p_deficit <- ggplot(deficit, aes(valor, concepto)) + geom_col(fill = pal$ocre, colour = pal$tinta, width = .62) + geom_text(aes(label = sprintf("US$ %.1f MM", valor)), hjust = -.08, size = 3.3, fontface = "bold") + scale_x_continuous(labels = label_number(prefix = "US$ ", suffix = " MM"), limits = c(0, 1900), expand = expansion(mult = c(0, .05))) + labs(title = "Déficits acumulados y subsidios reportados por las EDE", subtitle = "Montos reportados · 2024", x = NULL, y = NULL, caption = "Fuente: MEM, Boletín de Distribución y Comercialización, p. 7 · Elaboración: Leonardo Mena") + theme_editorial("x")
 export_plot(p_deficit, electric_fig, "03_deficit_y_subsidio_electricidad", 10.5, 5.8)
 electric_pdf_candidates <- list.files(electric_raw, pattern = "gestion-comercial.*2026.*abril.*pdf$", full.names = TRUE, ignore.case = TRUE)
@@ -344,15 +412,24 @@ export_plot(p_electric_map, electric_fig, "06_mapa_rd_perdidas_electricas_provin
 write_chart_map(electric_dir, list(tibble(id = "01_matriz_generacion_2024", pregunta = "¿De dónde sale la energía?", familia = "Barras ordenadas", fuente = "MEM", advertencia = "Cifras acumuladas 2024"), tibble(id = "02_perdidas_recuperacion_cobranza", pregunta = "¿Qué parte de la energía se pierde o recupera?", familia = "Barras comparables", fuente = "MEM", advertencia = "Indicadores no son partes aditivas"), tibble(id = "03_deficit_y_subsidio_electricidad", pregunta = "¿Cómo llega la ineficiencia al fisco?", familia = "Barras monetarias", fuente = "MEM", advertencia = "Valores acumulados 2024")))
 
 # 4. Componentes de la inflación
-electric_map <- read_csv(file.path(electric_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "05_mapa_calor_indicadores_gestion", pregunta = "¿Cómo cambiaron los indicadores de gestión?", familia = "Mapa de calor", fuente = "MEM", advertencia = "Solo indicadores con comparación explícita en el boletín"), tibble(id = "06_mapa_rd_perdidas_electricas_provincia", pregunta = "¿Dónde se concentra la energía perdida?", familia = "Mapa de RD", fuente = "MEM", advertencia = "Corte móvil; EDE superpuestas agregadas por GWh")); write_csv(electric_map, file.path(electric_dir, "chart-map.csv"))
+electric_map <- read_csv(file.path(electric_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "05_mapa_calor_indicadores_gestion", pregunta = "¿Cómo cambiaron los indicadores de gestión?", familia = "Mapa de calor", fuente = "MEM", advertencia = "Solo indicadores con comparación explícita en el boletín"), tibble(id = "06_mapa_rd_perdidas_electricas_provincia", pregunta = "¿Dónde se concentra la energía perdida?", familia = "Mapa de RD", fuente = "MEM", advertencia = "Corte móvil; EDE superpuestas agregadas por GWh"))
+write_csv(electric_map, file.path(electric_dir, "chart-map.csv"))
 
 # Este bloque histórico queda desactivado: el constructor vigente usa grupos del IPC
 # y se ejecuta al terminar el archivo para evitar regenerar visuales del pollo.
 if (FALSE) {
-pollo_dir <- file.path(repo_root, "research", "pollo-inflacion"); pollo_fig <- file.path(pollo_dir, "figuras"); dir.create(file.path(pollo_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
+pollo_dir <- file.path(repo_root, "research", "pollo-inflacion")
+pollo_fig <- file.path(pollo_dir, "figuras")
+dir.create(file.path(pollo_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
 pollo <- parse_ipc_items(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_articulos_base_2019-2020.xlsx")) |> mutate(producto = recode(codigo, `0112201` = "Pollo fresco", `0112203` = "Pechuga de pollo"))
-carnes <- read_excel(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_articulos_base_2019-2020.xlsx"), sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal"); years <- fill_year(unlist(carnes[1, ], use.names = FALSE)); months <- month_num(unlist(carnes[3, ], use.names = FALSE)); cols <- which(!is.na(years) & !is.na(months)); row_carnes <- which(as.character(carnes[[3]]) == "0112 Carnes")[1]
-carnes_long <- tibble(fecha = as.Date(sprintf("%04d-%02d-01", years[cols], months[cols])), producto = "Carnes", indice = to_num(unlist(carnes[row_carnes, cols], use.names = FALSE))); pollo <- bind_rows(pollo |> select(fecha, producto, indice), carnes_long) |> inner_join(fx |> select(fecha, compra), by = "fecha"); write_csv(pollo, file.path(pollo_dir, "data", "procesados", "01_pollo_carnes_dolar.csv"))
+carnes <- read_excel(file.path(repo_root, "atlas", "data", "raw", "bcrd-precios", "ipc_articulos_base_2019-2020.xlsx"), sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
+years <- fill_year(unlist(carnes[1, ], use.names = FALSE))
+months <- month_num(unlist(carnes[3, ], use.names = FALSE))
+cols <- which(!is.na(years) & !is.na(months))
+row_carnes <- which(as.character(carnes[[3]]) == "0112 Carnes")[1]
+carnes_long <- tibble(fecha = as.Date(sprintf("%04d-%02d-01", years[cols], months[cols])), producto = "Carnes", indice = to_num(unlist(carnes[row_carnes, cols], use.names = FALSE)))
+pollo <- bind_rows(pollo |> select(fecha, producto, indice), carnes_long) |> inner_join(fx |> select(fecha, compra), by = "fecha")
+write_csv(pollo, file.path(pollo_dir, "data", "procesados", "01_pollo_carnes_dolar.csv"))
 pollo_index <- pollo |> group_by(producto) |> arrange(fecha, .by_group = TRUE) |> mutate(indice_base = 100 * indice / indice[which.min(fecha)], dolar_base = 100 * compra / compra[which.min(fecha)]) |> ungroup()
 pollo_full <- pollo_index
 pollo_plot <- pollo_index |> filter(fecha >= as.Date("2020-10-01"))
@@ -360,7 +437,8 @@ pollo_index <- pollo_plot
 p_pollo <- ggplot(pollo_index, aes(fecha)) + geom_line(aes(y = indice_base, colour = producto), linewidth = 1) + geom_line(aes(y = dolar_base, colour = "Dólar"), linewidth = 1, linetype = "dashed") + scale_colour_manual(values = c("Pollo fresco" = pal$terracota, "Pechuga de pollo" = pal$ocre, "Carnes" = pal$oliva, "Dólar" = pal$azul)) + scale_x_date(date_breaks = "6 months", date_labels = "%Y-%m", expand = expansion(mult = c(.01, .04))) + labs(title = "Índices de precios del pollo, carnes y tipo de cambio", subtitle = "Octubre de 2020 = 100 · pollo fresco, pechuga, carnes y dólar", x = NULL, y = "Índice", caption = "Fuentes: BCRD, IPC por artículos y tipo de cambio de referencia · Elaboración: Leonardo Mena") + theme_editorial()
 export_plot(p_pollo, pollo_fig, "01_pollo_carnes_y_dolar", 11, 6.6)
 pollo_index <- pollo_full
-yoy <- pollo_index |> group_by(producto) |> arrange(fecha, .by_group = TRUE) |> mutate(inflacion_interanual = 100 * (indice / lag(indice, 12) - 1)) |> ungroup() |> filter(!is.na(inflacion_interanual)) |> distinct(fecha, producto, inflacion_interanual) |> left_join(fx |> select(fecha, compra), by = "fecha") |> group_by(producto) |> arrange(fecha, .by_group = TRUE) |> mutate(dolar_interanual = 100 * (compra / lag(compra, 12) - 1)) |> ungroup(); write_csv(yoy, file.path(pollo_dir, "data", "procesados", "02_inflacion_pollo_y_dolar.csv"))
+yoy <- pollo_index |> group_by(producto) |> arrange(fecha, .by_group = TRUE) |> mutate(inflacion_interanual = 100 * (indice / lag(indice, 12) - 1)) |> ungroup() |> filter(!is.na(inflacion_interanual)) |> distinct(fecha, producto, inflacion_interanual) |> left_join(fx |> select(fecha, compra), by = "fecha") |> group_by(producto) |> arrange(fecha, .by_group = TRUE) |> mutate(dolar_interanual = 100 * (compra / lag(compra, 12) - 1)) |> ungroup()
+write_csv(yoy, file.path(pollo_dir, "data", "procesados", "02_inflacion_pollo_y_dolar.csv"))
 p_yoy <- ggplot(yoy, aes(fecha)) + geom_hline(yintercept = 0, colour = pal$gris, linewidth = .5) + geom_line(aes(y = inflacion_interanual, colour = producto), linewidth = .9) + geom_line(aes(y = dolar_interanual, colour = "Dólar"), linewidth = .9, linetype = "dashed") + scale_colour_manual(values = c("Pollo fresco" = pal$terracota, "Pechuga de pollo" = pal$ocre, "Carnes" = pal$oliva, "Dólar" = pal$azul)) + scale_x_date(date_breaks = "6 months", date_labels = "%Y-%m") + scale_y_continuous(labels = label_percent(scale = 1), breaks = seq(-20, 80, 20)) + labs(title = "Variación interanual del pollo, carnes y tipo de cambio", subtitle = "Comparación de precios y tipo de cambio · variación interanual", x = NULL, y = "Variación interanual", caption = "Fuente: BCRD, IPC por artículos y mercado cambiario · Elaboración: Leonardo Mena") + theme_editorial()
 export_plot(p_yoy, pollo_fig, "02_inflacion_interanual_pollo_dolar", 11, 6.6)
 pollo_heat <- pollo_index |> filter(fecha >= as.Date("2020-10-01")) |> mutate(anio = as.integer(format(fecha, "%Y")), mes = as.integer(format(fecha, "%m"))) |> select(producto, anio, mes, indice_base)
@@ -370,25 +448,40 @@ export_plot(p_pollo_heat, pollo_fig, "03_mapa_calor_indice_pollo", 10.5, 8.5)
 write_chart_map(pollo_dir, list(tibble(id = "01_pollo_carnes_y_dolar", pregunta = "¿Se comporta el pollo como el dólar?", familia = "Índice temporal", fuente = "BCRD", advertencia = "Índices de precios, no precios en RD$"), tibble(id = "02_inflacion_interanual_pollo_dolar", pregunta = "¿Qué shocks son propios del pollo?", familia = "Líneas interanuales", fuente = "BCRD", advertencia = "No identifica causalidad por sí solo")))
 
 # 5. Camus, Sísifo y el emprendedor MIPYME
-pollo_map <- read_csv(file.path(pollo_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_indice_pollo", pregunta = "¿Cómo se distribuye el índice del pollo por mes?", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice de precios, no precio en RD$")); write_csv(pollo_map, file.path(pollo_dir, "chart-map.csv"))
+pollo_map <- read_csv(file.path(pollo_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "03_mapa_calor_indice_pollo", pregunta = "¿Cómo se distribuye el índice del pollo por mes?", familia = "Mapa de calor", fuente = "BCRD", advertencia = "Índice de precios, no precio en RD$"))
+write_csv(pollo_map, file.path(pollo_dir, "chart-map.csv"))
 }
 
-mipyme_dir <- file.path(repo_root, "research", "camus-mipyme"); mipyme_fig <- file.path(mipyme_dir, "figuras"); dir.create(file.path(mipyme_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
-mipyme_path <- file.path(repo_root, "posts", "republica-en-un-grafico", "2026-02-14-mipymes-rd", "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx"); mip <- read_excel(mipyme_path, sheet = 1, .name_repair = "unique")
+mipyme_dir <- file.path(repo_root, "research", "camus-mipyme")
+mipyme_fig <- file.path(mipyme_dir, "figuras")
+dir.create(file.path(mipyme_dir, "data", "procesados"), recursive = TRUE, showWarnings = FALSE)
+mipyme_path <- file.path(repo_root, "posts", "republica-en-un-grafico", "2026-02-14-mipymes-rd", "Encuesta-Nacional-a-las-MIPYMES-2023-Base-de-datos.xlsx")
+mip <- read_excel(mipyme_path, sheet = 1, .name_repair = "unique")
 pick <- function(pattern) names(mip)[which(str_detect(norm_text(names(mip)), norm_text(pattern)))[1]]
-wcol <- pick("FACTOR"); formcol <- pick("FORMALIDAD"); sizecol <- pick("CLASIFICACIÓN MIPYMES"); inc_col <- pick("INGRESOS TOTALES"); emp_col <- pick("EMPLEO TOTAL"); contrib_col <- pick("CONTRIBUCIONES SOCIALES"); assert_true(all(!is.na(c(wcol, formcol, sizecol, inc_col, emp_col, contrib_col))), "La base MIPYME cambió columnas clave.")
+wcol <- pick("FACTOR")
+formcol <- pick("FORMALIDAD")
+sizecol <- pick("CLASIFICACIÓN MIPYMES")
+inc_col <- pick("INGRESOS TOTALES")
+emp_col <- pick("EMPLEO TOTAL")
+contrib_col <- pick("CONTRIBUCIONES SOCIALES")
+assert_true(all(!is.na(c(wcol, formcol, sizecol, inc_col, emp_col, contrib_col))), "La base MIPYME cambió columnas clave.")
 mip2 <- mip |> mutate(peso = to_num(.data[[wcol]]), formalidad = as.character(.data[[formcol]]), tamano = as.character(.data[[sizecol]]), ingresos = to_num(.data[[inc_col]]), empleo = to_num(.data[[emp_col]]), contribuciones = to_num(.data[[contrib_col]]), ingreso_por_empleado = ingresos / pmax(empleo, 1)) |> filter(!is.na(peso), peso > 0)
 wmean <- function(x, w) sum(x * w, na.rm = TRUE) / sum(w[!is.na(x)], na.rm = TRUE)
-mipyme_productivity <- mip2 |> filter(is.finite(ingreso_por_empleado), ingreso_por_empleado > 0, ingreso_por_empleado < quantile(ingreso_por_empleado, .99, na.rm = TRUE)) |> group_by(formalidad) |> summarise(ingreso_por_empleado = wmean(ingreso_por_empleado, peso), .groups = "drop"); write_csv(mipyme_productivity, file.path(mipyme_dir, "data", "procesados", "01_ingreso_por_empleado_formalidad.csv"))
+mipyme_productivity <- mip2 |> filter(is.finite(ingreso_por_empleado), ingreso_por_empleado > 0, ingreso_por_empleado < quantile(ingreso_por_empleado, .99, na.rm = TRUE)) |> group_by(formalidad) |> summarise(ingreso_por_empleado = wmean(ingreso_por_empleado, peso), .groups = "drop")
+write_csv(mipyme_productivity, file.path(mipyme_dir, "data", "procesados", "01_ingreso_por_empleado_formalidad.csv"))
 p_mip_prod <- ggplot(mipyme_productivity, aes(ingreso_por_empleado, reorder(formalidad, ingreso_por_empleado), fill = formalidad)) + geom_col(width = .58, show.legend = FALSE, colour = pal$tinta, linewidth = .25) + geom_text(aes(label = label_number(prefix = "RD$ ", big.mark = ".")(ingreso_por_empleado)), hjust = -.08, fontface = "bold", size = 3.3) + scale_fill_manual(values = c(Formal = pal$oliva, Informal = pal$terracota)) + scale_x_continuous(labels = label_number(prefix = "RD$ ", big.mark = "."), expand = expansion(mult = c(0, .12))) + labs(title = "Ingreso promedio por trabajador en MIPYMES formales e informales", subtitle = "Ingreso total promedio por trabajador · ENMIPYMES 2023 · estimación ponderada", x = NULL, y = NULL, caption = "Fuente: ONE/BCRD, ENMIPYMES 2023 · Elaboración: Leonardo Mena") + theme_editorial("x")
 p_mip_prod <- p_mip_prod + scale_x_continuous(labels = label_number(prefix = "RD$ ", big.mark = "."), expand = expansion(mult = c(0, .25)))
 export_plot(p_mip_prod, mipyme_fig, "01_ingreso_por_empleado_formalidad", 10.5, 5.3)
 
-problem_cols <- names(mip)[str_detect(norm_text(names(mip)), "p5_3_")]; problem_data <- bind_rows(lapply(problem_cols, function(col) tibble(problema = str_trunc(str_remove(col, ".*: "), 42), tasa = 100 * wmean(as.numeric(mip2[[col]] %in% c(1, "1", "Sí", "Si", "SI")), mip2$peso)))) |> arrange(tasa) |> slice_max(order_by = tasa, n = 8)
-write_csv(problem_data, file.path(mipyme_dir, "data", "procesados", "02_problemas_mipyme.csv")); p_mip_prob <- ggplot(problem_data, aes(tasa, reorder(problema, tasa))) + geom_col(fill = pal$terracota, width = .62, colour = pal$tinta, linewidth = .25) + geom_text(aes(label = sprintf("%.1f%%", tasa)), hjust = -.1, size = 3.2, fontface = "bold") + scale_x_continuous(labels = label_percent(scale = 1), limits = c(0, max(problem_data$tasa) * 1.2)) + labs(title = "Problemas declarados por las MIPYMES", subtitle = "Porcentaje ponderado de empresas que declara cada problema", x = NULL, y = NULL, caption = "Fuente: ENMIPYMES 2023 · selección de problemas del cuestionario P5.3 · Elaboración: Leonardo Mena") + theme_editorial("x")
+problem_cols <- names(mip)[str_detect(norm_text(names(mip)), "p5_3_")]
+problem_data <- bind_rows(lapply(problem_cols, function(col) tibble(problema = str_trunc(str_remove(col, ".*: "), 42), tasa = 100 * wmean(as.numeric(mip2[[col]] %in% c(1, "1", "Sí", "Si", "SI")), mip2$peso)))) |> arrange(tasa) |> slice_max(order_by = tasa, n = 8)
+write_csv(problem_data, file.path(mipyme_dir, "data", "procesados", "02_problemas_mipyme.csv"))
+p_mip_prob <- ggplot(problem_data, aes(tasa, reorder(problema, tasa))) + geom_col(fill = pal$terracota, width = .62, colour = pal$tinta, linewidth = .25) + geom_text(aes(label = sprintf("%.1f%%", tasa)), hjust = -.1, size = 3.2, fontface = "bold") + scale_x_continuous(labels = label_percent(scale = 1), limits = c(0, max(problem_data$tasa) * 1.2)) + labs(title = "Problemas declarados por las MIPYMES", subtitle = "Porcentaje ponderado de empresas que declara cada problema", x = NULL, y = NULL, caption = "Fuente: ENMIPYMES 2023 · selección de problemas del cuestionario P5.3 · Elaboración: Leonardo Mena") + theme_editorial("x")
 export_plot(p_mip_prob, mipyme_fig, "02_problemas_de_supervivencia_mipyme", 10, 6.2)
 
-credit_col <- pick("durante el año 2022, ha recibido.*financiamiento"); credit <- mip2 |> mutate(tiene_credito = as.character(.data[[credit_col]])) |> group_by(formalidad, tamano) |> summarise(tasa = 100 * wmean(tiene_credito %in% c("1", "Sí", "Si", "SI"), peso), .groups = "drop"); write_csv(credit, file.path(mipyme_dir, "data", "procesados", "03_credito_formalidad_tamano.csv"))
+credit_col <- pick("durante el año 2022, ha recibido.*financiamiento")
+credit <- mip2 |> mutate(tiene_credito = as.character(.data[[credit_col]])) |> group_by(formalidad, tamano) |> summarise(tasa = 100 * wmean(tiene_credito %in% c("1", "Sí", "Si", "SI"), peso), .groups = "drop")
+write_csv(credit, file.path(mipyme_dir, "data", "procesados", "03_credito_formalidad_tamano.csv"))
 p_mip_credit <- ggplot(credit, aes(tamano, tasa, fill = formalidad)) + geom_col(position = position_dodge(width = .78), width = .68, colour = pal$tinta, linewidth = .25) + geom_text(aes(label = sprintf("%.1f%%", tasa)), position = position_dodge(width = .78), vjust = -.45, size = 2.7, fontface = "bold") + scale_fill_manual(values = c(Formal = pal$oliva, Informal = pal$terracota)) + scale_y_continuous(labels = label_percent(scale = 1), limits = c(0, max(credit$tasa, na.rm = TRUE) * 1.25)) + labs(title = "Acceso a crédito por tamaño y formalidad de la MIPYME", subtitle = "Porcentaje de empresas con acceso a crédito · ENMIPYMES 2023", x = NULL, y = "Porcentaje de empresas", caption = "Fuente: ENMIPYMES 2023 · estimación ponderada · Elaboración: Leonardo Mena") + theme_editorial()
 export_plot(p_mip_credit, mipyme_fig, "03_credito_formalidad_tamano", 10, 6.2)
 tesis_mip_path <- file.path(mipyme_dir, "data", "raw", "tesis", "enmipymes_r.csv")
@@ -413,8 +506,12 @@ p_mipyme_map <- ggplot(rd_prov_mipyme) + geom_sf(aes(fill = formalidad_pct), col
 export_plot(p_mipyme_map, mipyme_fig, "05_mapa_rd_formalidad_mipyme", 8.5, 7.3)
 write_chart_map(mipyme_dir, list(tibble(id = "01_ingreso_por_empleado_formalidad", pregunta = "¿Cuál es el ingreso promedio por trabajador según la formalidad?", familia = "Barras comparables", fuente = "ENMIPYMES 2023", advertencia = "Promedios ponderados; no es causalidad"), tibble(id = "02_problemas_de_supervivencia_mipyme", pregunta = "¿Qué problemas declaran las MIPYMES?", familia = "Barras ordenadas", fuente = "ENMIPYMES 2023", advertencia = "Respuesta declarada"), tibble(id = "03_credito_formalidad_tamano", pregunta = "¿Cómo varía el acceso a crédito por tamaño y formalidad?", familia = "Barras agrupadas", fuente = "ENMIPYMES 2023", advertencia = "No es efecto causal")))
 
-problem_data <- problem_data |> mutate(problema = case_when(str_detect(norm_text(problema), "servicios y combustibles") ~ "Servicios y combustibles", str_detect(norm_text(problema), "materias primas") ~ "Materias primas e insumos", str_detect(norm_text(problema), "inseguridad publica") ~ "Inseguridad pública", TRUE ~ problema)); p_mip_prob <- p_mip_prob %+% problem_data; write_csv(problem_data, file.path(mipyme_dir, "data", "procesados", "02_problemas_mipyme.csv")); export_plot(p_mip_prob, mipyme_fig, "02_problemas_de_supervivencia_mipyme", 10, 6.2)
-mipyme_map <- read_csv(file.path(mipyme_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "04_mapa_calor_problemas_tamano_formalidad", pregunta = "¿Qué problemas se concentran por grupo?", familia = "Mapa de calor", fuente = "Tesis MIPYME/ENMIPYMES", advertencia = "Respuestas declaradas; no es efecto causal"), tibble(id = "05_mapa_rd_formalidad_mipyme", pregunta = "¿Dónde se concentran las MIPYMES formales?", familia = "Mapa de RD", fuente = "ENMIPYMES/Tesis MIPYME", advertencia = "Proporción ponderada; no es causalidad")); write_csv(mipyme_map, file.path(mipyme_dir, "chart-map.csv"))
+problem_data <- problem_data |> mutate(problema = case_when(str_detect(norm_text(problema), "servicios y combustibles") ~ "Servicios y combustibles", str_detect(norm_text(problema), "materias primas") ~ "Materias primas e insumos", str_detect(norm_text(problema), "inseguridad publica") ~ "Inseguridad pública", TRUE ~ problema))
+p_mip_prob <- p_mip_prob %+% problem_data
+write_csv(problem_data, file.path(mipyme_dir, "data", "procesados", "02_problemas_mipyme.csv"))
+export_plot(p_mip_prob, mipyme_fig, "02_problemas_de_supervivencia_mipyme", 10, 6.2)
+mipyme_map <- read_csv(file.path(mipyme_dir, "chart-map.csv"), show_col_types = FALSE) |> bind_rows(tibble(id = "04_mapa_calor_problemas_tamano_formalidad", pregunta = "¿Qué problemas se concentran por grupo?", familia = "Mapa de calor", fuente = "Tesis MIPYME/ENMIPYMES", advertencia = "Respuestas declaradas; no es efecto causal"), tibble(id = "05_mapa_rd_formalidad_mipyme", pregunta = "¿Dónde se concentran las MIPYMES formales?", familia = "Mapa de RD", fuente = "ENMIPYMES/Tesis MIPYME", advertencia = "Proporción ponderada; no es causalidad"))
+write_csv(mipyme_map, file.path(mipyme_dir, "chart-map.csv"))
 message("Gráficos generados en cinco módulos de research.")
 
 # Mantener el módulo de inflación en su versión editorial vigente.

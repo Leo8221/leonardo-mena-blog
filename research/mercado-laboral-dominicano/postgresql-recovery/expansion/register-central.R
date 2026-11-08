@@ -1,7 +1,10 @@
 source('research/mercado-laboral-dominicano/postgresql-recovery/expansion/common.R')
-validation<-fromJSON(file.path(base,'qa/validation-summary.json'));stopifnot(validation$errors==0)
-local<-connect_pg(readonly=TRUE);views<-dbGetQuery(local,"SELECT table_name FROM information_schema.views WHERE table_schema='analitica' ORDER BY table_name")$table_name
-con<-connect_pg('censos_linea_tiempo');q<-function(x)as.character(dbQuoteString(con,x))
+validation<-fromJSON(file.path(base,'qa/validation-summary.json'))
+stopifnot(validation$errors==0)
+local<-connect_pg(readonly=TRUE)
+views<-dbGetQuery(local,"SELECT table_name FROM information_schema.views WHERE table_schema='analitica' ORDER BY table_name")$table_name
+con<-connect_pg('censos_linea_tiempo')
+q<-function(x)as.character(dbQuoteString(con,x))
 dbWithTransaction(con,{
  dbExecute(con,'CREATE EXTENSION IF NOT EXISTS postgres_fdw')
  options<-dbGetQuery(con,"SELECT o.option_name,o.option_value FROM pg_foreign_server s CROSS JOIN LATERAL pg_options_to_table(s.srvoptions) o WHERE srvname='economia_rd_server'")
@@ -33,7 +36,10 @@ dbWithTransaction(con,{
 })
 samples<-list()
 for(v in c('macro_mensual','educacion_matricula_anual','compras_contratos','indicadores_rd','tipo_cambio')){
- a<-dbGetQuery(con,paste('SELECT * FROM',dbQuoteIdentifier(con,Id(schema='fdw_economia',table=v)),'LIMIT 1'));stopifnot(nrow(a)==1L);samples[[v]]<-ncol(a)
+ a<-dbGetQuery(con,paste('SELECT * FROM',dbQuoteIdentifier(con,Id(schema='fdw_economia',table=v)),'LIMIT 1'))
+ stopifnot(nrow(a)==1L)
+ samples[[v]]<-ncol(a)
 }
 write_json(list(database='censos_linea_tiempo',server='economia_rd_server',schema='fdw_economia',views=views,read_checks=samples,registered_at=format(Sys.time(),'%Y-%m-%dT%H:%M:%S%z')),file.path(base,'qa/central-registration.json'),auto_unbox=TRUE,pretty=TRUE)
-dbDisconnect(local);dbDisconnect(con)
+dbDisconnect(local)
+dbDisconnect(con)

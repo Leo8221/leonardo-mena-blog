@@ -103,7 +103,8 @@ for(mod in names(files)) {
   actual <- dbGetQuery(con,paste0("SELECT * FROM ",schema,".",mod," WHERE fila_origen IN (",paste(positions,collapse=","),") ORDER BY fila_origen"))
   stopifnot(identical(names(actual),names(source)))
   for(nm in names(source)) {
-    x <- actual[[nm]]; y <- source[[nm]]
+    x <- actual[[nm]]
+    y <- source[[nm]]
     if(inherits(x,"integer64")) x <- as.numeric(x)
     if(!isTRUE(all.equal(x,y,tolerance=1e-12,check.attributes=FALSE))) stop("Roundtrip mismatch: ",mod,".",nm)
   }

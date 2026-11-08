@@ -8,12 +8,14 @@ specs<-list(
 results<-list()
 for(s in specs){
   df<-as.data.frame(read_excel(s$path,col_types="text",.name_repair="minimal"))
-  original<-names(df);nms<-clean_names(original)
+  original<-names(df)
+  nms<-clean_names(original)
   if(s$id=="mipymes_2023"){
     coded<-grepl("^P[0-9]+_[0-9]+",original)
     nms[coded]<-tolower(sub("^([A-Z0-9_]+).*","\\1",original[coded]))
   }
-  names(df)<-nms;stopifnot(nrow(df)==s$rows,!anyDuplicated(nms))
+  names(df)<-nms
+  stopifnot(nrow(df)==s$rows,!anyDuplicated(nms))
   df<-typed_text(df)
   stopifnot(all(is.finite(df[[s$weight]])&df[[s$weight]]>0))
   if(s$id=="mipymes_2023")stopifnot(!anyDuplicated(df$id))

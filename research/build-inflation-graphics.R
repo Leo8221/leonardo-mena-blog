@@ -47,7 +47,8 @@ norm_text <- function(x) {
 }
 to_num <- function(x) suppressWarnings(as.numeric(as.character(x)))
 fill_year <- function(x) {
-  out <- rep(NA_integer_, length(x)); current <- NA_integer_
+  out <- rep(NA_integer_, length(x))
+  current <- NA_integer_
   for (i in seq_along(x)) {
     candidate <- suppressWarnings(as.integer(as.character(x[[i]])))
     if (!is.na(candidate) && candidate >= 1900 && candidate <= 2100) current <- candidate
@@ -63,21 +64,27 @@ month_num <- function(x) {
            diciembre = 12, dic = 12)[key])
 }
 make_date <- function(years, months) {
-  out <- rep(as.Date(NA), length(years)); ok <- !is.na(years) & !is.na(months)
-  out[ok] <- as.Date(sprintf("%04d-%02d-01", years[ok], months[ok])); out
+  out <- rep(as.Date(NA), length(years))
+  ok <- !is.na(years) & !is.na(months)
+  out[ok] <- as.Date(sprintf("%04d-%02d-01", years[ok], months[ok]))
+  out
 }
 
 detect_ipc_periods <- function(raw) {
   year_scores <- vapply(seq_len(nrow(raw)), function(i) sum(str_detect(as.character(unlist(raw[i, ], use.names = FALSE)), "^20[0-9]{2}$"), na.rm = TRUE), numeric(1))
   month_scores <- vapply(seq_len(nrow(raw)), function(i) sum(!is.na(month_num(unlist(raw[i, ], use.names = FALSE)))), numeric(1))
-  year_row <- which.max(year_scores); month_row <- which.max(month_scores)
+  year_row <- which.max(year_scores)
+  month_row <- which.max(month_scores)
   assert_true(year_scores[[year_row]] > 0 && month_scores[[month_row]] > 0, "No se pudieron detectar los encabezados temporales del IPC.")
   list(years = fill_year(unlist(raw[year_row, ], use.names = FALSE)), months = month_num(unlist(raw[month_row, ], use.names = FALSE)))
 }
 
 parse_ipc_groups <- function(path) {
   raw <- read_excel(path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
-  periods <- detect_ipc_periods(raw); years <- periods$years; months <- periods$months; cols <- which(!is.na(years) & !is.na(months))
+  periods <- detect_ipc_periods(raw)
+  years <- periods$years
+  months <- periods$months
+  cols <- which(!is.na(years) & !is.na(months))
   group_rows <- which(str_detect(str_squish(as.character(raw[[1]])), "^[0-9]{2} "))
   assert_true(length(group_rows) == 12, "El IPC no contiene los 12 grupos esperados.")
   bind_rows(lapply(group_rows, function(row) tibble(
@@ -91,9 +98,13 @@ parse_ipc_groups <- function(path) {
 
 parse_ipc_items <- function(path, item_codes) {
   raw <- read_excel(path, sheet = "2020-2026", col_names = FALSE, .name_repair = "minimal")
-  periods <- detect_ipc_periods(raw); years <- periods$years; months <- periods$months; cols <- which(!is.na(years) & !is.na(months))
+  periods <- detect_ipc_periods(raw)
+  years <- periods$years
+  months <- periods$months
+  cols <- which(!is.na(years) & !is.na(months))
   codes <- str_extract(as.character(raw[[5]]), "^[0-9]+")
-  rows <- match(item_codes, codes); assert_true(!anyNA(rows), "No se encontraron las series de artículos solicitadas.")
+  rows <- match(item_codes, codes)
+  assert_true(!anyNA(rows), "No se encontraron las series de artículos solicitadas.")
   bind_rows(lapply(seq_along(rows), function(i) tibble(
     codigo = item_codes[[i]], producto = as.character(raw[[5]][rows[[i]]]), anio = years[cols], mes = months[cols],
     fecha = as.Date(sprintf("%04d-%02d-01", years[cols], months[cols])), indice = to_num(unlist(raw[rows[[i]], cols], use.names = FALSE))
@@ -102,7 +113,8 @@ parse_ipc_items <- function(path, item_codes) {
 
 parse_subyacente <- function(path) {
   raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal")
-  years <- fill_year(unlist(raw[[1]], use.names = FALSE)); months <- month_num(unlist(raw[[2]], use.names = FALSE))
+  years <- fill_year(unlist(raw[[1]], use.names = FALSE))
+  months <- month_num(unlist(raw[[2]], use.names = FALSE))
   out <- tibble(anio = years, mes = months, fecha = make_date(years, months), subyacente_mensual = to_num(unlist(raw[[4]], use.names = FALSE)), subyacente_interanual = to_num(unlist(raw[[6]], use.names = FALSE))) |>
     filter(!is.na(fecha), is.finite(subyacente_mensual), is.finite(subyacente_interanual))
   bind_rows(out, tibble(anio = 2026, mes = 6, fecha = as.Date("2026-06-01"), subyacente_mensual = 0.37, subyacente_interanual = 4.96))
@@ -110,14 +122,16 @@ parse_subyacente <- function(path) {
 
 parse_transables <- function(path) {
   raw <- read_excel(path, sheet = 1, col_names = FALSE, .name_repair = "minimal")
-  years <- fill_year(unlist(raw[[1]], use.names = FALSE)); months <- month_num(unlist(raw[[2]], use.names = FALSE))
+  years <- fill_year(unlist(raw[[1]], use.names = FALSE))
+  months <- month_num(unlist(raw[[2]], use.names = FALSE))
   tibble(anio = years, mes = months, fecha = make_date(years, months), ipc_mensual = to_num(unlist(raw[[4]], use.names = FALSE)), transables_mensual = to_num(unlist(raw[[7]], use.names = FALSE)), transables_indice = to_num(unlist(raw[[6]], use.names = FALSE))) |>
     filter(!is.na(fecha), is.finite(transables_mensual), is.finite(transables_indice))
 }
 
 parse_exchange_monthly <- function(path) {
   raw <- read_excel(path, sheet = "PromMensual", col_names = FALSE, .name_repair = "minimal")
-  anio <- to_num(unlist(raw[-(1:3), 1], use.names = FALSE)); mes <- month_num(unlist(raw[-(1:3), 2], use.names = FALSE))
+  anio <- to_num(unlist(raw[-(1:3), 1], use.names = FALSE))
+  mes <- month_num(unlist(raw[-(1:3), 2], use.names = FALSE))
   tibble(fecha = make_date(anio, mes), compra = to_num(unlist(raw[-(1:3), 3], use.names = FALSE))) |>
     filter(!is.na(fecha), is.finite(compra))
 }
