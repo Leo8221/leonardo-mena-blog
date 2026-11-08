@@ -1,0 +1,43 @@
+{
+  "folders": [
+    { "name": "Artículos", "path": "posts" },
+    { "name": "Editorial", "path": "editorial" }
+  ],
+  "settings": {
+    "git.openRepositoryInParentFolders": "always",
+    "files.exclude": {
+      "**/*_cache": true,
+      "**/*_files": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/*_cache/**": true,
+      "**/*_files/**": true
+    },
+    "files.associations": { "*.qmd": "quarto" }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Blog: abrir creador de artículos",
+        "type": "process",
+        "command": "node",
+        "args": ["tools/post-launcher/server.mjs"],
+        "options": { "cwd": "${workspaceFolder:Artículos}/.." },
+        "problemMatcher": []
+      },
+      {
+        "label": "Blog: vista previa del artículo abierto",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
+          "tools/preview-article.ps1", "-Article", "${file}"
+        ],
+        "options": { "cwd": "${workspaceFolder:Artículos}/.." },
+        "problemMatcher": []
+      }
+    ]
+  }
+}

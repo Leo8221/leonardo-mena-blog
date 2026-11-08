@@ -57,3 +57,7 @@ Thumbs.db
 /trabajo-siuben/**/tmp/pdfs/
 /trabajo-siuben/**/tmp/qa*/
 /trabajo-siuben/**/output/*.tex
+
+# Trabajo institucional trasladado a proyecto_v13; no pertenece al blog.
+/trabajo-siuben/
+/research/rsuh-validacion/

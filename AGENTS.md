@@ -2,6 +2,29 @@
 
 Reglas persistentes para trabajar en este repositorio.
 
+## Organización y fuentes de verdad
+
+- `README.md` es la entrada al flujo cotidiano de escritura.
+- `editorial/GUIA-EDITORIAL.md` define el flujo editorial y de publicación.
+- `editorial/ideas-posts.md` conserva las ideas; no certifica el estado de los artículos.
+- `mantenimiento/README.md` documenta la organización técnica actual.
+- `mantenimiento/DESIGN-SYSTEM.md` define el sistema visual compartido.
+- `mantenimiento/historial/` conserva planes y registros anteriores como historia,
+  no como instrucciones pendientes ni como mapa de rutas actual.
+- Mantener artículos y borradores juntos en `posts/`; el estado se expresa con
+  `draft` en el encabezado. No mover artículos publicados para clasificarlos.
+- `escribir.code-workspace` ofrece una vista editorial de las mismas carpetas,
+  sin duplicar archivos ni mover investigaciones o proyectos de Codex.
+- Excluir `trabajo-siuben/`, `editorial/` y `mantenimiento/` del render del blog
+  en `_quarto.yml`; los informes independientes se renderizan desde su proyecto.
+- Los informes SIUBEN y `research/rsuh-validacion/` pertenecen a
+  `proyecto_v13/estudios/antecedentes-rsuh-202608/`, fuera de este repositorio.
+  No volver a incorporar trabajo institucional al blog.
+- Antes del próximo push, separar el historial local anterior que aún contiene
+  esos informes (commit `6bb98e31`), conservando el trabajo del usuario.
+  Borrarlos del árbol actual no los elimina de los commits anteriores; no
+  publicar ese historial institucional en el repositorio público del blog.
+
 ## Alcance
 
 - Mantener Quarto como motor editorial.

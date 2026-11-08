@@ -1,7 +1,7 @@
 # Lanzador de artículos
 
 Abre `crear-articulo.cmd` desde la raíz.
-El flujo nativo de Quarto y GitHub Pages está en [GUIA-EDITORIAL.md](../../GUIA-EDITORIAL.md).
+El flujo nativo de Quarto y GitHub Pages está en [la guía editorial](../../editorial/GUIA-EDITORIAL.md).
 
 ## Mantenimiento
 

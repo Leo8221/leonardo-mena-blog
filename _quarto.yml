@@ -10,6 +10,9 @@ project:
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     - "!research/**/*.qmd"
+    - "!trabajo-siuben/**"
+    - "!editorial/**"
+    - "!mantenimiento/**"
   resources: 
     - .nojekyll
     - image/logo_leonardo_mena_completo.png

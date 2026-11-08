@@ -2,6 +2,36 @@
 
 El sitio sigue usando Quarto y GitHub Pages. No hay un publicador adicional.
 
+## Tu espacio de escritura
+
+- Abre [crear-articulo.cmd](../crear-articulo.cmd) desde la raíz para buscar,
+  crear, editar o previsualizar un artículo.
+- Si usas VS Code, abre [escribir.code-workspace](../escribir.code-workspace).
+  Muestra únicamente Artículos y Editorial; las tareas «Blog» del menú
+  Terminal permiten abrir el creador o previsualizar el `index.qmd` activo.
+  Para ver todo el proyecto, abre la carpeta del repositorio normalmente.
+- Conserva las [ideas](ideas-posts.md) aquí y el texto de cada artículo en
+  `posts/`. No necesitas trasladar el archivo al publicarlo: su estado lo
+  determina `draft` en el encabezado.
+
+Para cada artículo, usa solo las carpetas que necesites:
+
+```text
+posts/serie/fecha-tema/
+  index.qmd       Texto y encabezado
+  data/           Datos exclusivos de ese artículo (opcional)
+  figures/        Imágenes que insertas en el texto (opcional)
+  referencias.bib Bibliografía académica (opcional)
+```
+
+Los datos y análisis que alimenten varios artículos siguen en `research/`.
+No dupliques una base de datos para ajustarla a este esquema. Conserva los
+nombres de carpetas de los artículos ya publicados: son parte de sus enlaces.
+La fecha del encabezado puede actualizarse sin renombrar la carpeta.
+
+Los comandos de esta guía se ejecutan desde la **raíz del repositorio**.
+La [referencia de estilo](Guia_Estilos_Editorial_LM.pdf) también está en esta carpeta.
+
 ## Crear un artículo
 
 Abre **crear-articulo.cmd** con doble clic. Elige la serie, escribe el título
