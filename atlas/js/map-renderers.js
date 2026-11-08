@@ -102,6 +102,7 @@ function drawChoroplethMap(canvas, features, options) {
     const point = getCanvasPoint(canvas, event);
     let found = entries.find((entry) => ctx.isPointInPath(entry.path, point.x, point.y));
     if (!found && touchLikeEvent(event)) {
+      // Una provincia pequeña cuesta tocarla: buscamos un centro cercano.
       const radius = Math.max(28, Math.min(54, width * 0.1));
       found = entries
         .filter((entry) => Number.isFinite(entry.value))

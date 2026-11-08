@@ -1,3 +1,5 @@
+/* Cambia la paleta aquí. Las variables de uso (--lm-bg-body, --lm-text-main...)
+   permiten que un mismo componente responda al tema claro y al oscuro. */
 :root {
   color-scheme: light;
 

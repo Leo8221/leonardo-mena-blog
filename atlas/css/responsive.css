@@ -18,6 +18,8 @@
 
 }
 
+/* Por debajo de este ancho, la barra lateral deja de ocupar una columna y se
+   abre como menú. app-ui.js controla el foco y bloquea el contenido de fondo. */
 @media (max-width: 920px) {
   .atlas-app {
     grid-template-columns: 1fr;

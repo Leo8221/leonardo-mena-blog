@@ -68,6 +68,7 @@ quarter_number <- function(values) {
 }
 
 fill_down_year <- function(values) {
+  # El Excel escribe el año una vez y deja vacías las filas de los meses siguientes.
   out <- rep(NA_integer_, length(values))
   current <- NA_integer_
   for (i in seq_along(values)) {
@@ -93,6 +94,8 @@ normalize_text <- function(value) {
 }
 
 norm01 <- function(value) {
+  # El mayor valor observado se vuelve 100. Es una comparación relativa,
+  # no un porcentaje de la población ni una tasa oficial.
   value <- as.numeric(value)
   if (!length(value) || all(is.na(value))) return(value)
   max_value <- max(value, na.rm = TRUE)
@@ -105,6 +108,8 @@ norm01 <- function(value) {
 }
 
 read_monthly_series <- function(path, sheet, year_col, month_col, value_col, scale = 1, start_row = 1) {
+  # Las posiciones son columnas del Excel, no nombres. scale convierte unidades,
+  # por ejemplo de una proporción a porcentaje al multiplicar por 100.
   raw <- read_excel(path, sheet = sheet, col_names = FALSE, .name_repair = "minimal")
   if (nrow(raw) < start_row) stop("Archivo sin filas suficientes: ", path, call. = FALSE)
   rows <- raw[start_row:nrow(raw), , drop = FALSE]
@@ -132,6 +137,8 @@ core <- latest_monthly(read_monthly_series(required_files[["ipc_core"]], "ipc su
 dollar <- latest_monthly(read_monthly_series(required_files[["dollar"]], "PromMensual", 1, 2, 4, start_row = 4), "dolar")
 tpm <- latest_monthly(read_monthly_series(required_files[["tpm"]], "Tasas", 1, 2, 3, scale = 100, start_row = 7), "tpm")
 
+# all = FALSE conserva solo meses presentes en las cuatro series.
+# Así cada punto del panel macro compara el mismo periodo.
 macro <- Reduce(function(left, right) merge(left, right, by = c("year", "month"), all = FALSE), list(dollar, inflation, imae, tpm))
 macro <- macro[order(macro$year, macro$month), ]
 if (nrow(macro) < 6) stop("La serie macro BCRD tiene menos de seis observaciones completas.", call. = FALSE)

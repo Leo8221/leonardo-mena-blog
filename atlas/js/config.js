@@ -1,4 +1,4 @@
-// Atlas shared configuration. Loaded before the application shell.
+// Se carga antes de app.js. Los colores se actualizan desde CSS al cambiar tema.
 const CHART_SYSTEM = {
   touchBreakpoint: 720,
   colors: {

@@ -18,14 +18,14 @@ function drawComplexScatterChart(canvas, rows, options) {
   const sizeMax = Math.max(...sizeValues, 1);
   const xRef = options.xReference ?? (xMin + xMax) / 2;
   const yRef = options.yReference ?? (yMin + yMax) / 2;
-  const transformValue = (value, mode) => transformChartValue(value, mode);
-  const xDomainMin = transformValue(xMin, options.xTransform);
-  const xDomainMax = transformValue(xMax, options.xTransform);
-  const yDomainMin = transformValue(yMin, options.yTransform);
-  const yDomainMax = transformValue(yMax, options.yTransform);
+  const xDomainMin = transformChartValue(xMin, options.xTransform);
+  const xDomainMax = transformChartValue(xMax, options.xTransform);
+  const yDomainMin = transformChartValue(yMin, options.yTransform);
+  const yDomainMax = transformChartValue(yMax, options.yTransform);
 
-  const xScale = (value) => padding.left + ((transformValue(value, options.xTransform) - xDomainMin) / (xDomainMax - xDomainMin || 1)) * plotW;
-  const yScale = (value) => padding.top + plotH - ((transformValue(value, options.yTransform) - yDomainMin) / (yDomainMax - yDomainMin || 1)) * plotH;
+  // Las escalas convierten datos en píxeles dentro del área que dejan los márgenes.
+  const xScale = (value) => padding.left + ((transformChartValue(value, options.xTransform) - xDomainMin) / (xDomainMax - xDomainMin || 1)) * plotW;
+  const yScale = (value) => padding.top + plotH - ((transformChartValue(value, options.yTransform) - yDomainMin) / (yDomainMax - yDomainMin || 1)) * plotH;
   const xRefPos = xScale(xRef);
   const yRefPos = yScale(yRef);
   const points = [];
@@ -65,9 +65,10 @@ function drawComplexScatterChart(canvas, rows, options) {
   rows
     .slice()
     .sort((a, b) => Number(a[options.sizeField]) - Number(b[options.sizeField]))
-    .forEach((item, index) => {
+    .forEach((item) => {
       const x = xScale(Number(item[options.xField]));
       const y = yScale(Number(item[options.yField]));
+      // La raíz modera cuánto crece el radio de las burbujas grandes.
       const radius = 7 + Math.sqrt(Number(item[options.sizeField]) / sizeMax) * 18;
       const net = Number(item[options.categoryField]);
       const category = item[options.categoryField];

@@ -30,6 +30,8 @@ population_path <- source_cache_path("territory-population-one", population_path
 business_path <- source_cache_path("territory-business-register", business_path)
 
 normalize_key <- function(x) {
+  # La clave del join no lleva acentos ni espacios sobrantes. El nombre visible
+  # se guarda aparte; "Seybo" y "Seibo" identifican la misma provincia.
   x |>
     str_to_upper() |>
     str_trim() |>

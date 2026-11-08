@@ -292,6 +292,8 @@ function chartEvents(scope, metric = null) {
 }
 
 function hydrateCharts(module) {
+  // Primero renderModuleBody crea los canvas vacíos; después esta función
+  // elige las columnas de datos y llama al dibujo de cada gráfico.
   if (module.chart === "macro") {
     const labels = state.data.series.macro.map((item) => item.period);
     const values = state.data.series.macro.map((item) => item[state.macroMetric]);
@@ -407,6 +409,8 @@ function hydrateVisualLab() {
 // El mismo dibujo sirve en la tarjeta y en el modal, con su tamaño real.
 // El mapa ampliado no debe actualizar el inspector de la tarjeta original.
 function drawVisualChart(id, canvas, fullscreen = false) {
+  // La tarjeta y su ventana ampliada comparten el dibujo y los datos.
+  // fullscreen solo ajusta el espacio disponible para etiquetas.
   const visuals = state.articleVisuals;
   switch (id) {
     case "visual-map": {

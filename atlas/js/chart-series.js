@@ -9,6 +9,8 @@ function drawLineChart(canvas, labels, values, title, options = {}) {
 }
 
 function drawDualLineChart(canvas, labels, series, title, options = {}) {
+  // Cada serie comparte las fechas de labels. El valor menor queda abajo:
+  // en canvas la coordenada y crece hacia abajo, por eso se resta de plotH.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
@@ -97,12 +99,7 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
   drawLegend(ctx, series, padding.left, height - 4);
   bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
-    const eventMarker = eventMarkers.find((marker) => (
-      cursor.x >= marker.x &&
-      cursor.x <= marker.x + marker.width &&
-      cursor.y >= marker.y &&
-      cursor.y <= marker.y + marker.height
-    ));
+    const eventMarker = findBoxAt(eventMarkers, cursor);
     if (eventMarker) {
       return `
         <strong>${escapeHtml(eventMarker.item.label)}</strong>
@@ -110,11 +107,7 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
       `;
     }
     const hitPadding = touchLikeEvent(event) ? CHART_SYSTEM.hitPadding.touch : CHART_SYSTEM.hitPadding.mouse;
-    const point = tooltipPoints.find((candidate) => {
-      const dx = cursor.x - candidate.x;
-      const dy = cursor.y - candidate.y;
-      return Math.sqrt(dx * dx + dy * dy) <= candidate.radius + hitPadding;
-    });
+    const point = findPointAt(tooltipPoints, cursor, hitPadding);
     return point ? `
       <strong>${escapeHtml(point.label)}</strong>
       <span>${escapeHtml(point.period)}: ${formatNumber(point.value)}</span>

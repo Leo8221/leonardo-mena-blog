@@ -20,6 +20,8 @@ function requiredAssets(module) {
 }
 
 function moduleAssetsReady(module) {
+  // Un fallo también cierra la espera: la vista muestra "sin datos" en lugar
+  // de pedir una y otra vez el mismo archivo.
   return requiredAssets(module).every((key) => Boolean(state[key]) || Boolean(state.assetFailures[key]));
 }
 
@@ -91,6 +93,7 @@ function visibleModules() {
 }
 
 function filteredModules() {
+  const query = normalizeText(state.query);
   return visibleModules().filter((module) => {
     const matchesFamily = state.family === "all" || statusKey(module.family) === statusKey(state.family);
     const source = module.sourceInfo || {};
@@ -105,8 +108,8 @@ function filteredModules() {
       module.source,
       source.label,
       source.detail
-    ].filter(Boolean).join(" ").toLowerCase();
-    const matchesQuery = !state.query || normalizeText(text).includes(normalizeText(state.query));
+    ].filter(Boolean).join(" ");
+    const matchesQuery = !query || normalizeText(text).includes(query);
     return matchesFamily && matchesQuery;
   });
 }
@@ -174,6 +177,7 @@ function setActive(moduleId, options = {}) {
 }
 
 function buildAtlasUrl() {
+  // Reconstruir los parámetros evita arrastrar filtros de una vista anterior.
   const url = new URL(window.location.href);
   url.hash = "";
   const params = new URLSearchParams();
@@ -190,6 +194,8 @@ function buildAtlasUrl() {
 }
 
 function updateUrlState({ replace = false } = {}) {
+  // Al escribir o cambiar una métrica se reemplaza el enlace actual.
+  // Al abrir otro módulo se añade una entrada para que funcione Atrás.
   if (!state.data) return;
   const url = buildAtlasUrl();
   const method = replace ? "replaceState" : "pushState";
@@ -200,6 +206,7 @@ function updateUrlState({ replace = false } = {}) {
 function applyStateFromUrl() {
   const url = new URL(window.location.href);
   const legacyHash = url.hash ? url.hash.replace(/^#/, "").split("?")[0] : "";
+  // Empezar por los valores iniciales también borra filtros ausentes del enlace.
   Object.assign(state, URL_STATE_DEFAULTS);
   if (els.search) els.search.value = "";
   const view = url.searchParams.get("view") || legacyHash;
@@ -222,25 +229,23 @@ function applyStateFromUrl() {
   if (["business", "mipymes", "tourism"].includes(map)) state.visualMap = map;
 }
 
+// Relaciona el tipo de gráfico con su opción guardada y los valores aceptados.
+const MODULE_METRICS = {
+  macro: { property: "macroMetric", values: ["dolar", "inflacion", "imae", "tpm"] },
+  trade: { property: "tradeMetric", values: ["exports", "imports"] },
+  labor: { property: "laborMetric", values: ["employment", "informality", "wageIndex"] },
+  territory: { property: "territoryMapMetric", values: ["business_density", "opportunity"] },
+  visualLab: { property: "visualMap", values: ["business", "mipymes", "tourism"] }
+};
+
 function activeMetricForModule(module) {
-  if (!module) return "";
-  if (module.chart === "macro") return state.macroMetric;
-  if (module.chart === "trade") return state.tradeMetric;
-  if (module.chart === "labor") return state.laborMetric;
-  if (module.chart === "territory") return state.territoryMapMetric;
-  if (module.chart === "visualLab") return state.visualMap;
-  return "";
+  const options = MODULE_METRICS[module?.chart];
+  return options ? state[options.property] : "";
 }
 
 function setActiveMetricForModule(module, metric) {
-  const options = {
-    macro: ["macroMetric", ["dolar", "inflacion", "imae", "tpm"]],
-    trade: ["tradeMetric", ["exports", "imports"]],
-    labor: ["laborMetric", ["employment", "informality", "wageIndex"]],
-    territory: ["territoryMapMetric", ["business_density", "opportunity"]],
-    visualLab: ["visualMap", ["business", "mipymes", "tourism"]]
-  }[module?.chart];
-  if (options && options[1].includes(metric)) state[options[0]] = metric;
+  const options = MODULE_METRICS[module?.chart];
+  if (options?.values.includes(metric)) state[options.property] = metric;
 }
 
 function updateDocumentTitle() {
@@ -261,13 +266,19 @@ function resetAtlasFilters({ focusSearch = false } = {}) {
   state.query = "";
   state.family = "all";
   if (els.search) els.search.value = "";
-  updateUrlState({ replace: true });
+  refreshAtlasFilters({ redrawStage: true });
+  if (focusSearch && els.search) els.search.focus();
+}
+
+// Buscar cambia los menús y la portada. La vista que estás leyendo se mantiene;
+// al restablecer todo sí se redibuja, con sus filtros ya limpios.
+function refreshAtlasFilters({ redrawStage = false } = {}) {
   syncFilterState();
   syncSearchState();
   renderNavigation();
   renderMobileNavigation();
-  renderStage();
-  if (focusSearch && els.search) els.search.focus();
+  if (redrawStage || state.active === "overview") renderStage();
+  updateUrlState({ replace: true });
 }
 
 // Un solo listener sobre el contenedor: las vistas reemplazan su HTML al navegar.
@@ -392,6 +403,8 @@ function datasetsToCsv(module, datasets) {
 }
 
 function csvEscape(value) {
+  // En CSV, una coma o un salto de línea obliga a entrecomillar el campo.
+  // Las comillas del texto se representan dos veces: "".
   if (value === null || value === undefined) return "";
   const text = Array.isArray(value) ? value.join("; ") : String(value);
   return /[",\r\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;

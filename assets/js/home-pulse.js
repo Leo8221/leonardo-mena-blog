@@ -4,6 +4,7 @@ const preferredMetricIds = ["usd", "inflation", "labor"];
 
 const formatDate = (value) => {
   if (!value) return "";
+  // La hora local evita que una fecha sin hora aparezca como el día anterior.
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
   return new Intl.DateTimeFormat("es-DO", {
@@ -49,6 +50,8 @@ const renderFallback = () => {
 };
 
 const renderPulse = async () => {
+  // La portada lee el mismo resumen que Atlas. Si falla, conserva el enlace
+  // escrito en home-pulse.html para que la sección siga siendo útil.
   if (!pulseRoot) return;
 
   try {

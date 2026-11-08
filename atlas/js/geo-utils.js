@@ -1,4 +1,6 @@
 function collectGeoCoordinates(features) {
+  // GeoJSON agrupa los puntos en anillos, polígonos y, a veces, multipolígonos.
+  // Los reunimos para calcular los límites del mapa completo.
   const coordinates = [];
   features.forEach((feature) => {
     const geometry = feature.geometry;
@@ -53,6 +55,8 @@ function drawMapLabels(ctx, entries, options, min, max) {
 }
 
 function geoCentroid(feature) {
+  // Es el promedio de los vértices, usado para colocar etiquetas y acercar toques.
+  // No es un centro ponderado por superficie ni por población.
   const coords = collectGeoCoordinates([feature]);
   if (!coords.length) return [0, 0];
   const totals = coords.reduce((acc, coord) => {

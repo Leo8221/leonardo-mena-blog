@@ -1,4 +1,6 @@
 function drawHorizontalBarChart(canvas, rows, options) {
+  // labelField y valueField son nombres de columnas de rows.
+  // La longitud usa el valor absoluto; los negativos se distinguen por el color.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();

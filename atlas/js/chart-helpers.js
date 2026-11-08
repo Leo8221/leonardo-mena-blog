@@ -21,6 +21,8 @@ function fitCanvasText(ctx, text, maxWidth) {
 }
 
 function transformChartValue(value, mode) {
+  // Raíz y logaritmo comprimen los valores grandes. Se conserva el signo
+  // para poder representar saldos negativos en el mismo eje.
   const numeric = Number(value);
   if (mode === "sqrt") return Math.sign(numeric) * Math.sqrt(Math.abs(numeric));
   if (mode === "log") return Math.sign(numeric) * Math.log1p(Math.abs(numeric));
@@ -28,6 +30,8 @@ function transformChartValue(value, mode) {
 }
 
 function layoutTreemap(items, x, y, width, height, valueField, boxes) {
+  // Divide el rectángulo por el lado más largo y reparte el área según el valor.
+  // Se repite con cada grupo hasta que queda un rectángulo por dato.
   if (!items.length || width <= 0 || height <= 0) return;
   if (items.length === 1) {
     boxes.push({ x, y, width, height, item: items[0] });
@@ -45,8 +49,7 @@ function layoutTreemap(items, x, y, width, height, valueField, boxes) {
 
   const left = items.slice(0, splitIndex);
   const right = items.slice(splitIndex);
-  const leftTotal = left.reduce((sum, item) => sum + Number(item[valueField]), 0);
-  const ratio = leftTotal / (total || 1);
+  const ratio = running / (total || 1);
 
   if (width >= height) {
     const leftW = width * ratio;

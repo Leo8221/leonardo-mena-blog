@@ -148,6 +148,8 @@ const output = {
 fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
 console.log(`Atlas data built: ${path.relative(process.cwd(), outputPath)} (${visibleModules.length} modules)`);
 
+// Mezcla las series descargadas con la configuración editorial sin modificarla.
+// Los mínimos de observaciones evitan reemplazar una serie útil por una incompleta.
 function applyLiveBcrdData(baseSource, live) {
   const copy = JSON.parse(JSON.stringify(baseSource));
   if (!live || !live.series) return copy;
@@ -260,96 +262,70 @@ function applyLiveBcrdData(baseSource, live) {
   }
 
   copy.liveDataCutoff = live.dataCutoff || {};
-  copy.modules = copy.modules.map((module) => {
-    if (module.id === "pulso-macro") {
-      return {
-        ...module,
-        dataMode: "Automático"
-      };
+  // Solo cambian estos metadatos cuando hay una carga de fuentes disponible.
+  const moduleUpdates = {
+    "pulso-macro": {
+      dataMode: "Automático"
+    },
+    "sectores": {
+      dataMode: "Modelo",
+      source: "BCRD",
+      sourceDetail: "PIB por actividad económica y drivers normalizados.",
+      insight: "Peso relativo y señal dominante por sector."
+    },
+    "contexto-externo": {
+      dataMode: "Modelo",
+      source: "BCRD",
+      sourceDetail: "Balanza de servicios y series externas del Banco Central.",
+      insight: "Señales externas para leer servicios, turismo y financiamiento."
+    },
+    "comercio-exterior": {
+      dataMode: "Automático",
+      source: "BCRD, DGA",
+      sourceDetail: "BCRD para flujos agregados y DGA para capítulos de exportación.",
+      question: "¿Cómo se mueven las exportaciones e importaciones?",
+      insight: "Exportaciones, importaciones y canasta exportadora en una sola vista.",
+      methodology: [
+        "Se descargan los Excel oficiales del CustomView de sector externo del BCRD.",
+        "Los flujos comparan el mismo número de trimestres en cada año; el año en curso es acumulado.",
+        "La canasta exportadora usa capítulos publicados por la DGA cuando están disponibles."
+      ]
+    },
+    "mercado-laboral": {
+      dataMode: "Automático",
+      source: "BCRD ENCFT",
+      sourceDetail: "Excel oficiales de la Encuesta Nacional Continua de Fuerza de Trabajo.",
+      question: "¿Qué dicen los últimos indicadores laborales?",
+      insight: "Tasas laborales recientes y ocupación por rama de actividad.",
+      methodology: [
+        "Se descargan los Excel oficiales de ENCFT desde el CustomView del BCRD.",
+        "Los indicadores toman el último trimestre disponible.",
+        "La distribución por rama usa ocupados por actividad económica."
+      ]
+    },
+    "costo-vida": {
+      dataMode: "Automático",
+      source: "BCRD",
+      sourceDetail: "Excel oficiales de IPC general, subyacente e IPC por grupos.",
+      question: "¿Dónde se concentra la presión reciente de precios?",
+      insight: "Inflación general, subyacente y variación mensual por grupo.",
+      methodology: [
+        "Se descargan los Excel oficiales de precios del BCRD.",
+        "La inflación general y subyacente usa variación interanual mensual.",
+        "Los grupos se ordenan por la variación mensual absoluta más reciente."
+      ]
+    },
+    "territorio-infraestructura": {
+      dataMode: "Corte fijo"
+    },
+    "mipymes-productividad": {
+      dataMode: "Artículo"
+    },
+    "laboratorio-visual": {
+      dataMode: "Artículo"
     }
-    if (module.id === "sectores") {
-      return {
-        ...module,
-        dataMode: "Modelo",
-        source: "BCRD",
-        sourceDetail: "PIB por actividad económica y drivers normalizados.",
-        insight: "Peso relativo y señal dominante por sector."
-      };
-    }
-    if (module.id === "contexto-externo") {
-      return {
-        ...module,
-        dataMode: "Modelo",
-        source: "BCRD",
-        sourceDetail: "Balanza de servicios y series externas del Banco Central.",
-        insight: "Señales externas para leer servicios, turismo y financiamiento."
-      };
-    }
-    if (module.id === "comercio-exterior") {
-      return {
-        ...module,
-        dataMode: "Automático",
-        source: "BCRD, DGA",
-        sourceDetail: "BCRD para flujos agregados y DGA para capítulos de exportación.",
-        question: "¿Cómo se mueven las exportaciones e importaciones?",
-        insight: "Exportaciones, importaciones y canasta exportadora en una sola vista.",
-        methodology: [
-          "Se descargan los Excel oficiales del CustomView de sector externo del BCRD.",
-          "Los flujos comparan el mismo número de trimestres en cada año; el año en curso es acumulado.",
-          "La canasta exportadora usa capítulos publicados por la DGA cuando están disponibles."
-        ]
-      };
-    }
-    if (module.id === "mercado-laboral") {
-      return {
-        ...module,
-        dataMode: "Automático",
-        source: "BCRD ENCFT",
-        sourceDetail: "Excel oficiales de la Encuesta Nacional Continua de Fuerza de Trabajo.",
-        question: "¿Qué dicen los últimos indicadores laborales?",
-        insight: "Tasas laborales recientes y ocupación por rama de actividad.",
-        methodology: [
-          "Se descargan los Excel oficiales de ENCFT desde el CustomView del BCRD.",
-          "Los indicadores toman el último trimestre disponible.",
-          "La distribución por rama usa ocupados por actividad económica."
-        ]
-      };
-    }
-    if (module.id === "costo-vida") {
-      return {
-        ...module,
-        dataMode: "Automático",
-        source: "BCRD",
-        sourceDetail: "Excel oficiales de IPC general, subyacente e IPC por grupos.",
-        question: "¿Dónde se concentra la presión reciente de precios?",
-        insight: "Inflación general, subyacente y variación mensual por grupo.",
-        methodology: [
-          "Se descargan los Excel oficiales de precios del BCRD.",
-          "La inflación general y subyacente usa variación interanual mensual.",
-          "Los grupos se ordenan por la variación mensual absoluta más reciente."
-        ]
-      };
-    }
-    if (module.id === "territorio-infraestructura") {
-      return {
-        ...module,
-        dataMode: "Corte fijo"
-      };
-    }
-    if (module.id === "mipymes-productividad") {
-      return {
-        ...module,
-        dataMode: "Artículo"
-      };
-    }
-    if (module.id === "laboratorio-visual") {
-      return {
-        ...module,
-        dataMode: "Artículo"
-      };
-    }
-    return module;
-  });
+  };
+  copy.modules = copy.modules.map(module => ({ ...module, ...moduleUpdates[module.id] }));
   return copy;
 }
 

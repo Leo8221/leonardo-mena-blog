@@ -10,6 +10,7 @@ function renderMetrics() {
 }
 
 function navigationModules() {
+  // Si filtras mientras lees una vista, su botón sigue visible para no perderla.
   const filtered = filteredModules();
   const activeModule = state.active !== "overview" ? findModule(state.active) : null;
   const openOutsideFilters = Boolean(activeModule && !filtered.some((module) => module.id === activeModule.id));
@@ -88,12 +89,6 @@ function renderMobileNavigation() {
   }
 }
 
-function renderOverviewIfActive() {
-  if (state.active === "overview") {
-    renderStage();
-  }
-}
-
 function renderStage() {
   if (!state.data) return;
   hideTooltip(true);
@@ -115,6 +110,7 @@ function renderStage() {
   }
 
   if (!moduleAssetsReady(module)) {
+    // La descarga terminará llamando a renderStage otra vez, si sigues aquí.
     if (els.stage) els.stage.setAttribute("aria-busy", "true");
     renderAssetsLoading(module);
     ensureModuleAssets(module);

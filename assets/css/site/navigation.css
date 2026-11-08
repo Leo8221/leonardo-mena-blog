@@ -48,6 +48,7 @@
   object-fit: contain;
 }
 
+/* Quarto incluye ambos logos en el HTML; mostramos solo el del tema activo. */
 body:not(.quarto-dark) .navbar .navbar-logo.dark-content,
 body.quarto-light .navbar .navbar-logo.dark-content,
 body.quarto-dark .navbar .navbar-logo.light-content {

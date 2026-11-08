@@ -51,6 +51,28 @@ test('los enlaces antiguos por hash siguen abriendo el módulo', () => {
   assert.equal(app.run('state.active'), 'pulso-macro');
 });
 
+test('cada selector conserva la métrica al compartir y volver a abrir la vista', () => {
+  const app = atlas();
+  const views = {
+    'pulso-macro': ['dolar', 'inflacion', 'imae', 'tpm'],
+    'comercio-exterior': ['exports', 'imports'],
+    'mercado-laboral': ['employment', 'informality', 'wageIndex'],
+    'territorio-infraestructura': ['business_density', 'opportunity'],
+    'laboratorio-visual': ['business', 'mipymes', 'tourism']
+  };
+  for (const [view, metrics] of Object.entries(views)) {
+    for (const metric of metrics) {
+      app.navigate(`?view=${view}&metric=${metric}`);
+      app.run('applyStateFromUrl()');
+      assert.equal(app.run('activeMetricForModule(findModule(state.active))'), metric);
+      const shared = app.run('buildAtlasUrl().search');
+      app.navigate(shared);
+      app.run('applyStateFromUrl()');
+      assert.equal(app.run('activeMetricForModule(findModule(state.active))'), metric);
+    }
+  }
+});
+
 test('métricas y mapas desconocidos conservan una vista válida', () => {
   const app = atlas('https://example.test/atlas/?view=laboratorio-visual&metric=desconocida&map=desconocido');
   app.run('applyStateFromUrl()');

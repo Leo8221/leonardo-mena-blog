@@ -1,4 +1,5 @@
-// Atlas utility helpers for formatting, canvas coordinates, and tooltips.
+// Ratón y dedo dan coordenadas de la ventana; el gráfico necesita posiciones
+// relativas a su esquina superior izquierda.
 function getCanvasPoint(canvas, event) {
   const rect = canvas.getBoundingClientRect();
   const source = event.touches?.[0] || event.changedTouches?.[0] || event;
@@ -52,6 +53,8 @@ function hideTooltip(force = false) {
 }
 
 function setupCanvas(canvas) {
+  // El tamaño CSS y la resolución del dibujo son distintos en pantallas densas.
+  // Escalamos el contexto para seguir dibujando con medidas CSS sin perder nitidez.
   const rect = canvas.getBoundingClientRect();
   const dpr = window.devicePixelRatio || 1;
   canvas.classList.add("is-interactive");
@@ -129,6 +132,7 @@ function formatNumber(value) {
 }
 
 function normalizeText(value) {
+  // "Inflación" y "inflacion" deben encontrar los mismos resultados.
   return String(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
@@ -137,6 +141,7 @@ function statusKey(value) {
 }
 
 function escapeHtml(value) {
+  // Los datos se insertan como texto, aunque contengan <, > o comillas.
   return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -146,6 +151,7 @@ function escapeHtml(value) {
 }
 
 function debounce(fn, wait) {
+  // Espera a que termine la ráfaga de eventos antes de redibujar el gráfico.
   let timer = null;
   return (...args) => {
     window.clearTimeout(timer);

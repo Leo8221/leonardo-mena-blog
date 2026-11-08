@@ -29,6 +29,8 @@ if (!length(sources)) {
 }
 
 process_source <- function(source) {
+  # El manifiesto decide si copiamos un archivo local, descargamos una URL
+  # o buscamos Excel en una página del BCRD. Cada resultado registra su estado.
   id <- source$id %||% ""
   if (!nzchar(id)) stop("Una fuente no tiene id.", call. = FALSE)
 
@@ -84,6 +86,8 @@ fetch_url_source <- function(source, base, target_dir) {
 }
 
 fetch_bcrd_custom_view_source <- function(source, base, target_dir) {
+  # includePatterns selecciona archivos por nombre; no todos los Excel enlazados
+  # en la página pertenecen a la serie que necesitamos.
   url <- source$url %||% source$customViewUrl %||% ""
   if (!nzchar(url)) {
     return(modifyList(base, list(status = "missing", error = "Fuente BCRD sin url.")))

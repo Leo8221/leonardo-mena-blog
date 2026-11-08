@@ -69,6 +69,7 @@
 
     const title = (document.querySelector('h1.title, h1')?.textContent || document.title).trim();
     const canonical = document.querySelector('link[rel="canonical"]')?.href;
+    // Compartimos la dirección del artículo, sin fragmentos ni parámetros de visita.
     const url = new URL(canonical || location.href);
     url.hash = '';
     url.search = '';

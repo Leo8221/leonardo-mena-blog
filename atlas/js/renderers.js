@@ -1,4 +1,5 @@
-// Atlas chart renderers. Keep these pure enough to reuse from fullscreen views.
+// Estas barras son HTML. Las funciones draw... de los otros archivos dibujan
+// sobre canvas; aquí devolvemos el texto que renderModuleBody coloca en la página.
 function renderBarRows(rows, options) {
   const max = options.max || Math.max(...rows.map((item) => Math.abs(item[options.valueField])), 1);
   return rows.map((item) => {

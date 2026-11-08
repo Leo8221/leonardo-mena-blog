@@ -47,6 +47,7 @@ function renderModuleBrief(module) {
 }
 
 function renderModuleGuide(module) {
+  // El JSON puede traer una guía propia; si no, usamos la del módulo en app.js.
   const guide = module.readingGuide || MODULE_GUIDES[module.id];
   if (!guide) return "";
   const items = [
@@ -147,6 +148,10 @@ function renderDatasetCard(module, dataset, index) {
   const rows = dataset.rows;
   const columns = datasetColumns(dataset);
   const visibleRows = rows.slice(0, dataset.visibleRows || 12);
+  // El tipo se decide por columna, una vez, no de nuevo en cada celda.
+  const numericFields = new Set(columns
+    .filter(column => isNumericColumn(visibleRows, column.field))
+    .map(column => column.field));
   const remaining = rows.length - visibleRows.length;
   return `
     <details class="data-table-card" ${index === 0 ? "open" : ""}>
@@ -163,12 +168,12 @@ function renderDatasetCard(module, dataset, index) {
         <table>
           <caption class="sr-only">${escapeHtml(module.title)}: ${escapeHtml(dataset.title)}</caption>
           <thead>
-            <tr>${columns.map((column) => `<th scope="col"${isNumericColumn(visibleRows, column.field) ? ' data-type="number"' : ""}>${escapeHtml(column.label)}</th>`).join("")}</tr>
+            <tr>${columns.map((column) => `<th scope="col"${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(column.label)}</th>`).join("")}</tr>
           </thead>
           <tbody>
             ${visibleRows.map((row) => `
               <tr>
-                ${columns.map((column) => `<td${isNumericColumn(visibleRows, column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
+                ${columns.map((column) => `<td${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
               </tr>
             `).join("")}
           </tbody>
@@ -187,6 +192,8 @@ function isNumericColumn(rows, field) {
 }
 
 function moduleDatasets(module) {
+  // De aquí salen tanto las tablas como los CSV: cambiar una columna afecta
+  // a ambos. rows conserva todas las filas aunque la tabla muestre solo doce.
   const series = state.data.series;
   const geoRows = (features, fields) => {
     return (features || []).map((feature) => pickFields(feature.properties || {}, fields));

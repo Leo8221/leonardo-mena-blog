@@ -41,6 +41,7 @@ function syncMetricState() {
 }
 
 function openSidebar() {
+  // En móvil, el contenido queda inerte para que Tab no salte detrás del menú.
   sidebarReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   document.body.classList.add("sidebar-open", "no-scroll");
   els.menuToggle.setAttribute("aria-expanded", "true");

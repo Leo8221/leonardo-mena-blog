@@ -1,4 +1,4 @@
-// Atlas interaction helpers for sharing, fullscreen, and exports.
+// Compartir conserva la vista, la métrica y los filtros del enlace actual.
 function currentViewUrl() {
   if (typeof buildAtlasUrl === "function") {
     return buildAtlasUrl().toString();
@@ -12,7 +12,7 @@ async function copyText(value) {
       await navigator.clipboard.writeText(value);
       return true;
     } catch {
-      // Fall through to the input-based copy path.
+      // Algunos navegadores bloquean el portapapeles; probamos con texto seleccionado.
     }
   }
   const input = document.createElement("input");
@@ -74,6 +74,7 @@ function openChartFullscreen(canvasId) {
     if (previousFocus && document.contains(previousFocus)) previousFocus.focus();
   };
   const onKeydown = (event) => {
+    // Tab permanece dentro del diálogo; al cerrarlo devolvemos el foco al botón.
     if (event.key === "Escape") {
       close();
       return;
@@ -103,6 +104,7 @@ function openChartFullscreen(canvasId) {
   closeButton.focus();
 
   window.requestAnimationFrame(() => {
+    // Esperamos a que el diálogo tenga tamaño antes de medir y dibujar el canvas.
     const expandedCanvas = modal.querySelector("canvas");
     drawVisualChart(canvasId, expandedCanvas, true);
   });

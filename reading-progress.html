@@ -21,6 +21,7 @@
   }
 
   function updateProgress() {
+    // El recorrido termina cuando el final de la página entra en la ventana.
     const documentHeight = Math.max(
       document.documentElement.scrollHeight,
       document.body.scrollHeight
@@ -34,6 +35,8 @@
   }
 
   function requestUpdate() {
+    // scroll puede dispararse varias veces antes de dibujar un fotograma.
+    // Guardamos una sola actualización pendiente para no repetir trabajo.
     if (!ticking) {
       window.requestAnimationFrame(updateProgress);
       ticking = true;

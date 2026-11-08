@@ -1,3 +1,5 @@
+// Solo estas opciones viajan en el enlace. Los datos y mapas cargados se quedan
+// en memoria y se reutilizan al pasar de una vista a otra.
 const URL_STATE_DEFAULTS = Object.freeze({
   active: "overview",
   query: "",
@@ -48,6 +50,8 @@ const ATLAS_THEME_STORAGE_KEY = "quarto-color-scheme";
 const atlasThemeMedia = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
 function storedAtlasTheme() {
+  // Quarto llama "alternate" al tema oscuro. Compartir su clave hace que el
+  // blog y Atlas recuerden la misma elección.
   try {
     const stored = window.localStorage.getItem(ATLAS_THEME_STORAGE_KEY);
     if (stored === "alternate") return "dark";
@@ -80,7 +84,7 @@ function applyAtlasTheme(theme, { persist = false, rerender = false } = {}) {
     try {
       window.localStorage.setItem(ATLAS_THEME_STORAGE_KEY, dark ? "alternate" : "default");
     } catch (error) {
-      // Ignore storage failures; the visual state still changes for this page.
+      // Si el navegador bloquea el almacenamiento, el tema cambia solo aquí.
     }
   }
 
@@ -191,6 +195,7 @@ const MODULE_GUIDES = {
 };
 
 async function boot() {
+  // Primero el resumen ligero; los mapas se descargan al abrir su vista.
   try {
     const atlasResponse = await fetch("data/atlas-data.json", { cache: "default" });
     if (!atlasResponse.ok) throw new Error(`HTTP ${atlasResponse.status}`);
@@ -215,22 +220,14 @@ function bindEvents() {
   els.app.addEventListener("click", handleAtlasClick);
   els.search.addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
-    syncSearchState();
-    renderNavigation();
-    renderMobileNavigation();
-    renderOverviewIfActive();
-    updateUrlState({ replace: true });
+    refreshAtlasFilters();
     trackSearchUsage();
   });
 
   els.searchClear.addEventListener("click", () => {
     state.query = "";
     els.search.value = "";
-    syncSearchState();
-    renderNavigation();
-    renderMobileNavigation();
-    renderOverviewIfActive();
-    updateUrlState({ replace: true });
+    refreshAtlasFilters();
     trackAtlasEvent("atlas_search", { query_length: 0 });
     els.search.focus();
   });
@@ -238,12 +235,7 @@ function bindEvents() {
   document.querySelectorAll(".filter-pill").forEach((button) => {
     button.addEventListener("click", () => {
       state.family = button.dataset.filter;
-      syncFilterState();
-      syncSearchState();
-      renderNavigation();
-      renderMobileNavigation();
-      renderOverviewIfActive();
-      updateUrlState({ replace: true });
+      refreshAtlasFilters();
       trackAtlasEvent("atlas_filter_change", { filter: state.family });
     });
   });

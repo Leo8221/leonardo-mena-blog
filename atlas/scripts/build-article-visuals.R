@@ -24,6 +24,7 @@ root <- getwd()
 out_dir <- file.path(root, "atlas", "data")
 
 source_cache_path <- function(source_id, fallback_path) {
+  # Usa la copia de fuentes del Atlas cuando existe; si no, la del artículo.
   cached <- file.path(out_dir, "raw", source_id, basename(fallback_path))
   if (file.exists(cached)) cached else fallback_path
 }
@@ -63,7 +64,7 @@ write_geojson <- function(sf_obj, path) {
   validate_no_mojibake(path)
 }
 
-# MiPyMES regional map from the published article.
+# El mapa usa la misma encuesta del artículo, agrupada en cuatro regiones.
 mipyme_dir <- file.path(root, "posts", "republica-en-un-grafico", "2026-02-14-mipymes-rd")
 mipyme_path <- source_cache_path(
   "mipymes-enmipymes-2023",

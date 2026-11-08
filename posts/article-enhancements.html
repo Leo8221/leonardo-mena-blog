@@ -9,6 +9,7 @@
 
   const text = content.innerText || "";
   const words = text.trim().split(/\s+/).filter(Boolean).length;
+  // Es una estimación: 230 palabras por minuto, con un mínimo de un minuto.
   const minutes = Math.max(1, Math.round(words / 230));
   const label = `${minutes} min de lectura`;
   const meta = document.createElement("div");
@@ -27,6 +28,7 @@
   )).filter((node) => {
     if (node.closest(".article-figure-modal")) return false;
     if (node.dataset.figureEnhanced === "true") return false;
+    // Quarto envuelve figure en otro contenedor: añadimos un solo botón por gráfico.
     if (node.closest(".quarto-figure") && !node.classList.contains("quarto-figure")) return false;
     return node.querySelector("img, svg, canvas");
   });
