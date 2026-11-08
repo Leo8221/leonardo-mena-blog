@@ -43,15 +43,11 @@ revisado, cambia `draft` a `false` y confirma el texto y sus recursos en Git.
 No renombres carpetas publicadas: forman parte de sus enlaces.
 GitHub Actions renderiza `main` y actualiza `docs/` para GitHub Pages.
 
-**Antes del próximo push:** hay que separar el historial local que todavía
-contiene informes SIUBEN. Los archivos ya están en `proyecto_v13`, pero su
-commit antiguo no debe enviarse al repositorio público del blog.
-
 ## Código y comprobaciones
 
 `_quarto.yml` configura el sitio. `styles.css` carga los estilos de `assets/`.
 Atlas vive en `atlas/`; sus datos se declaran en `atlas/data/atlas-source.json`.
-`tema_graficos.R` carga el tema y las funciones de `R/`.
+`tema_graficos.R` contiene el tema común de los gráficos.
 Las decisiones y los parámetros se explican junto a las funciones que los usan.
 
 ```powershell

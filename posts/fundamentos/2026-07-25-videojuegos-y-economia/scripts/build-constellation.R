@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 1L) {
-  stop("Uso: Rscript build-videojuegos-constellation.R <directorio_salida>")
+  stop("Uso: Rscript build-constellation.R <directorio_salida>")
 }
 if (!isTRUE(l10n_info()[["UTF-8"]])) {
   stop("R no está leyendo UTF-8 correctamente; detenga la generación.")

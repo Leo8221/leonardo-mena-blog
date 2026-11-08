@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 if len(sys.argv) != 2:
-    raise SystemExit("Uso: python build-videojuegos-inflacion.py <directorio_salida>")
+    raise SystemExit("Uso: python build-inflation.py <directorio_salida>")
 
 OUT = Path(sys.argv[1]).resolve()
 OUT.mkdir(parents=True, exist_ok=True)

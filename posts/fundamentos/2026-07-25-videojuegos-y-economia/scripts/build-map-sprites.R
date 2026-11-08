@@ -1,5 +1,5 @@
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) != 1) stop("Uso: Rscript build-videojuegos-assets.R <directorio_salida>")
+if (length(args) != 1) stop("Uso: Rscript build-map-sprites.R <directorio_salida>")
 
 out_dir <- normalizePath(args[[1]], winslash = "/", mustWork = FALSE)
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
