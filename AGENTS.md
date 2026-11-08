@@ -49,5 +49,3 @@
   sin autorización. Conservar las rutas de proyectos y worktrees de Codex.
 - Antes de retirar residuos, verificar que sean regenerables o copias comprobadas.
   No usar `git clean`, `reset`, borrados globales ni clones de respaldo rutinarios.
-- Los informes SIUBEN pertenecen a `proyecto_v13/estudios/antecedentes-rsuh-202608/`.
-  No incorporarlos al blog ni a su historial publicable.

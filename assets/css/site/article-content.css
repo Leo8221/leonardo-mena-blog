@@ -1,16 +1,18 @@
 body.editorial-post {
-  #quarto-document-content ul {
+  /* :where limita el alcance sin pisar las listas de componentes,
+     como la numeración del recuadro de conclusiones. */
+  :where(#quarto-document-content) ul {
     list-style: none;
     padding-left: 0;
   }
 
-  #quarto-document-content ul li {
+  :where(#quarto-document-content) ul li {
     position: relative;
     padding-left: 2rem;
     margin-bottom: 0.75rem;
   }
 
-  #quarto-document-content ul li::before {
+  :where(#quarto-document-content) ul li::before {
     content: "▸";
     position: absolute;
     left: 0;
@@ -61,7 +63,7 @@ body.editorial-post {
     border: 1px solid var(--lm-border);
     border-left: 3px solid var(--lm-terracota);
     padding: 1.25rem 1.4rem;
-    margin: 2.5rem 0 3rem 0;
+    margin: 1.5rem 0 2rem;
     box-shadow: none;
     border-radius: var(--lm-radius-sm);
   }
@@ -73,14 +75,14 @@ body.editorial-post {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--lm-terracota);
+    color: var(--lm-terracota-dark);
     margin-bottom: 1.25rem;
   }
 
   .key-takeaways ol,
   .key-takeaways ul {
     margin: 0;
-    padding-left: 1.5rem;
+    padding-left: 0;
     list-style: none;
     counter-reset: takeaway-counter;
   }
@@ -109,7 +111,7 @@ body.editorial-post {
     justify-content: center;
     width: 1.5rem;
     height: 1.5rem;
-    background: var(--lm-terracota);
+    background: var(--lm-terracota-dark);
     color: white;
     border-radius: 50%;
     font-size: 0.8rem;
@@ -122,7 +124,7 @@ body.editorial-post {
   }
 
   .key-takeaways strong {
-    color: var(--lm-terracota);
+    color: var(--lm-terracota-dark);
     font-weight: 700;
   }
 

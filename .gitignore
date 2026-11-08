@@ -50,10 +50,3 @@ Thumbs.db
 
 # Evidencias temporales de render; conservar fuentes, datos y entregables
 /tmp/pdfs/
-/trabajo-siuben/**/tmp/pdfs/
-/trabajo-siuben/**/tmp/qa*/
-/trabajo-siuben/**/output/*.tex
-
-# Trabajo institucional trasladado a proyecto_v13; no pertenece al blog.
-/trabajo-siuben/
-/research/rsuh-validacion/

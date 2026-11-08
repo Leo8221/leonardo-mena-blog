@@ -14,10 +14,14 @@ body.quarto-dark.editorial-post .key-takeaways {
     padding-inline: 1rem;
   }
 
+  body.editorial-post #title-block-header {
+    padding-inline: 0;
+  }
+
   body.editorial-post #title-block-header h1.title {
     max-width: 100%;
     font-size: clamp(2rem, 10vw, 2.6rem);
-    line-height: 1.04;
+    line-height: 1.1;
     overflow-wrap: break-word;
     word-break: normal;
   }
@@ -27,9 +31,7 @@ body.quarto-dark.editorial-post .key-takeaways {
   }
 
   body.editorial-post #title-block-header .quarto-title-meta {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
+    gap: 0.65rem 1.25rem;
   }
 
   body.editorial-post #title-block-header .quarto-category:nth-of-type(n+3) {

@@ -35,51 +35,64 @@
 
   if (!figureTargets.length) return;
 
-  const modal = document.createElement("div");
+  const modal = document.createElement("dialog");
   modal.className = "article-figure-modal";
-  modal.setAttribute("role", "dialog");
-  modal.setAttribute("aria-modal", "true");
   modal.setAttribute("aria-labelledby", "article-figure-modal-title");
   modal.innerHTML = `
-    <div class="article-figure-modal-panel" role="document">
-      <div class="article-figure-modal-head">
-        <p class="article-figure-modal-title" id="article-figure-modal-title">Gráfico ampliado</p>
-        <button class="article-figure-close" type="button">Cerrar</button>
+    <div class="article-figure-modal-head">
+      <p class="article-figure-modal-title" id="article-figure-modal-title">Gráfico ampliado</p>
+      <div class="article-figure-modal-actions">
+        <button class="article-figure-zoom" type="button">Ampliar</button>
+        <button class="article-figure-close" type="button" autofocus>Cerrar</button>
       </div>
-      <div class="article-figure-modal-body"></div>
     </div>
+    <p class="article-figure-hint">Desliza el gráfico o usa las flechas para recorrerlo.</p>
+    <div class="article-figure-viewport" tabindex="0" role="region" aria-label="Gráfico ampliado">
+      <div class="article-figure-media"></div>
+    </div>
+    <p class="article-figure-caption"></p>
   `;
   document.body.appendChild(modal);
 
-  const modalBody = modal.querySelector(".article-figure-modal-body");
+  const viewport = modal.querySelector(".article-figure-viewport");
+  const mediaBox = modal.querySelector(".article-figure-media");
+  const caption = modal.querySelector(".article-figure-caption");
+  const hint = modal.querySelector(".article-figure-hint");
+  const zoomButton = modal.querySelector(".article-figure-zoom");
   const closeButton = modal.querySelector(".article-figure-close");
-  let lastTrigger = null;
 
-  function closeModal() {
-    modal.classList.remove("is-open");
-    document.body.classList.remove("no-scroll");
-    modalBody.innerHTML = "";
-    if (lastTrigger) lastTrigger.focus();
+  function setZoom(zoomed) {
+    viewport.classList.toggle("is-zoomed", zoomed);
+    zoomButton.textContent = zoomed ? "Ajustar" : "Ampliar";
+    hint.hidden = !zoomed;
+    viewport.scrollTo(0, 0);
   }
 
-  function openModal(target, trigger) {
-    lastTrigger = trigger;
-    const clone = target.cloneNode(true);
-    clone.querySelectorAll(".article-figure-tools").forEach((node) => node.remove());
+  function openModal(target) {
+    const original = target.querySelector("img, svg, canvas");
+    const clone = original.cloneNode(true);
     clone.removeAttribute("id");
-    modalBody.innerHTML = "";
-    modalBody.appendChild(clone);
-    modal.classList.add("is-open");
+    clone.removeAttribute("loading");
+    // Un canvas clonado conserva sus dimensiones, pero no los píxeles dibujados.
+    if (original instanceof HTMLCanvasElement) clone.getContext("2d").drawImage(original, 0, 0);
+    mediaBox.replaceChildren(clone);
+    caption.textContent = target.querySelector("figcaption")?.textContent.trim() || "";
+    caption.hidden = !caption.textContent;
+    // En móvil, ampliar debe aumentar el tamaño, no encoger otra vez la imagen.
+    // El área se desplaza; el pie de figura y los botones permanecen a la vista.
     document.body.classList.add("no-scroll");
-    closeButton.focus();
+    modal.showModal();
+    setZoom(window.matchMedia("(max-width: 680px)").matches);
   }
 
-  closeButton.addEventListener("click", closeModal);
+  zoomButton.addEventListener("click", () => setZoom(!viewport.classList.contains("is-zoomed")));
+  closeButton.addEventListener("click", () => modal.close());
   modal.addEventListener("click", (event) => {
-    if (event.target === modal) closeModal();
+    if (event.target === modal) modal.close();
   });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  modal.addEventListener("close", () => {
+    document.body.classList.remove("no-scroll");
+    mediaBox.replaceChildren();
   });
 
   figureTargets.forEach((target) => {
@@ -93,7 +106,7 @@
     button.setAttribute("aria-label", "Ampliar gráfico");
     tools.appendChild(button);
     target.insertBefore(tools, target.firstChild);
-    button.addEventListener("click", () => openModal(target, button));
+    button.addEventListener("click", () => openModal(target));
   });
 })();
 </script>

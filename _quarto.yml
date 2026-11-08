@@ -8,7 +8,6 @@ project:
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
     - "!research/**/*.qmd"
-    - "!trabajo-siuben/**"
     - "!editorial/**"
     - "!mantenimiento/**"
   # La barra inicial limita los recursos a la raíz; sin ella Quarto busca también
