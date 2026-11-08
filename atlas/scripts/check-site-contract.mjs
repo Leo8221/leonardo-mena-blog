@@ -59,7 +59,7 @@ function checkNoConsoleLogs() {
 }
 
 requireText("_quarto.yml", [
-  ["sitemap post-render", "post-render: node atlas/scripts/ensure-sitemap.mjs"],
+  ["sitemap post-render", /post-render:\s*(?:node atlas\/scripts\/ensure-sitemap\.mjs|(?:-[^\n]*\n\s*)*- node atlas\/scripts\/ensure-sitemap\.mjs)/],
   ["include-before-body: skip-link.html", "include-before-body: skip-link.html"],
   ["tokens desde la raíz", "- /assets/css/tokens.css"],
   ["pulso de portada desde la raíz", "- /assets/js/home-pulse.js"],

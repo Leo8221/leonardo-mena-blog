@@ -49,8 +49,7 @@ body.editorial-post {
 
   .article-figure-viewport {
     overflow: auto;
-    /* Los colores de los datos se conservan también en el tema oscuro. */
-    background: var(--lm-color-cream);
+    background: var(--lm-bg-body);
 
     > :is(img, svg, canvas) {
       cursor: zoom-in;

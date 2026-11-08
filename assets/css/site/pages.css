@@ -48,7 +48,7 @@ body.quarto-dark.editorial-post .key-takeaways {
 }
 
 body.quarto-dark.editorial-post .key-takeaways-title {
-  color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
 }
 
 body.quarto-dark.editorial-post .key-takeaways li {

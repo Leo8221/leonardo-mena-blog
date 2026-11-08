@@ -1,0 +1,31 @@
+import fs from "node:fs";
+import path from "node:path";
+
+// Quarto llama este paso tanto en preview como al publicar. El SVG lleva su
+// CSS dentro porque una imagen no puede cargar la hoja de estilos de la página.
+const output = path.resolve(process.env.QUARTO_PROJECT_OUTPUT_DIR || "docs");
+const chartStyle = fs.readFileSync("assets/css/chart-svg.css", "utf8");
+const style = `<style id="lm-chart-theme">${chartStyle}</style>`;
+
+for (const name of fs.readdirSync(output, { recursive: true })) {
+  const relative = name.replaceAll("\\", "/");
+  const file = path.join(output, name);
+  if (relative.startsWith("posts/") && relative.includes("/figure-html/") && name.endsWith(".svg")) {
+    const original = fs.readFileSync(file, "utf8");
+    if (!original.includes("class='svglite'")) continue;
+    // Idempotente: actualizar el CSS nunca duplica estilos ni toca los datos.
+    const svg = original.replace(/<style id="lm-chart-theme">[\s\S]*?<\/style>\n?/g, "");
+    const updated = svg.replace("</svg>", `${style}\n</svg>`);
+    if (updated !== original) fs.writeFileSync(file, updated);
+  }
+  if (!name.endsWith(".html") || relative.startsWith("site_libs/") || relative.startsWith("atlas/")) continue;
+  const original = fs.readFileSync(file, "utf8");
+  // Corrige atributos de la plantilla de Quarto, también cuando no hay JS.
+  const html = original
+    .replace('<nav class="navbar ', '<nav aria-label="Navegación principal" class="navbar ')
+    .replace('<main class="content" id="quarto-document-content">', '<main class="content" id="quarto-document-content" aria-label="Contenido principal">')
+    .replace(/(<button class="navbar-toggler"[^>]*?) role="menu"/g, "$1")
+    .replace('aria-label="Navegación de palanca"', 'aria-label="Abrir o cerrar el menú"')
+    .replace('<i class="bi bi-graph-up" role="img">', '<i class="bi bi-graph-up" aria-hidden="true">');
+  if (html !== original) fs.writeFileSync(file, html);
+}

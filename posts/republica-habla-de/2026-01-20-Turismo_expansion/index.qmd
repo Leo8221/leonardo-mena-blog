@@ -80,7 +80,6 @@ No basta con analizar la oferta desde un mapa, los datos de la Encuesta de Opini
 #| warning: false
 #| echo: false
 #| message: false
-#| fig-format: svg
 #| fig-width: 11
 #| fig-height: 7
 #| out-width: "100%"
@@ -248,7 +247,6 @@ Al observar la encuesta encontramos algunos apartados donde sin lugar a dudas nu
 #| warning: false
 #| echo: false
 #| message: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 library(tidyverse)
@@ -349,7 +347,6 @@ El verdadero reto está en la otra cara de la moneda: el subsector de Restaurant
 #| warning: false
 #| echo: false
 #| message: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 
@@ -451,22 +448,22 @@ La pregunta no es si debemos abandonar el "sol y playa", sino cuánto tiempo má
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   
   <div class="related-posts-grid">
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar</p>
     </div>
 
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
+      <h3><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h3>
       <p>Análisis de la Deuda pública dominicana</p>
     </div>
     
    <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
     </div>
     
@@ -476,30 +473,30 @@ La pregunta no es si debemos abandonar el "sol y playa", sino cuánto tiempo má
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes de Datos & Referencias Académicas</div>
+  <h2 class="bib-title">Fuentes de Datos & Referencias Académicas</h2>
   
   <div class="bib-grid">
     
     <div class="bib-card">
-      <h4>Banco Central R.D. (2024)</h4>
+      <h3>Banco Central R.D. (2024)</h3>
       <p><em>"Encuesta de Opinión, Actitud y Motivación"</em>. Microdatos utilizados para generar el Mapa de Calor y el Treemap de preferencias (Playa vs. Resto).</p>
       <a href="https://cdn.bancentral.gov.do/documents/publicaciones-economicas/encuesta-de-opinion-actitud-motivacion-a-extranjeros-no-residentes/documents/encturi2024-12.pdf" target="_blank" class="bib-link">Ver informe oficial (PDF) ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Banco Central R.D. (2019)</h4>
+      <h3>Banco Central R.D. (2019)</h3>
       <p><em>"Cuadro de Oferta y Utilización (COU)"</em>. Matriz insumo-producto base para el cálculo del Valor Agregado Bruto por trabajador y el análisis de la dualidad hotelera.</p>
       <a href="https://www.bancentral.gov.do/a/d/2533-sector-real" target="_blank" class="bib-link">Consultar Cuentas Nacionales ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Orgaz Agüera, F. (2014)</h4>
+      <h3>Orgaz Agüera, F. (2014)</h3>
       <p><em>"El ecoturismo en la República Dominicana"</em>. Estudio académico que analiza las potencialidades de los recursos naturales del país para diversificar la oferta masiva.</p>
       <a href="https://revistas.intec.edu.do/index.php/ciso/article/view/1007" target="_blank" class="bib-link">Leer Paper (Redalyc) ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Fondo Monetario Internacional (2025)</h4>
+      <h3>Fondo Monetario Internacional (2025)</h3>
       <p><em>"República Dominicana: Consulta del Artículo IV"</em>. Informe técnico exhaustivo que valida la resiliencia del modelo turístico dominicano y analiza su efecto multiplicador (<em>spillovers</em>) en el resto de la economía.</p>
       <a href="https://www.imf.org/en/-/media/files/publications/cr/2025/english/1domea2025001-source-pdf.pdf" target="_blank" class="bib-link">Leer Informe del Personal Técnico ↗</a>
     </div>

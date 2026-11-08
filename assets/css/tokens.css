@@ -8,7 +8,7 @@
   --lm-color-mist: #eef1ed;
   --lm-color-ink: #191b1f;
   --lm-color-soft: #3f4752;
-  --lm-color-muted: #6b7280;
+  --lm-color-muted: #606773;
   --lm-color-border: #dde3de;
   --lm-color-border-strong: #cbd5cf;
   --lm-color-terracotta: #c86448;
@@ -102,7 +102,7 @@ body.quarto-dark {
   --lm-bg-sec: #32383e;
   --lm-text-main: #e8e6e3;
   --lm-text-soft: #b0b3b8;
-  --lm-text-muted: #8e949b;
+  --lm-text-muted: #a3a9b0;
   --lm-terracota: #e07a5f;
   --lm-terracota-dark: #ff9f85;
   --lm-primario: #e8e6e3;

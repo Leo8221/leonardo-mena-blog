@@ -182,7 +182,7 @@ timeline_plot <- ggplot(timeline_data, aes(x = idx, y = 0)) +
   theme(
     legend.position = "none",
     plot.margin = margin(40, 40, 40, 40),
-    panel.background = element_rect(fill = "#fdfbf7", color = NA)
+    panel.background = element_rect(fill = "#f7f7f4", color = NA)
   )
 
 print(timeline_plot)
@@ -202,24 +202,24 @@ Esa es la diferencia entre un mal y un buen análisis económico. Bastiat lo sab
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes & Referencias Intelectuales</div>
+  <h2 class="bib-title">Fuentes & Referencias Intelectuales</h2>
   
   <div class="bib-grid">
     
     <div class="bib-card">
-      <h4>Bastiat, F. (1850)</h4>
+      <h3>Bastiat, F. (1850)</h3>
       <p><em>"Ce qu’on voit et ce qu’on ne voit pas"</em>. Ensayo donde introduce la distinción entre efectos visibles e invisibles y formula la Falacia de la Ventana Rota.</p>
       <a href="https://www.econlib.org/library/Bastiat/basEss1.html" target="_blank" class="bib-link">Leer ensayo original ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Bastiat, F. (1845)</h4>
+      <h3>Bastiat, F. (1845)</h3>
       <p><em>"Petition of the Candle Makers"</em>. Sátira económica contra el proteccionismo, usando el absurdo como herramienta analítica.</p>
       <a href="http://bastiat.org/en/petition.html" target="_blank" class="bib-link">Leer sátira completa ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Hazlitt, H. (1946)</h4>
+      <h3>Hazlitt, H. (1946)</h3>
       <p><em>Economics in One Lesson</em>. Obra clave de divulgación moderna que rescata y populariza el argumento de la Ventana Rota de Bastiat.</p>
       <a href="https://www.liberalstudies.ca/wp-content/uploads/2014/11/Economics-in-One-Lesson_2.pdf" target="_blank" class="bib-link">Consultar libro (Archivo) ↗</a>
     </div>

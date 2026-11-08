@@ -50,6 +50,7 @@ Los datos del Censo 2022 muestran que la secundaria es hoy el nivel predominante
 
 ```{r}
 #| label: fig-distribucion-nivel
+#| fig-alt: "Barras del nivel educativo más alto de la población de 25 años y más: desde ningún nivel hasta doctorado, según el Censo 2022."
 #| fig-cap: "Distribución del nivel educativo más alto alcanzado. Población de 25 años y más. Censo 2022."
 #| warning: false
 #| echo: false
@@ -100,6 +101,7 @@ ggplot(dist_nivel, aes(x = reorder(nivel, pct), y = pct, fill = nivel)) +
 
 ```{r}
 #| label: fig-cambio-cohorte
+#| fig-alt: "Líneas por cohorte de edad: secundaria y educación superior aumentan entre las generaciones jóvenes. En 25 a 34 años alcanzan 81.6% y 35.9%, respectivamente."
 #| fig-cap: "Porcentaje de la población que alcanzó cada nivel educativo, por cohorte de edad. Censo 2022."
 #| warning: false
 #| echo: false
@@ -161,12 +163,12 @@ En la generación de Juan, los pocos afortunados que llegaban a la universidad e
 
 ```{r}
 #| label: fig-inversion-genero
+#| fig-alt: "Líneas de educación superior por sexo y cohorte: compara cómo cambia la diferencia entre hombres y mujeres según la edad."
 #| fig-cap: "Porcentaje con educación superior o más, por cohorte de edad y sexo. Censo 2022."
 #| warning: false
 #| echo: false
 #| fig-width: 10
 #| fig-height: 6
-#| fig-format: svg
 
 genero_cohorte <- tibble(
   cohorte = factor(rep(c("65+","55-64","45-54","35-44","25-34"), 2),
@@ -209,6 +211,7 @@ La heterogeneidad del territorio dominicano obliga a mirar más allá del agrega
 
 ```{r}
 #| label: fig-zona-cohorte
+#| fig-alt: "Líneas de educación superior por edad en zonas urbanas y rurales. El área sombreada señala la diferencia entre ambas zonas."
 #| fig-cap: "Porcentaje con educación superior o más, por cohorte de edad y zona. Censo 2022."
 #| warning: false
 #| echo: false
@@ -256,6 +259,7 @@ Los avances son reales, pero el sistema ha generado sus propios problemas en el 
 
 ```{r}
 #| label: fig-embudo
+#| fig-alt: "Comparación por cohorte de tres etapas educativas: llegar a secundaria, entrar a la universidad y graduarse."
 #| fig-cap: "Porcentaje que alcanzó cada etapa educativa, por cohorte. Censo 2022."
 #| warning: false
 #| echo: false
@@ -317,6 +321,7 @@ Recordemos que los hombres ya llegaban en menor proporción a la universidad. En
 
 ```{r}
 #| label: fig-desercion-genero
+#| fig-alt: "Comparación de la no graduación universitaria por sexo y zona de residencia entre personas de 30 a 39 años."
 #| fig-cap: "Tasa de no graduación universitaria por sexo y zona. Cohorte 30-39 años. Censo 2022."
 #| warning: false
 #| echo: false
@@ -357,6 +362,7 @@ Las personas desarrollamos gustos distintos, y la educación no escapa a eso. Pe
 
 ```{r}
 #| label: fig-segregacion-carreras
+#| fig-alt: "Puntos comparan la proporción de graduados de cada sexo por carrera. Las mujeres predominan en educación y salud; los hombres en ingeniería e informática."
 #| fig-cap: "Porcentaje de graduados universitarios en cada campo, por sexo. Censo 2022."
 #| warning: false
 #| echo: false
@@ -441,18 +447,18 @@ A título personal: no creo que el objetivo deba ser que todos terminen con un t
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   <div class="related-posts-grid">
     <div class="related-post-card">
-      <h4><a href="../2026-02-14-mipymes-rd/">El mito del Banco Malo</a></h4>
+      <h3><a href="../2026-02-14-mipymes-rd/">El mito del Banco Malo</a></h3>
       <p>Por qué las MiPyMES realmente no tienen crédito</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar dominicana</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial por empresas formales</p>
     </div>
   </div>
@@ -461,20 +467,20 @@ A título personal: no creo que el objetivo deba ser que todos terminen con un t
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <h2 class="bib-title">Fuentes de Datos & Referencias</h2>
   <div class="bib-grid">
     <div class="bib-card">
-      <h4>ONE (2022)</h4>
+      <h3>ONE (2022)</h3>
       <p><em>"Censo Nacional de Población y Vivienda 2022"</em>. Fuente principal de todos los microdatos utilizados en este análisis. Variables p26 (sexo), p27 (edad), p43 (nivel educativo), p45 (campo ISCED-F), p46 (graduación) y zona.</p>
       <a href=https://www.one.gob.do/datos-y-estadisticas/ target="_blank" class="bib-link">Ver Censo 2022 ↗</a>
     </div>
     <div class="bib-card">
-      <h4>UNESCO-UIS (2022)</h4>
+      <h3>UNESCO-UIS (2022)</h3>
       <p><em>"ISCED Fields of Education and Training 2013 (ISCED-F 2013)"</em>. Clasificación internacional utilizada para agrupar los campos de estudio declarados en el censo (variable p45_code).</p>
       <a href="https://uis.unesco.org/en/topic/international-standard-classification-education-isced" target="_blank" class="bib-link">Ver clasificación ISCED-F ↗</a>
     </div>
     <div class="bib-card">
-      <h4>CEPAL (2022)</h4>
+      <h3>CEPAL (2022)</h3>
       <p><em>"La educación superior en América Latina y el Caribe"</em>. Contexto regional utilizado para ubicar los indicadores dominicanos en perspectiva comparada. La región pasó de 23% a 52% de cobertura superior entre 2000 y 2018.</p>
       <a href="https://unesdoc.unesco.org/ark:/48223/pf0000378619" target="_blank" class="bib-link">Ver CEPAL ↗</a>
     </div>

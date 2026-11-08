@@ -28,7 +28,15 @@ body { /* Force la clase */ }
 
 ```{r setup, include=FALSE}
 source(here::here("tema_graficos.R"))
-library(ggplot2)
+
+# Los RDS conservan los cálculos y las capas originales. Aplicamos el tema
+# actual al mostrarlos para que no arrastren fondos y fuentes antiguos.
+grafico_guardado <- function(archivo, grid = "y") {
+  grafico <- readRDS(here::here("posts", "republica-en-un-grafico",
+    "2026-01-31-efectivo-en-la-republica-dominicana", "rds", archivo))
+  grafico + theme_lm(grid) +
+    theme(legend.position = grafico$theme$legend.position %||% "top")
+}
 ```
 
 
@@ -73,19 +81,11 @@ Somos conscientes de que así funciona el país, pero ¿cómo se ve esa imagen u
 #| fig-alt: "Gráfico de barras horizontales mostrando el porcentaje de uso de efectivo en 6 categorías. Colmados y bajo costo lidera con 91.2%, seguido de Alquiler (90.4%), Supermercados (86.7%), Servicios Públicos (86.1%), Combustible (78.3%) y Bienes de Alto Valor (79.3%). Las barras son color terracota."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
 
-library(ggplot2)
-
-g_hegemonia <- readRDS(here::here("posts", 
-                                  "republica-en-un-grafico", 
-                                  "2026-01-31-efectivo-en-la-republica-dominicana", 
-                                  "rds", 
-                                  "grafico_hegemonia.rds"))
-print(g_hegemonia)
+grafico_guardado("grafico_hegemonia.rds", grid = "x")
 ```
 
 <div class="big-number">91.2%</div> <div class="big-number-label">De las transacciones de bajo costo se pagan en efectivo</div>
@@ -106,14 +106,11 @@ Nunca disminuye del 65%, incluso en los grupos más jóvenes de la encuesta, lo 
 #| fig-cap: "Análisis por edad: Se observa una ligera caída en la adultez media, pero el uso repunta en la vejez y es alto en la juventud."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
 
-library(ggplot2)
-g_hamaca <- readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_edades.rds"))
-print(g_hamaca)
+grafico_guardado("grafico_edades.rds")
 ```
 
 Otro mito común es que los ingresos más altos se traducen en una mayor adopción de métodos digitales. Sin embargo, los datos muestran que incluso entre los grupos de mayores ingresos, el efectivo sigue siendo predominante. Aunque hay una ligera disminución en el uso del efectivo a medida que aumentan los ingresos, la mayoría de las personas en todos los niveles de ingresos continúan utilizando efectivo regularmente.
@@ -123,14 +120,11 @@ Otro mito común es que los ingresos más altos se traducen en una mayor adopci�
 #| fig-cap: "Análisis por ingreso: Se confirma que el uso de efectivo desciende a mayor ingreso, pero se mantiene sorprendentemente alto (>50%) incluso en los estratos superiores."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
 
-library(ggplot2)
-g_clase <- readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_clase.rds"))
-print(g_clase)
+grafico_guardado("grafico_clase.rds", grid = "n")
 ```
 
 <div class="pullquote"> "El segmento más alto de ingresos sigue utilizando efectivo en casi un 60% de las transacciones cotidianas, desafiando la idea de que es solo para los menos favorecidos." </div>
@@ -152,14 +146,11 @@ A menudo, el debate sobre la digitalización asume que el usuario tiene la liber
 #| warning: false
 #| echo: false
 #| message: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
 
-library(ggplot2)
-# Asegúrate de que el archivo existe en tu carpeta rds
-print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_razones_rank.rds")))
+grafico_guardado("grafico_razones_rank.rds", grid = "x")
 ```
 
 ## 2. La Barrera Psicológica: seguridad y descuentos
@@ -178,13 +169,11 @@ Despues de observar estos datos, queda claro como el efectivo logra tal dominio 
 #| warning: false
 #| echo: false
 #| message: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
 
-library(ggplot2)
-print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds", "grafico_forest_blog.rds")))
+grafico_guardado("grafico_forest_blog.rds", grid = "x")
 ```
 
 <div class="big-number">17 pp</div> <div class="big-number-label">Aumento en la probabilidad de ser digital al tener cuenta bancaria</div>
@@ -204,12 +193,10 @@ El modelo usa microdatos de la ENIEF 2023 y estima una regresión logística don
 #| label: fig-control-educacion
 #| fig-cap: "Uso de efectivo como mecanismo de disciplina financiera según nivel educativo."
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
-library(ggplot2)
-print(readRDS(here::here("posts", "republica-en-un-grafico", "2026-01-31-efectivo-en-la-republica-dominicana", "rds","grafico_control_educ.rds")))
+grafico_guardado("grafico_control_educ.rds")
 ```
 
 # Conclusión: El Efectivo no es solo un medio de pago, es un fenómeno cultural
@@ -228,22 +215,22 @@ Para digitalizar la economía, no basta con esperar un relevo generacional o cam
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   
   <div class="related-posts-grid">
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar</p>
     </div>
 
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
+      <h3><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h3>
       <p>Análisis de la Deuda pública dominicana</p>
     </div>
     
    <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
     </div>
     
@@ -253,24 +240,24 @@ Para digitalizar la economía, no basta con esperar un relevo generacional o cam
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <h2 class="bib-title">Fuentes de Datos & Referencias</h2>
   
   <div class="bib-grid">
     
     <div class="bib-card">
-      <h4>Banco Central R.D. (2023)</h4>
+      <h3>Banco Central R.D. (2023)</h3>
       <p><em>"Encuesta Nacional de Inclusión y Educación Financiera (ENIEF)"</em>. Fuente primaria de los microdatos utilizados para calcular la hegemonía del efectivo y el modelo de regresión logística.</p>
       <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Descargar Microdatos (Excel) ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Banco Central R.D. (2019)</h4>
+      <h3>Banco Central R.D. (2019)</h3>
       <p><em>"ENIEF 2019: Primera Encuesta de Inclusión"</em>. Base de datos utilizada para la validación cruzada y comparación histórica de la evolución de la tenencia de productos financieros.</p>
       <a href="https://www.bancentral.gov.do/a/d/6285-inclusion-financiera" target="_blank" class="bib-link">Ver histórico ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Prelec, D. & Loewenstein, G. (1998)</h4>
+      <h3>Prelec, D. & Loewenstein, G. (1998)</h3>
       <p><em>"The Red and the Black: Mental Accounting of Savings and Debt"</em>. Estudio seminal que introduce el concepto de <strong>"Pain of Paying"</strong> (Dolor de Pagar), utilizado en este artículo para explicar la preferencia por efectivo en segmentos educados.</p>
       <a href="https://pubsonline.informs.org/doi/10.1287/mksc.17.1.4" target="_blank" class="bib-link">Ver Abstract Académico ↗</a>
     </div>

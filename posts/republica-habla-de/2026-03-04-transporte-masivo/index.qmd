@@ -70,7 +70,6 @@ Y de hecho los datos reflejan que dicha situación ha sido la norma incluso con 
 #| fig-alt: "Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 9
 #| out-width: "100%"
@@ -168,7 +167,6 @@ José, residente de Villa Mella, debía enfrentarse al hacinamiento en el carro 
 #| fig-alt: "Gráfico de área mostrando la demanda mensual consolidada del Metro y Teleférico de Santo Domingo entre enero 2019 y diciembre 2025. Se observa la caída abrupta en abril 2020 por el cierre COVID, la recuperación progresiva hasta 2021, y el crecimiento sostenido hasta superar los 10 millones de pasajeros mensuales en 2024."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 9
 #| out-width: "100%"
@@ -226,7 +224,6 @@ Una de las variables de mayor peso en los gastos de las MiPyMES es el alquiler �
 #| fig-alt: "Gráfico de barras horizontales mostrando la mediana del gasto anual en alquiler de microempresas por provincia. El Distrito Nacional lidera con RD$144,000, seguido de La Altagracia y Valverde. Las provincias periurbanas al GSD —Santo Domingo y San Cristóbal— pagan entre 37% y 48% menos que en el DN."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
@@ -303,7 +300,6 @@ El alquiler es una función de la ubicación, y el Distrito Nacional lleva la pr
 #| fig-alt: "Gráfico de barras horizontales mostrando la distribución del empleo formal registrado en el SDSS por provincia a diciembre 2021. El Distrito Nacional concentra el 50% del empleo formal del país, seguido de Santo Domingo provincia con 13.7% y Santiago con 11.7%. Las provincias periurbanas —San Cristóbal, Monte Plata, Peravia— tienen participaciones menores al 3%."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
@@ -389,7 +385,6 @@ El debate sobre el subsidio al Metro tiene un problema de origen: mezcla el cost
 #| fig-alt: "Gráfico de barras mostrando el subsidio operativo por pasajero del Metro de Santo Domingo entre 2021 y 2025. El subsidio oscila entre RD$26 y RD$56, muy por debajo de los RD$136 que circula en análisis que incluyen inversión en infraestructura."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 5
 #| out-width: "100%"
@@ -483,18 +478,18 @@ El subsidio de RD$35 por pasajero no es un derroche. Es el precio de mantener ac
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   <div class="related-posts-grid">
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
+      <h3><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h3>
       <p>Análisis de la deuda pública dominicana</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.</p>
     </div>
   </div>
@@ -503,25 +498,25 @@ El subsidio de RD$35 por pasajero no es un derroche. Es el precio de mantener ac
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <h2 class="bib-title">Fuentes de Datos & Referencias</h2>
   <div class="bib-grid">
     <div class="bib-card">
-      <h4>OPRET / SIGEF (DIGEPRES)</h4>
+      <h3>OPRET / SIGEF (DIGEPRES)</h3>
       <p>Ejecución presupuestaria utilizada para separar operación corriente, inversión de capital e ingresos por taquilla del Metro de Santo Domingo.</p>
       <a href="https://sigef.hacienda.gob.do/" target="_blank" class="bib-link">Consultar SIGEF ↗</a>
     </div>
     <div class="bib-card">
-      <h4>DGII</h4>
+      <h3>DGII</h3>
       <p>Parque vehicular por tipo de vehículo, usado para contrastar la expansión del transporte masivo con el crecimiento de la movilidad privada.</p>
       <a href="https://dgii.gov.do/estadisticas/parqueVehicular/" target="_blank" class="bib-link">Ver parque vehicular ↗</a>
     </div>
     <div class="bib-card">
-      <h4>JTCE / OPRET</h4>
+      <h3>JTCE / OPRET</h3>
       <p>Series de pasajeros transportados y operación del sistema, utilizadas para calcular magnitudes anuales y costo operativo por viaje.</p>
       <a href="https://www.opret.gob.do/" target="_blank" class="bib-link">Ver OPRET ↗</a>
     </div>
     <div class="bib-card">
-      <h4>ENMIPYMES / TSS</h4>
+      <h3>ENMIPYMES / TSS</h3>
       <p>Datos de estructura empresarial, empleo formal y territorio usados para conectar movilidad, accesibilidad y oportunidades productivas.</p>
       <a href="https://www.bancentral.gov.do/" target="_blank" class="bib-link">Ver Banco Central ↗</a>
     </div>

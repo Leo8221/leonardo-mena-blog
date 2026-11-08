@@ -62,7 +62,6 @@ Al aplicar este análisis a la economía dominicana, obtenemos un dato que, al m
 #| fig-alt: "Gráfico que compara deuda sobre PIB en Latinoamérica"
 #| warning: false
 #| echo: false
-#| fig-format: svg
 # ==============================================================================
 # GRÁFICO: SOLVENCIA EN CONTEXTO (RD vs LA REGIÓN 2024)
 # ==============================================================================
@@ -147,7 +146,6 @@ Evaluando los datos del país, no hemos llegado, pero estamos cerca.
 #| echo: false
 #| fig-width: 8
 #| fig-height: 10
-#| fig-format: svg
 
 library(tidyverse)
 library(scales)
@@ -322,6 +320,8 @@ p_dual <- p1 / p2 +
     subtitle = "Dos formas de ver el mismo problema (2016-2024)",
     caption = "Fuente: Crédito Público, DIGEPRES, FMI | Elaboración propia",
     theme = theme(
+      plot.background = element_rect(fill = pal$crema, color = NA),
+      plot.caption = element_text(color = pal$texto_muted),
       plot.title = element_text(size = 18, face = "bold", color = pal$texto),
       plot.subtitle = element_text(size = 13, color = pal$texto_soft)
     )
@@ -367,22 +367,22 @@ Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una 
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   
   <div class="related-posts-grid">
 
         <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1000 habitantes.</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">Década de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">Década de transformación</a></h3>
       <p>Análisis de los cambios en la canasta familiar dominicana.</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h4>
+      <h3><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h3>
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     
@@ -392,30 +392,30 @@ Si la deuda financió gasto corriente (Caso Juan), heredarán la factura de una 
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes Oficiales & Referencia Académica</div>
+  <h2 class="bib-title">Fuentes Oficiales & Referencia Académica</h2>
   
   <div class="bib-grid">
     
     <div class="bib-card">
-      <h4>Crédito Público (Hacienda)</h4>
+      <h3>Crédito Público (Hacienda)</h3>
       <p>Informes de Deuda Pública del Sector Público .</p>
       <a href="https://www.creditopublico.gob.do/inicio/estadisticas" target="_blank" class="bib-link">Ver informes oficiales ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>DIGEPRES (Presupuesto)</h4>
+      <h3>DIGEPRES (Presupuesto)</h3>
       <p>Estadísticas Fiscales: Ejecución presupuestaria, ingresos y gastos (Series históricas).</p>
       <a href="https://www.digepres.gob.do/estadisticas/" target="_blank" class="bib-link">Ver ejecución fiscal ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Sargent & Wallace (1981)</h4>
+      <h3>Sargent & Wallace (1981)</h3>
       <p>"Some Unpleasant Monetarist Arithmetic". El paper seminal que explica por qué la política fiscal domina a la monetaria.</p>
       <a href="https://www.minneapolisfed.org/research/quarterly-review/some-unpleasant-monetarist-arithmetic" target="_blank" class="bib-link">Leer clásico (Fed) ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Moody's Investors Service (2024)</h4>
+      <h3>Moody's Investors Service (2024)</h3>
       <p>"Government of Dominican Republic – Ba3 Positive". Reporte oficial donde Moody's advierte que la relación Intereses/Ingresos de RD (cercana al 23%) es "débil" y duplica la mediana de sus pares."</p>
       <a href="https://www.creditopublico.gob.do/Content/inversionistas/informes/2024/02Informe%20Moodys%20sobre%20calificaci%C3%B3n%20crediticia%20-%20Marzo%20(en%20ingl%C3%A9s).pdf" target="_blank" class="bib-link">Ver reporte oficial (PDF)↗</a>
     </div>

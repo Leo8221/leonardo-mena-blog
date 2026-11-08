@@ -20,7 +20,7 @@ comments:
     reactions-enabled: true
     theme: 
       light: light             
-      dark: transparent_dark
+      dark: dark_high_contrast
     input-position: top
     loading: lazy
     language: es

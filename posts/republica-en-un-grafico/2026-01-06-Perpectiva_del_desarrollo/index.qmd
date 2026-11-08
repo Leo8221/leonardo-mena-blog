@@ -55,7 +55,6 @@ La única variable que cambia es su ubicación geográfica. La pregunta es inevi
 #| fig-alt: "Mapa coroplético de la República Dominicana mostrando la densidad de empresas. El Distrito Nacional destaca en color terracota intenso con el valor más alto (36.5). Santiago (17.1) y La Altagracia (13.9) aparecen en tono ocre. El resto del país, especialmente la zona fronteriza, se muestra en verde oliva pálido, indicando baja densidad empresarial. Las etiquetas resaltan la brecha entre la capital y el interior."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 9
 #| out-width: "100%"
@@ -282,22 +281,22 @@ La concentración económica es una dinámica natural del desarrollo, no un erro
 ---
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   
   <div class="related-posts-grid">
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar</p>
     </div>
 
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
+      <h3><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h3>
       <p>Análisis de la Deuda pública dominicana</p>
     </div>
     
     <div class="related-post-card">
-      <h4><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h4>
+      <h3><a href="../../../posts/fundamentos/2025-12-18-PIB_Peras_manzanas/">El PIB y la trampa del bienestar</a></h3>
       <p>Por qué el PIB no mide bienestar</p>
     </div>
     
@@ -306,24 +305,24 @@ La concentración económica es una dinámica natural del desarrollo, no un erro
 ```
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Referencias & Fuentes de Datos</div>
+  <h2 class="bib-title">Referencias & Fuentes de Datos</h2>
   
   <div class="bib-grid">
     
     <div class="bib-card">
-      <h4>Oficina Nacional de Estadística (ONE)</h4>
+      <h3>Oficina Nacional de Estadística (ONE)</h3>
       <p>Proyecciones de Población por Región y Provincia (2000-2030).</p>
       <a href="https://www.one.gob.do/datos-y-estadisticas/temas/estadisticas-demograficas/estimaciones-y-proyecciones-demograficas/" class="bib-link">Ver dataset ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Oficina Nacional de Estadística (ONE)</h4>
+      <h3>Oficina Nacional de Estadística (ONE)</h3>
       <p>Distribución de empresas registradas (2015-2024).</p>
       <a href="https://reportviewer-olap.one.gob.do/ReportViewer/Report.aspx?id=/Portal/Reportes%20DEE/Distribuci%C3%B3n%20de%20empresas%20registradas%20seg%C3%BAn%20provincia.%202015-2024" class="bib-link">Ver reporte ↗</a>
     </div>
 
     <div class="bib-card">
-      <h4>Krugman, P. (1991)</h4>
+      <h3>Krugman, P. (1991)</h3>
       <p>"Increasing Returns and Economic Geography". Journal of Political Economy.</p>
       <a href="https://www.jstor.org/stable/2937739" target="_blank" class="bib-link">Leer paper ↗</a>
     </div>

@@ -1,7 +1,9 @@
 project:
   type: website
   output-dir: docs
-  post-render: node atlas/scripts/ensure-sitemap.mjs
+  post-render:
+    - node tools/finish-articles.mjs
+    - node atlas/scripts/ensure-sitemap.mjs
   render:
     - "*.qmd"
     - "posts/**/*.qmd"

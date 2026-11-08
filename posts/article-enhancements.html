@@ -3,6 +3,19 @@
   const body = document.body;
   if (!body || !body.classList.contains("editorial-post")) return;
 
+  // Si cambias el tema mientras cargan los comentarios, Quarto puede enviar
+  // el cambio demasiado pronto. Lo confirmamos cuando Giscus anuncia su tamaño.
+  window.addEventListener("message", (event) => {
+    if (event.origin !== "https://giscus.app" || !event.data?.giscus?.resizeHeight) return;
+    const frame = document.querySelector(".giscus-frame");
+    if (event.source !== frame?.contentWindow) return;
+    const themeId = body.classList.contains("quarto-dark") ? "giscus-alt-theme" : "giscus-base-theme";
+    const theme = document.getElementById(themeId)?.value;
+    if (!theme || frame.dataset.blogTheme === theme) return;
+    frame.dataset.blogTheme = theme;
+    frame.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, event.origin);
+  });
+
   const content = document.getElementById("quarto-document-content");
   const titleBlock = document.getElementById("title-block-header");
   if (!content || !titleBlock || titleBlock.querySelector(".article-reading-time")) return;

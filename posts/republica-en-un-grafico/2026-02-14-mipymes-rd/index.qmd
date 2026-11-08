@@ -62,10 +62,10 @@ La pregunta interesante no es solo cuántos son, sino *dónde* están y *por qu�
 
 ```{r}
 #| label: fig-mapa-mipymes-regiones
+#| fig-alt: "Mapa de las cuatro regiones. Norte tiene 95 por ciento microempresas y 68 por ciento informales; Sur, 97 por ciento y 77 por ciento; Este, 96 por ciento y 70 por ciento; Metropolitana, 91 por ciento y 61 por ciento."
 #| fig-cap: "Distribución geográfica de microempresas e informalidad por región."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 11
 #| fig-height: 10
 
@@ -185,10 +185,10 @@ El pensamiento habitual suele ser que las MIPYMES no tienen crédito porque son 
 
 ```{r}
 #| label: fig-acceso-credito-formal-tamano
+#| fig-alt: "Barras de acceso al crédito. Medianas formales: 51.1%; microempresas formales e informales: 35.2% y 34.6%; pequeñas formales e informales: 42.6% y 43.5%."
 #| fig-cap: "Tasa de acceso a crédito por tamaño de empresa y estatus legal. Una pequeña empresa informal (43.5%) tiene más acceso que una microempresa formal (35.2%)."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
@@ -273,10 +273,10 @@ Cuando evaluamos las razones de no acceder al crédito, los números son sorpren
 
 ```{r}
 #| label: fig-barreras-credito-micro
+#| fig-alt: "Barras de motivos para no tener crédito entre microempresas. No necesitarlo es el motivo principal, con 62.3%; el rechazo representa 9.6%."
 #| fig-cap: "Principales barreras de acceso al crédito en microempresas dominicanas."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
@@ -346,10 +346,10 @@ Al desglosar por tamaño de empresa, la imagen se vuelve aún más nítida. Para
 
 ```{r}
 #| label: fig-barreras-por-tamano
+#| fig-alt: "Barras que comparan los motivos para no acceder al crédito entre microempresas, pequeñas y medianas empresas."
 #| fig-cap: "Comparación de las principales barreras de acceso al crédito por tamaño de empresa."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 7
 #| out-width: "100%"
@@ -427,10 +427,10 @@ Si la formalidad legal (RNC) no mueve la aguja (al menos no en profundidad), ¿q
 
 ```{r}
 #| label: fig-cuenta-bancaria
+#| fig-alt: "Comparación del acceso al crédito con y sin cuenta bancaria. Tener cuenta se asocia con una diferencia de 38.5 puntos porcentuales."
 #| fig-cap: "Acceso al crédito según tenencia de cuenta bancaria. La brecha es de 38.5 puntos porcentuales."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 8
 #| fig-height: 5
 #| out-width: "100%"
@@ -490,10 +490,10 @@ Existe un dato que obliga a detenerse y repensar los modelos bajo los que operan
 
 ```{r}
 #| label: fig-usos-credito
+#| fig-alt: "Barras del destino del crédito. Pagar deudas y comprar insumos reúnen el 80.6% del uso, frente a la inversión para ampliar el negocio."
 #| fig-cap: "Destino del crédito en MiPyMES. El 80.6% se destina a mantener operaciones, no a crecer."
 #| warning: false
 #| echo: false
-#| fig-format: svg
 #| fig-width: 10
 #| fig-height: 6
 #| out-width: "100%"
@@ -565,18 +565,18 @@ y tú, ¿Qué crees que le falta a nuestra María?
 
 ```{=html}
 <div class="related-posts">
-  <div class="related-posts-title">📚 Sigue leyendo</div>
+  <h2 class="related-posts-title">📚 Sigue leyendo</h2>
   <div class="related-posts-grid">
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2025-12-25-decada_de_transformacion/">10 años de transformación</a></h3>
       <p>Cambios en la canasta familiar</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h4>
+      <h3><a href="../../../posts/republica-habla-de/2025-12-19_deuda_publica/">La aritmética desagradable de la deuda</a></h3>
       <p>Análisis de la deuda pública dominicana</p>
     </div>
     <div class="related-post-card">
-      <h4><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h4>
+      <h3><a href="../../../posts/republica-en-un-grafico/2026-01-06-Perpectiva_del_desarrollo/">Perspectiva de desarrollo</a></h3>
       <p>Análisis del desarrollo provincial basado en empresas formales por cada 1,000 habitantes.</p>
     </div>
   </div>
@@ -585,20 +585,20 @@ y tú, ¿Qué crees que le falta a nuestra María?
 
 ```{=html}
 <div class="bibliography-section">
-  <div class="bib-title">Fuentes de Datos & Referencias</div>
+  <h2 class="bib-title">Fuentes de Datos & Referencias</h2>
   <div class="bib-grid">
     <div class="bib-card">
-      <h4>Banco Central R.D. & MICM (2023)</h4>
+      <h3>Banco Central R.D. & MICM (2023)</h3>
       <p><em>"Encuesta Nacional de las Micro, Pequeñas y Medianas Empresas 2022-2023"</em>. Fuente oficial de los microdatos y la metodología de estratificación utilizada para este análisis.</p>
       <a href="https://www.bancentral.gov.do/a/d/5962-resultados-de-la-encuesta-nacional-de-las-micro-pequenas-y-medianas-empresas-mipymes" target="_blank" class="bib-link">Ver Informe y Metodología ↗</a>
     </div>
     <div class="bib-card">
-      <h4>Beck, T., Demirgüç-Kunt, A. & Maksimovic, V. (2005)</h4>
+      <h3>Beck, T., Demirgüç-Kunt, A. & Maksimovic, V. (2005)</h3>
       <p><em>"Financial and Legal Constraints to Growth: Does Firm Size Matter?"</em>. Estudio del Banco Mundial que valida la tesis de este artículo: las restricciones financieras afectan desproporcionadamente a las empresas más pequeñas, independientemente de su país.</p>
       <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2005.00727.x" target="_blank" class="bib-link">Ver en Journal of Finance ↗</a>
     </div>
     <div class="bib-card">
-      <h4>Stiglitz, J. & Weiss, A. (1981)</h4>
+      <h3>Stiglitz, J. & Weiss, A. (1981)</h3>
       <p><em>"Credit Rationing in Markets with Imperfect Information"</em>. El paper seminal que explica por qué los bancos racionan el crédito a las PYMES debido a la dificultad para evaluar su riesgo real (asimetría de información).</p>
       <a href="https://www.jstor.org/stable/1802787" target="_blank" class="bib-link">Ver Abstract Académico ↗</a>
     </div>

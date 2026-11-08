@@ -34,7 +34,7 @@ body:not(.editorial-post) #reading-progress {
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
-  color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
@@ -68,13 +68,16 @@ body.editorial-post {
     margin-bottom: 3rem;
   }
 
-  .related-posts-title,
-  .bib-title {
+  #quarto-document-content .related-posts-title,
+  #quarto-document-content .bib-title {
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--lm-terracota);
+    padding: 0;
+    border: 0;
+    margin-top: 0;
+    color: var(--lm-terracota-dark);
     font-weight: 700;
     margin-bottom: 1.5rem;
   }
@@ -88,7 +91,8 @@ body.editorial-post {
   .related-post-card,
   .bib-card {
     background: var(--lm-bg-sec);
-    transition: all 0.2s ease;
+    /* El texto y su fondo cambian juntos al alternar el tema. */
+    transition: transform 0.2s ease, border-color 0.2s ease;
     position: relative;
   }
 
@@ -108,21 +112,21 @@ body.editorial-post {
     transform: translateY(-1px);
   }
 
-  .related-post-card h4 {
+  #quarto-document-content .related-post-card h3 {
     font-size: 1rem;
     line-height: 1.3;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
   }
 
-  .related-post-card h4 a {
+  #quarto-document-content .related-post-card h3 a {
     color: var(--lm-text-main);
     border: none;
     text-decoration: none;
   }
 
-  .related-post-card h4 a:hover {
-    color: var(--lm-terracota);
+  #quarto-document-content .related-post-card h3 a:hover {
+    color: var(--lm-terracota-dark);
   }
 
   .related-post-card p,
@@ -175,14 +179,14 @@ body.editorial-post {
       border-bottom: none;
     }
 
-    .related-post-card h4 {
+    #quarto-document-content .related-post-card h3 {
       font-size: 0.95rem;
       margin-bottom: 0.35rem;
     }
 
-    .related-post-card h4::before {
+    #quarto-document-content .related-post-card h3::before {
       content: "→ ";
-      color: var(--lm-terracota);
+      color: var(--lm-terracota-dark);
       font-weight: 700;
       margin-right: 0.35rem;
     }
@@ -207,7 +211,7 @@ body.editorial-post {
 }
 
 body.editorial-post {
-  .bib-title {
+  #quarto-document-content .bib-title {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -231,11 +235,11 @@ body.editorial-post {
   }
 
   .bib-card:hover {
-    border-left-color: var(--lm-terracota);
+    border-left-color: var(--lm-terracota-dark);
     transform: translateX(2px);
   }
 
-  .bib-card h4 {
+  #quarto-document-content .bib-card h3 {
     font-size: 0.95rem;
     line-height: 1.3;
     margin: 0 0 0.25rem 0;
@@ -243,7 +247,7 @@ body.editorial-post {
     color: var(--lm-text-main);
   }
 
-  .bib-card h4 a {
+  #quarto-document-content .bib-card h3 a {
     color: inherit;
     text-decoration: none;
     border: none;
@@ -259,14 +263,14 @@ body.editorial-post {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--lm-terracota);
+    color: var(--lm-terracota-dark);
     font-weight: 700;
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
 
   .bib-link:hover {
-    border-bottom-color: var(--lm-terracota);
+    border-bottom-color: var(--lm-terracota-dark);
   }
 }
 
@@ -303,8 +307,13 @@ body.editorial-post {
       box-shadow: none;
     }
 
-    .bib-card h4 {
+    #quarto-document-content .bib-card h3 {
       font-size: 0.9rem;
     }
   }
+}
+
+/* El iframe de comentarios es transparente; debe compartir el fondo del artículo. */
+.giscus-frame {
+  background: var(--lm-bg-body);
 }

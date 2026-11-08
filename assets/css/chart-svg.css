@@ -1,0 +1,32 @@
+/* svglite escribe colores inline. Adaptamos papel, texto y luminosidad de la
+   paleta; las categorías y las escalas mantienen sus tonos reconocibles. */
+.svglite text[style*="fill: #D4C9BA"] { fill: #73695f !important; }
+.svglite text[style*="fill: #C86448"] { fill: #a04d35 !important; }
+
+/* Un SVG usado como img hereda el esquema de color del elemento que lo aloja. */
+@media (prefers-color-scheme: dark) {
+  .svglite :not(text)[style*="fill: #F7F7F4"],
+  /* El crema antiguo también se usa como halo detrás del texto de mapas. */
+  .svglite [style*="fill: #FAF8F3"] { fill: #272b30 !important; }
+  .svglite :not(text)[style*="fill: #F5F1E8"] { fill: #32383e !important; }
+  .svglite text:not([style*="fill:"]),
+  .svglite text[style*="fill: #000000"],
+  .svglite text[style*="fill: #1A1512"],
+  .svglite text[style*="fill: #343A40"],
+  .svglite text[style*="fill: #4A443E"],
+  .svglite text[style*="fill: #73695F"],
+  .svglite text[style*="fill: #D4C9BA"] { fill: #e8e6e3 !important; }
+  .svglite text[style*="fill: #C86448"] { fill: #ff9f85 !important; }
+  .svglite text[style*="fill: #6B7554"] { fill: #b0bf96 !important; }
+  /* El plomo original se pierde sobre el fondo oscuro. */
+  .svglite :not(text)[style*="fill: #343A40"] { fill: #697680 !important; }
+  .svglite rect[style*="fill: #343A40"] { fill-opacity: 1 !important; }
+  .svglite [style*="stroke: #343A40"] { stroke: #a3aeb8 !important; }
+  .svglite [style*="stroke: #73695F"] { stroke: #aba095 !important; }
+  .svglite :not(text)[style*="fill: #C86448"] { fill: #b9553b !important; }
+  .svglite :not(text)[style*="fill: #6B7554"] { fill: #89976b !important; }
+  .svglite [style*="stroke: #6B7554"] { stroke: #89976b !important; }
+  .svglite text[style*="fill: #C62828"] { fill: #ff9f85 !important; }
+  .svglite [style*="stroke: #C62828"] { stroke: #f28b82 !important; }
+  .svglite [style*="stroke: #E6DFD5"] { stroke: #68737e !important; }
+}
