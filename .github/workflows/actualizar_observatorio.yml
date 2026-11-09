@@ -116,8 +116,7 @@ jobs:
           for file in atlas/app.js atlas/js/*.js assets/js/*.js; do
             node --check "$file"
           done
-          node --test atlas/scripts/check-url-state.test.mjs
-          node --test tools/finish-articles.test.mjs
+          node --test atlas/scripts/*.test.mjs tools/*.test.mjs
 
       - name: Renderizar proyecto
         run: quarto render --no-cache
