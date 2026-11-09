@@ -54,34 +54,20 @@ website:
 
   # Barra de navegación
   navbar:
-    title: false
+    title: "Leonardo Mena"
     logo: image/logo_leonardo_mena.svg
     logo-alt: "Leonardo Mena - inicio"
     background: "#ffffff"
     left:
-      - text: Análisis
-        menu:
-          - text: "La República habla de"
-            href: republica-habla-de.qmd
-          - text: "La República en un gráfico"
-            href: republica-en-un-grafico.qmd
+      - href: archivo.qmd
+        text: "Artículos"
+      - href: categorias.qmd
+        text: "Temas"
+      - href: series.qmd
+        text: "Series"
       - href: atlas/index.html
         text: "Atlas"
         icon: graph-up
-      - text: Escuela
-        menu:
-          - text: "Mis predecesores"
-            href: predecesores.qmd
-          - text: "Fundamentos"
-            href: fundamentos.qmd
-      - text: Archivo
-        menu:
-          - text: "Archivo completo"
-            href: archivo.qmd
-          - text: "Categorías"
-            href: categorias.qmd
-          - text: "Secciones"
-            href: secciones.qmd
       - href: about.qmd
         text: "Sobre mí"
     right:
@@ -99,7 +85,9 @@ website:
     left: |
       <p class="footer-brand">© 2026 Leonardo Mena · Economía Aplicada</p>
     center: |
-      <a href="https://leo8221.github.io/leonardo-mena-blog/about.html">Sobre m&iacute;</a> &middot;
+      <a href="/archivo.html">Artículos</a> ·
+      <a href="/secciones.html">Secciones</a> ·
+      <a href="/about.html">Sobre mí</a> ·
       <a href="mailto:leonardomena824@gmail.com">Contacto</a>
     right: |
       <a href="https://x.com/leonardomena824" target="_blank" rel="noopener noreferrer" aria-label="X de Leonardo Mena"><i class="bi bi-twitter"></i></a> ·

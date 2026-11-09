@@ -3,27 +3,12 @@ pagetitle: "Economía aplicada RD"
 description: "Economía aplicada dominicana con análisis, datos y visualizaciones."
 image: image/social-preview.png
 page-layout: full
+body-classes: home-page
 toc: false
 include-in-header: home-head.html
 include-after-body: home-pulse.html
 listing:
-  - id: home-featured
-    contents:
-      - posts/**/*.qmd
-      - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
-      - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
-    sort: ["date desc", "title asc"]
-    max-items: 1
-    type: grid
-    grid-columns: 1
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    fields: [image, date, title, description]
-    image-height: "240px"
-    max-description-length: 140
-
-  - id: home-latest
+  - id: home-stories
     contents:
       - posts/**/*.qmd
       - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
@@ -31,19 +16,21 @@ listing:
     sort: ["date desc", "title asc"]
     max-items: 4
     type: grid
-    grid-columns: 1
-    max-description-length: 110
-    categories: true
+    grid-columns: 2
+    grid-item-border: false
+    image-height: "auto"
+    fields: [image, date, title, description]
+    categories: false
     sort-ui: false
     filter-ui: false
-    fields: [image, date, title, description]
+    max-description-length: 160
 ---
 
 ::: {.home-shell}
 
 ::: {.home-hero}
 ::: {.home-lede}
-<span class="home-kicker">Leonardo Mena · Economía aplicada RD</span>
+<span class="home-kicker">Economía aplicada · República Dominicana</span>
 
 # Economía dominicana, en datos.
 
@@ -57,31 +44,22 @@ Escribo sobre precios, empleo, empresas y otros temas de la economía dominicana
 :::
 :::
 
-::: {.home-grid}
-
-::: {.home-main}
-<h2 class="section-kicker">Último análisis</h2>
-
-::: {#home-featured}
-:::
-:::
-
-:::
-
-::: {.home-latest-section}
+::: {.home-stories-section}
 ::: {.section-header}
-## Más publicaciones
+## Últimas publicaciones
 
 [Ver archivo completo](archivo.qmd)
 :::
 
-::: {#home-latest}
+::: {#home-stories}
 :::
 :::
 
 ::: {.home-pulse-section}
 ::: {.section-header}
-## Indicadores de República Dominicana
+## El país en cifras
+
+[Explorar Atlas](atlas/index.html)
 :::
 
 Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
@@ -97,25 +75,34 @@ Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
 
 ::: {.home-paths-section}
 ::: {.section-header}
-## Explora el blog
+## Encuentra tu próxima lectura
 
 [Ver todas las secciones](secciones.qmd)
 :::
 
 ::: {.home-paths}
 <a class="home-path" href="republica-habla-de.qmd">
-  <span>Entender la coyuntura</span>
-  <strong>Precios, empleo y debates de actualidad.</strong>
+  <span>Análisis</span>
+  <strong>La República habla de</strong>
+  <em>Precios, empleo y debates de actualidad.</em>
 </a>
 
-<a class="home-path" href="atlas/index.html">
-  <span>Explorar los datos</span>
-  <strong>Indicadores, mapas y sectores.</strong>
+<a class="home-path" href="republica-en-un-grafico.qmd">
+  <span>Gráficos</span>
+  <strong>La República en un gráfico</strong>
+  <em>Una pregunta, datos y una lectura.</em>
 </a>
 
 <a class="home-path" href="fundamentos.qmd">
-  <span>Aprender fundamentos</span>
-  <strong>Conceptos económicos con ejemplos.</strong>
+  <span>Conceptos</span>
+  <strong>Fundamentos</strong>
+  <em>Economía explicada con ejemplos cercanos.</em>
+</a>
+
+<a class="home-path" href="predecesores.qmd">
+  <span>Ideas</span>
+  <strong>Mis predecesores</strong>
+  <em>Autores para pensar el presente.</em>
 </a>
 :::
 :::
