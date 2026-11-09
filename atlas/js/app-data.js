@@ -94,8 +94,11 @@ function visibleModules() {
 
 function filteredModules() {
   const query = normalizeText(state.query);
+  const family = statusKey(state.family);
   return visibleModules().filter((module) => {
-    const matchesFamily = state.family === "all" || statusKey(module.family) === statusKey(state.family);
+    if (state.family !== "all" && statusKey(module.family) !== family) return false;
+    // Sin búsqueda, la familia basta: no hay texto que preparar ni comparar.
+    if (!query) return true;
     const source = module.sourceInfo || {};
     const text = [
       module.title,
@@ -109,8 +112,7 @@ function filteredModules() {
       source.label,
       source.detail
     ].filter(Boolean).join(" ");
-    const matchesQuery = !query || normalizeText(text).includes(query);
-    return matchesFamily && matchesQuery;
+    return normalizeText(text).includes(query);
   });
 }
 

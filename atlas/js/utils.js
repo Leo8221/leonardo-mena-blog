@@ -127,8 +127,12 @@ function drawGrid(ctx, width, height, padding, steps) {
   ctx.setLineDash([]);
 }
 
+// La configuración no cambia entre etiquetas; reutilizarla evita construir
+// un formateador por cada número de un gráfico o una tabla.
+const numberFormatter = new Intl.NumberFormat("es-DO", { maximumFractionDigits: 1 });
+
 function formatNumber(value) {
-  return new Intl.NumberFormat("es-DO", { maximumFractionDigits: 1 }).format(value);
+  return numberFormatter.format(value);
 }
 
 function normalizeText(value) {

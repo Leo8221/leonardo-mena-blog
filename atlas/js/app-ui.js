@@ -1,12 +1,13 @@
 function syncFilterState() {
+  const families = new Set(state.data ? visibleModules().map(module => statusKey(module.family)) : []);
   if (state.data) {
-    const familyAvailable = state.family === "all" || visibleModules().some((module) => statusKey(module.family) === statusKey(state.family));
+    const familyAvailable = state.family === "all" || families.has(statusKey(state.family));
     if (!familyAvailable) state.family = "all";
   }
 
   document.querySelectorAll(".filter-pill").forEach((item) => {
     if (state.data) {
-      const available = item.dataset.filter === "all" || visibleModules().some((module) => statusKey(module.family) === statusKey(item.dataset.filter));
+      const available = item.dataset.filter === "all" || families.has(statusKey(item.dataset.filter));
       item.hidden = !available;
     }
     const active = item.dataset.filter === state.family;
@@ -18,13 +19,11 @@ function syncFilterState() {
 function syncSearchState() {
   if (!state.data || !els.resultCount) return;
   const total = visibleModules().length;
-  const filtered = filteredModules();
-  const activeModule = state.active !== "overview" ? findModule(state.active) : null;
-  const activeOutsideFilters = Boolean(activeModule && !filtered.some((module) => module.id === activeModule.id));
+  const { filtered, openOutsideFilters } = navigationModules();
   const hasQuery = Boolean(state.query);
   if (els.searchClear) els.searchClear.hidden = !hasQuery;
   const countText = !hasQuery && state.family === "all" ? `${total} vistas` : `${filtered.length} de ${total} vistas`;
-  els.resultCount.textContent = activeOutsideFilters ? `${countText}. Abierta fuera del filtro.` : countText;
+  els.resultCount.textContent = openOutsideFilters ? `${countText}. Abierta fuera del filtro.` : countText;
 }
 
 function syncMetricState() {
