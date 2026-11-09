@@ -161,12 +161,6 @@ body.editorial-post {
       display: none;
     }
 
-    .related-posts-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
     .related-post-card {
       background: transparent;
       border-left: none;
@@ -281,6 +275,7 @@ body.editorial-post {
       padding-top: 1.5rem;
     }
 
+    .related-posts-grid,
     .bib-grid {
       display: flex;
       flex-direction: column;

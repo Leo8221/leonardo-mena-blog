@@ -101,7 +101,8 @@
   line-height: 1;
 }
 
-.section-header a {
+.section-header a,
+.home-about-section a {
   color: var(--lm-terracota);
   font-family: var(--lm-font-sans);
   font-size: 0.82rem;
@@ -207,13 +208,6 @@
   min-width: 0;
 }
 
-.home-about-section a {
-  color: var(--lm-terracota);
-  font-family: var(--lm-font-sans);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
 .home-paths-section,
 .home-about-section,
 .home-latest-section {
@@ -310,10 +304,6 @@
 /* Quarto crea #listing-home-featured y #listing-home-latest. Los ajustes de sus tarjetas viven aquí, junto a la portada. */
 
 body:has(.home-shell) {
-  :is(#listing-home-featured, #listing-home-latest) .quarto-grid-link {
-    border-bottom: 0;
-  }
-
   :is(#listing-home-featured, #listing-home-latest) .card-body {
     min-height: 0;
   }
@@ -345,6 +335,7 @@ body:has(.home-shell) {
   }
 
   :is(#listing-home-featured, #listing-home-latest) .quarto-grid-link {
+    border-bottom: 0;
     display: block !important;
     width: 100% !important;
     color: inherit;
@@ -525,10 +516,6 @@ body:has(.home-shell) {
       margin-bottom: 0.9rem !important;
     }
 
-    #listing-home-latest {
-      max-width: 100% !important;
-    }
-
     #listing-home-latest .card-img-top {
       display: none !important;
     }
@@ -546,12 +533,10 @@ body:has(.home-shell) {
   .home-hero {
     grid-template-columns: 1fr;
     gap: 1.2rem;
-    align-items: start;
   }
 
   .home-actions {
     justify-content: stretch;
-    min-width: 0;
   }
 
   .home-actions > p {
@@ -636,7 +621,6 @@ body:has(.home-shell) {
 
   .home-action {
     flex: 1 1 100%;
-    justify-content: center;
   }
 
   .home-actions > p,
@@ -654,12 +638,6 @@ body:has(.home-shell) {
     font-size: 0.8rem;
   }
 
-  .home-paths,
-  .home-about-section {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
   .home-pulse-section {
     border-top: 1px solid var(--lm-border);
     padding-top: 1rem;
@@ -670,7 +648,6 @@ body:has(.home-shell) {
   }
 
   .home-pulse-list {
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.6rem;
   }
@@ -678,6 +655,7 @@ body:has(.home-shell) {
   .home-pulse-card {
     grid-template-columns: minmax(0, 1fr) auto;
     padding: 0.75rem;
+    min-height: auto;
   }
 
   .home-pulse-card small {
@@ -693,10 +671,6 @@ body:has(.home-shell) {
   .home-about-section,
   .home-latest-section {
     margin-top: 1.75rem;
-  }
-
-  .home-pulse-card {
-    min-height: auto;
   }
 
   :is(#home-featured, #listing-home-featured) .card-title {
