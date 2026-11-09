@@ -1,48 +1,19 @@
 ---
 title: "Fundamentos"
 page-layout: full
+body-classes: listing-page
+toc: false
 listing:
   contents:
     - posts/fundamentos
   sort: "date desc"
   type: default
+  max-description-length: 160
   fields: [title, date, description]
 ---
 
 ::: {.hub-header}
-Conceptos que aparecen seguido en la conversación pública.
-
-::: {.hub-meta}
-<span class="hub-chip">Conceptos</span>
-<span class="hub-chip">Economía</span>
-<span class="hub-chip">Base</span>
-:::
-:::
-
-::: {.series-grid}
-::: {.series-card}
-<span class="product-kicker">Nivel</span>
-
-## Primero los cimientos
-
-PIB, inflación, déficit, productividad y otros conceptos básicos.
-:::
-
-::: {.series-card}
-<span class="product-kicker">Enfoque</span>
-
-## Ejemplos dominicanos
-
-Ejemplos cercanos, cuando ayudan a entender mejor.
-:::
-
-::: {.series-card}
-<span class="product-kicker">Ruta</span>
-
-## Puerta de entrada
-
-Una entrada sencilla para volver a conceptos que se usan mucho.
-:::
+PIB, inflación, productividad y otros conceptos económicos, explicados con ejemplos cercanos.
 :::
 
 ::: {.section-listing-wrap}

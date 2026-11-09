@@ -1,11 +1,12 @@
 ---
 title: "Series"
 page-layout: full
+body-classes: hub-page
 toc: false
 ---
 
 ::: {.hub-header}
-Las series ahora viven dentro de la arquitectura de productos del sitio.
+Cuatro formas de leer el blog: actualidad, gráficos, conceptos y autores.
 :::
 
 ::: {.product-grid}
@@ -13,6 +14,8 @@ Las series ahora viven dentro de la arquitectura de productos del sitio.
 <span class="product-kicker">Análisis</span>
 
 ## La República habla de
+
+Qué cambia en la economía dominicana y cómo nos afecta.
 
 [Leer serie](republica-habla-de.qmd)
 :::
@@ -22,6 +25,8 @@ Las series ahora viven dentro de la arquitectura de productos del sitio.
 
 ## La República en un gráfico
 
+Una pregunta económica explicada con datos y una figura.
+
 [Ver gráficos](republica-en-un-grafico.qmd)
 :::
 
@@ -30,6 +35,8 @@ Las series ahora viven dentro de la arquitectura de productos del sitio.
 
 ## Fundamentos
 
+Conceptos económicos para entender las noticias y volver a lo básico.
+
 [Aprender conceptos](fundamentos.qmd)
 :::
 
@@ -37,6 +44,8 @@ Las series ahora viven dentro de la arquitectura de productos del sitio.
 <span class="product-kicker">Ideas</span>
 
 ## Mis predecesores
+
+Autores e ideas que siguen siendo útiles hoy.
 
 [Leer perfiles](predecesores.qmd)
 :::

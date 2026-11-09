@@ -1,6 +1,9 @@
 ---
 title: "Archivo"
 page-layout: full
+body-classes: listing-page
+toc: false
+include-after-body: listing-tools.html
 listing:
   contents:
     - posts/**/*.qmd
@@ -8,6 +11,7 @@ listing:
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
   sort: "date desc"
   type: default
+  max-description-length: 160
   categories: true
   sort-ui: [date, title]
   filter-ui: true
@@ -25,6 +29,8 @@ Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por cat
 
 :::
 
-------------------------------------------------------------------------
+<details id="listing-categories">
+<summary>Filtrar por tema</summary>
+</details>
 
 ## Todas las publicaciones

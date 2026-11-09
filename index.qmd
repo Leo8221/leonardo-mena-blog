@@ -60,12 +60,23 @@ Escribo sobre precios, empleo, empresas y otros temas de la economía dominicana
 ::: {.home-grid}
 
 ::: {.home-main}
-<span class="section-kicker">Último análisis</span>
+<h2 class="section-kicker">Último análisis</h2>
 
 ::: {#home-featured}
 :::
 :::
 
+:::
+
+::: {.home-latest-section}
+::: {.section-header}
+## Más publicaciones
+
+[Ver archivo completo](archivo.qmd)
+:::
+
+::: {#home-latest}
+:::
 :::
 
 ::: {.home-pulse-section}
@@ -84,18 +95,11 @@ Consulta la fecha de corte y las fuentes de cada indicador en Atlas.
 :::
 :::
 
-::: {.home-latest-section}
-## Últimas publicaciones
-
-[Ver archivo completo](archivo.qmd)
-
-::: {#home-latest}
-:::
-:::
-
 ::: {.home-paths-section}
 ::: {.section-header}
-## Análisis, datos y conceptos
+## Explora el blog
+
+[Ver todas las secciones](secciones.qmd)
 :::
 
 ::: {.home-paths}

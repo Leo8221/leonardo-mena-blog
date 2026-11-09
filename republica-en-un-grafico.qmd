@@ -1,49 +1,20 @@
 ---
 title: "La República en un gráfico"
 page-layout: full
+body-classes: listing-page
+toc: false
 listing:
   contents:
     - posts/republica-en-un-grafico/**/*.qmd
     - "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"
   sort: "date desc"
   type: default
+  max-description-length: 160
   fields: [title, date, description, image]
 ---
 
 ::: {.hub-header}
-Gráficos para mirar una pregunta económica con datos.
-
-::: {.hub-meta}
-<span class="hub-chip">Gráficos</span>
-<span class="hub-chip">Datos</span>
-<span class="hub-chip">Lectura breve</span>
-:::
-:::
-
-::: {.series-grid}
-::: {.series-card}
-<span class="product-kicker">Idea</span>
-
-## El gráfico ordena
-
-La imagen debe ayudar a pensar, no solo decorar.
-:::
-
-::: {.series-card}
-<span class="product-kicker">Rigor</span>
-
-## Fuente clara
-
-Cada entrega debe decir de dónde sale el dato.
-:::
-
-::: {.series-card}
-<span class="product-kicker">Criterio</span>
-
-## Qué queda
-
-El cierre deja una pregunta o una lectura posible.
-:::
+Una pregunta económica, un gráfico y una lectura de lo que muestran los datos.
 :::
 
 ::: {.section-listing-wrap}

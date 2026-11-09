@@ -22,6 +22,7 @@ project:
     - /assets/css/tokens.css
     - /assets/css/site/**
     - /assets/js/home-pulse.js
+    - /assets/js/listing-tools.js
     - /atlas/index.html
     - /atlas/app.js
     - /atlas/js/**

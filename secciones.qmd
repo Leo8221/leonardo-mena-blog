@@ -1,7 +1,8 @@
 ---
 title: "Secciones"
-description: "Atlas, series y archivo."
+description: "Elige una lectura, explora los datos o busca en el archivo."
 page-layout: full
+body-classes: hub-page
 toc: false
 ---
 
@@ -41,9 +42,19 @@ Un gráfico, una lectura y una pregunta.
 
 ## Fundamentos
 
-Conceptos y autores para ordenar ideas.
+Conceptos económicos explicados con ejemplos.
 
 [Aprender fundamentos](fundamentos.qmd)
+:::
+
+::: {.product-card}
+<span class="product-kicker">Ideas</span>
+
+## Mis predecesores
+
+Autores que ayudan a pensar los problemas del presente.
+
+[Leer perfiles](predecesores.qmd)
 :::
 
 ::: {.product-card}

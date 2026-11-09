@@ -1,6 +1,9 @@
 ---
 title: "Categorías"
 page-layout: full
+body-classes: listing-page
+toc: false
+include-after-body: listing-tools.html
 listing:
   contents:
     - "posts/**/index.qmd"
@@ -8,6 +11,7 @@ listing:
     - "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"
   sort: "date desc"
   type: default
+  max-description-length: 160
   categories: true
   sort-ui: true
   filter-ui: true
@@ -16,35 +20,12 @@ listing:
 ---
 
 ::: {.hub-header}
-Archivo por tema.
+Elige un tema o busca entre los artículos publicados. Los temas se actualizan al publicar.
 :::
 
-::: {.categories-grid}
-<a href="#category=Macroeconomía" class="category-card">
-  <h3>Macroeconomía</h3>
-  <p>Crecimiento, PIB, precios, política monetaria y ciclo económico.</p>
-</a>
-<a href="#category=Inflación" class="category-card">
-  <h3>Inflación</h3>
-  <p>Precios, poder adquisitivo y efectos de segunda ronda.</p>
-</a>
-<a href="#category=Mercado%20laboral" class="category-card">
-  <h3>Mercado laboral</h3>
-  <p>Empleo, salarios, formación y brechas de capital humano.</p>
-</a>
-<a href="#category=Sector%20externo" class="category-card">
-  <h3>Sector externo</h3>
-  <p>Turismo, remesas, energía, tipo de cambio y condiciones globales.</p>
-</a>
-<a href="#category=Política%20fiscal" class="category-card">
-  <h3>Política fiscal</h3>
-  <p>Impuestos, deuda, subsidios y gasto público.</p>
-</a>
-<a href="#category=Desarrollo" class="category-card">
-  <h3>Desarrollo</h3>
-  <p>Pobreza, productividad, territorio y calidad de vida.</p>
-</a>
-:::
+<details id="listing-categories">
+<summary>Filtrar por tema</summary>
+</details>
 
 ::: {.section-listing-wrap}
 ## Artículos
