@@ -1,52 +1,108 @@
 ---
 title: "Series"
 page-layout: full
-body-classes: hub-page
+section-divs: false
+body-classes: hub-page series-page
 toc: false
+listing:
+  - id: latest-analysis
+    contents: [posts/republica-habla-de/**/*.qmd, "!posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/index.qmd"]
+    sort: "date desc"
+    max-items: 1
+    fields: [title, date]
+  - id: latest-chart
+    contents: [posts/republica-en-un-grafico/**/*.qmd, "!posts/republica-en-un-grafico/2026-05-05-mercado-laboral-censo/index.qmd"]
+    sort: "date desc"
+    max-items: 1
+    fields: [title, date]
+  - id: latest-foundations
+    contents: posts/fundamentos/**/*.qmd
+    sort: "date desc"
+    max-items: 1
+    fields: [title, date]
+  - id: latest-thinkers
+    contents: posts/predecesores/**/*.qmd
+    sort: "date desc"
+    max-items: 1
+    fields: [title, date]
 ---
 
 ::: {.hub-header}
-Cuatro formas de leer el blog: actualidad, gráficos, conceptos y autores.
+<span class="page-symbol icon-series" aria-hidden="true"></span>
+
+Cuatro formas de mirar la economía. Cada serie tiene su enfoque; elige por dónde empezar.
 :::
 
-::: {.product-grid}
-::: {.product-card}
-<span class="product-kicker">Análisis</span>
+::: {.series-grid}
+::: {.series-card .series-analysis}
+<span class="series-symbol icon-analysis" aria-hidden="true"></span>
+<span class="product-kicker">01 / Actualidad</span>
 
 ## La República habla de
 
 Qué cambia en la economía dominicana y cómo nos afecta.
 
 [Leer serie](republica-habla-de.qmd)
+
+::: {.series-latest}
+<span class="series-latest-label">La última publicación</span>
+
+::: {#latest-analysis}
+:::
+:::
 :::
 
-::: {.product-card}
-<span class="product-kicker">Visualización</span>
+::: {.series-card .series-chart}
+<span class="series-symbol icon-chart" aria-hidden="true"></span>
+<span class="product-kicker">02 / Datos</span>
 
 ## La República en un gráfico
 
 Una pregunta económica explicada con datos y una figura.
 
 [Ver gráficos](republica-en-un-grafico.qmd)
+
+::: {.series-latest}
+<span class="series-latest-label">La última publicación</span>
+
+::: {#latest-chart}
+:::
+:::
 :::
 
-::: {.product-card}
-<span class="product-kicker">Escuela</span>
+::: {.series-card .series-foundations}
+<span class="series-symbol icon-book" aria-hidden="true"></span>
+<span class="product-kicker">03 / Conceptos</span>
 
 ## Fundamentos
 
 Conceptos económicos para entender las noticias y volver a lo básico.
 
 [Aprender conceptos](fundamentos.qmd)
+
+::: {.series-latest}
+<span class="series-latest-label">La última publicación</span>
+
+::: {#latest-foundations}
+:::
+:::
 :::
 
-::: {.product-card}
-<span class="product-kicker">Ideas</span>
+::: {.series-card .series-thinkers}
+<span class="series-symbol icon-ideas" aria-hidden="true"></span>
+<span class="product-kicker">04 / Autores</span>
 
 ## Mis predecesores
 
 Autores e ideas que siguen siendo útiles hoy.
 
 [Leer perfiles](predecesores.qmd)
+
+::: {.series-latest}
+<span class="series-latest-label">La última publicación</span>
+
+::: {#latest-thinkers}
+:::
+:::
 :::
 :::

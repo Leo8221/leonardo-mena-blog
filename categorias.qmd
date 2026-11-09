@@ -1,7 +1,8 @@
 ---
-title: "Categorías"
+title: "Temas"
 page-layout: full
-body-classes: listing-page
+section-divs: false
+body-classes: listing-page topics-page
 toc: false
 include-after-body: listing-tools.html
 listing:
@@ -20,15 +21,25 @@ listing:
 ---
 
 ::: {.hub-header}
-Elige un tema o busca entre los artículos publicados. Los temas se actualizan al publicar.
+<span class="page-symbol icon-topics" aria-hidden="true"></span>
+
+Empieza por lo que te interesa. Cada tema reúne los artículos que lo abordan, desde distintos ángulos.
 :::
 
-<details id="listing-categories">
-<summary>Filtrar por tema</summary>
-</details>
+::: {#listing-categories .topic-explorer}
+## Explorar por tema
+
+::: {#topic-series}
+### También por serie
+:::
+:::
 
 ::: {.section-listing-wrap}
-## Artículos
+## Todos los artículos {#listing-heading}
+
+<p class="listing-status" role="status" aria-live="polite"></p>
+
+[Elegir otro tema](#listing-categories){.entry-link}
 
 ::: {#listing}
 :::

@@ -1,7 +1,8 @@
 ---
-title: "Archivo"
+title: "Artículos"
 page-layout: full
-body-classes: listing-page
+section-divs: false
+body-classes: listing-page archive-page
 toc: false
 include-after-body: listing-tools.html
 listing:
@@ -15,7 +16,7 @@ listing:
   categories: true
   sort-ui: [date, title]
   filter-ui: true
-  fields: [title, date, description, categories]
+  fields: [title, date, description, categories, image]
   field-display-names:
     title: "Título"
     date: "Fecha"
@@ -25,7 +26,11 @@ listing:
 
 ::: {.archive-header}
 
-Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por categoría para encontrar temas específicos.
+<span class="page-symbol icon-articles" aria-hidden="true"></span>
+
+Economía dominicana, artículo a artículo. Análisis, gráficos e ideas para leer con calma.
+
+[Explorar por tema](categorias.qmd){.entry-link} [Conocer las series](series.qmd){.entry-link}
 
 :::
 
@@ -33,4 +38,6 @@ Todas las publicaciones en orden cronológico. Usa la búsqueda o filtra por cat
 <summary>Filtrar por tema</summary>
 </details>
 
-## Todas las publicaciones
+## Todas las publicaciones {#listing-heading}
+
+<p class="listing-status" role="status" aria-live="polite"></p>
