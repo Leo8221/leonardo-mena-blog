@@ -1,5 +1,9 @@
 #!/usr/bin/env Rscript
 
+# Prepara rd-provinces.geojson para el mapa interactivo. Une la geometría
+# provincial con población y empresas, calcula las métricas y escribe el archivo.
+# Aquí se hacen las uniones y los cálculos; JavaScript solo colorea y selecciona.
+
 suppressPackageStartupMessages({
   library(sf)
   library(dplyr)
@@ -22,6 +26,7 @@ population_path <- list.files(post_dir, pattern = "poblaci", full.names = TRUE)[
 business_path <- list.files(post_dir, pattern = "empresas", full.names = TRUE)[1]
 
 source_cache_path <- function(source_id, fallback_path) {
+  # Prefiere la copia de la ingesta del Atlas; si no existe, usa la fuente del artículo.
   cached <- file.path(root, "atlas", "data", "raw", source_id, basename(fallback_path))
   if (file.exists(cached)) cached else fallback_path
 }
@@ -39,6 +44,8 @@ normalize_key <- function(x) {
     str_replace_all("SEYBO", "SEIBO")
 }
 
+# 32619 mide distancias en metros: permite simplificar con una tolerancia de
+# 1,800 m. Se vuelve a 4326 (longitud/latitud) para exportar el GeoJSON de la web.
 provinces <- st_read(shape_path, quiet = TRUE) |>
   st_transform(32619) |>
   st_make_valid() |>
@@ -69,6 +76,8 @@ map_ready <- provinces |>
   mutate(
     population = as.numeric(total_77),
     business_density = businesses / population * 1000,
+    # Nombre heredado: reescala la densidad entre mínimo=0 y máximo=100.
+    # No estima rentabilidad ni oportunidad de inversión.
     opportunity = rescale(business_density, to = c(0, 100), from = range(business_density, na.rm = TRUE)),
     label = paste0(province, ": ", number(business_density, accuracy = 0.1), " empresas por 1,000 hab.")
   ) |>

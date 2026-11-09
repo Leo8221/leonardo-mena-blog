@@ -1,3 +1,10 @@
+// Para seguir la página: index.html carga estos scripts en orden, sin compilador.
+// En este archivo, boot() lee el JSON preparado por R/Python y conecta los eventos.
+// app-data.js carga mapas bajo demanda, filtra vistas y conserva opciones en la URL.
+// app-navigation.js: renderStage() elige la vista según state.
+// app-modules.js: crea sus tarjetas y hydrateCharts() dibuja los datos recibidos.
+// Los archivos chart-*.js convierten valores en píxeles; no calculan indicadores.
+//
 // Solo estas opciones viajan en el enlace. Los datos y mapas cargados se quedan
 // en memoria y se reutilizan al pasar de una vista a otra.
 const URL_STATE_DEFAULTS = Object.freeze({

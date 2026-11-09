@@ -1,5 +1,11 @@
 #!/usr/bin/env Rscript
 
+# Recorrido de los datos: fetch-atlas-sources.R deja los Excel y CSV en data/raw;
+# este script calcula las series y escribe bcrd-live-data.json. Después,
+# build_atlas_data.py valida y reúne esos resultados con el catálogo del Atlas.
+# Lee primero required_files para localizar cada fuente. Las funciones siguientes
+# extraen series por tema; al final, payload enumera lo que recibe Python.
+
 suppressPackageStartupMessages({
   library(jsonlite)
   library(readxl)
@@ -56,14 +62,18 @@ optional_files <- c(
 )
 
 to_num <- function(x) {
+  # Estos archivos usan coma decimal. Los encabezados y celdas no numéricas
+  # quedan como NA; no se sustituyen por cero ni se interpretan como separadores de miles.
   suppressWarnings(as.numeric(gsub(",", ".", as.character(x), fixed = TRUE)))
 }
 
 year_number <- function(values) {
+  # Admite años con una nota al final, como "2025*", sin perder esa fila.
   suppressWarnings(as.integer(sub("^\\s*([0-9]{4}).*$", "\\1", as.character(values))))
 }
 
 quarter_number <- function(values) {
+  # Abreviaturas de los trimestres en los Excel del BCRD; devuelve 1, 2, 3 o 4.
   match(trimws(as.character(values)), c("E-M", "A-J", "J-S", "O-D"))
 }
 
@@ -80,6 +90,7 @@ fill_down_year <- function(values) {
 }
 
 month_number <- function(value) {
+  # Acepta nombre completo o abreviado; un encabezado que no sea un mes devuelve NA.
   key <- tolower(trimws(as.character(value)))
   key <- sub("[.].*$", "", key)
   key <- iconv(key, to = "ASCII//TRANSLIT")
@@ -88,6 +99,7 @@ month_number <- function(value) {
 }
 
 normalize_text <- function(value) {
+  # Solo sirve para localizar filas por su nombre. Las etiquetas visibles se conservan aparte.
   text <- iconv(as.character(value), to = "ASCII//TRANSLIT")
   text <- tolower(trimws(text))
   gsub("[^a-z0-9]+", " ", text)
@@ -104,6 +116,7 @@ norm01 <- function(value) {
 }
 
 `%||%` <- function(x, y) {
+  # Usa y si no hay valor en x. Un NA sí es un dato ausente explícito y se conserva.
   if (is.null(x) || length(x) == 0) y else x
 }
 
@@ -126,6 +139,7 @@ read_monthly_series <- function(path, sheet, year_col, month_col, value_col, sca
 }
 
 latest_monthly <- function(df, value_name) {
+  # Ordena toda la historia y nombra la columna; todavía no recorta los meses.
   df <- df[order(df$year, df$month), ]
   names(df)[names(df) == "value"] <- value_name
   df
@@ -164,6 +178,9 @@ price_timeline <- data.frame(
 )
 
 price_components <- function(path) {
+  # Toma la última variación mensual (%) de cada grupo del IPC, no su aporte
+  # en puntos porcentuales. "contribution" es el nombre conservado en el JSON.
+  # pressure es su magnitud relativa: el mayor cambio absoluto equivale a 100.
   raw <- read_excel(path, sheet = " Grupos Base 2019-2020", col_names = FALSE, .name_repair = "minimal")
   years <- fill_down_year(raw[[1]])
   months <- vapply(raw[[1]], month_number, integer(1))
@@ -187,6 +204,8 @@ price_components <- function(path) {
 }
 
 quarterly_totals <- function(path, total_row, year_row, quarter_row) {
+  # Las filas indican dónde están total, año y trimestre en cada Excel.
+  # Devuelve montos en las unidades originales del BCRD: millones de US$.
   raw <- read_excel(path, sheet = excel_sheets(path)[1], col_names = FALSE, .name_repair = "minimal")
   years <- to_num(unlist(raw[year_row, ], use.names = FALSE))
   values <- to_num(unlist(raw[total_row, ], use.names = FALSE))
@@ -210,6 +229,8 @@ if (!nrow(trade_quarters)) stop("No hay trimestres comunes de comercio BCRD.", c
 latest_trade_year <- max(trade_quarters$year)
 latest_trade_quarter <- max(trade_quarters$quarter[trade_quarters$year == latest_trade_year])
 comparable <- trade_quarters[trade_quarters$quarter <= latest_trade_quarter, ]
+# Si el último corte es T2, compara enero-junio en TODOS los años. Comparar
+# medio año con años completos produciría una caída que no existe en los datos.
 complete_years <- as.integer(names(Filter(function(rows) {
   identical(sort(unique(rows$quarter)), seq_len(latest_trade_quarter))
 }, split(comparable, comparable$year))))
@@ -227,6 +248,9 @@ trade_flows <- data.frame(
 )
 
 export_categories <- function(path) {
+  # Alternativa BCRD cuando no hay capítulos DGA. La participación se calcula
+  # sobre todas las categorías antes de mostrar las ocho mayores.
+  # El campo heredado complexity repite share; no es un índice de complejidad económica.
   raw <- read_excel(path, sheet = excel_sheets(path)[1], col_names = FALSE, .name_repair = "minimal")
   years <- to_num(unlist(raw[6, ], use.names = FALSE))
   value_cols <- which(!is.na(years))
@@ -255,6 +279,9 @@ export_categories <- function(path) {
 }
 
 dga_export_categories <- function(exports_path, imports_path) {
+  # Agrupa por capítulo en el último año exportador. share es % de exportaciones;
+  # complexity conserva el nombre del contrato, pero contiene cobertura X/M * 100.
+  # La regla actual asigna 100 cuando no hay importaciones y limita la salida a 999.
   if (!file.exists(exports_path) || !file.exists(imports_path)) return(NULL)
   read_dga <- function(path, value_name) {
     raw <- read.csv(path, sep = ";", fileEncoding = "UTF-8-BOM", stringsAsFactors = FALSE, check.names = FALSE)
@@ -292,6 +319,8 @@ dga_export_categories <- function(exports_path, imports_path) {
 }
 
 labor_indicators <- function(path) {
+  # Lee las cinco tasas seleccionadas de ENCFT en el último trimestre, en %.
+  # cutoff se guarda como atributo para acompañar la tabla sin repetirlo en cada fila.
   raw <- read_excel(path, sheet = "Indicadores", col_names = FALSE, .name_repair = "minimal")
   years <- fill_down_year(unlist(raw[31, ], use.names = FALSE))
   quarters <- sub("\\s.*$", "", trimws(as.character(unlist(raw[32, ], use.names = FALSE))))
@@ -309,6 +338,7 @@ labor_indicators <- function(path) {
 }
 
 labor_sectors <- function(path) {
+  # Convierte ocupados por rama en participación (%) del total y muestra las siete mayores.
   raw <- read_excel(path, sheet = "Total", col_names = FALSE, .name_repair = "minimal")
   latest_row <- max(which(!is.na(to_num(raw[[3]]))))
   labels <- as.character(unlist(raw[9, ], use.names = FALSE))
@@ -322,6 +352,8 @@ labor_sectors <- function(path) {
 }
 
 tss_labor_trend <- function(jobs_path, employers_path) {
+  # Combina empleos y empleadores cotizantes por fecha. Es una fuente opcional:
+  # si falta algún archivo, devuelve NULL y no inventa una tendencia de reemplazo.
   if (!file.exists(jobs_path) || !file.exists(employers_path)) {
     return(NULL)
   }
@@ -508,6 +540,9 @@ tss_labor_trend <- function(jobs_path, employers_path) {
 }
 
 external_services <- function(path) {
+  # Los créditos de la balanza de servicios son ingresos por servicios al exterior.
+  # La serie compara seis años con su máximo (=100); los rubros se normalizan
+  # por separado en el último año. Ninguna de las dos medidas es un índice de riesgo.
   if (!file.exists(path)) return(NULL)
   raw <- read_excel(path, sheet = "Anual", col_names = FALSE, .name_repair = "minimal")
   years <- suppressWarnings(as.integer(unlist(raw[6, ], use.names = FALSE)))
@@ -540,6 +575,10 @@ external_services <- function(path) {
 }
 
 sector_model <- function(path) {
+  # Suma el PIB nominal de cada actividad en los trimestres disponibles del último
+  # año y lo compara con la mayor actividad (=100). pressure es un nombre heredado:
+  # este cálculo mide tamaño relativo, no exposición a choques ni productividad.
+  # driver y direction son clasificaciones editoriales, no resultados estimados.
   raw <- read_excel(path, sheet = "PIB$_Trim", col_names = FALSE, .name_repair = "minimal")
   years <- fill_down_year(unlist(raw[7, ], use.names = FALSE))
   quarters <- quarter_number(unlist(raw[8, ], use.names = FALSE))

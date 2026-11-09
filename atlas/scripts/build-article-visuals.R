@@ -1,5 +1,9 @@
 #!/usr/bin/env Rscript
 
+# Reutiliza las fuentes de los artículos para crear article-visuals.json y los
+# GeoJSON regional y mundial. Cada bloque indica el artículo del que toma datos.
+# Este script prepara cifras y geometrías; no vuelve a renderizar los artículos.
+
 suppressPackageStartupMessages({
   library(sf)
   library(dplyr)
@@ -30,10 +34,13 @@ source_cache_path <- function(source_id, fallback_path) {
 }
 
 read_csv_utf8 <- function(path, ...) {
+  # ... permite pasar separador y tipos de columnas sin repetir la configuración UTF-8.
   read_csv(path, locale = locale(encoding = "UTF-8"), show_col_types = FALSE, ...)
 }
 
 validate_no_mojibake <- function(path) {
+  # Comprueba el archivo ya escrito y falla si parece tener texto mal decodificado.
+  # No sustituye caracteres: el error debe corregirse en la lectura de la fuente.
   text <- readLines(path, encoding = "UTF-8", warn = FALSE)
   bad_patterns <- c(intToUtf8(0x00c3), intToUtf8(0x00c2), intToUtf8(0xfffd), "C1", "SC!")
   bad <- grep(paste(bad_patterns, collapse = "|"), text, value = TRUE)
@@ -44,6 +51,7 @@ validate_no_mojibake <- function(path) {
 }
 
 normalize_key <- function(x) {
+  # Clave para unir tablas y mapas; se normaliza aparte del nombre que verá el lector.
   x |>
     str_to_upper() |>
     str_trim() |>
@@ -52,6 +60,7 @@ normalize_key <- function(x) {
 }
 
 clean_label <- function(x) {
+  # Mayúscula inicial para nombres visibles, conservando "de" y "del" en minúscula.
   x |>
     str_to_title() |>
     str_replace_all(" De ", " de ") |>
@@ -59,6 +68,7 @@ clean_label <- function(x) {
 }
 
 write_geojson <- function(sf_obj, path) {
+  # sf escribe un archivo nuevo: retirar el anterior evita añadir otra capa por accidente.
   if (file.exists(path)) unlink(path)
   st_write(sf_obj, path, driver = "GeoJSON", quiet = TRUE)
   validate_no_mojibake(path)
