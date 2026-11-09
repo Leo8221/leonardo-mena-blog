@@ -84,8 +84,12 @@ body.quarto-dark.editorial-post .key-takeaways strong {
   place-items: center;
   border: 1px solid var(--lm-border);
   background: var(--lm-bg-card);
-  aspect-ratio: 1;
+  color-scheme: light;
   padding: 1.2rem;
+}
+
+body.quarto-dark .about-mark {
+  color-scheme: dark;
 }
 
 .about-mark img {

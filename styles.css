@@ -4,6 +4,7 @@
 /* Cada import añade reglas al anterior. Si dos reglas tienen igual prioridad,
    gana la última. Cada componente incluye sus propios ajustes para móvil. */
 @import url('assets/css/site/base.css');
+@import url('assets/css/site/icons.css');
 @import url('assets/css/site/navigation.css');
 @import url('assets/css/site/home.css');
 @import url('assets/css/site/listings.css');

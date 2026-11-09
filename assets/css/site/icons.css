@@ -1,0 +1,32 @@
+/* Dibujos propios sobre una cuadrícula de 32 unidades. La máscara toma el
+   color del texto: el mismo archivo sirve en claro, oscuro y alto contraste. */
+.icon-articles { --icon: url('../../icons/articles.svg'); }
+.icon-topics { --icon: url('../../icons/topics.svg'); }
+.icon-series { --icon: url('../../icons/series.svg'); }
+.icon-analysis { --icon: url('../../icons/analysis.svg'); }
+.icon-chart { --icon: url('../../icons/chart.svg'); }
+.icon-book { --icon: url('../../icons/book.svg'); }
+.icon-ideas { --icon: url('../../icons/ideas.svg'); }
+.icon-people { --icon: url('../../icons/people.svg'); }
+.icon-economy { --icon: url('../../icons/economy.svg'); }
+.icon-business { --icon: url('../../icons/business.svg'); }
+.icon-transport { --icon: url('../../icons/transport.svg'); }
+.icon-compass { --icon: url('../../icons/compass.svg'); }
+
+.page-symbol, .series-symbol, .topic-symbol {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+}
+.page-symbol { color: var(--lm-terracota-dark); }
+
+@media (forced-colors: active) {
+  .page-symbol, .series-symbol, .topic-symbol,
+  .navbar .quarto-color-scheme-toggle::before,
+  #quarto-header #quarto-search .aa-DetachedSearchButtonIcon {
+    background: CanvasText !important;
+    forced-color-adjust: none;
+  }
+}
