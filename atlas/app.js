@@ -25,27 +25,32 @@ const state = {
   ...URL_STATE_DEFAULTS,
   mapPinned: {},
   booted: false,
+  focusStage: false,
+  focusControl: null,
+  routeSearch: "",
   lastTrackedSearch: ""
 };
 
 const els = {
   app: document.querySelector(".atlas-app"),
-  nav: document.getElementById("module-nav"),
+  moduleSwitch: document.getElementById("module-switch"),
+  viewNavigation: document.getElementById("view-navigation"),
+  intro: document.getElementById("atlas-intro"),
+  feature: document.getElementById("atlas-feature"),
+  catalog: document.getElementById("atlas-catalog"),
+  family: document.getElementById("atlas-family"),
+  catalogReset: document.getElementById("catalog-reset"),
+  snapshot: document.getElementById("atlas-snapshot"),
   search: document.getElementById("atlas-search"),
   searchClear: document.getElementById("atlas-search-clear"),
   resultCount: document.getElementById("atlas-result-count"),
   metricStrip: document.getElementById("metric-strip"),
-  mobileNav: document.getElementById("mobile-module-nav"),
   stage: document.getElementById("module-stage"),
-  menuToggle: document.getElementById("menu-toggle"),
-  sidebar: document.getElementById("atlas-sidebar"),
-  sidebarBackdrop: document.getElementById("sidebar-backdrop"),
   main: document.getElementById("atlas-main"),
   status: document.getElementById("atlas-status"),
   themeToggle: document.getElementById("atlas-theme-toggle")
 };
 
-let sidebarReturnFocus = null;
 const ATLAS_THEME_STORAGE_KEY = "quarto-color-scheme";
 const atlasThemeMedia = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
@@ -121,7 +126,7 @@ function initAtlasTheme() {
 
 const OVERVIEW_GROUPS = [
   {
-    title: "Ahora",
+    title: "Coyuntura y precios",
     summary: "Coyuntura, precios y señales externas.",
     modules: ["pulso-macro", "contexto-externo", "costo-vida"]
   },
@@ -206,6 +211,9 @@ async function boot() {
     return;
   }
 
+  // Canvas no vuelve a componer el texto cuando termina de cargar la tipografía.
+  // Esperarla evita que el primer dibujo conserve letras de la fuente de reserva.
+  if (document.fonts) await document.fonts.ready;
   bindEvents();
   applyStateFromUrl();
   syncFilterState();
@@ -232,50 +240,33 @@ function bindEvents() {
     els.search.focus();
   });
 
-  document.querySelectorAll(".filter-pill").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.family = button.dataset.filter;
-      refreshAtlasFilters();
-      trackAtlasEvent("atlas_filter_change", { filter: state.family });
-    });
+  els.family.addEventListener("change", () => {
+    state.family = els.family.value;
+    refreshAtlasFilters();
+    trackAtlasEvent("atlas_filter_change", { filter: state.family });
   });
-
-  els.menuToggle.addEventListener("click", () => {
-    if (document.body.classList.contains("sidebar-open")) {
-      closeSidebar({ restoreFocus: true });
-    } else {
-      openSidebar();
-    }
+  els.moduleSwitch.addEventListener("change", () => {
+    setActive(els.moduleSwitch.value, { source: "view-switcher" });
   });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && document.body.classList.contains("sidebar-open")) {
-      closeSidebar({ restoreFocus: true });
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!document.body.classList.contains("sidebar-open")) return;
-    if (els.sidebar.contains(event.target) || els.menuToggle.contains(event.target)) return;
-    closeSidebar({ restoreFocus: false });
-  });
-
-  if (els.sidebarBackdrop) {
-    els.sidebarBackdrop.addEventListener("click", () => closeSidebar({ restoreFocus: true }));
-  }
 
   window.addEventListener("resize", debounce(() => {
     renderStage();
   }, 140));
 
   window.addEventListener("popstate", () => {
+    // Ir a Datos o Fuentes solo cambia el ancla, no la vista ni sus controles.
+    if (window.location.search === state.routeSearch) return;
     applyStateFromUrl();
+    state.routeSearch = window.location.search;
+    state.focusStage = true;
     render();
     updateDocumentTitle();
   });
 
   window.addEventListener("hashchange", () => {
-    if (!window.location.hash) return;
+    // Los enlaces internos (Datos, Fuentes) no son rutas antiguas de módulos.
+    const id = window.location.hash.slice(1).split("?")[0];
+    if (id !== "overview" && !findModule(id)) return;
     applyStateFromUrl();
     updateUrlState({ replace: true });
     render();
@@ -287,6 +278,5 @@ function render() {
   syncSearchState();
   renderMetrics();
   renderNavigation();
-  renderMobileNavigation();
   renderStage();
 }

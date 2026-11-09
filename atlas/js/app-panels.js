@@ -2,7 +2,7 @@ function renderStageActions(canExport) {
   return `
     <div class="stage-actions">
       <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Copiar enlace</button>
-      ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">CSV</button>` : ""}
+      ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">Descargar CSV</button>` : ""}
     </div>
   `;
 }
@@ -23,7 +23,8 @@ function renderModuleBody(module) {
   const body = renderer ? renderer(module) : renderUnsupported(module);
   return `
     ${renderModuleBrief(module)}
-    <div class="chart-layout">
+    <h2 class="sr-only">Gráficos</h2>
+    <div class="chart-layout" id="view-charts">
       ${body}
       ${renderSourceCard(module)}
     </div>
@@ -33,7 +34,9 @@ function renderModuleBody(module) {
 
 function renderModuleBrief(module) {
   return `
-    <section class="module-brief" aria-label="Lectura del módulo">
+    <details class="module-context">
+      <summary>Cómo leer esta vista</summary>
+      <section class="module-brief" aria-label="Lectura del módulo">
       ${module.question ? `<p class="module-brief-question">${escapeHtml(module.question)}</p>` : ""}
       ${module.insight ? `
         <p class="module-brief-reading">
@@ -42,7 +45,8 @@ function renderModuleBrief(module) {
         </p>
       ` : ""}
       ${renderModuleGuide(module)}
-    </section>
+      </section>
+    </details>
   `;
 }
 
@@ -86,7 +90,7 @@ function renderSourceCard(module) {
     : "";
 
   return `
-    <aside class="source-card" aria-label="Fuente">
+    <aside class="source-card" id="view-sources" aria-label="Fuente">
       <div class="source-card-main">
         <span>Fuente</span>
         <strong>${escapeHtml(sourceLabel)}</strong>
@@ -129,7 +133,7 @@ function renderDataAppendix(module) {
   if (!datasets.length) return "";
 
   return `
-    <section class="data-appendix" aria-label="Datos tabulares del módulo">
+    <section class="data-appendix" id="view-data" aria-label="Datos tabulares del módulo">
       <div class="data-appendix-head">
         <div>
           <span>Datos</span>

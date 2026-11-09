@@ -259,7 +259,7 @@ function renderUnsupported(module) {
 
 function chartToggle(scope, id, label) {
   const active = state[CHART_CONTROLS[scope]];
-  return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
+  return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" aria-pressed="${active === id}" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
 }
 
 function chartControls(toolbarHtml = "", actionsHtml = "") {

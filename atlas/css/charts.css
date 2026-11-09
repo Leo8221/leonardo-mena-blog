@@ -4,6 +4,23 @@
   gap: 0.75rem;
 }
 
+.module-context {
+  margin-bottom: 16px;
+}
+
+.module-context > summary {
+  width: fit-content;
+  min-height: 44px;
+  align-content: center;
+  color: var(--soft);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.module-context[open] > summary {
+  margin-bottom: 12px;
+}
+
 .module-brief {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);

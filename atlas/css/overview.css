@@ -1,272 +1,371 @@
-.metric-card,
-.module-stage,
-.chart-card,
-.module-card,
-.mobile-module-card {
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--card);
-  box-shadow: 0 10px 30px rgba(25, 27, 31, 0.06);
-}
-
-.mobile-atlas-nav {
-  display: none;
-}
-
-.metric-strip {
+.atlas-intro {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin-bottom: 0.75rem;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+  padding-block: 56px 48px;
 }
 
-.metric-card {
+.atlas-intro h1 {
+  margin: 0;
+  font: 500 clamp(2.8rem, 4.5vw, 4.4rem)/1.02 "Crimson Pro", Georgia, serif;
+  letter-spacing: -0.035em;
+}
+
+.atlas-intro h1 em {
+  color: var(--terracotta-dark);
+  font-style: normal;
+}
+
+.atlas-intro-copy > p:not(.eyebrow) {
+  max-width: 40ch;
+  color: var(--soft);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 24px 0 16px;
+}
+
+.explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  color: var(--terracotta-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.atlas-feature {
   min-width: 0;
-  min-height: 62px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-color: color-mix(in srgb, var(--border) 72%, transparent);
-  box-shadow: none;
-  padding: 0.55rem 0.65rem;
-}
-
-.metric-card:hover,
-.metric-card.is-active {
-  border-color: var(--border-strong);
-  box-shadow: 0 8px 24px rgba(25, 27, 31, 0.08);
-}
-
-.metric-card.is-active {
-  background: color-mix(in srgb, var(--terracotta) 7%, var(--card));
-}
-
-.metric-card small {
-  color: var(--muted);
-  font-size: var(--ui-caption);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.metric-card strong {
-  margin-top: 0.18rem;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: clamp(1.08rem, 1.25vw, 1.42rem);
-  line-height: 1;
-}
-
-.metric-card span {
-  color: var(--soft);
-  font-size: var(--ui-caption);
-  font-weight: 700;
-}
-
-.metric-card em {
-  display: none;
-}
-
-.metric-card small,
-.metric-card strong,
-.metric-card span,
-.metric-card em {
-  overflow-wrap: anywhere;
-}
-
-.metric-card[data-tone="good"] span {
-  color: var(--lm-success);
-}
-
-.metric-card[data-tone="warn"] span {
-  color: var(--lm-warning);
-}
-
-.workspace-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.75rem;
-}
-
-.module-stage {
-  min-width: 0;
-  min-height: 480px;
-  padding: 0.85rem;
-}
-
-.stage-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.stage-header h2 {
-  margin: 0.3rem 0 0;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
-  line-height: 1;
-}
-
-.stage-header p {
-  max-width: 760px;
-  margin: 0.45rem 0 0;
-  color: var(--soft);
-  font-size: 0.92rem;
-}
-
-.stage-actions {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.stage-action {
-  min-height: var(--lm-control-min);
+  padding: 24px;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 4px;
   background: var(--card);
+}
+
+.feature-heading, .feature-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.feature-heading {
   color: var(--soft);
-  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.feature-heading strong {
+  display: block;
+  color: var(--ink);
+  font: 500 2.4rem/1.1 "Crimson Pro", Georgia, serif;
+  margin-top: 6px;
+}
+
+.atlas-feature canvas {
+  display: block;
+  width: 100%;
+  height: 190px;
+  margin-top: 16px;
+}
+
+.feature-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  color: var(--soft);
   font-size: 0.72rem;
-  font-weight: 800;
-  padding: 0 0.65rem;
+  flex-wrap: wrap;
+  gap: 4px 16px;
 }
 
-.stage-action[data-action="copy-link"] {
-  border-color: color-mix(in srgb, var(--terracotta) 42%, var(--border));
+.feature-footer a {
   color: var(--terracotta-dark);
-}
-
-.stage-action:hover {
-  border-color: var(--terracotta);
-  color: var(--terracotta-dark);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
 }
 
 .overview-shell {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
 }
 
 .overview-group {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.overview-group + .overview-group {
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  min-width: 0;
 }
 
 .overview-group-head {
-  display: grid;
-  gap: 0.18rem;
-  max-width: 820px;
+  min-height: 106px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--olive);
 }
 
-.overview-group-head h3 {
-  margin: 0;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: clamp(1.45rem, 2.3vw, 2rem);
-  line-height: 1.05;
+.overview-group:nth-child(2) .overview-group-head {
+  border-color: var(--blue);
+}
+
+.overview-group:nth-child(3) .overview-group-head {
+  border-color: var(--terracotta);
+}
+
+.overview-group-head h2 {
+  font: 600 1.65rem/1.1 "Crimson Pro", Georgia, serif;
+  margin: 0 0 10px;
 }
 
 .overview-group-head p {
-  margin: 0;
   color: var(--soft);
-  font-size: 0.88rem;
-  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.65rem;
 }
 
 .module-card {
-  min-height: 190px;
-  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.58rem;
-  border-top: 3px solid var(--olive);
-  cursor: pointer;
-  padding: 0.88rem;
-  text-align: left;
-  white-space: normal;
+  min-width: 0;
+  gap: 10px;
+  padding: 22px 8px;
+  border-bottom: 1px solid var(--border);
+  transition: background 150ms ease;
 }
 
-.module-card.is-active {
-  border-top-color: var(--terracotta);
+.module-card:hover {
+  background: var(--card);
+}
+
+.module-card:hover h3 {
+  color: var(--terracotta-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.module-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--soft);
+  font-size: 0.72rem;
+}
+
+.module-card-top > :last-child {
+  margin-left: auto;
+  color: var(--terracotta-dark);
+  font-size: 1.15rem;
+}
+
+.module-icon {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: var(--terracotta-dark);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 .module-card h3 {
   margin: 0;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.25rem;
-  line-height: 1.08;
+  font: 600 1.5rem/1.1 "Crimson Pro", Georgia, serif;
 }
 
 .module-card p {
-  margin: 0;
   color: var(--soft);
   font-size: 0.82rem;
-  overflow-wrap: anywhere;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 2.6em;
 }
 
-.module-card-meta,
 .module-card-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.75rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 800;
-}
-
-.module-card-meta {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.module-question {
-  color: var(--ink) !important;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.05rem !important;
-  line-height: 1.18;
-}
-
-.module-reading {
-  display: grid;
-  gap: 0.18rem;
-  border-left: 2px solid var(--terracotta);
-  padding-left: 0.6rem;
+  gap: 6px 12px;
   color: var(--soft);
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.module-reading strong {
-  color: var(--terracotta-dark);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.module-card-footer {
+  font-size: 0.7rem;
   margin-top: auto;
-  border-top: 1px solid var(--border);
-  padding-top: 0.7rem;
+  padding-top: 6px;
 }
 
-.module-card-footer strong {
+.module-stage {
+  min-width: 0;
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.stage-header h1 {
+  font: 500 clamp(2.2rem, 4vw, 3.4rem)/1.05 "Crimson Pro", Georgia, serif;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.view-provenance {
+  color: var(--soft);
+  font-size: 0.8rem;
+  margin: 14px 0 0;
+}
+
+.stage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.stage-action {
+  min-height: 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--soft);
+  cursor: pointer;
+  font-size: 0.78rem;
+  padding: 8px 12px;
+}
+
+.stage-action:hover {
   color: var(--terracotta-dark);
-  font-size: 0.72rem;
-  text-transform: uppercase;
+  border-color: var(--terracotta);
+}
+
+.chart-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+}
+
+.atlas-snapshot {
+  margin-top: 40px;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border);
+  padding-block: 12px;
+}
+
+.atlas-snapshot summary {
+  cursor: pointer;
+  min-height: 44px;
+  align-content: center;
+  font-size: 0.9rem;
+}
+
+.atlas-snapshot > p {
+  color: var(--soft);
+  font-size: 0.8rem;
+  margin: 0 0 20px;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.metric-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.metric-card strong {
+  font: 600 1.6rem/1.1 "Crimson Pro", Georgia, serif;
+}
+
+.metric-card small, .metric-card span, .metric-card em {
+  font-size: 0.75rem;
+  color: var(--soft);
+  font-style: normal;
+}
+
+.metric-card:hover {
+  border-color: var(--terracotta);
+}
+
+@media (max-width: 1000px) {
+  .atlas-intro {
+    gap: 28px;
+  }
+
+  .overview-shell {
+    gap: 20px;
+  }
+
+  .overview-group-head {
+    min-height: 126px;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .atlas-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 36px;
+  }
+
+  .atlas-intro h1 {
+    font-size: clamp(2.65rem, 8vw, 3.7rem);
+  }
+
+  .atlas-intro-copy > p:not(.eyebrow) {
+    margin-block: 18px 12px;
+  }
+
+  .atlas-feature {
+    padding: 16px;
+  }
+
+  .overview-shell {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .overview-group-head {
+    min-height: 0;
+  }
+
+  .module-card {
+    padding-inline: 0;
+  }
+
+  .stage-header {
+    flex-direction: column;
+  }
+
+  .stage-actions {
+    justify-content: flex-start;
+  }
+
+  .metric-strip {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (forced-colors: active) {
+  .module-icon {
+    background: LinkText;
+    forced-color-adjust: none;
+  }
+
 }

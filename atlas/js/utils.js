@@ -164,6 +164,10 @@ function debounce(fn, wait) {
 }
 
 function renderLoadError(error) {
+  els.stage.setAttribute("aria-busy", "false");
+  els.catalog.hidden = true;
+  els.feature.hidden = true;
+  els.snapshot.hidden = true;
   els.stage.innerHTML = `
     <div class="empty-state">
       <strong>No pudimos cargar los datos del Atlas.</strong>

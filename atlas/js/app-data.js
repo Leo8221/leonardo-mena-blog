@@ -163,12 +163,12 @@ function setActive(moduleId, options = {}) {
   const next = moduleId === "overview" || findModule(moduleId) ? moduleId : "overview";
   const previous = state.active;
   state.active = next;
+  state.focusControl = null;
+  if (options.metric) setActiveMetricForModule(findModule(next), options.metric);
+  state.focusStage = true;
   updateUrlState({ replace: Boolean(options.replace) || next === previous });
-  closeSidebar({ restoreFocus: false });
-  syncMetricState();
   syncSearchState();
   renderNavigation();
-  renderMobileNavigation();
   renderStage();
   if (next !== previous || state.booted) {
     trackAtlasEvent("atlas_module_open", {
@@ -202,6 +202,7 @@ function updateUrlState({ replace = false } = {}) {
   const url = buildAtlasUrl();
   const method = replace ? "replaceState" : "pushState";
   history[method](null, "", url);
+  state.routeSearch = url.search;
   updateDocumentTitle();
 }
 
@@ -278,7 +279,6 @@ function refreshAtlasFilters({ redrawStage = false } = {}) {
   syncFilterState();
   syncSearchState();
   renderNavigation();
-  renderMobileNavigation();
   if (redrawStage || state.active === "overview") renderStage();
   updateUrlState({ replace: true });
 }
@@ -289,10 +289,12 @@ async function handleAtlasClick(event) {
   if (!button) return;
 
   if (button.dataset.module) {
+    // Los enlaces también permiten abrir la vista en otra pestaña.
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
     const source = button.matches(".metric-card") ? "metric-strip"
-      : button.matches(".module-button") ? "sidebar"
-      : button.matches(".mobile-module-card") ? "mobile-nav" : "overview";
-    setActive(button.dataset.module, { source });
+      : button.matches(".back-to-catalog") ? "back-to-catalog" : "overview";
+    setActive(button.dataset.module, { source, metric: button.dataset.metric });
     return;
   }
   if (button.matches(".chart-toggle")) {
@@ -300,6 +302,7 @@ async function handleAtlasClick(event) {
     const property = CHART_CONTROLS[scope];
     if (!property) return;
     state[property] = metric;
+    state.focusControl = { scope, metric };
     updateUrlState({ replace: true });
     trackAtlasEvent(["visual", "territoryMap"].includes(scope) ? "atlas_map_selection" : "atlas_chart_toggle", {
       chart_id: scope, metric

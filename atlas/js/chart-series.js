@@ -85,9 +85,18 @@ function drawDualLineChart(canvas, labels, series, title, options = {}) {
 
   ctx.fillStyle = CHART_SYSTEM.colors.muted;
   ctx.font = "11px Inter";
+  // Los rótulos se espacian según el ancho; no se descartan puntos ni tooltips.
+  const labelSpacing = Math.max(...labels.map(label => ctx.measureText(label).width)) * 2 + 16;
+  const availableLabels = Math.max(2, Math.floor(plotW / labelSpacing) + 1);
+  const labelCount = Math.min(labels.length, options.maxLabels || availableLabels, availableLabels);
+  const labelIndexes = new Set(Array.from({ length: labelCount }, (_, index) =>
+    Math.round(index * (labels.length - 1) / Math.max(1, labelCount - 1))));
   labels.forEach((label, index) => {
+    if (!labelIndexes.has(index)) return;
     const x = padding.left + (plotW * index) / Math.max(labels.length - 1, 1);
-    ctx.fillText(label, x - 10, height - 14);
+    const labelWidth = ctx.measureText(label).width;
+    const labelX = Math.min(Math.max(padding.left, x - labelWidth / 2), width - padding.right - labelWidth);
+    ctx.fillText(label, labelX, height - 14);
   });
 
   for (let i = 0; i <= 4; i += 1) {

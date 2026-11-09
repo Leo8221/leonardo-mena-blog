@@ -6,10 +6,12 @@ function drawHorizontalBarChart(canvas, rows, options) {
   const { width, height } = canvas.getBoundingClientRect();
   const values = rows.map((item) => Number(item[options.valueField]));
   const max = options.max || Math.max(...values.map(Math.abs), 1);
-  const padding = { top: 34, right: 40, bottom: 24, left: Math.min(190, width * 0.38) };
-  const rowHeight = Math.min(34, (height - padding.top - padding.bottom) / rows.length);
+  // En móvil, el nombre va encima de la barra para no competir por el ancho.
+  const compact = width < 420;
+  const padding = { top: 34, right: 40, bottom: 24, left: compact ? 8 : Math.min(190, width * 0.38) };
+  const rowHeight = Math.min(compact ? 52 : 34, (height - padding.top - padding.bottom) / rows.length);
   const gap = Math.max(8, rowHeight * 0.35);
-  const barH = Math.max(13, rowHeight - gap);
+  const barH = compact ? Math.max(10, rowHeight - 26) : Math.max(13, rowHeight - gap);
   const boxes = [];
 
   clearCanvas(ctx, width, height);
@@ -17,23 +19,25 @@ function drawHorizontalBarChart(canvas, rows, options) {
 
   rows.forEach((item, index) => {
     const value = Number(item[options.valueField]);
-    const y = padding.top + index * (barH + gap);
+    const rowTop = padding.top + index * rowHeight;
+    const y = rowTop + (compact ? 18 : 0);
     const available = width - padding.left - padding.right;
     const barW = Math.abs(value) / max * available;
     ctx.fillStyle = CHART_SYSTEM.colors.soft;
     ctx.font = "12px Inter";
-    ctx.fillText(String(item[options.labelField]), 8, y + barH - 2);
+    const labelWidth = compact ? width - 16 : padding.left - 16;
+    ctx.fillText(fitCanvasText(ctx, String(item[options.labelField]), labelWidth), 8, compact ? rowTop + 11 : y + barH - 2);
     ctx.fillStyle = value < 0 ? CHART_SYSTEM.colors.terracotta : CHART_SYSTEM.colors.blue;
     ctx.fillRect(padding.left, y, barW, barH);
     boxes.push({ x: padding.left, y, width: barW, height: barH, item, value });
     const valueLabel = formatNumber(value);
     ctx.font = "700 12px Inter";
-    const labelWidth = ctx.measureText(valueLabel).width;
+    const valueWidth = ctx.measureText(valueLabel).width;
     const labelX = padding.left + barW + 8;
     const labelY = y + barH - 2;
-    if (labelX + labelWidth > width - 8) {
+    if (labelX + valueWidth > width - 8) {
       ctx.fillStyle = CHART_SYSTEM.colors.card;
-      ctx.fillText(valueLabel, Math.max(padding.left + 4, padding.left + barW - labelWidth - 8), labelY);
+      ctx.fillText(valueLabel, Math.max(padding.left + 4, padding.left + barW - valueWidth - 8), labelY);
     } else {
       ctx.fillStyle = CHART_SYSTEM.colors.ink;
       ctx.fillText(valueLabel, labelX, labelY);

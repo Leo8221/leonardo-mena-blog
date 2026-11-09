@@ -9,7 +9,10 @@ function atlas(url = 'https://example.test/atlas/') {
     URL, URLSearchParams,
     window: { location: { href: url }, matchMedia: () => ({ matches: false }) },
     document: { querySelector: () => null, getElementById: id => id === 'atlas-search' ? search : null },
-    history: { replaceState: (_state, _title, next) => { context.window.location.href = String(next); } }
+    history: {
+      replaceState: (_state, _title, next) => { context.window.location.href = String(next); },
+      pushState: (_state, _title, next) => { context.window.location.href = String(next); }
+    }
   });
   for (const file of ['atlas/js/utils.js', 'atlas/app.js', 'atlas/js/app-data.js', 'atlas/js/app-panels.js']) {
     vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
@@ -96,9 +99,22 @@ test('volver a un mapa sin región elimina el filtro regional anterior', () => {
 test('limpiar filtros también limpia la URL compartible', () => {
   const app = atlas('https://example.test/atlas/?view=pulso-macro&filter=Macro&q=precios');
   app.run('applyStateFromUrl()');
-  app.run('syncFilterState = syncSearchState = renderNavigation = renderMobileNavigation = renderStage = () => {};');
+  app.run('syncFilterState = syncSearchState = renderNavigation = renderStage = () => {};');
   app.run('resetAtlasFilters()');
   assert.equal(app.url().searchParams.has('q'), false);
   assert.equal(app.url().searchParams.has('filter'), false);
   assert.equal(app.url().searchParams.get('view'), 'pulso-macro');
+});
+
+test('abrir un indicador elige su métrica y conserva la búsqueda de regreso', () => {
+  const app = atlas('https://example.test/atlas/?q=precios');
+  app.run('applyStateFromUrl(); syncSearchState = renderNavigation = renderStage = trackAtlasEvent = () => {};');
+  app.run('setActive("pulso-macro", {metric: "inflacion"})');
+  assert.equal(app.url().searchParams.get('metric'), 'inflacion');
+  assert.equal(app.url().searchParams.get('q'), 'precios');
+  assert.equal(app.run('state.focusStage'), true);
+  app.run('setActive("overview")');
+  assert.equal(app.url().searchParams.has('view'), false);
+  assert.equal(app.url().searchParams.has('metric'), false);
+  assert.equal(app.url().searchParams.get('q'), 'precios');
 });

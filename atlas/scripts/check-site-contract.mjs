@@ -138,7 +138,7 @@ requireText("atlas/index.html", [
   ["skip link propio", 'href="#atlas-main"'],
   ["main destino", 'id="atlas-main"'],
   ["nav Blog hacia raíz canonical", '<a href="../">Blog</a>'],
-  ["nav Archivo hacia archivo general", '<a href="../archivo.html">Archivo</a>']
+  ["nav hacia archivo general", /<a\b[^>]*href="\.\.\/archivo\.html"[^>]*>[^<]+<\/a>/]
 ]);
 
 requireText("atlas/index.html", [
@@ -178,7 +178,7 @@ if (includeDocs) {
   requireText("docs/atlas/index.html", [
     ["skip link del Atlas publicado", 'href="#atlas-main"'],
     ["nav Blog publicado hacia raíz canonical", '<a href="../">Blog</a>'],
-    ["nav Archivo publicado", '<a href="../archivo.html">Archivo</a>']
+    ["nav al archivo publicado", /<a\b[^>]*href="\.\.\/archivo\.html"[^>]*>[^<]+<\/a>/]
   ]);
   requireText("docs/index.html", [
     ["canonical raíz", /<link rel="canonical" href="https:\/\/leo8221\.github\.io\/leonardo-mena-blog\/">/],

@@ -4,14 +4,11 @@ import vm from 'node:vm';
 import test from 'node:test';
 
 function atlas() {
-  const pills = ['all', 'Macro', 'Territorio', 'Sin datos'].map(filter => ({
-    dataset: { filter }, hidden: false, classList: { toggle() {} }, setAttribute() {}
-  }));
+  const family = { innerHTML: '', value: '' };
   const context = vm.createContext({
     document: {
       querySelector: () => null,
-      querySelectorAll: () => pills,
-      getElementById: () => null
+      getElementById: id => id === 'atlas-family' ? family : null
     },
     window: { matchMedia: () => ({ matches: false }) }
   });
@@ -22,7 +19,7 @@ function atlas() {
   }
   const run = code => vm.runInContext(code, context);
   run(`state.data = ${fs.readFileSync('atlas/data/atlas-data.json', 'utf8')}`);
-  return { run, pills };
+  return { run, family };
 }
 
 test('buscar conserva acentos, fuentes, familias y el orden de los módulos activos', () => {
@@ -47,14 +44,15 @@ test('buscar conserva acentos, fuentes, familias y el orden de los módulos acti
 });
 
 test('un filtro no cierra el módulo abierto y las familias ausentes vuelven a todas', () => {
-  const { run, pills } = atlas();
+  const { run, family } = atlas();
   run(`state.active='pulso-macro'; state.query='no existe'; syncFilterState()`);
-  assert.equal(run('navigationModules().openOutsideFilters'), true);
-  assert.deepEqual(Array.from(run('navigationModules().modules.map(m => m.id)')), ['pulso-macro']);
-  assert.equal(pills[3].hidden, true);
+  assert.equal(run('state.active'), 'pulso-macro');
+  assert.equal(run('filteredModules().length'), 0);
+  assert.doesNotMatch(family.innerHTML, /Sin datos/);
   run(`state.family='Sin datos'; syncFilterState()`);
   assert.equal(run('state.family'), 'all');
-  assert.equal(pills[0].hidden, false);
+  assert.equal(family.value, 'all');
+  assert.match(family.innerHTML, /Todos los temas/);
 });
 
 test('el formato numérico conserva redondeo, valores especiales y entradas convertibles', () => {

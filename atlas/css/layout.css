@@ -1,68 +1,32 @@
 .atlas-app {
-  display: grid;
-  width: 100%;
-  max-width: 100vw;
   min-height: 100vh;
-  grid-template-columns: 300px minmax(0, 1fr);
-  overflow-x: clip;
 }
 
-.atlas-app[data-view="overview"] {
-  grid-template-columns: 92px minmax(0, 1fr);
+.atlas-main {
+  width: min(1248px, 100%);
+  margin-inline: auto;
+  padding: 0 32px 32px;
 }
 
-.atlas-sidebar {
+.atlas-topbar {
   position: sticky;
   top: 0;
-  height: 100vh;
+  z-index: 12;
   display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-  border-right: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 88%, var(--panel));
-  padding: 1rem;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.sidebar-backdrop {
-  position: fixed;
-  z-index: 18;
-  inset: 0;
-  border: 0;
-  background: rgba(25, 27, 31, 0.36);
-  backdrop-filter: blur(2px);
-}
-
-.sidebar-backdrop[hidden] {
-  display: none;
-}
-
-.atlas-app[data-view="overview"] .atlas-sidebar {
   align-items: center;
-  padding: 1rem 0.7rem;
-}
-
-.atlas-app[data-view="overview"] .brand-lockup {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.atlas-app[data-view="overview"] .brand-lockup span,
-.atlas-app[data-view="overview"] .brand-lockup div,
-.atlas-app[data-view="overview"] .search-box,
-.atlas-app[data-view="overview"] .filter-group,
-.atlas-app[data-view="overview"] .module-nav,
-.atlas-app[data-view="overview"] .sidebar-footer {
-  display: none;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding: 12px max(24px, calc((100vw - 1184px) / 2));
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
 }
 
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  border-bottom: 1px solid var(--border);
-  padding: 0.2rem 0 1rem;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .brand-lockup img {
@@ -70,306 +34,301 @@
   height: 36px;
 }
 
-.brand-lockup strong,
-.brand-lockup small {
-  display: block;
-}
-
 .brand-lockup strong {
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.22rem;
-  line-height: 1.02;
+  display: block;
+  font: 600 1.65rem/1 "Crimson Pro", Georgia, serif;
 }
 
 .brand-lockup small {
-  color: var(--terracotta-dark);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.search-box label,
-.filter-group::before {
   display: block;
-  margin-bottom: 0.45rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  margin-top: 3px;
+  color: var(--soft);
+  font-size: 0.7rem;
 }
 
-.search-box input {
-  width: 100%;
-  min-height: 42px;
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.84rem;
+  color: var(--soft);
+}
+
+.topbar-actions a:hover, .atlas-home-link {
+  color: var(--terracotta-dark);
+}
+
+.atlas-app[data-view="overview"] .atlas-home-link {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.atlas-theme-toggle {
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--border-strong);
-  border-radius: 8px;
+  border-radius: 4px;
   background: var(--card);
   color: var(--ink);
-  padding: 0 0.8rem;
+  cursor: pointer;
+}
+
+.atlas-theme-toggle::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  background: currentColor;
+  mask: url('../../assets/icons/sun.svg') center / contain no-repeat;
+}
+
+.atlas-theme-toggle[aria-pressed="true"]::before {
+  mask-image: url('../../assets/icons/moon.svg');
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--terracotta-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.catalog-controls {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(140px, 240px) auto;
+  align-items: end;
+  gap: 20px;
+  padding-block: 24px;
+  border-block: 1px solid var(--border-strong);
+  margin-bottom: 32px;
+}
+
+.catalog-controls label, .view-switcher label {
+  display: block;
+  color: var(--soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .search-control {
   position: relative;
 }
 
+.search-control input, .family-control select, .view-switcher select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--ink);
+  padding: 10px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
 .search-control input {
-  padding-right: 2.6rem;
+  padding-right: 48px;
+}
+
+.search-control input::placeholder {
+  color: var(--soft);
+  opacity: 1;
 }
 
 .search-clear {
   position: absolute;
-  top: 50%;
-  right: 0.35rem;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--paper);
-  color: var(--soft);
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  transform: translateY(-50%);
-}
-
-.search-clear[hidden] {
-  display: none;
-}
-
-.search-results-count {
-  min-height: 1rem;
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-  font-size: 0.74rem;
-  line-height: 1.25;
-}
-
-.search-box input:focus {
-  outline: 2px solid color-mix(in srgb, var(--terracotta) 35%, transparent);
-  border-color: var(--terracotta);
-}
-
-.filter-group::before {
-  content: "Familia";
-}
-
-.filter-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.filter-pill,
-.menu-toggle {
-  min-height: var(--lm-control-min);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--soft);
-  cursor: pointer;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0 0.8rem;
-}
-
-.filter-pill.is-active {
-  border-color: var(--terracotta);
-  background: color-mix(in srgb, var(--terracotta) 10%, var(--card));
-  color: var(--terracotta-dark);
-}
-
-.module-nav {
-  display: grid;
-  gap: 0.55rem;
-}
-
-.module-button {
-  width: 100%;
-  min-height: 86px;
-  display: grid;
-  gap: 0.35rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid transparent;
-  border-radius: 8px;
+  right: 1px;
+  top: 1px;
+  width: 44px;
+  height: 44px;
+  border: 0;
   background: var(--card);
   color: var(--ink);
+  font-size: 1.3rem;
   cursor: pointer;
-  padding: 0.8rem;
-  text-align: left;
 }
 
-.module-button:hover,
-.module-button.is-active {
-  border-color: var(--border-strong);
-  border-left-color: var(--terracotta);
-  box-shadow: 0 10px 28px rgba(25, 27, 31, 0.08);
+.catalog-result {
+  min-width: 132px;
+  padding-bottom: 5px;
 }
 
-.module-button.is-outside-filter {
-  border-style: dashed;
-  background: color-mix(in srgb, var(--paper) 82%, var(--card));
-}
-
-.module-button small {
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.module-button strong {
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.1rem;
-  line-height: 1.05;
-}
-
-.module-button span {
+.catalog-result p {
+  margin: 0;
+  font-size: 0.78rem;
   color: var(--soft);
-  font-size: 0.82rem;
 }
 
-.nav-empty {
-  display: grid;
-  gap: 0.35rem;
-  border: 1px dashed var(--border-strong);
-  border-radius: 8px;
-  color: var(--muted);
-  font-size: 0.82rem;
-  padding: 0.75rem;
-}
-
-.nav-empty strong {
-  color: var(--ink);
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.05rem;
-}
-
-.nav-reset {
-  width: fit-content;
-  min-height: var(--lm-control-min);
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: var(--card);
+.text-action {
+  border: 0;
+  padding: 0;
+  background: transparent;
   color: var(--terracotta-dark);
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   cursor: pointer;
-  font-size: 0.72rem;
-  font-weight: 900;
-  padding: 0 0.7rem;
+  min-height: 44px;
 }
 
-.atlas-main {
-  min-width: 0;
-  max-width: 100%;
-  overflow-x: clip;
-  padding: 0.85rem clamp(1rem, 2.5vw, 1.75rem) 1.5rem;
-}
-
-.atlas-topbar {
-  min-height: 58px;
+.view-navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 24px;
+  padding-block: 24px;
+  margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 0.8rem;
 }
 
-.atlas-topbar h1 {
-  margin: 0;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
-  line-height: 1.05;
-}
-
-.topbar-title {
-  min-width: 0;
-}
-
-.topbar-title p {
-  margin: 0.12rem 0 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 650;
-}
-
-.eyebrow {
-  margin: 0 0 0.3rem;
-  color: var(--terracotta);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.topbar-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.55rem;
-}
-
-.topbar-actions a,
-.atlas-theme-toggle,
-.topbar-share,
-.topbar-tour {
-  min-height: var(--lm-control-min);
+.back-to-catalog {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--card);
+  min-height: 44px;
+  color: var(--terracotta-dark);
+  font-size: 0.85rem;
+}
+
+.view-switcher {
+  width: min(100%, 330px);
+}
+
+.view-sections {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.view-sections a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.85rem;
+  color: var(--terracotta-dark);
+}
+
+.view-sections a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.atlas-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 28px 8px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
   color: var(--soft);
-  cursor: pointer;
-  font-size: var(--ui-label);
-  font-weight: 750;
-  padding: 0 0.8rem;
+  font-size: 0.75rem;
 }
 
-.atlas-theme-toggle {
-  width: var(--lm-control-min);
-  padding: 0;
-  background-color: var(--paper);
-  background-image: var(--atlas-icon-sun);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 18px;
+.atlas-footer p {
+  margin: 0;
 }
 
-.atlas-theme-toggle[aria-pressed="true"] {
-  border-color: color-mix(in srgb, var(--ink) 40%, var(--border));
-  background-color: var(--paper);
-  background-image: var(--atlas-icon-moon);
-}
-
-.topbar-actions a:first-of-type,
-.topbar-tour[data-new="true"] {
-  border-color: var(--terracotta);
+.atlas-footer a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   color: var(--terracotta-dark);
 }
 
-.topbar-tour {
-  border-color: var(--terracotta);
-  background: var(--terracotta);
-  color: #fff;
+/* Los atributos hidden también deben ganar frente a los contenedores grid y flex. */
+[hidden] {
+  display: none !important;
 }
 
-body.atlas-dark .topbar-tour {
-  border-color: #c86448;
-  background: #a04d35;
-  color: #fff;
+#atlas-catalog, #atlas-search, #view-heading, #view-charts, #view-data, #view-sources {
+  scroll-margin-top: 100px;
 }
 
-.topbar-share {
-  display: none;
-  color: var(--terracotta-dark);
+@media (max-width: 700px) {
+  .atlas-main {
+    padding: 0 18px 24px;
+  }
+
+  .atlas-topbar {
+    min-height: 68px;
+    padding: 10px 18px;
+    gap: 12px;
+  }
+
+  .topbar-actions {
+    gap: 14px;
+  }
+
+  .topbar-actions a[href="../archivo.html"] {
+    display: none;
+  }
+
+  .brand-lockup small {
+    display: none;
+  }
+
+  .brand-lockup {
+    gap: 8px;
+  }
+
+  .brand-lockup img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand-lockup strong {
+    font-size: 1.45rem;
+  }
+
+  .catalog-controls {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
+  }
+
+  .catalog-result {
+    min-width: 0;
+    max-width: 120px;
+  }
+
+  .view-navigation {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+    padding-block: 12px 20px;
+  }
+
+  .view-switcher {
+    width: 100%;
+  }
+
+  .view-sections {
+    gap: 20px;
+  }
+
 }
 
-.menu-toggle {
-  display: none;
+@media (forced-colors: active) {
+  .atlas-theme-toggle::before {
+    background: ButtonText;
+    forced-color-adjust: none;
+  }
+
 }
