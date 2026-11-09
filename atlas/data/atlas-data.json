@@ -708,10 +708,109 @@
           "score": 81
         }
       ]
-    }
+    },
+    "policyRate": [
+      {
+        "period": "Dic 2024",
+        "tpm": 6
+      },
+      {
+        "period": "Ene 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Feb 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Mar 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Abr 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "May 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Jun 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Jul 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Ago 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Sep 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Oct 2025",
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2025",
+        "tpm": 5.25
+      },
+      {
+        "period": "Dic 2025",
+        "tpm": 5.25
+      },
+      {
+        "period": "Ene 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Feb 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Mar 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Abr 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "May 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Jul 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Ago 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Sep 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Oct 2026",
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2026",
+        "tpm": 5.5
+      }
+    ]
   },
   "liveDataCutoff": {
     "macro": "Sep 2026",
+    "policyRate": "Nov 2026",
     "prices": "Sep 2026",
     "trade": "2026 T2",
     "labor": "2026 T2",
@@ -722,7 +821,7 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-11-08T05:30:08.664Z",
+  "generatedAt": "2026-11-09T14:56:42.979Z",
   "sourceRun": {
     "generatedAt": "2026-11-08T05:29:54Z",
     "manifestVersion": 1,
@@ -1098,9 +1197,10 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-11-08T05:30:08Z",
+    "generatedAt": "2026-11-09T14:55:43Z",
     "dataCutoff": {
       "macro": "Sep 2026",
+      "policyRate": "Nov 2026",
       "prices": "Sep 2026",
       "trade": "2026 T2",
       "labor": "2026 T2",
@@ -1128,7 +1228,7 @@
         "label": "BCRD",
         "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
         "dataMode": "Automático",
-        "updated": "Sep 2026",
+        "updated": "Series macro: Sep 2026; TPM: Nov 2026",
         "methodology": [
           "Tipo de cambio: tasa de venta spot.",
           "Inflación: variación interanual del IPC.",
@@ -1172,27 +1272,28 @@
     },
     {
       "id": "contexto-externo",
-      "title": "Condiciones externas",
+      "title": "Servicios al exterior",
       "status": "Activo",
       "visible": true,
       "type": "Índice",
       "family": "Macro",
-      "topic": "Entorno global",
-      "summary": "Energía, tasas, dólar global y ciclo externo.",
+      "topic": "Comercio de servicios",
+      "summary": "Evolución de las exportaciones de servicios y sus principales rubros.",
       "source": "BCRD",
-      "question": "¿Qué tan exigente está el entorno externo?",
-      "insight": "Señales externas para leer servicios, turismo y financiamiento.",
+      "question": "¿Cómo evolucionan las exportaciones de servicios?",
+      "insight": "El índice compara ingresos por servicios con su máximo en el periodo mostrado.",
       "chart": "external",
       "dataMode": "Modelo",
       "sourceInfo": {
         "label": "BCRD",
-        "detail": "Balanza de servicios y series externas del Banco Central.",
+        "detail": "Créditos de la balanza de servicios del Banco Central.",
         "dataMode": "Modelo",
         "updated": "2025",
         "methodology": [
-          "Valores altos indican condiciones externas más adversas.",
-          "La señal se suaviza para reducir ruido de mercado.",
-          "Los componentes mantienen unidades comparables mediante normalización."
+          "La serie toma los créditos anuales de la balanza de servicios del BCRD.",
+          "Cada valor se divide por el máximo del periodo y se multiplica por 100.",
+          "Los rubros del último año se normalizan respecto al mayor rubro; no son participaciones del total.",
+          "Este índice no mide presión externa ni condiciones financieras globales."
         ],
         "related": [
           "republica-habla-de.html"

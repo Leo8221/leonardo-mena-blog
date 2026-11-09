@@ -104,7 +104,9 @@ if (errors.length > 0) {
 
 const { system, modules, brand, ...publicSource } = hydratedSource;
 const liveCutoffs = {
-  "pulso-macro": hydratedSource.liveDataCutoff?.macro,
+  "pulso-macro": hydratedSource.liveDataCutoff?.policyRate
+    ? `Series macro: ${hydratedSource.liveDataCutoff.macro}; TPM: ${hydratedSource.liveDataCutoff.policyRate}`
+    : hydratedSource.liveDataCutoff?.macro,
   sectores: hydratedSource.liveDataCutoff?.sectors,
   "contexto-externo": hydratedSource.liveDataCutoff?.external,
   "comercio-exterior": hydratedSource.liveDataCutoff?.trade,
@@ -155,6 +157,12 @@ function applyLiveBcrdData(baseSource, live) {
   if (!live || !live.series) return copy;
 
   copy.series = copy.series || {};
+
+  if (Array.isArray(live.series.policyRate) && live.series.policyRate.length) {
+    copy.series.policyRate = live.series.policyRate.map(row => ({
+      period: row.period, tpm: numberOrNull(row.tpm)
+    }));
+  }
 
   if (Array.isArray(live.series.macro) && live.series.macro.length >= 6) {
     copy.series.macro = live.series.macro.map((row) => ({
@@ -276,8 +284,18 @@ function applyLiveBcrdData(baseSource, live) {
     "contexto-externo": {
       dataMode: "Modelo",
       source: "BCRD",
-      sourceDetail: "Balanza de servicios y series externas del Banco Central.",
-      insight: "Señales externas para leer servicios, turismo y financiamiento."
+      title: "Servicios al exterior",
+      topic: "Comercio de servicios",
+      summary: "Evolución de las exportaciones de servicios y sus principales rubros.",
+      sourceDetail: "Créditos de la balanza de servicios del Banco Central.",
+      question: "¿Cómo evolucionan las exportaciones de servicios?",
+      insight: "El índice compara ingresos por servicios con su máximo en el periodo mostrado.",
+      methodology: [
+        "La serie toma los créditos anuales de la balanza de servicios del BCRD.",
+        "Cada valor se divide por el máximo del periodo y se multiplica por 100.",
+        "Los rubros del último año se normalizan respecto al mayor rubro; no son participaciones del total.",
+        "Este índice no mide presión externa ni condiciones financieras globales."
+      ]
     },
     "comercio-exterior": {
       dataMode: "Automático",

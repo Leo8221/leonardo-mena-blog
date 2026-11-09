@@ -177,7 +177,7 @@ function renderDatasetCard(module, dataset, index) {
           <tbody>
             ${visibleRows.map((row) => `
               <tr>
-                ${columns.map((column) => `<td${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
+                ${columns.map((column) => `<td${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field], column.decimals))}</td>`).join("")}
               </tr>
             `).join("")}
           </tbody>
@@ -207,14 +207,19 @@ function moduleDatasets(module) {
     macro: () => [
       dataset("macro", "Indicadores macro", series.macro, [
         col("period", "Periodo"),
-        col("dolar", "Dólar"),
-        col("inflacion", "Inflación"),
-        col("imae", "IMAE"),
-        col("tpm", "TPM")
-      ], `Serie activa: ${macroMetricLabel()}`)
+        col("dolar", "Dólar (RD$/US$)", 2),
+        col("inflacion", "Inflación (%)", 2),
+        col("imae", "IMAE (%)", 2),
+        col("tpm", "TPM (%)", 2)
+      ], "Meses comunes a los cuatro indicadores."),
+      ...(series.policyRate?.length ? [{
+        ...dataset("tpm", "Tasa de política monetaria", series.policyRate, [
+          col("period", "Periodo"), col("tpm", "TPM (%)", 2)
+        ], "Serie mensual con su propio corte."), visibleRows: 24
+      }] : [])
     ],
     external: () => [
-      dataset("presion-externa", "Presión externa", series.external, [
+      dataset("presion-externa", "Exportaciones de servicios", series.external, [
         col("period", "Periodo"),
         col("pressure", "Índice")
       ]),
@@ -272,12 +277,12 @@ function moduleDatasets(module) {
     prices: () => [
       dataset("inflacion", "Inflación", series.prices.timeline, [
         col("period", "Periodo"),
-        col("headline", "General"),
-        col("core", "Subyacente")
+        col("headline", "General (%)", 2),
+        col("core", "Subyacente (%)", 2)
       ]),
       dataset("rubros", "Rubros", series.prices.components, [
         col("component", "Rubro"),
-        col("contribution", "Contribución"),
+        col("contribution", "Variación mensual (%)", 2),
         col("pressure", "Presión")
       ]),
       dataset("traspaso", "Canales de traspaso", series.prices.passThrough, [
@@ -366,8 +371,8 @@ function dataset(id, title, rows, columns, note = "") {
   };
 }
 
-function col(field, label) {
-  return { field, label };
+function col(field, label, decimals) {
+  return { field, label, decimals };
 }
 
 function datasetColumns(dataset) {
@@ -384,9 +389,9 @@ function pickFields(row, fields) {
   }, {});
 }
 
-function formatTableCell(value) {
+function formatTableCell(value, decimals) {
   if (value === null || value === undefined || value === "") return "—";
-  if (typeof value === "number") return formatNumber(value);
+  if (typeof value === "number") return formatNumber(value, decimals);
   return String(value);
 }
 

@@ -144,7 +144,7 @@
   font-size: 0.82rem;
 }
 
-.card-head p,
+.card-head p:not(.chart-caption),
 .chart-card > p:not(.chart-caption) {
   display: none;
 }

@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-11-08T05:30:08Z",
+  "generatedAt": "2026-11-09T14:55:43Z",
   "dataCutoff": {
     "macro": "Sep 2026",
+    "policyRate": "Nov 2026",
     "prices": "Sep 2026",
     "trade": "2026 T2",
     "labor": "2026 T2",
@@ -99,6 +100,152 @@
         "inflacion": 5.1161,
         "imae": 5.611,
         "tpm": 5.25
+      }
+    ],
+    "policyRate": [
+      {
+        "period": "Dic 2024",
+        "year": 2024,
+        "month": 12,
+        "tpm": 6
+      },
+      {
+        "period": "Ene 2025",
+        "year": 2025,
+        "month": 1,
+        "tpm": 5.75
+      },
+      {
+        "period": "Feb 2025",
+        "year": 2025,
+        "month": 2,
+        "tpm": 5.75
+      },
+      {
+        "period": "Mar 2025",
+        "year": 2025,
+        "month": 3,
+        "tpm": 5.75
+      },
+      {
+        "period": "Abr 2025",
+        "year": 2025,
+        "month": 4,
+        "tpm": 5.75
+      },
+      {
+        "period": "May 2025",
+        "year": 2025,
+        "month": 5,
+        "tpm": 5.75
+      },
+      {
+        "period": "Jun 2025",
+        "year": 2025,
+        "month": 6,
+        "tpm": 5.75
+      },
+      {
+        "period": "Jul 2025",
+        "year": 2025,
+        "month": 7,
+        "tpm": 5.75
+      },
+      {
+        "period": "Ago 2025",
+        "year": 2025,
+        "month": 8,
+        "tpm": 5.75
+      },
+      {
+        "period": "Sep 2025",
+        "year": 2025,
+        "month": 9,
+        "tpm": 5.75
+      },
+      {
+        "period": "Oct 2025",
+        "year": 2025,
+        "month": 10,
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2025",
+        "year": 2025,
+        "month": 11,
+        "tpm": 5.25
+      },
+      {
+        "period": "Dic 2025",
+        "year": 2025,
+        "month": 12,
+        "tpm": 5.25
+      },
+      {
+        "period": "Ene 2026",
+        "year": 2026,
+        "month": 1,
+        "tpm": 5.25
+      },
+      {
+        "period": "Feb 2026",
+        "year": 2026,
+        "month": 2,
+        "tpm": 5.25
+      },
+      {
+        "period": "Mar 2026",
+        "year": 2026,
+        "month": 3,
+        "tpm": 5.25
+      },
+      {
+        "period": "Abr 2026",
+        "year": 2026,
+        "month": 4,
+        "tpm": 5.25
+      },
+      {
+        "period": "May 2026",
+        "year": 2026,
+        "month": 5,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun 2026",
+        "year": 2026,
+        "month": 6,
+        "tpm": 5.25
+      },
+      {
+        "period": "Jul 2026",
+        "year": 2026,
+        "month": 7,
+        "tpm": 5.25
+      },
+      {
+        "period": "Ago 2026",
+        "year": 2026,
+        "month": 8,
+        "tpm": 5.25
+      },
+      {
+        "period": "Sep 2026",
+        "year": 2026,
+        "month": 9,
+        "tpm": 5.25
+      },
+      {
+        "period": "Oct 2026",
+        "year": 2026,
+        "month": 10,
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2026",
+        "year": 2026,
+        "month": 11,
+        "tpm": 5.5
       }
     ],
     "external": [

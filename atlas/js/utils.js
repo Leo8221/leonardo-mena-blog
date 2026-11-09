@@ -130,9 +130,16 @@ function drawGrid(ctx, width, height, padding, steps) {
 // La configuración no cambia entre etiquetas; reutilizarla evita construir
 // un formateador por cada número de un gráfico o una tabla.
 const numberFormatter = new Intl.NumberFormat("es-DO", { maximumFractionDigits: 1 });
+const decimalFormatters = new Map();
 
-function formatNumber(value) {
-  return numberFormatter.format(value);
+function formatNumber(value, decimals) {
+  if (decimals === undefined) return numberFormatter.format(value);
+  if (!decimalFormatters.has(decimals)) {
+    decimalFormatters.set(decimals, new Intl.NumberFormat("es-DO", {
+      minimumFractionDigits: decimals, maximumFractionDigits: decimals
+    }));
+  }
+  return decimalFormatters.get(decimals).format(value);
 }
 
 function normalizeText(value) {

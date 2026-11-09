@@ -156,10 +156,10 @@ const MODULE_GUIDES = {
     limit: "Es una lectura inicial, no una cuenta sectorial."
   },
   "contexto-externo": {
-    unit: "Indice externo normalizado, escala 0-100.",
-    high: "Mas presion externa en el indice.",
-    low: "Menor presion externa agregada.",
-    limit: "Resume senales; no pronostica choques."
+    unit: "Exportaciones de servicios, índice con máximo del periodo igual a 100.",
+    high: "Mayores ingresos por exportaciones de servicios.",
+    low: "Menores ingresos respecto al máximo del periodo.",
+    limit: "No mide riesgo ni poder adquisitivo; usa montos nominales."
   },
   "comercio-exterior": {
     unit: "Participacion, balance e indice.",

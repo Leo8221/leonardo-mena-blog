@@ -136,6 +136,10 @@ inflation <- latest_monthly(read_monthly_series(required_files[["ipc"]], "IPC ba
 core <- latest_monthly(read_monthly_series(required_files[["ipc_core"]], "ipc subyacente base 2019-2020", 1, 2, 6, start_row = 5), "core")
 dollar <- latest_monthly(read_monthly_series(required_files[["dollar"]], "PromMensual", 1, 2, 4, start_row = 4), "dolar")
 tpm <- latest_monthly(read_monthly_series(required_files[["tpm"]], "Tasas", 1, 2, 3, scale = 100, start_row = 7), "tpm")
+# La TPM tiene su propio corte: no debe perder meses por esperar al IMAE.
+policy_rate <- tail(tpm, 24)
+policy_rate$period <- paste(month_labels[policy_rate$month], policy_rate$year)
+policy_rate <- policy_rate[, c("period", "year", "month", "tpm")]
 
 # all = FALSE conserva solo meses presentes en las cuatro series.
 # Así cada punto del panel macro compara el mismo periodo.
@@ -585,6 +589,7 @@ payload <- list(
   generatedAt = format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
   dataCutoff = list(
     macro = paste(latest$period),
+    policyRate = tail(policy_rate$period, 1),
     prices = paste(inflation_latest$period),
     trade = paste0(latest_trade_year, " T", latest_trade_quarter),
     labor = attr(labor_indicators_data, "cutoff"),
@@ -593,6 +598,7 @@ payload <- list(
   ),
   series = list(
     macro = macro,
+    policyRate = policy_rate,
     external = if (!is.null(external_data)) external_data$timeline else NULL,
     drivers = if (!is.null(external_data)) external_data$drivers else NULL,
     sectors = sector_data,

@@ -28,7 +28,7 @@ function renderContributionRows(rows, options) {
       <div class="contribution-row" style="--share:${width}%">
         <span class="contribution-rank">${index + 1}</span>
         <strong>${escapeHtml(item[options.labelField])}</strong>
-        <span>${sign}${formatNumber(value)}${options.suffix || ""}</span>
+        <span>${sign}${formatNumber(value, options.decimals)}${options.suffix || ""}</span>
       </div>
     `;
   }).join("");
