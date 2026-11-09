@@ -23,7 +23,6 @@ La idea es tener, en una sola imagen, los pilares fundamentales: los sectores qu
 #| label: grafico-mental
 #| echo: false
 #| warning: false
-#| column: screen-inset
 #| fig-width: 12
 #| fig-height: 8
 #| out-width: "100%"
