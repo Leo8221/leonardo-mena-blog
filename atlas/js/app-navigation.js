@@ -77,9 +77,8 @@ function renderOverview() {
 
 function renderOverviewCard(module) {
   const source = module.sourceInfo || {};
-  const icons = { macro: "chart", external: "compass", prices: "economy", sectors: "business", trade: "economy", territory: "topics", labor: "people", mipymes: "business", visualLab: "analysis" };
   return `<a class="module-card" href="?view=${module.id}" data-module="${module.id}">
-    <span class="module-card-top"><span class="module-icon" style="mask-image:url('../assets/icons/${icons[module.chart] || "chart"}.svg')" aria-hidden="true"></span><span>${escapeHtml(module.type)}</span><span aria-hidden="true">↗</span></span>
+    <span class="module-card-top"><span class="module-icon" style="mask-image:url('icons/${escapeHtml(module.chart)}.svg')" aria-hidden="true"></span><span>${escapeHtml(module.type)}</span><span aria-hidden="true">↗</span></span>
     <h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.summary || module.question || "")}</p>
     <span class="module-card-footer"><span>${escapeHtml(source.label || module.source || "")}</span>${source.updated ? `<span>${escapeHtml(source.updated)}</span>` : ""}</span>
   </a>`;
