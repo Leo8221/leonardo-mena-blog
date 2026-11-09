@@ -1,5 +1,7 @@
 <script>
 (function () {
+  // Barra visual de desplazamiento: mide toda la página, incluidos comentarios.
+  // No estima comprensión ni sustituye el tiempo de lectura del artículo.
   if (!document.body.classList.contains("editorial-post")) {
     return;
   }
@@ -14,7 +16,7 @@
   document.body.prepend(progressBar);
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let ticking = false;
+  let updatePending = false;
 
   function applyMotionPreference() {
     progressBar.style.transition = reducedMotion.matches ? "none" : "";
@@ -31,15 +33,15 @@
     const progress = Math.min(100, Math.max(0, rawProgress));
 
     progressBar.style.width = `${progress}%`;
-    ticking = false;
+    updatePending = false;
   }
 
   function requestUpdate() {
     // scroll puede dispararse varias veces antes de dibujar un fotograma.
     // Guardamos una sola actualización pendiente para no repetir trabajo.
-    if (!ticking) {
+    if (!updatePending) {
       window.requestAnimationFrame(updateProgress);
-      ticking = true;
+      updatePending = true;
     }
   }
 

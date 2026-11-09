@@ -12,6 +12,7 @@ DATA.mkdir(parents=True, exist_ok=True)
 
 
 def as_number(value):
+    """Lee una celda numérica; los vacíos y encabezados quedan ausentes, no en cero."""
     if value is None or value == "":
         return None
     try:
@@ -63,7 +64,12 @@ def extract_projection():
 
 
 def extract_age(source, year, age_column, weight_column):
-    """Suma factores de expansión por edad, no el número de encuestados."""
+    """Suma factores de expansión por edad, no el número de encuestados.
+
+    age_column y weight_column son encabezados del CSV original. Cada fila aporta
+    weight personas al grupo de edad; solo entran edades de 0 a 97 con peso presente.
+    La salida conserva esos totales ponderados: el porcentaje se calcula después.
+    """
     bins = [(0, 4), (5, 9), (10, 14), (15, 19), (20, 24), (25, 29), (30, 34),
             (35, 39), (40, 44), (45, 49), (50, 54), (55, 59), (60, 64),
             (65, 69), (70, 74), (75, 79), (80, 84), (85, 89), (90, 97)]

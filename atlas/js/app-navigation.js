@@ -16,6 +16,8 @@ function renderNavigation() {
 }
 
 function renderStage() {
+  // stage es el área central: portada, espera o módulo. El HTML se reemplaza;
+  // por eso los eventos comunes se escuchan en el contenedor, no en cada tarjeta.
   if (!state.data) return;
   hideTooltip(true);
   const overview = state.active === "overview";
@@ -41,6 +43,7 @@ function renderStage() {
     </nav>
     ${renderModuleBody(module)}`;
   ensureCanvasDownloadActions();
+  // Los canvas deben existir y tener tamaño antes de que hydrateCharts los dibuje.
   hydrateCharts(module);
   announceModule(module);
   updateDocumentTitle();
@@ -76,6 +79,8 @@ function renderOverview() {
 }
 
 function renderOverviewCard(module) {
+  // module.chart coincide con el nombre del SVG en atlas/icons. Esas imágenes
+  // se publican como recursos de Quarto y toman el color desde la máscara CSS.
   const source = module.sourceInfo || {};
   return `<a class="module-card" href="?view=${module.id}" data-module="${module.id}">
     <span class="module-card-top"><span class="module-icon" style="mask-image:url('icons/${escapeHtml(module.chart)}.svg')" aria-hidden="true"></span><span>${escapeHtml(module.type)}</span><span aria-hidden="true">↗</span></span>

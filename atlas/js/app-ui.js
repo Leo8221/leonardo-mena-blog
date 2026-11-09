@@ -21,5 +21,7 @@ function slugify(value) {
   return normalizeText(value).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+// Este es el último script de index.html: las funciones anteriores ya están
+// disponibles. Aplicamos el tema guardado antes de cargar datos y dibujar canvas.
 initAtlasTheme();
 boot();

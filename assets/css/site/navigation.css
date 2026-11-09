@@ -1,3 +1,5 @@
+/* Las clases navbar-* vienen de Quarto/Bootstrap. Sus controles conservan
+   comportamiento y atributos; aquí se ajustan superficie, tamaño y alineación. */
 #quarto-header {
   background: var(--lm-bg-card);
   border-bottom: 1px solid var(--lm-border-dark);

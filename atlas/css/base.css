@@ -2,6 +2,7 @@
 @import url("../../assets/css/tokens.css");
 
 :root {
+  /* Tokens exclusivos de escala y superficie de Atlas; la paleta viene de tokens.css. */
   --ui-caption: 0.75rem;
   --ui-label: 0.8125rem;
   --ui-body: 0.875rem;

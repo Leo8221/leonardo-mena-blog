@@ -1,5 +1,5 @@
 param([string[]]$QuartoArgs = @('render'))
-# Sin argumentos publica en docs/. Para revisar borradores, pasa preview y
+# Sin argumentos genera docs/; no hace commit ni push. Para revisar borradores, pasa preview y
 # --profile editor; Quarto usa entonces la salida temporal de ese perfil.
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'runtime.ps1')

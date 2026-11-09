@@ -11,6 +11,8 @@
   .roadmap-panel, .ladder-list, .module-brief { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
+  /* Los hijos de grid tienen mínimo automático según su contenido. min-width: 0
+     deja encoger tablas y mapas; su propio contenedor gestiona el desplazamiento. */
   .module-stage,
   .overview-shell,
   .overview-group,

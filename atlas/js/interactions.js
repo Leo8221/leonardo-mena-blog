@@ -36,6 +36,8 @@ function flashButton(button, label) {
 }
 
 function openChartFullscreen(canvasId) {
+  // Abre un diálogo del sitio, no la API de pantalla completa del navegador.
+  // Redibuja desde los mismos datos para no estirar una imagen de baja resolución.
   const sourceCanvas = document.getElementById(canvasId);
   if (!sourceCanvas) return;
   hideTooltip(true);
@@ -111,6 +113,8 @@ function openChartFullscreen(canvasId) {
 }
 
 function downloadCanvasPng(canvasId, button = null) {
+  // Exporta el canvas tal como se ve: tema, tamaño y métrica actuales. Para
+  // trabajar con las observaciones numéricas está la descarga CSV de app-data.js.
   const canvas = document.getElementById(canvasId);
   if (!canvas) {
     if (button) flashButton(button, "Sin grafico");

@@ -1,4 +1,6 @@
 function drawChoroplethMap(canvas, features, options) {
+  // Cada feature aporta geometría y properties. valueField elige el color;
+  // labelField identifica el nombre visible. Aquí no se unen tablas estadísticas.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
@@ -41,6 +43,8 @@ function drawChoroplethMap(canvas, features, options) {
   const offsetY = padding.top + (plotH - mapH) / 2;
   const min = Math.min(...values);
   const max = Math.max(...values);
+  // Ajuste lineal de longitud/latitud al rectángulo disponible, con el norte arriba.
+  // No es una proyección equivalente: el área dibujada no sirve para comparar superficies.
   const project = ([lon, lat]) => [
     offsetX + (lon - bounds.minLon) * scale,
     offsetY + (bounds.maxLat - lat) * scale
@@ -52,6 +56,8 @@ function drawChoroplethMap(canvas, features, options) {
     centroid: project(geoCentroid(feature))
   }));
   const mapId = options.mapId || canvas.id;
+  // El foco bajo el cursor es temporal. mapPinned conserva la selección explícita
+  // para restaurarla cuando el cursor sale del mapa o se redibuja la vista.
   const currentPinnedEntry = () => entries.find((entry) => mapEntryKey(entry, options) === state.mapPinned[mapId]);
   const topEntry = entries
     .filter((entry) => Number.isFinite(entry.value))

@@ -1,9 +1,12 @@
 <script>
 (() => {
+  // Incluido por posts/_metadata.yml. Completa los enlaces data-share y añade
+  // copiar/compartir nativo; la marca global evita montar dos veces los controles.
   if (window.__lmShareButtonsReady) return;
   window.__lmShareButtonsReady = true;
 
   function feedback(container, message) {
+    // El mismo estado sirve como aviso visual y anuncio para el lector de pantalla.
     let status = container.querySelector('[data-share-feedback]');
     if (!status) {
       status = document.createElement('span');
@@ -21,6 +24,7 @@
   // Un permiso denegado no debe impedir copiar: se prueba la selección nativa.
   // Si tampoco funciona, el manejador muestra el enlace seleccionado para copiarlo manualmente.
   async function copyLink(url) {
+    // Devuelve éxito/fallo. La decisión de mostrar el campo manual queda en setup().
     try {
       await navigator.clipboard.writeText(url);
       return true;
@@ -57,6 +61,8 @@
   }
 
   function setup() {
+    // Primero prepara el bloque y sus destinos; después conecta los botones.
+    // Las redes abren su propia ventana y compartir nativo depende del navegador.
     const content = document.getElementById('quarto-document-content');
     if (document.body.classList.contains('editorial-post') && content && !document.querySelector('.share-minimal')) {
       content.insertAdjacentHTML('beforeend', `

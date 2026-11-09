@@ -1,4 +1,7 @@
 function lineChartScale(values, step) {
+  // El dominio es [min, max]; steps divide ese rango en intervalos iguales.
+  // step fija la distancia entre marcas (0.25 para TPM). Sin él se elige un paso
+  // legible de la familia 1, 2, 2.5, 5 y 10, ajustado al orden de magnitud.
   const finite = values.filter(Number.isFinite);
   let min = Math.min(...finite);
   let max = Math.max(...finite);
@@ -30,8 +33,9 @@ function drawLineChart(canvas, labels, values, title, options = {}) {
 }
 
 function drawDualLineChart(canvas, labels, series, title, options = {}) {
-  // Cada serie comparte las fechas de labels. El valor menor queda abajo:
-  // en canvas la coordenada y crece hacia abajo, por eso se resta de plotH.
+  // labels y cada values comparten posición: índice 0 corresponde al mismo mes.
+  // decimals solo afecta al texto; los puntos usan el valor sin redondear.
+  // En canvas y crece hacia abajo: restar de plotH sitúa los valores altos arriba.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();

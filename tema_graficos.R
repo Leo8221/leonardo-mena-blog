@@ -1,9 +1,12 @@
 # Se carga con source("tema_graficos.R"). Añade el tema a un ggplot con + theme_lm().
+# Este archivo define apariencia, no transforma los datos del gráfico. Las listas
+# devueltas por linea_ref() y evento() se suman con + igual que cualquier capa.
 
 library(ggplot2)
 library(scales)
 
 `%||%` <- function(x, y) {
+  # El valor por defecto solo sustituye NULL. Un NA no se trata como un color ausente.
   if (is.null(x)) y else x
 }
 
@@ -120,6 +123,7 @@ evento <- function(x, label, color = NULL) {
 }
 
 # x ya está en porcentaje: fmt_pct(12.3) da "12.3%", no multiplica por cien.
+# d es el número de decimales que conserva la etiqueta; no modifica x.
 fmt_pct <- function(x, d = 1) paste0(format(round(x, d), nsmall = d), "%")
 
 # reverse invierte los colores. values indica dónde se sitúan en la escala;

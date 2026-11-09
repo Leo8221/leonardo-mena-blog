@@ -1,3 +1,5 @@
+/* article-enhancements.html añade article-figure, el viewport y .is-expanded.
+   Este archivo define sus tamaños; el script se ocupa de botones, foco y Escape. */
 body.editorial-post {
   #quarto-document-content :is(.cell-output-display, .quarto-figure, figure):has(img, svg, canvas) {
     width: 100%;
@@ -32,6 +34,8 @@ body.editorial-post {
   }
 
   .article-figure {
+    /* minmax(0, 1fr) permite encoger la figura aunque el SVG tenga ancho propio.
+       El pie y el botón comparten la fila inferior; la imagen ocupa ambas columnas. */
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 1rem;
@@ -57,6 +61,7 @@ body.editorial-post {
   }
 
   #quarto-document-content .is-expanded .article-figure-viewport {
+    /* dvh sigue la altura visible al aparecer/desaparecer la barra del móvil. */
     max-height: 70dvh;
     overscroll-behavior-x: contain;
 

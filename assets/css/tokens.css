@@ -76,6 +76,8 @@
   --lm-z-overlay: 2000;
   --lm-z-modal: 3000;
 
+  /* Alias cortos usados por Atlas. Las páginas Quarto usan los nombres --lm-*;
+     ambos apuntan a la misma paleta, no son dos temas independientes. */
   --bg: var(--lm-bg-body);
   --card: var(--lm-bg-card);
   --panel: var(--lm-bg-sec);
@@ -95,6 +97,7 @@
 }
 
 body.quarto-dark {
+  /* Quarto añade esta clase al cambiar de tema; no depende solo del sistema operativo. */
   color-scheme: dark;
 
   --lm-bg-body: #272b30;
@@ -120,6 +123,8 @@ body.quarto-dark {
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
   --lm-shadow-panel: 0 16px 40px rgba(0, 0, 0, 0.32);
 
+  /* Los alias se resuelven donde se declaran. Hay que redefinirlos aquí para
+     que no hereden los valores claros ya resueltos en :root. */
   --bg: var(--lm-bg-body);
   --card: var(--lm-bg-card);
   --panel: var(--lm-bg-sec);

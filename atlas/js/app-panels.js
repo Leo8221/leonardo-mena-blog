@@ -149,6 +149,8 @@ function renderDataAppendix(module) {
 }
 
 function renderDatasetCard(module, dataset, index) {
+  // visibleRows limita la vista previa, no el conjunto descargable. col.decimals
+  // cambia la etiqueta numérica; la columna sigue guardando el valor original.
   const rows = dataset.rows;
   const columns = datasetColumns(dataset);
   const visibleRows = rows.slice(0, dataset.visibleRows || 12);
@@ -191,6 +193,7 @@ function renderDatasetCard(module, dataset, index) {
 }
 
 function isNumericColumn(rows, field) {
+  // Se usa para alinear celdas. No cambia su tipo ni convierte datos ausentes en cero.
   const sample = rows.map((row) => row[field]).filter((value) => value !== null && value !== undefined && value !== "");
   return sample.length > 0 && sample.every((value) => Number.isFinite(Number(value)));
 }
@@ -362,6 +365,8 @@ function moduleDatasets(module) {
 }
 
 function dataset(id, title, rows, columns, note = "") {
+  // Una tabla describe datos existentes: id para la descarga, title para el lector,
+  // rows con observaciones y columns con campo, etiqueta y precisión opcional.
   return {
     id,
     title,

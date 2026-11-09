@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Quarto ya creó los artículos y sus filtros. Aquí se adapta ese HTML;
+  // no se vuelve a leer posts/ ni se mantiene un segundo catálogo.
   const destination = document.getElementById("listing-categories");
   const categories = document.querySelector(".quarto-listing-category");
   if (!destination || !categories) return;
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     category.replaceWith(button);
 
     if (series && button.classList.contains("category")) {
-      const name = decodeURIComponent(atob(button.dataset.category));
+      const name = categoryName(button);
       const icon = document.createElement("span");
       icon.className = `topic-symbol icon-${seriesIcons[name] || topicIcons[name] || "topics"}`;
       icon.setAttribute("aria-hidden", "true");
@@ -61,9 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const updateSelection = () => {
+    // El hash es la fuente de la selección, también al usar Atrás/Adelante.
+    // matchingItems cuenta coincidencias; visibleItems cuenta solo la página actual.
     const selected = new URLSearchParams(location.hash.slice(1)).get("category") || "";
     for (const button of destination.querySelectorAll(".category")) {
-      const active = decodeURIComponent(atob(button.dataset.category)) === selected;
+      const active = categoryName(button) === selected;
       button.setAttribute("aria-pressed", String(active));
       button.classList.toggle("active", active);
     }
@@ -89,4 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
   listing?.on("updated", updateSelection);
   window.addEventListener("hashchange", updateSelection);
   updateSelection();
+
+  function categoryName(button) {
+    // Quarto guarda primero el nombre como URI y luego en Base64. Deshacer
+    // ambas capas conserva los acentos; atob por sí solo dejaría secuencias %XX.
+    return decodeURIComponent(atob(button.dataset.category));
+  }
 });

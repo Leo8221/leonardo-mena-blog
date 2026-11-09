@@ -1,4 +1,6 @@
 author: "Leonardo Mena"
+# Se hereda en todos los index.qmd de posts/. El progreso y compartir se cargan
+# al final de la página, cuando ya existe el contenido al que añaden controles.
 include-after-body:
   - ../reading-progress.html
   - ../share-buttons-auto.html
@@ -8,6 +10,7 @@ format:
     toc: true
     toc-location: left
     body-classes: editorial-post
+    # Esta clase conecta el artículo con assets/css/site/article-*.css.
     include-after-body: article-enhancements.html
 
 comments: 

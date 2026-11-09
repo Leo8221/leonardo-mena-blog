@@ -90,6 +90,8 @@
 }
 
 .data-table-wrap {
+  /* Los fondos local cubren las sombras al llegar a cada extremo del scroll.
+     Sirven de pista de que hay más columnas, sin añadir eventos de JavaScript. */
   overflow-x: auto;
   max-width: 100%;
   -webkit-overflow-scrolling: touch;

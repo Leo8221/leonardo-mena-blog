@@ -1,4 +1,6 @@
 function macroChartRows() {
+  // La TPM tiene meses más recientes que el cruce macro. Elegir su propia tabla
+  // evita que una demora del IMAE recorte la historia de la tasa.
   return state.macroMetric === "tpm" && state.data.series.policyRate?.length
     ? state.data.series.policyRate : state.data.series.macro;
 }
@@ -303,6 +305,8 @@ function chartDownloadButton(canvasId) {
 }
 
 function chartEvents(scope, metric = null) {
+  // period debe coincidir exactamente con una etiqueta de la serie. Una nota
+  // de "May" no se asigna por suposición a "May 2026" ni a otro año.
   const events = state.data.series.events?.[scope] || [];
   return events.filter((event) => !Array.isArray(event.metrics) || !metric || event.metrics.includes(metric));
 }

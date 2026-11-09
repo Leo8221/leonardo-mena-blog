@@ -1,5 +1,7 @@
 <script>
 (function () {
+  // Quarto incluye este bloque después del artículo. No toca sus datos ni sus
+  // gráficos: añade tiempo de lectura, controles de ampliación y sincroniza Giscus.
   const body = document.body;
   if (!body || !body.classList.contains("editorial-post")) return;
 
@@ -20,23 +22,29 @@
   const titleBlock = document.getElementById("title-block-header");
   if (!content || !titleBlock || titleBlock.querySelector(".article-reading-time")) return;
 
-  const text = content.innerText || "";
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  // Es una estimación: 230 palabras por minuto, con un mínimo de un minuto.
-  const minutes = Math.max(1, Math.round(words / 230));
-  const label = `${minutes} min de lectura`;
-  const meta = document.createElement("div");
-  meta.className = "article-reading-time";
-  meta.textContent = label;
+  addReadingTime(content, titleBlock);
+  content.querySelectorAll("figure").forEach(enableFigureZoom);
 
-  const metaBlock = titleBlock.querySelector(".quarto-title-meta");
-  if (metaBlock) {
-    metaBlock.insertAdjacentElement("afterend", meta);
-  } else {
-    titleBlock.appendChild(meta);
+  function addReadingTime(content, titleBlock) {
+    const contentText = content.innerText || "";
+    const words = contentText.trim().split(/\s+/).filter(Boolean).length;
+    // Es una estimación: 230 palabras por minuto, con un mínimo de un minuto.
+    const minutes = Math.max(1, Math.round(words / 230));
+    const readingTime = document.createElement("div");
+    readingTime.className = "article-reading-time";
+    readingTime.textContent = `${minutes} min de lectura`;
+
+    const titleMetadata = titleBlock.querySelector(".quarto-title-meta");
+    if (titleMetadata) {
+      titleMetadata.insertAdjacentElement("afterend", readingTime);
+    } else {
+      titleBlock.appendChild(readingTime);
+    }
   }
 
-  content.querySelectorAll("figure").forEach((figure, index) => {
+  function enableFigureZoom(figure, index) {
+    // Conserva el mismo img/svg/canvas y su pie. Solo añade un contenedor
+    // desplazable; .is-expanded activa el tamaño definido en article-figures.css.
     const media = figure.querySelector("img, svg, canvas");
     // Un enlace o un gráfico interactivo ya tiene su propia acción.
     if (!media || media.closest("a, .html-widget") || figure.parentElement.closest("figure")) return;
@@ -68,6 +76,7 @@
     figure.appendChild(hint);
 
     function setExpanded(expanded) {
+      // Estado visual, accesibilidad y foco cambian juntos, tanto con clic como con Esc.
       figure.classList.toggle("is-expanded", expanded);
       button.textContent = expanded ? "Reducir ↙" : "Ampliar ↗";
       button.setAttribute("aria-expanded", String(expanded));
@@ -90,6 +99,6 @@
         setExpanded(false);
       }
     });
-  });
+  }
 })();
 </script>

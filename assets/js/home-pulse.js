@@ -1,5 +1,6 @@
 const pulseRoot = document.querySelector("[data-home-pulse]");
 
+// Estos son IDs de atlas.metrics, no nombres de módulos ni columnas de una serie.
 const preferredMetricIds = ["usd", "inflation", "labor"];
 
 const formatDate = (value) => {
@@ -20,6 +21,8 @@ const appendText = (element, text) => {
 };
 
 const buildMetricCard = (metric, modulesById) => {
+  // metric.value y metric.delta ya vienen preparados por R/Python. Esta tarjeta
+  // solo añade el enlace y la procedencia; no calcula otra versión del indicador.
   const module = modulesById.get(metric.module);
   // El corte pertenece al módulo, no a la fecha global del archivo de datos.
   const cutoff = module?.sourceInfo?.updated;

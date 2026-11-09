@@ -1,5 +1,10 @@
 #!/usr/bin/env Rscript
 
+# Entrada: data/source-manifest.json. Salidas: copias en data/raw y un registro
+# source-run.json con procedencia, estado y huella de cada archivo. No calcula
+# indicadores: build-bcrd-live-data.R y los scripts de mapas hacen ese trabajo.
+# Este archivo sí descarga y copia fuentes al ejecutarse; las funciones se llaman al final.
+
 suppressPackageStartupMessages({
   library(jsonlite)
 })
@@ -145,6 +150,8 @@ fetch_bcrd_custom_view_source <- function(source, base, target_dir) {
 }
 
 fetch_local_source <- function(source, base, target_dir, kind, cache, required) {
+  # cache=TRUE copia un archivo; cache=FALSE verifica el original. Para directorios
+  # solo se registra existencia/fecha: no se copia su contenido de forma recursiva.
   source_path <- resolve_source_path(source)
   if (!nzchar(source_path) || !file.exists(source_path)) {
     status <- if (required) "missing" else "verified"
@@ -180,6 +187,8 @@ fetch_local_source <- function(source, base, target_dir, kind, cache, required) 
 }
 
 extract_excel_links <- function(html, page_url) {
+  # Devuelve URLs únicas de .xls/.xlsx, incluso si traen parámetros después de ?.
+  # page_url permite resolver los href relativos encontrados en la página del BCRD.
   matches <- gregexpr("href\\s*=\\s*['\\\"]([^'\\\"]+[.]xlsx?(?:[?][^'\\\"]*)?)['\\\"]", html, ignore.case = TRUE, perl = TRUE)
   raw <- regmatches(html, matches)[[1]]
   if (!length(raw)) return(character())
@@ -229,6 +238,8 @@ basename_no_query <- function(url) {
 }
 
 source_result <- function(source, status, target_dir) {
+  # Ficha común antes de leer la fuente. enrich_file_result añade tamaño, fecha
+  # y huella; Python publica después solo los campos que necesita el lector.
   list(
     id = source$id,
     label = source$label %||% source$id,
@@ -243,6 +254,7 @@ source_result <- function(source, status, target_dir) {
 }
 
 enrich_file_result <- function(base, path, status, url = NULL) {
+  # md5 identifica cambios en una copia; no acredita la validez estadística del archivo.
   info <- file.info(path)
   extra <- list(
     status = status,
@@ -262,6 +274,8 @@ resolve_path <- function(path) {
 }
 
 resolve_source_path <- function(source) {
+  # pattern es una expresión regular sobre nombres de archivo. Si coincide con
+  # varios, se conserva la primera coincidencia de list.files(), no la más reciente.
   base_path <- resolve_path(source$path %||% "")
   pattern <- source$pattern %||% ""
   if (!nzchar(pattern)) return(base_path)
@@ -277,6 +291,7 @@ rel_path <- function(path) {
 }
 
 file_time <- function(path) {
+  # Es la fecha de modificación del archivo en UTC, no el corte de sus observaciones.
   info <- file.info(path)
   if (is.na(info$mtime)) return(NULL)
   format(as.POSIXct(info$mtime, tz = "UTC"), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")

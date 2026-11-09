@@ -13,6 +13,12 @@ test("el acabado es idempotente y conserva el contenido de los gráficos", () =>
     const chart = path.join(figures, "chart.svg");
     const svg = "<svg><g class='svglite'><text>Metropolitana: 91%, crédito</text><path d='M 1 2 L 3 4'/></g></svg>";
     fs.writeFileSync(chart, svg);
+    const customSvg = path.join(figures, "handmade.svg");
+    fs.writeFileSync(customSvg, "<svg><text>Figura propia</text></svg>");
+    const atlasPage = path.join(output, "atlas", "index.html");
+    fs.mkdirSync(path.dirname(atlasPage));
+    const atlasHtml = '<nav class="navbar ">Atlas independiente de Quarto</nav>';
+    fs.writeFileSync(atlasPage, atlasHtml);
     const html = path.join(output, "index.html");
     const custom = path.join(output, "about.html");
     fs.writeFileSync(custom, '<div id="quarto-content" class="page-layout-custom"><h1>Sobre mí</h1></div>');
@@ -28,6 +34,8 @@ test("el acabado es idempotente y conserva el contenido de los gráficos", () =>
     const first = fs.readFileSync(chart, "utf8");
     const firstHtml = fs.readFileSync(html, "utf8");
     assert.match(first, /prefers-color-scheme: dark/);
+    assert.equal(fs.readFileSync(customSvg, "utf8"), "<svg><text>Figura propia</text></svg>");
+    assert.equal(fs.readFileSync(atlasPage, "utf8"), atlasHtml);
     assert.equal(first.replace(/<style id="lm-chart-theme">[\s\S]*?<\/style>\n/, ""), svg);
     assert.match(firstHtml, /aria-label="Navegación principal"/);
     assert.doesNotMatch(firstHtml, /role="menu"/);

@@ -2,6 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
+// Segundo paso post-render de _quarto.yml. Lee solo docs/: normaliza enlaces,
+// completa el sitemap y retira recursos generados que su HTML ya no referencia.
+// No se ejecuta como limpiador de fuentes ni de archivos de investigación.
 // La vista previa no debe modificar ni depurar la salida publicable.
 const outputDir = path.resolve(root, process.env.QUARTO_PROJECT_OUTPUT_DIR || "docs");
 if (outputDir !== path.resolve(root, "docs")) process.exit(0);
@@ -86,6 +89,8 @@ function canonicalUrlForHtml(relativePath) {
 }
 
 function normalizeInternalLinks(html, relativePath) {
+  // La raíz pública incluye /leonardo-mena-blog/. Un /posts/... absoluto saldría
+  // de ella; el prefijo relativo conserva los enlaces desde cualquier artículo.
   const prefix = relativeRootPrefix(relativePath);
   return html
     .replace(/href="\/posts\/([^"]+)\/index\.html"/g, `href="${prefix}posts/$1/"`)
@@ -99,6 +104,8 @@ function relativeRootPrefix(relativePath) {
 }
 
 function pruneUnreferencedFigureFiles() {
+  // Solo considera index_files/figure-html del artículo renderizado. El contrato
+  // actual exige que cada figura generada esté referenciada en su index.html.
   const postsDir = path.join(root, "docs", "posts");
   if (!fs.existsSync(postsDir)) return;
 
@@ -121,6 +128,8 @@ function pruneUnreferencedFigureFiles() {
 }
 
 function pruneUnreferencedSiteLibs() {
+  // Se conservan carpetas de biblioteca citadas por algún HTML publicado.
+  // Si se añade carga dinámica de bibliotecas, hay que revisar este criterio.
   const docsDir = path.join(root, "docs");
   const siteLibsDir = path.join(docsDir, "site_libs");
   if (!fs.existsSync(siteLibsDir)) return;

@@ -16,6 +16,8 @@ function collectGeoCoordinates(features) {
 }
 
 function buildFeaturePath(feature, project) {
+  // Soporta Polygon y MultiPolygon del GeoJSON preparado por R. project transforma
+  // [longitud, latitud] en [x, y] de canvas; cada anillo se cierra por separado.
   const path = new Path2D();
   const geometry = feature.geometry;
   const polygons = geometry.type === "Polygon" ? [geometry.coordinates] : geometry.coordinates;

@@ -6,6 +6,8 @@ const ASSET_URLS = {
 };
 
 function requiredAssets(module) {
+  // Son claves de state y ASSET_URLS, no rutas. Solo el mapa elegido requiere
+  // su GeoJSON; las series pequeñas ya llegaron en atlas-data.json durante boot().
   if (!module) return [];
   if (module.chart === "territory") return ["geojson"];
   if (module.chart === "visualLab") {
@@ -30,6 +32,8 @@ function ensureModuleAssets(module) {
   if (!keys.length) return Promise.resolve();
   const activeId = module.id;
   return Promise.all(keys.map(loadAtlasAsset)).finally(() => {
+    // La descarga puede terminar después de que el lector cambie de vista.
+    // Guardamos los datos, pero no volvemos a abrir el módulo que dejó atrás.
     if (state.active === activeId) renderStage();
   });
 }
@@ -62,6 +66,8 @@ function deviceType() {
 }
 
 function trackAtlasEvent(name, params = {}) {
+  // Se registra la longitud de la búsqueda, no el texto que escribió el lector.
+  // El evento local también funciona cuando Google Analytics no está disponible.
   const module = findModule(state.active);
   const payload = {
     module_id: params.module_id || state.active,
@@ -117,6 +123,8 @@ function filteredModules() {
 }
 
 function territoryRows() {
+  // Este filtro afecta a la tabla y al diagrama territorial. El mapa usa otro
+  // archivo (GeoJSON) y sigue mostrando el país completo para conservar contexto.
   const rows = state.data.series.territory.provinces;
   if (state.territoryRegion === "all") return rows;
   return rows.filter((item) => item.region === state.territoryRegion);
@@ -160,6 +168,8 @@ function findModule(id) {
 }
 
 function setActive(moduleId, options = {}) {
+  // moduleId es la ruta pública de la vista. options.metric elige su indicador;
+  // source solo describe el origen del clic y replace controla el historial.
   const next = moduleId === "overview" || findModule(moduleId) ? moduleId : "overview";
   const previous = state.active;
   state.active = next;
@@ -366,6 +376,8 @@ function ensureCanvasDownloadActions() {
 }
 
 function downloadDatasetsCsv(module, datasets) {
+  // Exporta los valores originales. El redondeo de las celdas en app-panels.js
+  // es solo visual y no debe aplicarse a estos datos ni a las filas ocultas.
   const csv = datasetsToCsv(module, datasets);
   const suffix = datasets.length === 1 ? datasets[0].id : "datos";
   const generated = String(state.data.generatedAt || state.data.updated || "").slice(0, 10) || "sin-fecha";
