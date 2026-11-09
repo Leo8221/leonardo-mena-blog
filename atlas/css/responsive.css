@@ -4,10 +4,7 @@
   }
 
   .workspace-grid,
-  .chart-layout {
-    grid-template-columns: 1fr;
-  }
-
+  .chart-layout,
   .source-card {
     grid-template-columns: 1fr;
   }
@@ -21,10 +18,7 @@
 /* Por debajo de este ancho, la barra lateral deja de ocupar una columna y se
    abre como menú. app-ui.js controla el foco y bloquea el contenido de fondo. */
 @media (max-width: 920px) {
-  .atlas-app {
-    grid-template-columns: 1fr;
-  }
-
+  .atlas-app,
   .atlas-app[data-view="overview"] {
     grid-template-columns: 1fr;
   }
@@ -120,7 +114,6 @@
 
   .atlas-main {
     width: 100%;
-    max-width: 100%;
     margin: 0 auto;
     padding: 0 0.65rem 1.25rem;
     overflow-x: visible;
@@ -211,15 +204,7 @@
   }
 
   .topbar-tour {
-    border-color: var(--terracotta);
-    background: var(--terracotta);
-    color: #fff;
     padding: 0 0.72rem;
-  }
-
-  body.atlas-dark .topbar-tour {
-    border-color: #c86448;
-    background: #a04d35;
   }
 
   .mobile-atlas-nav {
@@ -240,7 +225,9 @@
   }
 
   .mobile-filter-row::-webkit-scrollbar,
-  .mobile-module-nav::-webkit-scrollbar {
+  .mobile-module-nav::-webkit-scrollbar,
+  .metric-strip::-webkit-scrollbar,
+  .chart-toolbar::-webkit-scrollbar {
     display: block;
     height: 8px;
   }
@@ -360,11 +347,6 @@
     scrollbar-width: thin;
     -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
     mask-image: linear-gradient(90deg, #000 calc(100% - 2.25rem), transparent);
-  }
-
-  .metric-strip::-webkit-scrollbar {
-    display: block;
-    height: 8px;
   }
 
   .metric-card {
@@ -545,11 +527,6 @@
     margin-left: 0;
   }
 
-  .chart-toolbar::-webkit-scrollbar {
-    display: block;
-    height: 8px;
-  }
-
   .chart-toggle {
     flex: 0 0 auto;
     min-height: var(--lm-control-min);
@@ -656,10 +633,10 @@
     padding: 0.6rem;
   }
 
-.atlas-modal-body canvas {
-  height: calc(100dvh - 124px);
-  min-height: 360px;
-}
+  .atlas-modal-body canvas {
+    height: calc(100dvh - 124px);
+    min-height: 360px;
+  }
 
   .atlas-tooltip.is-touch-sheet {
     inset: auto 0.65rem calc(0.65rem + env(safe-area-inset-bottom)) 0.65rem;

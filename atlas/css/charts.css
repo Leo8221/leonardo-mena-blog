@@ -139,7 +139,8 @@
   margin-bottom: 0.55rem;
 }
 
-.chart-controls {
+.chart-controls,
+.chart-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -148,13 +149,6 @@
 
 .chart-controls .chart-toolbar {
   margin-bottom: 0;
-}
-
-.chart-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.35rem;
 }
 
 .chart-actions-inline {
@@ -172,11 +166,6 @@
   font-size: 0.72rem;
   font-weight: 800;
   padding: 0 0.65rem;
-}
-
-.chart-toggle.is-active {
-  border-color: var(--terracotta);
-  color: var(--terracotta-dark);
 }
 
 .article-link,
@@ -201,6 +190,7 @@
   color: var(--terracotta-dark);
 }
 
+.chart-toggle.is-active,
 .chart-expand:hover,
 .chart-download:hover,
 .article-link:hover {

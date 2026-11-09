@@ -347,11 +347,7 @@
   background-image: var(--atlas-icon-moon);
 }
 
-.topbar-actions a:first-of-type {
-  border-color: var(--terracotta);
-  color: var(--terracotta-dark);
-}
-
+.topbar-actions a:first-of-type,
 .topbar-tour[data-new="true"] {
   border-color: var(--terracotta);
   color: var(--terracotta-dark);

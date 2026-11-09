@@ -1,5 +1,6 @@
 .table-list,
-.ladder-list {
+.ladder-list,
+.data-table-grid {
   display: grid;
   gap: 0.65rem;
 }
@@ -37,11 +38,6 @@
   font-family: "Crimson Pro", Georgia, serif;
   font-size: 1.35rem;
   line-height: 1;
-}
-
-.data-table-grid {
-  display: grid;
-  gap: 0.65rem;
 }
 
 .data-table-card {
