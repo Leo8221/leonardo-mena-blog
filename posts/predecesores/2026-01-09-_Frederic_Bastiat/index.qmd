@@ -54,7 +54,7 @@ Sus ensayos eran cortos (3-10 páginas), publicados en periódicos (el "feed" de
 :::
 :::
 
-![Recreación visual: Si Bastiat tuviera una cuenta hoy.](bastiat-thread-editorial.png){width=80% fig-align="center"}
+![Recreación visual: Si Bastiat tuviera una cuenta hoy.](bastiat-thread-editorial.png){width=80% fig-align="center" fig-alt="Publicación ficticia de Bastiat: los fabricantes de velas franceses piden prohibir el sol. La sátira presenta el proteccionismo como una petición absurda."}
 
 ## El Costo de Oportunidad (Lo que no se ve)
 
@@ -107,7 +107,7 @@ La Falacia de la Ventana Rota aplicada a Juan
 
 <div class="section-divider">• • •</div>
 
-![Frédéric Bastiat (1801-1850), economista francés](Bastiat.jpg){.editorial-image}
+![Frédéric Bastiat (1801-1850), economista francés](Bastiat.jpg){.editorial-image fig-alt="Retrato de Frédéric Bastiat, sentado, con chaqueta y pañuelo al cuello."}
 
 ## Mi Predecesor
 
@@ -124,6 +124,7 @@ Bastiat murió joven, a la edad de 49 años, pero ese tiempo le bastó para crea
 #| echo: false
 #| fig-width: 10
 #| fig-height: 5
+#| fig-alt: "Cronología de Bastiat: nacimiento en 1801, herencia familiar en 1825, primer artículo económico en 1844, Petición de las Velas en 1845, diputado en 1848 y Lo que se ve y lo que no se ve en 1850. En 1946, Hazlitt retoma sus ideas en Economía en una lección. Los hitos están separados por igual, sin representar la duración entre fechas."
 
 library(ggplot2)
 library(dplyr)

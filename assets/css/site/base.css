@@ -111,6 +111,11 @@ pre {
 blockquote {
   border-left: 4px solid var(--lm-terracota);
   padding-left: 1.5rem;
-  color: var(--lm-text-soft);
   font-style: italic;
+}
+
+/* Igualar la clase de Quarto corrige el color sin cambiar sus márgenes ni bordes. */
+blockquote,
+.blockquote {
+  color: var(--lm-text-soft);
 }
