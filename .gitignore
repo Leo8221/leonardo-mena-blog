@@ -21,6 +21,8 @@ posts/republica-habla-de/2026-05-04-efectos-segunda-ronda-petroleo/
 /.preview/
 
 # Archivos de sesión y del sistema operativo
+__pycache__/
+*.pyc
 .Rhistory
 .RData
 .Ruserdata

@@ -57,6 +57,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
+            python3 \
             libcurl4-openssl-dev \
             libssl-dev \
             libxml2-dev \
@@ -109,7 +110,10 @@ jobs:
           Rscript atlas/scripts/build-bcrd-live-data.R
           Rscript atlas/scripts/build-map-assets.R
           Rscript atlas/scripts/build-article-visuals.R
-          node atlas/scripts/build-atlas-data.mjs
+          python3 atlas/scripts/build_atlas_data.py
+
+      - name: Validar núcleo de datos Python
+        run: python3 atlas/scripts/test_atlas_data.py
 
       - name: Validar JavaScript del sitio
         run: |

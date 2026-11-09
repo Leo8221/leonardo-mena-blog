@@ -86,7 +86,8 @@ requireText(".github/workflows/actualizar_observatorio.yml", [
   ["transformacion BCRD viva", "Rscript atlas/scripts/build-bcrd-live-data.R"],
   ["mapa provincial Atlas", "Rscript atlas/scripts/build-map-assets.R"],
   ["visuales de articulos Atlas", "Rscript atlas/scripts/build-article-visuals.R"],
-  ["datos publicos Atlas", "node atlas/scripts/build-atlas-data.mjs"],
+  ["datos publicos Atlas", "python3 atlas/scripts/build_atlas_data.py"],
+  ["pruebas de datos Python", "python3 atlas/scripts/test_atlas_data.py"],
   ["render con el hook de Quarto", "quarto render"]
 ]);
 
@@ -118,9 +119,10 @@ requireText("atlas/scripts/build-bcrd-live-data.R", [
   ["lectura TPM", "Serie_TPM.xlsx"]
 ]);
 
-requireText("atlas/scripts/build-atlas-data.mjs", [
-  ["hidratacion BCRD", "applyLiveBcrdData"],
-  ["metadatos BCRD vivos", "publicLiveData"]
+requireText("atlas/scripts/build_atlas_data.py", [
+  ["entrada del catálogo", "atlas-source.json"],
+  ["entrada de cálculos R", "bcrd-live-data.json"],
+  ["salida pública estable", "atlas-data.json"]
 ]);
 
 requireText("skip-link.html", [

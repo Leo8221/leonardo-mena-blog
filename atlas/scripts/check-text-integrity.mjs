@@ -13,6 +13,7 @@ const textExtensions = new Set([
   ".json",
   ".md",
   ".mjs",
+  ".py",
   ".qmd",
   ".r",
   ".txt",

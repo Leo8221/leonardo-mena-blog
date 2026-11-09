@@ -1,13 +1,17 @@
 # Reglas del repositorio
 
 - Quarto genera el sitio en `docs/`; los artículos se escriben en `.qmd` y los
-  gráficos reproducibles, en R. Atlas usa HTML, CSS y JavaScript nativo.
+  gráficos reproducibles, en R. El núcleo analítico del Atlas usa R; Python
+  ensambla y valida los datos públicos. HTML, CSS y JavaScript nativo presentan
+  los resultados y resuelven la interacción en el navegador.
 - Editar las fuentes. Actualizar `docs/` mediante render o sincronización
   controlada de recursos estáticos. No cambiar rutas públicas sin migración.
 - Borradores y publicados comparten `posts/`; el encabezado `draft` determina
   su estado. No publicar borradores, placeholders ni datos o credenciales inventados.
 - `README.md` explica cómo escribir, revisar y publicar. Documentar parámetros,
-  contratos y decisiones no evidentes en las funciones. No crear manuales que
+  contratos y decisiones no evidentes en las funciones: entradas, salidas,
+  unidades, fórmulas y el recorrido entre archivos. Los comentarios deben ayudar
+  al autor a entender y aprender siguiendo el código. No crear manuales que
   repitan el código ni diarios de tareas; registrar cambios y pruebas en el commit.
 - Mantener los documentos de procedencia y metodología que acompañan datos reales.
 
@@ -30,7 +34,8 @@
   cambiar locales globales ni reparar textos o SVG generados para ocultarlo.
 - Ejecutar las pruebas afectadas, `node --check` en JavaScript modificado y
   `node atlas/scripts/check-text-integrity.mjs`.
-- Al cambiar datos del Atlas, ejecutar `node atlas/scripts/build-atlas-data.mjs`
+- Al cambiar datos del Atlas, ejecutar `tools/run-python.ps1 atlas/scripts/build_atlas_data.py`
+  y `tools/run-python.ps1 atlas/scripts/test_atlas_data.py`
   y, si cambian sus visuales, `atlas/scripts/build-article-visuals.R` con el wrapper R.
 - Comprobar el render con `tools/render-quarto.ps1` cuando cambien sus fuentes.
   Revisar el diff generado: no mezclar cambios de versión de Quarto sin examinarlos.

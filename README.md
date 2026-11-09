@@ -47,10 +47,15 @@ GitHub Actions renderiza `main` y actualiza `docs/` para GitHub Pages.
 
 `_quarto.yml` configura el sitio. `styles.css` carga los estilos de `assets/`.
 Atlas vive en `atlas/`; sus datos se declaran en `atlas/data/atlas-source.json`.
+R calcula indicadores y prepara mapas; `atlas/scripts/build_atlas_data.py`
+ensambla y valida el JSON que consume la web. El recorrido y las unidades se
+explican en esos archivos; JavaScript se ocupa de la interacción y el dibujo.
 `tema_graficos.R` contiene el tema común de los gráficos.
 Las decisiones y los parámetros se explican junto a las funciones que los usan.
 
 ```powershell
+.\tools\run-python.ps1 atlas/scripts/build_atlas_data.py
+.\tools\run-python.ps1 atlas/scripts/test_atlas_data.py
 node --test atlas/scripts/*.test.mjs
 node atlas/scripts/check-text-integrity.mjs
 node atlas/scripts/check-site-contract.mjs

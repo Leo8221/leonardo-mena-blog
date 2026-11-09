@@ -42,7 +42,8 @@ Push-Location $repoRoot
 # Los scripts usan rutas relativas al repositorio. finally devuelve la terminal
 # a la carpeta desde la que los llamaste, incluso si Python falla.
 try {
-  & $python $scriptPath @ScriptArgs
+  # UTF-8 también en consola y tuberías; no depende de la página de códigos de Windows.
+  & $python -X utf8 $scriptPath @ScriptArgs
   if ($LASTEXITCODE -ne 0) {
     throw "Python fallo con codigo $LASTEXITCODE."
   }
