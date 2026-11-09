@@ -13,8 +13,6 @@ format:
 
 ---
 
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{=html}
 <figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/01_ingreso_por_empleado_formalidad.svg" alt="Ingreso total promedio por trabajador en MIPYMES formales e informales."><figcaption>Ingreso total promedio por trabajador y formalidad.</figcaption></figure>
 <figure class="article-figure"><img src="../../../research/camus-mipyme/figuras/02_problemas_de_supervivencia_mipyme.svg" alt="Problemas declarados por las MIPYMES, ordenados por porcentaje ponderado."><figcaption>Problemas declarados por las MIPYMES.</figcaption></figure>

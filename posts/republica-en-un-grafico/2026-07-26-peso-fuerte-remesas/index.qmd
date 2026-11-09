@@ -13,8 +13,6 @@ format:
 
 ---
 
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{=html}
 <figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/01_remesas_tipo_cambio_poder_compra.svg" alt="Índices del tipo de cambio y de los precios al consumidor desde enero de 2010, con interrupciones cuando faltan datos."><figcaption>Tipo de cambio e inflación como fuerzas que determinan el poder de compra de US$100.</figcaption></figure>
 <figure class="article-figure"><img src="../../../research/peso-fuerte-remesas/figuras/02_poder_compra_remesas.svg" alt="Índice del poder de compra de los pesos recibidos por cada cien dólares, con un valor de 82 en mayo de 2026."><figcaption>Poder de compra relativo de US$100 recibidos.</figcaption></figure>

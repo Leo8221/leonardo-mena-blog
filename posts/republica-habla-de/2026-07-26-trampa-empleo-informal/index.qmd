@@ -13,8 +13,6 @@ format:
 
 ---
 
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{=html}
 <figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/01_formalidad_informalidad_tendencia.svg" alt="Tendencia de la composición formal e informal del empleo según la ENCFT."><figcaption>Formalidad e informalidad en la población ocupada, ENCFT.</figcaption></figure>
 <figure class="article-figure"><img src="../../../research/trampa-empleo-informal/figuras/02_informalidad_por_rama.svg" alt="Porcentaje de ocupados informales dentro de cada rama de actividad."><figcaption>Informalidad dentro de cada rama de actividad.</figcaption></figure>

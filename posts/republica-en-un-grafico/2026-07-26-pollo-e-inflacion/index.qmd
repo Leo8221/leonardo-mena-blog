@@ -13,8 +13,6 @@ format:
 
 ---
 
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{=html}
 <figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/02_heatmap_contribuciones_ipc.svg" alt="Mapa de calor de seis familias de componentes que sumaron o restaron a la inflación mensual dominicana entre enero de 2025 y junio de 2026."><figcaption>Los motores del IPC cambian de un mes a otro.</figcaption></figure>
 <figure class="article-figure"><img src="../../../research/pollo-inflacion/figuras/03_caso_representativo_alimentos.svg" alt="Fórmula visual de junio de 2026 para alimentos y bebidas, el grupo con mayor incidencia absoluta media y que lideró nueve de dieciocho meses."><figcaption>Alimentos y bebidas es el grupo más representativo del período analizado.</figcaption></figure>

@@ -13,11 +13,6 @@ toc: true
 toc-location: left
 include-after-body: ../../../reading-progress.html
 ---
-<style>
-body { /* Force la clase */ }
-</style>
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{r setup, include=FALSE}
 source(here::here("tema_graficos.R"))
 library(ggplot2)

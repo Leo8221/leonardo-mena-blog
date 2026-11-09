@@ -15,11 +15,6 @@ toc-location: left
 include-after-body: ../../../reading-progress.html
 ---
 
-<style>
-body { /* Force la clase */ }
-</style>
-<script>document.body.classList.add('editorial-post');</script>
-
 ```{=html}
 <div class="audio-player-container">
     <div class="audio-header">

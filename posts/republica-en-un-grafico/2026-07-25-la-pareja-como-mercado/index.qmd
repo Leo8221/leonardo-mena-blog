@@ -32,8 +32,6 @@ format:
 }
 </style>
 
-<script>document.body.classList.add('editorial-post');</script>
-
 <div class="research-question">
 <strong>Pregunta de trabajo:</strong> ¿las parejas se parecen en educación porque se eligen entre personas similares, porque convergen durante la convivencia o porque comparten el mismo entorno social?
 </div>

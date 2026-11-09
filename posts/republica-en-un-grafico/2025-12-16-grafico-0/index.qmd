@@ -11,11 +11,6 @@ toc: true
 toc-location: left
 ---
 
-<style>
-body { /* Force la clase */ }
-</style>
-<script>document.body.classList.add('editorial-post');</script>
-
 ::: {.post-meta}
 <span class="post-meta-item">⏱️ 3 min de lectura</span>
 :::
