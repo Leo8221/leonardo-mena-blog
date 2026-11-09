@@ -14,6 +14,8 @@ test("el acabado es idempotente y conserva el contenido de los gráficos", () =>
     const svg = "<svg><g class='svglite'><text>Metropolitana: 91%, crédito</text><path d='M 1 2 L 3 4'/></g></svg>";
     fs.writeFileSync(chart, svg);
     const html = path.join(output, "index.html");
+    const custom = path.join(output, "about.html");
+    fs.writeFileSync(custom, '<div id="quarto-content" class="page-layout-custom"><h1>Sobre mí</h1></div>');
     fs.writeFileSync(html, '<nav class="navbar navbar-expand-lg"><button class="navbar-toggler" role="menu" aria-label="Navegación de palanca">Menú</button></nav><main class="content" id="quarto-document-content">Artículo</main>' +
       '<h5 class="no-anchor card-title listing-title">Tarjeta</h5>' +
       '<div class="thumbnail"><a href="post.html"><img class="thumbnail-image" src="cover.png"></a></div>' +
@@ -34,9 +36,12 @@ test("el acabado es idempotente y conserva el contenido de los gráficos", () =>
     assert.match(firstHtml, /aria-label="Una &quot;idea&quot; &amp; datos"/);
     assert.match(firstHtml, /src="cover.png" alt=""/);
     assert.match(firstHtml, /alt="Crédito por región"/);
+    const firstCustom = fs.readFileSync(custom, "utf8");
+    assert.match(firstCustom, /role="main" aria-label="Contenido principal"/);
     run();
     assert.equal(fs.readFileSync(chart, "utf8"), first);
     assert.equal(fs.readFileSync(html, "utf8"), firstHtml);
+    assert.equal(fs.readFileSync(custom, "utf8"), firstCustom);
   } finally {
     fs.rmSync(output, { recursive: true, force: true });
   }

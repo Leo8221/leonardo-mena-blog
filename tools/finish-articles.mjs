@@ -27,6 +27,10 @@ for (const name of fs.readdirSync(output, { recursive: true })) {
     .replace(/(<button class="navbar-toggler"[^>]*?) role="menu"/g, "$1")
     .replace('aria-label="Navegación de palanca"', 'aria-label="Abrir o cerrar el menú"')
     .replace('<i class="bi bi-graph-up" role="img">', '<i class="bi bi-graph-up" aria-hidden="true">');
+  // Las páginas con page-layout: custom no reciben un <main> de Quarto.
+  if (!/<main\b|role=["']main["']/.test(html)) {
+    html = html.replace('<div id="quarto-content"', '<div role="main" aria-label="Contenido principal" id="quarto-content"');
+  }
   // Las tarjetas de Quarto saltan a h5 aunque estén bajo un h2. Las miniaturas
   // son enlaces al artículo: usamos su título como nombre, sin inventar un alt.
   html = html.replace(/<h5(\s+class="[^"]*\blisting-title\b[^"]*")>([\s\S]*?)<\/h5>/g, '<h3$1>$2</h3>');
