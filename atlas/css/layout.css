@@ -82,7 +82,7 @@
 }
 
 .brand-lockup small {
-  color: var(--terracotta);
+  color: var(--terracotta-dark);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;

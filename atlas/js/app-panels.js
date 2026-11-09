@@ -164,7 +164,7 @@ function renderDatasetCard(module, dataset, index) {
       <div class="data-table-actions">
         <button class="data-download" type="button" data-action="download-dataset" data-dataset="${escapeHtml(dataset.id)}">CSV</button>
       </div>
-      <div class="data-table-wrap">
+      <div class="data-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(dataset.title)}: tabla desplazable">
         <table>
           <caption class="sr-only">${escapeHtml(module.title)}: ${escapeHtml(dataset.title)}</caption>
           <thead>

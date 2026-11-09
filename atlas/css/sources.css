@@ -25,7 +25,7 @@
 .source-card-main span {
   display: block;
   margin-bottom: 0.25rem;
-  color: var(--terracotta);
+  color: var(--terracotta-dark);
   font-size: 0.66rem;
   font-weight: 900;
   letter-spacing: 0.14em;

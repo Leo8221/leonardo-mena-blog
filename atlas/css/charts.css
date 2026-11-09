@@ -272,7 +272,7 @@ canvas[height="500"] {
 
 .map-focus small,
 .map-stat-grid span {
-  color: var(--terracotta);
+  color: var(--terracotta-dark);
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.08em;

@@ -75,11 +75,11 @@
 }
 
 .metric-card[data-tone="good"] span {
-  color: #1f7f45;
+  color: var(--lm-success);
 }
 
 .metric-card[data-tone="warn"] span {
-  color: #b25b11;
+  color: var(--lm-warning);
 }
 
 .workspace-grid {
