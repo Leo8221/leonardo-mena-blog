@@ -1,4 +1,6 @@
 function drawComplexScatterChart(canvas, rows, options) {
+  // xField/yField/sizeField nombran columnas de rows. Las transformaciones de
+  // ejes solo comprimen distancias; los tooltips conservan las unidades originales.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
@@ -103,6 +105,8 @@ function drawComplexScatterChart(canvas, rows, options) {
 }
 
 function drawScatterChart(canvas, rows, options) {
+  // Vista territorial simple: el tamaño recibe un índice 0–100, no población.
+  // El color distingue las tres primeras filas del resto; no expresa un umbral.
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();

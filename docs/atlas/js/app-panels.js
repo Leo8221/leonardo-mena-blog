@@ -2,7 +2,7 @@ function renderStageActions(canExport) {
   return `
     <div class="stage-actions">
       <button class="stage-action" type="button" data-action="copy-link" title="Copiar enlace de esta vista">Copiar enlace</button>
-      ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">CSV</button>` : ""}
+      ${canExport ? `<button class="stage-action" type="button" data-action="export-csv" title="Descargar datos de esta vista">Descargar CSV</button>` : ""}
     </div>
   `;
 }
@@ -23,7 +23,8 @@ function renderModuleBody(module) {
   const body = renderer ? renderer(module) : renderUnsupported(module);
   return `
     ${renderModuleBrief(module)}
-    <div class="chart-layout">
+    <h2 class="sr-only">Gráficos</h2>
+    <div class="chart-layout" id="view-charts">
       ${body}
       ${renderSourceCard(module)}
     </div>
@@ -33,7 +34,9 @@ function renderModuleBody(module) {
 
 function renderModuleBrief(module) {
   return `
-    <section class="module-brief" aria-label="Lectura del módulo">
+    <details class="module-context">
+      <summary>Cómo leer esta vista</summary>
+      <section class="module-brief" aria-label="Lectura del módulo">
       ${module.question ? `<p class="module-brief-question">${escapeHtml(module.question)}</p>` : ""}
       ${module.insight ? `
         <p class="module-brief-reading">
@@ -42,7 +45,8 @@ function renderModuleBrief(module) {
         </p>
       ` : ""}
       ${renderModuleGuide(module)}
-    </section>
+      </section>
+    </details>
   `;
 }
 
@@ -86,7 +90,7 @@ function renderSourceCard(module) {
     : "";
 
   return `
-    <aside class="source-card" aria-label="Fuente">
+    <aside class="source-card" id="view-sources" aria-label="Fuente">
       <div class="source-card-main">
         <span>Fuente</span>
         <strong>${escapeHtml(sourceLabel)}</strong>
@@ -129,7 +133,7 @@ function renderDataAppendix(module) {
   if (!datasets.length) return "";
 
   return `
-    <section class="data-appendix" aria-label="Datos tabulares del módulo">
+    <section class="data-appendix" id="view-data" aria-label="Datos tabulares del módulo">
       <div class="data-appendix-head">
         <div>
           <span>Datos</span>
@@ -145,6 +149,8 @@ function renderDataAppendix(module) {
 }
 
 function renderDatasetCard(module, dataset, index) {
+  // visibleRows limita la vista previa, no el conjunto descargable. col.decimals
+  // cambia la etiqueta numérica; la columna sigue guardando el valor original.
   const rows = dataset.rows;
   const columns = datasetColumns(dataset);
   const visibleRows = rows.slice(0, dataset.visibleRows || 12);
@@ -164,7 +170,7 @@ function renderDatasetCard(module, dataset, index) {
       <div class="data-table-actions">
         <button class="data-download" type="button" data-action="download-dataset" data-dataset="${escapeHtml(dataset.id)}">CSV</button>
       </div>
-      <div class="data-table-wrap">
+      <div class="data-table-wrap" tabindex="0" role="region" aria-label="${escapeHtml(dataset.title)}: tabla desplazable">
         <table>
           <caption class="sr-only">${escapeHtml(module.title)}: ${escapeHtml(dataset.title)}</caption>
           <thead>
@@ -173,7 +179,7 @@ function renderDatasetCard(module, dataset, index) {
           <tbody>
             ${visibleRows.map((row) => `
               <tr>
-                ${columns.map((column) => `<td${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field]))}</td>`).join("")}
+                ${columns.map((column) => `<td${numericFields.has(column.field) ? ' data-type="number"' : ""}>${escapeHtml(formatTableCell(row[column.field], column.decimals))}</td>`).join("")}
               </tr>
             `).join("")}
           </tbody>
@@ -187,6 +193,7 @@ function renderDatasetCard(module, dataset, index) {
 }
 
 function isNumericColumn(rows, field) {
+  // Se usa para alinear celdas. No cambia su tipo ni convierte datos ausentes en cero.
   const sample = rows.map((row) => row[field]).filter((value) => value !== null && value !== undefined && value !== "");
   return sample.length > 0 && sample.every((value) => Number.isFinite(Number(value)));
 }
@@ -203,14 +210,19 @@ function moduleDatasets(module) {
     macro: () => [
       dataset("macro", "Indicadores macro", series.macro, [
         col("period", "Periodo"),
-        col("dolar", "Dólar"),
-        col("inflacion", "Inflación"),
-        col("imae", "IMAE"),
-        col("tpm", "TPM")
-      ], `Serie activa: ${macroMetricLabel()}`)
+        col("dolar", "Dólar (RD$/US$)", 2),
+        col("inflacion", "Inflación (%)", 2),
+        col("imae", "IMAE (%)", 2),
+        col("tpm", "TPM (%)", 2)
+      ], "Meses comunes a los cuatro indicadores."),
+      ...(series.policyRate?.length ? [{
+        ...dataset("tpm", "Tasa de política monetaria", series.policyRate, [
+          col("period", "Periodo"), col("tpm", "TPM (%)", 2)
+        ], "Serie mensual con su propio corte."), visibleRows: 24
+      }] : [])
     ],
     external: () => [
-      dataset("presion-externa", "Presión externa", series.external, [
+      dataset("presion-externa", "Exportaciones de servicios", series.external, [
         col("period", "Periodo"),
         col("pressure", "Índice")
       ]),
@@ -268,12 +280,12 @@ function moduleDatasets(module) {
     prices: () => [
       dataset("inflacion", "Inflación", series.prices.timeline, [
         col("period", "Periodo"),
-        col("headline", "General"),
-        col("core", "Subyacente")
+        col("headline", "General (%)", 2),
+        col("core", "Subyacente (%)", 2)
       ]),
       dataset("rubros", "Rubros", series.prices.components, [
         col("component", "Rubro"),
-        col("contribution", "Contribución"),
+        col("contribution", "Variación mensual (%)", 2),
         col("pressure", "Presión")
       ]),
       dataset("traspaso", "Canales de traspaso", series.prices.passThrough, [
@@ -353,6 +365,8 @@ function moduleDatasets(module) {
 }
 
 function dataset(id, title, rows, columns, note = "") {
+  // Una tabla describe datos existentes: id para la descarga, title para el lector,
+  // rows con observaciones y columns con campo, etiqueta y precisión opcional.
   return {
     id,
     title,
@@ -362,8 +376,8 @@ function dataset(id, title, rows, columns, note = "") {
   };
 }
 
-function col(field, label) {
-  return { field, label };
+function col(field, label, decimals) {
+  return { field, label, decimals };
 }
 
 function datasetColumns(dataset) {
@@ -380,9 +394,9 @@ function pickFields(row, fields) {
   }, {});
 }
 
-function formatTableCell(value) {
+function formatTableCell(value, decimals) {
   if (value === null || value === undefined || value === "") return "—";
-  if (typeof value === "number") return formatNumber(value);
+  if (typeof value === "number") return formatNumber(value, decimals);
   return String(value);
 }
 

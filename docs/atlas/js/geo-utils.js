@@ -16,6 +16,8 @@ function collectGeoCoordinates(features) {
 }
 
 function buildFeaturePath(feature, project) {
+  // Soporta Polygon y MultiPolygon del GeoJSON preparado por R. project transforma
+  // [longitud, latitud] en [x, y] de canvas; cada anillo se cierra por separado.
   const path = new Path2D();
   const geometry = feature.geometry;
   const polygons = geometry.type === "Polygon" ? [geometry.coordinates] : geometry.coordinates;
@@ -33,6 +35,8 @@ function buildFeaturePath(feature, project) {
 }
 
 function drawMapLabels(ctx, entries, options, min, max) {
+  const { width, height } = ctx.canvas.getBoundingClientRect();
+  const occupied = [];
   const topEntries = entries
     .filter((entry) => Number.isFinite(entry.value))
     .sort((a, b) => b.value - a.value)
@@ -49,8 +53,15 @@ function drawMapLabels(ctx, entries, options, min, max) {
     ctx.lineJoin = "round";
     ctx.font = "700 10px Inter";
     const text = String(label).replace("Santo Domingo", "S. Domingo");
-    ctx.strokeText(text, entry.centroid[0] - 22, entry.centroid[1]);
-    ctx.fillText(text, entry.centroid[0] - 22, entry.centroid[1]);
+    const textWidth = ctx.measureText(text).width;
+    const x = Math.max(6, Math.min(width - textWidth - 6, entry.centroid[0] - textWidth / 2));
+    const y = Math.max(14, Math.min(height - 14, entry.centroid[1]));
+    // En pantallas estrechas se omiten solo rótulos superpuestos; cada región
+    // conserva su tooltip y su entrada en el panel de datos.
+    if (occupied.some(box => x < box.right + 6 && x + textWidth > box.left - 6 && Math.abs(y - box.y) < 14)) return;
+    occupied.push({ left: x, right: x + textWidth, y });
+    ctx.strokeText(text, x, y);
+    ctx.fillText(text, x, y);
   });
 }
 

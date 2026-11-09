@@ -62,7 +62,7 @@ body.editorial-post .share-buttons-sticky {
 }
 
 .share-minimal a {
-  color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
   font-weight: 600;
   border-bottom: 1px solid var(--lm-terracota);
   text-decoration: none;
@@ -103,7 +103,7 @@ body.editorial-post .share-buttons-sticky {
 .share-native-button:hover,
 .share-copy-button:hover {
   background: var(--lm-bg-sec);
-  border-color: var(--lm-terracota);
+  border-color: var(--lm-terracota-dark);
   color: var(--lm-terracota-dark);
 }
 
@@ -167,5 +167,5 @@ body.editorial-post .share-buttons-sticky {
 }
 
 body.quarto-dark .share-minimal a {
-  color: var(--lm-terracota);
+  color: var(--lm-terracota-dark);
 }

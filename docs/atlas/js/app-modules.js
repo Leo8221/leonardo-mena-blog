@@ -1,9 +1,24 @@
+function macroChartRows() {
+  // La TPM tiene meses más recientes que el cruce macro. Elegir su propia tabla
+  // evita que una demora del IMAE recorte la historia de la tasa.
+  return state.macroMetric === "tpm" && state.data.series.policyRate?.length
+    ? state.data.series.policyRate : state.data.series.macro;
+}
+
 function renderMacro() {
+  const rows = macroChartRows();
+  const first = rows[0];
+  const last = rows.at(-1);
+  const isPolicyRate = state.macroMetric === "tpm";
+  const description = isPolicyRate
+    ? `${formatNumber(last.tpm, 2)} % en ${last.period}. ${rows.every(row => row.tpm === first.tpm) ? "Sin cambios en el periodo mostrado." : "Serie mensual; los escalones unen observaciones, no fechas exactas de decisión."}`
+    : `De ${first.period} a ${last.period}.`;
   return `
     <section class="chart-card chart-card-wide">
       <div class="card-head">
         <div>
           <h3>Trayectoria macro reciente</h3>
+          <p class="chart-caption">${escapeHtml(description)}</p>
         </div>
         <div class="chart-toolbar">
           ${chartToggle("macro", "dolar", "Dólar")}
@@ -13,7 +28,7 @@ function renderMacro() {
         </div>
         <div class="chart-actions">${chartDownloadButton("macro-chart")}</div>
       </div>
-      <canvas id="macro-chart" height="320" aria-label="Gráfico de línea macro"></canvas>
+      <canvas id="macro-chart" height="320" aria-label="${escapeHtml(`${macroMetricLabel()}: ${description}`)}"></canvas>
     </section>
   `;
 }
@@ -21,11 +36,13 @@ function renderMacro() {
 function renderExternal() {
   return `
     <section class="chart-card chart-card-wide">
-      <h3>Índice de presión externa</h3>
-      <canvas id="external-chart" height="320" aria-label="Gráfico de presión externa"></canvas>
+      <h3>Exportaciones de servicios</h3>
+      <p class="chart-caption">Índice relativo: el mayor valor del periodo equivale a 100. No es una medida de riesgo.</p>
+      <canvas id="external-chart" height="320" aria-label="Índice de exportaciones de servicios, máximo del periodo igual a 100"></canvas>
     </section>
     <section class="chart-card">
-      <h3>Drivers comparables</h3>
+      <h3>Rubros del último año</h3>
+      <p class="chart-caption">Mayor rubro = 100; no son porcentajes del total.</p>
       <div class="driver-list">${renderBarRows(state.data.series.drivers, {
         labelField: "driver",
         valueField: "value",
@@ -113,7 +130,8 @@ function renderPrices() {
       <div class="contribution-list">${renderContributionRows(state.data.series.prices.components, {
         labelField: "component",
         valueField: "contribution",
-        suffix: " p.p."
+        suffix: " %",
+        decimals: 2
       })}</div>
     </section>
     ${state.data.series.prices.passThrough?.length ? `
@@ -259,7 +277,7 @@ function renderUnsupported(module) {
 
 function chartToggle(scope, id, label) {
   const active = state[CHART_CONTROLS[scope]];
-  return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
+  return `<button class="chart-toggle ${active === id ? "is-active" : ""}" type="button" aria-pressed="${active === id}" data-scope="${scope}" data-metric="${id}">${escapeHtml(label)}</button>`;
 }
 
 function chartControls(toolbarHtml = "", actionsHtml = "") {
@@ -287,6 +305,8 @@ function chartDownloadButton(canvasId) {
 }
 
 function chartEvents(scope, metric = null) {
+  // period debe coincidir exactamente con una etiqueta de la serie. Una nota
+  // de "May" no se asigna por suposición a "May 2026" ni a otro año.
   const events = state.data.series.events?.[scope] || [];
   return events.filter((event) => !Array.isArray(event.metrics) || !metric || event.metrics.includes(metric));
 }
@@ -295,8 +315,8 @@ function hydrateCharts(module) {
   // Primero renderModuleBody crea los canvas vacíos; después esta función
   // elige las columnas de datos y llama al dibujo de cada gráfico.
   if (module.chart === "macro") {
-    const labels = state.data.series.macro.map((item) => item.period);
-    const values = state.data.series.macro.map((item) => item[state.macroMetric]);
+    const labels = macroChartRows().map((item) => item.period);
+    const values = macroChartRows().map((item) => item[state.macroMetric]);
     const titles = {
       dolar: "RD$ por US$",
       inflacion: "Inflación interanual (%)",
@@ -305,6 +325,9 @@ function hydrateCharts(module) {
     };
     drawLineChart(document.getElementById("macro-chart"), labels, values, titles[state.macroMetric], {
       stepped: state.macroMetric === "tpm",
+      tickStep: state.macroMetric === "tpm" ? 0.25 : undefined,
+      decimals: 2,
+      suffix: state.macroMetric === "dolar" ? " RD$/US$" : " %",
       events: chartEvents("macro", state.macroMetric)
     });
   }
@@ -314,7 +337,7 @@ function hydrateCharts(module) {
       document.getElementById("external-chart"),
       state.data.series.external.map((item) => item.period),
       state.data.series.external.map((item) => item.pressure),
-      "Presión externa",
+      "Índice (máximo = 100)",
       { events: chartEvents("external") }
     );
   }
@@ -333,7 +356,8 @@ function hydrateCharts(module) {
     drawHorizontalBarChart(document.getElementById("trade-chart"), state.data.series.trade.flows, {
       labelField: "period",
       valueField: tradeMetric,
-      title: "Comercio exterior total",
+      title: `${tradeMetric === "exports" ? "Exportaciones" : "Importaciones"} (US$ MM)`,
+      suffix: " US$ MM",
       max: null
     });
   }
@@ -343,6 +367,7 @@ function hydrateCharts(module) {
       labelField: "group",
       valueField: "value",
       title: "Indicadores laborales (%)",
+      suffix: " %",
       max: 100
     });
   }
@@ -355,8 +380,8 @@ function hydrateCharts(module) {
         { label: "General", values: state.data.series.prices.timeline.map((item) => item.headline), color: "#c86448" },
         { label: "Subyacente", values: state.data.series.prices.timeline.map((item) => item.core), color: "#466a8f" }
       ],
-      "Inflación (%)",
-      { events: chartEvents("prices") }
+      "Inflación interanual (%)",
+      { events: chartEvents("prices"), decimals: 2, suffix: " %" }
     );
   }
 
@@ -439,7 +464,7 @@ function drawVisualChart(id, canvas, fullscreen = false) {
       break;
     case "debt-service":
       drawStackedBarChart(canvas, visuals.debt.service, {
-        title: "Servicio de deuda por componente", labelField: "anio", unit: "US$ MM",
+        title: "Servicio de deuda", labelField: "anio", unit: "US$ MM",
         fields: [
           { field: "principal", label: "Principal", color: "#466a8f" },
           { field: "interest", label: "Intereses", color: "#c86448" },

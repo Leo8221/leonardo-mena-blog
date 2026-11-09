@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='504.00pt' height='360.00pt' viewBox='0 0 504.00 360.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1MDQuMDB8MC4wMHwzNjAuMDA='>
+    <rect x='0.00' y='0.00' width='504.00' height='360.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwzNjAuMDA=)'>
+<rect x='0.00' y='0.00' width='504.00' height='360.00' style='stroke-width: 1.26; stroke: none; fill: #F7F7F4;' />
+</g>
+<defs>
+  <clipPath id='cpNDEuMjV8NDk2LjAzfDgyLjA4fDMzMC4wMg=='>
+    <rect x='41.25' y='82.08' width='454.78' height='247.94' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDEuMjV8NDk2LjAzfDgyLjA4fDMzMC4wMg==)'>
+<polyline points='41.25,318.75 496.03,318.75 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='41.25,243.62 496.03,243.62 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='41.25,168.48 496.03,168.48 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<polyline points='41.25,93.35 496.03,93.35 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-dasharray: 1.00,3.00; stroke-linecap: butt;' />
+<rect x='83.88' y='93.35' width='85.27' height='225.40' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C86448;' />
+<rect x='226.00' y='206.05' width='85.27' height='112.70' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #343A40;' />
+<rect x='368.12' y='281.18' width='85.27' height='37.57' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6B7554;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwzNjAuMDA=)'>
+<polyline points='41.25,330.02 41.25,82.08 ' style='stroke-width: 0.85; stroke: #D4C9BA; stroke-linecap: butt;' />
+<text x='32.18' y='322.19' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='5.56px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='32.18' y='247.06' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='32.18' y='171.93' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='32.18' y='96.79' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>60</text>
+<polyline points='38.01,318.75 41.25,318.75 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='38.01,243.62 41.25,243.62 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='38.01,168.48 41.25,168.48 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='38.01,93.35 41.25,93.35 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='41.25,330.02 496.03,330.02 ' style='stroke-width: 0.85; stroke: #D4C9BA; stroke-linecap: butt;' />
+<polyline points='126.52,333.26 126.52,330.02 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='268.64,333.26 268.64,330.02 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='410.76,333.26 410.76,330.02 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<text x='126.52' y='345.97' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='121.19px' lengthAdjust='spacingAndGlyphs'>Gasolina (Gasto defensivo)</text>
+<text x='268.64' y='345.97' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='103.38px' lengthAdjust='spacingAndGlyphs'>Mecánico (Reparación)</text>
+<text x='410.76' y='345.97' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='63.36px' lengthAdjust='spacingAndGlyphs'>Salud (Estrés)</text>
+<text transform='translate(15.54,206.05) rotate(-90)' text-anchor='middle' style='font-size: 11.00px;fill: #4A443E; font-family: "Liberation Sans";' textLength='90.50px' lengthAdjust='spacingAndGlyphs'>Pesos (simulados)</text>
+<text x='41.25' y='64.44' style='font-size: 13.00px;fill: #4A443E; font-family: "Liberation Sans";' textLength='234.86px' lengthAdjust='spacingAndGlyphs'>El costo de un 'tapón' en Santo Domingo</text>
+<text x='41.25' y='24.34' style='font-size: 18.00px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='300.16px' lengthAdjust='spacingAndGlyphs'>Actividades que suman al PIB pero</text>
+<text x='41.25' y='43.78' style='font-size: 18.00px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='127.08px' lengthAdjust='spacingAndGlyphs'>no al bienestar</text>
+</g>
+</g>
+<style id="lm-chart-theme">/* svglite escribe colores inline. Adaptamos papel, texto y luminosidad de la
+   paleta; las categorías y las escalas mantienen sus tonos reconocibles. */
+.svglite text[style*="fill: #D4C9BA"] { fill: #73695f !important; }
+.svglite text[style*="fill: #C86448"] { fill: #a04d35 !important; }
+
+/* Un SVG usado como img hereda el esquema de color del elemento que lo aloja. */
+@media (prefers-color-scheme: dark) {
+  .svglite :not(text)[style*="fill: #F7F7F4"],
+  /* El crema antiguo también se usa como halo detrás del texto de mapas. */
+  .svglite [style*="fill: #FAF8F3"] { fill: #272b30 !important; }
+  .svglite :not(text)[style*="fill: #F5F1E8"] { fill: #32383e !important; }
+  .svglite text:not([style*="fill:"]),
+  .svglite text[style*="fill: #000000"],
+  .svglite text[style*="fill: #1A1512"],
+  .svglite text[style*="fill: #343A40"],
+  .svglite text[style*="fill: #4A443E"],
+  .svglite text[style*="fill: #73695F"],
+  .svglite text[style*="fill: #D4C9BA"] { fill: #e8e6e3 !important; }
+  .svglite text[style*="fill: #C86448"] { fill: #ff9f85 !important; }
+  .svglite text[style*="fill: #6B7554"] { fill: #b0bf96 !important; }
+  /* El plomo original se pierde sobre el fondo oscuro. */
+  .svglite :not(text)[style*="fill: #343A40"] { fill: #697680 !important; }
+  .svglite rect[style*="fill: #343A40"] { fill-opacity: 1 !important; }
+  .svglite [style*="stroke: #343A40"] { stroke: #a3aeb8 !important; }
+  .svglite [style*="stroke: #73695F"] { stroke: #aba095 !important; }
+  .svglite :not(text)[style*="fill: #C86448"] { fill: #b9553b !important; }
+  .svglite :not(text)[style*="fill: #6B7554"] { fill: #89976b !important; }
+  .svglite [style*="stroke: #6B7554"] { stroke: #89976b !important; }
+  .svglite text[style*="fill: #C62828"] { fill: #ff9f85 !important; }
+  .svglite [style*="stroke: #C62828"] { stroke: #f28b82 !important; }
+  .svglite [style*="stroke: #E6DFD5"] { stroke: #68737e !important; }
+}
+</style>
+</svg>

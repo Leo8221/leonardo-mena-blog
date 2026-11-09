@@ -1,5 +1,6 @@
 const pulseRoot = document.querySelector("[data-home-pulse]");
 
+// Estos son IDs de atlas.metrics, no nombres de módulos ni columnas de una serie.
 const preferredMetricIds = ["usd", "inflation", "labor"];
 
 const formatDate = (value) => {
@@ -19,22 +20,27 @@ const appendText = (element, text) => {
   return element;
 };
 
-const buildMetricCard = (metric, modulesById, updated) => {
+const buildMetricCard = (metric, modulesById) => {
+  // metric.value y metric.delta ya vienen preparados por R/Python. Esta tarjeta
+  // solo añade el enlace y la procedencia; no calcula otra versión del indicador.
   const module = modulesById.get(metric.module);
+  // El corte pertenece al módulo, no a la fecha global del archivo de datos.
+  const cutoff = module?.sourceInfo?.updated;
+  const source = [metric.meta || module?.source || "Atlas", cutoff ? `Corte: ${formatDate(cutoff)}` : ""].filter(Boolean).join(" · ");
   const link = document.createElement("a");
   link.className = "home-pulse-card";
   link.href = `atlas/?view=${encodeURIComponent(metric.module || "overview")}`;
   link.dataset.tone = metric.tone || "neutral";
   link.setAttribute(
     "aria-label",
-    `${metric.label}: ${metric.value}. ${metric.delta}. Corte ${formatDate(updated)}. Abrir en Atlas.`
+    `${metric.label}: ${metric.value}. ${metric.delta}. ${source}. Abrir en Atlas.`
   );
 
   link.append(
     appendText(document.createElement("span"), metric.label),
     appendText(document.createElement("strong"), metric.value),
     appendText(document.createElement("em"), metric.delta),
-    appendText(document.createElement("small"), `${metric.meta || module?.source || "Atlas"} - corte ${formatDate(updated)}`)
+    appendText(document.createElement("small"), source)
   );
 
   return link;
@@ -51,7 +57,7 @@ const renderFallback = () => {
 
 const renderPulse = async () => {
   // La portada lee el mismo resumen que Atlas. Si falla, conserva el enlace
-  // escrito en home-pulse.html para que la sección siga siendo útil.
+  // escrito en index.qmd para que la sección siga siendo útil.
   if (!pulseRoot) return;
 
   try {
@@ -72,7 +78,7 @@ const renderPulse = async () => {
       return;
     }
 
-    pulseRoot.replaceChildren(...selected.map((metric) => buildMetricCard(metric, modulesById, atlas.updated)));
+    pulseRoot.replaceChildren(...selected.map((metric) => buildMetricCard(metric, modulesById)));
   } catch (_error) {
     renderFallback();
   }

@@ -30,8 +30,9 @@ function transformChartValue(value, mode) {
 }
 
 function layoutTreemap(items, x, y, width, height, valueField, boxes) {
-  // Divide el rectángulo por el lado más largo y reparte el área según el valor.
-  // Se repite con cada grupo hasta que queda un rectángulo por dato.
+  // items llega ordenado de mayor a menor. Dividimos por el lado más largo y
+  // repartimos el área según el valor. Cada llamada añade rectángulos a boxes
+  // hasta dejar uno por dato; es el área la que representa su peso.
   if (!items.length || width <= 0 || height <= 0) return;
   if (items.length === 1) {
     boxes.push({ x, y, width, height, item: items[0] });
@@ -63,6 +64,7 @@ function layoutTreemap(items, x, y, width, height, valueField, boxes) {
 }
 
 function normalizeRatio(value, min, max) {
+  // Posición visual entre 0 y 1, acotada al rango. No recalcula un indicador estadístico.
   return Math.max(0, Math.min(1, (value - min) / (max - min || 1)));
 }
 
@@ -79,6 +81,7 @@ function addAlpha(hex, alpha) {
 }
 
 function hexToRgb(hex) {
+  // Admite los colores #RRGGBB de la paleta. No interpreta nombres CSS ni #RGB.
   const clean = hex.replace("#", "");
   return [
     parseInt(clean.slice(0, 2), 16),

@@ -6,6 +6,8 @@ const ASSET_URLS = {
 };
 
 function requiredAssets(module) {
+  // Son claves de state y ASSET_URLS, no rutas. Solo el mapa elegido requiere
+  // su GeoJSON; las series pequeñas ya llegaron en atlas-data.json durante boot().
   if (!module) return [];
   if (module.chart === "territory") return ["geojson"];
   if (module.chart === "visualLab") {
@@ -30,6 +32,8 @@ function ensureModuleAssets(module) {
   if (!keys.length) return Promise.resolve();
   const activeId = module.id;
   return Promise.all(keys.map(loadAtlasAsset)).finally(() => {
+    // La descarga puede terminar después de que el lector cambie de vista.
+    // Guardamos los datos, pero no volvemos a abrir el módulo que dejó atrás.
     if (state.active === activeId) renderStage();
   });
 }
@@ -62,6 +66,8 @@ function deviceType() {
 }
 
 function trackAtlasEvent(name, params = {}) {
+  // Se registra la longitud de la búsqueda, no el texto que escribió el lector.
+  // El evento local también funciona cuando Google Analytics no está disponible.
   const module = findModule(state.active);
   const payload = {
     module_id: params.module_id || state.active,
@@ -94,8 +100,11 @@ function visibleModules() {
 
 function filteredModules() {
   const query = normalizeText(state.query);
+  const family = statusKey(state.family);
   return visibleModules().filter((module) => {
-    const matchesFamily = state.family === "all" || statusKey(module.family) === statusKey(state.family);
+    if (state.family !== "all" && statusKey(module.family) !== family) return false;
+    // Sin búsqueda, la familia basta: no hay texto que preparar ni comparar.
+    if (!query) return true;
     const source = module.sourceInfo || {};
     const text = [
       module.title,
@@ -109,12 +118,13 @@ function filteredModules() {
       source.label,
       source.detail
     ].filter(Boolean).join(" ");
-    const matchesQuery = !query || normalizeText(text).includes(query);
-    return matchesFamily && matchesQuery;
+    return normalizeText(text).includes(query);
   });
 }
 
 function territoryRows() {
+  // Este filtro afecta a la tabla y al diagrama territorial. El mapa usa otro
+  // archivo (GeoJSON) y sigue mostrando el país completo para conservar contexto.
   const rows = state.data.series.territory.provinces;
   if (state.territoryRegion === "all") return rows;
   return rows.filter((item) => item.region === state.territoryRegion);
@@ -158,15 +168,17 @@ function findModule(id) {
 }
 
 function setActive(moduleId, options = {}) {
+  // moduleId es la ruta pública de la vista. options.metric elige su indicador;
+  // source solo describe el origen del clic y replace controla el historial.
   const next = moduleId === "overview" || findModule(moduleId) ? moduleId : "overview";
   const previous = state.active;
   state.active = next;
+  state.focusControl = null;
+  if (options.metric) setActiveMetricForModule(findModule(next), options.metric);
+  state.focusStage = true;
   updateUrlState({ replace: Boolean(options.replace) || next === previous });
-  closeSidebar({ restoreFocus: false });
-  syncMetricState();
   syncSearchState();
   renderNavigation();
-  renderMobileNavigation();
   renderStage();
   if (next !== previous || state.booted) {
     trackAtlasEvent("atlas_module_open", {
@@ -200,6 +212,7 @@ function updateUrlState({ replace = false } = {}) {
   const url = buildAtlasUrl();
   const method = replace ? "replaceState" : "pushState";
   history[method](null, "", url);
+  state.routeSearch = url.search;
   updateDocumentTitle();
 }
 
@@ -276,7 +289,6 @@ function refreshAtlasFilters({ redrawStage = false } = {}) {
   syncFilterState();
   syncSearchState();
   renderNavigation();
-  renderMobileNavigation();
   if (redrawStage || state.active === "overview") renderStage();
   updateUrlState({ replace: true });
 }
@@ -287,10 +299,12 @@ async function handleAtlasClick(event) {
   if (!button) return;
 
   if (button.dataset.module) {
+    // Los enlaces también permiten abrir la vista en otra pestaña.
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
     const source = button.matches(".metric-card") ? "metric-strip"
-      : button.matches(".module-button") ? "sidebar"
-      : button.matches(".mobile-module-card") ? "mobile-nav" : "overview";
-    setActive(button.dataset.module, { source });
+      : button.matches(".back-to-catalog") ? "back-to-catalog" : "overview";
+    setActive(button.dataset.module, { source, metric: button.dataset.metric });
     return;
   }
   if (button.matches(".chart-toggle")) {
@@ -298,6 +312,7 @@ async function handleAtlasClick(event) {
     const property = CHART_CONTROLS[scope];
     if (!property) return;
     state[property] = metric;
+    state.focusControl = { scope, metric };
     updateUrlState({ replace: true });
     trackAtlasEvent(["visual", "territoryMap"].includes(scope) ? "atlas_map_selection" : "atlas_chart_toggle", {
       chart_id: scope, metric
@@ -361,6 +376,8 @@ function ensureCanvasDownloadActions() {
 }
 
 function downloadDatasetsCsv(module, datasets) {
+  // Exporta los valores originales. El redondeo de las celdas en app-panels.js
+  // es solo visual y no debe aplicarse a estos datos ni a las filas ocultas.
   const csv = datasetsToCsv(module, datasets);
   const suffix = datasets.length === 1 ? datasets[0].id : "datos";
   const generated = String(state.data.generatedAt || state.data.updated || "").slice(0, 10) || "sin-fecha";

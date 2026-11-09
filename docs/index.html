@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./image/logo_leonardo_mena.png" rel="icon" type="image/png">
+<link href="./image/logo_leonardo_mena.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-home-featured .list');
+    const listingTargetEl = window.document.querySelector('#listing-home-stories .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -91,35 +91,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-home-featured'] = new List('listing-home-featured', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-home-latest .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-home-latest'] = new List('listing-home-latest', options);
+    window['quarto-listings']['listing-home-stories'] = new List('listing-home-stories', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -204,7 +176,7 @@ window.Quarto = {
 <meta property="og:url" content="https://leo8221.github.io/leonardo-mena-blog/">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed home-page quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -370,74 +342,40 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav aria-label="Navegación principal" class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./image/logo_leonardo_mena.svg" alt="Leonardo Mena - inicio" class="navbar-logo light-content">
     <img src="./image/logo_leonardo_mena.svg" alt="Leonardo Mena - inicio" class="navbar-logo dark-content">
     </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Leonardo Mena</span>
+    </a>
   </div>
             <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Abrir o cerrar el menú" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Análisis</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis">    
-        <li>
-    <a class="dropdown-item" href="./republica-habla-de.html">
- <span class="dropdown-text">La República habla de</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./republica-en-un-grafico.html">
- <span class="dropdown-text">La República en un gráfico</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./atlas/index.html"> <i class="bi bi-graph-up" role="img">
+    <a class="nav-link" href="./archivo.html"> 
+<span class="menu-text">Artículos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./categorias.html"> 
+<span class="menu-text">Temas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./series.html"> 
+<span class="menu-text">Series</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./atlas/index.html"> <i class="bi bi-graph-up" aria-hidden="true">
 </i> 
 <span class="menu-text">Atlas</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-escuela" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Escuela</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-escuela">    
-        <li>
-    <a class="dropdown-item" href="./predecesores.html">
- <span class="dropdown-text">Mis predecesores</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./fundamentos.html">
- <span class="dropdown-text">Fundamentos</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-archivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Archivo</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-archivo">    
-        <li>
-    <a class="dropdown-item" href="./archivo.html">
- <span class="dropdown-text">Archivo completo</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./categorias.html">
- <span class="dropdown-text">Categorías</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./secciones.html">
- <span class="dropdown-text">Secciones</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">Sobre mí</span></a>
@@ -472,7 +410,7 @@ window.Quarto = {
 <div class="home-shell">
 <div class="home-hero">
 <div class="home-lede">
-<p><span class="home-kicker">Leonardo Mena · Economía aplicada RD</span></p>
+<p><span class="home-kicker">Economía aplicada · República Dominicana</span></p>
 <section id="economía-dominicana-en-datos." class="level1">
 <h1>Economía dominicana, en datos.</h1>
 <p>Escribo sobre precios, empleo, empresas y otros temas de la economía dominicana.</p>
@@ -482,59 +420,23 @@ window.Quarto = {
 <p><a href="./archivo.html" class="home-action home-action-primary">Leer artículos</a> <a href="atlas/index.html" class="home-action">Explorar Atlas</a></p>
 </div>
 </div>
-<div class="home-grid">
-<div class="home-main">
-<p><span class="section-kicker">Último análisis</span></p>
-<div id="listing-home-featured" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1794187490649" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
-<a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png" style="height: 240px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-La revolución educativa dominicana: lo que el censo nos dice y lo que no
-</h5>
-<div class="card-text listing-description delink">
-<p>En cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la…</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-12 mar 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No hay resultados</div>
-</div>
-</div>
-</div>
-<div class="home-pulse-section">
-<section id="indicadores-de-república-dominicana" class="level2 section-header">
-<h2 class="anchored" data-anchor-id="indicadores-de-república-dominicana">Indicadores de República Dominicana</h2>
-</section>
-<p>Consulta la fecha de corte y las fuentes de cada indicador en Atlas.</p>
-<div class="home-pulse-list" data-home-pulse="" aria-live="polite">
-<p><a class="home-pulse-card home-pulse-fallback" href="atlas/index.html"> <span>Atlas</span> <strong>Indicadores disponibles</strong> <em>Ver fuentes y corte.</em> </a></p>
-</div>
-</div>
-<section id="últimas-publicaciones" class="level2 home-latest-section">
+<div class="home-stories-section">
+<section id="últimas-publicaciones" class="level2 section-header">
 <h2 class="anchored" data-anchor-id="últimas-publicaciones">Últimas publicaciones</h2>
 <p><a href="./archivo.html">Ver archivo completo</a></p>
-<div id="listing-home-latest" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1794187490649" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4590">
+</section>
+<div id="listing-home-stories" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="RWR1Y2FjaSVDMyVCM24lMkNDZW5zbyUyMDIwMjIlMkNDYXBpdGFsJTIwSHVtYW5vJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1773273600000" data-listing-file-modified-sort="1794240484796" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4553">
 <a href="./posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-03-12-educacion-superior-censo/index_files/figure-html/fig-distribucion-nivel-1.svg" alt="Barras del nivel educativo más alto de la población de 25 años y más: desde ningún nivel hasta doctorado, según el Censo 2022." style="height: auto;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h3 class="no-anchor card-title listing-title">
 La revolución educativa dominicana: lo que el censo nos dice y lo que no
-</h5>
+</h3>
 <div class="card-text listing-description delink">
-<p>En cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las…</p>
+<p>En cuatro décadas, la República Dominicana transformó su sistema educativo. Más dominicanos estudian, las mujeres lideran el cambio, y la universidad ya no es…</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -544,16 +446,16 @@ La revolución educativa dominicana: lo que el censo nos dice y lo que no
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VHJhbnNwb3J0ZSUyQ0Rlc2Fycm9sbG8lMkNNaVB5TUVTJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGhhYmxhJTIwZGU=" data-listing-date-sort="1772668800000" data-listing-file-modified-sort="1794187490675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4471">
+<div class="g-col-1" data-index="1" data-categories="VHJhbnNwb3J0ZSUyQ0Rlc2Fycm9sbG8lMkNNaVB5TUVTJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGhhYmxhJTIwZGU=" data-listing-date-sort="1772668800000" data-listing-file-modified-sort="1794240484843" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4273">
 <a href="./posts/republica-habla-de/2026-03-04-transporte-masivo/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-habla-de/2026-03-04-transporte-masivo/index_files/figure-html/fig-parque-vehicular-1.svg" alt="Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones." style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img loading='lazy' src="posts/republica-habla-de/2026-03-04-transporte-masivo/index_files/figure-html/fig-parque-vehicular-1.svg" alt="Gráfico de áreas apiladas mostrando el crecimiento del parque vehicular dominicano entre 2009 y 2025. Las motocicletas (terracota) dominan el crecimiento, pasando de 1.25 millones a 3.85 millones. Los automóviles y jeeps (plomo) crecen de 873 mil a 1.99 millones." style="height: auto;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h3 class="no-anchor card-title listing-title">
 Transporte masivo: Qué es, qué no es y qué trae a la mesa
-</h5>
+</h3>
 <div class="card-text listing-description delink">
-<p>El Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue…</p>
+<p>El Metro de Santo Domingo transporta más de 100 millones de personas al año, pero el parque vehicular sigue creciendo. Un análisis de qué puede y qué no puede…</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -563,16 +465,16 @@ Transporte masivo: Qué es, qué no es y qué trae a la mesa
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771113600000" data-listing-file-modified-sort="1794187490649" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4636">
+<div class="g-col-1" data-index="2" data-categories="TWlQeU1FUyUyQ0Rlc2Fycm9sbG8lMkNGaW5hbmNpYW1pZW50byUyQ0xhJTIwUmVwJUMzJUJBYmxpY2ElMjBlbiUyMHVuJTIwZ3IlQzMlQTFmaWNv" data-listing-date-sort="1771113600000" data-listing-file-modified-sort="1794240484795" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4585">
 <a href="./posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top"><img loading='lazy' src="posts/republica-en-un-grafico/2026-02-14-mipymes-rd/index_files/figure-html/fig-mapa-mipymes-regiones-1.svg" alt="Mapa de las cuatro regiones. Norte tiene 95 por ciento microempresas y 68 por ciento informales; Sur, 97 por ciento y 77 por ciento; Este, 96 por ciento y 70 por ciento; Metropolitana, 91 por ciento y 61 por ciento." style="height: auto;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h3 class="no-anchor card-title listing-title">
 El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
-</h5>
+</h3>
 <div class="card-text listing-description delink">
-<p>El 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la…</p>
+<p>El 90% de las microempresas sin crédito nunca llegó a solicitarlo. Un análisis de los datos revela que la verdadera barrera es la autoexclusión y la trampa de…</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -582,18 +484,18 @@ El mito del ‘Banco Malo’: Por qué las MiPyMES realmente no tienen crédito
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGElMjBEb21pbmljYW5hJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1770163200000" data-listing-file-modified-sort="1794187490626" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2516">
+<div class="g-col-1" data-index="3" data-categories="RWNvbm9tZXRyJUMzJUFEYSUyQ0Vjb25vbSVDMyVBRGElMjBEb21pbmljYW5hJTJDTGElMjBSZXAlQzMlQkFibGljYSUyMGVuJTIwdW4lMjBnciVDMyVBMWZpY28=" data-listing-date-sort="1770163200000" data-listing-file-modified-sort="1794240484750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2193">
 <a href="./posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
+<div class="quarto-grid-item card h-100 card-left borderless">
 <p class="card-img-top">
-<img loading="lazy" src="./posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/img/Hegemonia_Survey.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./posts/republica-en-un-grafico/2026-01-31-efectivo-en-la-republica-dominicana/img/Hegemonia_Survey.png" class="thumbnail-image card-img" style="height: auto;" alt="">
 </p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h3 class="no-anchor card-title listing-title">
 El Rey Efectivo: La resistencia del billete en la era digital
-</h5>
+</h3>
 <div class="card-text listing-description delink">
-<p>Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los…</p>
+<p>Un análisis econométrico de la ENIEF revela una verdad incómoda: a pesar del auge digital, el 91% de los pagos cotidianos en RD siguen siendo en efectivo.…</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -606,15 +508,27 @@ El Rey Efectivo: La resistencia del billete en la era digital
 </div>
 <div class="listing-no-matching d-none">No hay resultados</div>
 </div>
+</div>
+<div class="home-pulse-section">
+<section id="el-país-en-cifras" class="level2 section-header">
+<h2 class="anchored" data-anchor-id="el-país-en-cifras">El país en cifras</h2>
+<p><a href="atlas/index.html">Explorar Atlas</a></p>
 </section>
+<p>Consulta la fecha de corte y las fuentes de cada indicador en Atlas.</p>
+<div class="home-pulse-list" data-home-pulse="" aria-live="polite">
+<p><a class="home-pulse-card home-pulse-fallback" href="atlas/index.html"> <span>Atlas</span> <strong>Indicadores disponibles</strong> <em>Ver fuentes y corte.</em> </a></p>
+</div>
+</div>
 <div class="home-paths-section">
-<section id="análisis-datos-y-conceptos" class="level2 section-header">
-<h2 class="anchored" data-anchor-id="análisis-datos-y-conceptos">Análisis, datos y conceptos</h2>
+<section id="encuentra-tu-próxima-lectura" class="level2 section-header">
+<h2 class="anchored" data-anchor-id="encuentra-tu-próxima-lectura">Encuentra tu próxima lectura</h2>
+<p><a href="./secciones.html">Ver todas las secciones</a></p>
 </section>
 <div class="home-paths">
-<p><a class="home-path" href="./republica-habla-de.html"> <span>Entender la coyuntura</span> <strong>Precios, empleo y debates de actualidad.</strong> </a></p>
-<p><a class="home-path" href="atlas/index.html"> <span>Explorar los datos</span> <strong>Indicadores, mapas y sectores.</strong> </a></p>
-<p><a class="home-path" href="./fundamentos.html"> <span>Aprender fundamentos</span> <strong>Conceptos económicos con ejemplos.</strong> </a></p>
+<p><a class="home-path" href="./republica-habla-de.html"> <span>Análisis</span> <strong>La República habla de</strong> <em>Precios, empleo y debates de actualidad.</em> </a></p>
+<p><a class="home-path" href="./republica-en-un-grafico.html"> <span>Gráficos</span> <strong>La República en un gráfico</strong> <em>Una pregunta, datos y una lectura.</em> </a></p>
+<p><a class="home-path" href="./fundamentos.html"> <span>Conceptos</span> <strong>Fundamentos</strong> <em>Economía explicada con ejemplos cercanos.</em> </a></p>
+<p><a class="home-path" href="./predecesores.html"> <span>Ideas</span> <strong>Mis predecesores</strong> <em>Autores para pensar el presente.</em> </a></p>
 </div>
 </div>
 <div class="home-about-section">
@@ -1069,7 +983,7 @@ El Rey Efectivo: La resistencia del billete en la era digital
 </p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://leo8221.github.io/leonardo-mena-blog/about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
+<p><a href="./archivo.html">Artículos</a> · <a href="./secciones.html">Secciones</a> · <a href="./about.html">Sobre mí</a> · <a href="mailto:leonardomena824@gmail.com">Contacto</a></p>
 </div>
     <div class="nav-footer-right">
 <p><a href="https://x.com/leonardomena824" target="_blank" rel="noopener noreferrer" aria-label="X de Leonardo Mena"><i class="bi bi-twitter"></i></a> · <a href="https://www.instagram.com/leonardomena824/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Leonardo Mena"><i class="bi bi-instagram"></i></a> · <a href="https://www.linkedin.com/in/leonardo-mena-3b140724a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Leonardo Mena"><i class="bi bi-linkedin"></i></a> · <a href="https://github.com/Leo8221" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Leonardo Mena"><i class="bi bi-github"></i></a></p>

@@ -1,235 +1,125 @@
 function renderMetrics() {
-  els.metricStrip.innerHTML = state.data.metrics.map((metric) => `
-    <button class="metric-card ${state.active === metric.module ? "is-active" : ""}" type="button" data-module="${metric.module}" data-tone="${metric.tone}" aria-label="${escapeHtml(`${metric.label}: ${metric.value}. ${metric.delta}. ${metric.meta || ""}`)}"${state.active === metric.module ? ' aria-current="page"' : ""}>
-      <small>${escapeHtml(metric.label)}</small>
-      <strong>${escapeHtml(metric.value)}</strong>
-      <span>${escapeHtml(metric.delta)}</span>
-      <em>${escapeHtml(metric.meta || "")}</em>
-    </button>
-  `).join("");
-}
-
-function navigationModules() {
-  // Si filtras mientras lees una vista, su botón sigue visible para no perderla.
-  const filtered = filteredModules();
-  const activeModule = state.active !== "overview" ? findModule(state.active) : null;
-  const openOutsideFilters = Boolean(activeModule && !filtered.some((module) => module.id === activeModule.id));
-  return {
-    filtered,
-    openOutsideFilters,
-    modules: openOutsideFilters ? [activeModule, ...filtered] : filtered
-  };
-}
-
-function renderNavEmpty() {
-  return `
-    <div class="nav-empty">
-      <strong>Sin coincidencias</strong>
-      <span>Ajusta la búsqueda o limpia los filtros.</span>
-      <button class="nav-reset" type="button" data-action="reset-filters">Ver todo</button>
-    </div>
-  `;
+  const targets = { usd: "dolar", inflation: "inflacion", trade: "exports", labor: "informality" };
+  els.metricStrip.innerHTML = state.data.metrics.filter(metric => findModule(metric.module)).map(metric => `
+    <button class="metric-card" type="button" data-module="${metric.module}" data-metric="${targets[metric.id] || ""}">
+      <small>${escapeHtml(metric.label)}</small><strong>${escapeHtml(metric.value)}</strong>
+      <span>${escapeHtml(metric.delta)}</span><em>${escapeHtml(metric.meta || "")}</em>
+    </button>`).join("");
 }
 
 function renderNavigation() {
-  const nav = navigationModules();
-  const buttons = [
-    `<button class="module-button ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview"${state.active === "overview" ? ' aria-current="page"' : ""}>
-      <small>Atlas</small>
-      <strong>Portada</strong>
-      <span>${visibleModules().length} vistas</span>
-    </button>`,
-    ...nav.modules.map((module) => {
-      const outsideFilter = nav.openOutsideFilters && module.id === state.active;
-      return `
-      <button class="module-button ${state.active === module.id ? "is-active" : ""} ${outsideFilter ? "is-outside-filter" : ""}" type="button" data-module="${module.id}"${state.active === module.id ? ' aria-current="page"' : ""}>
-        <small>${escapeHtml(module.family)}</small>
-        <strong>${escapeHtml(module.title)}</strong>
-        <span>${escapeHtml(outsideFilter ? "Vista abierta" : module.topic)}</span>
-      </button>
-    `;
-    })
-  ];
-  const empty = nav.filtered.length === 0 ? renderNavEmpty() : "";
-
-  els.nav.innerHTML = buttons.join("") + empty;
-}
-
-function renderMobileNavigation() {
-  if (!els.mobileNav) return;
-  const nav = navigationModules();
-  const buttons = [
-    `<button class="mobile-module-card ${state.active === "overview" ? "is-active" : ""}" type="button" data-module="overview"${state.active === "overview" ? ' aria-current="page"' : ""}>
-      <small>Atlas</small>
-      <strong>Portada</strong>
-    </button>`,
-    ...nav.modules.map((module) => {
-      const outsideFilter = nav.openOutsideFilters && module.id === state.active;
-      return `
-      <button class="mobile-module-card ${state.active === module.id ? "is-active" : ""} ${outsideFilter ? "is-outside-filter" : ""}" type="button" data-module="${module.id}"${state.active === module.id ? ' aria-current="page"' : ""}>
-        <small>${escapeHtml(module.family)}</small>
-        <strong>${escapeHtml(outsideFilter ? `${module.title} · abierta` : module.title)}</strong>
-      </button>
-    `;
-    }),
-    nav.filtered.length === 0 ? `
-      <button class="mobile-module-card is-reset" type="button" data-action="reset-filters">
-        <small>Filtro</small>
-        <strong>Ver todo</strong>
-      </button>
-    ` : ""
-  ];
-
-  els.mobileNav.innerHTML = buttons.join("");
-  const activeButton = els.mobileNav.querySelector(".mobile-module-card.is-active");
-  if (activeButton && window.matchMedia("(max-width: 640px)").matches) {
-    window.requestAnimationFrame(() => {
-      activeButton.scrollIntoView({ block: "nearest", inline: "start" });
-    });
-  }
+  // Los filtros pertenecen al catálogo; el selector conserva todas las vistas.
+  els.moduleSwitch.innerHTML = visibleModules().map(module => `<option value="${module.id}">${escapeHtml(module.title)}</option>`).join("");
+  els.moduleSwitch.value = state.active;
+  els.viewNavigation.querySelector(".back-to-catalog").textContent = state.query || state.family !== "all"
+    ? "← Volver a los resultados" : "← Todas las vistas";
 }
 
 function renderStage() {
+  // stage es el área central: portada, espera o módulo. El HTML se reemplaza;
+  // por eso los eventos comunes se escuchan en el contenedor, no en cada tarjeta.
   if (!state.data) return;
   hideTooltip(true);
-  if (els.stage) els.stage.setAttribute("aria-busy", "false");
-  if (els.app) {
-    els.app.dataset.view = state.active === "overview" ? "overview" : "module";
-  }
-
-  if (state.active === "overview") {
-    renderOverview();
-    return;
-  }
-
+  const overview = state.active === "overview";
+  els.app.dataset.view = overview ? "overview" : "module";
+  els.intro.hidden = !overview;
+  els.catalog.hidden = !overview;
+  els.snapshot.hidden = !overview;
+  els.viewNavigation.hidden = overview;
+  els.stage.setAttribute("aria-busy", "false");
+  if (overview) { renderOverview(); return; }
   const module = findModule(state.active);
-  if (!module) {
-    state.active = "overview";
-    renderOverview();
-    return;
-  }
-
+  if (!module) { setActive("overview", { replace: true }); return; }
   if (!moduleAssetsReady(module)) {
-    // La descarga terminará llamando a renderStage otra vez, si sigues aquí.
-    if (els.stage) els.stage.setAttribute("aria-busy", "true");
+    els.stage.setAttribute("aria-busy", "true");
     renderAssetsLoading(module);
     ensureModuleAssets(module);
     return;
   }
-
   els.stage.innerHTML = `
-    <div class="stage-header">
-      <div>
-        <p class="eyebrow">${escapeHtml(module.family)} / ${escapeHtml(module.topic)}</p>
-        <h2>${escapeHtml(module.title)}</h2>
-      </div>
-      ${renderStageActions(true)}
-    </div>
-    ${renderModuleBody(module)}
-  `;
-
+    ${renderModuleHeader(module, true)}
+    <nav class="view-sections" aria-label="En esta vista">
+      <a href="#view-charts">Gráficos</a><a href="#view-data">Datos</a><a href="#view-sources">Fuentes y método</a>
+    </nav>
+    ${renderModuleBody(module)}`;
   ensureCanvasDownloadActions();
+  // Los canvas deben existir y tener tamaño antes de que hydrateCharts los dibuje.
   hydrateCharts(module);
   announceModule(module);
   updateDocumentTitle();
+  focusStageHeading();
+}
+
+function renderModuleHeader(module, canExport) {
+  const source = module.sourceInfo || {};
+  return `<div class="stage-header"><div>
+    <p class="eyebrow">${escapeHtml(module.family)} · ${escapeHtml(module.type)}</p>
+    <h1 id="view-heading" tabindex="-1">${escapeHtml(module.title)}</h1>
+    <p class="view-provenance">${escapeHtml(source.label || module.source || "")}${source.updated ? ` · Corte: ${escapeHtml(source.updated)}` : ""}</p>
+    </div>${renderStageActions(canExport)}</div>`;
 }
 
 function renderOverview() {
   const modules = filteredModules();
-  const groupedIds = new Set(OVERVIEW_GROUPS.flatMap((group) => group.modules));
-  const grouped = OVERVIEW_GROUPS.map((group) => {
-    return {
-      ...group,
-      modules: modules.filter((module) => group.modules.includes(module.id))
-    };
-  }).filter((group) => group.modules.length > 0);
-  const ungrouped = modules.filter((module) => !groupedIds.has(module.id));
-  if (ungrouped.length > 0) {
-    grouped.push({
-      title: "Otras vistas",
-      summary: "Módulos activos todavía no asignados a una pregunta principal.",
-      modules: ungrouped
-    });
-  }
-
-  els.stage.innerHTML = `
-    <div class="stage-header">
-      <div>
-        <p class="eyebrow">${escapeHtml(state.data.brand.shortName)}</p>
-        <h2>Atlas</h2>
-        <p>Indicadores económicos, mapas y datos de los artículos.</p>
-      </div>
-      ${renderStageActions(false)}
-    </div>
-    ${modules.length ? `
-      <div class="overview-shell">
-        ${grouped.map(renderOverviewGroup).join("")}
-      </div>
-    ` : renderEmptyOverview()}
-  `;
-
-  ensureCanvasDownloadActions();
+  const groupedIds = new Set(OVERVIEW_GROUPS.flatMap(group => group.modules));
+  const groups = OVERVIEW_GROUPS.map(group => ({
+    ...group, modules: modules.filter(module => group.modules.includes(module.id))
+  })).filter(group => group.modules.length);
+  const other = modules.filter(module => !groupedIds.has(module.id));
+  if (other.length) groups.push({ title: "Más datos", summary: "Otras vistas disponibles.", modules: other });
+  els.stage.innerHTML = modules.length ? `<div class="overview-shell">${groups.map(group => `
+    <section class="overview-group" aria-labelledby="overview-${slugify(group.title)}">
+      <div class="overview-group-head"><h2 id="overview-${slugify(group.title)}">${escapeHtml(group.title)}</h2><p>${escapeHtml(group.summary)}</p></div>
+      <div class="module-grid">${group.modules.map(renderOverviewCard).join("")}</div>
+    </section>`).join("")}</div>` : renderEmptyOverview();
+  renderFeaturedSeries();
   announceModule(null);
   updateDocumentTitle();
-}
-
-function renderOverviewGroup(group) {
-  return `
-    <section class="overview-group" aria-labelledby="overview-${slugify(group.title)}">
-      <div class="overview-group-head">
-        <h3 id="overview-${slugify(group.title)}">${escapeHtml(group.title)}</h3>
-        <p>${escapeHtml(group.summary)}</p>
-      </div>
-      <div class="module-grid">
-        ${group.modules.map(renderOverviewCard).join("")}
-      </div>
-    </section>
-  `;
+  focusStageHeading();
 }
 
 function renderOverviewCard(module) {
+  // module.chart coincide con el nombre del SVG en atlas/icons. Esas imágenes
+  // se publican como recursos de Quarto y toman el color desde la máscara CSS.
   const source = module.sourceInfo || {};
-  return `
-    <button class="module-card" type="button" data-module="${module.id}">
-      <h3>${escapeHtml(module.title)}</h3>
-      ${module.question ? `<p class="module-question">${escapeHtml(module.question)}</p>` : ""}
-      ${module.insight ? `
-        <span class="module-reading">
-          <strong>Lectura</strong>
-          <span>${escapeHtml(module.insight)}</span>
-        </span>
-      ` : ""}
-      <span class="module-card-footer">
-        <span>${escapeHtml(source.label || module.source || "Fuente")}</span>
-        <span>${source.updated ? `Corte ${escapeHtml(source.updated)}` : "Abrir"}</span>
-      </span>
-    </button>
-  `;
+  return `<a class="module-card" href="?view=${module.id}" data-module="${module.id}">
+    <span class="module-card-top"><span class="module-icon" style="mask-image:url('icons/${escapeHtml(module.chart)}.svg')" aria-hidden="true"></span><span>${escapeHtml(module.type)}</span><span aria-hidden="true">↗</span></span>
+    <h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.summary || module.question || "")}</p>
+    <span class="module-card-footer"><span>${escapeHtml(source.label || module.source || "")}</span>${source.updated ? `<span>${escapeHtml(source.updated)}</span>` : ""}</span>
+  </a>`;
+}
+
+function renderFeaturedSeries() {
+  const module = findModule("pulso-macro");
+  const rows = state.data.series.macro || [];
+  if (!module || !rows.length) { els.feature.hidden = true; return; }
+  els.feature.hidden = false;
+  const last = rows.at(-1);
+  els.feature.innerHTML = `
+    <div class="feature-heading"><div><span>Tipo de cambio</span><strong>RD$ ${new Intl.NumberFormat("es-DO", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(last.dolar)}</strong></div><span>${escapeHtml(last.period)}</span></div>
+    <canvas id="overview-series" height="190" role="img" aria-label="Tipo de cambio: pesos dominicanos por dólar, de ${escapeHtml(rows[0].period)} a ${escapeHtml(last.period)}"></canvas>
+    <div class="feature-footer"><span>Venta spot · BCRD</span><a href="?view=pulso-macro&metric=dolar" data-module="pulso-macro" data-metric="dolar">Explorar la serie →</a></div>`;
+  drawLineChart(document.getElementById("overview-series"), rows.map(row => row.period), rows.map(row => row.dolar), "RD$ por US$", { maxLabels: 3 });
 }
 
 function renderAssetsLoading(module) {
-  els.stage.innerHTML = `
-    <div class="stage-header">
-      <div>
-        <p class="eyebrow">${escapeHtml(module.family)} / ${escapeHtml(module.topic)}</p>
-        <h2>${escapeHtml(module.title)}</h2>
-      </div>
-      ${renderStageActions(false)}
-    </div>
-    <div class="empty-state">
-      <strong>Cargando datos de esta vista</strong>
-      <span>Los mapas cargan cuando hacen falta.</span>
-    </div>
-  `;
-  ensureCanvasDownloadActions();
+  els.stage.innerHTML = `${renderModuleHeader(module, false)}<div class="empty-state" role="status"><strong>Cargando los datos de esta vista…</strong><span>Puedes cambiar de vista mientras se carga el mapa.</span></div>`;
 }
 
 function renderEmptyOverview() {
-  return `
-    <div class="empty-state">
-      <strong>No hay módulos con esos filtros.</strong>
-      <span>Prueba otra búsqueda o limpia los filtros.</span>
-      <button class="stage-action" type="button" data-action="reset-filters">Restablecer filtros</button>
-    </div>
-  `;
+  return `<div class="empty-state"><h2>No encontramos una vista con esos filtros.</h2><p>Prueba otro término o vuelve a ver todos los temas.</p><button class="stage-action" type="button" data-action="reset-filters">Ver todas las vistas</button></div>`;
+}
+
+function focusStageHeading() {
+  // También después de descargar un mapa: el botón anterior ya no está en el DOM.
+  if (state.focusControl) {
+    const { scope, metric } = state.focusControl;
+    state.focusControl = null;
+    els.stage.querySelector(`.chart-toggle[data-scope="${scope}"][data-metric="${metric}"]`)?.focus({ preventScroll: true });
+  }
+  if (!state.focusStage) return;
+  state.focusStage = false;
+  const target = state.active === "overview" ? els.search : document.getElementById("view-heading");
+  target?.focus({ preventScroll: true });
+  target?.scrollIntoView({ block: "start", behavior: "instant" });
 }

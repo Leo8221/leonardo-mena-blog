@@ -21,7 +21,8 @@ body.editorial-post {
   }
 
   #title-block-header {
-    padding: 3rem 2rem 1rem;
+    /* El contenedor del artículo ya aporta el margen exterior. */
+    padding: 0 0 1rem;
   }
 
   #title-block-header h1.title {
@@ -30,6 +31,7 @@ body.editorial-post {
     margin-bottom: 1rem;
     letter-spacing: 0;
     font-weight: 700;
+    text-wrap: balance;
   }
 
   #title-block-header .description {
@@ -44,12 +46,21 @@ body.editorial-post {
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     color: var(--lm-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     row-gap: 0.45rem;
+  }
+
+  #title-block-header .quarto-title-meta .quarto-title-meta-heading {
+    opacity: 1;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.15rem;
+  }
+
+  #title-block-header .quarto-title-meta-contents p {
+    margin: 0;
   }
 
   #title-block-header .quarto-categories {
@@ -57,6 +68,14 @@ body.editorial-post {
     flex-wrap: wrap;
     gap: 0.45rem;
     margin: 0 0 0.8rem;
+  }
+
+  #title-block-header .quarto-category a {
+    color: var(--lm-text-soft);
+  }
+
+  #title-block-header .quarto-category {
+    opacity: 1;
   }
 
   #title-block-header .quarto-category:nth-of-type(n+4) {
@@ -79,7 +98,7 @@ body.editorial-post {
     line-height: 0.75;
     margin: 0.05em 0.12em 0 0;
     font-weight: 700;
-    color: var(--lm-terracota);
+    color: var(--lm-terracota-dark);
     font-family: 'Crimson Pro', Georgia, serif;
   }
 
@@ -112,7 +131,7 @@ body.editorial-post {
 
   #quarto-document-content h3 {
     font-size: 1.35rem;
-    color: var(--lm-terracota);
+    color: var(--lm-terracota-dark);
     margin-top: 2.5rem;
   }
 

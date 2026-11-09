@@ -1,9 +1,9 @@
 /* responsive va al final para adaptar las reglas anteriores al ancho disponible.
    La versión en la URL permite renovar la caché al publicar cambios de estilos. */
-@import url("css/base.css?v=20260627");
-@import url("css/layout.css?v=20260627");
-@import url("css/overview.css?v=20260627");
-@import url("css/charts.css?v=20260627");
-@import url("css/tables.css?v=20260627");
-@import url("css/sources.css?v=20260627");
-@import url("css/responsive.css?v=20260627");
+@import url("css/base.css?v=20261109");
+@import url("css/layout.css?v=20261109");
+@import url("css/overview.css?v=20261109");
+@import url("css/charts.css?v=20261109b");
+@import url("css/tables.css?v=20261109");
+@import url("css/sources.css?v=20261109");
+@import url("css/responsive.css?v=20261109");

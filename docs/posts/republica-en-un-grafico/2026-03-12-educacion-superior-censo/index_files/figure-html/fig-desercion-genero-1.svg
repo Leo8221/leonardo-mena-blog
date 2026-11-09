@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='720.00pt' height='432.00pt' viewBox='0 0 720.00 432.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='-0.00000000000011' width='720.00' height='432.00' style='stroke-width: 1.26; stroke: none; fill: #F7F7F4;' />
+</g>
+<defs>
+  <clipPath id='cpODYuNTJ8NzEyLjAzfDc2LjY4fDM1OS4yMA=='>
+    <rect x='86.52' y='76.68' width='625.51' height='282.52' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpODYuNTJ8NzEyLjAzfDc2LjY4fDM1OS4yMA==)'>
+<rect x='114.95' y='164.13' width='442.08' height='40.36' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #7A9EB5;' />
+<rect x='114.95' y='96.86' width='490.69' height='40.36' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #7A9EB5;' />
+<rect x='114.95' y='298.66' width='376.04' height='40.36' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C86448;' />
+<rect x='114.95' y='231.39' width='409.06' height='40.36' style='stroke-width: 1.26; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C86448;' />
+<text x='561.87' y='188.22' style='font-size: 11.38px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='32.25px' lengthAdjust='spacingAndGlyphs'>48.2%</text>
+<text x='610.48' y='120.95' style='font-size: 11.38px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='32.25px' lengthAdjust='spacingAndGlyphs'>53.5%</text>
+<text x='494.41' y='322.76' style='font-size: 11.38px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='22.77px' lengthAdjust='spacingAndGlyphs'>41%</text>
+<text x='528.85' y='255.49' style='font-size: 11.38px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='32.25px' lengthAdjust='spacingAndGlyphs'>44.6%</text>
+<line x1='573.54' y1='359.20' x2='573.54' y2='76.68' style='stroke-width: 0.85; stroke: #4A443E; stroke-dasharray: 4.55,4.55; stroke-linecap: butt;' />
+<text x='582.71' y='348.49' style='font-size: 7.97px; font-style: italic;fill: #4A443E; font-family: "Liberation Sans";' textLength='41.55px' lengthAdjust='spacingAndGlyphs'>1 de cada 2</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
+<polyline points='86.52,359.20 86.52,76.68 ' style='stroke-width: 0.85; stroke: #D4C9BA; stroke-linecap: butt;' />
+<text x='77.45' y='322.28' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='58.92px' lengthAdjust='spacingAndGlyphs'>Mujer urbana</text>
+<text x='77.45' y='255.02' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='47.78px' lengthAdjust='spacingAndGlyphs'>Mujer rural</text>
+<text x='77.45' y='187.75' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='69.48px' lengthAdjust='spacingAndGlyphs'>Hombre urbano</text>
+<text x='77.45' y='120.48' text-anchor='end' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='58.34px' lengthAdjust='spacingAndGlyphs'>Hombre rural</text>
+<polyline points='83.28,318.84 86.52,318.84 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='83.28,251.57 86.52,251.57 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='83.28,184.31 86.52,184.31 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='83.28,117.04 86.52,117.04 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='86.52,359.20 712.03,359.20 ' style='stroke-width: 0.85; stroke: #D4C9BA; stroke-linecap: butt;' />
+<polyline points='114.95,362.44 114.95,359.20 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='298.39,362.44 298.39,359.20 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='481.82,362.44 481.82,359.20 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<polyline points='665.25,362.44 665.25,359.20 ' style='stroke-width: 0.64; stroke: #E6DFD5; stroke-linecap: butt;' />
+<text x='114.95' y='375.15' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='14.45px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='298.39' y='375.15' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>20%</text>
+<text x='481.82' y='375.15' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>40%</text>
+<text x='665.25' y='375.15' text-anchor='middle' style='font-size: 10.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>60%</text>
+<text x='399.28' y='388.03' text-anchor='middle' style='font-size: 11.00px;fill: #4A443E; font-family: "Liberation Sans";' textLength='173.78px' lengthAdjust='spacingAndGlyphs'>Tasa de no graduación universitaria</text>
+<text x='86.52' y='45.00' style='font-size: 13.00px;fill: #4A443E; font-family: "Liberation Sans";' textLength='430.84px' lengthAdjust='spacingAndGlyphs'>% que entró a la universidad y no se graduó · Cohorte 30-39 · Censo 2022</text>
+<text x='86.52' y='59.04' style='font-size: 13.00px;fill: #4A443E; font-family: "Liberation Sans";' textLength='343.34px' lengthAdjust='spacingAndGlyphs'>La no graduación es mayor en hombres y en zonas rurales.</text>
+<text x='86.52' y='24.34' style='font-size: 18.00px; font-weight: bold;fill: #1A1512; font-family: "Liberation Sans";' textLength='372.22px' lengthAdjust='spacingAndGlyphs'>Las mujeres también logran graduarse más</text>
+<text x='712.03' y='408.46' text-anchor='end' style='font-size: 9.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='365.34px' lengthAdjust='spacingAndGlyphs'>Fuente: Censo Nacional de Población y Vivienda 2022, ONE · Elaboración: Leonardo Mena</text>
+<text x='712.03' y='418.18' text-anchor='end' style='font-size: 9.00px;fill: #73695F; font-family: "Liberation Sans";' textLength='151.50px' lengthAdjust='spacingAndGlyphs'>leo8221.github.io/leonardo-mena-blog</text>
+</g>
+</g>
+<style id="lm-chart-theme">/* svglite escribe colores inline. Adaptamos papel, texto y luminosidad de la
+   paleta; las categorías y las escalas mantienen sus tonos reconocibles. */
+.svglite text[style*="fill: #D4C9BA"] { fill: #73695f !important; }
+.svglite text[style*="fill: #C86448"] { fill: #a04d35 !important; }
+
+/* Un SVG usado como img hereda el esquema de color del elemento que lo aloja. */
+@media (prefers-color-scheme: dark) {
+  .svglite :not(text)[style*="fill: #F7F7F4"],
+  /* El crema antiguo también se usa como halo detrás del texto de mapas. */
+  .svglite [style*="fill: #FAF8F3"] { fill: #272b30 !important; }
+  .svglite :not(text)[style*="fill: #F5F1E8"] { fill: #32383e !important; }
+  .svglite text:not([style*="fill:"]),
+  .svglite text[style*="fill: #000000"],
+  .svglite text[style*="fill: #1A1512"],
+  .svglite text[style*="fill: #343A40"],
+  .svglite text[style*="fill: #4A443E"],
+  .svglite text[style*="fill: #73695F"],
+  .svglite text[style*="fill: #D4C9BA"] { fill: #e8e6e3 !important; }
+  .svglite text[style*="fill: #C86448"] { fill: #ff9f85 !important; }
+  .svglite text[style*="fill: #6B7554"] { fill: #b0bf96 !important; }
+  /* El plomo original se pierde sobre el fondo oscuro. */
+  .svglite :not(text)[style*="fill: #343A40"] { fill: #697680 !important; }
+  .svglite rect[style*="fill: #343A40"] { fill-opacity: 1 !important; }
+  .svglite [style*="stroke: #343A40"] { stroke: #a3aeb8 !important; }
+  .svglite [style*="stroke: #73695F"] { stroke: #aba095 !important; }
+  .svglite :not(text)[style*="fill: #C86448"] { fill: #b9553b !important; }
+  .svglite :not(text)[style*="fill: #6B7554"] { fill: #89976b !important; }
+  .svglite [style*="stroke: #6B7554"] { stroke: #89976b !important; }
+  .svglite text[style*="fill: #C62828"] { fill: #ff9f85 !important; }
+  .svglite [style*="stroke: #C62828"] { stroke: #f28b82 !important; }
+  .svglite [style*="stroke: #E6DFD5"] { stroke: #68737e !important; }
+}
+</style>
+</svg>

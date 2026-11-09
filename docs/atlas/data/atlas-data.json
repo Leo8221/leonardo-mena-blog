@@ -708,10 +708,109 @@
           "score": 81
         }
       ]
-    }
+    },
+    "policyRate": [
+      {
+        "period": "Dic 2024",
+        "tpm": 6
+      },
+      {
+        "period": "Ene 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Feb 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Mar 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Abr 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "May 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Jun 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Jul 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Ago 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Sep 2025",
+        "tpm": 5.75
+      },
+      {
+        "period": "Oct 2025",
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2025",
+        "tpm": 5.25
+      },
+      {
+        "period": "Dic 2025",
+        "tpm": 5.25
+      },
+      {
+        "period": "Ene 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Feb 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Mar 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Abr 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "May 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Jun 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Jul 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Ago 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Sep 2026",
+        "tpm": 5.25
+      },
+      {
+        "period": "Oct 2026",
+        "tpm": 5.5
+      },
+      {
+        "period": "Nov 2026",
+        "tpm": 5.5
+      }
+    ]
   },
   "liveDataCutoff": {
     "macro": "Sep 2026",
+    "policyRate": "Nov 2026",
     "prices": "Sep 2026",
     "trade": "2026 T2",
     "labor": "2026 T2",
@@ -722,9 +821,9 @@
     "name": "Atlas",
     "shortName": "Atlas"
   },
-  "generatedAt": "2026-11-09T01:26:57.101Z",
+  "generatedAt": "2026-11-09T16:10:37.847Z",
   "sourceRun": {
-    "generatedAt": "2026-11-09T01:26:52Z",
+    "generatedAt": "2026-11-09T16:10:30Z",
     "manifestVersion": 1,
     "summary": {
       "total": 20,
@@ -746,7 +845,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:24:50Z",
+        "modifiedAt": "2026-11-09T16:08:04Z",
         "md5": "",
         "usedBy": [
           "build-map-assets.R"
@@ -764,7 +863,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "d322c449484d8abc89587f4f804545d4",
         "usedBy": [
           "build-map-assets.R"
@@ -782,7 +881,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "e31818c3849d928234aa54ff0c62ad46",
         "usedBy": [
           "build-map-assets.R"
@@ -800,7 +899,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:24:50Z",
+        "modifiedAt": "2026-11-09T16:08:04Z",
         "md5": "",
         "usedBy": [
           "build-article-visuals.R"
@@ -818,7 +917,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "67ca1da92976758f59b314c16475206c",
         "usedBy": [
           "build-article-visuals.R"
@@ -836,7 +935,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "226b4db570fb0e107cf1d166450be3c1",
         "usedBy": [
           "build-article-visuals.R"
@@ -854,7 +953,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "d5b5f62dcb3b7295db679eda8ac64185",
         "usedBy": [
           "build-article-visuals.R"
@@ -872,7 +971,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "1978ad56bb09c68b463d86890fd87abc",
         "usedBy": [
           "build-article-visuals.R"
@@ -890,7 +989,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:46Z",
+        "modifiedAt": "2026-11-09T16:10:23Z",
         "md5": "e14445e6783730b92d7ae21c37a029a2",
         "usedBy": [
           "build-article-visuals.R"
@@ -1034,7 +1133,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:50Z",
+        "modifiedAt": "2026-11-09T16:10:29Z",
         "md5": "594818f556913cf1a3be37d007ffe67e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1052,7 +1151,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:51Z",
+        "modifiedAt": "2026-11-09T16:10:29Z",
         "md5": "bf5afc7be764d4e0906308c18ab5cbe1",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1070,7 +1169,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:51Z",
+        "modifiedAt": "2026-11-09T16:10:30Z",
         "md5": "77ea99e05047e482a0140aff3e6b51a8",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1088,7 +1187,7 @@
         "discovered": null,
         "selected": null,
         "downloaded": null,
-        "modifiedAt": "2026-11-09T01:26:52Z",
+        "modifiedAt": "2026-11-09T16:10:30Z",
         "md5": "52fd936ed9acb6fb1cc1271bd674844e",
         "usedBy": [
           "build-atlas-data.mjs"
@@ -1098,9 +1197,10 @@
     ]
   },
   "liveData": {
-    "generatedAt": "2026-11-09T01:26:52Z",
+    "generatedAt": "2026-11-09T16:10:32Z",
     "dataCutoff": {
       "macro": "Sep 2026",
+      "policyRate": "Nov 2026",
       "prices": "Sep 2026",
       "trade": "2026 T2",
       "labor": "2026 T2",
@@ -1128,7 +1228,7 @@
         "label": "BCRD",
         "detail": "Series públicas del Banco Central: mercado cambiario, precios, política monetaria e IMAE.",
         "dataMode": "Automático",
-        "updated": "Sep 2026",
+        "updated": "Series macro: Sep 2026; TPM: Nov 2026",
         "methodology": [
           "Tipo de cambio: tasa de venta spot.",
           "Inflación: variación interanual del IPC.",
@@ -1172,27 +1272,28 @@
     },
     {
       "id": "contexto-externo",
-      "title": "Condiciones externas",
+      "title": "Servicios al exterior",
       "status": "Activo",
       "visible": true,
       "type": "Índice",
       "family": "Macro",
-      "topic": "Entorno global",
-      "summary": "Energía, tasas, dólar global y ciclo externo.",
+      "topic": "Comercio de servicios",
+      "summary": "Evolución de las exportaciones de servicios y sus principales rubros.",
       "source": "BCRD",
-      "question": "¿Qué tan exigente está el entorno externo?",
-      "insight": "Señales externas para leer servicios, turismo y financiamiento.",
+      "question": "¿Cómo evolucionan las exportaciones de servicios?",
+      "insight": "El índice compara ingresos por servicios con su máximo en el periodo mostrado.",
       "chart": "external",
       "dataMode": "Modelo",
       "sourceInfo": {
         "label": "BCRD",
-        "detail": "Balanza de servicios y series externas del Banco Central.",
+        "detail": "Créditos de la balanza de servicios del Banco Central.",
         "dataMode": "Modelo",
         "updated": "2025",
         "methodology": [
-          "Valores altos indican condiciones externas más adversas.",
-          "La señal se suaviza para reducir ruido de mercado.",
-          "Los componentes mantienen unidades comparables mediante normalización."
+          "La serie toma los créditos anuales de la balanza de servicios del BCRD.",
+          "Cada valor se divide por el máximo del periodo y se multiplica por 100.",
+          "Los rubros del último año se normalizan respecto al mayor rubro; no son participaciones del total.",
+          "Este índice no mide presión externa ni condiciones financieras globales."
         ],
         "related": [
           "republica-habla-de.html"

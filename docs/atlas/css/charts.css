@@ -4,6 +4,23 @@
   gap: 0.75rem;
 }
 
+.module-context {
+  margin-bottom: 16px;
+}
+
+.module-context > summary {
+  width: fit-content;
+  min-height: 44px;
+  align-content: center;
+  color: var(--soft);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.module-context[open] > summary {
+  margin-bottom: 12px;
+}
+
 .module-brief {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
@@ -127,7 +144,7 @@
   font-size: 0.82rem;
 }
 
-.card-head p,
+.card-head p:not(.chart-caption),
 .chart-card > p:not(.chart-caption) {
   display: none;
 }
@@ -139,7 +156,8 @@
   margin-bottom: 0.55rem;
 }
 
-.chart-controls {
+.chart-controls,
+.chart-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -148,13 +166,6 @@
 
 .chart-controls .chart-toolbar {
   margin-bottom: 0;
-}
-
-.chart-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.35rem;
 }
 
 .chart-actions-inline {
@@ -172,11 +183,6 @@
   font-size: 0.72rem;
   font-weight: 800;
   padding: 0 0.65rem;
-}
-
-.chart-toggle.is-active {
-  border-color: var(--terracotta);
-  color: var(--terracotta-dark);
 }
 
 .article-link,
@@ -201,6 +207,7 @@
   color: var(--terracotta-dark);
 }
 
+.chart-toggle.is-active,
 .chart-expand:hover,
 .chart-download:hover,
 .article-link:hover {
@@ -282,7 +289,7 @@ canvas[height="500"] {
 
 .map-focus small,
 .map-stat-grid span {
-  color: var(--terracotta);
+  color: var(--terracotta-dark);
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.08em;

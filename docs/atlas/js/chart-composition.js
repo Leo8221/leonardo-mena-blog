@@ -57,15 +57,13 @@ function drawDebtBurdenChart(canvas, rows, options) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
-  const padding = width < 420
-    ? { top: 46, right: 18, bottom: 54, left: 48 }
-    : { top: 46, right: 52, bottom: 58, left: 62 };
+  const padding = { top: 68, right: 42, bottom: 54, left: 54 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
-  const serviceMax = Math.max(...rows.map((row) => Number(row[options.serviceField])), 1);
-  const shareMax = 70;
+  const serviceMax = Math.ceil(Math.max(...rows.map(row => Number(row[options.serviceField])), 1) / 1000) * 1000;
+  const shareMax = 100;
   const gap = width < 420 ? 4 : 7;
-  const barW = Math.max(8, (plotW - gap * (rows.length - 1)) / rows.length);
+  const barW = (plotW - gap * (rows.length - 1)) / rows.length;
   const boxes = [];
   const points = [];
   const serviceColor = CHART_SYSTEM.colors.blue;
@@ -76,7 +74,7 @@ function drawDebtBurdenChart(canvas, rows, options) {
   const shareY = (value) => padding.top + plotH - (Number(value) / shareMax) * plotH;
 
   clearCanvas(ctx, width, height);
-  drawCanvasTitle(ctx, options.title, padding.left, 22);
+  drawCanvasTitle(ctx, options.title, 8, 22);
   drawGrid(ctx, width, height, padding, 4);
 
   rows.forEach((row, index) => {
@@ -99,8 +97,8 @@ function drawDebtBurdenChart(canvas, rows, options) {
 
     ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "10px Inter";
-    if (index % 2 === 0 || width > 520) {
-      ctx.fillText(String(row[options.labelField]).slice(-2), x, height - 18);
+    if (index % (width < 420 ? 4 : 2) === 0 || index === rows.length - 1) {
+      ctx.fillText(String(row[options.labelField]), Math.min(x, width - padding.right - 24), height - 18);
     }
   });
 
@@ -120,10 +118,20 @@ function drawDebtBurdenChart(canvas, rows, options) {
     ctx.fill();
   });
 
-  drawLegend(ctx, [
-    { label: "Servicio total", color: serviceColor },
-    { label: "Intereses / servicio", color: shareColor }
-  ], padding.left, 40);
+  const legend = [
+    { label: "Servicio (US$ MM)", color: serviceColor },
+    { label: "Intereses (%)", color: shareColor }
+  ];
+  if (width < 420) legend.forEach((item, index) => drawLegend(ctx, [item], padding.left, 40 + index * 16));
+  else drawLegend(ctx, legend, padding.left, 40);
+
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
+  ctx.font = "10px Inter";
+  for (let i = 0; i <= 4; i++) {
+    const y = padding.top + plotH * (1 - i / 4);
+    ctx.fillText(formatNumber(serviceMax * i / 4, 0), 4, y + 4);
+    ctx.fillText(`${shareMax * i / 4}%`, width - padding.right + 6, y + 4);
+  }
 
   bindCanvasTooltip(canvas, (event) => {
     const cursor = getCanvasPoint(canvas, event);
@@ -149,17 +157,17 @@ function drawStackedBarChart(canvas, rows, options) {
   if (!canvas) return;
   const ctx = setupCanvas(canvas);
   const { width, height } = canvas.getBoundingClientRect();
-  const padding = { top: 44, right: 26, bottom: 54, left: 62 };
+  const padding = { top: width < 420 ? 100 : 62, right: 26, bottom: 54, left: 62 };
   const plotW = width - padding.left - padding.right;
   const plotH = height - padding.top - padding.bottom;
   const totals = rows.map((row) => options.fields.reduce((sum, field) => sum + Number(row[field.field] || 0), 0));
-  const max = Math.max(...totals, 1);
-  const gap = 7;
-  const barW = Math.max(10, (plotW - gap * (rows.length - 1)) / rows.length);
+  const max = Math.ceil(Math.max(...totals, 1) / 1000) * 1000;
+  const gap = width < 420 ? 4 : 7;
+  const barW = (plotW - gap * (rows.length - 1)) / rows.length;
   const boxes = [];
 
   clearCanvas(ctx, width, height);
-  drawCanvasTitle(ctx, options.title, padding.left, 22);
+  drawCanvasTitle(ctx, options.title, 8, 22);
   drawGrid(ctx, width, height, padding, 4);
 
   rows.forEach((row, rowIndex) => {
@@ -175,10 +183,19 @@ function drawStackedBarChart(canvas, rows, options) {
     });
     ctx.fillStyle = CHART_SYSTEM.colors.muted;
     ctx.font = "10px Inter";
-    ctx.fillText(String(row[options.labelField]).slice(-2), x - 1, height - 16);
+    if (rowIndex % (width < 420 ? 4 : 2) === 0 || rowIndex === rows.length - 1) {
+      ctx.fillText(String(row[options.labelField]), Math.min(x, width - padding.right - 24), height - 16);
+    }
   });
 
-  drawLegend(ctx, options.fields, padding.left, 40);
+  if (width < 420) options.fields.forEach((item, index) => drawLegend(ctx, [item], padding.left, 40 + index * 16));
+  else drawLegend(ctx, options.fields, padding.left, 40);
+  ctx.fillStyle = CHART_SYSTEM.colors.muted;
+  ctx.font = "10px Inter";
+  ctx.fillText(options.unit || "", 4, padding.top - 8);
+  for (let i = 0; i <= 4; i++) {
+    ctx.fillText(formatNumber(max * i / 4, 0), 4, padding.top + plotH * (1 - i / 4) + 4);
+  }
   bindBoxTooltip(canvas, boxes, (box) => `
     <strong>${escapeHtml(box.item[options.labelField])}</strong>
     <span>${escapeHtml(box.field.label)}: ${formatNumber(box.value)} ${escapeHtml(options.unit || "")}</span>

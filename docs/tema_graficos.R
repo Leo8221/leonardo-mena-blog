@@ -1,9 +1,12 @@
 # Se carga con source("tema_graficos.R"). Añade el tema a un ggplot con + theme_lm().
+# Este archivo define apariencia, no transforma los datos del gráfico. Las listas
+# devueltas por linea_ref() y evento() se suman con + igual que cualquier capa.
 
 library(ggplot2)
 library(scales)
 
 `%||%` <- function(x, y) {
+  # El valor por defecto solo sustituye NULL. Un NA no se trata como un color ausente.
   if (is.null(x)) y else x
 }
 
@@ -20,7 +23,7 @@ pal <- list(
   texto_soft = "#4a443e",
   texto_muted= "#73695f",
 
-  crema      = "#faf8f3",
+  crema      = "#f7f7f4",
   blanco     = "#ffffff",
   gris_claro = "#f5f1e8",
 
@@ -70,12 +73,9 @@ theme_lm <- function(grid = "y") {
 
       panel.grid.minor = element_blank(),
 
+      # Una sola superficie, como la página: los datos no necesitan otro marco.
       plot.background = element_rect(fill = pal$crema, color = NA),
-      panel.background = element_rect(
-        fill = pal$blanco,
-        color = pal$border_dark,
-        linewidth = 0.4
-      ),
+      panel.background = element_blank(),
 
       legend.position = "top",
       legend.justification = "left",
@@ -87,7 +87,7 @@ theme_lm <- function(grid = "y") {
       strip.background = element_rect(fill = pal$gris_claro, color = pal$border_dark),
       strip.text = element_text(size = 11, face = "bold", color = pal$texto),
 
-      plot.margin = margin(15, 15, 15, 15)
+      plot.margin = margin(12, 8, 12, 8)
     )
 }
 
@@ -123,6 +123,7 @@ evento <- function(x, label, color = NULL) {
 }
 
 # x ya está en porcentaje: fmt_pct(12.3) da "12.3%", no multiplica por cien.
+# d es el número de decimales que conserva la etiqueta; no modifica x.
 fmt_pct <- function(x, d = 1) paste0(format(round(x, d), nsmall = d), "%")
 
 # reverse invierte los colores. values indica dónde se sitúan en la escala;

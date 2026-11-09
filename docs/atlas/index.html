@@ -16,7 +16,7 @@
   <meta name="twitter:title" content="Atlas | Economía aplicada RD">
   <meta name="twitter:description" content="Datos, mapas y gráficos del blog de economía de Leonardo Mena.">
   <meta name="twitter:image" content="https://leo8221.github.io/leonardo-mena-blog/image/social-preview.png">
-  <link rel="icon" href="../image/logo_leonardo_mena.png">
+  <link rel="icon" href="../image/logo_leonardo_mena.svg">
   <script>
     (function () {
       try {
@@ -28,7 +28,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261108">
+  <link rel="stylesheet" href="styles.css?v=20261109b">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W3JC0G3RJ1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -54,97 +54,91 @@
 <body>
   <a class="skip-link" href="#atlas-main">Saltar al contenido</a>
   <div class="atlas-app" data-view="overview">
-    <aside class="atlas-sidebar" id="atlas-sidebar" aria-label="Navegación del Atlas">
-      <a class="brand-lockup" href="./" aria-label="Atlas">
-        <span>
-          <strong>Atlas</strong>
-          <small>Datos y gráficos del blog</small>
-        </span>
+    <header class="atlas-topbar">
+      <a class="brand-lockup" href="./" data-module="overview" aria-label="Atlas: explorar los datos">
+        <img src="../image/logo_leonardo_mena.svg" width="36" height="36" alt="">
+        <span><strong>Atlas</strong><small>Economía aplicada RD</small></span>
       </a>
-
-      <div class="search-box">
-        <label for="atlas-search">Buscar módulo</label>
-        <div class="search-control">
-          <input id="atlas-search" type="search" placeholder="Comercio, sectores, precios..." autocomplete="off">
-          <button class="search-clear" id="atlas-search-clear" type="button" aria-label="Limpiar búsqueda" hidden>×</button>
-        </div>
-        <p class="search-results-count" id="atlas-result-count" aria-live="polite"></p>
-      </div>
-
-      <div class="filter-group" aria-label="Filtros por familia">
-        <button class="filter-pill is-active" type="button" data-filter="all">Todos</button>
-        <button class="filter-pill" type="button" data-filter="Macro">Macro</button>
-        <button class="filter-pill" type="button" data-filter="Sectores">Sectores</button>
-        <button class="filter-pill" type="button" data-filter="Comercio">Comercio</button>
-        <button class="filter-pill" type="button" data-filter="Trabajo">Trabajo</button>
-        <button class="filter-pill" type="button" data-filter="Precios">Precios</button>
-        <button class="filter-pill" type="button" data-filter="Territorio">Territorio</button>
-        <button class="filter-pill" type="button" data-filter="Empresas">Empresas</button>
-        <button class="filter-pill" type="button" data-filter="Visuales">Visuales</button>
-      </div>
-
-      <nav class="module-nav" id="module-nav" aria-label="Módulos del Atlas"></nav>
-
-    </aside>
-    <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
+      <nav class="topbar-actions" aria-label="Navegación principal">
+        <a class="atlas-home-link" href="./" data-module="overview">Explorar</a>
+        <a href="../">Blog</a>
+        <a href="../archivo.html">Artículos</a>
+        <button class="atlas-theme-toggle" id="atlas-theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Alternar modo oscuro"></button>
+      </nav>
+    </header>
 
     <main class="atlas-main" id="atlas-main" tabindex="-1">
-      <header class="atlas-topbar">
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="atlas-sidebar">Menú</button>
-        <div class="topbar-title">
-          <h1>Atlas</h1>
-          <p>Datos, mapas y gráficos del blog</p>
+      <section class="atlas-intro" id="atlas-intro" aria-labelledby="atlas-heading">
+        <div class="atlas-intro-copy">
+          <p class="eyebrow">El Atlas de Leonardo Mena</p>
+          <h1 id="atlas-heading" tabindex="-1">La economía dominicana,<br><em>vista en datos.</em></h1>
+          <p>Explora sus cambios, compara sus territorios y encuentra los datos detrás de los artículos.</p>
+          <a class="explore-link" href="#atlas-catalog">Encontrar una vista <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="topbar-actions">
-          <a href="../">Blog</a>
-          <a href="../archivo.html">Archivo</a>
-          <button class="atlas-theme-toggle" id="atlas-theme-toggle" type="button" aria-label="Alternar modo oscuro" title="Alternar modo oscuro"></button>
-        </div>
-      </header>
-
-      <section class="mobile-atlas-nav" aria-label="Navegación móvil del Atlas">
-        <div class="mobile-filter-row" aria-label="Filtros por familia">
-          <button class="filter-pill is-active" type="button" data-filter="all">Todos</button>
-          <button class="filter-pill" type="button" data-filter="Macro">Macro</button>
-          <button class="filter-pill" type="button" data-filter="Sectores">Sectores</button>
-          <button class="filter-pill" type="button" data-filter="Comercio">Comercio</button>
-          <button class="filter-pill" type="button" data-filter="Trabajo">Trabajo</button>
-          <button class="filter-pill" type="button" data-filter="Precios">Precios</button>
-          <button class="filter-pill" type="button" data-filter="Territorio">Territorio</button>
-          <button class="filter-pill" type="button" data-filter="Empresas">Empresas</button>
-          <button class="filter-pill" type="button" data-filter="Visuales">Visuales</button>
-        </div>
-        <nav class="mobile-module-nav" id="mobile-module-nav" aria-label="Vistas del Atlas"></nav>
+        <div class="atlas-feature" id="atlas-feature"></div>
       </section>
 
-      <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales del Atlas"></section>
-
-      <section class="workspace-grid">
-        <div class="sr-only" id="atlas-status" role="status" aria-live="polite"></div>
-        <section class="module-stage" id="module-stage" aria-busy="true"></section>
+      <section class="catalog-controls" id="atlas-catalog" aria-label="Encontrar datos">
+        <div class="search-box">
+          <label for="atlas-search">¿Qué quieres explorar?</label>
+          <div class="search-control">
+            <input id="atlas-search" type="search" placeholder="Inflación, empleo, provincias…" autocomplete="off" aria-controls="module-stage">
+            <button class="search-clear" id="atlas-search-clear" type="button" aria-label="Limpiar búsqueda" hidden>×</button>
+          </div>
+        </div>
+        <div class="family-control">
+          <label for="atlas-family">Tema</label>
+          <select id="atlas-family" aria-controls="module-stage"><option value="all">Todos los temas</option></select>
+        </div>
+        <div class="catalog-result">
+          <p id="atlas-result-count" aria-live="polite"></p>
+          <button id="catalog-reset" class="text-action" type="button" data-action="reset-filters" hidden>Limpiar filtros</button>
+        </div>
       </section>
+
+      <nav class="view-navigation" id="view-navigation" aria-label="Navegación entre vistas" hidden>
+        <a class="back-to-catalog" href="./" data-module="overview">← Todas las vistas</a>
+        <div class="view-switcher">
+          <label for="module-switch">Cambiar de vista</label>
+          <select id="module-switch"></select>
+        </div>
+      </nav>
+
+      <div class="sr-only" id="atlas-status" role="status" aria-live="polite"></div>
+      <section class="module-stage" id="module-stage" aria-busy="true"><p>Cargando las vistas del Atlas…</p></section>
+
+      <details class="atlas-snapshot" id="atlas-snapshot">
+        <summary>Indicadores de referencia</summary>
+        <p>Los cortes varían según la fuente. Abre un indicador para consultar su serie.</p>
+        <section class="metric-strip" id="metric-strip" aria-label="Indicadores principales del Atlas"></section>
+      </details>
+      <footer class="atlas-footer">
+        <span>Atlas · Leonardo Mena</span>
+        <p>Cada vista incluye sus datos, fuentes y notas de lectura.</p>
+        <a href="../">Volver al blog →</a>
+      </footer>
     </main>
   </div>
 
   <!-- El orden importa: primero utilidades y dibujos, después el estado y las
        vistas. app-ui.js arranca la aplicación cuando todos están disponibles. -->
-  <script src="js/config.js?v=20261108"></script>
-  <script src="js/utils.js?v=20261108"></script>
-  <script src="js/chart-helpers.js?v=20261108"></script>
-  <script src="js/chart-tooltips.js?v=20261108"></script>
-  <script src="js/renderers.js?v=20261108"></script>
-  <script src="js/chart-series.js?v=20261108"></script>
-  <script src="js/chart-bars.js?v=20261108"></script>
-  <script src="js/chart-composition.js?v=20261108"></script>
-  <script src="js/chart-scatter.js?v=20261108"></script>
-  <script src="js/geo-utils.js?v=20261108"></script>
-  <script src="js/map-renderers.js?v=20261108"></script>
-  <script src="js/interactions.js?v=20261108"></script>
-  <script src="app.js?v=20261108"></script>
-  <script src="js/app-navigation.js?v=20261108"></script>
-  <script src="js/app-panels.js?v=20261108"></script>
-  <script src="js/app-modules.js?v=20261108"></script>
-  <script src="js/app-data.js?v=20261108"></script>
-  <script src="js/app-ui.js?v=20261108"></script>
+  <script src="js/config.js?v=20261109"></script>
+  <script src="js/utils.js?v=20261109b"></script>
+  <script src="js/chart-helpers.js?v=20261109"></script>
+  <script src="js/chart-tooltips.js?v=20261109"></script>
+  <script src="js/renderers.js?v=20261109b"></script>
+  <script src="js/chart-series.js?v=20261109b"></script>
+  <script src="js/chart-bars.js?v=20261109"></script>
+  <script src="js/chart-composition.js?v=20261109b"></script>
+  <script src="js/chart-scatter.js?v=20261109"></script>
+  <script src="js/geo-utils.js?v=20261109"></script>
+  <script src="js/map-renderers.js?v=20261109"></script>
+  <script src="js/interactions.js?v=20261109"></script>
+  <script src="app.js?v=20261109b"></script>
+  <script src="js/app-navigation.js?v=20261109b"></script>
+  <script src="js/app-panels.js?v=20261109b"></script>
+  <script src="js/app-modules.js?v=20261109b"></script>
+  <script src="js/app-data.js?v=20261109"></script>
+  <script src="js/app-ui.js?v=20261109"></script>
 </body>
 </html>

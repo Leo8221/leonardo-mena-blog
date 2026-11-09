@@ -1,6 +1,7 @@
 // El canvas no tiene elementos separados para cada punto. Buscamos cuál toca
 // el cursor; el margen extra permite acertar también con el dedo.
 function findPointAt(points, cursor, padding) {
+  // Si hay solapamiento gana el primer punto de la lista, no necesariamente el más cercano.
   return points.find(point => {
     const dx = cursor.x - point.x;
     const dy = cursor.y - point.y;
@@ -34,6 +35,8 @@ function bindBoxTooltip(canvas, boxes, content) {
 }
 
 function bindCanvasTooltip(canvas, resolveContent) {
+  // resolveContent recibe el evento y devuelve HTML o null. El gráfico decide
+  // qué dato se tocó; aquí solo se resuelve cuándo mostrar, fijar y ocultar el aviso.
   // Al redibujar, sustituimos los manejadores para no acumular eventos.
   canvas.onmousemove = null;
   canvas.onclick = null;

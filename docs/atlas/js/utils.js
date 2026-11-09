@@ -24,6 +24,8 @@ function ensureTooltip() {
 }
 
 function showTooltip(html, event, options = {}) {
+  // En escritorio acompaña al cursor; en táctil el CSS lo coloca como panel inferior.
+  // pinned lo mantiene abierto al retirar el dedo. html debe llegar con texto escapado.
   if (!state.tooltip) state.tooltip = ensureTooltip();
   const source = event.touches?.[0] || event.changedTouches?.[0] || event;
   const sheetTooltip = touchLikeEvent(event);
@@ -43,6 +45,7 @@ function showTooltip(html, event, options = {}) {
 }
 
 function hideTooltip(force = false) {
+  // Un cambio de vista o Escape usa force=true; salir con el ratón no cierra uno fijado.
   if (!state.tooltip) return;
   if (state.tooltipPinned && !force) return;
   state.tooltipPinned = false;
@@ -72,6 +75,8 @@ function cssVar(name, fallback) {
 }
 
 function syncChartSystemColors() {
+  // Canvas dibuja píxeles y no responde solo al cambio de CSS. Copiamos la paleta
+  // resuelta y luego se redibujan los gráficos con esos colores.
   if (!window.CHART_SYSTEM && typeof CHART_SYSTEM === "undefined") return;
   const colors = CHART_SYSTEM.colors;
   colors.ink = cssVar("--ink", "#191b1f");
@@ -127,8 +132,19 @@ function drawGrid(ctx, width, height, padding, steps) {
   ctx.setLineDash([]);
 }
 
-function formatNumber(value) {
-  return new Intl.NumberFormat("es-DO", { maximumFractionDigits: 1 }).format(value);
+// La configuración no cambia entre etiquetas; reutilizarla evita construir
+// un formateador por cada número de un gráfico o una tabla.
+const numberFormatter = new Intl.NumberFormat("es-DO", { maximumFractionDigits: 1 });
+const decimalFormatters = new Map();
+
+function formatNumber(value, decimals) {
+  if (decimals === undefined) return numberFormatter.format(value);
+  if (!decimalFormatters.has(decimals)) {
+    decimalFormatters.set(decimals, new Intl.NumberFormat("es-DO", {
+      minimumFractionDigits: decimals, maximumFractionDigits: decimals
+    }));
+  }
+  return decimalFormatters.get(decimals).format(value);
 }
 
 function normalizeText(value) {
@@ -160,6 +176,10 @@ function debounce(fn, wait) {
 }
 
 function renderLoadError(error) {
+  els.stage.setAttribute("aria-busy", "false");
+  els.catalog.hidden = true;
+  els.feature.hidden = true;
+  els.snapshot.hidden = true;
   els.stage.innerHTML = `
     <div class="empty-state">
       <strong>No pudimos cargar los datos del Atlas.</strong>
