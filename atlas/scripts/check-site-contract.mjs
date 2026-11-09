@@ -63,7 +63,8 @@ requireText("_quarto.yml", [
   ["include-before-body: skip-link.html", "include-before-body: skip-link.html"],
   ["tokens desde la raíz", "- /assets/css/tokens.css"],
   ["pulso de portada desde la raíz", "- /assets/js/home-pulse.js"],
-  ["scripts Atlas desde la raíz", "- /atlas/js/**"]
+  ["scripts Atlas desde la raíz", "- /atlas/js/**"],
+  ["iconos Atlas desde la raíz", "- /atlas/icons/**"]
 ]);
 
 requireText("index.qmd", [

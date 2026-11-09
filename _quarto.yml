@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  # Quarto compone las páginas; estos pasos solo terminan accesibilidad, SVG y enlaces.
+  # Ambos reciben la carpeta de salida: una vista previa no debe tocar docs/.
   post-render:
     - node tools/finish-articles.mjs
     - node atlas/scripts/ensure-sitemap.mjs
@@ -27,6 +29,7 @@ project:
     - /atlas/index.html
     - /atlas/app.js
     - /atlas/js/**
+    - /atlas/icons/**
     - /atlas/styles.css
     - /atlas/css/**
     - /atlas/data/atlas-data.json
